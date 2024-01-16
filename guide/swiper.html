@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>FAQ</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<h3 class="sec-title">자동 슬라이더(접근성준수)</h3>
+<div class="code-preview">
+
+	<div class="banner-slider-wrap">
+		<div class="swiper-container banner-slider">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="#"><img src="https://www.nps.or.kr//html/main_2022/images/photo/main/banner9.png" alt=""></a>   	
+				</div>
+				<div class="swiper-slide">
+					 <a href="#"><img src="https://www.nps.or.kr//html/main_2022/images/photo/main/banner8.png" alt=""></a>        	
+				</div>
+				<div class="swiper-slide">
+					<a href="#"><img src="https://www.nps.or.kr//html/main_2022/images/photo/main/banner2.png" alt=""></a>                      	
+				</div>
+				<div class="swiper-slide">
+					<a href="#"><img src="https://www.nps.or.kr//html/main_2022/images/photo/main/banner7.png" alt=""></a>        	
+				</div>			   
+			</div>
+		</div>
+		<div class="banner-slider-nav">
+			<div class="slider-page"></div>
+			<div class="slider-controller">
+				<button type="button" class="btn-stop">팝업존 <span class="toggle">자동움직임 멈춤</span></button>
+				<button type="button" class="btn-prev">팝업존 이전 배너</button>
+				<button type="button" class="btn-next">팝업존 다음 배너</button>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="banner-slider2-wrap">
+		<div class="swiper-container banner-slider">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="#"><img src="https://www.nps.or.kr//html/main_2022/images/photo/main/banner9.png" alt=""></a>   	
+				</div>
+				<div class="swiper-slide">
+					 <a href="#"><img src="https://www.nps.or.kr//html/main_2022/images/photo/main/banner8.png" alt=""></a>        	
+				</div>
+				<div class="swiper-slide">
+					<a href="#"><img src="https://www.nps.or.kr//html/main_2022/images/photo/main/banner2.png" alt=""></a>                      	
+				</div>
+				<div class="swiper-slide">
+					<a href="#"><img src="https://www.nps.or.kr//html/main_2022/images/photo/main/banner7.png" alt=""></a>        	
+				</div>			   
+			</div>
+		</div>
+		<div class="banner-slider-nav">
+			<div class="slider-page"></div>
+			<div class="slider-controller">
+				<button type="button" class="btn-stop">팝업존 <span class="toggle">자동움직임 멈춤</span></button>
+				<button type="button" class="btn-prev">팝업존 이전 배너</button>
+				<button type="button" class="btn-next">팝업존 다음 배너</button>
+			</div>
+		</div>
+	</div>
+
+<script>
+	//commonUI.slider('슬라이더 타겟', { 옵션 자유롭게 } [, preview]);
+
+	$(document).ready(function(){
+
+		commonUI.slider('.banner-slider-wrap', 
+		{
+			loop: true,
+			speed:700,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			navigation: {
+				prevEl: '.banner-slider-nav .btn-prev',
+				nextEl: '.banner-slider-nav .btn-next'
+			},
+			pagination: {
+				el: '.banner-slider-nav .slider-page',
+				type: "fraction",
+				clickable: true,
+			},
+			observeParents: true
+		}); // slidesPerView가 있는 경우 매개변수로 넘겨줘야함. 없는 경우 생략가능.
+
+		commonUI.slider('.banner-slider2-wrap', 
+		{
+			loop: true,
+			speed:700,
+			slidesPerView: 3,
+			spaceBetween: 20,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			navigation: {
+				prevEl: '.banner-slider-nav .btn-prev',
+				nextEl: '.banner-slider-nav .btn-next'
+			},
+			pagination: {
+				el: '.banner-slider-nav .slider-page',
+				type: "fraction",
+				clickable: true,
+			},
+			observeParents: true
+		}, 3); // slidesPerView가 있는 경우 매개변수로 넘겨줘야함. 없는 경우 생략가능.
+	});
+	
+</script>
+	
+<style>
+/* 배너 샘플 css */
+.banner-slider{position:relative; height:auto;}
+.swiper-slide a{display:block; box-sizing:border-box; overflow:hidden; border-radius:30px;}
+.swiper-slide a:focus{outline:none; border:3px dashed #000; border-radius:30px;}
+.swiper-slide img{width:100%; box-sizing:border-box;}
+
+.banner-slider-nav{position:absolute; right:28px; top:26px; display:flex; z-index:10;}
+.banner-slider-nav .slider-page{color:#565656; font-size:16px; margin-right:20px;}
+.banner-slider-nav .slider-controller{display:inline-flex; align-items:center;}
+.banner-slider-nav .slider-controller button{display:block; width:22px;height:22px; border-radius:50%; background-color:#fff; background-position:center center; background-repeat:no-repeat; text-align:left; text-indent:-9999px; overflow:hidden; margin-right:6px;}
+.banner-slider-nav .slider-controller button:last-child{margin-right:0;}
+.banner-slider-nav .slider-controller .btn-prev{background-image:url(../images/main/i_slider_prev.svg);}
+.banner-slider-nav .slider-controller .btn-next{background-image:url(../images/main/i_slider_next.svg);}
+.banner-slider-nav .slider-controller .btn-stop{background-image:url(../images/main/i_slider_stop.svg);}
+.banner-slider-nav .slider-controller .btn-stop.play{background-image:url(../images/main/i_slider_play.svg);}
+
+.banner-slider-wrap{border-radius:30px; overflow:hidden; position:relative; width:720px;}
+.banner-slider2-wrap{border-radius:30px; overflow:hidden; position:relative; width:800px;}
+</style>
+
+	<br>
+	<table class="guide-table">
+		<col style="width:160px"><col>
+		<tbody>
+			<tr>
+				<th class="align-left">.swiper-container, <br>.swiper-wrapper, <br>.swiper-slide</th>
+				<td>스크립트용<br>(클래스명 변경하거나 없으면 기능작동 안함)</td>
+			</tr>
+			<tr>
+				<th class="align-left">.btn-prev, <br>.btn-next, <br>.btn-stop</th>
+				<td>컨트롤 버튼<br>
+					(클래스명 변경하면 기능작동 안함. 생략가능. 기능적으로 필수요소는 아니지만 접근성을 위해 필요함)<br>
+					<span class="txt-red">반드시 슬라이더 적용한 타겟(.main-banner)의 내부에 있어야 한다. 위치는 자유롭게.</span>
+				</td>
+			</tr>
+			<tr>
+				<th class="align-left">.btn-stop</th>
+				<td>클릭할때마다 토글됨(.btn-stop.active  <-->  .btn-stop)</td>
+			</tr>
+			<tr>
+				<th class="align-left">slidesPerView가 있는 경우</th>
+				<td>commonUI.slider('', {} , <span class="txt-red">3</span>); 세번째 옵션으로 같은 값을 넘겨줘야 한다.(접근성용)</td>
+			</tr>
+			<tr>
+				<th class="align-left">마크업 구조</th>
+				<td><p class="txt-red">반드시 .swiper-container 를 감싸고 있는 부모 요소(슬라이더 타겟)에 적용해야 한다.</p>
+					commonUI.slider('<span class="txt-red">.main-banner</span>', { 옵션 });
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<pre><code class="language-xml">마크업 구조	
+
+&#x3C;div class=&#x22;main-banner&#x22;&#x3E;
+&#x9;&#x3C;div class=&#x22;swiper-container banner-slider&#x22;&#x3E;
+&#x9;&#x9;&#x3C;div class=&#x22;swiper-wrapper&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x3C;div class=&#x22;swiper-slide&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x9;&#x9;&#x9;&#x3C;div class=&#x22;swiper-slide&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x9;&#x9;&#x9;&#x3C;div class=&#x22;swiper-slide&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x9;&#x9;&#x9;&#x3C;div class=&#x22;swiper-slide&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;banner-slider-nav&#x22;&#x3E;
+&#x9;&#x9;&#x3C;div class=&#x22;slider-page&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x9;&#x9;&#x3C;div class=&#x22;slider-controller&#x22;&#x3E;
+	&#x9;&#x9;&#x3C;button type=&#x22;button&#x22; class=&#x22;btn-stop&#x22;&#x3E;&#xD31D;&#xC5C5;&#xC874; &#x3C;span class=&#x22;toggle&#x22;&#x3E;&#xC790;&#xB3D9;&#xC6C0;&#xC9C1;&#xC784; &#xBA48;&#xCDA4;&#x3C;/span&#x3E;&#x3C;/button&#x3E;
+	&#x9;&#x9;&#x3C;button type=&#x22;button&#x22; class=&#x22;btn-prev&#x22;&#x3E;&#xD31D;&#xC5C5;&#xC874; &#xC774;&#xC804; &#xBC30;&#xB108;&#x3C;/button&#x3E;
+	&#x9;&#x9;&#x3C;button type=&#x22;button&#x22; class=&#x22;btn-next&#x22;&#x3E;&#xD31D;&#xC5C5;&#xC874; &#xB2E4;&#xC74C; &#xBC30;&#xB108;&#x3C;/button&#x3E;
+&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;script&#x3E;
+	commonUI.slider('슬라이더 타겟', { 옵션 자유롭게 } [, perView]);
+
+&#x9;commonUI.slider(&#x27;.main-banner&#x27;, 
+&#x9;{
+&#x9;&#x9;loop: true,
+&#x9;&#x9;speed:700,
+&#x9;&#x9;autoplay: {
+&#x9;&#x9;&#x9;delay: 3000,
+&#x9;&#x9;&#x9;disableOnInteraction: false,
+&#x9;&#x9;},
+&#x9;&#x9;navigation: {
+&#x9;&#x9;&#x9;prevEl: &#x27;.banner-slider-nav .btn-prev&#x27;,
+&#x9;&#x9;&#x9;nextEl: &#x27;.banner-slider-nav .btn-next&#x27;
+&#x9;&#x9;},
+&#x9;&#x9;pagination: {
+&#x9;&#x9;&#x9;el: &#x27;.banner-slider-nav .slider-page&#x27;,
+&#x9;&#x9;&#x9;type: &#x22;fraction&#x22;,
+&#x9;&#x9;&#x9;clickable: true,
+&#x9;&#x9;},
+&#x9;&#x9;observeParents: true
+&#x9;});
+&#x3C;/script&#x3E;
+	</code></pre>
+
+			<!-- 내용끝 -->
+		</div>	
+	</section>
+</div>
+
+</body>
+</html>

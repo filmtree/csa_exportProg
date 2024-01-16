@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <style>
+    </style>
+</head>
+<body>
+    
+    <!-- 프린트 윈도우 파업 -->
+    <div class="winPopup">
+        <div class="modalWrap">
+            <!-- s: Popup Header -->
+            <div class="modal-header">
+                <div class="modal-title">
+                    <h3 class="cont-title">Title</h3>
+                </div>
+                <button class="btn-close printNone" onclick="winPopClose();">모달창닫기</button>
+            </div>
+            <!-- e: Popup Header -->
+            <!-- s: Contents -->
+            <div class="modal-body">
+                <!-- s: Contents Header -->
+                <div class="cont-head">
+                    <h4 class="cont-title dot">TItle</h4>
+                </div>
+                <!-- e: Contents Header -->
+
+                <!-- s: Contents Body -->
+
+                <!-- e: Contents Body -->
+            </div>
+            <!-- e: Contents -->
+            <!-- s: Footer -->
+            <div class="modal-footer">
+                <div class="btn-group full">
+                    <a href="#none" type="button" class="button-primary -lg" onclick="printPage()">인쇄하기</a>
+                </div>
+            </div>
+            <!-- e: Footer -->
+        </div>
+    </div>
+
+    <script>
+        // Window Popup open
+		function openReportPop(){
+			var printPopup = window.open('./template/window_popup_template.html', '_blank', 'width=1080px', 'height=720px', 'scrollbars=yes', 'resizable=no');
+		}
+        
+        // Window Popup Close
+        function winPopClose() {
+            self.opener = self;
+            window.close();
+        }
+
+        // Print
+        function printPage(){
+            window.print();
+        }
+
+    </script>
+
+</body>
+</html>

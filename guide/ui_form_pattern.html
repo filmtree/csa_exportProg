@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<title>UI 가이드</title>
+
+		<script src="../js/lib/jquery-3.7.0.min.js"></script>
+		<script src="../js/lib/jquery-ui.min.js"></script>
+		<script src="../js/lib/jquery.easing.min.js"></script>
+		<script src="../js/lib/swiper-bundle.min.js"></script>
+		<script src="ui_include.js"></script>
+		<script src="../js/ui_common.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="guide.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+		<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css" />
+		<script src="highlight/highlight.min.js"></script>
+		<script>
+			hljs.highlightAll();
+		</script>
+	</head>
+	<body>
+		<div class="guideWrap">
+			<header class="guideHeader"></header>
+			<section class="guideContainer">
+				<header class="sec-header">
+					<h2>Form Template</h2>
+				</header>
+				<div class="sec-contents">
+					<!-- Start -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Checkbox</h3>
+					<div class="code-preview">
+						<div class="form-group">
+							<label class="inp-checkbox">
+								<input type="checkbox" name="checkbox1" checked="checked" />
+								<span>확인했습니다.</span>
+							</label>
+						</div>
+					</div>
+					<pre><code class="language-xml">&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;inp-checkbox&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;checkbox1&quot; checked=&quot;checked&quot;&gt;
+        &lt;span&gt;확인했습니다.&lt;/span&gt;
+    &lt;/label&gt;
+&lt;/div&gt;            
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Radio Set</h3>
+					<div class="code-preview">
+						<div class="form-group">
+							<label class="inp-radio free-size-equal">
+								<input type="radio" id="공개여부" name="radioGroup1" checked="checked" />
+								<span>공개</span>
+							</label>
+							<label class="inp-radio free-size-equal">
+								<input type="radio" id="공개여부" name="radioGroup1" />
+								<span>비공개</span>
+							</label>
+						</div>
+					</div>
+					<pre><code class="language-xml">&lt;div class=&quot;form-group&quot;&gt;
+	&lt;label class=&quot;inp-radio free-size-equal&quot;&gt;
+		&lt;input type=&quot;radio&quot; id=&quot;공개여부&quot; name=&quot;radioGroup1&quot; checked=&quot;checked&quot; /&gt;
+		&lt;span&gt;공개&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label class=&quot;inp-radio free-size-equal&quot;&gt;
+		&lt;input type=&quot;radio&quot; id=&quot;공개여부&quot; name=&quot;radioGroup1&quot; /&gt;
+		&lt;span&gt;비공개&lt;/span&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Input with Text</h3>
+					<div class="code-preview">
+						<div class="form-group-txt">
+							<span class="front-txt">월</span>
+							<input type="text" id="" class="align-right" placeholder="" />
+							<span class="back-txt">만원</span>
+						</div>
+					</div>
+					<pre><code class="language-xml">&lt;div class=&quot;form-group-txt&quot;&gt;
+	&lt;span class=&quot;front-txt&quot;&gt;월&lt;/span&gt;
+	&lt;input type=&quot;text&quot; id=&quot;&quot; class=&quot;align-right&quot; placeholder=&quot;&quot; /&gt;
+	&lt;span class=&quot;back-txt&quot;&gt;만원&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Input Label and Text</h3>
+					<div class="code-preview">
+						<div class="form-group-txt">
+							<label for="몸무게" class="front-txt">몸무게</label>
+							<input type="text" id="몸무게" class="charLength6 align-right" placeholder="숫자는 우측정렬" />
+							<span class="back-txt">kg</span>
+						</div>
+					</div>
+					<pre><code class="language-xml">&lt;div class=&quot;form-group-txt&quot;&gt;
+	&lt;label for=&quot;몸무게&quot; class=&quot;front-txt&quot;&gt;몸무게&lt;/label&gt; 
+	&lt;input type=&quot;text&quot; id=&quot;몸무게&quot; class=&quot;charLength6 align-right&quot; placeholder=&quot;숫자는 우측정렬&quot;&gt;
+	&lt;span class=&quot;back-txt&quot;&gt;kg&lt;/span&gt;
+&lt;/div&gt;
+					</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Datepicker</h3>
+					<div class="code-preview">
+						<!-- Datepicker 기간 -->
+						<div class="form-group-period period-calendar">
+							<label class="hidden">시작 날짜 선택</label>
+							<input type="text" class="useDatepicker dateFrom hasDatepicker" placeholder="날짜를 선택하세요" title="시작일" id="dp1704373481349" />
+							<span class="inp-split">-</span>
+							<label class="hidden">종료 날짜 선택</label>
+							<input type="text" class="useDatepicker dateTo hasDatepicker" placeholder="날짜를 선택하세요" title="종료일" id="dp1704373481350" />
+						</div>
+						<!-- Datepicker -->
+						<input type="text" id="startDay" value="2023.10.31" class="useDatepicker w200px hasDatepicker" />
+					</div>
+					<pre><code class="language-xml">&lt;div class=&quot;form-group-period period-calendar&quot;&gt;
+	&lt;label class=&quot;hidden&quot;&gt;시작 날짜 선택&lt;/label&gt;
+	&lt;input type=&quot;text&quot; class=&quot;useDatepicker dateFrom hasDatepicker&quot; placeholder=&quot;날짜를 선택하세요&quot; title=&quot;시작일&quot; id=&quot;dp1704373481349&quot;&gt;
+	&lt;span class=&quot;inp-split&quot;&gt;-&lt;/span&gt;
+	&lt;label class=&quot;hidden&quot;&gt;종료 날짜 선택&lt;/label&gt;
+	&lt;input type=&quot;text&quot; class=&quot;useDatepicker dateTo hasDatepicker&quot; placeholder=&quot;날짜를 선택하세요&quot; title=&quot;종료일&quot; id=&quot;dp1704373481350&quot;&gt;
+&lt;/div&gt;            
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">전화번호</h3>
+					<div class="code-preview">
+						<div class="form-group-tel">
+							<select class="tel-first" title="전화번호 지역변호">
+								<option>선택</option>
+								<option>02</option>
+							</select>
+							<span class="inp-split">-</span>
+							<input type="text" class="tel-second" title="전화번호 국 번호" />
+							<span class="inp-split">-</span>
+							<input type="text" class="tel-third" title="전화번호 가입자 번호" />
+						</div>
+					</div>
+					<pre><code class="language-xml">&lt;div class=&quot;form-group-tel&quot;&gt;
+		&lt;select class=&quot;tel-first&quot; title=&quot;전화번호 지역변호&quot;&gt;
+			&lt;option&gt;선택&lt;/option&gt;
+			&lt;option&gt;02&lt;/option&gt;
+		&lt;/select&gt;
+		&lt;span class=&quot;inp-split&quot;&gt;-&lt;/span&gt;
+		&lt;input type=&quot;text&quot; class=&quot;tel-second&quot; title=&quot;전화번호 국 번호&quot; /&gt;
+		&lt;span class=&quot;inp-split&quot;&gt;-&lt;/span&gt;
+		&lt;input type=&quot;text&quot; class=&quot;tel-third&quot; title=&quot;전화번호 가입자 번호&quot; /&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">휴대전화번호</h3>
+					<div class="code-preview">
+						<div class="form-group-tel">
+							<input type="text" placeholder="010" class="tel-first" title="휴대전화 식별번호" />
+							<span class="inp-split">-</span>
+							<input type="text" class="tel-second" title="휴대전화 중간 번호" />
+							<span class="inp-split">-</span>
+							<input type="text" class="tel-third" title="휴대전화 뒷 번호" />
+						</div>
+					</div>
+					<pre><code class="language-xml">&lt;div class=&quot;form-group-tel&quot;&gt;
+	&lt;input type=&quot;text&quot; placeholder=&quot;010&quot; class=&quot;tel-first&quot; title=&quot;휴대전화 식별번호&quot; /&gt;
+	&lt;span class=&quot;inp-split&quot;&gt;-&lt;/span&gt;
+	&lt;input type=&quot;text&quot; class=&quot;tel-second&quot; title=&quot;휴대전화 중간 번호&quot; /&gt;
+	&lt;span class=&quot;inp-split&quot;&gt;-&lt;/span&gt;
+	&lt;input type=&quot;text&quot; class=&quot;tel-third&quot; title=&quot;휴대전화 뒷 번호&quot; /&gt;
+&lt;/div&gt;
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Email</h3>
+					<div class="code-preview">
+						<div class="form-group-email">
+							<input type="text" class="email-id" title="이메일 사용자 아이디" />
+							<span class="inp-split">@</span>
+							<input type="text" class="email-domain" title="이메일 도메인" />
+							<select title="이메일 도메인 선택" class="email-domain-opt">
+								<option value="">직접입력</option>
+								<option value="">nate.com</option>
+								<option value="">naver.com</option>
+								<option value="">gmail.com</option>
+								<option value="">kakao.com</option>
+							</select>
+						</div>
+					</div>
+					<pre><code class="language-xml">&lt;div class=&quot;form-group-email&quot;&gt;
+	&lt;input type=&quot;text&quot; class=&quot;email-id&quot; title=&quot;이메일 사용자 아이디&quot;&gt;
+	&lt;span class=&quot;inp-split&quot;&gt;@&lt;/span&gt;
+	&lt;input type=&quot;text&quot; class=&quot;email-domain&quot; title=&quot;이메일 도메인&quot;&gt;
+	&lt;select title=&quot;이메일 도메인 선택&quot; class=&quot;email-domain-opt&quot;&gt;
+		&lt;option value=&quot;&quot;&gt;직접입력&lt;/option&gt;
+		&lt;option value=&quot;&quot;&gt;nate.com&lt;/option&gt;
+		&lt;option value=&quot;&quot;&gt;naver.com&lt;/option&gt;
+		&lt;option value=&quot;&quot;&gt;gmail.com&lt;/option&gt;
+		&lt;option value=&quot;&quot;&gt;kakao.com&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/div&gt;            
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Input Info Text</h3>
+					<div class="code-preview">
+						<div class="form-group">
+							<input type="text" id="비밀번호" class="charLength9" placeholder="비밀번호를 입력하세요" />
+							<p class="txt-helper">(9~20자의 숫자, 영문, 특수문자 조합)</p>
+						</div>
+					</div>
+					<pre><code class="language-xml">&lt;div class=&quot;form-group&quot;&gt;
+	&lt;input type=&quot;text&quot; id=&quot;비밀번호&quot; class=&quot;charLength9&quot; placeholder=&quot;비밀번호를 입력하세요&quot; /&gt;
+	&lt;p class=&quot;txt-helper&quot;&gt;(9~20자의 숫자, 영문, 특수문자 조합)&lt;/p&gt;
+&lt;/div&gt;            
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Textarea</h3>
+					<div class="code-preview">
+						<div class="inp-textarea w100">
+							<textarea rows="5" id="내용입력" class="fm-textarea h320px"></textarea>
+						</div>
+					</div>
+					<pre><code class="language-xml">&lt;div class=&quot;inp-textarea w100&quot;&gt;
+	&lt;textarea rows=&quot;5&quot; id=&quot;내용입력&quot; class=&quot;fm-textarea h320px&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Title</h3>
+					<div class="code-preview"></div>
+					<pre><code class="language-xml">
+            
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Title</h3>
+					<div class="code-preview"></div>
+					<pre><code class="language-xml">
+            
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Title</h3>
+					<div class="code-preview"></div>
+					<pre><code class="language-xml">
+            
+</code></pre>
+					<!-- e:  -->
+
+					<!-- End -->
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

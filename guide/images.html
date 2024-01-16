@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>이미지(반응형)</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<h3 class="sec-title">모바일용 이미지가 따로 있는 경우</h3>
+<div class="code-preview">
+
+	<div class="imgbox all-none">
+		<picture>
+			<source srcset="../../images/contents/img_pensionplan_graph06_m.png" media="(max-width:520px)"><!-- 모바일용 이미지 -->
+			<img src="../../images/contents/img_pensionplan_graph06.png" alt="위험에 대한 보장을 위해서는 사망률이 적용되는데 이것이 일반 은행상품과 다른 요소가 됩니다.
+		제 1보험기간은 위험에 대해 보장하는 기간으로 위험보장기간이라 하며, 제 2보험기간은 연금이 지급되는 기간입니다."><!-- pc용 이미지(기본) -->
+		</picture>
+	</div>
+
+	<br><br>
+
+	<p>* 미디어쿼리 포인트는 각 이미지에 따라 알맞게 설정하기</p>
+
+</div>
+<pre><code class="language-xml">&#x3C;picture&#x3E;
+&#x9;&#x3C;source srcset=&#x22;../images/temp/picture_mobile.png&#x22; media=&#x22;(max-width:768px)&#x22;&#x3E;&#x3C;!-- &#xBAA8;&#xBC14;&#xC77C;&#xC6A9; &#xC774;&#xBBF8;&#xC9C0; --&#x3E;
+&#x9;&#x3C;img src=&#x22;../images/temp/picture_pc.png&#x22; alt=&#x22;&#x22;&#x3E;&#x3C;!-- pc&#xC6A9; &#xC774;&#xBBF8;&#xC9C0;(&#xAE30;&#xBCF8;) --&#x3E;
+&#x3C;/picture&#x3E;
+</code></pre>
+
+
+<h3 class="sec-title">PC/모바일 겸용</h3>
+<div class="code-preview">
+	<div class="imgbox">
+		<img src="../../images/contents/img_pension_3f.png" alt="1층연금-국민연금:기본적인 생활을 위해 국가가 보장하는 연금, 2층연금-퇴직연금:표준적인 생활을 위해 기업이 보장하는 연금, 3층연금-개인연금:여유있는 생활을 위해 개인적으로 준비하는 연금">
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;div class=&#x22;imgbox&#x22;&#x3E;
+&#x9;&#x3C;img src=&#x22;../../images/contents/img_pension_3f.png&#x22; alt=&#x22;&#x22;&#x3E;
+&#x3C;/div&#x3E;
+</code></pre>
+
+			<!-- 내용끝 -->
+		</div>
+	</section>
+</div>
+
+</body>
+</html>

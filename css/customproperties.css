@@ -1,0 +1,90 @@
+:root {
+	--color-base: #444; 
+
+	--font-base: 'Noto Sans KR', 'malgun gothic', dotum, sans-serif; 
+	--font-use: 'Pretendard', sans-serif; 
+	--font-base-size: 1.6rem; 
+
+	--font-Noto-light: 300;
+	--font-Noto-regular: 400;
+	--font-Noto-medium: 500;
+	--font-Noto-bold: 700;
+	--font-Noto-bolder: 900;
+
+	--color-primary: #1d8fff; 
+	--color-secondary: #0ab439; 
+	--color-point: #FF8908; 
+	
+	--color-primary-light: #BCDDFF; 
+	--color-secondary-light: #82E19B; 
+	--color-point-light: #FFDF7F; 
+	--color-point-light2: #FFB200; 
+
+	--color-primary-expansion: #1A72E7;  
+	--color-secondary-expansion: #32A13B; 
+	--color-point-expansion: #FF7008; 
+	
+	/* --color-err: #FC1F2D; */
+
+	
+	/* GNB 1-Depth Menu, GNB ETC Menu, Page Title 
+	 / GNB Icon Line */
+	--color-gray1: #111111; 
+
+	/* GNB 2-Depth Menu, Contents Title, Highlight Text 
+	 / Board Top-Line, Step Line (Active) 
+	 / Dark Button BG*/
+	--color-gray2: #222222; 
+
+	/* Body Font, Form (Input / Action) 
+	/ Controlar “Line” icon (Active), Check (Active) */
+	--color-gray3: #333333;
+
+	/* Addition explanation, Select Default List, ReadOnly Data */
+	--color-gray4: #666666;
+
+	/* Discription, Text Flag, Text Lable */
+	--color-gray6: #707884;
+
+	/* Form Message (Default), Controlar “Line” icon (Default) */
+	--color-gray5: #999999;
+
+/* Form Message (Disable), Button Message (Disable) 
+ / Form Border (Default), Check Line (Default), Button Line (Default) */
+	--ui-colr1: #cccccc; 
+
+	/* Form border (Disable 
+	/ ReadOnly), Controlar “Line” icon (Disable)
+	/ Controlar “Solid” icon (Default), Button BG (Disable) */
+	--ui-colr2: #dddddd; 
+
+	/* Grid(Table) Row Line 
+	/ Controlar “Solid” icon (Disable), Solid Icon 
+	/ Icon Area (Disable)*/
+	--ui-colr3: #e5e5e5; 
+
+	/* Controller BG (Disable / ReadOnly), 
+	  Mouse Hove (PC), Contents Block, 
+	  Table(Grid) article BG */
+	--ui-colr4: #f9fafb; 
+
+	/* --color-placeholder: #999999;
+	--color-readonly-bg: #666666; */
+	/* --opacity-disabled: 0.5; */
+
+	--width-max: 1280px; 
+	--width-min: 360px; 
+
+	--grid-minWidth: 90rem;
+
+	--response-rate-1080: 0.89;
+	--response-rate-768: 0.64;
+
+}
+
+
+@media all and (max-width: 767px) {
+  :root {
+    --font-base-size: 1.4rem;
+  }
+}

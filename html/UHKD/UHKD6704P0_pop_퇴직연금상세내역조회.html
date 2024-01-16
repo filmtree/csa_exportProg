@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+	<script src="../../js/ui_temp.js"></script>
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <style>
+    </style>
+</head>
+<body>
+    
+    <!-- 재무상태분석 상세보기 -->
+    <div class="modal full dim" id="pop-university" style="display: block;">
+        <div class="modalWrap wide sm-text">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <h3 class="cont-title">퇴직연금</h3>
+                </div>
+                <button class="btn-close">모달창닫기</button>
+            </div>
+            <div class="modal-body">
+                <!-- 내용시작 -->
+                <div class="modal-body-inner">
+                    <div class="con-table all-center">
+                        <table class="min-w1000px" summary="금융 회사명,상품명,퇴직연금 종류,연금 개시여부,연금개시 (예정)일,연금수령 종료일,예시연금액(년)에 대한 정보 제공">
+                            <caption>퇴직연금 상세내역 표</caption>
+                            <colgroup>
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                            </colgroup>
+                            <thead>
+                                <tr>						
+                                    <th scope="col">금융 회사명</th>
+                                    <th scope="col">상품명</th>
+                                    <th scope="col">퇴직연금 종류</th>
+                                    <th scope="col">연금 개시여부</th>
+                                    <th scope="col">연금개시 (예정)일</th>
+                                    <th scope="col">연금수령 종료일</th>
+                                    <th scope="col">예시연금액(년)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>삼성생명</td>
+                                    <td>삼성 미래 퇴직연금</td>
+                                    <td>확장급여형(DB)</td>
+                                    <td></td>
+                                    <td>0000/00/00</td>
+                                    <td>0000/00/00</td>
+                                    <td>00,000,000원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="txt-list dot gray">
+                        <li>퇴직연금 중 확정급여형(DB형)의 경우 금융회사에서 자료를 제공하고 있지 않습니다. (추후연계예정)</li>
+                        <li>중도 해지시 실제 수령하는 금액은 해지공제액, 기타소득세 등으로 인하여 적립금액과 달라질 수 있습니다.</li>
+                        <li>연금상품 가입시 납입 종료일(납입기간)을 설정하지 않은 경우, 만 60세까지 납입하는 것을 가정하였습니다.</li>
+                        <li>예시연금액은 예상 납입액 및 예상수익률 등에 따라 계산된 금액으로 향후 납입정보, 수익률 , 연금수령방법 등 상황 변화에 따라 변동될 수 있습니다.</li>
+                        <li>퇴직연금 상품의 궁금하신 사항은 가입한 금융회사 담당직원과 직접 상담하여 주시기 바랍니다.</li>
+                    </ul>
+                </div>
+                <!-- 내용끝 -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

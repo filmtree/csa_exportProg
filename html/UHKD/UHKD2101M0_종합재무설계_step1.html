@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+	<script src="../../js/ui_temp.js"></script>
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header -->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">진단ㆍ상담 서비스</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                            <li><a href="#none" target="_self">재무진단</a></li>
+                            <li><a href="#none" target="_self">노후준비정보</a></li>
+                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep2">
+                        <button type="button" class="breadcrumb-trigger current">노후준비종합진단</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">상담지사안내</a></li>
+                            <li><a href="#none" target="_self">상담지자체안내</a></li>
+                            <li class="current"><a href="#none" target="_self">노후준비종합진단</a></li>
+                            <li><a href="#none" target="_self">온라인상담</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">방문상담신청</a></li>
+                            <li><a href="#none" target="_self">교육신청</a></li>
+                            <li><a href="#none" target="_self">강사정보</a></li>
+                            <li><a href="#none" target="_self">자가진단</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner">
+            <div class="page-header">
+                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>종합재무분석</h2></div>
+                <div class="page-desc">
+                    <button type="button" class="page-desc-btn _has-tooltip"><span>종합재무설계 안내</span><i class="ic-only f-pg-desc"></i></button>
+                    <div class="desc-box _tooltipbox">
+                        <div class="desc-box-inner">
+                            <div class="desc-content">
+                                <p>
+                                    고객 재무정보를 기본정보부터 단계별로 입력해 주시기 바랍니다. <br>[저장]버튼으로 현재 설계정보를 저장이 가능하며, [마이페이지]에서 저장하신 설계내역을 확인 및 수정하실 수 있습니다.
+                                </p>
+                            </div>
+                            <button type="button" class="ic-only box-close">창닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-wrap total-finance maxtab-hide"><!-- 231208 클래스 추가 total-finance -->
+                <!-- S : 2311월 -->
+                <!--콘텐츠 영역-->
+                <ul class="equal-list step">
+                    <li class="active">
+                        <em class="unit">01</em>
+                        <div class="type">기본정보</div>
+                    </li>
+                    <li class="">
+                        <em class="unit">02</em>
+                        <div class="type">재무목표</div>
+                    </li>
+                    <li>
+                        <em class="unit">03</em>
+                        <div class="type">수입정보</div>
+                    </li>
+                    <li>
+                        <em class="unit">04</em>
+                        <div class="type">소비지출</div>
+                    </li>
+                    <li>
+                        <em class="unit">05</em>
+                        <div class="type">자산정보</div>
+                    </li>
+                    <li>
+                        <em class="unit">06</em>
+                        <div class="type">부채정보</div>
+                    </li>
+                </ul>
+                <div class="cont-head">
+                    <h3 class="cont-title big normal"><strong>홍길동</strong> 고객님의 재무설계를 시작합니다.</h3>
+                    <div class="cont-desc big equal-list">고객 재무정보를 기본정보부터 단계별로 입력해 주시기 바랍니다. <br>
+                        [저장]버튼으로 현재 설계정보를 저장이 가능하며, [마이페이지]에서 저장하신 설계내역을 확인 및 수정하실 수 있습니다.
+                        <div class="btn-wrap unit-location">
+                            <a href="#none" class="button-secondary -sm round">마이페이지 바로가기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 고객가족 사항 -->
+                <h4 class="cont-title big is">기본정보</h4>
+                <div class="con-table-header">
+                    <p class="cont-title none1">고객가족 사항</p>
+                </div>
+                <div class="con-table all-center">
+                    <table class="min-w1000px" summary="본인, 배우자의 이름, 주민등록번호, 나이, 성별 등 개인정보입력">
+                        <caption>본인, 배우자 개인정보 입력</caption>
+                        <colgroup>
+                            <col style="width:7%">
+                            <col style="width:20%">
+                            <col style="width:8%">
+                            <col style="width:27%">
+                            <col style="width:8%">
+                            <col style="width:10%">
+                            <col style="width:8%">
+                            <col style="width:13%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><label>본인</label></th>
+                                <td>
+                                    <div class="form-group-txt">
+                                        <input type="text" class="charLength6" value="" placeholder="이름" style="max-width:244px; width: 100%;">
+                                    </div>
+                                </td>
+                                <th scope="row"><label for="coSN1">생년월일</label></th>
+                                <td>
+                                    <div class="form-group-txt">
+                                        <input type="text" class="charLength2 align-right" value="" placeholder="0">
+                                        <span class="center-txt">년</span>
+                                        <input type="text" class="charLength1 align-right" value="" placeholder="0">
+                                        <span class="center-txt">월</span>
+                                        <input type="text" class="charLength1 align-right" value="" placeholder="0">
+                                        <span class="back-txt">일</span>
+                                    </div>
+                                </td>
+                                <th scope="row"><label>나이</label></th>
+                                <td>
+                                    <div class="form-group-txt">
+                                        <input type="text" class="charLength1 align-right" value="" placeholder="0">
+                                        <span class="back-txt">세</span>
+                                    </div>
+                                </td>
+                                <th scope="row">성별</th>
+                                <td>
+                                    <div class="form-group">
+                                        <label class="inp-radio">
+                                            <input type="radio" name="radioGroup1">
+                                            <span>남</span>
+                                        </label>
+                                        <label class="inp-radio">
+                                            <input type="radio" name="radioGroup1">
+                                            <span>여</span>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label>배우자</label></th>
+                                <td>
+                                    <div class="form-group-txt">
+                                        <input type="text" class="charLength6" value="" placeholder="이름" style="max-width:244px; width: 100%;">
+                                    </div>
+                                </td>
+                                <th scope="row"><label>생년월일</label></th>
+                                <td>
+                                    <div class="form-group-txt">
+                                        <input type="text" class="charLength2 align-right" value="" placeholder="0">
+                                        <span class="center-txt">년</span>
+                                        <input type="text" class="charLength1 align-right" value="" placeholder="0">
+                                        <span class="center-txt">월</span>
+                                        <input type="text" class="charLength1 align-right" value="" placeholder="0">
+                                        <span class="back-txt">일</span>
+                                    </div>
+                                </td>
+                                <th scope="row"><label>나이</label></th>
+                                <td>
+                                    <div class="form-group-txt">
+                                        <input type="text" class="charLength1 align-right" value="" placeholder="0">
+                                        <span class="back-txt">세</span>
+                                    </div>
+                                </td>
+                                <th scope="row">성별</th>
+                                <td>
+                                    <div class="form-group">
+                                        <label class="inp-radio">
+                                            <input type="radio" name="radioGroup2">
+                                            <span>남</span>
+                                        </label>
+                                        <label class="inp-radio">
+                                            <input type="radio" name="radioGroup2">
+                                            <span>여</span>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="txt-list dot gray top">
+                        <li>개인정보 보호를 위하여 배우자 성명은 입력하지 않습니다.</li>
+                        <li>본인 및 배우자 나이는 ‘만’나이이며, 자녀 정보 또한 ‘만’나이를 입력합니다.</li>
+                    </ul>
+                </div>
+                <!-- 자녀추가 -->
+                <div class="con-table-header lowdouble">
+                    <div class="btn-wrap modify-txt">
+                        <div>
+                            <a href="#none" class="button-primary -sm round">
+                                <i class="ic-only inner-plus after" arir-hidden="true"></i>
+                                자녀추가
+                            </a>                             
+                        </div>
+                    </div>
+                </div>
+                <div class="con-table all-center">                    
+                    <table class="min-w1000px" summary="자녀의 성명, 나이, 성별, 결혼여부 등 정보입력" class="space24">
+                        <caption>자녀 정보 입력</caption>
+                        <colgroup>
+                            <col style="width:15%">
+                            <col style="width:20%">
+                            <col style="width:18%">
+                            <col style="width:15%">
+                            <col style="width:18%">
+                            <col style="width:auto">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">구분</th>
+                                <th scope="col">성명</th>
+                                <th scope="col">나이</th>
+                                <th scope="col">성별</th>
+                                <th scope="col">결혼여부</th>
+                                <th scope="col" class="last">삭제</th>
+                            </tr>
+                        </thead>
+                        <tbody>	
+                            <tr>
+                                <td><label for="coname">자녀</label></td>
+                                <td>
+                                    <div class="form-group-txt">
+                                        <input type="text" class="charLength6" value="" placeholder="이름">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group-txt">
+                                        <input type="text" class="charLength6 align-right" value="" placeholder="0">
+                                        <span class="back-txt">세</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <label class="inp-radio">
+                                            <input type="radio" name="radioGroup3">
+                                            <span>남</span>
+                                        </label>
+                                        <label class="inp-radio">
+                                            <input type="radio" name="radioGroup3">
+                                            <span>여</span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <label class="inp-radio">
+                                            <input type="radio" name="radioGroup4">
+                                            <span>미혼</span>
+                                        </label>
+                                        <label class="inp-radio">
+                                            <input type="radio" name="radioGroup4">
+                                            <span>기혼</span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button type="button" class="button-tertiary -sm round">
+                                        <i class="ic-only inner-delete" aria-hidden="true"></i>
+                                        삭제
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 가정치 -->
+                <div class="con-table-header top">
+                    <p class="cont-title none1">가정치</p>
+                    <div class="btn-wrap modify-txt">
+                        <div>
+                            <a href="#none" class="button-primary -sm round">
+                                <i class="ic-only inner-reset after" arir-hidden="true"></i>
+                                초기화
+                            </a>                             
+                        </div>
+                    </div>
+                </div>
+                <div class="con-table all-center">
+                    <table class="min-w1000px" summary="물가상승률, 교육비인상률, 소득상승률, 세후투자수익률 정보입력">
+                        <caption>가정치 정보 입력</caption>
+                        <colgroup>
+                            <col style="width:25%">
+                            <col style="width:25%">
+                            <col style="width:25%">
+                            <col style="width:25%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><label for="mulgainc">물가상승률</label></th>
+                                <td>
+                                    <div class="form-group-txt">
+                                        <input type="text" class="charLength6 align-right" value="" placeholder="0" id="mulgainc">
+                                        <span class="back-txt">%</span>
+                                    </div>
+                                </td>
+                                <th scope="row"><label for="eduinc">교육비인상률</label></th>
+                                <td>
+                                    <div class="form-group-txt">
+                                        <input type="text" class="charLength6 align-right" value="" placeholder="0" id="eduinc">
+                                        <span class="back-txt">%</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="incomeinc">소득상승률</label></th>
+                                <td>
+                                    <div class="form-group-txt">
+                                        <input type="text" class="charLength6 align-right" value="" placeholder="0" id="incomeinc">
+                                        <span class="back-txt">%</span>
+                                    </div>
+                                </td>
+                                <th scope="row"><label for="aftertaxincomeinc">세후투자수익률</label></th>
+                                <td>
+                                    <div class="form-group-txt">
+                                        <input type="text" class="charLength6 align-right" value="" placeholder="0" id="aftertaxincomeinc">
+                                        <span class="back-txt">%</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="txt-list dot gray top">
+                        <li>상기 가정치의 값은 직접 수정하실 수 있습니다.</li>
+                    </ul>
+                </div>
+                <div class="cont-bottom">
+                    <div class="btn-group">
+                        <button type="button" class="button-primary -lg" id="btn1">다음 (저장)</button>
+                    </div>
+                </div>
+                <!-- 공통UI - 해시태그 링크들 -->
+                <div class="hashtag-wrap"></div>
+                <!--// 공통UI - 해시태그 링크들 -->
+                
+                <!--//콘텐츠 영역-->
+                <!--// E : 2311월 -->
+            </div>
+            <script>
+            </script>
+            <!-- 공통UI - 만족도조사 -->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer -->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

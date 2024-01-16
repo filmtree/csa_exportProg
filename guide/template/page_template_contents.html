@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<title>Page Title</title>
+		<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+		<script src="../../js/lib/jquery-ui.min.js"></script>
+		<script src="../../js/lib/jquery.easing.min.js"></script>
+		<script src="../../js/lib/swiper-bundle.min.js"></script>
+		<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+		<script src="../../js/zoom.js"></script>
+		<script src="../../js/ui_temp.js"></script>
+		<script src="../../js/ui_common.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<!-- s: header -->
+			<header id="header"></header>
+			<!-- e: header -->
+
+			<!-- s: Loaction Information Link -->
+			<div class="breadcrumb">
+				<div class="breadcrumb-nav">
+					<ol class="breadcrumb-location">
+						<li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+						<li class="breadcrumb-depth dep1">
+							<button type="button" class="breadcrumb-trigger">현재섹션</button>
+							<ul class="breadcrumb-depth-list">
+								<li><a href="#none" target="_self">노후준비서비스소개</a></li>
+								<li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+								<li><a href="#none" target="_self">재무진단</a></li>
+								<li><a href="#none" target="_self">노후준비정보</a></li>
+								<li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+							</ul>
+						</li>
+						<li class="breadcrumb-depth dep2">
+							<button type="button" class="breadcrumb-trigger current">현재섹션</button>
+							<ul class="breadcrumb-depth-list">
+								<li><a href="#none" target="_self">간단재무설계</a></li>
+								<li class="current"><a href="#none" target="_self">노후준비자금설계</a></li>
+								<li><a href="#none" target="_self">종합재무설계</a></li>
+								<li><a href="#none" target="_self">목적자금설계</a></li>
+								<li><a href="#none" target="_self">재무계산기</a></li>
+								<li><a href="#none" target="_self">국민연금준비수준</a></li>
+								<li><a href="#none" target="_self">내연금알아보기</a></li>
+								<li><a href="#none" target="_self">국민연금알아보기</a></li>
+								<li><a href="#none" target="_self">기초연금모의계산</a></li>
+								<li><a href="#none" target="_self">연금제도안내</a></li>
+							</ul>
+						</li>
+					</ol>
+				</div>
+			</div>
+			<!-- e: Loaction Information Link -->
+
+			<!-- s: Main -->
+			<main id="conatiner" class="PAGECLASS">
+				<!--s: Page Title-->
+				<div class="page-header">
+					<div class="page-title">
+						<a href="#" class="ic-only back">뒤로가기</a>
+						<h2>Contents Title</h2>
+					</div>
+					<div class="page-desc">
+						<button type="button" class="page-desc-btn _has-tooltip"><span>툴팁</span><i class="ic-only f-pg-desc"></i></button>
+						<div class="desc-box _tooltipbox">
+							<div class="desc-box-inner">
+								<div class="desc-content">
+									<p class="title-sm">툴팁 타이틀</p>
+									<p>툴팁내용</p>
+								</div>
+								<button type="button" class="ic-only box-close">창닫기</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--e: Page Title-->
+
+				<!--s: Contents -->
+				<section class="content-wrap">
+					<!-- s: Content Header -->
+					<div class="cont-head printNone">
+						<h3 class="cont-title big">결혼자금진단 결과</h3>
+						<p class="cont-desc big">행복한 결혼설계를 위하여 결혼자금준비에 대한 자가진단을 받아보세요.</p>
+					</div>
+
+					<div class="cont-head">
+						<h3 class="cont-title">개인정보 수집 및 이용에 대한 안내</h3>
+						<p class="cont-desc">아래 안내 내용을 확인하신 후 동의해 주세요.</p>
+					</div>
+
+					<div class="cont-head">
+						<h4 class="cont-title dot">결혼준비자금 진단결과</h4>
+					</div>
+					<!-- e: Content Header -->
+
+					<!-- s: Contents In Button Group -->
+					<div class="btn-group divide topHigh">
+						<button type="button" class="button-fourth w160px">다시 계산</button>
+						<button type="button" class="button-primary w160px">그래프 조회</button>
+						<a href="#none     " class="button-primary w160px mc-hide">보고서 출력</a>
+					</div>
+					<!-- e: Contents In Button Group -->
+
+					<!-- s: Color Box Contents -->
+					<div class="color-box">
+						<dl class="result-type-green">
+							<dt>충분</dt>
+							<dd>고객님의 결혼준비자금이 [충분]진단이 나왔습니다.</dd>
+						</dl>
+					</div>
+					<!-- e: Color Box Contents -->
+
+					<!-- s: Text List -->
+					<ul class="txt-list dot fs17">
+						<li>
+							결혼시점에서 <span class="fc-primary">필요자금은 11,717만원</span>이 될 것입니다.<br />
+							하지만, 준비될 결혼자금은 51,192만원이므로 <span class="fc-primary">39,475만원의 잉여자금</span> 이 발생합니다.<br />
+							현재 상태를 유지하셔도 결혼자금에 무리가 없습니다.
+						</li>
+						<li>
+							제안된 입력 값을 바탕으로 산정되었기 때문에 현재 재무상황을 직접적으로 반영하지 않을 수 있습니다.<br />
+							정밀한 진단은 CSA컨설턴트와 상담하시길 바랍니다.
+						</li>
+					</ul>
+					<!-- e: Text List -->
+
+					<!-- s: Number List -->
+					<ul class="txt-list-counter blue-num">
+						<li>
+							<h4 class="num-count-title">사업장이 도산해도 수급권 보장</h4>
+							<p class="phrase">퇴직연금제도에서는 믿을 만한 금융기관을 선정하여 퇴직금을 맡겨 놓기 때문에 사업장이 도산해도 수급권이 보장됩니다.</p>
+						</li>
+						<li>
+							<h4 class="num-count-title"><span></span>제도설계 및 운용과정의 다양한 선택권 부여</h4>
+							<p class="phrase">퇴직급여를 퇴직금제도에서 처럼 일시금으로 수령할 수도 있고, 조건이 충족되면 연금으로 수령할 수도 있습니다. 특히 <span class="fc-primary">DC형의 경우에는 근로자의 추가 부담금 납부가 가능</span>하고 이에 대한 별도의 소득공제 혜택도 주어집니다.</p>
+						</li>
+						<li>
+							<h4 class="num-count-title"><span></span>변화된 자산관리 환경에 대응</h4>
+							<p class="phrase">퇴직연금제도는 채권, 주식, 선물, 각종 파생상품 등 <span class="fc-primary">다양한 금융상품에 장기 분산 투자</span>함으로써 자산관리 환경의 변화에 효과적으로 대응할 수 있습니다.</p>
+						</li>
+						<li>
+							<h4 class="num-count-title"><span></span>은퇴시까지 충분한 수준의 노후재원 보존</h4>
+							<p class="phrase">퇴직연금제도에서는 중도인출(중간정산)요건을 엄격하게 제한하여 노후 재원인 퇴직급여가 생활자금으로 소진되지 않도록 하고 있습니다.</p>
+						</li>
+					</ul>
+					<!-- e: Number List -->
+					<br />
+					<!-- s: Data List -->
+					<ul class="data-type-list">
+						<li class="items">
+							<dl class="unit-group">
+								<dt class="unit-title">주관적 건강상태</dt>
+								<dd class="description">보통</dd>
+							</dl>
+							<div class="unit-group">
+								<div class="status-txt">
+									<span>적정</span>
+								</div>
+							</div>
+						</li>
+						<li class="items color">
+							<dl class="unit-group">
+								<dt class="unit-title">나에게 맞는 운동 계획 수립</dt>
+								<dd class="description">
+									<p>언제</p>
+									<p>어디서</p>
+									<p>무엇을</p>
+								</dd>
+							</dl>
+							<div class="unit-group">
+								<div class="status">
+									<p>월요일</p>
+									<p>운동센터</p>
+									<p>워킹, 조깅</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<!-- e: Data List -->
+					<br />
+
+					<!-- s: Graph Box -->
+					<div class="divide-wrap mt0">
+						<div class="col">
+							<div class="cont-head">
+								<h4 class="cont-title">과부족 지급현황</h4>
+							</div>
+							<div class="graph-box1">
+								<span>그래프 영역</span>
+							</div>
+						</div>
+						<div class="col">
+							<div class="cont-head">
+								<h4 class="cont-title">준비자금현황</h4>
+							</div>
+							<div class="graph-box1">
+								<span>그래프 영역</span>
+							</div>
+						</div>
+					</div>
+					<!-- e: Graph Box -->
+
+					<!-- s: Table -->
+					<div class="con-table-header">
+						<!-- <span class="txt-helper">(단위 : 만원)</span> -->
+						<h3 class="cont-title none1">필요자금</h3>
+						<span class="txt-helper">(단위 : 만원)</span>
+					</div>
+					<div class="con-table all-center">
+						<table summary="구분, 금액, 비중 (필요자금, 준비자금, 노후잉여자금)에 대한 내용이 나열된 표">
+							<caption>
+								결혼준비자금 진단 결과 표
+							</caption>
+							<colgroup>
+								<col width="25%" />
+								<col width="25%" />
+								<col width="25%" />
+								<col width="25%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" colspan="2">구분</th>
+									<th scope="col">금액</th>
+									<th scope="col">비중</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row" colspan="2">필요자금</th>
+									<td>11,717</td>
+									<td>100.0%</td>
+								</tr>
+								<tr>
+									<th scope="row" rowspan="4" class="border">준비자금</th>
+									<th scope="row">준비된 자산</th>
+									<td>13,373</td>
+									<td>114.0%</td>
+								</tr>
+								<tr>
+									<th scope="row">저축금액</th>
+									<td>32,819</td>
+									<td>280.0%</td>
+								</tr>
+								<tr>
+									<th scope="row">대출자금</th>
+									<td>5,000</td>
+									<td>43.0%</td>
+								</tr>
+								<tr class="color-point">
+									<th scope="row">소계</th>
+									<td class="bg fc-base">51,192</td>
+									<td class="bg fc-base">437.0%</td>
+								</tr>
+								<tr class="mediumbold">
+									<th scope="row" colspan="2">과부족자금(필요자금-준비자금)</th>
+									<td class="bg">잉여자금 39,475</td>
+									<td class="bg">337.0%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- e: Table -->
+
+					<!-- s: Survey Q&A -->
+					<ul>
+						<li class="qnalist">
+							<p class="question-title"><em class="ic-q">Q</em>1. 나의 건강상태는 좋다.</p>
+							<div class="question-answer">
+								<em class="ic-a">A</em>
+								<div class="inp-check-list label typeA">
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio1" />
+											<span>전혀 아니다</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio1" />
+											<span>아니다</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio1" />
+											<span>보통</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio1" />
+											<span>그렇다</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio1" />
+											<span>매우 그렇다</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<!-- e: Survey Q&A -->
+					<br />
+					<!-- s: Check Button -->
+					<button class="button-tertiary choice-button" id="choiceBtn">
+						<label class="inp-checkbox">
+							<input type="checkbox" name="checkbox" checked="" />
+							<span>(선택) 나의 식생활 습관 알아보기</span>
+						</label>
+					</button>
+					<!-- e: Check Button -->
+
+					<!-- s: Card Section -->
+					<div class="divide-wrap mt48">
+						<div class="col box-item">
+							<span class="item-icon"><img src="../../images/ico/ic_mypension_01.svg" alt="" aria-hidden="true" /></span>
+							<div class="item-text">
+								<h4 class="cont-title">신청</h4>
+								<p>가입중인 국민연금, 개인연금, 퇴직연금, 주택연금 정보조회를 신청합니다.</p>
+							</div>
+							<div class="btn-group">
+								<button type="button" class="button-primary">신청하기</button>
+							</div>
+						</div>
+						<div class="col box-item">
+							<span class="item-icon"><img src="../../images/ico/ic_mypension_02.svg" alt="" aria-hidden="true" /></span>
+							<div class="item-text">
+								<h4 class="cont-title">조회</h4>
+								<p>가입중인 국민연금, 개인연금, 퇴직연금, 주택연금 정보를 조회합니다.</p>
+							</div>
+							<div class="btn-group">
+								<button type="button" class="button-primary">조회하기</button>
+							</div>
+						</div>
+						<div class="col box-item">
+							<span class="item-icon"><img src="../../images/ico/ic_mypension_03.svg" alt="" aria-hidden="true" /></span>
+							<div class="item-text">
+								<h4 class="cont-title">철회</h4>
+								<p>가입중인 국민연금, 개인연금, 퇴직연금, 주택연금 정보조회를 철회합니다.</p>
+							</div>
+							<div class="btn-group">
+								<button type="button" class="button-primary">신청 철회하기</button>
+							</div>
+						</div>
+					</div>
+					<!-- e: Card Section -->
+
+					<!-- s: Information Text -->
+					<p class="rel-txt fs14">출처 : 금융감독원 퇴직연금 종합안내(pension.fss.or.kr), 국민연금 CSA 전문상담사과정</p>
+					<!-- e: Information Text -->
+
+					<!-- s: Page Buttons -->
+					<div class="cont-bottom type2">
+						<div class="btn-group">
+							<button type="button" class="button-primary -md">button-primary</button>
+							<button type="button" class="button-secondary -md">button-secondary</button>
+							<button type="button" class="button-tertiary -md">button-tertiary</button>
+						</div>
+					</div>
+					<!-- e: Page Buttons -->
+
+					<!-- s: Common UI - HashTag Banner -->
+					<section class="hashtag-wrap"></section>
+					<!-- e: Common UI - HashTag Banner -->
+				</section>
+				<!--s: Contents -->
+
+				<!-- s: Common UI - Survey -->
+				<section class="page-satisfaction"></section>
+				<!-- e: Common UI - Survey -->
+			</main>
+			<!-- e: Main -->
+
+			<!-- s: footer -->
+			<footer id="footer"></footer>
+			<!-- e: footer -->
+		</div>
+	</body>
+</html>

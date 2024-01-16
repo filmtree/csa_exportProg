@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+		<script src="../../js/zoom.js"></script>
+	<script src="../../js/ui_temp.js"></script> <!-- 231116 추가-->
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+    <ul class="skip-nav">
+        <li><a href="#conatiner">본문 바로가기</a></li>
+        <li><a href="#gnav">주메뉴 바로가기</a></li>
+        <li><a href="#allmenu">전체메뉴 바로가기</a></li>
+        <li><a href="#footer">푸터 바로가기</a></li>
+    </ul>
+    <div id="wrapper">
+        <!-- header -->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">진단ㆍ상담 서비스</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                            <li><a href="#none" target="_self">재무진단</a></li>
+                            <li><a href="#none" target="_self">노후준비정보</a></li>
+                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep2">
+                        <button type="button" class="breadcrumb-trigger">방문상담신청</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">상담지사안내</a></li>
+                            <li><a href="#none" target="_self">상담지자체안내</a></li>
+                            <li><a href="#none" target="_self">노후준비종합진단</a></li>
+                            <li><a href="#none" target="_self">온라인상담</a></li>
+                            <li><a href="#none" target="_self">방문상담신청</a></li>
+                            <li><a href="#none" target="_self">교육신청</a></li>
+                            <li><a href="#none" target="_self">강사정보</a></li>
+                            <li><a href="#none" target="_self">자가진단</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep3">
+                        <button type="button" class="breadcrumb-trigger current">방문상담신청</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li class="current"><a href="#none" target="_self">방문상담신청</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">상담예약목록</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner" class="counsel visit">
+            <!--page-title-->
+            <div class="page-header">
+                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>방문상담 신청</h2></div>
+                <div class="page-desc">
+                    <button type="button" class="page-desc-btn _has-tooltip"><span>방문상담 예약</span><i class="ic-only f-pg-desc"></i></button>
+                    <div class="desc-box _tooltipbox">
+                        <div class="desc-box-inner">
+                            <div class="desc-content">
+                                <p>
+                                    방문상담을 위한 방문예약 코너입니다.
+                                    담당컨설턴트의 확인 후 방문 예약일에 해당 지사에 방문하시어 전문 컨설턴트 (<span class="fc-primary">재무설계사, 사회복지사, 노후준비상담사</span> 등)와 1:1 노후준비 상담을 진행하실 수 있습니다.
+                                </p>
+                            </div>
+                            <button type="button" class="ic-only box-close">창닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--//page-title-->
+            <div class="content-wrap">
+                <!--콘텐츠 영역-->
+                <div class="cont-head fx-justify-spacebetween">
+                    <h3 class="cont-title">방문상담신청 예약</h3>
+                    <div class="item-group">
+                        <label class="inp-checkbox">
+                            <input type="checkbox" id="" name="chk1">
+                            <span>키보드보안 실행하기</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="board-wrap bd-write">
+                    <div class="field">
+                        <label class="field-label" for="성명">성명</label>
+                        <div class="form-group-controls">
+                            <input type="text" id="성명" placeholder="실명을 입력해주세요" class="charLength9"><button type="button" class="button-fourth">휴대폰 본인 인증</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="field-label" for="지사명">지사명</label>
+                        <span class="text-value">경기 > 남양주지사</span>
+                    </div>
+                    <div class="field">
+                        <label class="field-label" for="지사명">방문일시</label>
+                        <span class="text-value">2023년 10월 27일 (11:00)</span>
+                    </div>
+                    <div class="field">
+                        <label class="field-label">이메일</label>
+                        <div class="form-group-email">
+                            <input type="text" class="email-id" title="이메일 사용자 아이디"><span class="inp-split">@</span><input type="text" class="email-domain" title="이메일 도메인">
+                            <select title="이메일 도메인 선택" class="email-domain-opt">
+                                <option value="">직접입력</option>
+                                <option value="">nate.com</option>
+                                <option value="">naver.com</option>
+                                <option value="">gmail.com</option>
+                                <option value="">kakao.com</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="field-label">예약 확인 번호</label>
+                        <div class="form-group-tel">
+                            <select class="tel-first" title="휴대전화 식별번호">
+                                <option>선택</option>
+                                <option>010</option>
+                                <option>011</option>
+                            </select><span class="inp-split">-</span><input type="text" class="tel-second" title="휴대전화 중간 번호"><span class="inp-split">-</span><input type="text" class="tel-third" title="휴대전화 뒷 번호">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="field-label" for="비밀번호">글 비밀번호</label>
+                        <div class="form-group">
+                            <input type="text" id="비밀번호" class="charLength9" placeholder="비밀번호를 입력하세요"><p class="txt-helper">(9~20자의 숫자, 영문, 특수문자 조합)</p>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="form-group type-row multiple">
+                            <label class="field-label hidden" for="제목입력">제목입력</label>
+                            <input type="text" id="제목입력" placeholder="제목을 입력해주세요">
+                            <label class="field-label hidden" for="내용입력">내용 입력</label>
+                            <div class="inp-textarea w100">
+                                <textarea rows="5" id="내용입력" class="fm-textarea h320px"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-bottom">
+                    <div class="btn-group">
+                        <button type="button" class="button-tertiary -lg">취소</button>
+                        <button type="button" class="button-primary -lg">확인</button>
+                    </div>
+                </div>
+                <!--//콘텐츠 영역-->
+            </div>
+
+            <!-- 공통UI - 만족도조사 -->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer -->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

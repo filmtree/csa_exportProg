@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <button type="button" class="button-primary" id="modalOpenButton">Open</button>
+
+    <!-- 개인연금정보입력 정보입력 Modal-->
+    <div class="modal dim full" id="modalTemplate">
+      <div class="modalWrap h720px">
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3>개인연금정보입력</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <div class="modal-body">
+          <!-- 내용시작 -->
+          <div class="modal-body-inner">
+            <!-- survey list -->
+            <ul>
+              <!-- 1 -->
+              <li class="qnalist none col">
+                <p class="question-title"><em class="ic-q">Q</em>개인연금의 가입 년도는 언제입니까?</p>
+                <div class="question-answer">
+                  <div class="form-group-txt">
+                    <input type="text" id="input5" class="charLength5 align-right" placeholder="0" title="개인연금의 가입 년도" />
+                    <span class="back-txt">년도</span>
+                  </div>
+                </div>
+              </li>
+              <!-- 2 -->
+              <li class="qnalist col">
+                <p class="question-title"><em class="ic-q">Q</em>매 월 개인연금 납입액은 얼마입니까?</p>
+                <div class="question-answer">
+                  <div class="form-group-txt">
+                    <input type="text" id="input6" class="charLength5 align-right" placeholder="0" title="매 월 개인연금 납입액" />
+                    <span class="back-txt">만원</span>
+                  </div>
+                </div>
+              </li>
+              <!-- 3 -->
+              <li class="qnalist col">
+                <p class="question-title"><em class="ic-q">Q</em>개인연금의 전체 납입 기간은 몇 년입니까?</p>
+                <div class="question-answer">
+                  <div class="form-group-txt">
+                    <input type="text" id="input7" class="charLength5 align-right" placeholder="0" title="개인연금의 전체 납입 기간" />
+                    <span class="back-txt">년</span>
+                  </div>
+                </div>
+              </li>
+              <!-- 4 -->
+              <li class="qnalist col">
+                <p class="question-title"><em class="ic-q">Q</em>개인연금은 몇 세 부터 받으실 예정입니까? (단, 은퇴 이후만)</p>
+                <div class="question-answer">
+                  <div class="form-group-txt">
+                    <input type="text" id="input8" class="charLength5 align-right" placeholder="0" title="개인연금 희망연세" />
+                    <span class="back-txt">세</span>
+                  </div>
+                </div>
+              </li>
+              <!-- 5 -->
+              <li class="qnalist col">
+                <p class="question-title"><em class="ic-q">Q</em>개인연금은 몇 년 동안 받으실 예정입니까?</p>
+                <div class="question-answer">
+                  <div class="form-group-txt">
+                    <input type="text" id="input8" class="charLength5 align-right" placeholder="0" title="개인연금 희망년수" />
+                    <span class="back-txt">년</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!--// survey list -->
+          </div>
+          <!-- 내용끝 -->
+        </div>
+        <div class="modal-footer">
+          <div class="btn-group">
+            <!-- 231201 수정 -->
+            <button type="button" class="button-primary -lg">개인연금 수령액 등록</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--// 개인연금정보입력 정보입력 Modal -->
+
+    <script>
+      document.querySelector("#modalOpenButton").addEventListener("click", () => {
+        commonUI.modal("#modalTemplate", "#modalOpenButton");
+      });
+    </script>
+  </body>
+</html>

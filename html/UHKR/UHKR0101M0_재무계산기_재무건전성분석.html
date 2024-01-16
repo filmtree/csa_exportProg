@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script><!--공통UI layout-->
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header -->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">재무진단</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                            <li class="current"><a href="#none" target="_self">재무진단</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">노후준비정보</a></li>
+                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li> 
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep2">
+                        <button type="button" class="breadcrumb-trigger">재무계산기</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">간단재무설계</a></li>
+                            <li><a href="#none" target="_self">노후준비자금설계</a></li>
+                            <li><a href="#none" target="_self">종합재무설계</a></li>
+                            <li><a href="#none" target="_self">목적자금설계</a></li>
+                            <li class="current"><a href="#none" target="_self">재무계산기</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">국민연금준비수준</a></li>
+                            <li><a href="#none" target="_self">내연금알아보기</a></li>
+                            <li><a href="#none" target="_self">국민연금알아보기</a></li>
+                            <li><a href="#none" target="_self">기초연금모의계산</a></li>
+                            <li><a href="#none" target="_self">연금제도안내</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep3">
+                        <button type="button" class="breadcrumb-trigger current">재무건전성 분석</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">화폐시간가치</a></li>
+                            <li><a href="#none" target="_self">예적금계산</a></li>
+                            <li><a href="#none" target="_self">대출할부금</a></li>
+                            <li><a href="#none" target="_self">퇴직금계산</a></li>
+                            <li class="current"><a href="#none" target="_self">재무건전성 분석</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner" class="finance financial-calculator">
+            <!--page-title-->
+            <div class="page-header">
+                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>재무건전성 분석</h2></div>
+                <div class="page-desc">
+                    <div class="page-desc">
+                        <button type="button" class="page-desc-btn _has-tooltip"><span>재무건전성 분석 안내</span><i class="ic-only f-pg-desc"></i></button>
+                        <div class="desc-box _tooltipbox">
+                            <div class="desc-box-inner">
+                                <div class="desc-content">
+                                    <p>재무건정성 분석은 가계의 소득 및 지출정보, 자산 및 부채정보를 이용하여 <span class="fc-primary">현금흐름과 재무상태를 파악</span>하고 재무적정성 분석을 통해 <span class="fc-primary">가계재무를 진단</span>합니다. 고객님의 모든 정보는 본 분석프로그램 이외의 다른 목적으로 사용되지 않음을 알려드립니다.</p>
+                                </div>
+                                <button type="button" class="ic-only box-close">창닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--//page-title-->
+            <div class="content-wrap">
+                <!--콘텐츠 영역-->
+                <div class="cont-head">
+                    <h3 class="cont-title">기본정보 입력</h3>
+                </div>
+                <div class="board-wrap bd-data">
+                    <div class="bd-row">
+                        <div class="bd-col">
+                            <div class="th align-left"><span>고객님 현재 나이 (1~100세)</span></div>
+                            <div class="td">
+                                <div class="form-group-txt">
+                                    <span class="front-txt">만</span>
+                                    <input type="text" id="" class="align-right" value="0">
+                                    <span class="back-txt">세</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bd-col">
+                            <div class="th align-left"><span>고객님 월소득</span></div>
+                            <div class="td">
+                                <div class="form-group-txt">
+                                    <input type="text" id="" class="align-right" value="0">
+                                    <span class="back-txt">만원</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bd-row">
+                        <div class="bd-col w100">
+                            <div class="th align-left"><span>배우자 월소득</span></div>
+                            <div class="td">
+                                <div class="form-group-txt">
+                                    <input type="text" id="" class="align-right" value="0">
+                                    <span class="back-txt">만원</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="board-bottom">
+                    <p class="cont-desc dot mb0">고객님과 배우자님의 근로소득이나 사업소득 또는 부동산 월세, 이자, 배당금과 같은 재산소득 등을 합한 가족의 월간 총소득을 입력하세요.</p>
+                </div>
+                <div class="cont-head">
+                    <h3 class="cont-title">월유출 금액</h3>
+                </div>
+                <div class="board-wrap bd-data">
+                    <div class="bd-row">
+                        <div class="bd-col">
+                            <div class="th align-left"><span>월 소비지출 금액</span></div>
+                            <div class="td">
+                                <div class="form-group-txt">
+                                    <input type="text" id="" class="align-right" value="0">
+                                    <span class="back-txt">만원</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bd-col">
+                            <div class="th align-left"><span>저축 및 투자 금액</span></div>
+                            <div class="td">
+                                <div class="form-group-txt">
+                                    <input type="text" id="" class="align-right" value="0">
+                                    <span class="back-txt">만원</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bd-row">
+                        <div class="bd-col">
+                            <div class="th align-left"><span>보험지출 금액</span></div>
+                            <div class="td">
+                                <div class="form-group-txt">
+                                    <input type="text" id="" class="align-right" value="2">
+                                    <span class="back-txt">만원</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bd-col">
+                            <div class="th align-left"><span>월 대출상환 금액</span></div>
+                            <div class="td">
+                                <div class="form-group-txt">
+                                    <input type="text" id="" class="align-right" value="0">
+                                    <span class="back-txt">만원</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="board-bottom">
+                    <p class="cont-desc dot mb0">고객님과 고객님의 가족이 생활에 필요한 대가로 지출되는 생활비용, 장래의 이득을 위해 지출하는 저축 및 투자금액, 위험을 대비한 생명보험 및 손해보험, 대출에 따른 매월 정기적 상환금액을 입력합니다.</p>
+                </div>
+                <div class="cont-head">
+                    <h3 class="cont-title">보유 자산</h3>
+                </div>
+                <div class="board-wrap bd-data">
+                    <div class="bd-row">
+                        <div class="bd-col">
+                            <div class="th align-left"><span>현금 및 현금등가물 보유자산</span></div>
+                            <div class="td">
+                                <div class="form-group-txt">
+                                    <input type="text" id="" class="align-right" value="0">
+                                    <span class="back-txt">만원</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bd-col">
+                            <div class="th align-left"><span>금융투자자산</span></div>
+                            <div class="td">
+                                <div class="form-group-txt">
+                                    <input type="text" id="" class="align-right" value="0">
+                                    <span class="back-txt">만원</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bd-row">
+                        <div class="bd-col">
+                            <div class="th align-left"><span>부동산 보유자산</span></div>
+                            <div class="td">
+                                <div class="form-group-txt">
+                                    <input type="text" id="" class="align-right" value="2">
+                                    <span class="back-txt">만원</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bd-col">
+                            <div class="th align-left"><span>기타자산</span></div>
+                            <div class="td">
+                                <div class="form-group-txt">
+                                    <input type="text" id="" class="align-right" value="0">
+                                    <span class="back-txt">만원</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="board-bottom">
+                    <p class="cont-desc dot mb0">고객님과 가족이 소유하고 있는 경제적 가치가 있는 유형, 무형의 재산입니다.</p>
+                </div>
+                <div class="cont-head">
+                    <h3 class="cont-title">부채(가계빚)</h3>
+                </div>
+                <div class="board-wrap bd-data">
+                    <div class="bd-row">
+                        <div class="bd-col">
+                            <div class="th align-left"><span>소비자 부채액</span></div>
+                            <div class="td">
+                                <div class="form-group-txt">
+                                    <input type="text" id="" class="align-right" value="0">
+                                    <span class="back-txt">만원</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bd-col">
+                            <div class="th align-left"><span>주거관련부채액</span></div>
+                            <div class="td">
+                                <div class="form-group-txt">
+                                    <input type="text" id="" class="align-right" value="0">
+                                    <span class="back-txt">만원</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="board-bottom">
+                    <p class="cont-desc dot mb0">주택마련대출, 가계생활비 대출 등 가계 부채로써 대출을 받으신 이후 아직 갚지 않은 부채잔금(원금+이자)을 말합니다.</p>
+                </div>
+                <div class="cont-bottom">
+                    <div class="btn-group">
+                        <button type="button" class="button-primary -lg">결과조회</button>
+                    </div>
+                </div>
+
+                <!-- 공통UI - 해시태그 링크들 -->
+                <div class="hashtag-wrap"></div>
+                <!--// 공통UI - 해시태그 링크들 -->
+
+                <!--//콘텐츠 영역-->
+            </div>
+
+            <!-- 공통UI - 만족도조사 -->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer -->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

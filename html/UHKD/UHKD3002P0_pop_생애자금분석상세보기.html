@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+	<script src="../../js/ui_temp.js"></script>
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <style>
+        /* 따로 잡아야하는 스타일 예외 처리 같이 넣어주세요 */
+        .con-table td, .con-table th {padding:0;}
+        .con-table thead th br, .con-table tbody th br {display: block;}
+        .con-table thead tr:last-child th {border:1px solid var(--ui-colr3);}
+        .con-table tbody tr td {border-top:0;}
+    </style>
+</head>
+<body>
+    
+    <!-- 생애자금분석 상세보기-->
+    <div class="modal full dim" id="pop-cash" style="display: block;">
+        <div class="modalWrap" style="max-width: 1000px;">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <h3 class="cont-title">생애자금분석 상세보기</h3>
+                </div>
+                <button class="btn-close">모달창닫기</button>
+            </div>
+            <div class="modal-body">
+                <!-- 내용시작 -->
+                <div class="modal-body-inner h720px">
+                    <div class="con-table-header">
+                        <h3 class="cont-title none1">생애자금분석</h3>
+                        <span class="txt-helper">(단위 : 만원)</span>
+                    </div>
+                    <div class="con-table all-center">
+                        <table class="min-w800px mb30" summary="생애자금분석의 년도별 가족사항, 유입, 유출, 가용자산의 상세 정보 제공">
+                            <caption>생애자금분석 테이블</caption>
+                            <colgroup>
+                                <col width="5%" />
+                                <col width="5%" />
+                                <col width="5%" />
+                                <col width="5%" />
+                                <col width="5%" />
+                                <col width="5%" />
+                                <col width="6%" />
+                                <col width="6%" />
+                                <col width="6%" />
+                                <col width="6%" />
+                                <col width="6%" />
+                                <col width="6%" />
+                                <col width="6%" />
+                                <col width="5%" />
+                                <col width="5%" />
+                                <col width="5%" />
+                                <col width="auto" />
+                            </colgroup>
+                            <thead>
+                                <tr>						
+                                    <th scope="col" rowspan="3">년도</th>
+                                    <th scope="col" colspan="5">가족사항</th>
+                                    <th scope="col" colspan="3">유입</th>
+                                    <th scope="col" colspan="7">유출</th>
+                                    <th scope="col" rowspan="3">가용자산<br />(유입-유출)</th>
+                                </tr>
+                                <tr>						
+                                    <th scope="col" rowspan="2">홍길동</th>
+                                    <th scope="col" rowspan="2">홍길동</th>
+                                    <th scope="col" rowspan="2">홍길동</th>
+                                    <th scope="col" rowspan="2">홍길동</th>
+                                    <th scope="col" rowspan="2">홍길동</th>
+                                    <th scope="col" rowspan="2">본인</th>
+                                    <th scope="col" rowspan="2">배우자</th>
+                                    <th scope="col" rowspan="2">소계</th>
+
+                                    <th scope="col" colspan="2">생활비</th>
+                                    <th scope="col" colspan="2">자녀자금</th>
+
+                                    <th scope="col" rowspan="2">주택자금</th>
+                                    <th scope="col" rowspan="2">기타<br />이벤트</th>
+                                    <th scope="col" rowspan="2">소계</th>
+                                </tr>
+                                <tr>						
+                                    <th scope="col">가족</th>
+                                    <th scope="col">노후</th>
+                                    <th scope="col">교육</th>
+                                    <th scope="col">결혼</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                        <td>2023</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>600,000,000</td>
+                                        <td></td>
+                                        <td>600,000,000</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="last">600,000,000</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- 내용끝 -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

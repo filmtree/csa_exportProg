@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>버튼</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<h3 class="sec-title">button tags</h3>
+<div class="code-preview">
+	<a href="#" class="button-primary">link</a>
+	<button type="button" class="button-primary">primary</button>
+	<button type="button" class="button-secondary">secondary</button>
+	<button type="button" class="button-tertiary">tertiary</button>
+	<button type="button" class="button-fourth">fourth</button>
+	<button type="button" class="button-fifth">fifth</button>
+	<button type="button" class="button-sixth">sixth</button>
+</div>
+<pre><code class="language-xml">&#x3C;a href=&#x22;#&#x22; class=&#x22;button-primary&#x22;&#x3E;link&#x3C;/a&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;button-primary&#x22;&#x3E;primary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;button-secondary&#x22;&#x3E;secondary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;button-tertiary&#x22;&#x3E;tertiary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;button-fourth&#x22;&#x3E;fourth&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;button-fifth&#x22;&#x3E;fifth&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;button-sixth&#x22;&#x3E;sixth&#x3C;/button&#x3E;
+</code></pre>
+
+<h3 class="sec-title">size-width값은 디자인에 따라 추가</h3>
+<div class="code-preview">
+	<button type="button" class="button-primary -lg w160px">large</button>
+	<button type="button" class="button-primary -md w160px">medium</button>
+	<button type="button" class="button-primary w160px">default</button>
+	<button type="button" class="button-primary -sm round">small-round</button>
+	<br><br>
+	<a href="#" class="button-secondary -sm round">노동부 퇴직금계산기</a>
+	<a href="#none" class="button-sixth -sm round">재계산</a>
+</div>
+<pre><code class="language-xml">&#x3C;button type=&#x22;button&#x22; class=&#x22;button-primary -lg w160px&#x22;&#x3E;large&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;button-primary -md w160px&#x22;&#x3E;medium&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;button-primary w160px&#x22;&#x3E;default&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;button-primary -sm round w160px&#x22;&#x3E;small-round&#x3C;/button&#x3E;
+
+&#x3C;a href=&#x22;#&#x22; class=&#x22;button-primary -lg&#x22;&#x3E;large&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;button-primary -md&#x22;&#x3E;medium&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;button-primary&#x22;&#x3E;default&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;button-primary -sm round&#x22;&#x3E;small-round&#x3C;/a&#x3E;
+
+&#x3C;a href=&#x22;#&#x22; class=&#x22;button-secondary -sm round&#x22;&#x3E;&#xB178;&#xB3D9;&#xBD80; &#xD1F4;&#xC9C1;&#xAE08;&#xACC4;&#xC0B0;&#xAE30;&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#none&#x22; class=&#x22;button-sixth -sm round&#x22;&#x3E;&#xC7AC;&#xACC4;&#xC0B0;&#x3C;/a&#x3E;
+</code></pre>
+
+<h3 class="sec-title">button(text+icon)</h3>
+<div class="code-preview">
+	<button type="button" class="button-primary -sm round"><span>상담예약 신청</span><i class="ic-only arr10_r_white" aria-hidden="true"></i></button>
+	<br>
+	<br>
+	<div class="btn-wrap modify-txt">
+		<a href="#none" class="button-primary -sm round"><span>대학교육비 통계조회</span><i class="ic-only inner-search v1" arir-hidden="true"></i></a>                             
+	</div>
+	
+	<button type="button" class="button-text"><i class="ic-only ic-map"></i><span>텍스트 버튼명</span></button>
+	<br>
+	<button type="button" class="button-link"><span>텍스트 버튼명</span><i class="ic-only arrow-right"></i></button>
+	<br>
+	<button type="button" class="button-tertiary -sm round"><i class="ic-only inner-delete" aria-hidden="true"></i><span>삭제</span></button>
+	<div class="sample-box">
+		<button type="button" class="page-desc-btn _has-tooltip"><span>상단 안내 타이틀</span><i class="ic-only f-pg-desc"></i></button>
+		<div class="desc-box _tooltipbox">
+			<div class="desc-box-inner">
+				<div class="desc-content">
+					<p class="title-sm">안내문구가 나와야해요.</p>
+					<p>고객님이 입력하신 정보는 저장되지 않습니다.</p>
+				</div>
+				<button type="button" class="ic-only box-close">창닫기</button>
+			</div>
+		</div>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;button type=&#x22;button&#x22; class=&#x22;button-primary -sm round&#x22;&#x3E;&#x3C;span&#x3E;&#xC0C1;&#xB2F4;&#xC608;&#xC57D; &#xC2E0;&#xCCAD;&#x3C;/span&#x3E;&#x3C;i class=&#x22;ic-only arr10_r_white&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;button-text&#x22;&#x3E;&#x3C;i class=&#x22;ic-only ic-map&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;span&#x3E;&#xD14D;&#xC2A4;&#xD2B8; &#xBC84;&#xD2BC;&#xBA85;&#x3C;/span&#x3E;&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;button-link&#x22;&#x3E;&#x3C;span&#x3E;&#xD14D;&#xC2A4;&#xD2B8; &#xBC84;&#xD2BC;&#xBA85;&#x3C;/span&#x3E;&#x3C;i class=&#x22;ic-only arrow-right&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;button-tertiary -sm round&#x22;&#x3E;&#x3C;i class=&#x22;ic-only inner-delete&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;span&#x3E;&#xC0AD;&#xC81C;&#x3C;/span&#x3E;&#x3C;/button&#x3E;
+
+&#x3C;button type=&#x22;button&#x22; class=&#x22;page-desc-btn _has-tooltip&#x22;&#x3E;&#x3C;span&#x3E;&#xC0C1;&#xB2E8; &#xC548;&#xB0B4; &#xD0C0;&#xC774;&#xD2C0;&#x3C;/span&#x3E;&#x3C;i class=&#x22;ic-only f-pg-desc&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/button&#x3E;
+</code></pre>
+
+
+<h3 class="sec-title">text+icon</h3>
+<div class="code-preview">
+	<a href="#" class="button-text"><span>텍스트 버튼명</span><i class="ic-only ic-map"></i></a>
+	<br>
+	<a href="#" class="button-link"><span>텍스트 버튼명</span><i class="ic-only arrow-right"></i></a>
+	<br>
+	<a href="#none" class="_has-tooltip"><span>B값</span><i class="ic-only question"></i></a>
+	<br><br>
+	<a href="#none" class="button-primary -sm round"><span>기대수명</span><i class="ic-only arr10_r_white v1" arir-hidden="true"></i></a>
+	<br><br>
+	<a href="#none" class="button-primary -sm round"><i class="ic-only inner-plus after" arir-hidden="true"></i><span>노후생활비통계</span></a>
+</div>
+<pre><code class="language-xml">&#x3C;a href=&#x22;#&#x22; class=&#x22;button-text&#x22;&#x3E;&#x3C;span&#x3E;&#xD14D;&#xC2A4;&#xD2B8; &#xBC84;&#xD2BC;&#xBA85;&#x3C;/span&#x3E;&#x3C;i class=&#x22;ic-only ic-map&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;button-link&#x22;&#x3E;&#x3C;span&#x3E;&#xD14D;&#xC2A4;&#xD2B8; &#xBC84;&#xD2BC;&#xBA85;&#x3C;/span&#x3E;&#x3C;i class=&#x22;ic-only arrow-right&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#none&#x22; class=&#x22;_has-tooltip&#x22;&#x3E;&#x3C;span&#x3E;B&#xAC12;&#x3C;/span&#x3E;&#x3C;i class=&#x22;ic-only question&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#none&#x22; class=&#x22;button-primary -sm round&#x22;&#x3E;&#x3C;span&#x3E;&#xAE30;&#xB300;&#xC218;&#xBA85;&#x3C;/span&#x3E;&#x3C;i class=&#x22;ic-only arr10_r_white v1&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#none&#x22; class=&#x22;button-primary -sm round&#x22;&#x3E;&#x3C;i class=&#x22;ic-only inner-plus after&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;span&#x3E;&#xB178;&#xD6C4;&#xC0DD;&#xD65C;&#xBE44;&#xD1B5;&#xACC4;&#x3C;/span&#x3E;&#x3C;/a&#x3E;
+</code></pre>
+
+
+			<!-- 내용끝 -->
+		</div>
+	</section>
+</div>
+<style>
+	.sample-box {position:relative;}
+	.sample-box ._tooltipbox {right:initial;}
+</style>
+
+</body>
+</html>

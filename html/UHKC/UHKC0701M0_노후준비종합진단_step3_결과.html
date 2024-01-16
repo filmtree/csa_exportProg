@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+	<script src="../../js/ui_temp.js"></script> <!-- 231116 추가-->
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header --> <!-- 231116 수정-->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">진단ㆍ상담 서비스</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                            <li><a href="#none" target="_self">재무진단</a></li>
+                            <li><a href="#none" target="_self">노후준비정보</a></li>
+                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep2">
+                        <button type="button" class="breadcrumb-trigger current">노후준비종합진단</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">상담지사안내</a></li>
+                            <li><a href="#none" target="_self">상담지자체안내</a></li>
+                            <li class="current"><a href="#none" target="_self">노후준비종합진단</a></li>
+                            <li><a href="#none" target="_self">온라인상담</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">방문상담신청</a></li>
+                            <li><a href="#none" target="_self">교육신청</a></li>
+                            <li><a href="#none" target="_self">강사정보</a></li>
+                            <li><a href="#none" target="_self">자가진단</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner">
+            <div class="page-header">
+                <div class="page-title"><!--<a href="#" class="ic-only back">뒤로가기</a>--><h2>노후준비종합진단</h2></div>
+                <div class="page-desc">
+                    <button type="button" class="page-desc-btn _has-tooltip"><span>노후준비종합진단 안내</span><i class="ic-only f-pg-desc"></i></button>
+                    <div class="desc-box _tooltipbox">
+                        <div class="desc-box-inner">
+                            <div class="desc-content">
+                                <p>
+                                    노후준비 종합진단을 통해 현재의 노후준비 수준과 유형을 진단하여 균형이는 노후준비를 지원합니다. <br>
+                                    보다 자세한 상담을 원하시면 가까운 국민연금공단 <span class="fc-primary">행복노후준비지원센터</span>를 찾아주세요.
+                                    로그인을 하시면 진단결과가 저장되며, <span class="fc-primary">마이페이지</span>에서 확인 가능합니다.
+                                </p>
+                            </div>
+                            <button type="button" class="ic-only box-close">창닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-wrap">
+                <!-- S : 2311월 -->
+                <!--콘텐츠 영역-->
+                <ul class="equal-list step">
+                    <li class="end">
+                        <em class="unit">01</em>
+                        <div class="type">기본사항</div>
+                    </li>
+                    <li class="end">
+                        <em class="unit">02</em>
+                        <div class="type">재무</div>
+                    </li>
+                    <li class="active">
+                        <em class="unit">03</em>
+                        <div class="type">건강</div>
+                    </li>
+                    <li>
+                        <em class="unit">04</em>
+                        <div class="type">여가활동</div>
+                    </li>
+                    <li>
+                        <em class="unit">05</em>
+                        <div class="type">대인관계</div>
+                    </li>
+                    <li>
+                        <em class="unit">06</em>
+                        <div class="type">종합진단결과</div>
+                    </li>
+                </ul>   
+                <h3 class="cont-title dot">나의 재무 진단결과</h3>
+                <div class="color-box">
+                    <dl class="result-type-orange">
+                        <dt>건강주의군 비실천형</dt>
+                        <dd>현재 건강상태가 양호하지 않으며 건강 생활습관 역시 갖추지 못한 유형</dd>
+                    </dl>
+                </div>
+                <ul class="data-type-list">
+                    <li class="items">
+                        <dl class="unit-group">
+                            <dt class="unit-title">주관적 건강상태</dt>
+                            <dd class="description">보통</dd>
+                        </dl>
+                        <div class="unit-group">
+                            <div class="status-txt">
+                                <span>적정</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <dl class="unit-group">
+                            <dt class="unit-title">만성질병</dt>
+                            <dd class="description">없음</dd>
+                        </dl>
+                        <div class="unit-group">
+                            <div class="status-txt">
+                                <span>여유</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <dl class="unit-group">
+                            <dt class="unit-title">스트레스</dt>
+                            <dd class="description">많이 느끼는편, 관리하지 않음</dd>
+                        </dl>
+                        <div class="unit-group">
+                            <div class="status-txt">
+                                <span>부족</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <dl class="unit-group">
+                            <dt class="unit-title">체질량지수 (BMI)</dt>
+                            <dd class="description">BMI (19.49), 정상체중</dd>
+                        </dl>
+                        <div class="unit-group">
+                            <div class="status-txt">
+                                <span>여유</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <dl class="unit-group">
+                            <dt class="unit-title">구강 관리</dt>
+                            <dd class="description">잘 관리중</dd>
+                        </dl>
+                        <div class="unit-group">
+                            <div class="status-txt">
+                                <span>여유</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <dl class="unit-group">
+                            <dt class="unit-title">규칙적 운동</dt>
+                            <dd class="description">노력필요</dd>
+                        </dl>
+                        <div class="unit-group">
+                            <div class="status-txt">
+                                <span>여유</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <dl class="unit-group">
+                            <dt class="unit-title">체중유지</dt>
+                            <dd class="description">노력필요</dd>
+                        </dl>
+                        <div class="unit-group">
+                            <div class="status-txt">
+                                <span>부족</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <dl class="unit-group">
+                            <dt class="unit-title">충분한 수면</dt>
+                            <dd class="description">하고 있지 못함</dd>
+                        </dl>
+                        <div class="unit-group">
+                            <div class="status-txt">
+                                <span>부족</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <dl class="unit-group">
+                            <dt class="unit-title">정기적 건강검진</dt>
+                            <dd class="description">받고있음</dd>
+                        </dl>
+                        <div class="unit-group">
+                            <div class="status-txt">
+                                <span>여유</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <dl class="unit-group">
+                            <dt class="unit-title">영양 섭취</dt>
+                            <dd class="description">잘 하고 있음</dd>
+                        </dl>
+                        <div class="unit-group">
+                            <div class="status-txt">
+                                <span>여유</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <dl class="unit-group">
+                            <dt class="unit-title">흡연</dt>
+                            <dd class="description">금연 중</dd>
+                        </dl>
+                        <div class="unit-group">
+                            <div class="status-txt">
+                                <span>여유</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <dl class="unit-group">
+                            <dt class="unit-title">음주</dt>
+                            <dd class="description">적정</dd>
+                        </dl>
+                        <div class="unit-group">
+                            <div class="status-txt">
+                                <span>여유</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items color">
+                        <dl class="unit-group">
+                            <dt class="unit-title">나에게 맞는 운동 계획 수립</dt>
+                            <dd class="description">
+                                <p>언제</p>
+                                <p>어디서</p>
+                                <p>무엇을</p>
+                            </dd>
+                        </dl>
+                        <div class="unit-group">
+                            <div class="status">
+                                <p>월요일</p>
+                                <p>운동센터</p>
+                                <p>워킹, 조깅</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <dl class="unit-group">
+                            <dt class="unit-title">식습관 평가하기 중 <br>개선할 사항</dt>
+                            <dd class="description">
+                                <p>어패류(생선, 오징어, 조개 등)를 일주일에 3번 이상 먹는다. <br>
+                                뜨거운 음식을 즐겨 먹지 않는다.<br>
+                                단 음식(아이스크림, 케이크, 스낵, 탄산음료, 꿀, 엿, 설탕 등)을 매일 섭취하지 않는다.</p>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+
+                <p class="cont-title dot">위의 유형이  실천할 사항</p>
+                <div class="color-box box-inner-list">
+                    <ul class="txt-list dot blue">
+                        <li>적절한 운동과 식습관 점검 및 전문가 상담을 통한 건강한 생활습관 실천이 필요합니다.</li>
+                        <li>만성진환 완화 방법, 스트레스 원인 파악 및 대처 등 정보를 수집하여 실천하시기 바랍니다.</li>
+                        <li>건강상태가 개선을 위한 모임이나 프로그램이 있다면 참여해 보시기 바랍니다.</li>
+                    </ul>
+                </div>
+
+                <div class="cont-bottom">
+                    <div class="btn-group">
+                        <button type="button" class="button-tertiary -lg">이전</button>
+                        <button type="submit" class="button-primary -lg">여가활동 진단</button>
+                    </div>
+                </div>
+                <!--//콘텐츠 영역-->
+
+                <!--// E : 2311월 -->
+            </div>
+            <!-- 공통UI - 만족도조사 --> <!-- 231116 수정-->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer --> <!-- 231116 수정-->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

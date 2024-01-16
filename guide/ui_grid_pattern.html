@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>UI 가이드</title>
+
+    <script src="../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+    <script src="../js/lib/jquery.easing.min.js"></script>
+    <script src="../js/lib/swiper-bundle.min.js"></script>
+    <script src="ui_include.js"></script>
+    <script src="../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="guide.css" />
+
+    <link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css" />
+    <script src="highlight/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </head>
+  <body>
+    <div class="guideWrap">
+      <header class="guideHeader"></header>
+      <section class="guideContainer">
+        <header class="sec-header">
+          <h2>Grid Template</h2>
+        </header>
+        <div class="sec-contents">
+          <!-- Start -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Data Grid Type</h3>
+          <div class="code-preview">
+            <div class="con-table-header">
+              <h3 class="cont-title mb0">Grid Title</h3>
+            </div>
+            <div class="con-table all-center">
+              <table>
+                <caption></caption>
+                <colgroup>
+                  <col style="width: %;"/>
+                  <col style="width: %;"/>
+                  <col style="width: %;"/>
+                  <col style="width: %;"/>
+                  <col style="width: %;"/>
+                  <col style="width: %;"/>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">Text</th>
+                    <th scope="col">Text</th>
+                    <th scope="col">Text</th>
+                    <th scope="col">Text</th>
+                    <th scope="col">Text</th>
+                    <th scope="col">Text</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;con-table all-center&quot;&gt;
+			&lt;table summary=&quot;연도,본인나이,국민연금,퇴직연금(DC),개인연금,합계(만원) 등이 나열된 테이블&quot; class=&quot;min-w500px&quot;&gt;
+				&lt;caption&gt;
+					통합 설계결과 표-2
+				&lt;/caption&gt;
+				&lt;colgroup&gt;
+					&lt;col /&gt;
+					&lt;col /&gt;
+					&lt;col /&gt;
+					&lt;col /&gt;
+					&lt;col /&gt;
+					&lt;col /&gt;
+				&lt;/colgroup&gt;
+				&lt;thead&gt;
+					&lt;tr&gt;
+						&lt;th scope=&quot;col&quot;&gt;연도&lt;/th&gt;
+						&lt;th scope=&quot;col&quot;&gt;본인나이&lt;/th&gt;
+						&lt;th scope=&quot;col&quot;&gt;국민연금&lt;/th&gt;
+						&lt;th scope=&quot;col&quot;&gt;퇴직연금(DC)&lt;/th&gt;
+						&lt;th scope=&quot;col&quot;&gt;개인연금&lt;/th&gt;
+						&lt;th scope=&quot;col&quot;&gt;합계(만원)&lt;/th&gt;
+					&lt;/tr&gt;
+				&lt;/thead&gt;
+				&lt;tbody&gt;
+					&lt;tr&gt;
+						&lt;td&gt;2041&lt;/td&gt;
+						&lt;td&gt;65&lt;/td&gt;
+						&lt;td&gt;18,072&lt;/td&gt;
+						&lt;td&gt;18,072&lt;/td&gt;
+						&lt;td&gt;18,072&lt;/td&gt;
+						&lt;td&gt;연 18,072&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td&gt;2042&lt;/td&gt;
+						&lt;td&gt;66&lt;/td&gt;
+						&lt;td&gt;18,433&lt;/td&gt;
+						&lt;td&gt;18,433&lt;/td&gt;
+						&lt;td&gt;18,433&lt;/td&gt;
+						&lt;td&gt;연 18,433&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/tbody&gt;
+			&lt;/table&gt;
+		&lt;/div&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Data Type List Grid</h3>
+          <div class="code-preview">
+<ul class="data-type-list">
+  <li class="items">
+    <dl class="unit-group">
+      <dt class="unit-title">예상 노후생활비</dt>
+      <dd class="description">177만원보다 (123)만원 많음</dd>
+    </dl>
+    <div class="unit-group">
+      <div class="status-txt">
+        <span>준비</span>
+      </div>
+    </div>
+  </li>
+  <li class="items color">
+    <dl class="unit-group">
+      <dt class="unit-title">연금구성</dt>
+      <dd class="description">
+        <p>공적연금</p>
+        <p>퇴직연금</p>
+        <p>개인연금</p>
+      </dd>
+    </dl>
+    <div class="unit-group">
+      <div class="status">
+        <p>40%</p>
+        <p>141%</p>
+        <p>75%</p>
+      </div>
+      <div class="status-txt none">
+        <span>1층</span>
+        <span>2층</span>
+        <span>3층</span>
+      </div>
+    </div>
+  </li>
+  <li class="items">
+    <dl class="unit-group">
+      <dt class="unit-title">노후생활비 계산 여부</dt>
+      <dd class="description">계산안함</dd>
+    </dl>
+    <div class="unit-group">
+      <div class="status-txt">
+        <span>부족</span>
+      </div>
+    </div>
+  </li>
+</ul>
+          </div>
+          <pre><code class="language-xml">&lt;ul class=&quot;data-type-list&quot;&gt;
+  &lt;li class=&quot;items&quot;&gt;
+    &lt;dl class=&quot;unit-group&quot;&gt;
+      &lt;dt class=&quot;unit-title&quot;&gt;예상 노후생활비&lt;/dt&gt;
+      &lt;dd class=&quot;description&quot;&gt;177만원보다 (123)만원 많음&lt;/dd&gt;
+    &lt;/dl&gt;
+    &lt;div class=&quot;unit-group&quot;&gt;
+      &lt;div class=&quot;status-txt&quot;&gt;
+        &lt;span&gt;준비&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;items&quot;&gt;
+    &lt;dl class=&quot;unit-group&quot;&gt;
+      &lt;dt class=&quot;unit-title&quot;&gt;준비된 소득&lt;/dt&gt;
+      &lt;dd class=&quot;description&quot;&gt;177만원보다 (123)만원 많음&lt;/dd&gt;
+    &lt;/dl&gt;
+    &lt;div class=&quot;unit-group&quot;&gt;
+      &lt;div class=&quot;status-txt&quot;&gt;
+        &lt;span&gt;여유&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;items&quot;&gt;
+    &lt;dl class=&quot;unit-group&quot;&gt;
+      &lt;dt class=&quot;unit-title&quot;&gt;공적연금&lt;/dt&gt;
+      &lt;dd class=&quot;description&quot;&gt;40대 평균보다 높음&lt;/dd&gt;
+    &lt;/dl&gt;
+    &lt;div class=&quot;unit-group&quot;&gt;
+      &lt;div class=&quot;status-txt&quot;&gt;
+        &lt;span&gt;준비&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;items&quot;&gt;
+    &lt;dl class=&quot;unit-group&quot;&gt;
+      &lt;dt class=&quot;unit-title&quot;&gt;금융자산&lt;/dt&gt;
+      &lt;dd class=&quot;description&quot;&gt;40대 평균보다 높음&lt;/dd&gt;
+    &lt;/dl&gt;
+    &lt;div class=&quot;unit-group&quot;&gt;
+      &lt;div class=&quot;status-txt&quot;&gt;
+        &lt;span&gt;준비&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;items&quot;&gt;
+    &lt;dl class=&quot;unit-group&quot;&gt;
+      &lt;dt class=&quot;unit-title&quot;&gt;퇴직연금&lt;/dt&gt;
+      &lt;dd class=&quot;description&quot;&gt;40대 평균보다 높음&lt;/dd&gt;
+    &lt;/dl&gt;
+    &lt;div class=&quot;unit-group&quot;&gt;
+      &lt;div class=&quot;status-txt&quot;&gt;
+        &lt;span&gt;준비&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;items&quot;&gt;
+    &lt;dl class=&quot;unit-group&quot;&gt;
+      &lt;dt class=&quot;unit-title&quot;&gt;부동산자산&lt;/dt&gt;
+      &lt;dd class=&quot;description&quot;&gt;40대 평균보다 높음&lt;/dd&gt;
+    &lt;/dl&gt;
+    &lt;div class=&quot;unit-group&quot;&gt;
+      &lt;div class=&quot;status-txt&quot;&gt;
+        &lt;span&gt;준비&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;items&quot;&gt;
+    &lt;dl class=&quot;unit-group&quot;&gt;
+      &lt;dt class=&quot;unit-title&quot;&gt;개인연금&lt;/dt&gt;
+      &lt;dd class=&quot;description&quot;&gt;40대 평균보다 높음&lt;/dd&gt;
+    &lt;/dl&gt;
+    &lt;div class=&quot;unit-group&quot;&gt;
+      &lt;div class=&quot;status-txt&quot;&gt;
+        &lt;span&gt;준비&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;items&quot;&gt;
+    &lt;dl class=&quot;unit-group&quot;&gt;
+      &lt;dt class=&quot;unit-title&quot;&gt;소득활동&lt;/dt&gt;
+      &lt;dd class=&quot;description&quot;&gt;제 2의 일 관심있음&lt;/dd&gt;
+    &lt;/dl&gt;
+    &lt;div class=&quot;unit-group&quot;&gt;
+      &lt;div class=&quot;status-txt&quot;&gt;
+        &lt;span&gt;준비&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;items color&quot;&gt;
+    &lt;dl class=&quot;unit-group&quot;&gt;
+      &lt;dt class=&quot;unit-title&quot;&gt;연금구성&lt;/dt&gt;
+      &lt;dd class=&quot;description&quot;&gt;
+        &lt;p&gt;공적연금&lt;/p&gt;
+        &lt;p&gt;퇴직연금&lt;/p&gt;
+        &lt;p&gt;개인연금&lt;/p&gt;
+      &lt;/dd&gt;
+    &lt;/dl&gt;
+    &lt;div class=&quot;unit-group&quot;&gt;
+      &lt;div class=&quot;status&quot;&gt;
+        &lt;p&gt;40%&lt;/p&gt;
+        &lt;p&gt;141%&lt;/p&gt;
+        &lt;p&gt;75%&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;status-txt none&quot;&gt;
+        &lt;span&gt;1층&lt;/span&gt;
+        &lt;span&gt;2층&lt;/span&gt;
+        &lt;span&gt;3층&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;items&quot;&gt;
+    &lt;dl class=&quot;unit-group&quot;&gt;
+      &lt;dt class=&quot;unit-title&quot;&gt;노후생활비 계산 여부&lt;/dt&gt;
+      &lt;dd class=&quot;description&quot;&gt;계산안함&lt;/dd&gt;
+    &lt;/dl&gt;
+    &lt;div class=&quot;unit-group&quot;&gt;
+      &lt;div class=&quot;status-txt&quot;&gt;
+        &lt;span&gt;부족&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Data Type inner Info</h3>
+          <div class="code-preview">
+            <div class="con-table all-center">
+              <table class="min-w800px" summary="예상 노령연금액의 현재가치와 미래가치 기준의 예상연금액에 대한 산출기준, 예상연금액, 예상 가입기간, 수령시작 년월, 기본연금액, 지급률, 총예상 납부율 등에 관한 상세 정보 제공">
+                <caption>
+                  예상 노령연금액 상세 정보
+                </caption>
+                <colgroup>
+                  <col style="width: 27%" />
+                  <col style="width: 35%" />
+                  <col style="width: auto" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">현재가치 기준 예상연금액</th>
+                    <th scope="col">미래가치 기준 예상연금액</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="bg-no">산출기준</th>
+                    <td class="align-left">현재 화폐가치 기준(소득상승률 비적용)</td>
+                    <td>
+                      <div class="form-group-txt">
+                        <span class="front-txt txt-wrap">소득상승률 적용 : 연</span>
+                        <select class="w100">
+                          <option>선택</option>
+                        </select>
+                        <span class="back-txt">%</span>
+                        <a href="#none" class="button-sixth -sm round"> 재계산 </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">예상연금액</th>
+                    <td class="align-left">최소가입기간(10년)이 부족하여 연금액을 산정할 수 없습니다.</td>
+                    <td class="align-left"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">총 예상 가입기간 (납부월수)</th>
+                    <td class="align-left">2010년 01월 ~ 2023년 06월 (총 80 개월)</td>
+                    <td class="align-left">2010년 01월 ~ 2023년 06월 (총 0개월)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">수령시작 년/월</th>
+                    <td class="align-left">향후 가입기간을 추가하여 예상연금액을 계산해 보실 수 있습니다.</td>
+                    <td class="align-left"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">기본연금액</th>
+                    <td class="align-left">0 원</td>
+                    <td class="align-left"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">지급률</th>
+                    <td class="align-left">100%</td>
+                    <td class="align-left">100%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">총 예상 납부보험료</th>
+                    <td class="align-left">15,825,520 원</td>
+                    <td class="align-left"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">
+                      <div class="">
+                        <a href="#none" class="_has-tooltip active"><span>A값</span><i class="ic-only question"></i></a>
+                        <!-- tooltip -->
+                        <div class="desc-box type1 _tooltipbox active">
+                          <div class="desc-content align-left">
+                            <p>연금수급직전 3년간의 가입자 전체의 평균 소득월액의 평균액</p>
+                            <button type="button" class="ic-only box-close">창닫기</button>
+                          </div>
+                        </div>
+                      </div>
+                    </th>
+                    <td class="align-left">0 원</td>
+                    <td class="align-left"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">
+                      <div class="">
+                        <a href="#none" class="_has-tooltip"><span>B값</span><i class="ic-only question"></i></a>
+                        <!-- tooltip -->
+                        <div class="desc-box type1 _tooltipbox">
+                          <div class="desc-content align-left">
+                            <p>가입자 개인의 가입기간중 기준소득월액을 현재가치로 재평가한 평균액</p>
+                            <button type="button" class="ic-only box-close">창닫기</button>
+                          </div>
+                        </div>
+                      </div>
+                    </th>
+                    <td class="align-left">0 원</td>
+                    <td class="align-left"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;con-table all-center&quot;&gt;
+&lt;table class=&quot;min-w800px&quot; summary=&quot;예상 노령연금액의 현재가치와 미래가치 기준의 예상연금액에 대한 산출기준, 예상연금액, 예상 가입기간, 수령시작 년월, 기본연금액, 지급률, 총예상 납부율 등에 관한 상세 정보 제공&quot;&gt;
+    &lt;caption&gt;
+    예상 노령연금액 상세 정보
+    &lt;/caption&gt;
+    &lt;colgroup&gt;
+    &lt;col style=&quot;width: 27%&quot; /&gt;
+    &lt;col style=&quot;width: 35%&quot; /&gt;
+    &lt;col style=&quot;width: auto&quot; /&gt;
+    &lt;/colgroup&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;col&quot;&gt;구분&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;현재가치 기준 예상연금액&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;미래가치 기준 예상연금액&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;row&quot; class=&quot;bg-no&quot;&gt;산출기준&lt;/th&gt;
+        &lt;td class=&quot;align-left&quot;&gt;현재 화폐가치 기준(소득상승률 비적용)&lt;/td&gt;
+        &lt;td&gt;
+        &lt;div class=&quot;form-group-txt&quot;&gt;
+            &lt;span class=&quot;front-txt txt-wrap&quot;&gt;소득상승률 적용 : 연&lt;/span&gt;
+            &lt;select class=&quot;w100&quot;&gt;
+            &lt;option&gt;선택&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;span class=&quot;back-txt&quot;&gt;%&lt;/span&gt;
+            &lt;a href=&quot;#none&quot; class=&quot;button-sixth -sm round&quot;&gt; 재계산 &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;row&quot; class=&quot;bg-no&quot;&gt;예상연금액&lt;/th&gt;
+        &lt;td class=&quot;align-left&quot;&gt;최소가입기간(10년)이 부족하여 연금액을 산정할 수 없습니다.&lt;/td&gt;
+        &lt;td class=&quot;align-left&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;row&quot; class=&quot;bg-no&quot;&gt;총 예상 가입기간 (납부월수)&lt;/th&gt;
+        &lt;td class=&quot;align-left&quot;&gt;2010년 01월 ~ 2023년 06월 (총 80 개월)&lt;/td&gt;
+        &lt;td class=&quot;align-left&quot;&gt;2010년 01월 ~ 2023년 06월 (총 0개월)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;row&quot; class=&quot;bg-no&quot;&gt;수령시작 년/월&lt;/th&gt;
+        &lt;td class=&quot;align-left&quot;&gt;향후 가입기간을 추가하여 예상연금액을 계산해 보실 수 있습니다.&lt;/td&gt;
+        &lt;td class=&quot;align-left&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;row&quot; class=&quot;bg-no&quot;&gt;기본연금액&lt;/th&gt;
+        &lt;td class=&quot;align-left&quot;&gt;0 원&lt;/td&gt;
+        &lt;td class=&quot;align-left&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;row&quot; class=&quot;bg-no&quot;&gt;지급률&lt;/th&gt;
+        &lt;td class=&quot;align-left&quot;&gt;100%&lt;/td&gt;
+        &lt;td class=&quot;align-left&quot;&gt;100%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;row&quot; class=&quot;bg-no&quot;&gt;총 예상 납부보험료&lt;/th&gt;
+        &lt;td class=&quot;align-left&quot;&gt;15,825,520 원&lt;/td&gt;
+        &lt;td class=&quot;align-left&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;row&quot; class=&quot;bg-no&quot;&gt;
+        &lt;div class=&quot;&quot;&gt;
+            &lt;a href=&quot;#none&quot; class=&quot;_has-tooltip active&quot;&gt;&lt;span&gt;A값&lt;/span&gt;&lt;i class=&quot;ic-only question&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;!-- tooltip --&gt;
+            &lt;div class=&quot;desc-box type1 _tooltipbox active&quot;&gt;
+            &lt;div class=&quot;desc-content align-left&quot;&gt;
+                &lt;p&gt;연금수급직전 3년간의 가입자 전체의 평균 소득월액의 평균액&lt;/p&gt;
+                &lt;button type=&quot;button&quot; class=&quot;ic-only box-close&quot;&gt;창닫기&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/th&gt;
+        &lt;td class=&quot;align-left&quot;&gt;0 원&lt;/td&gt;
+        &lt;td class=&quot;align-left&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;row&quot; class=&quot;bg-no&quot;&gt;
+        &lt;div class=&quot;&quot;&gt;
+            &lt;a href=&quot;#none&quot; class=&quot;_has-tooltip&quot;&gt;&lt;span&gt;B값&lt;/span&gt;&lt;i class=&quot;ic-only question&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;!-- tooltip --&gt;
+            &lt;div class=&quot;desc-box type1 _tooltipbox&quot;&gt;
+            &lt;div class=&quot;desc-content align-left&quot;&gt;
+                &lt;p&gt;가입자 개인의 가입기간중 기준소득월액을 현재가치로 재평가한 평균액&lt;/p&gt;
+                &lt;button type=&quot;button&quot; class=&quot;ic-only box-close&quot;&gt;창닫기&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/th&gt;
+        &lt;td class=&quot;align-left&quot;&gt;0 원&lt;/td&gt;
+        &lt;td class=&quot;align-left&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+</code></pre>
+
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Board List</h3>
+          <div class="code-preview">
+            <div class="content-wrap">
+              <!--콘텐츠 영역-->
+              <div class="searchbox-wrap">
+                <div class="searchbox online-counseling">
+                  <div class="form-group fx-justify-center mo-hide">
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup1" checked="checked" />
+                      <span>전체</span>
+                    </label>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup1" disabled="disabled" />
+                      <span>재무</span>
+                    </label>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup1" readonly="readonly" onclick="return false" />
+                      <span>건강</span>
+                    </label>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup1" disabled="disabled" checked="checked" />
+                      <span>일/취업</span>
+                    </label>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup1" />
+                      <span>취미/여가</span>
+                    </label>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup1" />
+                      <span>주거</span>
+                    </label>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup1" />
+                      <span>대인관계</span>
+                    </label>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup1" />
+                      <span>기타</span>
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <select class="slct-counseling pc-hide" title="상담분야 선택">
+                      <option value="유형전체">전체</option>
+                      <option value="제목">재무</option>
+                      <option value="작성자">건강</option>
+                      <option value="작성자">일/취업</option>
+                      <option value="작성자">취미/여가</option>
+                      <option value="작성자">주거</option>
+                      <option value="작성자">대인관계</option>
+                      <option value="작성자">기타</option>
+                    </select>
+                    <select class="slct-type" title="유형 선택">
+                      <option value="유형전체">전체</option>
+                      <option value="제목">제목</option>
+                      <option value="작성자">작성자</option>
+                    </select>
+                    <input type="text" placeholder="내용을 입력해주세요" class="inp-content w-flexible" title="내용입력" />
+                    <div class="form-group-period period-calendar">
+                      <label class="hidden">시작 날짜 선택</label>
+                      <input type="text" class="useDatepicker dateFrom hasDatepicker" placeholder="날짜를 선택하세요" title="시작일" id="dp1704621002684" />
+                      <span class="inp-split">-</span>
+                      <label class="hidden">종료 날짜 선택</label>
+                      <input type="text" class="useDatepicker dateTo hasDatepicker" placeholder="날짜를 선택하세요" title="종료일" id="dp1704621002685" />
+                    </div>
+                    <button type="button" class="button-primary min-w80px">조회</button>
+                  </div>
+                </div>
+              </div>
+              <div class="board-top">
+                <p class="list-count">
+                  <span>전체 : <span class="-num">123</span>건</span>
+                </p>
+                <div class="item-group">
+                  <button type="button" class="button-primary -md w160px">온라인상담 신청</button>
+                </div>
+              </div>
+              <div class="board-wrap bd-list">
+                <table class="tbl-board counsel-online-list">
+                  <caption>
+                    온라인 상담 리스트
+                  </caption>
+                  <colgroup>
+                    <col class="w8" />
+                    <col class="w10" />
+                    <col />
+                    <col class="w12" />
+                    <col class="w12" />
+                    <col class="w10" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">번호</th>
+                      <th scope="col">상담분야</th>
+                      <th scope="col">제목</th>
+                      <th scope="col">작성일</th>
+                      <th scope="col">작성자</th>
+                      <th scope="col">처리상태</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="no">999999</td>
+                      <td class="category above">재무</td>
+                      <td class="title">
+                        <a href="#"
+                          ><i class="ic-only ic-secret"><span class="blind">비밀글</span></i
+                          >비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임</a
+                        >
+                      </td>
+                      <td class="date">2023.10.30</td>
+                      <td class="writer">소**</td>
+                      <td class="status"><span class="fc-primary">상담완료</span></td>
+                    </tr>
+                    <tr>
+                      <td class="no">999999</td>
+                      <td class="category above">취미/여가</td>
+                      <!-- MOD-2023.11.22 : above 클래스명 추가 -->
+                      <td class="title"><a href="#">마우스롤오버시 배경색 변경 / 공개글일 경우 자물쇠 아이콘 없습니다.</a></td>
+                      <td class="date">2023.10.30</td>
+                      <td class="writer">소**</td>
+                      <td class="status"><span class="fc-base">접수증</span></td>
+                    </tr>
+                    <tr>
+                      <td class="no">999999</td>
+                      <td class="category above">대인관계</td>
+                      <!-- MOD-2023.11.22 : above 클래스명 추가 -->
+                      <td class="title">
+                        <a href="#"
+                          ><i class="ic-only ic-secret"><span class="blind">비밀글</span></i
+                          >비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임</a
+                        >
+                      </td>
+                      <td class="date">2023.10.30</td>
+                      <td class="writer">소**</td>
+                      <td class="status"><span class="fc-primary">상담완료</span></td>
+                    </tr>
+                    <tr>
+                      <td class="no">999999</td>
+                      <td class="category above">기타</td>
+                      <!-- MOD-2023.11.22 : above 클래스명 추가 -->
+                      <td class="title">
+                        <a href="#"
+                          ><i class="ic-only ic-secret"><span class="blind">비밀글</span></i
+                          >비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임</a
+                        >
+                      </td>
+                      <td class="date">2023.10.30</td>
+                      <td class="writer">소**</td>
+                      <td class="status"><span class="fc-base">접수증</span></td>
+                    </tr>
+                    <tr>
+                      <td class="no">999999</td>
+                      <td class="category above">건강</td>
+                      <!-- MOD-2023.11.22 : above 클래스명 추가 -->
+                      <td class="title">
+                        <a href="#"
+                          ><i class="ic-only ic-secret"><span class="blind">비밀글</span></i
+                          >비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임</a
+                        >
+                      </td>
+                      <td class="date">2023.10.30</td>
+                      <td class="writer">소**</td>
+                      <td class="status"><span class="fc-base">접수증</span></td>
+                    </tr>
+                    <tr>
+                      <td class="no">999999</td>
+                      <td class="category above">취미/여가</td>
+                      <!-- MOD-2023.11.22 : above 클래스명 추가 -->
+                      <td class="title">
+                        <a href="#"
+                          ><i class="ic-only ic-secret"><span class="blind">비밀글</span></i
+                          >비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임</a
+                        >
+                      </td>
+                      <td class="date">2023.10.30</td> 
+                      <td class="writer">소**</td>
+                      <td class="status"><span class="fc-base">접수증</span></td>
+                    </tr>
+                    <tr>
+                      <td class="no">999999</td>
+                      <td class="category above">취미/여가</td>
+                      <!-- MOD-2023.11.22 : above 클래스명 추가 -->
+                      <td class="title">
+                        <a href="#"
+                          ><i class="ic-only ic-secret"><span class="blind">비밀글</span></i
+                          >비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임</a
+                        >
+                      </td>
+                      <td class="date">2023.10.30</td>
+                      <td class="writer">소**</td>
+                      <td class="status"><span class="fc-base">접수증</span></td>
+                    </tr>
+                    <tr>
+                      <td class="no">999999</td>
+                      <td class="category above">취미/여가</td>
+                      <!-- MOD-2023.11.22 : above 클래스명 추가 -->
+                      <td class="title">
+                        <a href="#"
+                          ><i class="ic-only ic-secret"><span class="blind">비밀글</span></i
+                          >비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임</a
+                        >
+                      </td>
+                      <td class="date">2023.10.30</td>
+                      <td class="writer">소**</td>
+                      <td class="status"><span class="fc-base">접수증</span></td>
+                    </tr>
+                    <tr>
+                      <td class="no">999999</td>
+                      <td class="category above">취미/여가</td>
+                      <!-- MOD-2023.11.22 : above 클래스명 추가 -->
+                      <td class="title">
+                        <a href="#"
+                          ><i class="ic-only ic-secret"><span class="blind">비밀글</span></i
+                          >비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임</a
+                        >
+                      </td>
+                      <td class="date">2023.10.30</td>
+                      <td class="writer">소**</td>
+                      <td class="status"><span class="fc-base">접수증</span></td>
+                    </tr>
+                    <tr>
+                      <td class="no">999999</td>
+                      <td class="category above">취미/여가</td>
+                      <!-- MOD-2023.11.22 : above 클래스명 추가 -->
+                      <td class="title">
+                        <a href="#"
+                          ><i class="ic-only ic-secret"><span class="blind">비밀글</span></i
+                          >비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임</a
+                        >
+                      </td>
+                      <td class="date">2023.10.30</td>
+                      <td class="writer">소**</td>
+                      <td class="status"><span class="fc-base">접수증</span></td>
+                    </tr>
+                    <!--게시물 없을때
+                          <tr>
+                              <td colspan="6" class="data-none">
+                                  <p>등록된 게시물이 없습니다.</p>
+                              </td>
+                          </tr>
+                          //게시물 없을때-->
+                  </tbody>
+                </table>
+              </div>
+              <div class="paginate">
+                <button type="button" class="page first">처음 목록</button>
+                <button type="button" class="page prev">이전 목록</button>
+                <a href="#" class="num">1</a>
+                <a href="#" class="num current" title="현재페이지">2</a>
+                <a href="#" class="num">3</a>
+                <a href="#" class="num">4</a>
+                <a href="#" class="num">5</a>
+                <a href="#" class="num mo-hide">6</a>
+                <a href="#" class="num mo-hide">7</a>
+                <a href="#" class="num mo-hide">8</a>
+                <a href="#" class="num mo-hide">9</a>
+                <a href="#" class="num mo-hide">9999</a>
+                <button type="button" class="page next">다음 목록</button>
+                <button type="button" class="page last">마지막 목록</button>
+              </div>
+              <div class="cont-bottom pc-hide">
+                <div class="btn-group">
+                  <button type="button" class="button-primary -lg">온라인 상담신청</button>
+                </div>
+              </div>
+              <!--//콘텐츠 영역-->
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;content-wrap&quot;&gt;
+    &lt;!--콘텐츠 영역--&gt;
+    &lt;div class=&quot;searchbox-wrap&quot;&gt;
+        &lt;div class=&quot;searchbox online-counseling&quot;&gt;
+            &lt;div class=&quot;form-group fx-justify-center mo-hide&quot;&gt;
+                &lt;label class=&quot;inp-radio&quot;&gt;
+                    &lt;input type=&quot;radio&quot; name=&quot;radioGroup1&quot; checked=&quot;checked&quot;&gt;
+                    &lt;span&gt;전체&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;label class=&quot;inp-radio&quot;&gt;
+                    &lt;input type=&quot;radio&quot; name=&quot;radioGroup1&quot; disabled=&quot;disabled&quot;&gt;
+                    &lt;span&gt;재무&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;label class=&quot;inp-radio&quot;&gt;
+                    &lt;input type=&quot;radio&quot; name=&quot;radioGroup1&quot; readonly=&quot;readonly&quot; onclick=&quot;return false&quot;&gt;
+                    &lt;span&gt;건강&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;label class=&quot;inp-radio&quot;&gt;
+                    &lt;input type=&quot;radio&quot; name=&quot;radioGroup1&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot;&gt;
+                    &lt;span&gt;일/취업&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;label class=&quot;inp-radio&quot;&gt;
+                    &lt;input type=&quot;radio&quot; name=&quot;radioGroup1&quot;&gt;
+                    &lt;span&gt;취미/여가&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;label class=&quot;inp-radio&quot;&gt;
+                    &lt;input type=&quot;radio&quot; name=&quot;radioGroup1&quot;&gt;
+                    &lt;span&gt;주거&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;label class=&quot;inp-radio&quot;&gt;
+                    &lt;input type=&quot;radio&quot; name=&quot;radioGroup1&quot;&gt;
+                    &lt;span&gt;대인관계&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;label class=&quot;inp-radio&quot;&gt;
+                    &lt;input type=&quot;radio&quot; name=&quot;radioGroup1&quot;&gt;
+                    &lt;span&gt;기타&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;select class=&quot;slct-counseling pc-hide&quot; title=&quot;상담분야 선택&quot;&gt;
+                    &lt;option value=&quot;유형전체&quot;&gt;전체&lt;/option&gt;
+                    &lt;option value=&quot;제목&quot;&gt;재무&lt;/option&gt; 
+                    &lt;option value=&quot;작성자&quot;&gt;건강&lt;/option&gt;
+                    &lt;option value=&quot;작성자&quot;&gt;일/취업&lt;/option&gt;
+                    &lt;option value=&quot;작성자&quot;&gt;취미/여가&lt;/option&gt;
+                    &lt;option value=&quot;작성자&quot;&gt;주거&lt;/option&gt;
+                    &lt;option value=&quot;작성자&quot;&gt;대인관계&lt;/option&gt;
+                    &lt;option value=&quot;작성자&quot;&gt;기타&lt;/option&gt;
+                &lt;/select&gt;
+                &lt;select class=&quot;slct-type&quot; title=&quot;유형 선택&quot;&gt;
+                    &lt;option value=&quot;유형전체&quot;&gt;전체&lt;/option&gt;
+                    &lt;option value=&quot;제목&quot;&gt;제목&lt;/option&gt; 
+                    &lt;option value=&quot;작성자&quot;&gt;작성자&lt;/option&gt;
+                &lt;/select&gt;
+                &lt;input type=&quot;text&quot; placeholder=&quot;내용을 입력해주세요&quot; class=&quot;inp-content w-flexible&quot; title=&quot;내용입력&quot;&gt;
+                &lt;div class=&quot;form-group-period period-calendar&quot;&gt;
+                    &lt;label class=&quot;hidden&quot;&gt;시작 날짜 선택&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;useDatepicker dateFrom hasDatepicker&quot; placeholder=&quot;날짜를 선택하세요&quot; title=&quot;시작일&quot; id=&quot;dp1704621002684&quot;&gt;
+                    &lt;span class=&quot;inp-split&quot;&gt;-&lt;/span&gt;
+                    &lt;label class=&quot;hidden&quot;&gt;종료 날짜 선택&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;useDatepicker dateTo hasDatepicker&quot; placeholder=&quot;날짜를 선택하세요&quot; title=&quot;종료일&quot; id=&quot;dp1704621002685&quot;&gt;
+                &lt;/div&gt;
+                &lt;button type=&quot;button&quot; class=&quot;button-primary min-w80px&quot;&gt;조회&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;board-top&quot;&gt;
+        &lt;p class=&quot;list-count&quot;&gt;&lt;span&gt;전체 : &lt;span class=&quot;-num&quot;&gt;123&lt;/span&gt;건&lt;/span&gt;&lt;/p&gt;
+        &lt;div class=&quot;item-group&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;button-primary -md w160px&quot;&gt;온라인상담 신청&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;board-wrap bd-list&quot;&gt;
+        &lt;table class=&quot;tbl-board counsel-online-list&quot;&gt;
+            &lt;caption&gt;온라인 상담 리스트&lt;/caption&gt;
+            &lt;colgroup&gt;
+                &lt;col class=&quot;w8&quot;&gt;
+                &lt;col class=&quot;w10&quot;&gt;
+                &lt;col&gt;
+                &lt;col class=&quot;w12&quot;&gt;
+                &lt;col class=&quot;w12&quot;&gt;
+                &lt;col class=&quot;w10&quot;&gt;
+            &lt;/colgroup&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th scope=&quot;col&quot;&gt;번호&lt;/th&gt;
+                    &lt;th scope=&quot;col&quot;&gt;상담분야&lt;/th&gt;
+                    &lt;th scope=&quot;col&quot;&gt;제목&lt;/th&gt;
+                    &lt;th scope=&quot;col&quot;&gt;작성일&lt;/th&gt;
+                    &lt;th scope=&quot;col&quot;&gt;작성자&lt;/th&gt;
+                    &lt;th scope=&quot;col&quot;&gt;처리상태&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;no&quot;&gt;999999&lt;/td&gt;
+                    &lt;td class=&quot;category above&quot;&gt;재무&lt;/td&gt;
+                    &lt;td class=&quot;title&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;ic-only ic-secret&quot;&gt;&lt;span class=&quot;blind&quot;&gt;비밀글&lt;/span&gt;&lt;/i&gt;비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;date&quot;&gt;2023.10.30&lt;/td&gt;
+                    &lt;td class=&quot;writer&quot;&gt;소**&lt;/td&gt;
+                    &lt;td class=&quot;status&quot;&gt;&lt;span class=&quot;fc-primary&quot;&gt;상담완료&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;no&quot;&gt;999999&lt;/td&gt;
+                    &lt;td class=&quot;category above&quot;&gt;취미/여가&lt;/td&gt;&lt;!-- MOD-2023.11.22 : above 클래스명 추가 --&gt;
+                    &lt;td class=&quot;title&quot;&gt;&lt;a href=&quot;#&quot;&gt;마우스롤오버시 배경색 변경 / 공개글일 경우 자물쇠 아이콘 없습니다.&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;date&quot;&gt;2023.10.30&lt;/td&gt;
+                    &lt;td class=&quot;writer&quot;&gt;소**&lt;/td&gt;
+                    &lt;td class=&quot;status&quot;&gt;&lt;span class=&quot;fc-base&quot;&gt;접수증&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;no&quot;&gt;999999&lt;/td&gt;
+                    &lt;td class=&quot;category above&quot;&gt;대인관계&lt;/td&gt;&lt;!-- MOD-2023.11.22 : above 클래스명 추가 --&gt;
+                    &lt;td class=&quot;title&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;ic-only ic-secret&quot;&gt;&lt;span class=&quot;blind&quot;&gt;비밀글&lt;/span&gt;&lt;/i&gt;비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;date&quot;&gt;2023.10.30&lt;/td&gt;
+                    &lt;td class=&quot;writer&quot;&gt;소**&lt;/td&gt;
+                    &lt;td class=&quot;status&quot;&gt;&lt;span class=&quot;fc-primary&quot;&gt;상담완료&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;no&quot;&gt;999999&lt;/td&gt;
+                    &lt;td class=&quot;category above&quot;&gt;기타&lt;/td&gt;&lt;!-- MOD-2023.11.22 : above 클래스명 추가 --&gt;
+                    &lt;td class=&quot;title&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;ic-only ic-secret&quot;&gt;&lt;span class=&quot;blind&quot;&gt;비밀글&lt;/span&gt;&lt;/i&gt;비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;date&quot;&gt;2023.10.30&lt;/td&gt;
+                    &lt;td class=&quot;writer&quot;&gt;소**&lt;/td&gt;
+                    &lt;td class=&quot;status&quot;&gt;&lt;span class=&quot;fc-base&quot;&gt;접수증&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;no&quot;&gt;999999&lt;/td&gt;
+                    &lt;td class=&quot;category above&quot;&gt;건강&lt;/td&gt;&lt;!-- MOD-2023.11.22 : above 클래스명 추가 --&gt;
+                    &lt;td class=&quot;title&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;ic-only ic-secret&quot;&gt;&lt;span class=&quot;blind&quot;&gt;비밀글&lt;/span&gt;&lt;/i&gt;비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;date&quot;&gt;2023.10.30&lt;/td&gt;
+                    &lt;td class=&quot;writer&quot;&gt;소**&lt;/td&gt;
+                    &lt;td class=&quot;status&quot;&gt;&lt;span class=&quot;fc-base&quot;&gt;접수증&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;no&quot;&gt;999999&lt;/td&gt;
+                    &lt;td class=&quot;category above&quot;&gt;취미/여가&lt;/td&gt;&lt;!-- MOD-2023.11.22 : above 클래스명 추가 --&gt;
+                    &lt;td class=&quot;title&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;ic-only ic-secret&quot;&gt;&lt;span class=&quot;blind&quot;&gt;비밀글&lt;/span&gt;&lt;/i&gt;비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;date&quot;&gt;2023.10.30&lt;/td&gt;
+                    &lt;td class=&quot;writer&quot;&gt;소**&lt;/td&gt;
+                    &lt;td class=&quot;status&quot;&gt;&lt;span class=&quot;fc-base&quot;&gt;접수증&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;no&quot;&gt;999999&lt;/td&gt;
+                    &lt;td class=&quot;category above&quot;&gt;취미/여가&lt;/td&gt;&lt;!-- MOD-2023.11.22 : above 클래스명 추가 --&gt;
+                    &lt;td class=&quot;title&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;ic-only ic-secret&quot;&gt;&lt;span class=&quot;blind&quot;&gt;비밀글&lt;/span&gt;&lt;/i&gt;비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;date&quot;&gt;2023.10.30&lt;/td&gt;
+                    &lt;td class=&quot;writer&quot;&gt;소**&lt;/td&gt;
+                    &lt;td class=&quot;status&quot;&gt;&lt;span class=&quot;fc-base&quot;&gt;접수증&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;no&quot;&gt;999999&lt;/td&gt;
+                    &lt;td class=&quot;category above&quot;&gt;취미/여가&lt;/td&gt;&lt;!-- MOD-2023.11.22 : above 클래스명 추가 --&gt;
+                    &lt;td class=&quot;title&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;ic-only ic-secret&quot;&gt;&lt;span class=&quot;blind&quot;&gt;비밀글&lt;/span&gt;&lt;/i&gt;비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;date&quot;&gt;2023.10.30&lt;/td&gt;
+                    &lt;td class=&quot;writer&quot;&gt;소**&lt;/td&gt;
+                    &lt;td class=&quot;status&quot;&gt;&lt;span class=&quot;fc-base&quot;&gt;접수증&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;no&quot;&gt;999999&lt;/td&gt;
+                    &lt;td class=&quot;category above&quot;&gt;취미/여가&lt;/td&gt;&lt;!-- MOD-2023.11.22 : above 클래스명 추가 --&gt;
+                    &lt;td class=&quot;title&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;ic-only ic-secret&quot;&gt;&lt;span class=&quot;blind&quot;&gt;비밀글&lt;/span&gt;&lt;/i&gt;비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;date&quot;&gt;2023.10.30&lt;/td&gt;
+                    &lt;td class=&quot;writer&quot;&gt;소**&lt;/td&gt;
+                    &lt;td class=&quot;status&quot;&gt;&lt;span class=&quot;fc-base&quot;&gt;접수증&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;no&quot;&gt;999999&lt;/td&gt;
+                    &lt;td class=&quot;category above&quot;&gt;취미/여가&lt;/td&gt;&lt;!-- MOD-2023.11.22 : above 클래스명 추가 --&gt;
+                    &lt;td class=&quot;title&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;ic-only ic-secret&quot;&gt;&lt;span class=&quot;blind&quot;&gt;비밀글&lt;/span&gt;&lt;/i&gt;비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;date&quot;&gt;2023.10.30&lt;/td&gt;
+                    &lt;td class=&quot;writer&quot;&gt;소**&lt;/td&gt;
+                    &lt;td class=&quot;status&quot;&gt;&lt;span class=&quot;fc-base&quot;&gt;접수증&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;!--게시물 없을때
+                &lt;tr&gt;
+                    &lt;td colspan=&quot;6&quot; class=&quot;data-none&quot;&gt;
+                        &lt;p&gt;등록된 게시물이 없습니다.&lt;/p&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                //게시물 없을때--&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;paginate&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;page first&quot;&gt;처음 목록&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;page prev&quot;&gt;이전 목록&lt;/button&gt;
+        &lt;a href=&quot;#&quot; class=&quot;num&quot;&gt;1&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;num current&quot; title=&quot;현재페이지&quot;&gt;2&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;num&quot;&gt;3&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;num&quot;&gt;4&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;num&quot;&gt;5&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;num mo-hide&quot;&gt;6&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;num mo-hide&quot;&gt;7&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;num mo-hide&quot;&gt;8&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;num mo-hide&quot;&gt;9&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;num mo-hide&quot;&gt;9999&lt;/a&gt;
+        &lt;button type=&quot;button&quot; class=&quot;page next&quot;&gt;다음 목록&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;page last&quot;&gt;마지막 목록&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;cont-bottom pc-hide&quot;&gt;
+        &lt;div class=&quot;btn-group&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;button-primary -lg&quot;&gt;온라인 상담신청&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!--//콘텐츠 영역--&gt;
+&lt;/div&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Button Grid</h3>
+          <div class="code-preview">
+            <div class="board-wrap bd-list">
+              <table class="tbl-board edu-personal-list">
+                <caption>
+                  교육신청(개인) 목록
+                </caption>
+                <colgroup>
+                  <col class="w8" />
+                  <col class="w15" />
+                  <col />
+                  <col class="w10" />
+                  <col class="w10" />
+                  <col class="w8" />
+                  <col class="w10" />
+                  <col class="w8" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">지사</th>
+                    <th scope="col">강의명</th>
+                    <th scope="col">강사명</th>
+                    <th scope="col">교육일정</th>
+                    <th scope="col">신청가능인원</th>
+                    <th scope="col">강의 신청</th>
+                    <th scope="col">접수구분</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tbdata01 no">999999</td>
+                    <td class="tbdata02 above">부산지역본부지사</td>
+                    <td class="tbdata03 title"><a href="#">일상이 행복해지는 기술</a></td>
+                    <td class="tbdata04 name"><span class="label pc-hide">강사</span>설성문</td>
+                    <td class="tbdata05 date"><span class="label pc-hide">교육일</span>2023.10.30</td>
+                    <td class="tbdata06 personnel">29</td>
+                    <td class="tbdata07 apply"><button type="button" class="button-primary -sm round btn-apply" disabled="">신청하기</button></td>
+                    <td class="tbdata08 status"><span class="fc-gray1">접수마감</span></td>
+                  </tr>
+                  <tr>
+                    <td class="tbdata01 no">88888</td>
+                    <td class="tbdata02 above">남원순창지사</td>
+                    <td class="tbdata03 title"><a href="#">보이스 피싱예방및 금융사기 대처</a></td>
+                    <td class="tbdata04 name"><span class="label pc-hide">강사</span>윤영섭</td>
+                    <td class="tbdata05 date"><span class="label pc-hide">교육일</span>2023.10.30</td>
+                    <td class="tbdata06 personnel">29</td>
+                    <td class="tbdata07 apply"><button type="button" class="button-primary -sm round btn-apply">신청하기</button></td>
+                    <td class="tbdata08 status"><span class="fc-primary">접수중</span></td>
+                  </tr>
+                  <tr>
+                    <td class="tbdata01 no">7777</td>
+                    <td class="tbdata02 above">남원순창지사</td>
+                    <td class="tbdata03 title"><a href="#">전국민의 행복한 노후를 위해 지역본부·지사 교육장에서 재무, 건강, 여가, 대인관계의 맞춤형 노후준비 강의를 직접 열고 있습니다. </a></td>
+                    <td class="tbdata04 name"><span class="label pc-hide">강사</span>설성문</td>
+                    <td class="tbdata05 date"><span class="label pc-hide">교육일</span>2023.10.30</td>
+                    <td class="tbdata06 personnel">29</td>
+                    <td class="tbdata07 apply"><button type="button" class="button-primary -sm round btn-apply" disabled="">신청하기</button></td>
+                    <td class="tbdata08 status"><span class="fc-base">종료</span></td>
+                  </tr>
+                  <tr>
+                    <td class="tbdata01 no">666</td>
+                    <td class="tbdata02 above">부산지역본부지사</td>
+                    <td class="tbdata03 title"><a href="#">보이스 피싱예방및 금융사기 대처</a></td>
+                    <td class="tbdata04 name"><span class="label pc-hide">강사</span>윤영섭</td>
+                    <td class="tbdata05 date"><span class="label pc-hide">교육일</span>2023.10.30</td>
+                    <td class="tbdata06 personnel">29</td>
+                    <td class="tbdata07 apply"><button type="button" class="button-primary -sm round btn-apply">신청하기</button></td>
+                    <td class="tbdata08 status"><span class="fc-primary">접수중</span></td>
+                  </tr>
+                  <tr>
+                    <td class="tbdata01 no">666</td>
+                    <td class="tbdata02 above">남원순창지사</td>
+                    <td class="tbdata03 title"><a href="#">일상이 행복해지는 기술</a></td>
+                    <td class="tbdata04 name"><span class="label pc-hide">강사</span>윤영섭</td>
+                    <td class="tbdata05 date"><span class="label pc-hide">교육일</span>2023.10.30</td>
+                    <td class="tbdata06 personnel">29</td>
+                    <td class="tbdata07 apply"><button type="button" class="button-primary -sm round btn-apply">신청하기</button></td>
+                    <td class="tbdata08 status"><span class="fc-primary">접수중</span></td>
+                  </tr>
+                  <tr>
+                    <td class="tbdata01 no">666</td>
+                    <td class="tbdata02 above">남원순창지사</td>
+                    <td class="tbdata03 title"><a href="#">보이스 피싱예방및 금융사기 대처</a></td>
+                    <td class="tbdata04 name"><span class="label pc-hide">강사</span>설성문</td>
+                    <td class="tbdata05 date"><span class="label pc-hide">교육일</span>2023.10.30</td>
+                    <td class="tbdata06 personnel">29</td>
+                    <td class="tbdata07 apply"><button type="button" class="button-primary -sm round btn-apply">신청하기</button></td>
+                    <td class="tbdata08 status"><span class="fc-primary">접수중</span></td>
+                  </tr>
+                  <tr>
+                    <td class="tbdata01 no">666</td>
+                    <td class="tbdata02 above">부산지역본부지사</td>
+                    <td class="tbdata03 title"><a href="#">일상이 행복해지는 기술</a></td>
+                    <td class="tbdata04 name"><span class="label pc-hide">강사</span>윤영섭</td>
+                    <td class="tbdata05 date"><span class="label pc-hide">교육일</span>2023.10.30</td>
+                    <td class="tbdata06 personnel">29</td>
+                    <td class="tbdata07 apply"><button type="button" class="button-primary -sm round btn-apply">신청하기</button></td>
+                    <td class="tbdata08 status"><span class="fc-primary">접수중</span></td>
+                  </tr>
+                  <tr>
+                    <td class="tbdata01 no">666</td>
+                    <td class="tbdata02 above">남원순창지사</td>
+                    <td class="tbdata03 title"><a href="#">보이스 피싱예방및 금융사기 대처</a></td>
+                    <td class="tbdata04 name"><span class="label pc-hide">강사</span>윤영섭</td>
+                    <td class="tbdata05 date"><span class="label pc-hide">교육일</span>2023.10.30</td>
+                    <td class="tbdata06 personnel">29</td>
+                    <td class="tbdata07 apply"><button type="button" class="button-primary -sm round btn-apply">신청하기</button></td>
+                    <td class="tbdata08 status"><span class="fc-primary">접수중</span></td>
+                  </tr>
+                  <tr>
+                    <td class="tbdata01 no">666</td>
+                    <td class="tbdata02 above">부산지역본부지사</td>
+                    <td class="tbdata03 title"><a href="#">일상이 행복해지는 기술</a></td>
+                    <td class="tbdata04 name"><span class="label pc-hide">강사</span>설성문</td>
+                    <td class="tbdata05 date"><span class="label pc-hide">교육일</span>2023.10.30</td>
+                    <td class="tbdata06 personnel">29</td>
+                    <td class="tbdata07 apply"><button type="button" class="button-primary -sm round btn-apply">신청하기</button></td>
+                    <td class="tbdata08 status"><span class="fc-primary">접수중</span></td>
+                  </tr>
+                  <tr>
+                    <td class="tbdata01 no">666</td>
+                    <td class="tbdata02 above">부산지역본부지사</td>
+                    <td class="tbdata03 title"><a href="#">일상이 행복해지는 기술</a></td>
+                    <td class="tbdata04 name"><span class="label pc-hide">강사</span>윤영섭</td>
+                    <td class="tbdata05 date"><span class="label pc-hide">교육일</span>2023.10.30</td>
+                    <td class="tbdata06 personnel">29</td>
+                    <td class="tbdata07 apply"><button type="button" class="button-primary -sm round btn-apply">신청하기</button></td>
+                    <td class="tbdata08 status"><span class="fc-primary">접수중</span></td>
+                  </tr>
+                  <tr>
+                    <td class="tbdata01 no">666</td>
+                    <td class="tbdata02 above">부산지역본부지사</td>
+                    <td class="tbdata03 title"><a href="#">일상이 행복해지는 기술</a></td>
+                    <td class="tbdata04 name"><span class="label pc-hide">강사</span>설성문</td>
+                    <td class="tbdata05 date"><span class="label pc-hide">교육일</span>2023.10.30</td>
+                    <td class="tbdata06 personnel">29</td>
+                    <td class="tbdata07 apply"><button type="button" class="button-primary -sm round btn-apply">신청하기</button></td>
+                    <td class="tbdata08 status"><span class="fc-primary">접수중</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;board-wrap bd-list&quot;&gt;
+    &lt;table class=&quot;tbl-board edu-personal-list&quot;&gt;
+        &lt;caption&gt;교육신청(개인) 목록&lt;/caption&gt;
+        &lt;colgroup&gt;
+            &lt;col class=&quot;w8&quot;&gt;
+            &lt;col class=&quot;w15&quot;&gt;
+            &lt;col&gt;
+            &lt;col class=&quot;w10&quot;&gt;
+            &lt;col class=&quot;w10&quot;&gt;
+            &lt;col class=&quot;w8&quot;&gt;
+            &lt;col class=&quot;w10&quot;&gt;
+            &lt;col class=&quot;w8&quot;&gt;
+        &lt;/colgroup&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th scope=&quot;col&quot;&gt;번호&lt;/th&gt;
+                &lt;th scope=&quot;col&quot;&gt;지사&lt;/th&gt;
+                &lt;th scope=&quot;col&quot;&gt;강의명&lt;/th&gt;
+                &lt;th scope=&quot;col&quot;&gt;강사명&lt;/th&gt;
+                &lt;th scope=&quot;col&quot;&gt;교육일정&lt;/th&gt;
+                &lt;th scope=&quot;col&quot;&gt;신청가능인원&lt;/th&gt;
+                &lt;th scope=&quot;col&quot;&gt;강의 신청&lt;/th&gt;
+                &lt;th scope=&quot;col&quot;&gt;접수구분&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;tbdata01 no&quot;&gt;999999&lt;/td&gt;
+                &lt;td class=&quot;tbdata02 above&quot;&gt;부산지역본부지사&lt;/td&gt;
+                &lt;td class=&quot;tbdata03 title&quot;&gt;&lt;a href=&quot;#&quot;&gt;일상이 행복해지는 기술&lt;/a&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata04 name&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;강사&lt;/span&gt;설성문&lt;/td&gt;
+                &lt;td class=&quot;tbdata05 date&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;교육일&lt;/span&gt;2023.10.30&lt;/td&gt;
+                &lt;td class=&quot;tbdata06 personnel&quot;&gt;29&lt;/td&gt;
+                &lt;td class=&quot;tbdata07 apply&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;button-primary -sm round btn-apply&quot; disabled=&quot;&quot;&gt;신청하기&lt;/button&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata08 status&quot;&gt;&lt;span class=&quot;fc-gray1&quot;&gt;접수마감&lt;/span&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;tbdata01 no&quot;&gt;88888&lt;/td&gt;
+                &lt;td class=&quot;tbdata02 above&quot;&gt;남원순창지사&lt;/td&gt;
+                &lt;td class=&quot;tbdata03 title&quot;&gt;&lt;a href=&quot;#&quot;&gt;보이스 피싱예방및 금융사기 대처&lt;/a&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata04 name&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;강사&lt;/span&gt;윤영섭&lt;/td&gt;
+                &lt;td class=&quot;tbdata05 date&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;교육일&lt;/span&gt;2023.10.30&lt;/td&gt;
+                &lt;td class=&quot;tbdata06 personnel&quot;&gt;29&lt;/td&gt;
+                &lt;td class=&quot;tbdata07 apply&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;button-primary -sm round btn-apply&quot;&gt;신청하기&lt;/button&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata08 status&quot;&gt;&lt;span class=&quot;fc-primary&quot;&gt;접수중&lt;/span&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;tbdata01 no&quot;&gt;7777&lt;/td&gt;
+                &lt;td class=&quot;tbdata02 above&quot;&gt;남원순창지사&lt;/td&gt;
+                &lt;td class=&quot;tbdata03 title&quot;&gt;&lt;a href=&quot;#&quot;&gt;전국민의 행복한 노후를 위해 지역본부·지사 교육장에서 재무, 건강, 여가, 대인관계의 맞춤형 노후준비 강의를 직접 열고 있습니다. &lt;/a&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata04 name&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;강사&lt;/span&gt;설성문&lt;/td&gt;
+                &lt;td class=&quot;tbdata05 date&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;교육일&lt;/span&gt;2023.10.30&lt;/td&gt;
+                &lt;td class=&quot;tbdata06 personnel&quot;&gt;29&lt;/td&gt;
+                &lt;td class=&quot;tbdata07 apply&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;button-primary -sm round btn-apply&quot; disabled=&quot;&quot;&gt;신청하기&lt;/button&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata08 status&quot;&gt;&lt;span class=&quot;fc-base&quot;&gt;종료&lt;/span&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;tbdata01 no&quot;&gt;666&lt;/td&gt;
+                &lt;td class=&quot;tbdata02 above&quot;&gt;부산지역본부지사&lt;/td&gt;
+                &lt;td class=&quot;tbdata03 title&quot;&gt;&lt;a href=&quot;#&quot;&gt;보이스 피싱예방및 금융사기 대처&lt;/a&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata04 name&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;강사&lt;/span&gt;윤영섭&lt;/td&gt;
+                &lt;td class=&quot;tbdata05 date&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;교육일&lt;/span&gt;2023.10.30&lt;/td&gt;
+                &lt;td class=&quot;tbdata06 personnel&quot;&gt;29&lt;/td&gt;
+                &lt;td class=&quot;tbdata07 apply&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;button-primary -sm round btn-apply&quot;&gt;신청하기&lt;/button&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata08 status&quot;&gt;&lt;span class=&quot;fc-primary&quot;&gt;접수중&lt;/span&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;tbdata01 no&quot;&gt;666&lt;/td&gt;
+                &lt;td class=&quot;tbdata02 above&quot;&gt;남원순창지사&lt;/td&gt;
+                &lt;td class=&quot;tbdata03 title&quot;&gt;&lt;a href=&quot;#&quot;&gt;일상이 행복해지는 기술&lt;/a&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata04 name&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;강사&lt;/span&gt;윤영섭&lt;/td&gt;
+                &lt;td class=&quot;tbdata05 date&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;교육일&lt;/span&gt;2023.10.30&lt;/td&gt;
+                &lt;td class=&quot;tbdata06 personnel&quot;&gt;29&lt;/td&gt;
+                &lt;td class=&quot;tbdata07 apply&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;button-primary -sm round btn-apply&quot;&gt;신청하기&lt;/button&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata08 status&quot;&gt;&lt;span class=&quot;fc-primary&quot;&gt;접수중&lt;/span&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;tbdata01 no&quot;&gt;666&lt;/td&gt;
+                &lt;td class=&quot;tbdata02 above&quot;&gt;남원순창지사&lt;/td&gt;
+                &lt;td class=&quot;tbdata03 title&quot;&gt;&lt;a href=&quot;#&quot;&gt;보이스 피싱예방및 금융사기 대처&lt;/a&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata04 name&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;강사&lt;/span&gt;설성문&lt;/td&gt;
+                &lt;td class=&quot;tbdata05 date&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;교육일&lt;/span&gt;2023.10.30&lt;/td&gt;
+                &lt;td class=&quot;tbdata06 personnel&quot;&gt;29&lt;/td&gt;
+                &lt;td class=&quot;tbdata07 apply&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;button-primary -sm round btn-apply&quot;&gt;신청하기&lt;/button&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata08 status&quot;&gt;&lt;span class=&quot;fc-primary&quot;&gt;접수중&lt;/span&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;tbdata01 no&quot;&gt;666&lt;/td&gt;
+                &lt;td class=&quot;tbdata02 above&quot;&gt;부산지역본부지사&lt;/td&gt;
+                &lt;td class=&quot;tbdata03 title&quot;&gt;&lt;a href=&quot;#&quot;&gt;일상이 행복해지는 기술&lt;/a&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata04 name&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;강사&lt;/span&gt;윤영섭&lt;/td&gt;
+                &lt;td class=&quot;tbdata05 date&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;교육일&lt;/span&gt;2023.10.30&lt;/td&gt;
+                &lt;td class=&quot;tbdata06 personnel&quot;&gt;29&lt;/td&gt;
+                &lt;td class=&quot;tbdata07 apply&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;button-primary -sm round btn-apply&quot;&gt;신청하기&lt;/button&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata08 status&quot;&gt;&lt;span class=&quot;fc-primary&quot;&gt;접수중&lt;/span&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;tbdata01 no&quot;&gt;666&lt;/td&gt;
+                &lt;td class=&quot;tbdata02 above&quot;&gt;남원순창지사&lt;/td&gt;
+                &lt;td class=&quot;tbdata03 title&quot;&gt;&lt;a href=&quot;#&quot;&gt;보이스 피싱예방및 금융사기 대처&lt;/a&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata04 name&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;강사&lt;/span&gt;윤영섭&lt;/td&gt;
+                &lt;td class=&quot;tbdata05 date&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;교육일&lt;/span&gt;2023.10.30&lt;/td&gt;
+                &lt;td class=&quot;tbdata06 personnel&quot;&gt;29&lt;/td&gt;
+                &lt;td class=&quot;tbdata07 apply&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;button-primary -sm round btn-apply&quot;&gt;신청하기&lt;/button&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata08 status&quot;&gt;&lt;span class=&quot;fc-primary&quot;&gt;접수중&lt;/span&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;tbdata01 no&quot;&gt;666&lt;/td&gt;
+                &lt;td class=&quot;tbdata02 above&quot;&gt;부산지역본부지사&lt;/td&gt;
+                &lt;td class=&quot;tbdata03 title&quot;&gt;&lt;a href=&quot;#&quot;&gt;일상이 행복해지는 기술&lt;/a&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata04 name&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;강사&lt;/span&gt;설성문&lt;/td&gt;
+                &lt;td class=&quot;tbdata05 date&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;교육일&lt;/span&gt;2023.10.30&lt;/td&gt;
+                &lt;td class=&quot;tbdata06 personnel&quot;&gt;29&lt;/td&gt;
+                &lt;td class=&quot;tbdata07 apply&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;button-primary -sm round btn-apply&quot;&gt;신청하기&lt;/button&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata08 status&quot;&gt;&lt;span class=&quot;fc-primary&quot;&gt;접수중&lt;/span&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;tbdata01 no&quot;&gt;666&lt;/td&gt;
+                &lt;td class=&quot;tbdata02 above&quot;&gt;부산지역본부지사&lt;/td&gt;
+                &lt;td class=&quot;tbdata03 title&quot;&gt;&lt;a href=&quot;#&quot;&gt;일상이 행복해지는 기술&lt;/a&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata04 name&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;강사&lt;/span&gt;윤영섭&lt;/td&gt;
+                &lt;td class=&quot;tbdata05 date&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;교육일&lt;/span&gt;2023.10.30&lt;/td&gt;
+                &lt;td class=&quot;tbdata06 personnel&quot;&gt;29&lt;/td&gt;
+                &lt;td class=&quot;tbdata07 apply&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;button-primary -sm round btn-apply&quot;&gt;신청하기&lt;/button&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata08 status&quot;&gt;&lt;span class=&quot;fc-primary&quot;&gt;접수중&lt;/span&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;tbdata01 no&quot;&gt;666&lt;/td&gt;
+                &lt;td class=&quot;tbdata02 above&quot;&gt;부산지역본부지사&lt;/td&gt;
+                &lt;td class=&quot;tbdata03 title&quot;&gt;&lt;a href=&quot;#&quot;&gt;일상이 행복해지는 기술&lt;/a&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata04 name&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;강사&lt;/span&gt;설성문&lt;/td&gt;
+                &lt;td class=&quot;tbdata05 date&quot;&gt;&lt;span class=&quot;label pc-hide&quot;&gt;교육일&lt;/span&gt;2023.10.30&lt;/td&gt;
+                &lt;td class=&quot;tbdata06 personnel&quot;&gt;29&lt;/td&gt;
+                &lt;td class=&quot;tbdata07 apply&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;button-primary -sm round btn-apply&quot;&gt;신청하기&lt;/button&gt;&lt;/td&gt;
+                &lt;td class=&quot;tbdata08 status&quot;&gt;&lt;span class=&quot;fc-primary&quot;&gt;접수중&lt;/span&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Row Scope</h3>
+          <div class="code-preview">
+            <div class="con-table al-left-th mg0 col-3d">
+              <table summary="퇴직연금(DB)와 퇴직연금(DC)의 첫 해 연금액,개시년도~종료년도 (수급기간),총 예상납입액 등이 나열된 테이블">
+                <caption>
+                  퇴직연금 예상연금액 확인
+                </caption>
+                <colgroup>
+                  <col />
+                  <col />
+                  <col />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row" rowspan="3" class="align-center">퇴직연금(DB)</th>
+                    <th scope="row">첫 해 연금액</th>
+                    <td class="mediumbold">324 만원(월 27만원)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">개시년도~종료년도 (수급기간)</th>
+                    <td>2048년~2087년(40년)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">총 예상납입액</th>
+                    <td>6,170 만원</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" rowspan="3" class="align-center">퇴직연금(DC)</th>
+                    <th scope="row">첫 해 연금액</th>
+                    <td>276 만원(월 23만원)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">개시년도~종료년도 (수급기간)</th>
+                    <td>2048년~2087년(40년)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">총 예상납입액</th>
+                    <td>6,170 만원</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;con-table al-left-th mg0 col-3d&quot;&gt;
+    &lt;table summary=&quot;퇴직연금(DB)와 퇴직연금(DC)의 첫 해 연금액,개시년도~종료년도 (수급기간),총 예상납입액 등이 나열된 테이블&quot;&gt;
+        &lt;caption&gt;퇴직연금 예상연금액 확인&lt;/caption&gt;
+        &lt;colgroup&gt;
+            &lt;col&gt;
+            &lt;col&gt;
+            &lt;col&gt;
+        &lt;/colgroup&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;th scope=&quot;row&quot; rowspan=&quot;3&quot; class=&quot;align-center&quot;&gt;퇴직연금(DB)&lt;/th&gt;
+                &lt;th scope=&quot;row&quot;&gt;첫 해 연금액&lt;/th&gt;
+                &lt;td class=&quot;mediumbold&quot;&gt;324 만원(월 27만원)&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope=&quot;row&quot;&gt;개시년도~종료년도 (수급기간)&lt;/th&gt;
+                &lt;td&gt;2048년~2087년(40년)&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope=&quot;row&quot;&gt;총 예상납입액&lt;/th&gt;
+                &lt;td&gt;6,170 만원&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope=&quot;row&quot; rowspan=&quot;3&quot; class=&quot;align-center&quot;&gt;퇴직연금(DC)&lt;/th&gt;
+                &lt;th scope=&quot;row&quot;&gt;첫 해 연금액&lt;/th&gt;
+                &lt;td&gt;276 만원(월 23만원)&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope=&quot;row&quot;&gt;개시년도~종료년도 (수급기간)&lt;/th&gt;
+                &lt;td&gt;2048년~2087년(40년)&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope=&quot;row&quot;&gt;총 예상납입액&lt;/th&gt;
+                &lt;td&gt;6,170 만원&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+</code></pre>
+          <!-- e:  -->
+
+
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- End -->
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

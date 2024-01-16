@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>UI 가이드</title>
+
+    <script src="../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+    <script src="../js/lib/jquery.easing.min.js"></script>
+    <script src="../js/lib/swiper-bundle.min.js"></script>
+    <script src="ui_include.js"></script>
+    <script src="../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="guide.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+    <link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css" />
+    <script src="highlight/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </head>
+  <body>
+    <div class="guideWrap">
+      <header class="guideHeader"></header>
+      <section class="guideContainer">
+        <header class="sec-header">
+          <h2>Layout Template</h2>
+        </header>
+        <div class="sec-contents">
+          <!-- Start -->
+
+          <!-- s: Step -->
+          <h3 class="sec-title">Step</h3>
+          <div class="code-preview">
+            <ul class="equal-list step">
+              <li class="active">
+                <em class="unit">01</em>
+                <div class="type">기본사항</div>
+              </li>
+              <li>
+                <em class="unit">02</em>
+                <div class="type">재무</div>
+              </li>
+              <li>
+                <em class="unit">03</em>
+                <div class="type">건강</div>
+              </li>
+              <li>
+                <em class="unit">04</em>
+                <div class="type">여가활동</div>
+              </li>
+              <li>
+                <em class="unit">05</em>
+                <div class="type">대인관계</div>
+              </li>
+              <li>
+                <em class="unit">06</em>
+                <div class="type">종합진단결과</div>
+              </li>
+            </ul>
+          </div>
+          <pre><code class="language-xml">&lt;ul class=&quot;equal-list step&quot;&gt;
+  &lt;li class=&quot;active&quot;&gt;
+    &lt;em class=&quot;unit&quot;&gt;01&lt;/em&gt;
+    &lt;div class=&quot;type&quot;&gt;기본사항&lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;em class=&quot;unit&quot;&gt;02&lt;/em&gt;
+    &lt;div class=&quot;type&quot;&gt;재무&lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;em class=&quot;unit&quot;&gt;03&lt;/em&gt;
+    &lt;div class=&quot;type&quot;&gt;건강&lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;em class=&quot;unit&quot;&gt;04&lt;/em&gt;
+    &lt;div class=&quot;type&quot;&gt;여가활동&lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;em class=&quot;unit&quot;&gt;05&lt;/em&gt;
+    &lt;div class=&quot;type&quot;&gt;대인관계&lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;em class=&quot;unit&quot;&gt;06&lt;/em&gt;
+    &lt;div class=&quot;type&quot;&gt;종합진단결과&lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          <!-- e: Step -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Survey</h3>
+          <div class="code-preview">
+            <div class="page-satisfaction">
+              <div class="satisfaction-head">
+                <p class="question">현재 페이지의 내용과 사용 편의성에 대해 만족하십니까?</p>
+              </div>
+              <div class="satisfaction-survey">
+                <fieldset>
+                  <legend>현재페이지 만족도 조사</legend>
+                  <div class="survey-form">
+                    <div class="survey-options">
+                      <label class="inp-radio opt1"><input type="radio" name="satisfaction" /><span>매우만족</span></label>
+                      <label class="inp-radio opt2"><input type="radio" name="satisfaction" /><span>만족</span></label>
+                      <label class="inp-radio opt3"><input type="radio" name="satisfaction" /><span>보통</span></label>
+                      <label class="inp-radio opt4"><input type="radio" name="satisfaction" /><span>불만족</span></label>
+                      <label class="inp-radio opt5"><input type="radio" name="satisfaction" /><span>매우불만족</span></label>
+                    </div>
+                    <input type="button" value="확인" class="button-primary" />
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;page-satisfaction&quot;&gt;&lt;div class=&quot;satisfaction-head&quot;&gt;
+    &lt;p class=&quot;question&quot;&gt;현재 페이지의 내용과 사용 편의성에 대해 만족하십니까?&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;satisfaction-survey&quot;&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;현재페이지 만족도 조사&lt;/legend&gt;
+      &lt;div class=&quot;survey-form&quot;&gt;
+        &lt;div class=&quot;survey-options&quot;&gt;
+          &lt;label class=&quot;inp-radio opt1&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;satisfaction&quot;&gt;&lt;span&gt;매우만족&lt;/span&gt;&lt;/label&gt;
+          &lt;label class=&quot;inp-radio opt2&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;satisfaction&quot;&gt;&lt;span&gt;만족&lt;/span&gt;&lt;/label&gt;
+          &lt;label class=&quot;inp-radio opt3&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;satisfaction&quot;&gt;&lt;span&gt;보통&lt;/span&gt;&lt;/label&gt;
+          &lt;label class=&quot;inp-radio opt4&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;satisfaction&quot;&gt;&lt;span&gt;불만족&lt;/span&gt;&lt;/label&gt;
+          &lt;label class=&quot;inp-radio opt5&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;satisfaction&quot;&gt;&lt;span&gt;매우불만족&lt;/span&gt;&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;input type=&quot;button&quot; value=&quot;확인&quot; class=&quot;button-primary&quot;&gt;                               
+      &lt;/div&gt;      
+    &lt;/fieldset&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Pagination</h3>
+          <div class="code-preview">
+            <div class="paginate">
+              <button type="button" class="page first">처음 목록</button>
+              <button type="button" class="page prev">이전 목록</button>
+              <a href="#" class="num">1</a>
+              <a href="#" class="num current" title="현재페이지">2</a>
+              <a href="#" class="num">3</a>
+              <a href="#" class="num">4</a>
+              <a href="#" class="num">5</a>
+              <a href="#" class="num mo-hide">6</a>
+              <a href="#" class="num mo-hide">7</a>
+              <a href="#" class="num mo-hide">8</a>
+              <a href="#" class="num mo-hide">9</a>
+              <a href="#" class="num mo-hide">9999</a>
+              <button type="button" class="page next">다음 목록</button>
+              <button type="button" class="page last">마지막 목록</button>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;paginate&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;page first&quot;&gt;처음 목록&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;page prev&quot;&gt;이전 목록&lt;/button&gt;
+  &lt;a href=&quot;#&quot; class=&quot;num&quot;&gt;1&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;num current&quot; title=&quot;현재페이지&quot;&gt;2&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;num&quot;&gt;3&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;num&quot;&gt;4&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;num&quot;&gt;5&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;num mo-hide&quot;&gt;6&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;num mo-hide&quot;&gt;7&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;num mo-hide&quot;&gt;8&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;num mo-hide&quot;&gt;9&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;num mo-hide&quot;&gt;9999&lt;/a&gt;
+  &lt;button type=&quot;button&quot; class=&quot;page next&quot;&gt;다음 목록&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;page last&quot;&gt;마지막 목록&lt;/button&gt;
+&lt;/div&gt;            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Bottom Buttons</h3>
+          <div class="code-preview">
+            <div class="cont-bottom">
+              <div class="btn-group">
+                <button type="button" class="button-secondary -lg">목록</button>
+                <button type="button" class="button-tertiary -lg">취소</button>
+                <button type="button" class="button-primary -lg">확인</button>
+              </div>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;cont-bottom&quot;&gt;
+  &lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;button-secondary -lg&quot;&gt;목록&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;button-tertiary -lg&quot;&gt;취소&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;button-primary -lg&quot;&gt;확인&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Middle Buttons</h3>
+          <div class="code-preview">
+            <div class="btn-group divide topHigh">
+              <button type="button" class="button-fourth w160px">다시 계산</button>
+              <button type="button" class="button-primary w160px">그래프 조회</button>
+              <a href="#none     " class="button-primary w160px mc-hide">보고서 출력</a>
+          </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;btn-group divide topHigh&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;button-fourth w160px&quot;&gt;다시 계산&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;button-primary w160px&quot;&gt;그래프 조회&lt;/button&gt;
+    &lt;a href=&quot;#none&quot; class=&quot;button-primary w160px mc-hide&quot;&gt;보고서 출력&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Board Search</h3>
+          <div class="code-preview">
+            <div class="searchbox-wrap">
+              <div class="searchbox edu-apply-group">
+                <div class="form-group">
+                  <label class="search-label" for="지사검색">지사검색</label>
+                  <select class="slct-branch" title="지사선택">
+                    <option value="전체">전체</option>
+                    <option value="제목">서울 &gt; 서울남부지역본부</option>
+                    <option value="작성자">서울 &gt; 서울북부지역본부</option>
+                    <option value="작성자">서울 &gt; 송파지사</option>
+                    <option value="작성자">경기 &gt; 경인지역본부</option>
+                    <option value="작성자">경기 &gt; 남양주지사</option>
+                    <option value="작성자">인천 &gt; 남동연수지사</option>
+                    <option value="작성자">강원 &gt; 춘천지사</option>
+                    <option value="작성자">충남 &gt; 천안지사</option>
+                    <option value="작성자">충북 &gt; 동청주지사</option>
+                    <option value="작성자">대전 &gt; 서대전지사</option>
+                    <option value="작성자">경남 &gt; 창원지사</option>
+                    <option value="작성자">경북 &gt; 구미지사</option>
+                    <option value="작성자">대구 &gt; 대구지역본부</option>
+                    <option value="작성자">울산 &gt; 남울산지사</option>
+                    <option value="작성자">부산 &gt; 부산지역본부</option>
+                    <option value="작성자">전남 &gt; 목포지사</option>
+                    <option value="작성자">전북 &gt; 전주완주지사</option>
+                    <option value="작성자">광주 &gt; 광주지역본부</option>
+                    <option value="작성자">제주 &gt; 제주지사</option>
+                  </select>
+                  <label class="search-label" for="검색어">검색어</label>
+                  <select class="slct-type min-w160px" title="글목록 검색 조건">
+                    <option value="">강사명</option>
+                    <option value="">강의내용</option>
+                  </select>
+                  <input type="text" placeholder="검색어를 입력해주세요" class="inp-content w-flexible" title="검색어 입력" />
+                  <button type="button" class="button-primary btn-search min-w80px">조회</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;form-group&quot;&gt;
+  &lt;label class=&quot;search-label&quot; for=&quot;지사검색&quot;&gt;지사검색&lt;/label&gt;
+  &lt;select class=&quot;slct-branch&quot; title=&quot;지사선택&quot;&gt;
+    &lt;option value=&quot;전체&quot;&gt;전체&lt;/option&gt;
+    &lt;option value=&quot;제목&quot;&gt;서울 &amp;gt; 서울남부지역본부&lt;/option&gt;
+    &lt;option value=&quot;작성자&quot;&gt;서울 &amp;gt; 서울북부지역본부&lt;/option&gt;
+    &lt;option value=&quot;작성자&quot;&gt;서울 &amp;gt; 송파지사&lt;/option&gt;
+    &lt;option value=&quot;작성자&quot;&gt;경기 &amp;gt; 경인지역본부&lt;/option&gt;
+    &lt;option value=&quot;작성자&quot;&gt;경기 &amp;gt; 남양주지사&lt;/option&gt;
+    &lt;option value=&quot;작성자&quot;&gt;인천 &amp;gt; 남동연수지사&lt;/option&gt;
+    &lt;option value=&quot;작성자&quot;&gt;강원 &amp;gt; 춘천지사&lt;/option&gt;
+    &lt;option value=&quot;작성자&quot;&gt;충남 &amp;gt; 천안지사&lt;/option&gt;
+    &lt;option value=&quot;작성자&quot;&gt;충북 &amp;gt; 동청주지사&lt;/option&gt;
+    &lt;option value=&quot;작성자&quot;&gt;대전 &amp;gt; 서대전지사&lt;/option&gt;
+    &lt;option value=&quot;작성자&quot;&gt;경남 &amp;gt; 창원지사&lt;/option&gt;
+    &lt;option value=&quot;작성자&quot;&gt;경북 &amp;gt; 구미지사&lt;/option&gt;
+    &lt;option value=&quot;작성자&quot;&gt;대구 &amp;gt; 대구지역본부&lt;/option&gt;
+    &lt;option value=&quot;작성자&quot;&gt;울산 &amp;gt; 남울산지사&lt;/option&gt;
+    &lt;option value=&quot;작성자&quot;&gt;부산 &amp;gt; 부산지역본부&lt;/option&gt;
+    &lt;option value=&quot;작성자&quot;&gt;전남 &amp;gt; 목포지사&lt;/option&gt;
+    &lt;option value=&quot;작성자&quot;&gt;전북 &amp;gt; 전주완주지사&lt;/option&gt;
+    &lt;option value=&quot;작성자&quot;&gt;광주 &amp;gt; 광주지역본부&lt;/option&gt;
+    &lt;option value=&quot;작성자&quot;&gt;제주 &amp;gt; 제주지사&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;label class=&quot;search-label&quot; for=&quot;검색어&quot;&gt;검색어&lt;/label&gt;
+  &lt;select class=&quot;slct-type min-w160px&quot; title=&quot;글목록 검색 조건&quot;&gt;
+    &lt;option value=&quot;&quot;&gt;강사명&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;강의내용&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;검색어를 입력해주세요&quot; class=&quot;inp-content w-flexible&quot; title=&quot;검색어 입력&quot; /&gt;
+  &lt;button type=&quot;button&quot; class=&quot;button-primary btn-search min-w80px&quot;&gt;조회&lt;/button&gt;
+&lt;/div&gt;            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Board Search Options</h3>
+          <div class="code-preview">
+            <div class="searchbox-wrap">
+              <div class="searchbox online-counseling">
+                <div class="form-group fx-justify-center mo-hide">
+                  <label class="inp-radio">
+                    <input type="radio" name="radioGroup1" checked="checked" />
+                    <span>전체</span>
+                  </label>
+                  <label class="inp-radio">
+                    <input type="radio" name="radioGroup1" disabled="disabled" />
+                    <span>재무</span>
+                  </label>
+                  <label class="inp-radio">
+                    <input type="radio" name="radioGroup1" readonly="readonly" onclick="return false" />
+                    <span>건강</span>
+                  </label>
+                  <label class="inp-radio">
+                    <input type="radio" name="radioGroup1" disabled="disabled" checked="checked" />
+                    <span>일/취업</span>
+                  </label>
+                  <label class="inp-radio">
+                    <input type="radio" name="radioGroup1" />
+                    <span>취미/여가</span>
+                  </label>
+                  <label class="inp-radio">
+                    <input type="radio" name="radioGroup1" />
+                    <span>주거</span>
+                  </label>
+                  <label class="inp-radio">
+                    <input type="radio" name="radioGroup1" />
+                    <span>대인관계</span>
+                  </label>
+                  <label class="inp-radio">
+                    <input type="radio" name="radioGroup1" />
+                    <span>기타</span>
+                  </label>
+                </div>
+                <div class="form-group">
+                  <select class="slct-counseling pc-hide" title="상담분야 선택">
+                    <option value="유형전체">전체</option>
+                    <option value="제목">재무</option>
+                    <option value="작성자">건강</option>
+                    <option value="작성자">일/취업</option>
+                    <option value="작성자">취미/여가</option>
+                    <option value="작성자">주거</option>
+                    <option value="작성자">대인관계</option>
+                    <option value="작성자">기타</option>
+                  </select>
+                  <select class="slct-type" title="유형 선택">
+                    <option value="유형전체">전체</option>
+                    <option value="제목">제목</option>
+                    <option value="작성자">작성자</option>
+                  </select>
+                  <input type="text" placeholder="내용을 입력해주세요" class="inp-content w-flexible" title="내용입력" />
+                  <div class="form-group-period period-calendar">
+                    <label class="hidden">시작 날짜 선택</label>
+                    <input type="text" class="useDatepicker dateFrom hasDatepicker" placeholder="날짜를 선택하세요" title="시작일" id="dp1704371956433" />
+                    <span class="inp-split">-</span>
+                    <label class="hidden">종료 날짜 선택</label>
+                    <input type="text" class="useDatepicker dateTo hasDatepicker" placeholder="날짜를 선택하세요" title="종료일" id="dp1704371956434" />
+                  </div>
+                  <button type="button" class="button-primary min-w80px">조회</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;searchbox-wrap&quot;&gt;
+	&lt;div class=&quot;searchbox online-counseling&quot;&gt;
+		&lt;div class=&quot;form-group fx-justify-center mo-hide&quot;&gt;
+			&lt;label class=&quot;inp-radio&quot;&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;radioGroup1&quot; checked=&quot;checked&quot; /&gt;
+				&lt;span&gt;전체&lt;/span&gt;
+			&lt;/label&gt;
+			&lt;label class=&quot;inp-radio&quot;&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;radioGroup1&quot; disabled=&quot;disabled&quot; /&gt;
+				&lt;span&gt;재무&lt;/span&gt;
+			&lt;/label&gt;
+			&lt;label class=&quot;inp-radio&quot;&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;radioGroup1&quot; readonly=&quot;readonly&quot; onclick=&quot;return false&quot; /&gt;
+				&lt;span&gt;건강&lt;/span&gt;
+			&lt;/label&gt;
+			&lt;label class=&quot;inp-radio&quot;&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;radioGroup1&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;
+				&lt;span&gt;일/취업&lt;/span&gt;
+			&lt;/label&gt;
+			&lt;label class=&quot;inp-radio&quot;&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;radioGroup1&quot; /&gt;
+				&lt;span&gt;취미/여가&lt;/span&gt;
+			&lt;/label&gt;
+			&lt;label class=&quot;inp-radio&quot;&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;radioGroup1&quot; /&gt;
+				&lt;span&gt;주거&lt;/span&gt;
+			&lt;/label&gt;
+			&lt;label class=&quot;inp-radio&quot;&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;radioGroup1&quot; /&gt;
+				&lt;span&gt;대인관계&lt;/span&gt;
+			&lt;/label&gt;
+			&lt;label class=&quot;inp-radio&quot;&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;radioGroup1&quot; /&gt;
+				&lt;span&gt;기타&lt;/span&gt;
+			&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;form-group&quot;&gt;
+			&lt;select class=&quot;slct-counseling pc-hide&quot; title=&quot;상담분야 선택&quot;&gt;
+				&lt;option value=&quot;유형전체&quot;&gt;전체&lt;/option&gt;
+				&lt;option value=&quot;제목&quot;&gt;재무&lt;/option&gt;
+				&lt;option value=&quot;작성자&quot;&gt;건강&lt;/option&gt;
+				&lt;option value=&quot;작성자&quot;&gt;일/취업&lt;/option&gt;
+				&lt;option value=&quot;작성자&quot;&gt;취미/여가&lt;/option&gt;
+				&lt;option value=&quot;작성자&quot;&gt;주거&lt;/option&gt;
+				&lt;option value=&quot;작성자&quot;&gt;대인관계&lt;/option&gt;
+				&lt;option value=&quot;작성자&quot;&gt;기타&lt;/option&gt;
+			&lt;/select&gt;
+			&lt;select class=&quot;slct-type&quot; title=&quot;유형 선택&quot;&gt;
+				&lt;option value=&quot;유형전체&quot;&gt;전체&lt;/option&gt;
+				&lt;option value=&quot;제목&quot;&gt;제목&lt;/option&gt;
+				&lt;option value=&quot;작성자&quot;&gt;작성자&lt;/option&gt;
+			&lt;/select&gt;
+			&lt;input type=&quot;text&quot; placeholder=&quot;내용을 입력해주세요&quot; class=&quot;inp-content w-flexible&quot; title=&quot;내용입력&quot; /&gt;
+			&lt;div class=&quot;form-group-period period-calendar&quot;&gt;
+				&lt;label class=&quot;hidden&quot;&gt;시작 날짜 선택&lt;/label&gt;
+				&lt;input type=&quot;text&quot; class=&quot;useDatepicker dateFrom hasDatepicker&quot; placeholder=&quot;날짜를 선택하세요&quot; title=&quot;시작일&quot; id=&quot;dp1704371956433&quot; /&gt;
+				&lt;span class=&quot;inp-split&quot;&gt;-&lt;/span&gt;
+				&lt;label class=&quot;hidden&quot;&gt;종료 날짜 선택&lt;/label&gt;
+				&lt;input type=&quot;text&quot; class=&quot;useDatepicker dateTo hasDatepicker&quot; placeholder=&quot;날짜를 선택하세요&quot; title=&quot;종료일&quot; id=&quot;dp1704371956434&quot; /&gt;
+			&lt;/div&gt;
+			&lt;button type=&quot;button&quot; class=&quot;button-primary min-w80px&quot;&gt;조회&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">HashTag Banners</h3>
+          <div class="code-preview">
+            <div class="hashtag-wrap">
+              <ul class="equal-list hashtag">
+                <li>
+                  <a href="#none">
+                    <span class="color-point">#예상연금조회</span>
+                    <span>현재소득 대비 예상연금 산정</span>
+                    <img src="" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#none">
+                    <span class="color-point">#내연금 알아보기</span>
+                    <span>국민, 개인, 퇴직, 주택연금</span>
+                    <img src="" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#none">
+                    <span class="color-point">#간단재무설계</span>
+                    <span>나의 노후에 필요한 준비자금</span>
+                    <img src="" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#none">
+                    <span class="color-point">#노후준비 상담지사안내</span>
+                    <span>나와 가까운 상담지사</span>
+                    <img src="" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;hashtag-wrap&quot;&gt;
+  &lt;ul class=&quot;equal-list hashtag&quot;&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#none&quot;&gt;
+        &lt;span class=&quot;color-point&quot;&gt;#예상연금조회&lt;/span&gt;
+        &lt;span&gt;현재소득 대비 예상연금 산정&lt;/span&gt;
+        &lt;img src=&quot;&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#none&quot;&gt;
+        &lt;span class=&quot;color-point&quot;&gt;#내연금 알아보기&lt;/span&gt;
+        &lt;span&gt;국민, 개인, 퇴직, 주택연금&lt;/span&gt;
+        &lt;img src=&quot;&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#none&quot;&gt;
+        &lt;span class=&quot;color-point&quot;&gt;#간단재무설계&lt;/span&gt;
+        &lt;span&gt;나의 노후에 필요한 준비자금&lt;/span&gt;
+        &lt;img src=&quot;&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#none&quot;&gt;
+        &lt;span class=&quot;color-point&quot;&gt;#노후준비 상담지사안내&lt;/span&gt;
+        &lt;span&gt;나와 가까운 상담지사&lt;/span&gt;
+        &lt;img src=&quot;&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Divide Type</h3>
+          <div class="code-preview">
+            <div class="divide-type">
+              <p class="cont-desc big">고객님께서는 66세부터 국민연금 <span class="fc-primary">매월 1,506만원</span>, 0세부터 퇴직연금 매월 0만원, 0세부터 개인연금 매월 0만원을 받으실 수 있습니다. (미래가치 기준)</p>
+              <button type="button" class="button-primary -sm round">그래프보기</button>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;divide-type&quot;&gt;
+  &lt;p class=&quot;cont-desc big&quot;&gt;고객님께서는 66세부터 국민연금 &lt;span class=&quot;fc-primary&quot;&gt;매월 1,506만원&lt;/span&gt;, 0세부터 퇴직연금 매월 0만원, 0세부터 개인연금 매월 0만원을 받으실 수 있습니다. (미래가치 기준)&lt;/p&gt;
+  &lt;button type=&quot;button&quot; class=&quot;button-primary -sm round&quot;&gt;그래프보기&lt;/button&gt;
+&lt;/div&gt;            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Divide Type2</h3>
+          <div class="code-preview">
+            <div class="board-bottom divide-type">
+              <ul class="txt-list dot big gray">
+                <li>개인연금은 추가적인 노후소득을 위하여 개인이 스스로 선택하여 연금으로 노후를 준비할 수 있도록 하는 제도입니다. 자세한 내용은 “노후설계상담&gt;연금제도안내”에서 확인하실 수 있습니다.</li>
+              </ul>
+              <button type="button" class="button-secondary -sm round">연금제도 안내보기</button>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;board-bottom divide-type&quot;&gt;
+  &lt;ul class=&quot;txt-list dot big gray&quot;&gt;
+    &lt;li&gt;개인연금은 추가적인 노후소득을 위하여 개인이 스스로 선택하여 연금으로 노후를 준비할 수 있도록 하는 제도입니다. 자세한 내용은 “노후설계상담&amp;gt;연금제도안내”에서 확인하실 수 있습니다.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;button type=&quot;button&quot; class=&quot;button-secondary -sm round&quot;&gt;연금제도 안내보기&lt;/button&gt;
+&lt;/div&gt;            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Text Block Type2</h3>
+          <div class="code-preview">
+            <p class="cont-desc type2 mb0">
+              현재 고객님 재무상태의 <span class="fc-primary">순자산은 800,000만원</span>이고 현금흐름의 <span class="fc-primary">잉여여력은 225만원</span>이 발생하였습니다.<br />
+              재무적정성은 현금유동성 <span class="fc-gray3 mediumbold">[적정]</span>, 저축적정성 <span class="fc-gray3 mediumbold">[적정]</span>, 부채적정성<span class="fc-gray3 mediumbold">[적정]</span>으로 평가되었습니다.
+            </p>
+          </div>
+          <pre><code class="language-xml">&lt;p class=&quot;cont-desc type2 mb0&quot;&gt;
+  현재 고객님 재무상태의 &lt;span class=&quot;fc-primary&quot;&gt;순자산은 800,000만원&lt;/span&gt;이고 현금흐름의 &lt;span class=&quot;fc-primary&quot;&gt;잉여여력은 225만원&lt;/span&gt;이 발생하였습니다.&lt;br /&gt;
+  재무적정성은 현금유동성 &lt;span class=&quot;fc-gray3 mediumbold&quot;&gt;[적정]&lt;/span&gt;, 저축적정성 &lt;span class=&quot;fc-gray3 mediumbold&quot;&gt;[적정]&lt;/span&gt;, 부채적정성&lt;span class=&quot;fc-gray3 mediumbold&quot;&gt;[적정]&lt;/span&gt;으로 평가되었습니다.
+&lt;/p&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Color Text Box1</h3>
+          <div class="code-preview">
+            <!-- s: Color Box -->
+            <p class="cont-title dot">위의 유형이 실천할 사항</p>
+            <div class="color-box box-inner-list">
+              <ul class="txt-list dot blue">
+                <li>공적연금을 통한 노후소득 안정성을 추가로 확보하시기 바랍니다.</li>
+                <li>국민연금 납부기간 연장, 납부금액 증액, 배우자 국민연금 가입 등에 대한 상담을 받으시기 바랍니다.</li>
+                <li>노후준비서비스 중 재무적인 부분에 대한 심층상담인 종합재무설계 상담서비스 또는 사기업 금융 전문 상담 서비스를 추가적으로 받으시기 바랍니다.</li>
+              </ul>
+            </div>
+            <!-- e: Color Box -->
+          </div>
+          <pre><code class="language-xml">&lt;!-- s: Color Box --&gt;
+&lt;p class=&quot;cont-title dot&quot;&gt;위의 유형이 실천할 사항&lt;/p&gt;
+&lt;div class=&quot;color-box box-inner-list&quot;&gt;
+  &lt;ul class=&quot;txt-list dot blue&quot;&gt;
+    &lt;li&gt;공적연금을 통한 노후소득 안정성을 추가로 확보하시기 바랍니다.&lt;/li&gt;
+    &lt;li&gt;국민연금 납부기간 연장, 납부금액 증액, 배우자 국민연금 가입 등에 대한 상담을 받으시기 바랍니다.&lt;/li&gt;
+    &lt;li&gt;노후준비서비스 중 재무적인 부분에 대한 심층상담인 종합재무설계 상담서비스 또는 사기업 금융 전문 상담 서비스를 추가적으로 받으시기 바랍니다.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;!-- e: Color Box --&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Color Text Box2</h3>
+          <div class="code-preview">
+            <!-- s: Color Box -->
+            <div class="color-box">
+              <dl class="result-type-orange">
+                <dt>사회적 관계망이 작은 비친밀형</dt>
+                <dd>가깝게 지내는 사람들의 수도 적고 이들과의 친밀도도 낮은 유형</dd>
+              </dl>
+            </div>
+            <!-- e: Color Box -->
+          </div>
+          <pre><code class="language-xml">&lt;!-- s: Color Box --&gt;
+&lt;div class=&quot;color-box&quot;&gt;
+  &lt;dl class=&quot;result-type-orange&quot;&gt;
+    &lt;dt&gt;사회적 관계망이 작은 비친밀형&lt;/dt&gt;
+    &lt;dd&gt;가깝게 지내는 사람들의 수도 적고 이들과의 친밀도도 낮은 유형&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/div&gt;
+&lt;!-- e: Color Box --&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Color Text Box3</h3>
+          <div class="code-preview">
+            <!-- s: Color Box -->
+            <h4 class="cont-title dot">나의 진단결과</h4>
+            <div class="color-box">
+              <dl class="result-type-green1">
+                <dt>충분</dt>
+                <dd>고객님의 노후준비자금이 [충분] 진단이 나왔습니다.</dd>
+              </dl>
+            </div>
+            <!-- e: Color Box -->
+          </div>
+          <pre><code class="language-xml">&lt;!-- s: Color Box --&gt;
+&lt;h4 class=&quot;cont-title dot&quot;&gt;나의 진단결과&lt;/h4&gt;
+&lt;div class=&quot;color-box&quot;&gt;
+  &lt;dl class=&quot;result-type-green1&quot;&gt;
+    &lt;dt&gt;충분&lt;/dt&gt;
+    &lt;dd&gt;고객님의 노후준비자금이 [충분] 진단이 나왔습니다.&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/div&gt;
+&lt;!-- e: Color Box --&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Color Text Box None</h3>
+          <div class="code-preview">
+            <!-- s: Color Box -->
+            <div class="color-box none">
+              <p class="result-txt">
+                목돈을 만들기 위한 월 적립액은 <span class="color-point"><em>25.7</em><em> 만원</em> </span>입니다.
+              </p>
+            </div>
+            <!-- e: Color Box -->
+          </div>
+          <pre><code class="language-xml">&lt;!-- s: Color Box --&gt;
+&lt;div class=&quot;color-box none&quot;&gt;
+  &lt;p class=&quot;result-txt&quot;&gt;
+    목돈을 만들기 위한 월 적립액은 &lt;span class=&quot;color-point&quot;&gt;&lt;em&gt;25.7&lt;/em&gt;&lt;em&gt; 만원&lt;/em&gt; &lt;/span&gt;입니다.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- e: Color Box --&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Color Text Box Icon</h3>
+          <div class="code-preview">
+            <div class="color-box none develop">
+              <div class="alert-txt-box">
+                <p class="alert-txt">홍길동 고객님</p>
+                <p>
+                  고객님께서는 현재 소득으로 만 60세까지 납부하실 경우 노령연금을 아래와 같이 수령할 것으로 예상됩니다. <br />
+                  다만, 상실 또는 납부예외 중인 경우에는 현재까지 납부된 내역만으로 예상연금액을 산정합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;color-box none develop&quot;&gt;
+	&lt;div class=&quot;alert-txt-box&quot;&gt;
+		&lt;p class=&quot;alert-txt&quot;&gt;홍길동 고객님&lt;/p&gt;
+		&lt;p&gt;
+			고객님께서는 현재 소득으로 만 60세까지 납부하실 경우 노령연금을 아래와 같이 수령할 것으로 예상됩니다. &lt;br /&gt;
+			다만, 상실 또는 납부예외 중인 경우에는 현재까지 납부된 내역만으로 예상연금액을 산정합니다.
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+          <!-- e:  -->
+          <!-- s:  -->
+          <h3 class="sec-title">Color Text Box Icon2</h3>
+          <div class="code-preview">
+            <div class="color-box none">
+              <p class="alert-txt">부족한 식생활 습관을 찾는 문항입니다.</p>
+              <ul class="txt-list dot blue align-left">
+                <li>하단의 문항을 읽고 ‘아니요’만 선택해 보시기 바랍니다.</li>
+                <li>선택된 문항은 나의 부족한 식습관입니다.</li>
+                <li>이 중 <span class="color-point">바꿔보자를 3개까지 선택</span>하실 수 있습니다.</li>
+              </ul>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;color-box none&quot;&gt;
+	&lt;p class=&quot;alert-txt&quot;&gt;부족한 식생활 습관을 찾는 문항입니다.&lt;/p&gt;
+	&lt;ul class=&quot;txt-list dot blue align-left&quot;&gt;
+		&lt;li&gt;하단의 문항을 읽고 ‘아니요’만 선택해 보시기 바랍니다.&lt;/li&gt;
+		&lt;li&gt;선택된 문항은 나의 부족한 식습관입니다.&lt;/li&gt;
+		&lt;li&gt;이 중 &lt;span class=&quot;color-point&quot;&gt;바꿔보자를 3개까지 선택&lt;/span&gt;하실 수 있습니다.&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- End -->
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

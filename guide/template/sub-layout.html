@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<title>노후준비종합서비스</title>
+
+		<script src="../js/lib/jquery-3.7.0.min.js"></script>
+		<script src="../js/lib/jquery-ui.min.js"></script>
+		<script src="../js/lib/jquery.easing.min.js"></script>
+		<script src="../js/lib/swiper-bundle.min.js"></script>
+		<script src="../js/lib/jquery.mCustomScrollbar.min.js"></script>
+		<script src="../js/zoom.js"></script>
+		<script src="../../js/ui_temp.js"></script>
+		<!--공통UI layout-->
+		<script src="../js/ui_common.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="../js/lib/jquery.mCustomScrollbar.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	</head>
+	<body>
+		<ul class="skip-nav">
+			<li><a href="#conatiner">본문 바로가기</a></li>
+			<li><a href="#gnav">주메뉴 바로가기</a></li>
+			<!-- [수정 202401] 전체메뉴는 현재 display:none 이기 때문에 스크린 리더가 읽을 수 없음. 
+            따라서 전체 메뉴 바로가기는 유효하지 않음. 꼭 넣어야 하면 버튼을 바로 가도록 하여 display를 변경해줘야 함. -->
+			<li><a href="#allMenuButton">전체메뉴 버튼 바로가기</a></li>
+			<li><a href="#footer">푸터 바로가기</a></li>
+		</ul>
+		<div id="wrapper">
+			<!-- header -->
+			<header id="header"></header>
+			<!-- //header -->
+
+			<!-- content -->
+			<div class="breadcrumb">
+				<div class="breadcrumb-nav">
+					<ol class="breadcrumb-location">
+						<li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+						<li class="breadcrumb-depth dep1">
+							<button type="button" class="breadcrumb-trigger">1뎁스 메뉴명</button>
+							<ul class="breadcrumb-depth-list">
+								<li><a href="#none" target="_self">1뎁스 메뉴명</a></li>
+								<li><a href="#none" target="_self">1뎁스 메뉴명</a></li>
+								<li><a href="#none" target="_self">1뎁스 메뉴명</a></li>
+							</ul>
+						</li>
+						<li class="breadcrumb-depth dep2">
+							<!-- active 추가/제거 로 컨트롤 -->
+							<button type="button" class="breadcrumb-trigger">2뎁스 메뉴명</button>
+							<ul class="breadcrumb-depth-list">
+								<li><a href="#none" target="_self">2뎁스 메뉴명</a></li>
+								<li class="current"><a href="#none" target="_self">클릭한 메뉴와 동일한 메뉴</a></li>
+								<!--현재 메뉴 표시 li에 class="current" 추가-->
+								<li><a href="#none" target="_self">2뎁스 메뉴명</a></li>
+								<li><a href="#none" target="_self">2뎁스 메뉴명</a></li>
+								<li><a href="#none" target="_self">2뎁스 메뉴명</a></li>
+								<li><a href="#none" target="_self">2뎁스 메뉴명</a></li>
+							</ul>
+						</li>
+						<li class="breadcrumb-depth dep3">
+							<button type="button" class="breadcrumb-trigger current">3뎁스까지만 출력</button>
+							<ul class="breadcrumb-depth-list">
+								<li><a href="#none" target="_self">3뎁스 메뉴명</a></li>
+								<li><a href="#none" target="_self">3뎁스 메뉴명</a></li>
+							</ul>
+						</li>
+					</ol>
+				</div>
+			</div>
+
+			<main id="conatiner">
+				<!--page-title-->
+				<div class="page-header">
+					<div class="page-title">
+						<a href="#" class="ic-only back">뒤로가기</a>
+						<h2>페이지명</h2>
+					</div>
+					<div class="page-desc">
+						<button type="button" class="page-desc-btn _has-tooltip"><span>페이지 디스크립션</span><i class="ic-only f-pg-desc"></i></button>
+						<div class="desc-box _tooltipbox">
+							<div class="desc-box-inner">
+								<div class="desc-content">
+									<p>재무설계사(CFP,AFPK), 사회복지사, 노후준비상담사 등 공단의 전문 컨설턴트가 노후준비에 관한 1:1 맞춤 상담을 진행하고 있습니다. <span class="fc-primary">재무, 건강, 일/취업, 취미/여가, 주거, 대인관계</span> 등 다양한 영역에 대해 상담신청하여 이용하실 수 있습니다. 국민연금 가입, 납부, 연금지급 등 제도 문의는 <span class="fc-primary">국민연금공단 홈페이지(www.nps.or.kr)나 1355 상담센터</span>를 이용하시기 바랍니다.</p>
+								</div>
+								<button type="button" class="ic-only box-close">창닫기</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--//page-title-->
+				<div class="content-wrap">
+					<!--콘텐츠 영역-->
+					<div style="background: var(--ui-colr3); height: 400px">콘텐츠 영역 입니다.</div>
+
+					<!-- 공통UI - 해시태그 링크들 -->
+					<div class="hashtag-wrap">
+						<ul class="equal-list hashtag">
+							<li>
+								<a href="#none">
+									<span class="color-point">#예상연금조회</span>
+									<span>현재소득 대비 예상연금 산정</span>
+									<img src="" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<span class="color-point">#내연금 알아보기</span>
+									<span>국민, 개인, 퇴직, 주택연금</span>
+									<img src="" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<span class="color-point">#간단재무설계</span>
+									<span>나의 노후에 필요한 준비자금</span>
+									<img src="" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<span class="color-point">#노후준비 상담지사안내</span>
+									<span>나와 가까운 상담지사</span>
+									<img src="" alt="" />
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--// 공통UI - 해시태그 링크들 -->
+
+					<!--//콘텐츠 영역-->
+				</div>
+
+				<!-- 공통UI - 만족도조사 -->
+				<div class="page-satisfaction">
+					<div class="satisfaction-head">
+						<p class="question">현재 페이지의 내용과 사용 편의성에 대해 만족하십니까?</p>
+					</div>
+					<div class="satisfaction-survey">
+						<fieldset>
+							<legend>현재페이지 만족도 조사</legend>
+							<div class="survey-form">
+								<div class="survey-options">
+									<label class="inp-radio opt1"><input type="radio" name="satisfaction" /><span>매우만족</span></label>
+									<label class="inp-radio opt2"><input type="radio" name="satisfaction" /><span>만족</span></label>
+									<label class="inp-radio opt3"><input type="radio" name="satisfaction" /><span>보통</span></label>
+									<label class="inp-radio opt4"><input type="radio" name="satisfaction" /><span>불만족</span></label>
+									<label class="inp-radio opt5"><input type="radio" name="satisfaction" /><span>매우불만족</span></label>
+								</div>
+								<input type="button" value="확인" class="button-primary" />
+							</div>
+						</fieldset>
+					</div>
+				</div>
+				<!-- //공통UI - 만족도조사 -->
+			</main>
+			<!-- //content -->
+
+			<!-- footer -->
+			<footer id="footer">
+				<div class="foot-link-group">
+					<div class="inner">
+						<ul class="foot-links">
+							<li><a href="#none">개인정보처리방침</a></li>
+							<li><a href="#none">이용약관</a></li>
+							<li class="mo-hide"><a href="#none">이용가이드</a></li>
+							<li class="mo-hide"><a href="#none" class="mo-hide">사이트개선의견</a></li>
+							<li class="mo-hide"><a href="#none" class="mo-hide">용어해설집</a></li>
+							<li class="mo-hide"><a href="#none" class="mo-hide">RSS서비스</a></li>
+							<li><a href="#none">찾아오시는길</a></li>
+						</ul>
+						<div class="video-links">
+							<a href="#none" class="item01" target="_blank" title="새창으로 열림">국민연금공단</a>
+							<a href="#none" class="item02" target="_blank" title="새창으로 열림">노후준비 유튜브</a>
+							<a href="#none" class="item03" target="_blank" title="새창으로 열림">영상수어상담</a>
+						</div>
+					</div>
+				</div>
+				<div class="foot-info-group">
+					<div class="foot-addr">
+						<address class="address"><span>54870 전라북도 전주시 덕진구 기지로 180 (만성동, 국민연금)</span></address>
+						<div class="guide-text mo-hide">
+							<p>매월 마지막 토요일 00:00 ~ 04:00까지는 정기적인 서비스 점검으로 서비스 이용이 일시 중단됩니다.</p>
+							<p>본 홈페이지에 게시된 이메일 주소가 자동수집되는 것을 허용하지 않으며, 위반시 정보통신망법에 의해 처벌될 수 있습니다.</p>
+						</div>
+						<p class="copyright">ⓒ National Pension Service. All rights reserved.</p>
+					</div>
+					<div class="foot-call"><span>국민연금 고객센터 국번없이 1355(유료)</span></div>
+				</div>
+			</footer>
+			<!-- //footer -->
+			<a href="#top" class="gototop">콘텐츠 처음으로 바로 가기</a>
+		</div>
+		<!-- //wrapper -->
+	</body>
+</html>

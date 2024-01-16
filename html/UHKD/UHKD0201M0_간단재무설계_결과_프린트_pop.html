@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+	<script src="../../js/ui_temp.js"></script>
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+<body>
+
+    <div class="winPopup">
+        <div class="modalWrap">
+
+            <!-- s: Popup Header -->
+            <div class="modal-header">
+                <div class="modal-title">
+                    <h3 class="cont-title">노후준비 보고서</h3>
+                </div>
+                <button class="btn-close printNone" onclick="winPopClose();">모달창닫기</button>
+            </div>
+            <!-- e: Popup Header -->
+
+            <!-- s: Contents -->
+            <div class="modal-body">
+
+                <!-- s: Contents Header -->
+                <div class="cont-head">
+                    <h4 class="blind">노후준비에 관한 설명</h4>
+                </div>
+                <!-- e: Contents Header -->
+
+                <!-- s: Contents Body -->
+                <p class="cont-title none small">노후준비 왜 필요한가요?</p>
+                <p class="cont-desc small">트리플 써티라는 말이 있습니다. 30세까지는 성장하고, 30세에서 60세까지는 가정을 이루어 경제활동을 하고, 60세부터 90세까지는 은퇴기간을 보낸다는 의미입니다. 평균 수명이 짧아 은퇴 후의 삶이 길지 않았던 예전에 비해 제2의 인생을 보낼 수 있을 정도로 은퇴기간이 길어진 지금, 노후준비를 어떻게 하느냐에 따라 미래의 삶의 모습이 달라질 것입니다.</p>
+                <p class="cont-title small">노후에는 얼마가 필요할까요?</p>
+                <p class="cont-desc small">일반적으로 은퇴 전 소득의 약 60% 정도가 필요합니다. 국민연금 패널조사에 따르면 부부합산의 경우 전국평균 193만원 정도가 적정한 수준의 노후 생활비로 나타났습니다. 은퇴시점에서는 물가가 상승하기 때문에 현재 시점보다 필요한 금액자체가 더 증가한다는 사실도 참고하시기 바랍니다.</p>
+                <p class="cont-title small">국민연금이 노후에 차지하는 비중은 얼마나 될까요?</p>
+                <p class="cont-desc small">국민연금은 노후 준비의 기본입니다. 납부한 금액의 실질가치가 반영되어 국민연금액이 결정되며, 연금을 받는 동안 물가상승률만큼 올라가고 평생 지급된다는 점은 불확실한 노후를 대비하는데 무엇보다도 큰 장점이 됩니다.</p>
+                <div>
+                    <h3 class="cont-title is color">재무설계 결과보기 (표 형식)</h3>
+                    <p class="cont-desc">모든 분석은 미래가치로 실행됩니다. <br>
+                        (연 소득상승률 4.7%, 연물가상승률 2%, 투자수익률 3.7% 적용)
+                    </p>
+                    <div class="con-table all-center">
+                        <table class="t_style02" summary="국민연금, 퇴직금, 개인연금">
+                            <caption>재무설계 결과 (표형식) 정보</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" rowspan="2">국민연금</th>
+                                    <th scope="row">첫 해 연금액</th>
+                                    <td>59,136만원(월 4,928만원)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">개시연도~종료년도 (수급기간)</th>
+                                    <td>2055 년 ~ 사망 시까지(5 년)</td>
+                                </tr>
+                                <tr><!-- 퇴직금 표시-->
+                                    <th scope="row">퇴직금</th>
+                                    <th scope="row">퇴직금 총액</th>
+                                    <td>4,350만원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" rowspan="2">개인연금</th>
+                                    <th scope="row">첫 해 연금액</th>
+                                    <td>5,280만원(월 440만원)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">개시연도~종료년도 (수급기간)</th>
+                                    <td>2055년 ~ 2104년 (50년)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="con-table-header right">
+                        <span class="txt-helper">(단위 : 만원)</span>
+                    </div>                
+                    <div class="con-table all-center">
+                        <table summary="구분, 금액, 비중 (노후필요자금, 노후준비자금, 노후부족자금, 노후잉여자금)">
+                            <caption>재무설계 결과 (표형식) 정보</caption>
+                            <colgroup>
+                                <col width="20%">
+                                <col width="20%">
+                                <col width="30%">
+                                <col width="30%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" colspan="2">구분</th>
+                                    <th scope="col">금액</th>
+                                    <th scope="col">비중</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" colspan="2">노후필요자금</th>
+                                    <td>55,147</td>
+                                    <td>100.00%</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" rowspan="4" class="border">노후준비자금</th>
+                                    <th scope="row">국민연금</th>
+                                    <td>256,169</td>
+                                    <td>464.52%</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">퇴직연금/퇴직금</th>
+                                    <td>4,350</td>
+                                    <td>7.89%</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">개인연금</th>
+                                    <td>130,924</td>
+                                    <td>237.41%</td>
+                                </tr>
+                                <tr class="color-point">
+                                    <th scope="row">소계</th>
+                                    <td>391,443</td>
+                                    <td>709.82%</td>
+                                </tr>
+                                <tr>                                    
+                                    <th scope="row" colspan="2" class="colornone">노후잉여자금</th>
+                                    <td>336,296</td>
+                                    <td>609.82%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <ul class="txt-list dot small gray top fz14">
+                            <li>위 필요/준비/부족자금은 모두 은퇴시점을 기준으로 계산된 금액입니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="cont-title is color">재무설계 결과보기 (그래프 형식)</h3>
+                    <p class="cont-desc">모든 분석은 미래가치로 실행됩니다. <br>
+                        필요자금은 물가상승률, 국민연금 등 준비자금은 소득상승률 또는 투자수익률을 반영하며, 투자 및 소득 상승률은 일반적으로 물가 상승률보다 높기 때문에 현재시점에서 같은 금액이더라도 준비자금의 상승 폭이 필요자금 보다 더 큽니다.</p>
+                    <div class="color-box">
+                        <dl class="result-type-green1">
+                            <dt>충분</dt>
+                            <dd>고객님의 노후준비자금이 [충분] 진단이 나왔습니다.</dd>
+                        </dl>
+                    </div>
+                    <div class="equal-list graph">
+                        <!-- 기본 4:2.897 비율의 (기본 그래프 박스 사이즈 580px x 420px의 비율) 박스입니다. 
+                            프린트의 경우 종이 사이즈에 따라 그래프의 모양이 이상해 보이거나 비율이 안맞는 것 같으면 높이값(height)을 px 단위로 입력해서 수정해주세요. 
+                            예) style="height: 400px;" 
+                        -->
+                        <div class="items graph-box1" style="height: auto;">
+                            그래프 박스
+                        </div>
+                        <div class="items con-table all-center">
+                            <table summary="은퇴준비기간, 은퇴기간, 노후필요자금, 노후준비자금, 노후잉여자금 등이 나열된 테이블">
+                                <caption>진단결과 </caption>
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">은퇴준비기간</th>
+                                        <td>13년</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">은퇴기간</th>
+                                        <td>20년</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">노후필요자금</th>
+                                        <td>81,017만원</td>
+                                    </tr>
+                                    <tr class="color-point">
+                                        <th scope="row">노후준비자금</th>
+                                        <td>1,898,839만원</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">노후잉여자금</th>
+                                        <td>1,817,822만원</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul class="txt-list dot small gray top">
+                                <li>현재 상태를 유지하셔도 노후자금에 무리가 없습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 기본 2.4:1(기본 그래프 박스 사이즈 1280px x 420px의 비율)비율의 박스입니다. 
+                        프린트의 경우 종이 사이즈에 따라 그래프의 모양이 이상해 보이거나 비율이 안맞는 것 같으면 높이값(height)을 px 단위로 입력해서 수정해주세요. 
+                        예) style="height: 400px;" 
+                    -->
+                    <!-- 화면 넓이 모두를 쓸 경우 full 클래스 추가 . 그래프가 4:3에 가까운 비율일경우 full삭제 -->
+                    <div class="graph-box1 full" style="height: auto;">
+                        그래프 박스
+                    </div>
+                </div>
+                <!-- e: Contents Body -->
+
+            </div>
+            <!-- e: Contents -->
+
+            <!-- s: Footer -->
+            <div class="modal-footer">
+                <div class="btn-group full">
+                    <a href="#none" type="button" class="button-primary -lg" onclick="printPage()">인쇄하기</a>
+                </div>
+            </div>
+            <!-- e: Footer -->
+            
+        </div>
+    </div>
+
+    <script>
+        function printPage(){window.print();}
+        function winPopClose() {
+            self.opener = self;
+            window.close();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+/* swiper */
+:root {
+  --swiper-navigation-size: 44px;
+}
+
+.swiper-android .swiper-slide,
+.swiper-wrapper {
+  transform: translate3d(0px, 0, 0);
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}
+.swiper-notification {
+  display: none;
+}
+
+.swiper-container-fade .swiper-slide {
+  pointer-events: none;
+  transition-property: opacity;
+}
+.swiper-container-fade .swiper-slide-active,
+.swiper-container-fade .swiper-slide-active .swiper-slide-active {
+  pointer-events: auto;
+}
+
+
+/* 방문상담신청-innerDatepicker 커스텀(jquery calendar) */
+.reservation-date .date-choose {
+  margin-top: 1.6rem;
+  border: 1px solid var(--ui-colr2);
+  border-radius: 1.6rem 1.6rem;
+  background: #fff;
+}
+.innerDatepicker {
+  padding: 3rem 3rem;
+}
+.innerDatepicker .ui-datepicker {
+  width: 100%;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  z-index: 0 !important;
+}
+.innerDatepicker .ui-datepicker .ui-datepicker-prev {
+  margin-right: auto;
+}
+.innerDatepicker .ui-datepicker .ui-datepicker-next {
+  margin-left: auto;
+}
+
+.innerDatepicker .ui-datepicker td:first-child * {
+  color: #fc1f2d;
+}
+.innerDatepicker .ui-datepicker td:last-child * {
+  color: #1a72e7;
+}
+
+
+/* DatePicker - jQuery UI */
+.ui-datepicker {
+	position: relative;
+	width: 30.6rem;
+	padding: 1.6rem 1.6rem;
+	background-color: #fff;
+	border: 1px solid var(--color-primary);
+	z-index: 90 !important;
+	border-radius: 0.8rem 0.8rem;
+	box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.08);
+}
+
+.ui-datepicker table {
+	width: 100%;
+	font-size: 1.5rem;
+	font-family: var(--font-use);
+	box-sizing: border-box;
+}
+
+.ui-datepicker th {
+	padding: 0.8rem 0.8rem;
+	color: var(--color-gray2);
+	font-size: 1.1rem;
+	font-weight: 500;
+	text-align: center;
+	line-height: 2;
+}
+
+.ui-datepicker td {
+	text-align: center;
+	border: 1px solid var(--ui-colr2);
+}
+
+.ui-datepicker td a {
+	display: block;
+	height: 100%;
+	padding: 0.8rem 0.8rem;
+	text-align: center;
+	color: var(--color-base);
+	cursor: pointer;
+	line-height: 1.4;
+}
+
+.ui-datepicker td a:not(.ui-state-highlight):not(.ui-state-active):hover {
+	background-color: var(--ui-colr4);
+}
+
+.ui-datepicker .ui-state-active {
+	color: #fff;
+	background-color: var(--ui-colr2);
+}
+
+.ui-datepicker .ui-state-highlight {
+	color: #fff;
+	font-weight: 600;
+	background-color: var(--color-primary);
+}
+
+.ui-datepicker .ui-datepicker-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin-bottom: 1.2rem;
+}
+
+.ui-datepicker .ui-datepicker-title {
+	order: 2;
+	font-family: var(--font-use);
+	font-size: 1.6rem;
+	font-weight: 900;
+	text-align: center;
+}
+
+.ui-datepicker .ui-datepicker-title > select {
+	height: 4rem;
+	padding: 0.8rem 3.6rem 0.8rem 1.6rem;
+	font-family: var(--font-use);
+	font-size: 1.5rem;
+	font-weight: 900;
+	color: var(--color-gray2);
+	border: none;
+	background-image: url('../images/ico/ic_14_filldarr_pressed.svg');
+}
+
+.ui-datepicker .ui-datepicker-title > select:focus {
+	background-image: url('../images/ico/ic_14_filldarr_active.svg');
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+	display: block;
+	width: 30px;
+	height: 30px;
+	box-sizing: border-box;
+	border-radius: 3px;
+	text-indent: -9999em;
+	cursor: pointer;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+	order: 1;
+	margin-right: 2.4rem;
+	background: url('../images/ico/ic_14b_linearr_left.svg') no-repeat center center;
+}
+
+.ui-datepicker .ui-datepicker-next {
+	order: 3;
+	margin-left: 2.4rem;
+	background: url('../images/ico/ic_14b_linearr_right.svg') no-repeat center center;
+}

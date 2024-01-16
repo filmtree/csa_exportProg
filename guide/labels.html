@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+	
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>라벨</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+
+<h3 class="sec-title">text (기본)</h3>
+<div class="code-preview">
+	<div class="row">
+		<span class="statu-label primary">준비중</span>
+		<span class="statu-label secondary">준비중</span>
+	</div>
+	<div class="row">
+		<span class="statu-label">준비중</span>
+		<span class="statu-label blue">준비중</span>
+		<span class="statu-label green">준비중</span>
+		<span class="statu-label red">준비중</span>
+		<span class="statu-label orange">준비중</span>
+		<span class="statu-label yellow">준비중</span>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;span class=&#x22;statu-label primary&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label secondary&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+
+&#x3C;span class=&#x22;statu-label&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label blue&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label green&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label red&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label orange&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label yellow&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+</code></pre>
+
+
+<h3 class="sec-title">contained</h3>
+<div class="code-preview">
+	<div class="row">
+		<span class="statu-label contained primary">준비중</span>
+		<span class="statu-label contained secondary">준비중</span>
+	</div>
+	<div class="row">
+		<span class="statu-label contained">준비중</span>
+		<span class="statu-label contained blue">준비중</span>
+		<span class="statu-label contained green">준비중</span>
+		<span class="statu-label contained red">준비중</span>
+		<span class="statu-label contained orange">준비중</span>
+		<span class="statu-label contained yellow">준비중</span>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;span class=&#x22;statu-label contained primary&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label contained secondary&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+
+&#x3C;span class=&#x22;statu-label contained&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label contained blue&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label contained green&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label contained red&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label contained orange&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label contained yellow&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+</code></pre>
+
+<h3 class="sec-title">outlined</h3>
+<div class="code-preview">
+	<div class="row">
+		<span class="statu-label outlined primary">준비중</span>
+		<span class="statu-label outlined secondary">준비중</span>
+	</div>
+	<div class="row">
+		<span class="statu-label outlined">준비중</span>
+		<span class="statu-label outlined blue">준비중</span>
+		<span class="statu-label outlined green">준비중</span>
+		<span class="statu-label outlined red">준비중</span>
+		<span class="statu-label outlined orange">준비중</span>
+		<span class="statu-label outlined yellow">준비중</span>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;span class=&#x22;statu-label outlined primary&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label outlined secondary&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+
+&#x3C;span class=&#x22;statu-label outlined&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label outlined blue&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label outlined green&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label outlined red&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label outlined orange&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label outlined yellow&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+</code></pre>
+
+<h3 class="sec-title">other type</h3>
+<div class="code-preview">
+	<div class="row">
+		<span class="statu-label outlined primary full">준비중</span>
+	</div>
+	<div class="row">
+		<span class="statu-label outlined primary round">준비중</span>
+		<span class="statu-label outlined primary pill">준비중</span>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;span class=&#x22;statu-label outlined primary full&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label outlined primary round&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;statu-label outlined primary pill&#x22;&#x3E;&#xC900;&#xBE44;&#xC911;&#x3C;/span&#x3E;
+</code></pre>
+
+
+
+			<!-- 내용끝 -->
+		</div>
+	</section>
+</div>
+
+</body>
+</html>

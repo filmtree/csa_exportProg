@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+	
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>텍스트</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<h3 class="sec-title">텍스트 색상</h3>
+<div class="code-preview">
+	<p class="fc-primary">접수중 / 승인 primary</p>
+	<p class="fc-base">승인완료 / 신청 base</p>
+	<p class="fc-gray1">승인불가 / 취소 gray</p>
+	<br>
+	<p class="fc-red">글자색상입니다. red</p>
+	<p class="fc-gray1">글자색상입니다. #999999</p>
+	<p class="fc-gray2">글자색상입니다. #222222</p>
+	<p class="fc-gray3">글자색상입니다. #666666</p>
+</div>
+<pre><code class="language-xml">&#x3C;p class=&#x22;fc-primary&#x22;&#x3E;&#xC811;&#xC218;&#xC911; / &#xC2B9;&#xC778; primary&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fc-base&#x22;&#x3E;&#xC2B9;&#xC778;&#xC644;&#xB8CC; / &#xC2E0;&#xCCAD; base&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fc-gray1&#x22;&#x3E;&#xC2B9;&#xC778;&#xBD88;&#xAC00; / &#xCDE8;&#xC18C; gray&#x3C;/p&#x3E;
+&#x3C;br&#x3E;
+&#x3C;p class=&#x22;fc-red&#x22;&#x3E;&#xAE00;&#xC790;&#xC0C9;&#xC0C1;&#xC785;&#xB2C8;&#xB2E4;. red&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fc-gray1&#x22;&#x3E;&#xAE00;&#xC790;&#xC0C9;&#xC0C1;&#xC785;&#xB2C8;&#xB2E4;. #999999&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fc-gray2&#x22;&#x3E;&#xAE00;&#xC790;&#xC0C9;&#xC0C1;&#xC785;&#xB2C8;&#xB2E4;. #222222&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fc-gray3&#x22;&#x3E;&#xAE00;&#xC790;&#xC0C9;&#xC0C1;&#xC785;&#xB2C8;&#xB2E4;. #666666&#x3C;/p&#x3E;
+</code></pre>
+<h3 class="sec-title">텍스트 크기</h3>
+<div class="code-preview">
+	<p class="bold">글자 굵기 bold-700</p>
+	<p class="mediumbold">글자 굵기 bold-500</p>
+	<p class="regular">글자 굵기 bold-400</p>
+	<br>
+	<p class="fs14">폰트 크기 size-14px</p>
+	<p class="fs16">폰트 크기 size-16px</p>
+	<p class="fs17">폰트 크기 size-17px</p>
+</div>
+<pre><code class="language-xml">&#x3C;p class=&#x22;bold&#x22;&#x3E;&#xAE00;&#xC790; &#xAD75;&#xAE30; bold-700&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;mediumbold&#x22;&#x3E;&#xAE00;&#xC790; &#xAD75;&#xAE30; bold-500&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;regular&#x22;&#x3E;&#xAE00;&#xC790; &#xAD75;&#xAE30; bold-400&#x3C;/p&#x3E;
+&#x3C;br&#x3E;
+&#x3C;p class=&#x22;fs14&#x22;&#x3E;&#xD3F0;&#xD2B8; &#xD06C;&#xAE30; size-14px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs16&#x22;&#x3E;&#xD3F0;&#xD2B8; &#xD06C;&#xAE30; size-16px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs17&#x22;&#x3E;&#xD3F0;&#xD2B8; &#xD06C;&#xAE30; size-17px&#x3C;/p&#x3E;
+</code></pre>
+	
+<h3 class="sec-title">정렬</h3>
+<div class="code-preview">
+	<p class="align-left">텍스트 정렬-왼쪽</p>
+	<p class="align-center">텍스트 정렬-가운데</p>
+	<p class="align-right">텍스트 정렬-오른쪽</p>
+</div>
+<pre><code class="language-xml">&#x3C;p class=&#x22;align-left&#x22;&#x3E;&#xD14D;&#xC2A4;&#xD2B8; &#xC815;&#xB82C;-&#xC67C;&#xCABD;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;align-center&#x22;&#x3E;&#xD14D;&#xC2A4;&#xD2B8; &#xC815;&#xB82C;-&#xAC00;&#xC6B4;&#xB370;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;align-right&#x22;&#x3E;&#xD14D;&#xC2A4;&#xD2B8; &#xC815;&#xB82C;-&#xC624;&#xB978;&#xCABD;&#x3C;/p&#x3E;
+</code></pre>
+
+
+			<!-- 내용끝 -->
+		</div>
+	</section>
+</div>
+
+</body>
+</html>

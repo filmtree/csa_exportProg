@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script><!--공통UI layout-->
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header -->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">통합검색</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">통합검색</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner" class="integrated-search hasTabDepth"><!--4뎁스 탭이 있을경우 class="hasTabDepth" 추가-->
+            <!--page-title-->
+            <div class="page-header desc-none"><!--페이지 디스크립션 콘텐츠 없을 경우 class="desc-none" 추가-->
+                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>통합검색</h2></div>
+            </div>
+            <!--//page-title-->
+            <div class="content-wrap">
+                <!--콘텐츠 영역-->
+                <div class="searchbox-wrap">
+                    <div class="searchbox">
+                        <div class="form-group">
+                            <label class="search-label" for="검색어">검색어</label>
+                            <select class="slct-type min-w160px" title="유형 선택">
+                                <option value="유형전체">전체</option>
+                                <option value="제목">제목</option> 
+                                <option value="작성자">내용</option>
+                            </select>
+                            <input type="text" placeholder="" value="연금" class="inp-content w-flexible" title="내용입력">
+                            <button type="button" class="button-primary min-w80px">검색</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabWrap tab-base tab-totalsearch">
+                    <div class="tabwrap-inner">
+                        <ul class="tabNav">
+                            <li><a href="#" id="tabNav1-1" role="tab">전체 (100)</a></li>
+                            <li><a href="#" id="tabNav1-2" role="tab">노후설계상담 (20)</a></li>
+                            <li><a href="#" id="tabNav1-3" role="tab">노후준비정보 (50)</a></li>
+                            <li><a href="#" id="tabNav1-4" role="tab">CSA 교육 및 시험 (30)</a></li>
+                        </ul>
+                        <span class="tab-gradient pc-hide" aria-hidden="true"></span>
+                    </div>
+                    <!-- tabContent-1 -->
+                    <div class="tabContent tc01" role="tabpanel" aria-labelledby="tabNav1-1">
+                        내용1-1-전체
+                    </div>
+                    <!-- tabContent-2 -->
+                    <div class="tabContent tc02" role="tabpanel" aria-labelledby="tabNav1-2">
+                        <div class="contbox-01">
+                            <div class="con-table-header">
+                                <h3 class="cont-title">노후설계상담 <span class="fc-primary">(20건)</span></h3>
+                                <a href="#" class="button-link"><span>더보기</span><i class="ic-only plus_16"></i></a>
+                            </div>
+                            <div class="board-wrap">
+                                <ul class="result-content">
+                                    <li>
+                                        <a href="#">
+                                            <span class="result-title">해외에서 납부한 <span class="fc-primary">연금</span>환급관련 질문드립니다.(체류지:독일), 해외에서 납부한 <span class="fc-primary">연금</span>환급관련 질문드립니다.(체류지:독일), 해외에서 납부한 <span class="fc-primary">연금</span>환급관련 질문드립니다.(체류지:독일)</span>
+                                            <p class="result-txt">최대 세줄까지 출력됩니다. 그 이상일 경우, 말줄임 사용합니다. 안녕하세요 하기 정보로 구체적인 환급 방법및 가능일정을 문의 드리고자 메일 드립니다. 1. 독일에서의 재직 및 <span class="fc-primary">연금</span> 납부기간 - 2012년 10월1일 부터 2020 년 4월말까지 안녕하세요 하기 정보로 구체적인 환급 방법및 가능일정을 문의 드리고자 메일 드립니다. 1. 독일에서의 재직 및 <span class="fc-primary">연금</span> 납부기간 - 2012년 10월1일 부터 2020 년 4월말까지 <span class="fc-primary">연금</span> 납부기간 - 2012년 10월1일 부터 2020 년 4월말까지 2. 상기 재직기간동안 독일에 납부한 2. 상기 재직기간동안 독일에 납부한 <span class="fc-primary">연금</span> 환급 절차 환급 가능시기 3.필요한 서류및 정보사항 감사합니다. 최대 세줄까지 출력됩니다. 그 이상일 경우, 말줄임 사용합니다</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="result-title">해외에서 납부한 <span class="fc-primary">연금</span>환급관련 질문드립니다.(체류지:독일)</span>
+                                            <p class="result-txt">안녕하세요 하기 정보로 구체적인 환급 방법및 가능일정을 문의 드리고자 메일 드립니다. 1. 독일에서의 재직 및 <span class="fc-primary">연금</span> 납부기간 - 2012년 10월1일 부터 2020 년 4월말까지 2. 상기 재직기간동안 독일에 납부한 <span class="fc-primary">연금</span> 환급 절차 환급 가능시기 3.필요한 서류및 정보사항 감사합니다. 최대 세줄까지 출력됩니다. 그 이상일 경우, 말줄임 사용합니다</p>
+                                        </a>
+                                        </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="result-title">해외에서 납부한 <span class="fc-primary">연금</span>환급관련 질문드립니다.(체류지:독일)</span>
+                                            <p class="result-txt">안녕하세요 하기 정보로 구체적인 환급 방법및 가능일정을 문의 드리고자 메일 드립니다. 1. 독일에서의 재직 및 <span class="fc-primary">연금</span> 납부기간 - 2012년 10월1일 부터 2020 년 4월말까지 2. 상기 재직기간동안 독일에 납부한 <span class="fc-primary">연금</span> 환급 절차 환급 가능시기 3.필요한 서류및 정보사항 감사합니다. 최대 세줄까지 출력됩니다. 그 이상일 경우, 말줄임 사용합니다</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="result-title">해외에서 납부한 <span class="fc-primary">연금</span>환급관련 질문드립니다.(체류지:독일)</span>
+                                            <p class="result-txt">안녕하세요 하기 정보로 구체적인 환급 방법및 가능일정을 문의 드리고자 메일 드립니다. 1. 독일에서의 재직 및 <span class="fc-primary">연금</span> 납부기간 - 2012년 10월1일 부터 2020 년 4월말까지 2. 상기 재직기간동안 독일에 납부한 <span class="fc-primary">연금</span> 환급 절차 환급 가능시기 3.필요한 서류및 정보사항 감사합니다. 최대 세줄까지 출력됩니다. 그 이상일 경우, 말줄임 사용합니다</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="result-title">해외에서 납부한 <span class="fc-primary">연금</span>환급관련 질문드립니다.(체류지:독일)</span>
+                                            <p class="result-txt">안녕하세요 하기 정보로 구체적인 환급 방법및 가능일정을 문의 드리고자 메일 드립니다. 1. 독일에서의 재직 및 <span class="fc-primary">연금</span> 납부기간 - 2012년 10월1일 부터 2020 년 4월말까지 2. 상기 재직기간동안 독일에 납부한 <span class="fc-primary">연금</span> 환급 절차 환급 가능시기 3.필요한 서류및 정보사항 감사합니다. 최대 세줄까지 출력됩니다. 그 이상일 경우, 말줄임 사용합니다</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="result-title">해외에서 납부한 <span class="fc-primary">연금</span>환급관련 질문드립니다.(체류지:독일)</span>
+                                            <p class="result-txt">안녕하세요 하기 정보로 구체적인 환급 방법및 가능일정을 문의 드리고자 메일 드립니다. 1. 독일에서의 재직 및 <span class="fc-primary">연금</span> 납부기간 - 2012년 10월1일 부터 2020 년 4월말까지, 최대 세줄까지 출력됩니다. 그 이상일 경우, 말줄임 사용합니다</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="result-title">해외에서 납부한 <span class="fc-primary">연금</span>환급관련 질문드립니다.(체류지:독일)</span>
+                                            <p class="result-txt">안녕하세요 하기 정보로 구체적인 환급 방법및 가능일정을 문의 드리고자 메일 드립니다. 1. 독일에서의 재직 및 <span class="fc-primary">연금</span> 납부기간 - 2012년 10월1일 부터 2020 년 4월말까지, 최대 세줄까지 출력됩니다. 그 이상일 경우, 말줄임 사용합니다</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="result-title">해외에서 납부한 <span class="fc-primary">연금</span>환급관련 질문드립니다.(체류지:독일)</span>
+                                            <p class="result-txt">안녕하세요 하기 정보로 구체적인 환급 방법및 가능일정을 문의 드리고자 메일 드립니다. 1. 독일에서의 재직 및 <span class="fc-primary">연금</span> 납부기간 - 2012년 10월1일 부터 2020 년 4월말까지, 최대 세줄까지 출력됩니다. 그 이상일 경우, 말줄임 사용합니다</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="result-title">해외에서 납부한 <span class="fc-primary">연금</span>환급관련 질문드립니다.(체류지:독일)</span>
+                                            <p class="result-txt">안녕하세요 하기 정보로 구체적인 환급 방법및 가능일정을 문의 드리고자 메일 드립니다. 1. 독일에서의 재직 및 <span class="fc-primary">연금</span> 납부기간 - 2012년 10월1일 부터 2020 년 4월말까지, 최대 세줄까지 출력됩니다. 그 이상일 경우, 말줄임 사용합니다</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="result-title">해외에서 납부한 <span class="fc-primary">연금</span>환급관련 질문드립니다.(체류지:독일)</span>
+                                            <p class="result-txt">안녕하세요 하기 정보로 구체적인 환급 방법및 가능일정을 문의 드리고자 메일 드립니다. 1. 독일에서의 재직 및 <span class="fc-primary">연금</span> 납부기간 - 2012년 10월1일 부터 2020 년 4월말까지, 최대 세줄까지 출력됩니다. 그 이상일 경우, 말줄임 사용합니다</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="paginate">
+                            <button type="button" class="page first" disabled>처음 목록</button>
+                            <button type="button" class="page prev">이전 목록</button>
+                            <a href="#" class="num">1</a>
+                            <a href="#" class="num current" title="현재페이지">2</a>
+                            <a href="#" class="num">3</a>
+                            <a href="#" class="num">4</a>
+                            <a href="#" class="num">5</a>
+                            <a href="#" class="num mo-hide">6</a>
+                            <a href="#" class="num mo-hide">7</a>
+                            <a href="#" class="num mo-hide">8</a>
+                            <a href="#" class="num mo-hide">9</a>
+                            <a href="#" class="num mo-hide">9999</a>
+                            <button type="button" class="page next">다음 목록</button>
+                            <button type="button" class="page last">마지막 목록</button>
+                        </div>
+                    </div>
+                    <!-- tabContent-3 -->
+                    <div class="tabContent tc03" role="tabpanel" aria-labelledby="tabNav1-3">
+                        내용1-3-노후준비정보
+                    </div>
+                    <!-- tabContent-2 -->
+                    <div class="tabContent tc04" role="tabpanel" aria-labelledby="tabNav1-4">
+                        내용1-4-CSA 교육 및 시험
+                    </div>
+                </div>
+                <script>
+                    commonUI.tabNav('.tabWrap', 2);
+                </script>
+
+                <!-- 공통UI - 해시태그 링크들 -->
+                <div class="hashtag-wrap"></div>
+                <!--// 공통UI - 해시태그 링크들 -->
+
+                <!--//콘텐츠 영역-->
+            </div>
+
+            <!-- 공통UI - 만족도조사 -->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer -->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

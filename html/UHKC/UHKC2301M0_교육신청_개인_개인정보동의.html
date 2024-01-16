@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script><!--공통UI layout-->
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header -->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">진단ㆍ상담 서비스</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                            <li><a href="#none" target="_self">재무진단</a></li>
+                            <li><a href="#none" target="_self">노후준비정보</a></li>
+                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep2">
+                        <button type="button" class="breadcrumb-trigger">교육신청</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">상담지사안내</a></li>
+                            <li><a href="#none" target="_self">상담지자체안내</a></li>
+                            <li><a href="#none" target="_self">노후준비종합진단</a></li>
+                            <li><a href="#none" target="_self">온라인상담</a></li>
+                            <li><a href="#none" target="_self">방문상담신청</a></li>
+                            <li class="current"><a href="#none" target="_self">교육신청</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">강사정보</a></li>
+                            <li><a href="#none" target="_self">자가진단</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep3">
+                        <button type="button" class="breadcrumb-trigger current">교육신청 (개인)</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li class="current"><a href="#none" target="_self">교육신청 (개인)</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">교육신청 (단체)</a></li>
+                            <li><a href="#none" target="_self">교육신청현황(단체)</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner" class="counsel education hasTabDepth"><!--4뎁스 탭이 있을경우 class="hasTabDepth" 추가-->
+            <!--page-title-->
+            <div class="page-header">
+                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>교육신청(개인)</h2></div>
+                <div class="page-desc">
+                    <button type="button" class="page-desc-btn _has-tooltip"><span>교육신청(개인) 안내 </span><i class="ic-only f-pg-desc"></i></button>
+                    <div class="desc-box _tooltipbox">
+                        <div class="desc-box-inner">
+                            <div class="desc-content">
+                                <p>전국민의 행복한 노후를 위해 지역본부·지사 교육장에서 재무, 건강, 여가, 대인관계의 맞춤형 노후준비 강의를 직접 열고 있습니다.</p>
+                            </div>
+                            <button type="button" class="ic-only box-close">창닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--//page-title-->
+            <div class="content-wrap">
+                <!--콘텐츠 영역-->
+                <div class="tabWrap tab-base tab-education">
+                    <div class="tabwrap-inner">
+                        <ul class="tabNav">
+                            <li><a href="#" id="tabNav1-1" role="tab">교육신청 (개인)</a></li>
+                            <li><a href="#" id="tabNav1-2" role="tab">교육신청 (단체)</a></li>
+                            <li><a href="#" id="tabNav1-3" role="tab">교육신청 현황 (단체)</a></li>
+                        </ul>
+                        <span class="tab-gradient pc-hide" aria-hidden="true"></span>
+                    </div>
+                    <!-- tabContent-1 -->
+                    <div class="tabContent edu-personal" role="tabpanel" aria-labelledby="tabNav1-1">
+                        <!--약관동의-->
+                        <div class="cont-head">
+                            <h3 class="cont-title">개인정보 수집 및 이용에 대한 안내</h3>
+                            <p class="cont-desc">아래 안내 내용을 확인하신 후 동의해 주세요.</p>
+                        </div>
+                        <div class="forms-set">
+                            <div class="textarea-wrap">
+                                <textarea rows="5" class="h320px">
+가. 개인정보의 수집·이용 목적
+“교육신청” 서비스는 다음의 목적을 위해 개인정보를 수집 및 이용합니다. 수집된 개인정보는 다음의 목적이외의 용도로는 이용되지 않으며 수집 목적이 변경될 경우 사전에 알리고 동의를 받을 예정입니다.
+
+- 교육신청
+강의 신청시 수집된 개인정보는 신청 처리 및 신청목록 조회·수정·삭제를 위한 목적으로 이용됩니다.
+
+나. 수집하는 개인정보의 항목
+- 필수항목 : 성명, 전화번호, 이메일 등
+
+다. 개인정보의 보유 및 이용기간
+이용자 개인정보는 원칙적으로 처리목적이 달성되면 지체없이 파기합니다. 단, 다음의 정보는 아래의 사유로 명시한 기간 동안 보유·이용합니다.
+
+<교육신청·내용 및 이력>
+- 보유항목 : 성명, 휴대전화번호, E-mail
+- 보유기간 : 신청 후 3년
+- 보유근거 : 전자정부법 제7조·제16조3항·제17조, 민원사무처리에 관한 법률 시행령 제35조, 사무
+및 기록물관리예규
+
+라. 동의를 거부할 권리가 있다는 사실과 동의 거부에 따른 불이익 내용
+이용자는 “교육신청”서비스에서 수집하는 개인정보에 대해 동의를 거부할 권리가 있으며 동의 거부시에는 “교육신청”서비스가 제한됩니다. 단, 선택항목에 대해서는 동의 거부시에도 서비스 이용에는 제한이 없습니다.</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="inp-checkbox">
+                                    <input type="radio" name="radioGroup1" checked="checked">
+                                    <span>동의</span>
+                                </label>
+                                <label class="inp-checkbox">
+                                    <input type="radio" name="radioGroup1">
+                                    <span>동의하지 않음</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="cont-bottom">
+                            <div class="btn-group">
+                                <button type="button" class="button-primary -lg">다음</button>
+                            </div>
+                        </div>
+                        <div class="cont-bottom">
+                            <div class="accWrap mindful-note">
+                                <ul>
+                                    <li class="accItem notice">
+                                        <a href="#" class="accSummary"><span>개인정보보호법 유의사항</span></a>
+                                        <div class="accDetail">
+                                            <ul class="txt-list dot">
+                                                <li>주민등록법 제37조 제10호에 의해 다른 사람의 주민등록번호를 부정하게 사용하는 자는 3년 이하의 징역 또는 3천만원 이하의 벌금이 부과될 수 있습니다.</li>
+                                                <li>아울러 <span>개인정보보호법 제71조 제6호</span>에 의해 다른 사람의 개인정보를 위조 또는 유출한 자는 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다. </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--//약관동의-->
+                    </div>
+                    <!-- tabContent-2 -->
+                    <div class="tabContent edu-group" role="tabpanel" aria-labelledby="tabNav1-2">
+                        내용3-2
+                    </div>
+                    <!-- tabContent-3 -->
+                    <div class="tabContent edu-group-status" role="tabpanel" aria-labelledby="tabNav1-3">
+                        내용3-3
+                    </div>
+                </div>
+                <script>
+                    commonUI.tabNav('.tabWrap', 1);
+                </script>
+                <!--//콘텐츠 영역-->
+            </div>
+
+            <!-- 공통UI - 만족도조사 -->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer -->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

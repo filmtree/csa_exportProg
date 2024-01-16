@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+		<script src="../../js/zoom.js"></script>
+	<script src="../../js/ui_temp.js"></script> <!-- 231116 추가-->
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header --> <!-- 231116 수정-->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">진단ㆍ상담 서비스</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                            <li><a href="#none" target="_self">재무진단</a></li>
+                            <li><a href="#none" target="_self">노후준비정보</a></li>
+                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep2">
+                        <button type="button" class="breadcrumb-trigger current">노후준비종합진단</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">상담지사안내</a></li>
+                            <li><a href="#none" target="_self">상담지자체안내</a></li>
+                            <li class="current"><a href="#none" target="_self">노후준비종합진단</a></li>
+                            <li><a href="#none" target="_self">온라인상담</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">방문상담신청</a></li>
+                            <li><a href="#none" target="_self">교육신청</a></li>
+                            <li><a href="#none" target="_self">강사정보</a></li>
+                            <li><a href="#none" target="_self">자가진단</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner">
+            <div class="page-header">
+                <div class="page-title"><!--<a href="#" class="ic-only back">뒤로가기</a>--><h2>노후준비종합진단</h2></div>
+                <div class="page-desc">
+                    <button type="button" class="page-desc-btn _has-tooltip"><span>노후준비종합진단 안내</span><i class="ic-only f-pg-desc"></i></button>
+                    <div class="desc-box _tooltipbox">
+                        <div class="desc-box-inner">
+                            <div class="desc-content">
+                                <p>
+                                    노후준비 종합진단을 통해 현재의 노후준비 수준과 유형을 진단하여 균형이는 노후준비를 지원합니다. <br>
+                                    보다 자세한 상담을 원하시면 가까운 국민연금공단 <span class="fc-primary">행복노후준비지원센터</span>를 찾아주세요.
+                                    로그인을 하시면 진단결과가 저장되며, <span class="fc-primary">마이페이지</span>에서 확인 가능합니다.
+                                </p>
+                            </div>
+                            <button type="button" class="ic-only box-close">창닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-wrap">
+                <!-- S : 2311월 -->
+                <!--콘텐츠 영역-->
+                <ul class="equal-list step">
+                    <li class="end">
+                        <em class="unit">01</em>
+                        <div class="type">기본사항</div>
+                    </li>
+                    <li class="end">
+                        <em class="unit">02</em>
+                        <div class="type">재무</div>
+                    </li>
+                    <li class="end">
+                        <em class="unit">03</em>
+                        <div class="type">건강</div>
+                    </li>
+                    <li class="end">
+                        <em class="unit">04</em>
+                        <div class="type">여가활동</div>
+                    </li>
+                    <li class="end">
+                        <em class="unit">05</em>
+                        <div class="type">대인관계</div>
+                    </li>
+                    <li class="active">
+                        <em class="unit">06</em>
+                        <div class="type">종합진단결과</div>
+                    </li>
+                </ul>
+                <h3 class="blind">나의 노후준비 수준 결과</h3>
+                <div class="score-wrap">
+                    <div class="score">
+                        <p>나의 종합점수</p>
+                        <p class="score-txt">97.4</p>
+                    </div>
+                    <div class="score-desc-wrap">
+                        <p class="cont-title dot">나의 노후준비 수준</p>
+                        <ul class="txt-list dot small">
+                            <li>
+                                <span class="title">연령대 평균</span>
+                                <span class="bar">69.3점</span>
+                            </li>
+                            <li>
+                                <span class="title">나의 수준</span>
+                                <span class="bar">중</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>                
+                <div class="con-table-header">
+                    <h4 class="blind">나의 노후준비 수준 평균 결과</h4>
+                    <span class="txt-helper">단위 : 점</span>
+                </div>
+                <div class="con-table all-center">
+                    <table summary="재무, 건강, 여가활동, 대인관계, 연령대평균, 본인점수, 상대적수준등이 나열된 테이블">
+                        <caption>진단결과 </caption>
+                        <colgroup>
+                            <col>
+                            <col style="width: 20%;">
+                            <col style="width: 20%;">
+                            <col style="width: 20%;">
+                            <col style="width: 20%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">&nbsp;</th>
+                                <th scope="col">재무</th>
+                                <th scope="col">건강</th>
+                                <th scope="col">여가<br>활동</th>
+                                <th scope="col">대인<br>관계</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">연령대<br>평균</th>
+                                <td>61.9</td>
+                                <td>76.0</td>
+                                <td>60.3</td>
+                                <td>69.8</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">본인<br>점수</th>
+                                <td>89.2</td>
+                                <td>58.5</td>
+                                <td>53.6</td>
+                                <td>52.4</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">상대적<br>수준</th>
+                                <td>상</td>
+                                <td>하</td>
+                                <td>중</td>
+                                <td>하</td>
+                            </tr>                                                                                                                                               
+                        </tbody>
+                    </table>
+                    <ul class="txt-list dot gray top">
+                        <li>평균점수는 전 국민 설문조사 결과를 바탕으로 작성하였습니다.</li>
+                        <li>노후준비수준 (상위 25% / 이상 25~75% / 하위 25%미만)</li>
+                    </ul>
+                </div>
+                <p class="cont-title dot">나의 노후준비 수준 비교</p>
+                <p class="cont-desc">4대 영역 노후준비는 연령대 평균과 비교하여 특정 영역의 점수가 지나치게 낮은 경우 해당 영역을 먼저 개선하는 방향으로 노후준비를 하시기 바랍니다. </p>
+                <div class="graph-box">
+                    그래프 영역
+                </div>
+                <div class="txt-box">
+                    <p class="detail">자세한 상담은 16개 노후준비지원센터의 노후준비전문상담사를 만나보세요</p>
+                    <!-- 레이아웃 깨짐 현상 : 수정 2024-01-05 space 클래스 삭제 -->
+                    <p class="calling">문의 : 국번없이 <span class="color-point">1355</span>(유료)</p>
+                    <p class="rel-txt">※ 국민연금 노후준비서비스는 「국민연금법」과 「노후준비지원법」에 의해 제공되는 국가복지사업으로 모든 서비스는 무료로 제공됩니다.</p>
+                </div>
+
+                <div class="cont-bottom">
+                    <div class="btn-group">
+                        <button type="button" class="button-tertiary -lg">이전</button>
+                        <button type="submit" class="button-primary -lg">다시 진단하기</button>
+                    </div>
+                </div>
+                <!--//콘텐츠 영역-->
+
+                <!--// E : 2311월 -->
+            </div>
+            <!-- 공통UI - 만족도조사 --> <!-- 231116 수정-->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer --> <!-- 231116 수정-->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

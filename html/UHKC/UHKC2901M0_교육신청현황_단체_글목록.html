@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script><!--공통UI layout-->
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header -->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">진단ㆍ상담 서비스</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                            <li><a href="#none" target="_self">재무진단</a></li>
+                            <li><a href="#none" target="_self">노후준비정보</a></li>
+                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep2">
+                        <button type="button" class="breadcrumb-trigger">교육신청</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">상담지사안내</a></li>
+                            <li><a href="#none" target="_self">상담지자체안내</a></li>
+                            <li><a href="#none" target="_self">노후준비종합진단</a></li>
+                            <li><a href="#none" target="_self">온라인상담</a></li>
+                            <li><a href="#none" target="_self">방문상담신청</a></li>
+                            <li class="current"><a href="#none" target="_self">교육신청</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">강사정보</a></li>
+                            <li><a href="#none" target="_self">자가진단</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep3">
+                        <button type="button" class="breadcrumb-trigger current">교육신청현황(단체)</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">교육신청 (개인)</a></li>
+                            <li><a href="#none" target="_self">교육신청 (단체)</a></li>
+                            <li class="current"><a href="#none" target="_self">교육신청현황(단체)</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner" class="counsel education hasTabDepth"><!--4뎁스 탭이 있을경우 class="hasTabDepth" 추가-->
+            <!--page-title-->
+            <div class="page-header">
+                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>교육신청 현황(단체)</h2></div>
+                <div class="page-desc">
+                    <button type="button" class="page-desc-btn _has-tooltip"><span>교육신청(단체) 안내</span><i class="ic-only f-pg-desc"></i></button>
+                    <div class="desc-box _tooltipbox">
+                        <div class="desc-box-inner">
+                            <div class="desc-content">
+                                <p>사업장, 복지시설, 지자체, 공공기관 등 교육이 필요한 곳이라면 어디든 찾아가 재무, 건강, 여가, 대인관계에 대한 주제로 맞춤형 강의를 진행하고 있습니다.</p>
+                            </div>
+                            <button type="button" class="ic-only box-close">창닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--//page-title-->
+            <div class="content-wrap">
+                <!--콘텐츠 영역-->
+                <div class="tabWrap tab-base tab-education">
+                    <div class="tabwrap-inner">
+                        <ul class="tabNav">
+                            <li><a href="#" id="tabNav1-1" role="tab">교육신청 (개인)</a></li>
+                            <li><a href="#" id="tabNav1-2" role="tab">교육신청 (단체)</a></li>
+                            <li><a href="#" id="tabNav1-3" role="tab">교육신청 현황 (단체)</a></li>
+                        </ul>
+                        <span class="tab-gradient pc-hide" aria-hidden="true"></span>
+                    </div>
+                    <!-- tabContent-1 -->
+                    <div class="tabContent edu-personal" role="tabpanel" aria-labelledby="tabNav1-1">
+                        내용1-1
+                    </div>
+                    <!-- tabContent-2 -->
+                    <div class="tabContent edu-group active" role="tabpanel" aria-labelledby="tabNav1-2">
+                        내용1-2
+                    </div>
+                    <!-- tabContent-3 -->
+                    <div class="tabContent edu-group-status" role="tabpanel" aria-labelledby="tabNav1-3">
+                        <div class="searchbox-wrap">
+                            <div class="searchbox edu-apply-group">
+                                <div class="form-group">
+                                    <label class="search-label" for="지사검색">지사검색</label>
+                                    <select class="slct-branch" title="지사선택">
+                                        <option value="전체">전체</option>
+                                        <option value="제목">서울 > 서울남부지역본부</option> 
+                                        <option value="작성자">서울 > 서울북부지역본부</option>
+                                        <option value="작성자">서울 > 송파지사</option>
+                                        <option value="작성자">경기 > 경인지역본부</option>
+                                        <option value="작성자">경기 > 남양주지사</option>
+                                        <option value="작성자">인천 > 남동연수지사</option>
+                                        <option value="작성자">강원 > 춘천지사</option>
+                                        <option value="작성자">충남 > 천안지사</option>
+                                        <option value="작성자">충북 > 동청주지사</option>
+                                        <option value="작성자">대전 > 서대전지사</option>
+                                        <option value="작성자">경남 > 창원지사</option>
+                                        <option value="작성자">경북 > 구미지사</option>
+                                        <option value="작성자">대구 > 대구지역본부</option>
+                                        <option value="작성자">울산 > 남울산지사</option>
+                                        <option value="작성자">부산 > 부산지역본부</option>
+                                        <option value="작성자">전남 > 목포지사</option>
+                                        <option value="작성자">전북 > 전주완주지사</option>
+                                        <option value="작성자">광주 > 광주지역본부</option>
+                                        <option value="작성자">제주 > 제주지사</option>
+                                    </select>
+                                    <label class="search-label" for="검색어">검색어</label>
+                                    <select class="slct-type min-w160px" title="글목록 검색 조건">
+                                        <option value="">강사명</option>
+                                        <option value="">강의내용</option> 
+                                    </select>
+                                    <input type="text" placeholder="검색어를 입력해주세요" class="inp-content w-flexible" title="검색어 입력">
+                                    <button type="button" class="button-primary btn-search min-w80px">조회</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cont-head">
+                            <h3 class="cont-title">교육 신청자 목록</h3>
+                        </div>
+                         <div class="board-wrap bd-list">
+                            <table class="tbl-board">
+                                <caption>교육신청(단체) 목록</caption>
+                                <colgroup>
+                                    <col class="w8">
+                                    <col class="w11">
+                                    <col class="w15">
+                                    <col>
+                                    <col class="w10">
+                                    <col class="w10">
+                                    <col class="w10">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">번호</th>
+                                        <th scope="col">지역</th>
+                                        <th scope="col">지사</th>
+                                        <th scope="col">기본강의</th>
+                                        <th scope="col">강사명</th>
+                                        <th scope="col">신청자</th>
+                                        <th scope="col">처리결과</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tbdata01 no">999999</td>
+                                        <td class="tbdata02 above">부산광역시</td>
+                                        <td class="tbdata03 above">부산지역본부지사</td>
+                                        <td class="tbdata04 title"><a href="#">일상이 행복해지는 기술</a></td>
+                                        <td class="tbdata05 name"><span class="label pc-hide">강사</span>설성문</td>
+                                        <td class="tbdata06 request"><span class="label pc-hide">신청자</span>소지섭</td>
+                                        <td class="tbdata08 status"><span class="fc-gray1">승인불가</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tbdata01 no">88888</td>
+                                        <td class="tbdata02 above">서울특별시</td>
+                                        <td class="tbdata03 above">송파 지사</td>
+                                        <td class="tbdata04 title"><a href="#">보이스 피싱예방및 금융사기 대처</a></td>
+                                        <td class="tbdata05 name"><span class="label pc-hide">강사</span>윤영섭</td>
+                                        <td class="tbdata06 request"><span class="label pc-hide">신청자</span>원빈</td>
+                                        <td class="tbdata08 status"><span class="fc-primary">접수중</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tbdata01 no">7777</td>
+                                        <td class="tbdata02 above">부산광역시</td>
+                                        <td class="tbdata03 above">부산지역본부지사</td>
+                                        <td class="tbdata04 title"><a href="#">전국민의 행복한 노후를 위해 지역본부·지사 교육장에서 재무, 건강, 여가, 대인관계의 맞춤형 노후준비 강의를 직접 열고 있습니다. </a></td>
+                                        <td class="tbdata05 name"><span class="label pc-hide">강사</span>설성문</td>
+                                        <td class="tbdata06 request"><span class="label pc-hide">신청자</span>마이클코어스</td>
+                                        <td class="tbdata08 status"><span class="fc-base">승인완료</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tbdata01 no">666</td>
+                                        <td class="tbdata02 above">서울특별시</td>
+                                        <td class="tbdata03 above">송파 지사</td>
+                                        <td class="tbdata04 title"><a href="#">보이스 피싱예방및 금융사기 대처</a></td>
+                                        <td class="tbdata05 name"><span class="label pc-hide">강사</span>윤영섭</td>
+                                        <td class="tbdata06 request"><span class="label pc-hide">신청자</span>현빈</td>
+                                        <td class="tbdata08 status"><span class="fc-primary">접수중</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tbdata01 no">7777</td>
+                                        <td class="tbdata02 above">부산광역시</td>
+                                        <td class="tbdata03 above">부산지역본부지사</td>
+                                        <td class="tbdata04 title"><a href="#">전국민의 행복한 노후를 위해 지역본부·지사 교육장에서 재무, 건강, 여가, 대인관계의 맞춤형 노후준비 강의를 직접 열고 있습니다. </a></td>
+                                        <td class="tbdata05 name"><span class="label pc-hide">강사</span>설성문</td>
+                                        <td class="tbdata06 request"><span class="label pc-hide">신청자</span>정우성</td>
+                                        <td class="tbdata08 status"><span class="fc-primary">접수중</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tbdata01 no">666</td>
+                                        <td class="tbdata02 above">서울특별시</td>
+                                        <td class="tbdata03 above">송파 지사</td>
+                                        <td class="tbdata04 title"><a href="#">보이스 피싱예방및 금융사기 대처</a></td>
+                                        <td class="tbdata05 name"><span class="label pc-hide">강사</span>윤영섭</td>
+                                        <td class="tbdata06 request"><span class="label pc-hide">신청자</span>이준기</td>
+                                        <td class="tbdata08 status"><span class="fc-primary">접수중</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tbdata01 no">7777</td>
+                                        <td class="tbdata02 above">부산광역시</td>
+                                        <td class="tbdata03 above">부산지역본부지사</td>
+                                        <td class="tbdata04 title"><a href="#">전국민의 행복한 노후를 위해 지역본부·지사 교육장에서 재무, 건강, 여가, 대인관계의 맞춤형 노후준비 강의를 직접 열고 있습니다. </a></td>
+                                        <td class="tbdata05 name"><span class="label pc-hide">강사</span>설성문</td>
+                                        <td class="tbdata06 request"><span class="label pc-hide">신청자</span>차승원</td>
+                                        <td class="tbdata08 status"><span class="fc-primary">접수중</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tbdata01 no">666</td>
+                                        <td class="tbdata02 above">서울특별시</td>
+                                        <td class="tbdata03 above">송파 지사</td>
+                                        <td class="tbdata04 title"><a href="#">보이스 피싱예방및 금융사기 대처</a></td>
+                                        <td class="tbdata05 name"><span class="label pc-hide">강사</span>윤영섭</td>
+                                        <td class="tbdata06 request"><span class="label pc-hide">신청자</span>오나리</td>
+                                        <td class="tbdata08 status"><span class="fc-primary">접수중</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tbdata01 no">7777</td>
+                                        <td class="tbdata02 above">부산광역시</td>
+                                        <td class="tbdata03 above">부산지역본부지사</td>
+                                        <td class="tbdata04 title"><a href="#">전국민의 행복한 노후를 위해 지역본부·지사 교육장에서 재무, 건강, 여가, 대인관계의 맞춤형 노후준비 강의를 직접 열고 있습니다. </a></td>
+                                        <td class="tbdata05 name"><span class="label pc-hide">강사</span>설성문</td>
+                                        <td class="tbdata06 request"><span class="label pc-hide">신청자</span>지못미</td>
+                                        <td class="tbdata08 status"><span class="fc-primary">접수중</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tbdata01 no">666</td>
+                                        <td class="tbdata02 above">서울특별시</td>
+                                        <td class="tbdata03 above">송파 지사</td>
+                                        <td class="tbdata04 title"><a href="#">보이스 피싱예방및 금융사기 대처</a></td>
+                                        <td class="tbdata05 name"><span class="label pc-hide">강사</span>윤영섭</td>
+                                        <td class="tbdata06 request"><span class="label pc-hide">신청자</span>앞으로</td>
+                                        <td class="tbdata08 status"><span class="fc-primary">접수중</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="paginate">
+                            <button type="button" class="page first">처음 목록</button>
+                            <button type="button" class="page prev">이전 목록</button>
+                            <a href="#" class="num">1</a>
+                            <a href="#" class="num current" title="현재페이지">2</a>
+                            <a href="#" class="num">3</a>
+                            <a href="#" class="num">4</a>
+                            <a href="#" class="num">5</a>
+                            <a href="#" class="num mo-hide">6</a>
+                            <a href="#" class="num mo-hide">7</a>
+                            <a href="#" class="num mo-hide">8</a>
+                            <a href="#" class="num mo-hide">9</a>
+                            <a href="#" class="num mo-hide">9999</a>
+                            <button type="button" class="page next">다음 목록</button>
+                            <button type="button" class="page last">마지막 목록</button>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    commonUI.tabNav('.tabWrap', 3);
+                </script>
+                <!--//콘텐츠 영역-->
+            </div>
+
+            <!-- 공통UI - 만족도조사 -->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer -->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

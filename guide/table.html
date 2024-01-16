@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<title>UI 가이드</title>
+
+		<script src="../js/lib/jquery-3.7.0.min.js"></script>
+		<script src="../js/lib/jquery-ui.min.js"></script>
+		<script src="../js/lib/jquery.easing.min.js"></script>
+		<script src="../js/lib/swiper-bundle.min.js"></script>
+		<script src="ui_include.js"></script>
+		<script src="../js/ui_common.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+		<link rel="stylesheet" type="text/css" href="guide.css" />
+
+		<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css" />
+		<script src="highlight/highlight.min.js"></script>
+		<script>
+			hljs.highlightAll();
+		</script>
+	</head>
+	<body>
+		<div class="guideWrap">
+			<header class="guideHeader"></header>
+			<section class="guideContainer">
+				<header class="sec-header">
+					<h2>테이블</h2>
+				</header>
+				<div class="sec-contents">
+					<!-- 내용시작 -->
+
+					<h3 class="sec-title">Data Grid Type</h3>
+					<div class="code-preview">
+						<div class="con-table all-center">
+							<table summary="연도,본인나이,국민연금,퇴직연금(DC),개인연금,합계(만원) 등이 나열된 테이블" class="min-w500px">
+								<caption>
+									통합 설계결과 표-2
+								</caption>
+								<colgroup>
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">연도</th>
+										<th scope="col">본인나이</th>
+										<th scope="col">국민연금</th>
+										<th scope="col">퇴직연금(DC)</th>
+										<th scope="col">개인연금</th>
+										<th scope="col">합계(만원)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2041</td>
+										<td>65</td>
+										<td>18,072</td>
+										<td>18,072</td>
+										<td>18,072</td>
+										<td>연 18,072</td>
+									</tr>
+									<tr>
+										<td>2042</td>
+										<td>66</td>
+										<td>18,433</td>
+										<td>18,433</td>
+										<td>18,433</td>
+										<td>연 18,433</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<pre><code class="language-xml">&lt;div class=&quot;con-table all-center&quot;&gt;
+			&lt;table summary=&quot;연도,본인나이,국민연금,퇴직연금(DC),개인연금,합계(만원) 등이 나열된 테이블&quot; class=&quot;min-w500px&quot;&gt;
+				&lt;caption&gt;
+					통합 설계결과 표-2
+				&lt;/caption&gt;
+				&lt;colgroup&gt;
+					&lt;col /&gt;
+					&lt;col /&gt;
+					&lt;col /&gt;
+					&lt;col /&gt;
+					&lt;col /&gt;
+					&lt;col /&gt;
+				&lt;/colgroup&gt;
+				&lt;thead&gt;
+					&lt;tr&gt;
+						&lt;th scope=&quot;col&quot;&gt;연도&lt;/th&gt;
+						&lt;th scope=&quot;col&quot;&gt;본인나이&lt;/th&gt;
+						&lt;th scope=&quot;col&quot;&gt;국민연금&lt;/th&gt;
+						&lt;th scope=&quot;col&quot;&gt;퇴직연금(DC)&lt;/th&gt;
+						&lt;th scope=&quot;col&quot;&gt;개인연금&lt;/th&gt;
+						&lt;th scope=&quot;col&quot;&gt;합계(만원)&lt;/th&gt;
+					&lt;/tr&gt;
+				&lt;/thead&gt;
+				&lt;tbody&gt;
+					&lt;tr&gt;
+						&lt;td&gt;2041&lt;/td&gt;
+						&lt;td&gt;65&lt;/td&gt;
+						&lt;td&gt;18,072&lt;/td&gt;
+						&lt;td&gt;18,072&lt;/td&gt;
+						&lt;td&gt;18,072&lt;/td&gt;
+						&lt;td&gt;연 18,072&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td&gt;2042&lt;/td&gt;
+						&lt;td&gt;66&lt;/td&gt;
+						&lt;td&gt;18,433&lt;/td&gt;
+						&lt;td&gt;18,433&lt;/td&gt;
+						&lt;td&gt;18,433&lt;/td&gt;
+						&lt;td&gt;연 18,433&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/tbody&gt;
+			&lt;/table&gt;
+		&lt;/div&gt;
+</code></pre>
+					<h3 class="sec-title">Data Grid Type Align</h3>
+					<div class="code-preview">
+						<div class="con-table">
+							<table class="min-w600px">
+								<caption>
+									제목
+								</caption>
+								<colgroup>
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" rowspan="2">항목1</th>
+										<th scope="col">항목2</th>
+										<th scope="col">항목3</th>
+										<th scope="col">항목4</th>
+										<th scope="col">항목5</th>
+										<th scope="col">항목6</th>
+									</tr>
+									<tr>
+										<th scope="col">항목2-2</th>
+										<th scope="col">항목2-3</th>
+										<th scope="col" rowspan="2">항목2-4</th>
+										<th scope="col">항목2-5</th>
+										<th scope="col" rowspan="2">항목2-6</th>
+									</tr>
+									<tr>
+										<th scope="col" colspan="2">항목3-1</th>
+										<th scope="col">항목3-3</th>
+										<th scope="col">항목3-5</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="2">th</th>
+										<th scope="row">th</th>
+										<td>기본 좌측 정렬</td>
+										<td class="align-center">중앙 정렬<br />align-center</td>
+										<td class="align-right">우측 정렬<br />align-right</td>
+										<td class="valign-top" rowspan="2">위로 정렬<br />valign-top</td>
+									</tr>
+									<tr>
+										<th scope="row">th</th>
+										<td>기본 좌측 정렬</td>
+										<td rowspan="2">기본 좌측 정렬</td>
+										<td>기본 좌측 정렬</td>
+									</tr>
+									<tr>
+										<th scope="row">th</th>
+										<th scope="row" rowspan="2">th</th>
+										<td>기본 좌측 정렬</td>
+										<td>기본 좌측 정렬</td>
+										<td>기본 좌측 정렬</td>
+									</tr>
+									<tr>
+										<th scope="row">th</th>
+										<td>기본 좌측 정렬</td>
+										<td>기본 좌측 정렬</td>
+										<td>기본 좌측 정렬</td>
+										<td>기본 좌측 정렬</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="con-table">
+							<table class="min-w600px">
+								<caption>
+									항목1 으로 구성된 테이블
+								</caption>
+								<colgroup>
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">항목1</th>
+										<th scope="col">항목2</th>
+										<th scope="col">항목3</th>
+										<th scope="col">항목4</th>
+										<th scope="col">항목5</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="2">th</th>
+										<td>기본 좌측 정렬</td>
+										<td class="align-center">중앙 정렬<br />align-center</td>
+										<td class="align-right">우측 정렬<br />align-right</td>
+										<td class="valign-top" rowspan="2">위로 정렬<br />valign-top</td>
+									</tr>
+									<tr>
+										<td>기본 좌측 정렬</td>
+										<td>기본 좌측 정렬</td>
+										<td>기본 좌측 정렬</td>
+									</tr>
+									<tr>
+										<th scope="row">th</th>
+										<td>기본 좌측 정렬</td>
+										<td>기본 좌측 정렬</td>
+										<td>기본 좌측 정렬</td>
+										<td>기본 좌측 정렬</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<th>tfoot</th>
+										<td></td>
+										<th>tfoot</th>
+										<td></td>
+										<td></td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+
+						<br />
+						<table class="guide-table">
+							<col style="width: 160px" />
+							<col />
+							<tbody>
+								<tr>
+									<th class="align-left">가로 스크롤 생성</th>
+									<td>&lt;div class="con-table"&gt; &lt;table class="min-w600px"&gt;</td>
+								</tr>
+								<tr>
+									<th class="align-left">전체 중앙 정렬</th>
+									<td>&lt;div class="con-table all-center"&gt;</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h3 class="sec-title">Information Grid Type</h3>
+					<div class="code-preview">
+						<div class="con-table type-row">
+							<table summary="테이블 예시">
+								<caption>
+									제목
+								</caption>
+								<colgroup>
+									<col class="w20 min-w120px" />
+									<col />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">th</th>
+										<td>
+											<ul class="txt-list dot">
+												<li>내용입니다.</li>
+												<li>내용입니다.</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">하이픈 & 대시</th>
+										<td>
+											<ul class="txt-list dash">
+												<li>하이픈-문장 부호의 하나. ‘－’의 이름이다.</li>
+												<li>대시-문장 부호의 하나. ‘—’의 이름이다.</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<pre><code class="language-xml">&lt;div class=&quot;con-table type-row&quot;&gt;
+	&lt;table summary=&quot;테이블 예시&quot;&gt;
+		&lt;caption&gt;
+			제목
+		&lt;/caption&gt;
+		&lt;colgroup&gt;
+			&lt;col class=&quot;w20 min-w120px&quot; /&gt;
+			&lt;col /&gt;
+		&lt;/colgroup&gt;
+		&lt;tbody&gt;
+			&lt;tr&gt;
+				&lt;th scope=&quot;row&quot;&gt;th&lt;/th&gt;
+				&lt;td&gt;
+					&lt;ul class=&quot;txt-list dot&quot;&gt;
+						&lt;li&gt;내용입니다.&lt;/li&gt;
+						&lt;li&gt;내용입니다.&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;th scope=&quot;row&quot;&gt;하이픈 &amp; 대시&lt;/th&gt;
+				&lt;td&gt;
+					&lt;ul class=&quot;txt-list dash&quot;&gt;
+						&lt;li&gt;하이픈-문장 부호의 하나. ‘－’의 이름이다.&lt;/li&gt;
+						&lt;li&gt;대시-문장 부호의 하나. ‘—’의 이름이다.&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+&lt;/div&gt;
+</code></pre>
+
+					<h3 class="sec-title">Div Data Grid</h3>
+					<div class="code-preview">
+						<div class="board-wrap bd-data">
+							<div class="bd-row">
+								<div class="bd-col w100">
+									<div class="th"><span>지역</span></div>
+									<div class="td"><span>노후준비 트랜드가 바뀐다</span></div>
+								</div>
+							</div>
+							<div class="bd-row">
+								<div class="bd-col">
+									<div class="th"><span>강사명</span><br /><span>강사명</span><br /><span>강사명</span></div>
+									<div class="td"><span>홍길동</span></div>
+								</div>
+								<div class="bd-col">
+									<div class="th"><span>관할지사</span></div>
+									<div class="td"><span>통영지사</span></div>
+								</div>
+							</div>
+							<div class="bd-row">
+								<div class="bd-col">
+									<div class="th"><span>교육일자</span></div>
+									<div class="td"><span>2023-10-27</span></div>
+								</div>
+								<div class="bd-col">
+									<div class="th"><span>교육시간</span></div>
+									<div class="td"><span>10:00~12:00</span></div>
+								</div>
+							</div>
+							<div class="bd-row">
+								<div class="bd-col">
+									<div class="th"><span>교육장소</span></div>
+									<div class="td"><span>거제고용센터</span></div>
+								</div>
+								<div class="bd-col">
+									<div class="th"><span>정원</span></div>
+									<div class="td"><span>30명</span></div>
+								</div>
+							</div>
+							<div class="bd-row">
+								<div class="bd-col w100">
+									<div class="th"><span>휴대전화번호</span></div>
+									<div class="td">
+										<div class="form-group-tel">
+											<select class="tel-first" title="휴대전화 식별번호">
+												<option>선택</option>
+												<option>010</option>
+												<option>011</option>
+											</select>
+											<span class="inp-split">-</span>
+											<input type="text" class="tel-second" title="휴대전화 중간 번호" />
+											<span class="inp-split">-</span>
+											<input type="text" class="tel-third" title="휴대전화 뒷 번호" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<pre><code class="language-xml">&lt;div class=&quot;board-wrap bd-data&quot;&gt;
+	&lt;div class=&quot;bd-row&quot;&gt;
+		&lt;div class=&quot;bd-col w100&quot;&gt;
+			&lt;div class=&quot;th&quot;&gt;&lt;span&gt;지역&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&quot;td&quot;&gt;&lt;span&gt;노후준비 트랜드가 바뀐다&lt;/span&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;bd-row&quot;&gt;
+		&lt;div class=&quot;bd-col&quot;&gt;
+			&lt;div class=&quot;th&quot;&gt;&lt;span&gt;강사명&lt;/span&gt;&lt;br /&gt;&lt;span&gt;강사명&lt;/span&gt;&lt;br /&gt;&lt;span&gt;강사명&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&quot;td&quot;&gt;&lt;span&gt;홍길동&lt;/span&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;bd-col&quot;&gt;
+			&lt;div class=&quot;th&quot;&gt;&lt;span&gt;관할지사&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&quot;td&quot;&gt;&lt;span&gt;통영지사&lt;/span&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;bd-row&quot;&gt;
+		&lt;div class=&quot;bd-col&quot;&gt;
+			&lt;div class=&quot;th&quot;&gt;&lt;span&gt;교육일자&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&quot;td&quot;&gt;&lt;span&gt;2023-10-27&lt;/span&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;bd-col&quot;&gt;
+			&lt;div class=&quot;th&quot;&gt;&lt;span&gt;교육시간&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&quot;td&quot;&gt;&lt;span&gt;10:00~12:00&lt;/span&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;bd-row&quot;&gt;
+		&lt;div class=&quot;bd-col&quot;&gt;
+			&lt;div class=&quot;th&quot;&gt;&lt;span&gt;교육장소&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&quot;td&quot;&gt;&lt;span&gt;거제고용센터&lt;/span&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;bd-col&quot;&gt;
+			&lt;div class=&quot;th&quot;&gt;&lt;span&gt;정원&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&quot;td&quot;&gt;&lt;span&gt;30명&lt;/span&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;bd-row&quot;&gt;
+		&lt;div class=&quot;bd-col w100&quot;&gt;
+			&lt;div class=&quot;th&quot;&gt;&lt;span&gt;휴대전화번호&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&quot;td&quot;&gt;
+				&lt;div class=&quot;form-group-tel&quot;&gt;
+					&lt;select class=&quot;tel-first&quot; title=&quot;휴대전화 식별번호&quot;&gt;
+						&lt;option&gt;선택&lt;/option&gt;
+						&lt;option&gt;010&lt;/option&gt;
+						&lt;option&gt;011&lt;/option&gt;
+					&lt;/select&gt;
+					&lt;span class=&quot;inp-split&quot;&gt;-&lt;/span&gt;
+					&lt;input type=&quot;text&quot; class=&quot;tel-second&quot; title=&quot;휴대전화 중간 번호&quot; /&gt;
+					&lt;span class=&quot;inp-split&quot;&gt;-&lt;/span&gt;
+					&lt;input type=&quot;text&quot; class=&quot;tel-third&quot; title=&quot;휴대전화 뒷 번호&quot; /&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+					<h3 class="sec-title">Div Data Grid</h3>
+					<div class="code-preview">
+						<div class="board-wrap bd-data">
+							<div class="bd-row">
+									<div class="bd-col">
+											<div class="th"><span>예상 주택확장 나이<br>
+													(현재 나이보다 커야합니다)</span></div>
+											<div class="td">
+													<div class="form-group-txt">
+															<span class="front-txt">만</span>
+															<input type="text" id="" class="align-right" value="0">
+															<span class="back-txt">세</span>
+													</div>
+											</div>
+									</div>
+									<div class="bd-col">
+											<div class="th"><span>예상 주택 가격</span></div>
+											<div class="td">
+													<div class="form-group-txt">
+															<input type="text" id="" class="align-right" value="0">
+															<span class="back-txt">만원</span>
+													</div>
+											</div>
+									</div>
+							</div>
+							<div class="bd-row">
+									<div class="bd-col w100">
+											<div class="th"><span>소유 부동산정보</span></div>
+											<div class="td pd0">
+													<div class="divide-wrap-row">
+															<div class="row">
+																	<label class="inp-radio">
+																			<input type="radio" name="radioGroup1">
+																			<span>자가이며, 시가</span>
+																	</label>
+																	<div class="form-group-txt free-custom">
+																			<input type="text" id="" class="align-right" value="0">
+																			<span class="back-txt">만원</span>
+																	</div>
+																	<label class="label">전세부동산</label>
+																	<div class="form-group-txt free-custom">
+																			<input type="text" id="" class="align-right" value="0">
+																			<span class="back-txt">만원</span>
+																	</div>
+															</div>
+															<div class="row">
+																	<label class="inp-radio">
+																			<input type="radio" name="radioGroup1">
+																			<span>전세, 월세 보증금</span>
+																	</label>
+																	<div class="form-group-txt free-custom">
+																			<input type="text" id="" class="align-right" value="0">
+																			<span class="back-txt">만원</span>
+																	</div>
+															</div>
+													</div>
+											</div>
+									</div>
+							</div>
+					</div>
+					</div>
+					<pre><code class="language-xml">&lt;div class=&quot;board-wrap bd-data&quot;&gt;
+						&lt;div class=&quot;bd-row&quot;&gt;
+								&lt;div class=&quot;bd-col&quot;&gt;
+										&lt;div class=&quot;th&quot;&gt;&lt;span&gt;예상 주택확장 나이&lt;br&gt;
+												(현재 나이보다 커야합니다)&lt;/span&gt;&lt;/div&gt;
+										&lt;div class=&quot;td&quot;&gt;
+												&lt;div class=&quot;form-group-txt&quot;&gt;
+														&lt;span class=&quot;front-txt&quot;&gt;만&lt;/span&gt;
+														&lt;input type=&quot;text&quot; id=&quot;&quot; class=&quot;align-right&quot; value=&quot;0&quot;&gt;
+														&lt;span class=&quot;back-txt&quot;&gt;세&lt;/span&gt;
+												&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;bd-col&quot;&gt;
+										&lt;div class=&quot;th&quot;&gt;&lt;span&gt;예상 주택 가격&lt;/span&gt;&lt;/div&gt;
+										&lt;div class=&quot;td&quot;&gt;
+												&lt;div class=&quot;form-group-txt&quot;&gt;
+														&lt;input type=&quot;text&quot; id=&quot;&quot; class=&quot;align-right&quot; value=&quot;0&quot;&gt;
+														&lt;span class=&quot;back-txt&quot;&gt;만원&lt;/span&gt;
+												&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;bd-row&quot;&gt;
+								&lt;div class=&quot;bd-col w100&quot;&gt;
+										&lt;div class=&quot;th&quot;&gt;&lt;span&gt;소유 부동산정보&lt;/span&gt;&lt;/div&gt;
+										&lt;div class=&quot;td pd0&quot;&gt;
+												&lt;div class=&quot;divide-wrap-row&quot;&gt;
+														&lt;div class=&quot;row&quot;&gt;
+																&lt;label class=&quot;inp-radio&quot;&gt;
+																		&lt;input type=&quot;radio&quot; name=&quot;radioGroup1&quot;&gt;
+																		&lt;span&gt;자가이며, 시가&lt;/span&gt;
+																&lt;/label&gt;
+																&lt;div class=&quot;form-group-txt free-custom&quot;&gt;
+																		&lt;input type=&quot;text&quot; id=&quot;&quot; class=&quot;align-right&quot; value=&quot;0&quot;&gt;
+																		&lt;span class=&quot;back-txt&quot;&gt;만원&lt;/span&gt;
+																&lt;/div&gt;
+																&lt;label class=&quot;label&quot;&gt;전세부동산&lt;/label&gt;
+																&lt;div class=&quot;form-group-txt free-custom&quot;&gt;
+																		&lt;input type=&quot;text&quot; id=&quot;&quot; class=&quot;align-right&quot; value=&quot;0&quot;&gt;
+																		&lt;span class=&quot;back-txt&quot;&gt;만원&lt;/span&gt;
+																&lt;/div&gt;
+														&lt;/div&gt;
+														&lt;div class=&quot;row&quot;&gt;
+																&lt;label class=&quot;inp-radio&quot;&gt;
+																		&lt;input type=&quot;radio&quot; name=&quot;radioGroup1&quot;&gt;
+																		&lt;span&gt;전세, 월세 보증금&lt;/span&gt;
+																&lt;/label&gt;
+																&lt;div class=&quot;form-group-txt free-custom&quot;&gt;
+																		&lt;input type=&quot;text&quot; id=&quot;&quot; class=&quot;align-right&quot; value=&quot;0&quot;&gt;
+																		&lt;span class=&quot;back-txt&quot;&gt;만원&lt;/span&gt;
+																&lt;/div&gt;
+														&lt;/div&gt;
+												&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+						&lt;/div&gt;
+				&lt;/div&gt;
+</code></pre>
+
+					<!-- 내용끝 -->
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

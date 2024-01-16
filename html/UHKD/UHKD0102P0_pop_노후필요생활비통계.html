@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+	<script src="../../js/ui_temp.js"></script>
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <style>
+    </style>
+</head>
+<body>
+    
+    <!-- 노후 필요 생활비 통계 -->
+    <div class="modal dim full" id="pop-alert1" style="display: block;">
+        <div class="modalWrap">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <h3>노후 필요 생활비 통계</h3>
+                </div>
+                <button class="btn-close">모달창닫기</button>
+            </div>
+            <div class="modal-body">
+                <!-- 내용시작 -->
+                <div class="con-table-header col">
+                    <h4 class="sm-title fz16">2021년 국민노후보장 패널 조사 월평균 노후생활비</h4>
+                    <span class="txt-helper">(단위:만원/월)</span>
+                </div>
+                <div class="con-table all-center">
+                    <table summary="월평균 노후생활비안에 들어가는 부부의 생활수준, 최소노후생활비 생활수준과 개인의 적정노후생활비, 최소노후생활비의 생활수준">
+                        <caption>월평균 노후생활비</caption>
+                        <colgroup>
+                                <col width="*" />
+                                <col width="14%" />
+                                <col width="19%" />
+                                <col width="19%" />
+                                <col width="19%" />
+                                <col width="19%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th colspan="2" rowspan="2" scope="col">구분</th>
+                                <th colspan="2" scope="col">부부</th>
+                                <th colspan="2" scope="col">개인</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">최소노후생활비</th>
+                                <th scope="col">적정노후생활비</th>
+                                <th scope="col">최소노후생활비</th>
+                                <th scope="col">적정노후생활비</th>
+                            </tr>
+                        </thead>
+                        <tbody>                                        
+                            <tr>
+                                <th scope="row" rowspan="4">연령대</th>
+                                <th scope="row">50대</th>
+                                <td>219.3</td>
+                                <td>306.8</td>
+                                <td>139.1</td>
+                                <td>198.3</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">60대</th>
+                                <td>207.1</td>
+                                <td>288.8</td>
+                                <td>129.0</td>
+                                <td>183.8</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">70대</th>
+                                <td>181.9</td>
+                                <td>251.3</td>
+                                <td>113.4</td>
+                                <td>161.7</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">80대 이상</th>
+                                <td>162.3</td>
+                                <td>226.8</td>
+                                <td>99.9</td>
+                                <td>144.0</td>
+                            </tr>                    
+                            <tr>
+                                <th scope="row" rowspan="3">거주<br />지역</th>
+                                <th scope="row">서울</th>
+                                <td>232.0</td>
+                                <td>330.1</td>
+                                <td>144.0</td>
+                                <td>205.3</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">광역시</th>
+                                <td>203.7</td>
+                                <td>279.9</td>
+                                <td>122.2</td>
+                                <td>173.9</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">도</th>
+                                <td>185.8</td>
+                                <td>258.7</td>
+                                <td>119.0</td>
+                                <td>170.1</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" colspan="2">전체</th>
+                                <td>198.7</td>
+                                <td>277.0</td>
+                                <td>124.3</td>
+                                <td>177.3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="txt-list dot doubletop">
+                        <li>중고령자의 주관적 인식에 따라 노후에 필요로 하는 월생활비 수준을 의미</li>
+                        <li>최소생활비는 특별한질병등이없는건강한노년임을전제(가정)할때드는비용을, 적정생활비는 표준적인 생활을 하는 데 흡족한 비용을 의미함</li>
+                    </ul>
+                </div>
+                <!-- 내용끝 -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

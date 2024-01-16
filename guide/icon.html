@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>아이콘</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<h3 class="sec-title">&lt;i&gt;</h3>
+<div class="code-preview" style="background-color:var(--ui-colr3); padding:20px;">
+
+	<div class="row">
+		<i class="ic-only triangle-up-active" arir-hidden="true"></i>
+		<i class="ic-only back" arir-hidden="true"></i>
+		<i class="ic-only box-close" arir-hidden="true"></i>
+		<i class="ic-only f-pg-desc" arir-hidden="true" style="width:24px; height:24px;"></i>
+		<i class="ic-only f-pg-desc2" arir-hidden="true" style="width:24px; height:24px;"></i>
+		<i class="ic-only ic-secret" arir-hidden="true"></i>
+		<i class="ic-only ic-info-primary" arir-hidden="true" style="width:24px; height:24px;"></i>
+		<i class="ic-only ic-map" arir-hidden="true"></i>
+		<i class="ic-only ic-time-bk" arir-hidden="true"></i>
+		<i class="ic-only ic-time-ge" arir-hidden="true"></i>
+		<i class="ic-only question" arir-hidden="true"></i>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;i class=&#x22;ic-only triangle-up-active&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;i class=&#x22;ic-only back&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;i class=&#x22;ic-only box-close&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;i class=&#x22;ic-only f-pg-desc&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;i class=&#x22;ic-only f-pg-desc2&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;i class=&#x22;ic-only ic-secret&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;i class=&#x22;ic-only ic-info-primary&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;i class=&#x22;ic-only ic-map&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;i class=&#x22;ic-only ic-time-bk&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;i class=&#x22;ic-only ic-time-ge&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;i class=&#x22;ic-only question&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+</code></pre>
+
+<div class="code-preview" style="background-color:var(--ui-colr3); padding:20px;">
+	<div class="row">
+		<i class="ic-only inner-delete" arir-hidden="true"></i>
+		<i class="ic-only inner-plus" arir-hidden="true"></i>
+		<i class="ic-only inner-minus" arir-hidden="true"></i>
+		<i class="ic-only inner-reset" arir-hidden="true"></i>
+		<i class="ic-only inner-search" arir-hidden="true"></i>
+		<i class="ic-only arrow-right" arir-hidden="true"></i>
+		<i class="ic-only arr10_r_white" arir-hidden="true"></i>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;i class=&#x22;ic-only inner-delete&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;i class=&#x22;ic-only inner-plus&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;i class=&#x22;ic-only inner-minus&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;i class=&#x22;ic-only inner-reset&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;i class=&#x22;ic-only inner-search&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;i class=&#x22;ic-only arrow-right&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;i class=&#x22;ic-only arr10_r_white&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+</code></pre>
+
+<div class="code-preview" style="background-color:var(--ui-colr3); padding:20px;">
+	<div class="row">
+		<i class="ic-only ic-twins-arr-blue" arir-hidden="true"></i>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;i class=&#x22;ic-only ic-twins-arr-blue&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+</code></pre>
+
+
+<h3 class="sec-title">&lt;img&gt;</h3>
+<div class="code-preview" style="background-color:var(--ui-colr4); padding:20px;">
+	<div class="row">
+		<img src="../../images/ico/ic_mypension_01.svg" alt="" aria-hidden="true">
+		<img src="../../images/ico/ic_mypension_02.svg" alt="" aria-hidden="true">
+		<img src="../../images/ico/ic_mypension_03.svg" alt="" aria-hidden="true">
+		<img src="../../images/ico/ic_mypension_04.svg" alt="" aria-hidden="true">
+		<img src="../../images/ico/ic_mypension_05.svg" alt="" aria-hidden="true">
+		<img src="../../images/ico/ic_mypension_06.svg" alt="" aria-hidden="true">
+		<img src="../../images/ico/ic_mypension_07.svg" alt="" aria-hidden="true">
+	</div>
+	<div class="row">
+		<img src="../../images/ico/ic_pension_box_01.png" alt="" aria-hidden="true">
+		<img src="../../images/ico/ic_pension_box_02.png" alt="" aria-hidden="true">
+		<img src="../../images/ico/ic_pension_box_03.png" alt="" aria-hidden="true">
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;img src=&#x22;../../images/ico/ic_mypension_01.svg&#x22; alt=&#x22;&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+&#x3C;img src=&#x22;../../images/ico/ic_mypension_02.svg&#x22; alt=&#x22;&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+&#x3C;img src=&#x22;../../images/ico/ic_mypension_03.svg&#x22; alt=&#x22;&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+&#x3C;img src=&#x22;../../images/ico/ic_mypension_04.svg&#x22; alt=&#x22;&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+&#x3C;img src=&#x22;../../images/ico/ic_mypension_05.svg&#x22; alt=&#x22;&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+&#x3C;img src=&#x22;../../images/ico/ic_mypension_06.svg&#x22; alt=&#x22;&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+&#x3C;img src=&#x22;../../images/ico/ic_mypension_07.svg&#x22; alt=&#x22;&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+
+&#x3C;img src=&#x22;../../images/ico/ic_pension_box_01.png&#x22; alt=&#x22;&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+&#x3C;img src=&#x22;../../images/ico/ic_pension_box_02.png&#x22; alt=&#x22;&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+&#x3C;img src=&#x22;../../images/ico/ic_pension_box_03.png&#x22; alt=&#x22;&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+</code></pre>
+
+<h3 class="sec-title">상태값</h3>
+<div class="code-preview" style="background-color:var(--ui-colr4); padding:20px;">
+	<div class="row">
+		<div class="unit-group">
+			<div class="status-txt spare">
+				<span>여유</span>
+			</div>
+			<div class="status-txt maintain">
+				<span>유지</span>
+			</div>
+			<div class="status-txt appropriate">
+				<span>적정</span>
+			</div>
+			<div class="status-txt prepare">
+				<span>준비</span>
+			</div>
+			<div class="status-txt shortage">
+				<span>부족</span>
+			</div>
+			<div class="status-txt normal">
+				<span>보통</span>
+			</div>
+		</div>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;div class=&#x22;unit-group&#x22;&#x3E;
+&#x9;&#x3C;div class=&#x22;status-txt spare&#x22;&#x3E;
+&#x9;&#x9;&#x3C;span&#x3E;&#xC5EC;&#xC720;&#x3C;/span&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;status-txt maintain&#x22;&#x3E;
+&#x9;&#x9;&#x3C;span&#x3E;&#xC720;&#xC9C0;&#x3C;/span&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;status-txt appropriate&#x22;&#x3E;
+&#x9;&#x9;&#x3C;span&#x3E;&#xC801;&#xC815;&#x3C;/span&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;status-txt prepare&#x22;&#x3E;
+&#x9;&#x9;&#x3C;span&#x3E;&#xC900;&#xBE44;&#x3C;/span&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;status-txt shortage&#x22;&#x3E;
+&#x9;&#x9;&#x3C;span&#x3E;&#xBD80;&#xC871;&#x3C;/span&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;status-txt normal&#x22;&#x3E;
+&#x9;&#x9;&#x3C;span&#x3E;&#xBCF4;&#xD1B5;&#x3C;/span&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+</code></pre>
+
+			<!-- 내용끝 -->
+		</div>
+	</section>
+</div>
+<style>
+	.ic-only + .ic-only {margin-left:1.6rem;}
+	.ic24 {width:2.4rem; height:2.4rem;}
+	.code-preview img {margin-right:2.4rem;}
+</style>
+
+</body>
+</html>

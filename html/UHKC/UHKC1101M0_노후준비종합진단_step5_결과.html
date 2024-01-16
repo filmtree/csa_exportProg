@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+		<script src="../../js/zoom.js"></script>
+	<script src="../../js/ui_temp.js"></script> <!-- 231116 추가-->
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header --> <!-- 231116 수정-->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">진단ㆍ상담 서비스</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                            <li><a href="#none" target="_self">재무진단</a></li>
+                            <li><a href="#none" target="_self">노후준비정보</a></li>
+                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep2">
+                        <button type="button" class="breadcrumb-trigger current">노후준비종합진단</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">상담지사안내</a></li>
+                            <li><a href="#none" target="_self">상담지자체안내</a></li>
+                            <li class="current"><a href="#none" target="_self">노후준비종합진단</a></li>
+                            <li><a href="#none" target="_self">온라인상담</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">방문상담신청</a></li>
+                            <li><a href="#none" target="_self">교육신청</a></li>
+                            <li><a href="#none" target="_self">강사정보</a></li>
+                            <li><a href="#none" target="_self">자가진단</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner">
+            <div class="page-header">
+                <div class="page-title"><!--<a href="#" class="ic-only back">뒤로가기</a>--><h2>노후준비종합진단</h2></div>
+                <div class="page-desc">
+                    <button type="button" class="page-desc-btn _has-tooltip"><span>노후준비종합진단 안내</span><i class="ic-only f-pg-desc"></i></button>
+                    <div class="desc-box _tooltipbox">
+                        <div class="desc-box-inner">
+                            <div class="desc-content">
+                                <p>
+                                    노후준비 종합진단을 통해 현재의 노후준비 수준과 유형을 진단하여 균형이는 노후준비를 지원합니다. <br>
+                                    보다 자세한 상담을 원하시면 가까운 국민연금공단 <span class="fc-primary">행복노후준비지원센터</span>를 찾아주세요.
+                                    로그인을 하시면 진단결과가 저장되며, <span class="fc-primary">마이페이지</span>에서 확인 가능합니다.
+                                </p>
+                            </div>
+                            <button type="button" class="ic-only box-close">창닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-wrap">
+                <!-- S : 2311월 -->
+                <!--콘텐츠 영역-->
+                <ul class="equal-list step">
+                    <li class="end">
+                        <em class="unit">01</em>
+                        <div class="type">기본사항</div>
+                    </li>
+                    <li class="end">
+                        <em class="unit">02</em>
+                        <div class="type">재무</div>
+                    </li>
+                    <li class="end">
+                        <em class="unit">03</em>
+                        <div class="type">건강</div>
+                    </li>
+                    <li class="end">
+                        <em class="unit">04</em>
+                        <div class="type">여가활동</div>
+                    </li>
+                    <li class="active">
+                        <em class="unit">05</em>
+                        <div class="type">대인관계</div>
+                    </li>
+                    <li>
+                        <em class="unit">06</em>
+                        <div class="type">종합진단결과</div>
+                    </li>
+                </ul>   
+                <h3 class="cont-title dot">나의 재무 진단결과</h3>
+                <div class="color-box">
+                    <dl class="result-type-orange">
+                        <dt>사회적 관계망이 작은 비친밀형</dt>
+                        <dd>가깝게 지내는 사람들의 수도 적고 이들과의 친밀도도 낮은 유형</dd>
+                    </dl>
+                </div>
+                <ul class="data-type-list">
+                    <li class="items">
+                        <dl class="unit-group">
+                            <dt class="unit-title">전반적 대인관계 만족도</dt>
+                            <dd class="description">보통</dd>
+                        </dl>
+                        <div class="unit-group">
+                            <div class="status-txt">
+                                <span>적정</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <dl class="unit-group">
+                            <dt class="unit-title">가족과의 관계</dt>
+                            <dd class="description">40대 평균과 같거나 높음</dd>
+                        </dl>
+                        <div class="unit-group">
+                            <div class="status-txt">
+                                <span>여유</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <dl class="unit-group">
+                            <dt class="unit-title">친구/이웃/직장동료와의 관계</dt>
+                            <dd class="description">40대 평균과 같거나 높음</dd>
+                        </dl>
+                        <div class="unit-group">
+                            <div class="status-txt">
+                                <span>여유</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <dl class="unit-group">
+                            <dt class="unit-title">참석하는 모임에서의 친밀도</dt>
+                            <dd class="description">40대 평균과 같거나 높음</dd>
+                        </dl>
+                        <div class="unit-group">
+                            <div class="status-txt">
+                                <span>여유</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <dl class="unit-group">
+                            <dt class="unit-title">나의 대인관계 스타일</dt>
+                            <dd class="description">
+                                <p>개방형</p>
+                                <p>적절하게 자기표현을 잘 하고 다른 사람의 말도 잘 경청하며 다른 사람에게 호감과 친밀감을 주게 되어 인기가 많음.</p>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+
+                <p class="cont-title dot">위의 유형이 노후준비를 위해 실천할 사항</p>
+                <div class="color-box box-inner-list">
+                    <ul class="txt-list dot blue">
+                        <li>소극적 대인관계 원인 파악 후 개선을 위해 노력해 보시기 바랍니다.</li>
+                        <li>대인관계 규모 확대 및 친밀도 향상을 위해 노력해 보시기 바랍니다.</li>
+                    </ul>
+                </div>
+
+                <div class="cont-bottom">
+                    <div class="btn-group">
+                        <button type="button" class="button-tertiary -lg">이전</button>
+                        <button type="submit" class="button-primary -lg">종합 진단결과</button>
+                    </div>
+                </div>
+                <!--//콘텐츠 영역-->
+
+                <!--// E : 2311월 -->
+            </div>
+            <!-- 공통UI - 만족도조사 --> <!-- 231116 수정-->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer --> <!-- 231116 수정-->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

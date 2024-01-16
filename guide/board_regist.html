@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>테이블</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<div class="code-preview">
+
+	<div class="board-wrap bd-write">
+		<div class="field">
+			<label class="field-label" for="성명">성명</label>
+			<div class="form-group-controls">
+				<input type="text" id="성명" placeholder="실명을 입력해주세요" class="charLength7"><button type="button" class="button-fourth">휴대폰 본인 인증</button>
+			</div>
+		</div>
+		<div class="field">
+			<label class="field-label" for="공개여부">글 공개여부</label>
+			<div class="form-group">
+				<label class="inp-radio">
+					<input type="radio" id="공개여부" name="radioGroup1" checked="checked">
+					<span>공개</span>
+				</label>
+				<label class="inp-radio">
+					<input type="radio" id="공개여부" name="radioGroup1">
+					<span>비공개</span>
+				</label>
+			</div>
+		</div>
+		<div class="field">
+			<label class="field-label">담당지사</label>
+			<div class="form-group">
+				<select class="charLength7 select">
+					<option value="유형전체">선택하세요.</option>
+					<option value="">서울</option>
+					<option value="">부산</option>
+				</select>
+			</div>
+		</div>
+		<div class="field">
+			<label class="field-label">이메일</label>
+			<div class="form-group-email">
+				<input type="text" class="email-id" title="이메일 사용자 아이디"><span class="inp-split">@</span><input type="text" class="email-domain" title="이메일 도메인">
+				<select title="이메일 도메인 선택" class="email-domain-opt">
+					<option value="">직접입력</option>
+					<option value="">nate.com</option>
+					<option value="">naver.com</option>
+					<option value="">gmail.com</option>
+					<option value="">kakao.com</option>
+				</select>
+			</div>
+		</div>
+		<div class="field">
+			<label class="field-label">휴대전화번호</label>
+			<div class="form-group-tel">
+				<input type="text" placeholder="010" class="tel-first" title="휴대전화 식별번호"><span class="inp-split">-</span><input type="text" class="tel-second" title="휴대전화 중간 번호"><span class="inp-split">-</span><input type="text" class="tel-third" title="휴대전화 뒷 번호">
+			</div>
+		</div>
+		<div class="field">
+			<label class="field-label" for="상담분야">상담분야</label>
+			<div class="form-group mo-hide">
+				<label class="inp-radio">
+					<input type="radio" id="상담분야" name="radioGroup2">
+					<span>재무</span>
+				</label>
+				<label class="inp-radio">
+					<input type="radio" id="상담분야" name="radioGroup2" checked="checked">
+					<span>건강</span>
+				</label>
+				<label class="inp-radio">
+					<input type="radio" id="상담분야" name="radioGroup2">
+					<span>일/취업</span>
+				</label>
+				<label class="inp-radio">
+					<input type="radio" id="상담분야" name="radioGroup2">
+					<span>취미/여가</span>
+				</label>
+				<label class="inp-radio">
+					<input type="radio" id="상담분야" name="radioGroup2">
+					<span>주거</span>
+				</label>
+				<label class="inp-radio">
+					<input type="radio" id="상담분야" name="radioGroup2">
+					<span>대인관계</span>
+				</label>
+				<label class="inp-radio">
+					<input type="radio" id="상담분야" name="radioGroup2">
+					<span>기타</span>
+				</label>
+			</div>
+			<div class="form-group mo-show">
+				<select class="charLength7 select" title="상담분야 선택">
+					<option value="">재무</option>
+					<option value="">건강</option>
+					<option value="">일/취업</option>
+					<option value="">취미/여가</option>
+					<option value="">주거</option>
+					<option value="">대인관계</option>
+					<option value="">기타</option>
+				</select>
+			</div>
+		</div>
+		<div class="field">
+			<label class="field-label" for="비밀번호">글 비밀번호</label>
+			<div class="form-group">
+				<input type="text" id="비밀번호" class="charLength7" placeholder="비밀번호를 입력하세요"><p class="txt-helper">(9~20자의 숫자, 영문, 특수문자 조합)</p>
+			</div>
+		</div>
+		<div class="field">
+			<div class="form-group type-row multiple">
+				<label class="field-label hidden" for="제목입력">제목입력</label>
+				<input type="text" id="제목입력" placeholder="제목을 입력해주세요">
+				<label class="field-label hidden" for="내용입력">내용 입력</label>
+				<div class="inp-textarea w100">
+					<textarea rows="5" id="내용입력" class="fm-textarea h320px"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cont-bottom">
+		<div class="btn-group">
+			<button type="button" class="button-tertiary -lg">이전</button>
+			<button type="button" class="button-primary -lg">글등록</button>
+		</div>
+	</div>
+
+</div>	
+
+			<!-- 내용끝 -->
+		</div>	
+	</section>
+</div>
+
+</body>
+</html>

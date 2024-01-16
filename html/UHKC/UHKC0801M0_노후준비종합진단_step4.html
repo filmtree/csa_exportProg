@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+		<script src="../../js/zoom.js"></script>
+	<script src="../../js/ui_temp.js"></script> <!-- 231116 추가-->
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header --> <!-- 231116 수정-->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">진단ㆍ상담 서비스</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                            <li><a href="#none" target="_self">재무진단</a></li>
+                            <li><a href="#none" target="_self">노후준비정보</a></li>
+                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep2">
+                        <button type="button" class="breadcrumb-trigger current">노후준비종합진단</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">상담지사안내</a></li>
+                            <li><a href="#none" target="_self">상담지자체안내</a></li>
+                            <li class="current"><a href="#none" target="_self">노후준비종합진단</a></li>
+                            <li><a href="#none" target="_self">온라인상담</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">방문상담신청</a></li>
+                            <li><a href="#none" target="_self">교육신청</a></li>
+                            <li><a href="#none" target="_self">강사정보</a></li>
+                            <li><a href="#none" target="_self">자가진단</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner">
+            <div class="page-header">
+                <div class="page-title"><!--<a href="#" class="ic-only back">뒤로가기</a>--><h2>노후준비종합진단</h2></div>
+                <div class="page-desc">
+                    <button type="button" class="page-desc-btn _has-tooltip"><span>노후준비종합진단 안내</span><i class="ic-only f-pg-desc"></i></button>
+                    <div class="desc-box _tooltipbox">
+                        <div class="desc-box-inner">
+                            <div class="desc-content">
+                                <p>
+                                    노후준비 종합진단을 통해 현재의 노후준비 수준과 유형을 진단하여 균형이는 노후준비를 지원합니다. <br>
+                                    보다 자세한 상담을 원하시면 가까운 국민연금공단 <span class="fc-primary">행복노후준비지원센터</span>를 찾아주세요.
+                                    로그인을 하시면 진단결과가 저장되며, <span class="fc-primary">마이페이지</span>에서 확인 가능합니다.
+                                </p>
+                            </div>
+                            <button type="button" class="ic-only box-close">창닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-wrap">
+                <!-- S : 2311월 -->
+                <!--콘텐츠 영역-->
+                <ul class="equal-list step">
+                    <li class="end">
+                        <em class="unit">01</em>
+                        <div class="type">기본사항</div>
+                    </li>
+                    <li class="end">
+                        <em class="unit">02</em>
+                        <div class="type">재무</div>
+                    </li>
+                    <li class="end">
+                        <em class="unit">03</em>
+                        <div class="type">건강</div>
+                    </li>
+                    <li class="active">
+                        <em class="unit">04</em>
+                        <div class="type">여가활동</div>
+                    </li>
+                    <li>
+                        <em class="unit">05</em>
+                        <div class="type">대인관계</div>
+                    </li>
+                    <li>
+                        <em class="unit">06</em>
+                        <div class="type">종합진단결과</div>
+                    </li>
+                </ul>
+                <h3 class="cont-title">여가활동상태 입력</h3>
+                <p class="cont-desc">아래의 내용을 확인하시고 항목별로 정도를 결정하신 후 선택버튼을 체크해주세요. </p>
+                <!-- survey list -->
+                <ul>
+                    <!-- 1 -->
+                    <li class="qnalist">
+                        <p class="question-title"><em class="ic-q">Q</em>1. 현재 취미·여가 활동을 정기적으로 하고 있다. (가장 활발하게 하고 있는 여가 기준으로 응답하세요.)</p>
+                        <div class="question-answer">
+                            <em class="ic-a">A</em>
+                            <div class="inp-check-list label typeA">
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio1">
+                                        <span>활동없음</span>
+                                    </label>                            
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio1">
+                                        <span>일년에 한두번</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio1">
+                                        <span>비정기적</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio1">
+                                        <span>매달 정기적</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio1">
+                                        <span>매주 정기적</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="txt-list dot gray inner-txt">
+                            <li>(가장 활발) 가장 적극적으로 참여</li>
+                        </ul>
+                    </li>
+                    <!-- 2 -->
+                    <li class="qnalist">
+                        <p class="question-title"><em class="ic-q">Q</em>2. 현재 가장 활발하게 하고 있는 취미·여가활동을 시작한 후 이 정도 기간이 지났다.</p>
+                        <div class="question-answer">
+                            <em class="ic-a">A</em>
+                            <div class="inp-check-list label typeA">
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio2">
+                                        <span>활동없음</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio2">
+                                        <span>1년이내</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio2">
+                                        <span>1년~3년</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio2">
+                                        <span>3년~5년</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio2">
+                                        <span>5년이상</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 3 -->
+                    <li class="qnalist">
+                        <p class="question-title"><em class="ic-q">Q</em>3. 현재의 취미·여가에 대해 만족한다.</p>
+                        <div class="question-answer">
+                            <em class="ic-a">A</em>
+                            <div class="inp-check-list label typeA">
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio3">
+                                        <span>전혀 아니다</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio3">
+                                        <span>아니다</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio3">
+                                        <span>보통</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio3">
+                                        <span>그렇다</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio3">
+                                        <span>매우 그렇다</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="txt-list dot gray inner-txt">
+                            <li>(잘 관리) 정기적인 의사방문, 혈압약, 혈당약, 인슐린 등 복용, 자가 혈압·혈당 체크</li>
+                        </ul>
+                    </li>
+                    <!-- 4 -->
+                    <li class="qnalist">
+                        <p class="question-title"><em class="ic-q">Q</em>4. 여가활동 알아보기를 클릭하여 지난 1년간 해본 여가활동과 노후에 해보고 싶은 여가활동에 대하여 각각 v표 하세요.</p>
+                        <div class="question-answer">
+                            <em class="ic-a">A</em>
+                            <button class="button-tertiary choice-button" id="choiceBtn1">
+                                <label class="inp-checkbox">
+                                    <input type="checkbox" name="checkbox">
+                                    <span>여가활동 알아보기</span>
+                                </label>
+                            </button>
+                        </div>
+                    </li>
+                    <!-- 5 -->
+                    <li class="qnalist">
+                        <p class="question-title"><em class="ic-q">Q</em>5. 나의 취미·여가활동은 다른 사람들에 비하여 활발하다.</p>
+                        <div class="question-answer">
+                            <em class="ic-a">A</em>
+                            <div class="inp-check-list label typeA">
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio5">
+                                        <span>전혀 아니다</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio5">
+                                        <span>아니다</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio5">
+                                        <span>보통</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio5">
+                                        <span>그렇다</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio5">
+                                        <span>매우 그렇다</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>                        
+                    <!-- 6 -->
+                    <li class="qnalist">
+                        <p class="question-title"><em class="ic-q">Q</em>6. 노후 취미·여가활동을 위해 정보를 찾거나 교육을 받는 등의 준비를 해본 적이 있다.</p>
+                        <div class="question-answer row">
+                            <em class="ic-a">A</em>
+                            <div class="inp-check-list label typeA">
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio6">
+                                        <span>전혀 아니다</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio6">
+                                        <span>아니다</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio6">
+                                        <span>보통</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio6">
+                                        <span>그렇다</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio6">
+                                        <span>매우 그렇다</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 7 -->
+                    <li class="qnalist">
+                        <p class="question-title"><em class="ic-q">Q</em>7. 노후 취미·여가활동에 대해 생각해 본 적이 있다.</p>
+                        <div class="question-answer">
+                            <em class="ic-a">A</em>
+                            <div class="inp-check-list label typeA">
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio2">
+                                        <span>활동없음</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio2">
+                                        <span>1년이내</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio2">
+                                        <span>1년~3년</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio2">
+                                        <span>3년~5년</span>
+                                    </label>
+                                </div>
+                                <div class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio2">
+                                        <span>5년이상</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- choice -->
+                    <li class="qnalist">
+                        <button class="button-tertiary choice-button" id="choiceBtn">
+                            <label class="inp-checkbox">
+                                <input type="checkbox" name="checkbox">
+                                <span>(선택) 나의 여가성향 알아보기</span>
+                            </label>
+                        </button>
+                    </li>
+                </ul>
+                <!--// survey list -->                    
+                <div class="cont-bottom">
+                    <div class="btn-group">
+                        <button type="button" class="button-tertiary -lg">이전</button>
+                        <button type="submit" class="button-primary -lg">진단결과</button>
+                    </div>
+                </div>
+                
+                <!-- layer 현재 여가활동과 노후의 여가활동 -->
+                <div class="modal dim full" id="pop-alert1">
+                    <div class="modalWrap h720px">
+                        <div class="modal-header">
+                            <div class="modal-title">
+                                <h3>현재 여가활동과 노후의 여가활동</h3>
+                            </div>
+                            <button class="btn-close">모달창닫기</button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- 내용시작 -->
+                            <div class="modal-body-inner">
+                                <!-- survey list -->
+                                <div class="color-box none">
+                                    <ul class="txt-list dot blue align-left">
+                                        <li>지난 1년간 해본 여가활동과 노후에 해보고 싶은 여가활동을 모두 선택하세요. (중복체크 가능)</li>
+                                    </ul>
+                                </div>
+                                <ul>
+                                    <!-- 1 -->
+                                    <li class="qnalist">
+                                        <p class="question-title"><em class="ic-q">Q</em>1. 공연 관람 (TV관람 포함) 영화, 전시회등</p>
+                                        <div class="question-answer">
+                                            <em class="ic-a">A</em>
+                                            <div class="inp-check-list label">
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio1-pop2">
+                                                        <span>지난 1년간 해봤다</span>
+                                                    </label>
+                                                </div>
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio1-pop2">
+                                                        <span>노후에 해보고 싶다</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 2 -->
+                                    <li class="qnalist">
+                                        <p class="question-title"><em class="ic-q">Q</em>2. 스포츠 관람 (tv 관람 포함) 축구, 야구 등</p>
+                                        <div class="question-answer">
+                                            <em class="ic-a">A</em>
+                                            <div class="inp-check-list label">
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio2-pop2">
+                                                        <span>지난 1년간 해봤다</span>
+                                                    </label>
+                                                </div>
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio2-pop2">
+                                                        <span>노후에 해보고 싶다</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 3 -->
+                                    <li class="qnalist">
+                                        <p class="question-title"><em class="ic-q">Q</em>3. 문화예술 직접 활동 사진 촬영, 악기연주, 등</p>
+                                        <div class="question-answer">
+                                            <em class="ic-a">A</em>
+                                            <div class="inp-check-list label">
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio3-pop2">
+                                                        <span>지난 1년간 해봤다</span>
+                                                    </label>
+                                                </div>
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio3-pop2">
+                                                        <span>노후에 해보고 싶다</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 4 -->
+                                    <li class="qnalist">
+                                        <p class="question-title"><em class="ic-q">Q</em>4. 운동, 스포츠 활동 등산, 헬스, 낚시 등</p>
+                                        <div class="question-answer">
+                                            <em class="ic-a">A</em>
+                                            <div class="inp-check-list label">
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio2-pop2">
+                                                        <span>지난 1년간 해봤다</span>
+                                                    </label>
+                                                </div>
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio2-pop2">
+                                                        <span>노후에 해보고 싶다</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 5 -->
+                                    <li class="qnalist">
+                                        <p class="question-title"><em class="ic-q">Q</em>5. 여행 캠핑 등</p>
+                                        <div class="question-answer">
+                                            <em class="ic-a">A</em>
+                                            <div class="inp-check-list label">
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio5-pop2">
+                                                        <span>지난 1년간 해봤다</span>
+                                                    </label>
+                                                </div>
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio5-pop2">
+                                                        <span>노후에 해보고 싶다</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 6 -->
+                                    <li class="qnalist">
+                                        <p class="question-title"><em class="ic-q">Q</em>6. 취미 오락 활동 유튜브 제작 및 시청, SNS, 웹서핑, 반려동물 산책, 온라인게임 등</p>
+                                        <div class="question-answer">
+                                            <em class="ic-a">A</em>
+                                            <div class="inp-check-list label">
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio6-pop2">
+                                                        <span>지난 1년간 해봤다</span>
+                                                    </label>
+                                                </div>
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio6-pop2">
+                                                        <span>노후에 해보고 싶다</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 7 -->
+                                    <li class="qnalist">
+                                        <p class="question-title"><em class="ic-q">Q</em>7. 어학, 컴퓨터 등 교양학습</p>
+                                        <div class="question-answer">
+                                            <em class="ic-a">A</em>
+                                            <div class="inp-check-list label">
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio7-pop2">
+                                                        <span>지난 1년간 해봤다</span>
+                                                    </label>
+                                                </div>
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio7-pop2">
+                                                        <span>노후에 해보고 싶다</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 8 -->
+                                    <li class="qnalist">
+                                        <p class="question-title"><em class="ic-q">Q</em>8. 복지시설 등 자원봉사</p>
+                                        <div class="question-answer">
+                                            <em class="ic-a">A</em>
+                                            <div class="inp-check-list label">
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio8-pop2">
+                                                        <span>지난 1년간 해봤다</span>
+                                                    </label>
+                                                </div>
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio8-pop2">
+                                                        <span>노후에 해보고 싶다</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 9 -->
+                                    <li class="qnalist">
+                                        <p class="question-title"><em class="ic-q">Q</em>9. 종교활동</p>
+                                        <div class="question-answer">
+                                            <em class="ic-a">A</em>
+                                            <div class="inp-check-list label">
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio9-pop2">
+                                                        <span>지난 1년간 해봤다</span>
+                                                    </label>
+                                                </div>
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio9-pop2">
+                                                        <span>노후에 해보고 싶다</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 10 -->
+                                    <li class="qnalist">
+                                        <p class="question-title"><em class="ic-q">Q</em>10. 동호회 등 사교모임</p>
+                                        <div class="question-answer">
+                                            <em class="ic-a">A</em>
+                                            <div class="inp-check-list label">
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio10-pop2">
+                                                        <span>지난 1년간 해봤다</span>
+                                                    </label>
+                                                </div>
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio10-pop2">
+                                                        <span>노후에 해보고 싶다</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!--// survey list -->
+                            </div>
+                        <!-- 내용끝 -->
+                        </div>
+                        <div class="modal-footer">
+                            <div class="btn-group">
+                                <button type="button" class="button-primary -lg btn-close">입력완료</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--// layer 현재 여가활동과 노후의 여가활동 -->
+                <!-- layer 나의 여가 성향 알아보기 -->
+                <div class="modal dim full" id="pop-alert2">
+                    <div class="modalWrap h720px">
+                        <div class="modal-header">
+                            <div class="modal-title">
+                                <h3>나의 여가 성향 알아보기</h3>
+                            </div>
+                            <button class="btn-close">모달창닫기</button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- 내용시작 -->
+                            <div class="modal-body-inner">
+                                <!-- survey list -->
+                                <ul>
+                                    <!-- 1 -->
+                                    <li class="qnalist none">
+                                        <p class="question-title"><em class="ic-q">Q</em>내가 좋아하는 여가활동 스타일? (하나만 선택)</p>
+                                        <div class="question-answer">
+                                            <em class="ic-a">A</em>
+                                            <div class="inp-check-list label">
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio1-pop2">
+                                                        <span>직업같은 여가활동</span>
+                                                    </label>
+                                                </div>
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio1-pop2">
+                                                        <span>취미같은 여가활동</span>
+                                                    </label>
+                                                </div>
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio1-pop2">
+                                                        <span>자원봉사 여가활동</span>
+                                                    </label>
+                                                </div>
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio1-pop2">
+                                                        <span>일상적인 여가활동</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 2 -->
+                                    <li class="qnalist">
+                                        <p class="question-title"><em class="ic-q">Q</em>내가 여가활동을 하게 되는 이유는? (하나만 선택)</p>
+                                        <div class="question-answer">
+                                            <em class="ic-a">A</em>
+                                            <div class="inp-check-list label">
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio2-pop2">
+                                                        <span>배움</span>
+                                                    </label>
+                                                </div>
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio2-pop2">
+                                                        <span>사교</span>
+                                                    </label>
+                                                </div>
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio2-pop2">
+                                                        <span>건강증긴 능력향상</span>
+                                                    </label>
+                                                </div>
+                                                <div class="inp-wrap">
+                                                    <label class="inp-radio">
+                                                        <input type="radio" name="radio2-pop2">
+                                                        <span>휴식 안정</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!--// survey list -->
+                                <p class="rel-txt">※ 출처 : 이민홍·박영란·이금룡·엄기욱(2014). 노인여가성향진단도구의 개발에 관한 탐색적 연구</p>
+                            </div>
+                            <!-- 내용끝 -->
+                        </div>
+                        <div class="modal-footer">
+                            <div class="btn-group">
+                                <button type="button" class="button-primary -lg  btn-close">입력완료</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--// layer 나의 여가 성향 알아보기 -->
+                <script>
+                    //commonUI.modal('모달타겟', 포커스가 되돌아갈 요소 );
+                    document.querySelector('#choiceBtn1').addEventListener('click', (e)=>{
+                        //commonUI.modal('#test', e.target);
+                        commonUI.modal('#pop-alert1', '#choiceBtn1');
+                    });
+                    document.querySelector('#choiceBtn').addEventListener('click', (e)=>{
+                        //commonUI.modal('#test', e.target);
+                        commonUI.modal('#pop-alert2', '#choiceBtn');
+                        
+                    });
+                    $(function(){
+
+                        // input clear 버튼
+                        // var iptCheck = 0;
+                        // $(document).on("change keyup paste input",".inner-button input",function () {
+                        //     var iptCheck = $(this).val();
+                        //     if(iptCheck.length){
+                        //         $(this).closest(".form-group-txt").addClass("active");
+                        //         $(this).closest(".text-clear-btn").css("display","block");
+                        //     }else{
+                        //         $(this).parents(".form-group-txt").removeClass('active');   
+                        //         $(this).siblings(".text-clear-btn").css("display","");
+                        //     }
+                        // });
+                        // $(document).on("focus", ".inner-button input", function(){
+                        //     if(iptCheck.length){
+                        //         $(this).siblings(".text-clear-btn").css("display","block");
+                        //         $(this).closest(".form-group-txt").addClass("active");
+                        //     }
+                        // });
+                        // $('.inner-button input').blur(function(){
+                        //     if(!$('.text-clear-btn:hover').length){
+                        //         $(this).parents(".form-group-txt").removeClass('active');
+                        //         $(this).siblings(".text-clear-btn").css("display","");
+                        //     }else{
+                        //         $(this).parents(".form-group-txt").addClass('active');
+                        //     }
+                        // });
+                        // $('.text-clear-btn').click(function(){
+                        //     $(this).siblings('input').val('');
+                        //     $(this).siblings('input').focus();
+                        //     $(this).closest('.form-group-txt').removeClass('active');
+                        //     $(this).css("display","");
+                        // });
+                    });
+                    
+                </script>
+                <!-- // layer -->
+                <!--//콘텐츠 영역-->
+
+                <!--// E : 2311월 -->
+            </div>
+            <!-- 공통UI - 만족도조사 --> <!-- 231116 수정-->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer --> <!-- 231116 수정-->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

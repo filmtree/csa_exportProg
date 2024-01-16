@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- s: header -->
+      <header id="header"></header>
+      <!-- e: header -->
+
+      <!-- s: Loaction Information Link -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-nav">
+          <ol class="breadcrumb-location">
+            <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+            <li class="breadcrumb-depth dep1">
+              <button type="button" class="breadcrumb-trigger">재무진단</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                <li class="current"><a href="#none" target="_self">재무진단</a></li>
+                <li><a href="#none" target="_self">노후준비정보</a></li>
+                <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger">국민연금알아보기</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">간단재무설계</a></li>
+                <li><a href="#none" target="_self">노후준비자금설계</a></li>
+                <li><a href="#none" target="_self">종합재무설계</a></li>
+                <li><a href="#none" target="_self">목적자금설계</a></li>
+                <li><a href="#none" target="_self">재무계산기</a></li>
+                <li><a href="#none" target="_self">국민연금준비수준</a></li>
+                <li><a href="#none" target="_self">내연금알아보기</a></li>
+                <li class="current"><a href="#none" target="_self">국민연금알아보기</a></li>
+                <li><a href="#none" target="_self">기초연금모의계산</a></li>
+                <li><a href="#none" target="_self">연금제도안내</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger current">장애유족 예상연금조회</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">예상연금조회</a></li>
+                <li><a href="#none" target="_self">가입내역조회</a></li>
+                <li class="current"><a href="#none" target="_self">장애유족 예상연금조회</a></li>
+                <li><a href="#none" target="_self">예상연금 모의계산</a></li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <!-- e: Loaction Information Link -->
+
+      <!-- s: Main -->
+      <main id="conatiner" class="finance pension-survivors-disabilities">
+        <!--s: Page Title-->
+        <div class="page-header">
+          <div class="page-title">
+            <a href="#" class="ic-only back">뒤로가기</a>
+            <h2>장애유족예상연금 조회</h2>
+          </div>
+          <div class="page-desc">
+            <button type="button" class="page-desc-btn _has-tooltip" title="장애유족예상연금 조회 안내 보기">
+              <span>장애유족예상연금 조회 안내</span>
+              <i class="ic-only f-pg-desc" aria-hidden="true"></i>
+            </button>
+            <div class="desc-box _tooltipbox" role="tooltip">
+              <div class="desc-box-inner">
+                <div class="desc-content">
+                  <h4 class="sr-only">장애유족예상연금 조회 안내</h4>
+                  <p>고객님께서 현재까지 납부하신 내역을 기준으로 사유발생일을 현재(2023년 12월 05일)로 하여 산정된 예상 장애·유족연금입니다.</p>
+                </div>
+                <button type="button" class="ic-only box-close">창닫기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--e: Page Title-->
+
+        <!-- s: Print Header -->
+        <header class="print-header">
+          <h2>장애유족예상연금 조회</h2>
+        </header>
+        <!-- e: Print Header -->
+
+        <!--s: Contents -->
+        <div class="content-wrap">
+          <!-- s: 장애ㆍ유족예상연금 -->
+          <div class="con-table-header">
+            <h3 class="cont-title mb0">장애ㆍ유족예상연금</h3>
+            <div class="d-flex gap8">
+              <a href="https://www.nps.or.kr/jsppage/info/easy/easy_04_03.jsp" class="button-primary -sm round printNone">장애연금 수급요건 확인</a>
+              <a href="https://www.nps.or.kr/jsppage/info/easy/easy_04_04.jsp" class="button-primary -sm round printNone">유족연금 수급요건 확인</a>
+            </div>
+          </div>
+          <div class="con-table all-center">
+            <table class="grid-min-width">
+              <caption>
+                유족연금, 장애연금 1급, 2급, 3급, 4급의 예상연금액과 현재까지 납부보험료로 구성된 표.
+              </caption>
+              <colgroup>
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 50%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">구분</th>
+                  <th scope="col">예상연금액</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="2">유족연금</td>
+                  <td>월 000,000원 (연 0,000,000원)</td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="4">장애연금</th>
+                  <th scope="row">1급</th>
+                  <td>월 000,000원 (연 0,000,000원)</td>
+                </tr>
+                <tr>
+                  <th scope="row">2급</th>
+                  <td>월 000,000원 (연 0,000,000원)</td>
+                </tr>
+                <tr>
+                  <th scope="row">3급</th>
+                  <td>월 000,000원 (연 0,000,000원)</td>
+                </tr>
+                <tr>
+                  <th scope="row">4급</th>
+                  <td>월 000,000원 (연 0,000,000원)</td>
+                </tr>
+              </tbody>
+              <tfoot class="fc-primary">
+                <tr>
+                  <td colspan="2">현재까지 납부보험료</td>
+                  <td>00,000,000원 (0000년07월 ~ 0000년12월 총 000개월)</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <ul class="txt-list dot mt16">
+            <li class="fc-primary">장애 또는 유족연금 수급요건에 해당하는 경우 지급사유발생일(유족연금: 사망일, 장애연금: 장애결정 기준일*)을 조회일 현재로 가정할 때 예상금액입니다.</li>
+            <li>장애결정 기준일은 장애심사가 완료된 후 확정됩니다.</li>
+            <li>정확한 수급요건 및 지급사유발생일은 국민연금공단 지사로 문의 바랍니다.</li>
+          </ul>
+          <!-- e: 장애ㆍ유족예상연금 -->
+
+          <!-- s: 연금계산내역 -->
+          <div class="con-table-header al mt56">
+            <h3 class="cont-title mb0">연금계산내역</h3>
+            <p class="cont-desc big mb0 ml8">(홍길동 고객님의 예상 장애 유족 연금 계산내역입니다.)</p>
+          </div>
+
+          <div class="con-table all-center mb16">
+            <table class="grid-min-width">
+              <caption>
+                총가입개월, 총 납부보험료, A값, B값으로 구성된 표.
+              </caption>
+              <colgroup>
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">총 가입개월</th>
+                  <td>000개월</td>
+                  <th scope="row">총 납부보험료</th>
+                  <td>000,000,000 원</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="has-help">
+                      <button type="button" class="_has-tooltip" title="A값 안내 보기">
+                        <span>A값</span>
+                        <i class="ic-only question printNone" aria-hidden="true"></i>
+                      </button>
+                      <!--tooltip-->
+                      <div class="desc-box type1 _tooltipbox" role="tooltip">
+                        <div class="desc-box-inner">
+                          <div class="desc-content">
+                            <h4 class="sr-only">A값 안내</h4>
+                            <p>연금수급 직전 3년간의 가입자 전체의 평균 소득월액의 평균액</p>
+                          </div>
+                          <button type="button" class="ic-only box-close">창닫기</button>
+                        </div>
+                      </div>
+                      <!--//tooltip-->
+                    </div>
+                  </th>
+                  <td>000,000,000 원</td>
+                  <th scope="row">
+                    <div class="has-help">
+                      <button type="button" class="_has-tooltip" title="B값 안내 보기">
+                        <span>B값</span>
+                        <i class="ic-only question printNone" aria-hidden="true"></i>
+                      </button>
+                      <!--tooltip-->
+                      <div class="desc-box type1 _tooltipbox" role="tooltip">
+                        <div class="desc-box-inner">
+                          <div class="desc-content">
+                            <h4 class="sr-only">B값 안내</h4>
+                            <p>가입자 개인의 가입기간 중 기준소득월액을 현재가치로 재평가한 평균액</p>
+                          </div>
+                          <button type="button" class="ic-only box-close">창닫기</button>
+                        </div>
+                      </div>
+                      <!--//tooltip-->
+                    </div>
+                  </th>
+                  <td>000,000,000 원</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- e: 연금계산내역 -->
+
+          <!-- s: 하단 버튼 -->
+          <div class="cont-bottom printNone">
+            <div class="btn-group">
+              <button type="button" class="button-primary -lg" onclick="window.print();">화면출력</button>
+            </div>
+          </div>
+          <!-- e: 하단 버튼 -->
+
+          <!-- s: 추가 설명 -->
+          <ul class="txt-list dot mt56">
+            <li>현재까지 납부보험료 총액은 조회일이 속하는 월분까지 납부한 것으로 가정하여 계산함에 따라 납부내역 조회에서 조회된 금액과차이가 있을 수 있습니다.</li>
+            <li>장애 및 유족연금의 예상연금액은 조회일 현재 수급사유발생 기준이므로 사유발생일에 따라 금액에 차이가 있을 수있습니다.</li>
+            <li>장애 및 유족연금은 초진일 또는 사망일 기준으로 연금보험료 납부요건 및 초진일 등이 충족되어야 지급됩니다.</li>
+            <li>장애연금은 가입자가 가입중 발생한 질병 또는 부상으로 장애를입어 노동능력이 상실 또는 감소된 경우레는 생계안정을 위하여 지급되는 급여로 장애정도(장애등급 1~4급)에 따라 지급됩니다.</li>
+            <li>예상연금 월액에 부양가족연금액은 포함되어 있 않습니다.</li>
+            <li>선택한 급여와 유족연금의 30%를 지급합니다.</li>
+            <li><span class="fc-primary fw-medium">소멸시효제도 안내</span> : 장애·유족연금 수급사유가 발생한 날로부터 5년 이내에 연금청구를 하지 않으면 청구일로부터 5년이 경과된 장애·유족연금액은 소멸시효로 인하여 받을 수 없게 되오니, 반드시 기한 내 청구하시기 바랍니다.</li>
+          </ul>
+          <!-- e: 추가 설명 -->
+
+          <!-- 공통UI - 해시태그 링크들 -->
+          <div class="hashtag-wrap"></div>
+          <!--// 공통UI - 해시태그 링크들 -->
+        </div>
+        <!--s: Contents -->
+      </main>
+      <!-- e: Main -->
+
+      <!-- s: footer -->
+      <footer id="footer"></footer>
+      <!-- e: footer -->
+    </div>
+
+    <!-- Modal : 장애유족예상연금 조회 -->
+
+    <div class="modal full dim" id="viewPensionAmountModal">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">장애유족예상연금 조회</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner"></div>
+        </div>
+        <!-- e: Modal Contents -->
+
+        <!-- s: Modal Footer -->
+        <div class="modal-footer">
+          <div class="btn-group">
+            <button type="button" class="button-primary -lg">예상연금액 보기</button>
+          </div>
+        </div>
+        <!-- e: Modal Footer -->
+      </div>
+    </div>
+
+    <script></script>
+  </body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>dialog</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<div class="code-preview">
+
+	<button class="button-primary" id="btn1">기본모달(헤더+바디+푸터버튼)</button>
+	<button class="button-secondary" id="btn2">모달2(헤더+바디)+dim full팝업</button>
+	<button class="button-fourth" id="btn3">모달3(헤더+바디+푸터버튼) full팝업</button>
+	<button class="button-fifth" onclick="openReportPop();">보고서 출력용 윈도우 팝업</button>
+	
+	<!--modal-btn1--><!--모바일 full버전 아님-->
+	<div class="modal" id="test1">
+		<div class="modalWrap test-size-sample-4">
+			<div class="modal-header">
+				<div class="modal-title">
+					<h3>모달제목: full팝업 아님</h3>
+				</div>
+				<button class="btn-close">모달창닫기</button>
+			</div>
+			<div class="modal-body">
+				<div style="height:40rem; background:#ddd;">
+					width, height 값은 콘텐츠에 따라 커스텀<br>width, height 값은 콘텐츠에 따라 커스텀<br>width, height 값은 콘텐츠에 따라 커스텀<br>
+					width, height 값은 콘텐츠에 따라 커스텀<br>width, height 값은 콘텐츠에 따라 커스텀<br>width, height 값은 콘텐츠에 따라 커스텀<br>
+					1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="btn-group">
+					<button type="button" class="button-tertiary -lg">이전</button>
+					<button type="button" class="button-primary -lg">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--modal-btn2-->
+	<div class="modal dim full" id="test2">
+		<div class="modalWrap test-size-sample-2">
+			<div class="modal-header">
+				<div class="modal-title">
+					<h3>팝업 back dim처리, footer 버튼영역 없음.</h3>
+				</div>
+				<button class="btn-close">모달창닫기</button>
+			</div>
+			<div class="modal-body h-full pad-none"><!--modal-body 패딩값 공통으로 적용된거 해지 class="pad-none"추가, 콘텐츠별로 커스텀-->
+				<div class="test-size-sample-3 test-padding-custom">
+					<div style="background:#ddd; height:100%;">
+						헤더 영역 + 바디콘텐츠 영역만 있고, 푸터영역 없음.<br>
+						class="modal-body &nbsp;&nbsp; h-full" 꼭 추가!!</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--modal-btn3-->
+	<div class="modal dim full" id="test3">
+		<div class="modalWrap test-size-sample">
+			<div class="modal-header">
+				<div class="modal-title">
+					<h3>운동계획 세우기</h3>
+				</div>
+				<button class="btn-close">모달창닫기</button>
+			</div>
+			<div class="modal-body">
+				<!-- 내용시작 -->
+				<div class="modal-body-inner">
+					<!-- survey list -->
+					<ul>
+						<!-- 1 -->
+						<li class="qnalist">
+							<p class="question-title"><em class="ic-q">Q</em>1. 이런 운동을 해보고 싶다. (1개만 선택)</p>
+							<div class="question-answer">
+								<em class="ic-a">A</em>
+								<div class="inp-check-list label width5">
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio1-pop">
+											<span>워킹, 조깅</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio1-pop">
+											<span>댄스 등</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio1-pop">
+											<span>자전거</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio1-pop">
+											<span>요가</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio1-pop">
+											<span>홈트</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio1-pop">
+											<span>등산</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio1-pop">
+											<span>수영</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- 2 -->
+						<li class="qnalist">
+							<p class="question-title"><em class="ic-q">Q</em>2. 운동은 (    )요일에 하는 것이 좋다. (1개만 선택)</p>
+							<div class="question-answer">
+								<em class="ic-a">A</em>
+								<div class="inp-check-list label">
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio2-pop">
+											<span>월</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio2-pop">
+											<span>화</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio2-pop">
+											<span>수</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio2-pop">
+											<span>목</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio2-pop">
+											<span>금</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio2-pop">
+											<span>토</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio2-pop">
+											<span>일</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- 3 -->
+						<li class="qnalist">
+							<p class="question-title"><em class="ic-q">Q</em>3. 운동은 여기서 하고싶다. (1개만 선택)</p>
+							<div class="question-answer">
+								<em class="ic-a">A</em>
+								<div class="inp-check-list label">
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio3-pop">
+											<span>집/홈트</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio3-pop">
+											<span>공원 등</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio3-pop">
+											<span>산</span>
+										</label>
+									</div>
+									<div class="inp-wrap">
+										<label class="inp-radio">
+											<input type="radio" name="radio3-pop">
+											<span>운동 센터</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<!--// survey list -->
+				</div>
+			<!-- 내용끝 -->
+			</div>
+			<div class="modal-footer">
+				<div class="btn-group">
+					<button type="button" class="button-primary -lg">입력완료</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<style>
+		.test-size-sample {height:72rem;}
+		.test-size-sample-2 {width:60rem; height:40rem;}
+		.test-size-sample-3 {height:50rem;}
+		.test-size-sample-4 {width:48rem; height:36.8rem;}
+		.test-padding-custom {padding:0 3.2rem 4rem 3.2rem;}
+		@media all and (max-width:1079px){
+			.test-size-sample-3 {height:100%;}
+			.modal .modal-body.pad-none .test-padding-custom {padding:2.4rem 1.6rem 1.6rem 1.6rem;}
+		}
+	</style>
+
+
+
+	<script>
+		//commonUI.modal('모달타겟', 포커스가 되돌아갈 요소 );
+		document.querySelector('#btn1').addEventListener('click', (e)=>{
+			//commonUI.modal('#test', e.target);
+			commonUI.modal('#test1', '#btn1');
+		});
+		document.querySelector('#btn2').addEventListener('click', ()=>{
+			commonUI.modal('#test2', '#btn2');
+		});
+		document.querySelector('#btn3').addEventListener('click', ()=>{
+			commonUI.modal('#test3', '#btn3');
+		});
+
+		//보고서 출력 윈도우 팝업 open
+		function openReportPop(){
+			var printPopup = window.open('../html/UHKD/winpopup_보고서출력.html', '_blank', 'width=1080px, height=720px, scrollbars=yes', 'resizable=no');
+		}
+
+	</script>
+	
+</div>
+
+<a href="#"></a>
+
+			<!-- 내용끝 -->
+		</div>	
+	</section>
+</div>
+
+</body>
+</html>

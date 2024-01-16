@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>accordion</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<!-- <h3 class="sec-title">FAQ</h3> -->
+<div class="code-preview">
+
+	<div class="accWrap mindful-note">
+		<ul>
+			<li class="accItem notice">
+				<a href="#" class="accSummary"><i class="ic-only ic-info-primary"></i><span>개인정보보호법 유의사항</span></a>
+				<div class="accDetail">
+					<ul class="list-type-bul">
+						<li>주민등록법 제37조 제10호에 의해 다른 사람의 주민등록번호를 부정하게 사용하는 자는 3년 이하의 징역 또는 3천만원 이하의 벌금이 부과될 수 있습니다.</li>
+						<li>아울러 <span class="fc-primary">개인정보보호법 제71조 제6호</span>에 의해 다른 사람의 개인정보를 위조 또는 유출한 자는 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다. </li>
+					</ul>
+				</div>
+			</li>
+			<li class="accItem notice">
+				<a href="#" class="accSummary"><span>아이콘 없을경우 < i class="ic-only" > 엘리먼트 삭제</span></a>
+				<div class="accDetail">
+					<ul class="list-type-bul">
+						<li>주민등록법 제37조 제10호에 의해 다른 사람의 주민등록번호를 부정하게 사용하는 자는 3년 이하의 징역 또는 3천만원 이하의 벌금이 부과될 수 있습니다.</li>
+						<li>아울러 개인정보보호법 제71조 제6호에 의해 다른 사람의 개인정보를 위조 또는 유출한 자는 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다. </li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<br>
+
+	<table class="guide-table">
+		<col style="width:160px"><col>
+		<tbody>
+			<tr>
+				<th class="align-left">.accWrap, <br>.accItem, <br>.accDetail</th>
+				<td>스크립트 내부용</td>
+			</tr>
+			<tr>
+				<th class="align-left">.mindful-note</th>
+				<td>스타일 적용 선택자<br>(자유롭게 네이밍)</td>
+			</tr>
+		</tbody>
+	</table>
+	
+</div>
+<pre><code class="language-xml">&#x3C;div class=&#x22;accWrap mindful-note&#x22;&#x3E;
+	&#x9;&#x9;&#x3C;ul&#x3E;
+	&#x9;&#x9;&#x9;&#x3C;li class=&#x22;accItem notice&#x22;&#x3E;
+	&#x9;&#x9;&#x9;&#x9;&#x3C;a href=&#x22;#&#x22; class=&#x22;accSummary&#x22;&#x3E;&#x3C;i class=&#x22;ic-only ic-info-primary&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;span&#x3E;&#xAC1C;&#xC778;&#xC815;&#xBCF4;&#xBCF4;&#xD638;&#xBC95; &#xC720;&#xC758;&#xC0AC;&#xD56D;&#x3C;/span&#x3E;&#x3C;/a&#x3E;
+	&#x9;&#x9;&#x9;&#x9;&#x3C;div class=&#x22;accDetail&#x22;&#x3E;
+	&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;ul class=&#x22;list-type-bul&#x22;&#x3E;
+	&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;li&#x3E;&#xC8FC;&#xBBFC;&#xB4F1;&#xB85D;&#xBC95; &#xC81C;37&#xC870; &#xC81C;10&#xD638;&#xC5D0; &#xC758;&#xD574; &#xB2E4;&#xB978; &#xC0AC;&#xB78C;&#xC758; &#xC8FC;&#xBBFC;&#xB4F1;&#xB85D;&#xBC88;&#xD638;&#xB97C; &#xBD80;&#xC815;&#xD558;&#xAC8C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xC790;&#xB294; 3&#xB144; &#xC774;&#xD558;&#xC758; &#xC9D5;&#xC5ED; &#xB610;&#xB294; 3&#xCC9C;&#xB9CC;&#xC6D0; &#xC774;&#xD558;&#xC758; &#xBC8C;&#xAE08;&#xC774; &#xBD80;&#xACFC;&#xB420; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.&#x3C;/li&#x3E;
+	&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;li&#x3E;&#xC544;&#xC6B8;&#xB7EC; &#x3C;span class=&#x22;fc-primary&#x22;&#x3E;&#xAC1C;&#xC778;&#xC815;&#xBCF4;&#xBCF4;&#xD638;&#xBC95; &#xC81C;71&#xC870; &#xC81C;6&#xD638;&#x3C;/span&#x3E;&#xC5D0; &#xC758;&#xD574; &#xB2E4;&#xB978; &#xC0AC;&#xB78C;&#xC758; &#xAC1C;&#xC778;&#xC815;&#xBCF4;&#xB97C; &#xC704;&#xC870; &#xB610;&#xB294; &#xC720;&#xCD9C;&#xD55C; &#xC790;&#xB294; 5&#xB144; &#xC774;&#xD558;&#xC758; &#xC9D5;&#xC5ED; &#xB610;&#xB294; 5&#xCC9C;&#xB9CC;&#xC6D0; &#xC774;&#xD558;&#xC758; &#xBC8C;&#xAE08;&#xC5D0; &#xCC98;&#xD55C;&#xB2E4;. &#x3C;/li&#x3E;
+	&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;/ul&#x3E;
+	&#x9;&#x9;&#x9;&#x9;&#x3C;/div&#x3E;
+	&#x9;&#x9;&#x9;&#x3C;/li&#x3E;
+	&#x9;&#x9;&#x9;&#x3C;li class=&#x22;accItem notice&#x22;&#x3E;
+	&#x9;&#x9;&#x9;&#x9;&#x3C;a href=&#x22;#&#x22; class=&#x22;accSummary&#x22;&#x3E;&#x3C;span&#x3E;&#xC544;&#xC774;&#xCF58; &#xC5C6;&#xC744;&#xACBD;&#xC6B0; &#x3C; i class=&#x22;ic-only&#x22; &#x3E; &#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8; &#xC0AD;&#xC81C;&#x3C;/span&#x3E;&#x3C;/a&#x3E;
+	&#x9;&#x9;&#x9;&#x9;&#x3C;div class=&#x22;accDetail&#x22;&#x3E;
+	&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;ul class=&#x22;list-type-bul&#x22;&#x3E;
+	&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;li&#x3E;&#xC8FC;&#xBBFC;&#xB4F1;&#xB85D;&#xBC95; &#xC81C;37&#xC870; &#xC81C;10&#xD638;&#xC5D0; &#xC758;&#xD574; &#xB2E4;&#xB978; &#xC0AC;&#xB78C;&#xC758; &#xC8FC;&#xBBFC;&#xB4F1;&#xB85D;&#xBC88;&#xD638;&#xB97C; &#xBD80;&#xC815;&#xD558;&#xAC8C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xC790;&#xB294; 3&#xB144; &#xC774;&#xD558;&#xC758; &#xC9D5;&#xC5ED; &#xB610;&#xB294; 3&#xCC9C;&#xB9CC;&#xC6D0; &#xC774;&#xD558;&#xC758; &#xBC8C;&#xAE08;&#xC774; &#xBD80;&#xACFC;&#xB420; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.&#x3C;/li&#x3E;
+	&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;li&#x3E;&#xC544;&#xC6B8;&#xB7EC; &#xAC1C;&#xC778;&#xC815;&#xBCF4;&#xBCF4;&#xD638;&#xBC95; &#xC81C;71&#xC870; &#xC81C;6&#xD638;&#xC5D0; &#xC758;&#xD574; &#xB2E4;&#xB978; &#xC0AC;&#xB78C;&#xC758; &#xAC1C;&#xC778;&#xC815;&#xBCF4;&#xB97C; &#xC704;&#xC870; &#xB610;&#xB294; &#xC720;&#xCD9C;&#xD55C; &#xC790;&#xB294; 5&#xB144; &#xC774;&#xD558;&#xC758; &#xC9D5;&#xC5ED; &#xB610;&#xB294; 5&#xCC9C;&#xB9CC;&#xC6D0; &#xC774;&#xD558;&#xC758; &#xBC8C;&#xAE08;&#xC5D0; &#xCC98;&#xD55C;&#xB2E4;. &#x3C;/li&#x3E;
+	&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;/ul&#x3E;
+	&#x9;&#x9;&#x9;&#x9;&#x3C;/div&#x3E;
+	&#x9;&#x9;&#x9;&#x3C;/li&#x3E;
+	&#x9;&#x9;&#x3C;/ul&#x3E;
+	&#x9;&#x3C;/div&#x3E;
+</code></pre>
+
+			<!-- 내용끝 -->
+		</div>	
+	</section>
+</div>
+
+</body>
+</html>

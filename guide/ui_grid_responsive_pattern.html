@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>UI 가이드</title>
+
+    <script src="../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+    <script src="../js/lib/jquery.easing.min.js"></script>
+    <script src="../js/lib/swiper-bundle.min.js"></script>
+    <script src="ui_include.js"></script>
+    <script src="../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="guide.css" />
+
+    <link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css" />
+    <script src="highlight/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </head>
+  <body>
+    <div class="guideWrap">
+      <header class="guideHeader"></header>
+      <section class="guideContainer">
+        <header class="sec-header">
+          <h2>Grid Div Template</h2>
+        </header>
+        <div class="sec-contents">
+          <!-- Start -->
+
+                    
+          <!-- s:  -->
+          <h3 class="sec-title">Data Type List Grid2</h3>
+          <div class="code-preview">
+            <ul class="data-type-list">
+              <li class="items">
+                <dl class="unit-group">
+                  <dt class="unit-title">텍스트</dt>
+                  <dd class="description">텍스트</dd>
+                </dl>
+                <div class="unit-group">
+                  <!-- 
+                          231124 수정
+                          status-txt에 class 추가
+                          여유: spare 
+                          유지: maintain
+                          적정: appropriate
+                          준비: preparate
+                          부족: shortage
+                          보통: normal
+                      -->
+                  <div class="status-txt spare">
+                    <span>여유</span>
+                  </div>
+                </div>
+              </li>
+              <li class="items">
+                <dl class="unit-group">
+                  <dt class="unit-title">텍스트</dt>
+                  <dd class="description">텍스트</dd>
+                </dl>
+                <div class="unit-group">
+                  <div class="status-txt maintain">
+                    <span>유지</span>
+                  </div>
+                </div>
+              </li>
+              <li class="items">
+                <dl class="unit-group">
+                  <dt class="unit-title">텍스트</dt>
+                  <dd class="description">텍스트</dd>
+                </dl>
+                <div class="unit-group">
+                  <div class="status-txt appropriate">
+                    <span>적정</span>
+                  </div>
+                </div>
+              </li>
+              <li class="items">
+                <dl class="unit-group">
+                  <dt class="unit-title">텍스트</dt>
+                  <dd class="description">텍스트</dd>
+                </dl>
+                <div class="unit-group">
+                  <div class="status-txt prepare">
+                    <span>준비</span>
+                  </div>
+                </div>
+              </li>
+              <li class="items">
+                <dl class="unit-group">
+                  <dt class="unit-title">텍스트</dt>
+                  <dd class="description">텍스트</dd>
+                </dl>
+                <div class="unit-group">
+                  <div class="status-txt shortage">
+                    <span>부족</span>
+                  </div>
+                </div>
+              </li>
+              <li class="items">
+                <dl class="unit-group">
+                  <dt class="unit-title">텍스트</dt>
+                  <dd class="description">텍스트</dd>
+                </dl>
+                <div class="unit-group">
+                  <div class="status-txt normal">
+                    <span>보통</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <pre><code class="language-xml">&lt;ul class=&quot;data-type-list&quot;&gt;
+    &lt;li class=&quot;items&quot;&gt;
+        &lt;dl class=&quot;unit-group&quot;&gt;
+            &lt;dt class=&quot;unit-title&quot;&gt;텍스트&lt;/dt&gt;
+            &lt;dd class=&quot;description&quot;&gt;텍스트&lt;/dd&gt;
+        &lt;/dl&gt;
+        &lt;div class=&quot;unit-group&quot;&gt;
+            &lt;!-- 
+                231124 수정
+                status-txt에 class 추가
+                여유: spare 
+                유지: maintain
+                적정: appropriate
+                준비: preparate
+                부족: shortage
+                보통: normal
+            --&gt;
+            &lt;div class=&quot;status-txt spare&quot;&gt;
+                &lt;span&gt;여유&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;items&quot;&gt;
+        &lt;dl class=&quot;unit-group&quot;&gt;
+            &lt;dt class=&quot;unit-title&quot;&gt;텍스트&lt;/dt&gt;
+            &lt;dd class=&quot;description&quot;&gt;텍스트&lt;/dd&gt;
+        &lt;/dl&gt;
+        &lt;div class=&quot;unit-group&quot;&gt;
+            &lt;div class=&quot;status-txt maintain&quot;&gt;
+                &lt;span&gt;유지&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;items&quot;&gt;
+        &lt;dl class=&quot;unit-group&quot;&gt;
+            &lt;dt class=&quot;unit-title&quot;&gt;텍스트&lt;/dt&gt;
+            &lt;dd class=&quot;description&quot;&gt;텍스트&lt;/dd&gt;
+        &lt;/dl&gt;
+        &lt;div class=&quot;unit-group&quot;&gt;
+            &lt;div class=&quot;status-txt appropriate&quot;&gt;
+                &lt;span&gt;적정&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;items&quot;&gt;
+        &lt;dl class=&quot;unit-group&quot;&gt;
+            &lt;dt class=&quot;unit-title&quot;&gt;텍스트&lt;/dt&gt;
+            &lt;dd class=&quot;description&quot;&gt;텍스트&lt;/dd&gt;
+        &lt;/dl&gt;
+        &lt;div class=&quot;unit-group&quot;&gt;
+            &lt;div class=&quot;status-txt prepare&quot;&gt;
+                &lt;span&gt;준비&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;items&quot;&gt;
+        &lt;dl class=&quot;unit-group&quot;&gt;
+            &lt;dt class=&quot;unit-title&quot;&gt;텍스트&lt;/dt&gt;
+            &lt;dd class=&quot;description&quot;&gt;텍스트&lt;/dd&gt;
+        &lt;/dl&gt;
+        &lt;div class=&quot;unit-group&quot;&gt;
+            &lt;div class=&quot;status-txt shortage&quot;&gt;
+                &lt;span&gt;부족&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;items&quot;&gt;
+        &lt;dl class=&quot;unit-group&quot;&gt;
+            &lt;dt class=&quot;unit-title&quot;&gt;텍스트&lt;/dt&gt;
+            &lt;dd class=&quot;description&quot;&gt;텍스트&lt;/dd&gt;
+        &lt;/dl&gt;
+        &lt;div class=&quot;unit-group&quot;&gt;
+            &lt;div class=&quot;status-txt normal&quot;&gt;
+                &lt;span&gt;보통&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          <!-- e:  -->
+
+            <!-- s:  -->
+            <h3 class="sec-title">[Flex] Grid Row Scope Responsive - Basic Grid</h3>
+            <div class="code-preview">
+              <div class="board-wrap bd-data">
+                <div class="bd-row">
+                  <div class="bd-col">
+                    <div class="th"><span>고객님 현재 나이 (1~100세)</span></div>
+                    <div class="td">
+                      <div class="form-group-txt">
+                        <span class="front-txt">만</span>
+                        <input type="text" id="" class="align-right" value="0" />
+                        <span class="back-txt">세</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bd-col">
+                    <div class="th"><span>결혼을 위해 준비된 자산</span></div>
+                    <div class="td">
+                      <div class="form-group-txt">
+                        <input type="text" id="" class="align-right" value="0" />
+                        <span class="back-txt">만원</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bd-row">
+                  <div class="bd-col">
+                    <div class="th"><span>예상 연물가상승률 (0.0~20.0%)</span></div>
+                    <div class="td">
+                      <div class="form-group-txt">
+                        <input type="text" id="" class="align-right" value="2" />
+                        <span class="back-txt">%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bd-col">
+                    <div class="th"><span>결혼을 위한 월 저축액</span></div>
+                    <div class="td">
+                      <div class="form-group-txt">
+                        <input type="text" id="" class="align-right" value="0" />
+                        <span class="back-txt">만원</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bd-row">
+                  <div class="bd-col has-help">
+                    <div class="th">
+                      <span>예상 세후투자수익률 (0.00~20.00%)</span>
+                      <button type="button" class="_has-tooltip"><span class="hidden">도움말</span><i class="ic-only question"></i></button>
+                      <!--tooltip-->
+                      <div class="desc-box _tooltipbox">
+                        <div class="desc-box-inner">
+                          <div class="desc-content">
+                            <p>퇴직연금, 개인연금을 포함한 금융자산을 투자하여 세금을 납부한 후 기대하는 예상 수익률입니다. 퇴직연금 DC형, 개인연금은 투자수익률에 따라 연금액이 결정됩니다. 기본값 : 3.7%(2023.2월 연금저축보험 공시기준이율 - 보험개발원)</p>
+                          </div>
+                          <button type="button" class="ic-only box-close">창닫기</button>
+                        </div>
+                      </div>
+                      <!--//tooltip-->
+                    </div>
+                    <div class="td">
+                      <div class="form-group-txt">
+                        <input type="text" id="" class="align-right" value="3.7" />
+                        <span class="back-txt">%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bd-col">
+                    <div class="th"><span>예상 결혼자금대출</span></div>
+                    <div class="td">
+                      <div class="form-group-txt">
+                        <input type="text" id="" class="align-right" value="0" />
+                        <span class="back-txt">만원</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <pre><code class="language-xml">&lt;div class=&quot;board-wrap bd-data&quot;&gt;
+      &lt;div class=&quot;bd-row&quot;&gt;
+          &lt;div class=&quot;bd-col&quot;&gt;
+              &lt;div class=&quot;th&quot;&gt;&lt;span&gt;고객님 현재 나이 (1~100세)&lt;/span&gt;&lt;/div&gt;
+              &lt;div class=&quot;td&quot;&gt;
+                  &lt;div class=&quot;form-group-txt&quot;&gt;
+                      &lt;span class=&quot;front-txt&quot;&gt;만&lt;/span&gt;
+                      &lt;input type=&quot;text&quot; id=&quot;&quot; class=&quot;align-right&quot; value=&quot;0&quot;&gt;
+                      &lt;span class=&quot;back-txt&quot;&gt;세&lt;/span&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;bd-col&quot;&gt;
+              &lt;div class=&quot;th&quot;&gt;&lt;span&gt;결혼을 위해 준비된 자산&lt;/span&gt;&lt;/div&gt;
+              &lt;div class=&quot;td&quot;&gt;
+                  &lt;div class=&quot;form-group-txt&quot;&gt;
+                      &lt;input type=&quot;text&quot; id=&quot;&quot; class=&quot;align-right&quot; value=&quot;0&quot;&gt;
+                      &lt;span class=&quot;back-txt&quot;&gt;만원&lt;/span&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;bd-row&quot;&gt;
+          &lt;div class=&quot;bd-col&quot;&gt;
+              &lt;div class=&quot;th&quot;&gt;&lt;span&gt;예상 연물가상승률 (0.0~20.0%)&lt;/span&gt;&lt;/div&gt;
+              &lt;div class=&quot;td&quot;&gt;
+                  &lt;div class=&quot;form-group-txt&quot;&gt;
+                      &lt;input type=&quot;text&quot; id=&quot;&quot; class=&quot;align-right&quot; value=&quot;2&quot;&gt;
+                      &lt;span class=&quot;back-txt&quot;&gt;%&lt;/span&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;bd-col&quot;&gt;
+              &lt;div class=&quot;th&quot;&gt;&lt;span&gt;결혼을 위한 월 저축액&lt;/span&gt;&lt;/div&gt;
+              &lt;div class=&quot;td&quot;&gt;
+                  &lt;div class=&quot;form-group-txt&quot;&gt;
+                      &lt;input type=&quot;text&quot; id=&quot;&quot; class=&quot;align-right&quot; value=&quot;0&quot;&gt;
+                      &lt;span class=&quot;back-txt&quot;&gt;만원&lt;/span&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;bd-row&quot;&gt;
+          &lt;div class=&quot;bd-col has-help&quot;&gt;
+              &lt;div class=&quot;th&quot;&gt;&lt;span&gt;예상 세후투자수익률 (0.00~20.00%)&lt;/span&gt;
+                  &lt;button type=&quot;button&quot; class=&quot;_has-tooltip&quot;&gt;&lt;span class=&quot;hidden&quot;&gt;도움말&lt;/span&gt;&lt;i class=&quot;ic-only question&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;!--tooltip--&gt;
+                  &lt;div class=&quot;desc-box _tooltipbox&quot;&gt;
+                      &lt;div class=&quot;desc-box-inner&quot;&gt;
+                          &lt;div class=&quot;desc-content&quot;&gt;
+                              &lt;p&gt;퇴직연금, 개인연금을 포함한 금융자산을 투자하여 세금을 납부한 후 기대하는 예상 수익률입니다. 퇴직연금 DC형, 개인연금은 투자수익률에 따라 연금액이 결정됩니다. 기본값 : 3.7%(2023.2월 연금저축보험 공시기준이율 - 보험개발원)&lt;/p&gt;
+                          &lt;/div&gt;
+                          &lt;button type=&quot;button&quot; class=&quot;ic-only box-close&quot;&gt;창닫기&lt;/button&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;!--//tooltip--&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;td&quot;&gt;
+                  &lt;div class=&quot;form-group-txt&quot;&gt;
+                      &lt;input type=&quot;text&quot; id=&quot;&quot; class=&quot;align-right&quot; value=&quot;3.7&quot;&gt;
+                      &lt;span class=&quot;back-txt&quot;&gt;%&lt;/span&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;bd-col&quot;&gt;
+              &lt;div class=&quot;th&quot;&gt;&lt;span&gt;예상 결혼자금대출&lt;/span&gt;&lt;/div&gt;
+              &lt;div class=&quot;td&quot;&gt;
+                  &lt;div class=&quot;form-group-txt&quot;&gt;
+                      &lt;input type=&quot;text&quot; id=&quot;&quot; class=&quot;align-right&quot; value=&quot;0&quot;&gt;
+                      &lt;span class=&quot;back-txt&quot;&gt;만원&lt;/span&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  </code></pre>
+            <!-- e:  -->
+  
+          
+          <!-- s:  -->
+          <h3 class="sec-title">[Flex] Grid Row Scope - Span Grid</h3>
+          <div class="code-preview">
+            <div class="board-wrap bd-data">
+              <div class="bd-row">
+                <div class="bd-col w100">
+                  <div class="th"><span>지역</span></div>
+                  <div class="td"><span>노후준비 트랜드가 바뀐다</span></div>
+                </div>
+              </div>
+              <div class="bd-row">
+                <div class="bd-col">
+                  <div class="th"><span>강사명</span></div>
+                  <div class="td"><span>홍길동</span></div>
+                </div>
+                <div class="bd-col">
+                  <div class="th"><span>관할지사</span></div>
+                  <div class="td"><span>통영지사</span></div>
+                </div>
+              </div>
+              <div class="bd-row">
+                <div class="bd-col">
+                  <div class="th"><span>교육일자</span></div>
+                  <div class="td"><span>2023-10-27</span></div>
+                </div>
+                <div class="bd-col">
+                  <div class="th"><span>교육시간</span></div>
+                  <div class="td"><span>10:00~12:00</span></div>
+                </div>
+              </div>
+              <div class="bd-row">
+                <div class="bd-col">
+                  <div class="th"><span>교육장소</span></div>
+                  <div class="td"><span>거제고용센터</span></div>
+                </div>
+                <div class="bd-col">
+                  <div class="th"><span>정원</span></div>
+                  <div class="td"><span>30명</span></div>
+                </div>
+              </div>
+              <div class="bd-row">
+                <div class="bd-col w100">
+                  <div class="th"><span>휴대전화번호</span></div>
+                  <div class="td">
+                    <div class="form-group-tel">
+                      <select class="tel-first" title="휴대전화 식별번호">
+                        <option>선택</option>
+                        <option>010</option>
+                        <option>011</option></select
+                      ><span class="inp-split">-</span><input type="text" class="tel-second" title="휴대전화 중간 번호" /><span class="inp-split">-</span><input type="text" class="tel-third" title="휴대전화 뒷 번호" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;board-wrap bd-data&quot;&gt;
+    &lt;div class=&quot;bd-row&quot;&gt;
+        &lt;div class=&quot;bd-col w100&quot;&gt;
+            &lt;div class=&quot;th&quot;&gt;&lt;span&gt;지역&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;td&quot;&gt;&lt;span&gt;노후준비 트랜드가 바뀐다&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bd-row&quot;&gt;
+        &lt;div class=&quot;bd-col&quot;&gt;
+            &lt;div class=&quot;th&quot;&gt;&lt;span&gt;강사명&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;td&quot;&gt;&lt;span&gt;홍길동&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;bd-col&quot;&gt;
+            &lt;div class=&quot;th&quot;&gt;&lt;span&gt;관할지사&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;td&quot;&gt;&lt;span&gt;통영지사&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bd-row&quot;&gt;
+        &lt;div class=&quot;bd-col&quot;&gt;
+            &lt;div class=&quot;th&quot;&gt;&lt;span&gt;교육일자&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;td&quot;&gt;&lt;span&gt;2023-10-27&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;bd-col&quot;&gt;
+            &lt;div class=&quot;th&quot;&gt;&lt;span&gt;교육시간&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;td&quot;&gt;&lt;span&gt;10:00~12:00&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bd-row&quot;&gt;
+        &lt;div class=&quot;bd-col&quot;&gt;
+            &lt;div class=&quot;th&quot;&gt;&lt;span&gt;교육장소&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;td&quot;&gt;&lt;span&gt;거제고용센터&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;bd-col&quot;&gt;
+            &lt;div class=&quot;th&quot;&gt;&lt;span&gt;정원&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;td&quot;&gt;&lt;span&gt;30명&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bd-row&quot;&gt;
+        &lt;div class=&quot;bd-col w100&quot;&gt;
+            &lt;div class=&quot;th&quot;&gt;&lt;span&gt;휴대전화번호&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;td&quot;&gt;
+                &lt;div class=&quot;form-group-tel&quot;&gt;
+                    &lt;select class=&quot;tel-first&quot; title=&quot;휴대전화 식별번호&quot;&gt;
+                        &lt;option&gt;선택&lt;/option&gt;
+                        &lt;option&gt;010&lt;/option&gt;
+                        &lt;option&gt;011&lt;/option&gt;
+                    &lt;/select&gt;&lt;span class=&quot;inp-split&quot;&gt;-&lt;/span&gt;&lt;input type=&quot;text&quot; class=&quot;tel-second&quot; title=&quot;휴대전화 중간 번호&quot;&gt;&lt;span class=&quot;inp-split&quot;&gt;-&lt;/span&gt;&lt;input type=&quot;text&quot; class=&quot;tel-third&quot; title=&quot;휴대전화 뒷 번호&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;            
+</code></pre>
+          <!-- e:  -->
+
+        
+          <!-- s:  -->
+          <!-- <h3 class="sec-title">SM [Flex] Grid Row Scop - Basic Grid</h3>
+          <div class="code-preview">
+            <div class="response-grid">
+              <div class="grid-block">
+                <div class="grid-inline">
+                  <div class="grid-row">
+                    <div class="grid-cell cell-head"><span>금액</span></div>
+                    <div class="grid-cell cell-data"><div class="form-group-txt">
+                      <span class="front-txt">월</span>
+                      <input type="text" id="" class="form-120" placeholder="" />
+                      <span class="back-txt">만원</span>
+                    </div></div>
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                  </div>
+                  <div class="grid-row">
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- e:  -->
+        
+          <!-- s:  -->
+          <!-- <h3 class="sec-title">SM [Flex] Grid Row Scop - Span Grid</h3>
+          <div class="code-preview">
+            <div class="response-grid">
+              <div class="grid-block">
+                <div class="grid-inline">
+                  <div class="grid-row">
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                  </div>
+                  <div class="grid-row">
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <!-- <h3 class="sec-title">SM [Flex] Grid Row Scop - Align</h3>
+          <div class="code-preview">
+            <div class="response-grid cell-header-center">
+              <div class="grid-block">
+                <div class="grid-inline">
+                  <div class="grid-row">
+                    <div class="grid-cell cell-head ar"><span>지역</span></div>
+                    <div class="grid-cell cell-data ac"><span>노후준비 트랜드가 바뀐다</span></div>
+                  </div>
+                  <div class="grid-row">
+                    <div class="grid-cell cell-head"><span>지역지역지역지역지역지역지역지역지역지역지역지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                  </div>
+                  <div class="grid-row">
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data">
+                        <div class="form-group-tel">
+                          <select class="tel-first" title="휴대전화 식별번호">
+                            <option>선택</option>
+                            <option>010</option>
+                            <option>011</option>
+                          </select>
+                          <span class="inp-split">-</span>
+                          <input type="text" class="tel-second" aria-label="휴대전화 중간 번호" />
+                          <span class="inp-split">-</span>
+                          <input type="text" class="tel-third" aria-label="휴대전화 뒷 번호" />
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <!-- <h3 class="sec-title">SM [Flex] Grid Row Scop - All Center</h3>
+          <div class="code-preview">
+            <div class="response-grid cell-center">
+              <div class="grid-block">
+                <div class="grid-inline">
+                  <div class="grid-row">
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                  </div>
+                  <div class="grid-row">
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <!-- <h3 class="sec-title">SM [Flex] Grid Row Scop - 2Depth </h3>
+          <div class="code-preview">
+            <div class="response-grid cell-center">
+              <div class="grid-block">
+                <div class="grid-inline">
+                  <div class="grid-row depth-head">
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                  </div>
+                </div>
+                <div class="grid-inline">
+                  <div class="grid-row">
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                  </div>
+                  <div class="grid-row">
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <!-- <h3 class="sec-title">SM [Flex] Grid Scop Col 2 - Basic</h3>
+          <div class="code-preview">
+            <div class="response-grid-column">
+              <div class="grid-block">
+                <div class="grid-inline">
+                  <div class="grid-row">
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                  </div>
+                  <div class="grid-row">
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <!-- <h3 class="sec-title">SM [Flex] Grid Scop Col 4 - Basic</h3>
+          <div class="code-preview">
+            <div class="response-grid-column">
+              <div class="grid-block">
+                <div class="grid-inline">
+                  <div class="grid-row">
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                  </div>
+                  <div class="grid-row">
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                  </div>
+                  <div class="grid-row">
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                  </div>
+                  <div class="grid-row">
+                    <div class="grid-cell cell-head"><span>지역</span></div>
+                    <div class="grid-cell cell-data"><span>노후준비 트랜드가 바뀐다</span></div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div> -->
+          <!-- e:  -->
+​
+          <!-- Display Grid [Col] -->
+
+          <!-- s:  -->
+          <!-- <h3 class="sec-title">SM [Grid] Grid Scope Col-2</h3>
+          <div class="code-preview">
+            <div class="grid-template col-2">
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목1</div>
+                <div class="grid-cell cell-data">내용1</div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목2</div>
+                <div class="grid-cell cell-data">내용2</div>
+            </div>
+            </div>
+          </div> -->
+          <!-- e:  -->​
+​
+          <!-- s:  -->
+          <!-- <h3 class="sec-title">SM [Grid] Grid Scope Col-4</h3>
+          <div class="code-preview">
+            <div class="grid-template col-4">
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목1</div>
+                <div class="grid-cell cell-data">내용1</div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목2</div>
+                <div class="grid-cell cell-data">내용2</div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목3</div>
+                <div class="grid-cell cell-data">내용4</div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목4</div>
+                <div class="grid-cell cell-data">내용4</div>
+              </div>
+            </div>
+          </div> -->
+          <!-- e:  -->​
+​
+          <!-- s:  -->
+          <!-- <h3 class="sec-title">SM [Grid] Grid Scope Col-4-1</h3>
+          <div class="code-preview">
+            <div class="grid-template col-4-1">
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목1</div>
+                <div class="grid-cell cell-data">내용1</div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목2</div>
+                <div class="grid-cell cell-data">내용2</div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목3</div>
+                <div class="grid-cell cell-data">내용4</div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목4</div>
+                <div class="grid-cell cell-data">내용4</div>
+              </div>
+            </div>
+          </div> -->
+          <!-- e:  -->​
+​
+          <!-- s:  -->
+          <!-- <h3 class="sec-title">SM [Grid] Grid Scope Col-5</h3>
+          <div class="code-preview">
+            <div class="grid-template col-5" role="table">
+              <div class="grid-row" role="row">
+                <div class="grid-cell cell-head" role="">제목1</div>
+                <div class="grid-cell cell-data">내용1</div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목2</div>
+                <div class="grid-cell cell-data">내용2</div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목3</div>
+                <div class="grid-cell cell-data">내용4</div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목4</div>
+                <div class="grid-cell cell-data">내용4</div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목5</div>
+                <div class="grid-cell cell-data">내용5</div>
+              </div>
+            </div>
+          </div> -->
+          <!-- e:  -->
+          ​
+          <!-- s:  -->
+          <!-- <h3 class="sec-title">SM [Grid] Grid Scope Col-6</h3>
+          <div class="code-preview">
+            <div class="grid-template col-6">
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목1</div>
+                <div class="grid-cell cell-data">내용1</div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목2</div>
+                <div class="grid-cell cell-data">내용2</div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목3</div>
+                <div class="grid-cell cell-data">내용4</div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목4</div>
+                <div class="grid-cell cell-data">내용4</div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목5</div>
+                <div class="grid-cell cell-data">내용5</div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell cell-head">제목6</div>
+                <div class="grid-cell cell-data">내용6</div>
+              </div>
+            </div>
+          </div> -->
+          <!-- e:  -->
+          
+          ​
+          <!-- Display Grid [Row] -->
+
+            <!-- s:  -->
+            <!-- <h3 class="sec-title">SM [Grid] Grid Scope Row-2</h3>
+            <div class="code-preview">
+              <div class="grid-template row-2">
+                <div class="grid-row">
+                  <div class="grid-cell cell-head">제목1</div>
+                  <div class="grid-cell cell-data">내용1</div>
+                </div>
+                <div class="grid-row">
+                  <div class="grid-cell cell-head">제목2</div>
+                  <div class="grid-cell cell-data">내용2</div>
+              </div>
+              </div>
+            </div> -->
+            <!-- e:  -->
+
+            <!-- s:  -->
+            <!-- <h3 class="sec-title">SM [Grid] Grid Scope Row-2 (30% head)</h3>
+            <div class="code-preview">
+              <div class="grid-template head30 grid-ac row-2">
+                <div class="grid-row">
+                  <div class="grid-cell cell-head">제목1</div>
+                  <div class="grid-cell cell-data">내용1</div>
+                </div>
+                <div class="grid-row">
+                  <div class="grid-cell cell-head">제목2</div>
+                  <div class="grid-cell cell-data">내용2</div>
+              </div>
+              </div>
+            </div> -->
+            <!-- e:  -->​
+  ​
+            <!-- s:  -->
+            <!-- <h3 class="sec-title">SM [Grid] Grid Scope Row-4</h3>
+            <div class="code-preview">
+              <div class="grid-template head30 row-4">
+                <div class="grid-row">
+                  <div class="grid-cell cell-head">제목1</div>
+                  <div class="grid-cell cell-data">내용1</div>
+                </div>
+                <div class="grid-row">
+                  <div class="grid-cell cell-head">제목2</div>
+                  <div class="grid-cell cell-data">내용2</div>
+                </div>
+                <div class="grid-row">
+                  <div class="grid-cell cell-head">제목3</div>
+                  <div class="grid-cell cell-data">내용4</div>
+                </div>
+                <div class="grid-row">
+                  <div class="grid-cell cell-head">제목4</div>
+                  <div class="grid-cell cell-data">내용4</div>
+                </div>
+              </div>
+            </div> -->
+            <!-- e:  -->
+  ​
+            <!-- s:  -->
+            <!-- <h3 class="sec-title">SM [Grid] Grid Scope Row-Complex</h3>
+            <div class="code-preview">
+              <div class="grid-template row-c">
+                <div class="grid-row">
+                  <div class="grid-cell cell-head">제목1</div>
+                  <div class="grid-cell cell-data">내용1</div>
+                </div>
+                <div class="grid-row">
+                  <div class="grid-cell cell-head">제목2</div>
+                  <div class="grid-cell cell-data">내용2</div>
+                </div>
+                <div class="grid-row">
+                  <div class="grid-cell cell-head">제목3</div>
+                  <div class="grid-cell cell-data">내용4</div>
+                </div>
+                <div class="grid-row">
+                  <div class="grid-cell cell-head">제목4</div>
+                  <div class="grid-cell cell-data">내용4</div>
+                </div>
+              </div>
+            </div> -->
+            <!-- e:  -->
+
+            <!-- s:  -->
+            <!-- <h3 class="sec-title">SM [Grid] Grid Scope Row-Head Complex</h3>
+            <div class="code-preview">
+              <div class="grid-template head30 row-c">
+                <div class="grid-row">
+                  <div class="grid-cell cell-head">제목1</div>
+                  <div class="grid-cell cell-data">내용1</div>
+                </div>
+                <div class="grid-row">
+                  <div class="grid-cell cell-head">제목2</div>
+                  <div class="grid-cell cell-data">내용2</div>
+                </div>
+                <div class="grid-row">
+                  <div class="grid-cell cell-head">제목3</div>
+                  <div class="grid-cell cell-data">내용4</div>
+                </div>
+                <div class="grid-row">
+                  <div class="grid-cell cell-head">제목4</div>
+                  <div class="grid-cell cell-data">내용4</div>
+                </div>
+              </div>
+            </div> -->
+            <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- End -->
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

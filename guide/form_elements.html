@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>텍스트</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<h3 class="sec-title">Textfeild</h3>
+<div class="code-preview">
+	<div class="row">
+		<input type="text" placeholder="placeholder">
+		<input type="text" value="readonly" readonly>
+		<input type="text" value="disabled" disabled>
+	</div>
+	<div class="row">
+		<textarea rows="5" class="inp-textarea w100" placeholder="placeholder"></textarea>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;input type=&#x22;text&#x22; placeholder=&#x22;placeholder&#x22;&#x3E;
+&#x3C;input type=&#x22;text&#x22; placeholder=&#x22;readonly&#x22; readonly&#x3E;
+&#x3C;input type=&#x22;text&#x22; placeholder=&#x22;disabled&#x22; disabled&#x3E;
+&#x3C;textarea rows=&#x22;5&#x22; class=&#x22;w100&#x22; placeholder=&#x22;placeholder&#x22;&#x3E;&#x3C;/textarea&#x3E;
+</code></pre>
+
+<h3 class="sec-title">select</h3>
+<div class="code-preview">
+	<div class="row">
+		<select>
+			<option value="default select">default select</option>
+			<option value="option1">option1</option>
+			<option value="option2">option2</option>
+			<option value="option3">option3</option>
+		</select>
+		<select disabled>
+			<option value="default select">disabled select</option>
+			<option value="option1">option1</option>
+			<option value="option2">option2</option>
+			<option value="option3">option3</option>
+		</select>
+	</div>
+	<div class="row">
+		<select class="w100" multiple size="3">
+			<option>multiple</option>
+			<option>one</option>
+			<option>two</option>
+			<option>three</option>
+		</select>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;select&#x3E;
+&#x9;&#x3C;option&#x3E;&#xC120;&#xD0DD;&#xD56D;&#xBAA9;&#x3C;/option&#x3E;
+&#x3C;/select&#x3E;
+&#x3C;select disabled&#x3E;
+&#x9;&#x3C;option&#x3E;disabled&#x3C;/option&#x3E;
+&#x3C;/select&#x3E;
+&#x3C;select class=&#x22;w100&#x22; multiple size=&#x22;3&#x22;&#x3E;
+&#x9;&#x3C;option&#x3E;multiple&#x3C;/option&#x3E;
+&#x9;&#x3C;option&#x3E;one&#x3C;/option&#x3E;
+&#x9;&#x3C;option&#x3E;two&#x3C;/option&#x3E;
+&#x9;&#x3C;option&#x3E;three&#x3C;/option&#x3E;
+&#x3C;/select&#x3E;
+</code></pre>
+
+<h3 class="sec-title">radio</h3>
+<div class="code-preview">
+	<div class="row">
+		<div class="form-label">단독 사용</div>
+		<label class="inp-radio">
+			<input type="radio" name="radioGroup1">
+			<span class="blind">라벨 없음</span>
+		</label>
+		<label class="inp-radio">
+			<input type="radio" name="radioGroup1" >
+			<span>default</span>
+		</label>
+		<label class="inp-radio">
+			<input type="radio" name="radioGroup1-1" checked="checked">
+			<span>checked</span>
+		</label>
+		<label class="inp-radio">
+			<input type="radio" name="radioGroup1" disabled="disabled">
+			<span>disabled</span>
+		</label>
+		<label class="inp-radio">
+			<input type="radio" name="radioGroup1" readonly="readonly" onclick="return false">
+			<span>readonly</span>
+		</label>
+		<label class="inp-radio">
+			<input type="radio" name="radioGroup1" disabled="disabled" checked="checked">
+			<span>disabled + checked</span>
+		</label>
+	</div>
+	<div class="row">
+		<div class="form-label">가로형 그룹</div>
+		<!--가로값 auto-->
+		<div class="form-group">
+			<label class="inp-radio">
+				<input type="radio" name="radioGroup2" checked="checked">
+				<span>라디오버튼2-1</span>
+			</label>
+			<label class="inp-radio">
+				<input type="radio" name="radioGroup2">
+				<span>라디오버튼2-2</span>
+			</label>
+			<label class="inp-radio">
+				<input type="radio" name="radioGroup2">
+				<span>라디오버튼2-3</span>
+			</label>
+			<label class="inp-radio">
+				<input type="radio" name="radioGroup2">
+				<span>라디오버튼2-4</span>
+			</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="form-label">세로형 그룹</div>
+		<!--세로정렬 가로값 100%-->
+		<div class="form-group type-row">
+			<label class="inp-radio">
+				<input type="radio" name="radioRow">
+				<span>세로형1</span>
+			</label>
+			<label class="inp-radio">
+				<input type="radio" name="radioRow">
+				<span>세로형2</span>
+			</label>
+			<label class="inp-radio">
+				<input type="radio" name="radioRow">
+				<span>세로형3</span>
+			</label>
+			<label class="inp-radio">
+				<input type="radio" name="radioRow">
+				<span>세로형4</span>
+			</label>
+		</div>
+	</div>
+</div>
+<pre><code class="language-xml">단독
+&#x3C;label class=&#x22;inp-radio&#x22;&#x3E;
+	&#x3C;input type=&#x22;radio&#x22; name=&#x22;radio&#x22;&#x3E;
+	&#x3C;span class=&#x22;blind&#x22;&#x3E;&#xC120;&#xD0DD;&#x3C;/span&#x3E;
+&#x3C;/label&#x3E;
+&#x3C;label class=&#x22;inp-radio&#x22;&#x3E;
+	&#x3C;input type=&#x22;radio&#x22; name=&#x22;radio&#x22; checked&#x3E;
+	&#x3C;span&#x3E;radio&#x3C;/span&#x3E;
+&#x3C;/label&#x3E;
+&#x3C;label class=&#x22;inp-radio&#x22;&#x3E;
+	&#x3C;input type=&#x22;radio&#x22; name=&#x22;radio&#x22; disabled&#x3E;
+	&#x3C;span&#x3E;disabled&#x3C;/span&#x3E;
+&#x3C;/label&#x3E;
+
+가로형-그룹
+&#x3C;div class=&#x22;form-group&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x3C;label class=&#x22;inp-radio&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;input type=&#x22;radio&#x22; name=&#x22;radioGroup2&#x22; checked=&#x22;checked&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;span&#x3E;&#xB77C;&#xB514;&#xC624;&#xBC84;&#xD2BC;2-1&#x3C;/span&#x3E;
+&#x9;&#x9;&#x9;&#x3C;/label&#x3E;
+&#x9;&#x9;&#x9;&#x3C;label class=&#x22;inp-radio&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;input type=&#x22;radio&#x22; name=&#x22;radioGroup2&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;span&#x3E;&#xB77C;&#xB514;&#xC624;&#xBC84;&#xD2BC;2-2&#x3C;/span&#x3E;
+&#x9;&#x9;&#x9;&#x3C;/label&#x3E;
+&#x9;&#x9;&#x9;&#x3C;label class=&#x22;inp-radio&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;input type=&#x22;radio&#x22; name=&#x22;radioGroup2&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;span&#x3E;&#xB77C;&#xB514;&#xC624;&#xBC84;&#xD2BC;2-3&#x3C;/span&#x3E;
+&#x9;&#x9;&#x9;&#x3C;/label&#x3E;
+&#x9;&#x9;&#x9;&#x3C;label class=&#x22;inp-radio&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;input type=&#x22;radio&#x22; name=&#x22;radioGroup2&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;span&#x3E;&#xB77C;&#xB514;&#xC624;&#xBC84;&#xD2BC;2-4&#x3C;/span&#x3E;
+&#x9;&#x9;&#x9;&#x3C;/label&#x3E;
+&#x9;&#x9;&#x3C;/div&#x3E;
+
+세로형-그룹
+&#x3C;div class=&#x22;form-group type-row&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x3C;label class=&#x22;inp-radio&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;input type=&#x22;radio&#x22; name=&#x22;radioRow&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;span&#x3E;&#xC138;&#xB85C;&#xD615;1&#x3C;/span&#x3E;
+&#x9;&#x9;&#x9;&#x3C;/label&#x3E;
+&#x9;&#x9;&#x9;&#x3C;label class=&#x22;inp-radio&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;input type=&#x22;radio&#x22; name=&#x22;radioRow&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;span&#x3E;&#xC138;&#xB85C;&#xD615;2&#x3C;/span&#x3E;
+&#x9;&#x9;&#x9;&#x3C;/label&#x3E;
+&#x9;&#x9;&#x9;&#x3C;label class=&#x22;inp-radio&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;input type=&#x22;radio&#x22; name=&#x22;radioRow&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;span&#x3E;&#xC138;&#xB85C;&#xD615;3&#x3C;/span&#x3E;
+&#x9;&#x9;&#x9;&#x3C;/label&#x3E;
+&#x9;&#x9;&#x9;&#x3C;label class=&#x22;inp-radio&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;input type=&#x22;radio&#x22; name=&#x22;radioRow&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;span&#x3E;&#xC138;&#xB85C;&#xD615;4&#x3C;/span&#x3E;
+&#x9;&#x9;&#x9;&#x3C;/label&#x3E;
+&#x9;&#x9;&#x3C;/div&#x3E;
+
+</code></pre>
+
+<h3 class="sec-title">checkbox</h3>
+<div class="code-preview">
+	<div class="row">
+		<div class="form-label">단독 사용</div>
+		<label class="inp-checkbox">
+			<input type="checkbox" name="checkGroup1">
+			<span class="blind">라벨 없음</span>
+		</label>
+		<label class="inp-checkbox">
+			<input type="checkbox" name="checkGroup1">
+			<span>default</span>
+		</label>
+		<label class="inp-checkbox">
+			<input type="checkbox" name="checkGroup1" checked="checked">
+			<span>checked</span>
+		</label>
+		<label class="inp-checkbox">
+			<input type="checkbox" name="checkGroup1" disabled="disabled">
+			<span>disabled</span>
+		</label>
+		<label class="inp-checkbox">
+			<input type="checkbox" name="checkGroup1" readonly="readonly" onclick="return false">
+			<span>readonly</span>
+		</label>
+		<label class="inp-checkbox">
+			<input type="checkbox" name="checkGroup1" disabled="disabled" checked="checked">
+			<span>disabled+checked</span>
+		</label>
+	</div>
+	<div class="row">
+		<div class="form-label">가로형 그룹</div>
+		<div class="form-group">
+			<label class="inp-checkbox">
+				<input type="checkbox" name="checkGroup2" checked="checked">
+				<span>체크박스2-1</span>
+			</label>
+			<label class="inp-checkbox">
+				<input type="checkbox" name="checkGroup2">
+				<span>체크박스2-2</span>
+			</label>
+			<label class="inp-checkbox">
+				<input type="checkbox" name="checkGroup2">
+				<span>체크박스2-3</span>
+			</label>
+			<label class="inp-checkbox">
+				<input type="checkbox" name="checkGroup2">
+				<span>체크박스2-4</span>
+			</label>
+		</div>
+		<!-- <div class="inp-check-list col4">
+			<label class="inp-checkbox">
+				<input type="checkbox" name="radioCol2">
+				<span>가로형1</span>
+			</label>
+			<label class="inp-checkbox">
+				<input type="checkbox" name="radioCol2">
+				<span>가로형2</span>
+			</label>
+			<label class="inp-checkbox">
+				<input type="checkbox" name="radioCol2">
+				<span>가로형3</span>
+			</label>
+			<label class="inp-checkbox">
+				<input type="checkbox" name="radioCol2">
+				<span>가로형4</span>
+			</label>
+		</div> -->
+	</div>
+	<!-- <div class="row">
+		<div class="form-label">세로형 그룹</div>
+		<div class="inp-check-list type-row">
+			<label class="inp-checkbox">
+				<input type="checkbox" name="checkboxRow">
+				<span>세로형1</span>
+			</label>
+			<label class="inp-checkbox">
+				<input type="checkbox" name="checkboxRow">
+				<span>세로형2</span>
+			</label>
+			<label class="inp-checkbox">
+				<input type="checkbox" name="checkboxRow">
+				<span>세로형3</span>
+			</label>
+			<label class="inp-checkbox">
+				<input type="checkbox" name="checkboxRow">
+				<span>세로형4</span>
+			</label>
+		</div>
+	</div> -->
+</div>
+<pre><code class="language-xml">&#x3C;label class=&#x22;inp-checkbox&#x22;&#x3E;
+&#x9;&#x3C;input type=&#x22;checkbox&#x22; name=&#x22;checkbox&#x22;&#x3E;
+&#x9;&#x3C;span class=&#x22;blind&#x22;&#x3E;&#xC120;&#xD0DD;&#x3C;/span&#x3E;
+&#x3C;/label&#x3E;
+&#x3C;label class=&#x22;inp-checkbox&#x22;&#x3E;
+&#x9;&#x3C;input type=&#x22;checkbox&#x22; name=&#x22;checkbox&#x22; checked&#x3E;
+&#x9;&#x3C;span&#x3E;checkbox&#x3C;/span&#x3E;
+&#x3C;/label&#x3E;
+&#x3C;label class=&#x22;inp-checkbox&#x22;&#x3E;
+&#x9;&#x3C;input type=&#x22;checkbox&#x22; name=&#x22;checkbox&#x22; disabled&#x3E;
+&#x9;&#x3C;span&#x3E;disabled&#x3C;/span&#x3E;
+&#x3C;/label&#x3E;
+</code></pre>
+
+
+<!--사용시 추가 <h3 class="sec-title">switch</h3>
+<div class="code-preview">
+	<div class="row">
+		<label class="inp-switch">
+			<input type="checkbox" name="switch">
+			<span class="switch-label"><span class="on">On</span><span class="off">Off</span></span>
+		</label>
+		<label class="inp-switch">
+			<input type="checkbox" name="switch" checked>
+			<span class="switch-label"><span class="on">On</span><span class="off">Off</span></span>
+		</label>
+		<label class="inp-switch">
+			<input type="checkbox" name="switch" disabled>
+			<span class="switch-label"><span class="on">On</span><span class="off">Off</span></span>
+		</label>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;label class=&#x22;inp-switch&#x22;&#x3E;
+&#x9;&#x3C;input type=&#x22;checkbox&#x22; name=&#x22;switch&#x22;&#x3E;
+&#x9;&#x3C;span class=&#x22;switch-label&#x22;&#x3E;&#x3C;span class=&#x22;on&#x22;&#x3E;On&#x3C;/span&#x3E;&#x3C;span class=&#x22;off&#x22;&#x3E;Off&#x3C;/span&#x3E;&#x3C;/span&#x3E;
+&#x3C;/label&#x3E;
+</code></pre> -->
+
+			<!-- 내용끝 -->
+		</div>
+	</section>
+</div>
+
+</body>
+</html>

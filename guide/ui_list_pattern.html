@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>UI 가이드</title>
+
+    <script src="../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+    <script src="../js/lib/jquery.easing.min.js"></script>
+    <script src="../js/lib/swiper-bundle.min.js"></script>
+    <script src="ui_include.js"></script>
+    <script src="../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="guide.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+    <link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css" />
+    <script src="highlight/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </head>
+  <body>
+    <div class="guideWrap">
+      <header class="guideHeader"></header>
+      <section class="guideContainer">
+        <header class="sec-header">
+          <h2>List Template</h2>
+        </header>
+        <div class="sec-contents">
+          <!-- Start -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Number List</h3>
+          <div class="code-preview">
+            <ul class="txt-list-counter blue-num">
+              <li>
+                <h4 class="num-count-title">사업장이 도산해도 수급권 보장</h4>
+                <p class="phrase">퇴직연금제도에서는 믿을 만한 금융기관을 선정하여 퇴직금을 맡겨 놓기 때문에 사업장이 도산해도 수급권이 보장됩니다.</p>
+              </li>
+              <li>
+                <h4 class="num-count-title"><span></span>제도설계 및 운용과정의 다양한 선택권 부여</h4>
+                <p class="phrase">퇴직급여를 퇴직금제도에서 처럼 일시금으로 수령할 수도 있고, 조건이 충족되면 연금으로 수령할 수도 있습니다. 특히 <span class="fc-primary">DC형의 경우에는 근로자의 추가 부담금 납부가 가능</span>하고 이에 대한 별도의 소득공제 혜택도 주어집니다.</p>
+              </li>
+              <li>
+                <h4 class="num-count-title"><span></span>변화된 자산관리 환경에 대응</h4>
+                <p class="phrase">퇴직연금제도는 채권, 주식, 선물, 각종 파생상품 등 <span class="fc-primary">다양한 금융상품에 장기 분산 투자</span>함으로써 자산관리 환경의 변화에 효과적으로 대응할 수 있습니다.</p>
+              </li>
+              <li>
+                <h4 class="num-count-title"><span></span>은퇴시까지 충분한 수준의 노후재원 보존</h4>
+                <p class="phrase">퇴직연금제도에서는 중도인출(중간정산)요건을 엄격하게 제한하여 노후 재원인 퇴직급여가 생활자금으로 소진되지 않도록 하고 있습니다.</p>
+              </li>
+            </ul>
+          </div>
+          <pre><code class="language-xml">&lt;ul class=&quot;txt-list-counter blue-num&quot;&gt;
+    &lt;li&gt;
+        &lt;h4 class=&quot;num-count-title&quot;&gt;사업장이 도산해도 수급권 보장&lt;/h4&gt;
+        &lt;p class=&quot;phrase&quot;&gt;퇴직연금제도에서는 믿을 만한 금융기관을 선정하여 퇴직금을 맡겨 놓기 때문에 사업장이 도산해도 수급권이 보장됩니다.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;h4 class=&quot;num-count-title&quot;&gt;&lt;span&gt;&lt;/span&gt;제도설계 및 운용과정의 다양한 선택권 부여&lt;/h4&gt;
+        &lt;p class=&quot;phrase&quot;&gt;퇴직급여를 퇴직금제도에서 처럼 일시금으로 수령할 수도 있고, 조건이 충족되면 연금으로 수령할 수도 있습니다. 특히 &lt;span class=&quot;fc-primary&quot;&gt;DC형의 경우에는 근로자의 추가 부담금 납부가 가능&lt;/span&gt;하고 이에 대한 별도의 소득공제 혜택도 주어집니다.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;h4 class=&quot;num-count-title&quot;&gt;&lt;span&gt;&lt;/span&gt;변화된 자산관리 환경에 대응&lt;/h4&gt;
+        &lt;p class=&quot;phrase&quot;&gt;퇴직연금제도는 채권, 주식, 선물, 각종 파생상품 등 &lt;span class=&quot;fc-primary&quot;&gt;다양한 금융상품에 장기 분산 투자&lt;/span&gt;함으로써 자산관리 환경의 변화에 효과적으로 대응할 수 있습니다.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;h4 class=&quot;num-count-title&quot;&gt;&lt;span&gt;&lt;/span&gt;은퇴시까지 충분한 수준의 노후재원 보존&lt;/h4&gt;
+        &lt;p class=&quot;phrase&quot;&gt;퇴직연금제도에서는 중도인출(중간정산)요건을 엄격하게 제한하여 노후 재원인 퇴직급여가 생활자금으로 소진되지 않도록 하고 있습니다.&lt;/p&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Sub Description</h3>
+          <div class="code-preview">
+            <div class="note-list-box">
+              <ul class="txt-list-gwalho">
+                <li>연금저축의 소득공제는 연 240만원에서 2005. 12월 이후 퇴직연금 포함 연 300만원으로 확대</li>
+                <li>주민세 등 포함</li>
+              </ul>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;note-list-box&quot;&gt;
+  &lt;ul class=&quot;txt-list-gwalho&quot;&gt;
+      &lt;li&gt;연금저축의 소득공제는 연 240만원에서 2005. 12월 이후 퇴직연금 포함 연 300만원으로 확대&lt;/li&gt;
+      &lt;li&gt;주민세 등 포함&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- End -->
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

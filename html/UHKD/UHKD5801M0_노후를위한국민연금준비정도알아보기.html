@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+	<script src="../../js/ui_temp.js"></script>
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header -->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">진단ㆍ상담 서비스</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                            <li><a href="#none" target="_self">재무진단</a></li>
+                            <li><a href="#none" target="_self">노후준비정보</a></li>
+                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep2">
+                        <button type="button" class="breadcrumb-trigger current">노후준비종합진단</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">상담지사안내</a></li>
+                            <li><a href="#none" target="_self">상담지자체안내</a></li>
+                            <li class="current"><a href="#none" target="_self">노후준비종합진단</a></li>
+                            <li><a href="#none" target="_self">온라인상담</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">방문상담신청</a></li>
+                            <li><a href="#none" target="_self">교육신청</a></li>
+                            <li><a href="#none" target="_self">강사정보</a></li>
+                            <li><a href="#none" target="_self">자가진단</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner">
+            <div class="page-header">
+                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>노후를 위한 국민연금 준비정도 알아보기</h2></div>
+                <div class="page-desc">
+                    <button type="button" class="page-desc-btn _has-tooltip"><span>노후를 위한 국민연금 준비정도 알아보기 안내</span><i class="ic-only f-pg-desc"></i></button>
+                    <div class="desc-box _tooltipbox">
+                        <div class="desc-box-inner">
+                            <div class="desc-content">
+                                <p class="title">나의 노후를 위한 <span class="fc-primary">국민연금준비</span>는 어느 정도일까?</p>
+                                <p>
+                                    현재의 국민연금 가입 정보 및 향후에 받게 될 예상연금월액을 보실 수 있습니다.
+                                </p>
+                            </div>
+                            <button type="button" class="ic-only box-close">창닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-wrap">
+                <!-- S : 2311월 -->
+                <!--콘텐츠 영역-->
+                <div class="tabWrap tab-base tab-total">
+                    <ul class="tabNav">
+                        <li><a href="#" id="tabNav1" role="tab" class="active" title="선택됨">나의 국민연금 납부정도는?</a></li>
+                        <li><a href="#" id="tabNav2" role="tab">나의 예상연금월액 정도는?</a></li>
+                        <li><a href="#" id="tabNav3" role="tab">나의 노후 필요자금 준비정도는?</a></li>
+                    </ul>
+                    <!-- 나의 국민연금 납부정도는? -->
+                    <div class="tabContent" role="tabpanel" aria-labelledby="tabNav1">
+                        <!-- 연금 납부 정도 -->
+                        <h3 class="cont-title big padthalf">연금 납부 정도</h3>
+                        <div class="equal-list divide-border">
+                            <div class="items">
+                                <div>연령</div>
+                                <div class="fc-primary">만 00세</div>
+                            </div>
+                            <div class="items">
+                                <div>현재 납부총액연령</div>
+                                <div class="fc-primary">00,000,000 원</div>
+                            </div>
+                            <div class="items">
+                                <div>현재 납부월수</div>
+                                <div class="fc-primary">000 개월</div>
+                            </div>
+                        </div>
+                        <!-- 납부 총액 -->
+                        <h4 class="cont-title">납부 총액</h4>
+                        <div class="equal-list three-quarters reverse">
+                            <div class="items">
+                                <div class="con-table-header posr">
+                                    <div class="cont-title small none1">나의 연금 총 납부액 정도
+                                        <a href="#none" class="_has-tooltip"><i class="ic-only question small"></i></a>
+                                        <!-- tooltip -->
+                                        <div class="desc-box type3 _tooltipbox regular">
+                                            <div class="desc-content align-left">
+                                                <p class="title">나의 총 납부액 정도 <span>0000</span>%</p>
+                                                <p>= 납부총액 <span>0000</span>만원 ÷ 동일 연령대 납부총액 <span>0000</span>만원 x 100</p>
+                                                <button type="button" class="ic-only box-close">창닫기</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="color-box auto">
+                                    data
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="con-table-header">
+                                    <p class="cont-title small none1">연령별, 지역별 평균 납부 총액</p>
+                                    <span class="txt-helper">(단위 : 만원 / 월)</span>
+                                </div>                                          
+                                <div class="color-box auto">
+                                    data
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="txt-list dot gray top">
+                            <li>연령/지역별 국민연금가입자의 예상연금월액 평균 기준</li>
+                        </ul>
+                        <!-- 가입내역 상세 -->
+                        <h4 class="cont-title">가입내역 상세</h4>
+                        <div class="con-table all-center top">
+                            <table summary="가입내역 상세">
+                                <caption>가입내역 상세</caption>
+                                <colgroup>
+                                    <col style="width:25%">
+                                    <col style="width:25%">
+                                    <col style="width:25%">
+                                    <col style="width:25%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">가입 종별</th>
+                                        <td>사업장 가입자</td>
+                                        <th scope="row">가입 상태</th>
+                                        <td>취득</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 담당자 정보 -->
+                        <h4 class="cont-title dot">담당자 정보</h4>
+                        <ul class="txt-list dot blue ">
+                            <li>노후준비지원실 노후준비서비스개발부 이정우 ㅣ 문의 : 063-713-5983</li>
+                        </ul>
+                    </div>
+                    <!-- 나의 예상연금월액 정도는? -->
+                    <div class="tabContent" role="tabpanel" aria-labelledby="tabNav2">
+                        <!-- 연금 수령 정도 -->
+                        <h3 class="cont-title big padthalf">연금 수령 정도</h3>
+                        <div class="equal-list divide-border">
+                            <div class="items">
+                                <div>예상 연금월액 (현재가치 기준)</div>
+                                <div class="fc-primary">월 0,000,000 원</div>
+                            </div>
+                            <div class="items">
+                                <div>연금수급개시 년월</div>
+                                <div class="fc-primary">0000년 10월 부터</div>
+                            </div>
+                            <div class="items">
+                                <div>예상 총 납부월수</div>
+                                <div class="fc-primary">총 000 개월</div>
+                            </div>
+                            <div class="items">
+                                <div>예상 납부보험료총액</div>
+                                <div class="fc-primary">000,000,000 원</div>
+                            </div>
+                        </div>
+                        <!-- 예상 연금액-->
+                        <h4 class="cont-title">예상 연금액</h4>
+                        <div class="equal-list three-quarters reverse">
+                            <div class="items">
+                                <div class="con-table-header posr">
+                                    <div class="cont-title small none1">나의 예상연금월액 정도
+                                        <a href="#none" class="_has-tooltip"><i class="ic-only question small"></i></a>
+                                        <!-- tooltip -->
+                                        <div class="desc-box type3 _tooltipbox regular">
+                                            <p class="title">나의 총 납부월수 정도 <span>0000</span>%</p>
+                                            <p>= 납부총월수 <span>0000</span>만원 ÷ 동일 연령대 평균 납부총월수 <span>0000</span>개월 x 100</p>
+                                            <button type="button" class="ic-only box-close">창닫기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="color-box auto">
+                                    data
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="con-table-header">
+                                    <p class="cont-title small none1">연령별, 지역별 평균 납부 총액</p>
+                                    <span class="txt-helper">(단위 : 만원 / 월)</span>
+                                </div>                                          
+                                <div class="color-box auto">
+                                    data
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="txt-list dot gray top">
+                            <li>연령/지역별 국민연금가입자의 예상연금월액 평균 기준</li>
+                        </ul>
+                        <!-- tab-innerdouble -->
+                        <div class="tab-innerdouble top">
+                            <!-- 20240104 탭 구분을 위한 innerTabWrap 클래스 추가 -->
+                            <div class="innerTabWrap tab-base">
+                                <ul class="double-tab">
+                                    <li><a href="#tabNav2-2-1" role="tab" class="active" title="선택됨">연기연금제도</a></li>
+                                    <li><a href="#tabNav2-2-2" role="tab">소득상향 조정</a></li>
+                                </ul>
+                                <div class="double-contents" id="tabNav2-2-1" role="tabpanel" aria-labelledby="tabNav2-2-1"  style="display: block;">
+                                    <p class="cont-title top">연금 받는 시기를 늦췄을 때 나의 예상연금월액은 어떻게 변할까?</p>
+                                    <div class="equal-list arr">
+                                        <div class="items">
+                                            <div class="con-table-header">
+                                                <p class="cont-title small none1">예상연금월액 상세</p>
+                                            </div> 
+                                            <div class="con-table all-center">
+                                                <table summary="예상연금월액 상세">
+                                                    <caption>예상연금월액 상세</caption>
+                                                    <colgroup>
+                                                        <col style="width:50%">
+                                                        <col style="width:50%">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">월 연금액(예정)</th>
+                                                            <td><span class="fc-primary">월 0,000,000 원</span></td>
+                                                        </tr>
+                                                        <tr>                                                            
+                                                            <th scope="row">연금수급개시 년월</th>
+                                                            <td>0000년 00월 (만 65세)</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="progress-arr"><i class="ic-only ic-twins-arr-blue" aria-hidden="true"></i></div>
+                                        <div class="items">
+                                            <div class="con-table-header">
+                                                <p class="cont-title small none1">연기연금 제도 활용 시 상세</p>
+                                            </div>
+                                            <div class="con-table all-center">
+                                                <table summary="연기연금 제도 활용 시 상세">
+                                                    <caption>연기연금 제도 활용 시 상세</caption>
+                                                    <colgroup>
+                                                        <col style="width:50%">
+                                                        <col style="width:50%">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">월 연금액(예정)</th>
+                                                            <td><span class="fc-red">월 0,000,000 원</span></td>
+                                                        </tr>
+                                                        <tr>                                                            
+                                                            <th scope="row">연금수급개시 년월</th>
+                                                            <td>0000년 00월 (만 65세)</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 연기연금제도 활용 시 예상연금월액 계산기 -->
+                                    <p class="cont-title top fc-primary">연기연금제도 활용 시 예상연금월액 계산기</p>
+                                    <div class="board-wrap bd-write">
+                                        <div class="field equal-list form">
+                                            <div class="items small">
+                                                <label class="field-label" for="연금 신청 연월">연금 신청 연월</label>
+                                                <div class="form-group-txt max-none">
+                                                    <select class="charLength6">
+                                                        <option>선택</option>
+                                                    </select>
+                                                    <select class="charLength6">
+                                                        <option>선택</option>
+                                                    </select>
+                                                    <a href="#none" class="button-primary -sm">
+                                                        계산하기
+                                                    </a>
+                                                    <a href="#none" class="button-fourth -sm">
+                                                        초기화
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 담당자 정보 -->
+                                    <h4 class="cont-title dot">담당자 정보</h4>
+                                    <ul class="txt-list dot blue ">
+                                        <li>노후준비지원실 노후준비서비스개발부 이정우 ㅣ 문의 : 063-713-5983</li>
+                                    </ul>
+                                </div>
+                                <div class="double-contents" id="tabNav2-2-2" role="tabpanel" aria-labelledby="tabNav1-2-2">
+                                    <p class="cont-title top">향후 소득월액 상향 조정 시 나의 예상연금월액은 어떻게 변할까?</p>
+                                    <div class="equal-list arr">
+                                        <div class="items">
+                                            <div class="con-table-header">
+                                                <p class="cont-title small none1">예상연금월액 예상연금월액(현재가치 기준)</p>
+                                            </div> 
+                                            <div class="con-table all-center">
+                                                <table summary="예상연금월액(현재가치 기준)">
+                                                    <caption>예상연금월액(현재가치 기준)</caption>
+                                                    <colgroup>
+                                                        <col style="width:50%">
+                                                        <col style="width:50%">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">월 연금액(예정)</th>
+                                                            <td><span class="fc-primary">월 0,000,000 원</span></td>
+                                                        </tr>
+                                                        <tr>                                                            
+                                                            <th scope="row">연총납부 보험료(예정)</th>
+                                                            <td>0,000,000 원</td>
+                                                        </tr>
+                                                        <tr>                                                            
+                                                            <th scope="row">기준소득월액(예정)</th>
+                                                            <td>0,000,000 원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="progress-arr"><i class="ic-only ic-twins-arr-blue" aria-hidden="true"></i></div>
+                                        <div class="items">
+                                            <div class="con-table-header">
+                                                <p class="cont-title small none1">기준소득월액(상향 조정 시)</p>
+                                            </div>
+                                            <div class="con-table all-center">
+                                                <table summary="기준소득월액(상향 조정 시)">
+                                                    <caption>기준소득월액(상향 조정 시)</caption>
+                                                    <colgroup>
+                                                        <col style="width:50%">
+                                                        <col style="width:50%">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">월 연금액(예정)</th>
+                                                            <td><span class="fc-red">월 0,000,000 원</span></td>
+                                                        </tr>
+                                                        <tr>                                                            
+                                                            <th scope="row">연총납부 보험료(예정)</th>
+                                                            <td>0,000,000 원</td>
+                                                        </tr>
+                                                        <tr>                                                            
+                                                            <th scope="row">기준소득월액(예정)</th>
+                                                            <td>0,000,000 원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 소득월액상향 조정 시 예상연금월액 계산기 -->
+                                    <p class="cont-title top fc-primary">소득월액상향 조정 시 예상연금월액 계산기</p>
+                                    <div class="board-wrap bd-write">
+                                        <div class="field equal-list form">
+                                            <div class="items another-small default">
+                                                <label class="field-label" for="현재 월 기준소득월액">현재 월 기준소득월액</label>
+                                                <div class="form-group-txt">
+                                                    <input type="text" id="현재 월 기준소득월액" class="charLength6 align-right" placeholder="0">
+                                                    <span class="back-txt">만원</span>
+                                                </div>
+                                            </div>
+                                            <div class="items another-small default">
+                                                <label class="field-label fc-primary" for="조정된 월 기준소득월액">조정된 월 기준소득월액</label>
+                                                <div class="form-group-txt max-about"> 
+                                                    <input type="text" id="조정된 월 기준소득월액" class="charLength6 align-right" placeholder="0">
+                                                    <span class="back-txt">만원</span>
+                                                    <div class="equal-list w100">
+                                                        <a href="#none" class="button-primary -sm">
+                                                            계산하기
+                                                        </a>
+                                                        <a href="#none" class="button-fourth -sm">
+                                                            초기화
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 담당자 정보 -->
+                                    <h4 class="cont-title dot">담당자 정보</h4>
+                                    <ul class="txt-list dot blue ">
+                                        <li>노후준비지원실 노후준비서비스개발부 이정우 ㅣ 문의 : 063-713-5983</li>
+                                    </ul>
+                                </div>
+                            </div>                                        
+                        </div>
+                    </div>
+                    <!-- 나의 노후 필요자금 준비정도는? -->
+                    <div class="tabContent" role="tabpanel" aria-labelledby="tabNav3">
+                        <!-- 나의 노후 필요자금 준비정도 -->
+                        <h3 class="cont-title big padthalf">나의 노후 필요자금 준비정도</h3>
+                        <div class="equal-list divide-border">
+                            <div class="items">
+                                <div>예상 연금월액 (현재가치 기준)</div>
+                                <div class="fc-primary">월 0,000,000 원</div>
+                                <div class="color-box none">
+                                    <p class="l-bold">월평균 최소 노후생활비 부족자금 (도단위지역)</p>
+                                    <p><span class="fc-blue">개인</span> : 부족금액 - <span class="fc-primary">0.0만원</span> = 000.0만원(개인 최소 노후생활비) - 000.0만원(예상연금월액) </p>
+                                    <p><span class="fc-orange">부부</span> : 부족금액 - <span class="fc-primary">0.0만원</span> = 000.0만원(개인 최소 노후생활비) - 000.0만원(예상연금월액) </p>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div>연금수급개시 년월</div>
+                                <div class="fc-primary">00년 00월 부터</div>
+                                <div class="color-box none">
+                                    <p class="l-bold">월평균 적정 노후생활비 부족자금 (도단위지역)</p>
+                                    <p><span class="fc-blue">개인</span> : 부족금액 - <span class="fc-primary">0.0만원</span> = 000.0만원(개인 최소 노후생활비) - 000.0만원(예상연금월액) </p>
+                                    <p><span class="fc-orange">부부</span> : 부족금액 - <span class="fc-primary">0.0만원</span> = 000.0만원(개인 최소 노후생활비) - 000.0만원(예상연금월액) </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="cont-title is">최소 노후생활비에서 내 국민연금 비중</h4>
+                        <div class="equal-list three-quarters reverse">
+                            <div class="items">
+                                <div class="con-table-header">
+                                    <div class="cont-title small none1">도단위지역
+                                    </div>
+                                </div>
+                                <div class="color-box auto">
+                                    data
+                                </div>
+                                <div class="equal-list evenly">
+                                    <div class="">
+                                        <a href="#none" class="_has-tooltip active"><span>개인</span><i class="ic-only question small"></i></a>
+                                        <div class="desc-box type3 _tooltipbox regular active">
+                                            <div class="desc-content align-left">
+                                                <p class="title">필요한 자금 규모 정보 <span>0000</span>%</p>
+                                                <p>= 예상연금월액 <span>0000</span>만원 ÷ 월평균 노후생활비 <span>0000</span>만원 x 100</p>
+                                                <button type="button" class="ic-only box-close">창닫기</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <a href="#none" class="_has-tooltip active"><span>부부</span><i class="ic-only question small"></i></a>
+                                        <div class="desc-box type3 _tooltipbox regular active">
+                                            <div class="desc-content align-left">
+                                                <p class="title">필요한 자금 규모 정보 <span>0000</span>%</p>
+                                                <p>= 예상연금월액 <span>0000</span>만원 ÷ 월평균 노후생활비 <span>0000</span>만원 x 100</p>
+                                                <button type="button" class="ic-only box-close">창닫기</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="con-table-header">
+                                    <p class="cont-title small none1">지역비교</p>
+                                    <span class="txt-helper">(단위 : %)</span>
+                                </div>                                          
+                                <div class="color-box auto">
+                                    data
+                                </div>
+                                <div class="equal-list right">
+                                    <span class="dot">개인</span>
+                                    <span class="dot couple">부부</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h4 class="cont-title is">적정 노후생활비에서 내 국민연금 비중</h4>
+                        <div class="equal-list three-quarters reverse">
+                            <div class="items">
+                                <div class="con-table-header">
+                                    <div class="cont-title small none1">도단위지역
+                                    </div>
+                                </div>
+                                <div class="color-box auto">
+                                    data
+                                </div>
+                                <div class="equal-list evenly posr">
+                                    <div class="">
+                                        <a href="#none" class="_has-tooltip active"><span>개인</span><i class="ic-only question small"></i></a>
+                                        <div class="desc-box type3 _tooltipbox regular active">
+                                            <div class="desc-content align-left">
+                                                <p class="title">필요한 자금 규모 정보 <span>0000</span>%</p>
+                                                <p>= 예상연금월액 <span>0000</span>만원 ÷ 월평균 노후생활비 <span>0000</span>만원 x 100</p>
+                                                <button type="button" class="ic-only box-close">창닫기</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <a href="#none" class="_has-tooltip active"><span>부부</span><i class="ic-only question small"></i></a>
+                                        <div class="desc-box type3 _tooltipbox regular active">
+                                            <div class="desc-content align-left">
+                                                <p class="title">필요한 자금 규모 정보 <span>0000</span>%</p>
+                                                <p>= 예상연금월액 <span>0000</span>만원 ÷ 월평균 노후생활비 <span>0000</span>만원 x 100</p>
+                                                <button type="button" class="ic-only box-close">창닫기</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="con-table-header">
+                                    <p class="cont-title small none1">지역비교</p>
+                                    <span class="txt-helper">(단위 : %)</span>
+                                </div>                                          
+                                <div class="color-box auto">
+                                    data
+                                </div>
+                                <div class="equal-list right">
+                                    <span class="dot">개인</span>
+                                    <span class="dot couple">부부</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="con-table-header top">
+                            <p class="cont-title small none1">최소 노후생활비에서 내 국민연금 비중</p>
+                            <span class="txt-helper">(단위:만원/월, %)</span>
+                        </div>                        
+                        <div class="con-table all-center">
+                            <table class="min-w600px" summary="월평균 노후생활비 안에 들어가는 부부의 생활수준, 최소노후생활비 생활수준과 개인의 적정노후생활비, 최소노후생활비의 생활수준">
+                                <caption>월평균 노후생활비</caption>
+                                <colgroup>
+                                        <col width="15%" />
+                                        <col width="15%" />
+                                        <col width="15%" />
+                                        <col width="15%" />
+                                        <col width="15%" />
+                                        <col width="15%" />
+                                        <col width="15%" />
+                                        <col width="15%" />
+                                        <col width="15%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th rowspan="3" scope="col">구분</th>
+                                        <th scope="col" colspan="4">최소노후생활비</th>
+                                        <th scope="col" colspan="4">적정노후생활비</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" colspan="2">개인</th>
+                                        <th scope="col" colspan="2">부부</th>
+                                        <th scope="col" colspan="2">개인</th>
+                                        <th scope="col" colspan="2">부부</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">생활비</th>
+                                        <th scope="col">준비정도</th>
+                                        <th scope="col">생활비</th>
+                                        <th scope="col">준비정도</th>
+                                        <th scope="col">생활비</th>
+                                        <th scope="col">준비정도</th>
+                                        <th scope="col">생활비</th>
+                                        <th scope="col">준비정도</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">전체</th>
+                                        <td>124.3</td>
+                                        <td>99%</td>
+                                        <td>198.7</td>
+                                        <td>62%</td>
+                                        <td>177.3</td>
+                                        <td>69%</td>
+                                        <td>277.0</td>
+                                        <td>44%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">서울</td>
+                                        <td>144.0</td>
+                                        <td>85%</td>
+                                        <td>232.0</td>
+                                        <td>53%</td>
+                                        <td>205.3</td>
+                                        <td>60%</td>
+                                        <td>330.1</td>
+                                        <td>37%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">광역시</th>
+                                        <td>122.2</td>
+                                        <td>100%</td>
+                                        <td>203.7</td>
+                                        <td>60%</td>
+                                        <td>173.9</td>
+                                        <td>71%</td>
+                                        <td>279.9</td>
+                                        <td>44%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">도단위</th>
+                                        <td>119.0</td>
+                                        <td class="bg-sky">103%</td>
+                                        <td>185.8</td>
+                                        <td class="bg-sky">66%</td>
+                                        <td>170.1</td>
+                                        <td class="bg-sky">72%</td>
+                                        <td>258.7</td>
+                                        <td class="bg-sky">47%</td>
+                                    </tr> 
+                                </tbody>
+                            </table>
+                        </div>
+                        <ul class="txt-list dot gray doubletop">
+                            <li>특별한 질병 등이 없는 건강한 노년임을 전제(가정)할 때 드는 비용에 대한 응답금액임</li>
+                        </ul>
+
+                        <!-- 담당자 정보 -->
+                        <h4 class="cont-title dot">담당자 정보</h4>
+                        <ul class="txt-list dot blue ">
+                            <li>노후준비지원실 노후준비서비스개발부 이정우 ㅣ 문의 : 063-713-5983</li>
+                        </ul>
+                    </div>
+                </div>
+                <script>
+                    commonUI.tabNav('.tabWrap', 1);
+                    commonUI.tabInnerNav('.innerTabWrap', 1);
+                //     tabList();
+                //     function tabList() {
+                //     // 종합재무분석 결과 이너탭
+                //     const tabInnerItem = document.querySelectorAll('.tab-innerdouble .double-tab > li > a');
+                //     const tabInnerCont = document.querySelectorAll('.tab-innerdouble .double-contents');                    
+                //     tabInnerItem.forEach((tabitem, index1) => {
+                //         tabitem.addEventListener("click", function () {     
+                //             this.closest('.tab-innerdouble').querySelectorAll('li > a').forEach(e => {
+                //                 e.classList.remove('active');
+                //                 event.preventDefault();
+                //             })
+                //             this.classList.add('active');
+                //             this.closest('.tab-innerdouble').querySelectorAll('.double-contents').forEach(e => {
+                //                 e.style.display = "none";
+                //             });
+                //             tabInnerCont[index1].style.display = "block";
+                //         });
+                //     });
+                // }
+                </script>
+                <!-- 공통UI - 해시태그 링크들 -->
+                <div class="hashtag-wrap"></div>
+                <!--// 공통UI - 해시태그 링크들 -->
+                
+                <!--//콘텐츠 영역-->
+                <!--// E : 2311월 -->
+            </div>
+            <!-- 공통UI - 만족도조사 -->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer -->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

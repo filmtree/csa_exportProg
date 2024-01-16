@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>공통 클래스명</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<h3 class="sec-title">사이즈</h3>
+<div class="code-preview">
+	<table class="guide-table">
+		<col style="width:160px"><col style="width:160px"><col>
+		<tbody>
+			<tr>
+				<th>가로사이즈<br>(기본 pc)</th>
+				<td>
+					.w1<br>
+					.w2<br>
+					.<br>
+					.<br>
+					.w100
+				</td>
+				<td>
+					width: 1%<br>
+					width: 2%<br>
+					.<br>
+					.<br>
+					width: 100%
+				</td>
+			</tr>
+			<tr>
+				<th>@media all and (max-width:1024px)</th>
+				<td>
+					.m-w1<br>
+					.m-w2<br>
+					.<br>
+					.<br>
+					.m-w100
+				</td>
+				<td>
+					width: 1%<br>
+					width: 2%<br>
+					.<br>
+					.<br>
+					width: 100%
+				</td>
+			</tr>
+			<tr>
+				<th>min-width</th>
+				<td>
+					.min-w50px<br>
+					.min-w60px<br>
+					.min-w70px<br>
+					.<br>
+					.<br>
+					.min-w200px<br>
+					.min-w300px<br>
+					.min-w400px<br>
+					.<br>
+					.<br>
+					.min-w1000px<br>
+				</td>
+				<td>
+					min-width: 50px  (200px 까지 10px 단위로)<br> 
+					min-width: 60px<br>
+					min-width: 70px<br>
+					.<br>
+					.<br>
+					min-width: 200px (200~1000까지 100px 단위로)<br>
+					min-width: 300px<br>
+					min-width: 400px<br>
+					.<br>
+					.<br>
+					min-width: 1000px
+				</td>
+			</tr>
+			<tr>
+				<th>예시</th>
+				<td colspan="2">
+					&lt;col class="w20 m-w40"&gt;<br>
+					&lt;col class="w20 min-w100px"&gt;<br>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<h3 class="sec-title">정렬</h3>
+<div class="code-preview">
+	<table class="guide-table">
+		<col style="width:160px"><col style="width:160px"><col>
+		<tbody>
+			<tr>
+				<th>좌우 정렬</th>
+				<td>
+					.align-left<br>
+					.align-right<br>
+					.align-center<br>
+				</td>
+				<td>
+					text-align: left !important<br>
+					text-align: right !important<br>
+					text-align: center !important<br>
+				</td>
+			</tr>
+			<tr>
+				<th>위/아래 정렬</th>
+				<td>
+					.valign-top<br>
+					.valign-middle<br>
+					.valign-bottom
+				</td>
+				<td>
+					vertical-align:top<br>
+					vertical-align:middle<br>
+					vertical-align:bottom
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<h3 class="sec-title">display</h3>
+<div class="code-preview">
+	<table class="guide-table">
+		<col style="width:160px"><col style="width:160px"><col>
+		<tbody>
+			<tr>
+				<th>블라인드(접근성용)</th>
+				<td>.blind</td>
+				<td>position:absolute; left:-9999em; text-align:left; overflow:hidden;
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+
+			<!-- 내용끝 -->
+		</div>
+	</section>
+</div>
+
+</body>
+</html>

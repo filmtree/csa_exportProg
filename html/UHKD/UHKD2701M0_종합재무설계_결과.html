@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+	<script src="../../js/ui_temp.js"></script>
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header -->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">진단ㆍ상담 서비스</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                            <li><a href="#none" target="_self">재무진단</a></li>
+                            <li><a href="#none" target="_self">노후준비정보</a></li>
+                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep2">
+                        <button type="button" class="breadcrumb-trigger current">노후준비종합진단</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">상담지사안내</a></li>
+                            <li><a href="#none" target="_self">상담지자체안내</a></li>
+                            <li class="current"><a href="#none" target="_self">노후준비종합진단</a></li>
+                            <li><a href="#none" target="_self">온라인상담</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">방문상담신청</a></li>
+                            <li><a href="#none" target="_self">교육신청</a></li>
+                            <li><a href="#none" target="_self">강사정보</a></li>
+                            <li><a href="#none" target="_self">자가진단</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner">
+            <div class="page-header">
+                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>종합재무분석 결과</h2></div>
+                <div class="page-desc">
+                    <button type="button" class="page-desc-btn _has-tooltip"><span>종합재무설계 안내</span><i class="ic-only f-pg-desc"></i></button>
+                    <div class="desc-box _tooltipbox">
+                        <div class="desc-box-inner">
+                            <div class="desc-content">
+                                <p>
+                                    고객 재무정보를 기본정보부터 단계별로 입력해 주시기 바랍니다. <br>[저장]버튼으로 현재 설계정보를 저장이 가능하며, [마이페이지]에서 저장하신 설계내역을 확인 및 수정하실 수 있습니다.
+                                </p>
+                            </div>
+                            <button type="button" class="ic-only box-close">창닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-wrap">
+                <!-- S : 2311월 -->
+                <!--콘텐츠 영역-->
+                <div class="tabWrap tab-base tab-total">
+                    <ul class="tabNav">
+                        <li><a href="#" id="tabNav1" role="tab" class="active" title="선택됨">가계재무진단</a></li>
+                        <li><a href="#" id="tabNav2" role="tab">생애자금분석</a></li>
+                        <li><a href="#" id="tabNav3" role="tab">목적자금분석</a></li>
+                    </ul>
+                    <!-- 가계재무진단 -->
+                    <div class="tabContent active" role="tabpanel" aria-labelledby="tabNav1">
+                        <div class="wrap-inner">
+                            <!-- 20240104 탭 구분을 위한 innerTabWrap 클래스 추가 -->
+                            <div class="innerTabWrap1 tab-base">
+                                <ul class="innerTab inner-tab">
+                                    <li><a href="#tabNav1-1" role="tab" class="active">현금흐름분석</a></li>
+                                    <li><a href="#tabNav1-2" role="tab">재무상태분석</a></li>
+                                    <li><a href="#tabNav1-3" role="tab">재무적정성분석</a></li>
+                                </ul>
+                                <!-- 현금흐름분석 -->
+                                <div class="inner-contents" id="tabNav1-1" role="tabpanel" aria-labelledby="tabNav1-1" style="display: block;">
+                                    <h3 class="cont-title none">1. 현금흐름분석</h3>
+                                    <div class="equal-list half">
+                                        <div class="items">
+                                            <p class="cont-title small">①&nbsp;&nbsp;유입현황</p>
+                                            <div class="color-box none">
+                                                data
+                                            </div>
+                                        </div>
+                                        <div class="items">
+                                            <p class="cont-title small">②&nbsp;&nbsp;유출현황</p>                                            
+                                            <div class="color-box none">
+                                                data
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="con-table-header top">
+                                        <p class="cont-title small none1">③&nbsp;&nbsp;현금흐름표</p>
+                                        <div class="btn-wrap modify-txt">
+                                            <div>
+                                                <a href="#none" class="button-primary -sm round">
+                                                    상세보기
+                                                    <i class="ic-only arr10_r_white v1" arir-hidden="true"></i>
+                                                </a>                             
+                                            </div>
+                                        </div>
+                                    </div>              
+                                    <div class="con-table all-center">
+                                        <table class="min-w800px" summary="현금의 유입과 유출에 따른 구분과 대출원금, 대출잔액, 대출금리, 월상환액의 상세 정보 제공">
+                                            <caption>현금흐름표</caption>
+                                            <colgroup>
+                                                <col style="width:10%">
+                                                <col style="width:12%">
+                                                <col style="width:12%">
+                                                <col style="width:17%">
+                                                <col style="width:17%">
+                                                <col style="width:17%">
+                                                <col style="width:auto">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" colspan="3">구분</th>
+                                                    <th scope="col">연평균</th>
+                                                    <th scope="col">월평균</th>
+                                                    <th scope="col">총유입대비(%)</th>
+                                                    <th scope="col">구성비(%)</th>
+                                                </tr>
+                                            </thead>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th scope="row" colspan="3" class="fc-primary">잉여여력(유입-유출)</th>
+                                                        <td class="bg fc-primary">600,000,000</td>
+                                                        <td class="bg fc-primary">50,000,000</td>
+                                                        <td class="bg fc-primary">100.00%</td>
+                                                        <td class="bg fc-primary"></td>
+                                                    </tr>
+                                                </tfoot>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row" rowspan="5" class="bg-no">유입</th>
+                                                        <th scope="row" colspan="2" class="bg-no">근로소득</th>
+                                                        <td>600,000,000</td>
+                                                        <td>50,000,000</td>
+                                                        <td>100.00%</td>
+                                                        <td>100.00%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" colspan="2" class="bg-no">사업소득</th>
+                                                        <td>0</td>
+                                                        <td>0</td>
+                                                        <td>0.00%</td>
+                                                        <td>0.00%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" colspan="2" class="bg-no">임대소득</th>
+                                                        <td>0</td>
+                                                        <td>0</td>
+                                                        <td>0.00%</td>
+                                                        <td>0.00%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" colspan="2" class="bg-no">금융/기타소득</th>
+                                                        <td>0</td>
+                                                        <td>0</td>
+                                                        <td>0.00%</td>
+                                                        <td>0.00%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" colspan="2">소계</th>
+                                                        <td class="bg">600,000,000</td>
+                                                        <td class="bg">50,000,000</td>
+                                                        <td class="bg">100.00%</td>
+                                                        <td class="bg">100.00%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" rowspan="5" class="bg-no">유출</th>
+                                                        <th scope="row" colspan="2" class="bg-no">소비지출</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" rowspan="2" class="bg-no">비소비지출</th>
+                                                        <th scope="row" class="bg-no">부채상환</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" class="bg-no">보험료</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" colspan="2" class="bg-no">저축및투자</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" colspan="2">소계</th>
+                                                        <td class="bg">0</td>
+                                                        <td class="bg">0</td>
+                                                        <td class="bg">0.00%</td>
+                                                        <td class="bg">0.00%</td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <ul class="txt-list dot gray minus">
+                                        <li>총 유입대비(%)란 총유입을 기준으로 각 항목이 차지하는 비율을 의미합니다.</li>
+                                    </ul>
+                                    <div class="color-box none">
+                                        <p class="result-txt">조유미 고객님 가계의 잉여력은 <span class="color-point"><em>월</em> <em>000,000</em></span>입니다.
+                                    </div>
+                                </div>
+                                <!-- 재무상태분석 -->
+                                <div class="inner-contents" id="tabNav1-2" role="tabpanel" aria-labelledby="tabNav1-2">
+                                    <h3 class="cont-title">1. 재무상태분석</h3>
+                                    <div class="equal-list half">
+                                        <div class="items">
+                                            <p class="cont-title small">①&nbsp;&nbsp;자산현황</p>
+                                            <div class="color-box none">
+                                                data
+                                            </div>
+                                        </div>
+                                        <div class="items">
+                                            <p class="cont-title small">②&nbsp;&nbsp;부채현황</p>                                            
+                                            <div class="color-box none">
+                                                data
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="con-table-header top">
+                                        <p class="cont-title small none1">③&nbsp;&nbsp;재무상태표</p>
+                                        <div class="btn-wrap modify-txt">
+                                            <div>
+                                                <a href="#none" class="button-primary -sm round">
+                                                    상세보기
+                                                    <i class="ic-only arr10_r_white v1" arir-hidden="true"></i>
+                                                </a>                             
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <div class="con-table all-center">
+                                        <table class="min-w800px" summary="자산과 부채의 구분별 평가금액, 총자산대비, 구성비와 순자산에 대한 정보 제공">
+                                            <caption>재무상태표</caption>
+                                            <colgroup>
+                                                <col style="width:12%">
+                                                <col style="width:12%">
+                                                <col style="width:12%">
+                                                <col style="width:20%">
+                                                <col style="width:20%">
+                                                <col style="width:auto">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" colspan="3">구분</th>
+                                                    <th scope="col">평가금액<span>(만원)</span></th>
+                                                    <th scope="col">총자산대비<span>(%)</span></th>
+                                                    <th scope="col" class="last">구성비</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th scope="row" colspan="3" class="fc-primary">순자산(자산-부채)</th>
+                                                    <td class="bg fc-primary">0</td>
+                                                    <td class="bg fc-primary">0.00%</td>
+                                                    <td class="bg fc-primary"></td>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row" rowspan="5" class="bg-no">자산</th>
+                                                    <th scope="row" colspan="2" class="bg-no">금융자산</th>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" rowspan="2" class="bg-no">부동산</th>
+                                                    <th scope="row" class="bg-no">주거부동산</th>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="bg-no">투자부동산</th>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" colspan="2" class="bg-no">기타자산</th>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" colspan="2">소계</th>
+                                                    <td class="bg"></td>
+                                                    <td class="bg"></td>
+                                                    <td class="bg"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" rowspan="4" class="bg-no">부채</th>
+                                                    <th scope="row" colspan="2" class="bg-no">소비자부채</th>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" colspan="2" class="bg-no">주거관련부채</th>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" colspan="2" class="bg-no">기타부채</th>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" colspan="2">소계</th>
+                                                    <td class="bg"></td>
+                                                    <td class="bg"></td>
+                                                    <td class="bg"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <ul class="txt-list dot gray minus">
+                                        <li>총 자산대비(%)란 총자산에서 부채 각 항목 및 순자산이 차지하는 비율을 의미합니다.</li>
+                                    </ul>
+                                    <div class="color-box none">
+                                        <p class="result-txt">조유미 고객님 가계의 순자산은 <span class="color-point"><em>00000</em><em>만원</em> </span>입니다.
+                                    </div>
+                                </div>
+                                <!-- 재무적정성분석 -->
+                                <div class="inner-contents" id="tabNav1-3" role="tabpanel" aria-labelledby="tabNav1-3">
+                                    <h3 class="cont-title none">1. 재무적정성 분석</h3>
+                                    <!-- 비상예비자금 -->
+                                    <p class="cont-title small none">①&nbsp;&nbsp;비상예비자금</p>
+                                    <div class="equal-list three-quarters">
+                                        <div class="items">
+                                            <ul class="txt-list dot black">
+                                                <li class="equal-list person">고객
+                                                    <div class="items">
+                                                        <div class="progressbar-wrap">
+                                                            <div class="progressbar" style="width:40%;"></div>
+                                                        </div>
+                                                        <span class="unit-won">000,000,000원</span>
+                                                    </div>
+                                                </li>
+                                                <li class="equal-list person">적정
+                                                    <div class="items">
+                                                        <div class="progressbar-wrap">
+                                                            <div class="progressbar bgcolor" style="width:40%;"></div>
+                                                        </div>
+                                                        <span class="unit-won">000,000,000원</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="items">
+                                            <div class="color-box auto">
+                                                <p class="result-txt l-bold">적정대비 <strong class="color-point"><em>월</em> <em>000,000,000 원</em></strong>이 많습니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="txt-list dot gray top">
+                                        <li>고객님 가계의 비상 자금은 비상시 사용할 수 있는 현금 및 현금등가물 자산입니다.</li>
+                                        <li>적절한 비상예비자금은 (총 소비지출 + 총 비 소비 지출) / 12개월 X 6개월 금액입니다.</li>
+                                        <li>※ 적정기준은 통계청 및 한국 FPSB 자료를 참조 하였습니다.</li>
+                                    </ul>
+                                    <!-- 저축적정성 -->
+                                    <p class="cont-title small top">②&nbsp;&nbsp;저축적정성</p>
+                                    <div class="equal-list three-quarters">
+                                        <div class="items">
+                                            <ul class="txt-list dot black">
+                                                <li class="equal-list person">고객
+                                                    <div class="items">
+                                                        <div class="progressbar-wrap">
+                                                            <div class="progressbar" style="width:70%;"></div>
+                                                        </div>
+                                                        <span class="unit-won">000,000,000원</span>
+                                                    </div>
+                                                </li>
+                                                <li class="equal-list person">적정
+                                                    <div class="items">
+                                                        <div class="progressbar-wrap">
+                                                            <div class="progressbar bgcolor" style="width:40%;"></div>
+                                                        </div>
+                                                        <span class="unit-won">000,000,000원</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="items">
+                                            <div class="color-box auto">
+                                                <p class="result-txt l-bold">적정대비 <strong class="color-point"><em>00.00%</em></strong>낮습니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="txt-list dot gray top">
+                                        <li>고객님 가계의 <span>월간 저축 및 투자는 000,000,000만원</span>이고 <span>총유입은 000,000,000만원</span>으로 <span>저축율은 0000%</span>입니다.</li>
+                                        <li>고객님과 <span>동일한 연령대는 평균0.00%</span>이며, 이에 비해 <span>0.00% 낮은 상태</span>입니다.</li>
+                                        <li>※ 적정기준은 통계청 및 한국 FPSB 자료를 참조 하였습니다.</li>
+                                    </ul>
+                                    <!-- 부채적정성 (총자산 대비 부채) -->
+                                    <p class="cont-title small top">③&nbsp;&nbsp;부채적정성 (총자산 대비 부채)</p>
+                                    <div class="equal-list three-quarters">
+                                        <div class="items">
+                                            <ul class="txt-list dot black">
+                                                <li class="equal-list person">고객
+                                                    <div class="items">
+                                                        <div class="progressbar-wrap">
+                                                            <div class="progressbar" style="width:70%;"></div>
+                                                        </div>
+                                                        <span class="unit-won">000,000,000원</span>
+                                                    </div>
+                                                </li>
+                                                <li class="equal-list person">적정
+                                                    <div class="items">
+                                                        <div class="progressbar-wrap">
+                                                            <div class="progressbar bgcolor" style="width:40%;"></div>
+                                                        </div>
+                                                        <span class="unit-won">000,000,000원</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="items">
+                                            <div class="color-box auto">
+                                                <p class="result-txt l-bold">적정대비 <strong class="color-point"><em>00.00%</em></strong>낮습니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="txt-list dot gray top">
+                                        <li>고객님 가계의 <span>총 부채 금액은 000,000만원</span>이고 <span>총자산은 0,000,000,000만원</span>으로 <span>총 부채율은 0%</span>입니다.</li>
+                                        <li>고객님과 <span>동일한 연령대는 평균0.00%</span>이며, 이에 비해 <span>0.00% 낮은 상태</span>입니다.</li>
+                                        <li>※ 적정기준은 통계청 및 한국 FPSB 자료를 참조 하였습니다.</li>
+                                    </ul>
+                                    <!-- 부채상환율 -->
+                                    <p class="cont-title small top">④&nbsp;&nbsp;부채상환율</p>
+                                    <div class="equal-list three-quarters">
+                                        <div class="items">
+                                            <ul class="txt-list dot black">
+                                                <li class="equal-list person">고객
+                                                    <div class="items">
+                                                        <div class="progressbar-wrap">
+                                                            <div class="progressbar" style="width:70%;"></div>
+                                                        </div>
+                                                        <span class="unit-won">000,000,000원</span>
+                                                    </div>
+                                                </li>
+                                                <li class="equal-list person">적정
+                                                    <div class="items">
+                                                        <div class="progressbar-wrap">
+                                                            <div class="progressbar bgcolor" style="width:40%;"></div>
+                                                        </div>
+                                                        <span class="unit-won">000,000,000원</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="items">
+                                            <div class="color-box auto">
+                                                <p class="result-txt l-bold">적정대비 <strong class="color-point"><em>00.00%</em></strong>낮습니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="txt-list dot gray top">
+                                        <li>고객님 가계의 <span>월간 총 부채 상환금액은 0만원</span>이고 순소득은<span>0만원</span>으로 <span>총 부채상환 비율은 0%</span>입니다.</li>
+                                        <li>고객님과 <span>동일한 연령대는 평균0.00%</span>이며, 이에 비해 <span>0.00% 낮은 상태</span>입니다.</li>
+                                        <li>※ 적정기준은 통계청 및 한국 FPSB 자료를 참조 하였습니다.</li>
+                                    </ul>
+                                    <!-- 소비자 부채상환 -->
+                                    <div class="equal-list half">
+                                        <div class="items top">
+                                            <div class="con-table-header low">
+                                                <p class="cont-title small none1">⑤&nbsp;&nbsp;소비자 부채상환</p>
+                                                <span class="txt-helper">(단위 : %)</span>
+                                            </div>
+                                            <div class="color-box none">
+                                                data
+                                            </div>
+                                            <ul class="txt-list dot gray top">
+                                                <li>소비자부채비율 = 소비자부채의 이자 및 원금상환액 / 총소득</li>
+                                            </ul>
+                                        </div>
+                                        <div class="items">
+                                            <div class="con-table-header low">
+                                                <p class="cont-title small none1">⑥&nbsp;&nbsp;주거관련 부채상환</p>
+                                                <span class="txt-helper">(단위 : %)</span>
+                                            </div>                                          
+                                            <div class="color-box none">
+                                                data
+                                            </div>
+                                            <ul class="txt-list dot gray top">
+                                                <li>주거관련부채비율 = 주거관련부채의 이자 및 원금상환액 / 총소득</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 생애자금분석 -->
+                    <div class="tabContent" role="tabpanel" aria-labelledby="tabNav2">
+                        <h3 class="cont-title padt">1. 생애자금분석</h3>
+                        <div class="equal-list half">
+                            <div class="items">
+                                <div class="con-table-header">
+                                    <p class="cont-title small none1">①&nbsp;&nbsp;생애자금흐름</p>
+                                    <div class="btn-wrap modify-txt">
+                                        <span class="txt-helper">(단위 : %)</span>
+                                        <a href="#none" class="button-primary -sm round">
+                                            상세보기
+                                            <i class="ic-only arr10_r_white v1" arir-hidden="true"></i>
+                                        </a>                            
+                                    </div>
+                                </div>
+                                <div class="color-box none">
+                                    data
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 목적자금분석 -->
+                    <div class="tabContent" role="tabpanel" aria-labelledby="tabNav3">
+                        <div class="wrap-inner">
+                            <!-- 20240104 탭 구분을 위한 innerTabWrap 클래스 추가 -->
+                            <div class="innerTabWrap2 tab-base">
+                                <ul class="inner-tab">
+                                    <li><a href="#tabNav3-1" role="tab">교육자금</a></li>
+                                    <li><a href="#tabNav3-2" role="tab">결혼자금</a></li>
+                                    <li><a href="#tabNav3-3" role="tab">주택자금</a></li>
+                                    <li><a href="#tabNav3-4" role="tab">노후자금</a></li>
+                                    <li><a href="#tabNav3-5" role="tab">기타이벤트</a></li>
+                                </ul>
+                                <!-- 교육자금 -->
+                                <div class="inner-contents" id="tabNav3-1" role="tabpanel" aria-labelledby="tabNav3-1" style="display: block;">
+                                    <h3 class="blind">자금종류</h3>
+                                    <div class="equal-list half">
+                                        <div class="items">
+                                            <div class="con-table-header">
+                                                <p class="cont-title small none1">1. 교육자금</p>
+                                                <span class="txt-helper">(단위 : 만원)</span>
+                                            </div>
+                                            <div class="color-box none">
+                                                data
+                                            </div>
+                                            <!-- 필요자금 분석표 -->
+                                            <div class="con-table-header top double-btn">
+                                                <p class="cont-title small none1">①&nbsp;&nbsp;필요자금 분석표</p>
+                                                <div class="btn-wrap modify-txt">
+                                                    <div>
+                                                        <a href="#none" class="button-primary -sm round">
+                                                            대학교육비 통계조회
+                                                            <i class="ic-only arr10_r_white v1" arir-hidden="true"></i>
+                                                        </a>                                                                                
+                                                        <a href="#none" class="button-primary -sm round">
+                                                            상세보기
+                                                            <i class="ic-only arr10_r_white v1" arir-hidden="true"></i>
+                                                        </a>                            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="con-table all-center">
+                                                <table class="min-w600px" summary="교육자금의 필요시기와 대학교, 대학원 이후 등 기간과 금액에 대한 정보 제공">
+                                                    <caption>교육필요자금 분석표</caption>
+                                                    <colgroup>
+                                                        <col style="width:auto">
+                                                        <col style="width:auto">
+                                                        <col style="width:18%">
+                                                        <col style="width:18%">
+                                                        <col style="width:18%">
+                                                        <col style="width:18%">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" rowspan="2">구분</th>
+                                                            <th scope="col" rowspan="2">필요시기</th>
+                                                            <th scope="col" colspan="2">대학교</th>
+                                                            <th scope="col" colspan="2">대학원이후</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="col">기간</th>
+                                                            <th scope="col">금액</th>
+                                                            <th scope="col">기간</th>
+                                                            <th scope="col">금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>이름</td>
+                                                            <td>2039년</td>
+                                                            <td>4년</td>
+                                                            <td>0만원</td>
+                                                            <td>0년</td>
+                                                            <td>0만원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="txt-list dot gray minus">
+                                                <li>교육자금은 대학교, 대학원 및 유학자금에 대한 필요자금 및 준비자금을 분석합니다.</li>
+                                                <li>상기에 예시된 필요자금은 교육비 상승률 1.30%를 반영하였으며, 자금은 해당시점의 가치로 환산한 것입니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 결혼자금 -->
+                                <div class="inner-contents" id="tabNav3-2" role="tabpanel" aria-labelledby="tabNav3-2">
+                                    <div class="equal-list half">
+                                        <div class="items">
+                                            <div class="con-table-header">
+                                                <p class="cont-title small none1">1. 결혼자금</p>
+                                                <span class="txt-helper">(단위 : 만원)</span>
+                                            </div>
+                                            <div class="color-box none">
+                                                data
+                                            </div>
+                                            <!-- 필요자금 분석표 -->
+                                            <div class="con-table-header top">
+                                                <p class="cont-title small none1">①&nbsp;&nbsp;필요자금 분석표</p>
+                                                <div class="btn-wrap modify-txt">
+                                                    <div>                                                                              
+                                                        <a href="#none" class="button-primary -sm round">
+                                                            상세보기
+                                                            <i class="ic-only arr10_r_white v1" arir-hidden="true"></i>
+                                                        </a>                            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="con-table all-center">
+                                                <table class="min-w600px" summary="결혼자금의 필요시기와 필요자금에 대한 정보 제공">
+                                                    <caption>결혼필요자금 분석표</caption>
+                                                    <colgroup>
+                                                        <col style="width:25%">
+                                                        <col style="width:25%">
+                                                        <col style="width:25%">
+                                                        <col style="width:25%">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">구분</th>
+                                                            <th scope="col">결혼자금<span class="smcolor1">(미래가치)</span></th>
+                                                            <th scope="col">필요시기</th>
+                                                            <th scope="col">필요자금<span class="smcolor1">(미래가치)</span></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>이름</td>
+                                                            <td>000,000,000만원</td>
+                                                            <td>2024년</td>
+                                                            <td>000,000,000만원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="txt-list dot gray minus">
+                                                <li>상기에 예시된 필요 자금은 물가 상승률 2.00%를 적용하였으며, 자금은 해당시점의 가치로 환산한 것입니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 주택자금 -->
+                                <div class="inner-contents" id="tabNav3-3" role="tabpanel" aria-labelledby="tabNav3-3">
+                                    <div class="equal-list half">
+                                        <div class="items">
+                                            <div class="con-table-header">
+                                                <p class="cont-title small none1">1. 주택자금</p>
+                                                <span class="txt-helper">(단위 : 만원)</span>
+                                            </div>
+                                            <div class="color-box none">
+                                                data
+                                            </div>
+                                            <!-- 필요자금 분석표 -->
+                                            <div class="con-table-header top">
+                                                <p class="cont-title small none1">①&nbsp;&nbsp;필요자금 분석표</p>
+                                                <div class="btn-wrap modify-txt">
+                                                    <div>                                                                              
+                                                        <a href="#none" class="button-primary -sm round">
+                                                            상세보기
+                                                            <i class="ic-only arr10_r_white v1" arir-hidden="true"></i>
+                                                        </a>                            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="con-table all-center">
+                                                <table class="min-w600px" summary="주택자금의 필요시기와 필요자금에 대한 정보 제공">
+                                                    <caption>주택필요자금 분석표</caption>
+                                                    <colgroup>
+                                                        <col style="width:25%">
+                                                        <col style="width:25%">
+                                                        <col style="width:25%">
+                                                        <col style="width:25%">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">구분</th>
+                                                            <th scope="col">주택자금<span class="smcolor1">(미래가치)</span></th>
+                                                            <th scope="col">필요시기</th>
+                                                            <th scope="col">필요자금<span class="smcolor1">(미래가치)</span></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>주택자금</td>
+                                                            <td>000,000,000만원</td>
+                                                            <td>2024년</td>
+                                                            <td>000,000,000만원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="txt-list dot gray minus">
+                                                <li>상기에 예시된 필요 자금은 물가 상승률 2.00%를 적용하였으며, 자금은 해당시점의 가치로 환산한 것입니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 노후자금 -->
+                                <div class="inner-contents" id="tabNav3-4" role="tabpanel" aria-labelledby="tabNav3-4">
+                                    <div class="equal-list half">
+                                        <div class="items">
+                                            <div class="con-table-header">
+                                                <p class="cont-title small none1">1. 노후자금</p>
+                                                <span class="txt-helper">(단위 : 만원)</span>
+                                            </div>
+                                            <div class="color-box none">
+                                                data
+                                            </div>
+                                            <!-- 노후자금 분석표 -->
+                                            <div class="con-table-header top double-btn">
+                                                <p class="cont-title small none1">①&nbsp;&nbsp;노후자금 분석표</p>
+                                                <div class="btn-wrap modify-txt">
+                                                    <div>
+                                                        <a href="#none" class="button-secondary -sm round">
+                                                            준비자금분석 보기
+                                                        </a>                                                                              
+                                                        <a href="#none" class="button-primary -sm round">
+                                                            상세보기
+                                                            <i class="ic-only arr10_r_white v1" arir-hidden="true"></i>
+                                                        </a>                            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="con-table all-center">
+                                                <table class="min-w600px" summary="노후생활비의 연간 필요금액, 필요시기, 필요기간, 연간필요금액(은퇴시가치), 총필요금액(은퇴시가치)에 대한 정보 제공">
+                                                    <caption>주택필요자금 분석표</caption>
+                                                    <colgroup>
+                                                        <col style="width:15%">
+                                                        <col style="width:15%">
+                                                        <col style="width:15%">
+                                                        <col style="width:auto">
+                                                        <col style="width:19%">
+                                                        <col style="width:19%">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">구분</th>
+                                                            <th scope="col">연간 필요금액</th>
+                                                            <th scope="col">필요시기</th>
+                                                            <th scope="col">필요기간</th>
+                                                            <th scope="col">연간 필요금액 <span class="smcolor1">(은퇴시가치)</span></th>
+                                                            <th scope="col">총 필요자금 <span class="smcolor1">(은퇴시가치)</span></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>노후생활비</td>
+                                                            <td>3,324만원</td>
+                                                            <td>2048년</td>
+                                                            <td>28년</td>
+                                                            <td>5,453만원</td>
+                                                            <td>138,906만원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="con-table all-center">
+                                                <table class="min-w600px" summary="본인과 배우자의 공적연금, 퇴직연금, 개인연금, 은퇴가용자산, 총 준비자금에 대한 정보 제공">
+                                                    <caption>노후 필요자금 분석표</caption>
+                                                    <colgroup>
+                                                        <col style="width:15%">
+                                                        <col style="width:15%">
+                                                        <col style="width:15%">
+                                                        <col style="width:auto">
+                                                        <col style="width:19%">
+                                                        <col style="width:19%">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">구분</th>
+                                                            <th scope="col">공적연금</th>								
+                                                            <th scope="col">퇴직연금</th>								
+                                                            <th scope="col">개인연금</th>
+                                                            <th scope="col">은퇴가용자산</th>
+                                                            <th scope="col">총 준비자금</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>본인</td>
+                                                            <td>0만원</td>
+                                                            <td>0만원</td>
+                                                            <td>0만원</td>
+                                                            <td rowspan="2">0만원</td>
+                                                            <td rowspan="2">0만원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>배우자</td>
+                                                            <td>0만원</td>
+                                                            <td>0만원</td>
+                                                            <td>0만원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table> 
+                                            </div>                                               
+                                            <ul class="txt-list dot gray minus">
+                                                <li>상기에 예시된 필요 자금은 물가 상승률 2.00%를 적용하였으며, 자금은 해당 시점의 가치로 환산한 것입니다.</li>
+                                                <li>퇴직연금(퇴직금)은 본인과 배우자의 은퇴 시점이 상이할 경우 최종은 은퇴 시점의 가치로 환산합니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 기타이벤트 -->
+                                <div class=" inner-contents" id="tabNav3-5" role="tabpanel" aria-labelledby="tabNav3-5">
+                                    <div class="equal-list half">
+                                        <div class="items">
+                                            <div class="con-table-header">
+                                                <p class="cont-title small none1">1. 기타이벤트</p>
+                                                <span class="txt-helper">(단위 : 만원)</span>
+                                            </div>
+                                            <div class="color-box none">
+                                                data
+                                            </div>
+                                            <!-- 필요자금 분석표 -->
+                                            <div class="con-table-header top">
+                                                <p class="cont-title small none1">①&nbsp;&nbsp;필요자금 분석표</p>
+                                                <div class="btn-wrap modify-txt">
+                                                    <div>                                                                              
+                                                        <a href="#none" class="button-primary -sm round">
+                                                            상세보기
+                                                            <i class="ic-only arr10_r_white v1" arir-hidden="true"></i>
+                                                        </a>                            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="con-table all-center">
+                                                <table class="min-w600px" summary="기타이벤트의 필요자금(현재가치)와 필요시기, 필요자금(미래가치)에 대한 정보 제공">
+                                                    <caption>기타이벤트필요자금 분석표</caption>
+                                                    <colgroup>
+                                                        <col style="width:25%">
+                                                        <col style="width:25%">
+                                                        <col style="width:25%">
+                                                        <col style="width:25%">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">구분</th>
+                                                            <th scope="col">필요자금<span class="smcolor1">(현재가치)</span></th>
+                                                            <th scope="col">필요시기</th>
+                                                            <th scope="col">필요자금<span class="smcolor1">(미래가치)</span></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td>000,000,000만원</td>
+                                                            <td>2024년</td>
+                                                            <td>000,000,000만원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="txt-list dot gray minus">
+                                                <li>상기에 예시된 필요 자금은 물가 상승률 2.00%를 적용하였으며, 자금은 해당시점의 가치로 환산한 것입니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    commonUI.tabNav('.tabWrap', 1);
+                    commonUI.tabInnerNav('.innerTabWrap1', 1);
+                    commonUI.tabInnerNav('.innerTabWrap2', 1);
+                //     tabList();
+                //     function tabList() {
+                //     // 종합재무분석 결과 이너탭
+                //     const tabItem = document.querySelectorAll('.tab-base > .inner-tab li a');
+                //     const tabCont = document.querySelectorAll('.tab-base > .inner-contents');
+                //     tabItem.forEach((item, index) => {
+                //         item.addEventListener("click", function () {
+                //             this.closest('.inner-tab').querySelectorAll('li > a').forEach(e => {
+                //                 e.classList.remove('active');
+                //                 event.preventDefault();
+                //             })
+                //             this.classList.add('active');
+                //             this.closest('.wrap-inner').querySelectorAll('.inner-contents').forEach(e => {
+                //                 e.style.display = "none";
+                //             });
+                //             tabCont[index].style.display = "block";
+                //         });
+                //     });
+                // }
+                </script>
+                <div class="cont-bottom">
+                    <div class="btn-group">
+                        <button type="button" class="button-tertiary -lg">이전</button>
+                        <button type="button" class="button-primary -lg">다음</button>
+                    </div>
+                </div>
+                <!-- 공통UI - 해시태그 링크들 -->
+                <div class="hashtag-wrap"></div>
+                <!--// 공통UI - 해시태그 링크들 -->
+                
+                <!--//콘텐츠 영역-->
+                <!--// E : 2311월 -->
+            </div>
+            <script>
+                // document.querySelector('#btn1').addEventListener('click', (e)=>{
+                //     commonUI.modal('#pop-alert1', '#btn1');
+                // });
+            </script>
+            <!-- 공통UI - 만족도조사 -->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer -->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

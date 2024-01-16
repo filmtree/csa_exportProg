@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes" />
+    <title>노후준비종합서비스</title>
+
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <!-- 결과보기 프린트 팝업 -->
+    <div class="winPopup">
+      <div class="modalWrap">
+        <div class="modal-header">
+          <div class="modal-title">
+            <h2>통합내역</h2>
+          </div>
+          <button class="btn-close printNone" onclick="winPopClose();">모달창닫기</button>
+        </div>
+        <div class="modal-body h-full">
+          <!-- 내용시작 -->
+          <div class="modal-body-inner">
+            <div class="tab-innerdouble my-pension">
+              <!-- 20240104 탭 구분을 위한 innerTabWrap 클래스 추가 -->
+              <div class="innerTabWrap tab-base">
+                <ul class="double-tab printNone">
+                  <li><a href="#tabNav-1" role="tab" title="선택됨">표로 바로보기</a></li>
+                  <li><a href="#tabNav-2" role="tab">그래프 바로보기</a></li>
+                </ul>
+                <!--탭내용-1-->
+                <div class="double-contents dc01" id="tabNav-1" role="tabpanel" aria-labelledby="tabNav-1">
+                  <div class="con-table all-center">
+                    <table class="min-w200px" summary="구분, 수급개시연령, 수령종료일에 대한 내용 제공">
+                      <caption>
+                        내연금정보조회 통합내역 표1
+                      </caption>
+                      <colgroup>
+                        <col style="width: 20%" />
+                        <col style="width: 30%" />
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col" colspan="2">구분</th>
+                          <th scope="col">수급개시연령</th>
+                          <th scope="col">수령종료일</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row" colspan="2">국민연금</th>
+                          <td scope="row">00세</td>
+                          <td scope="row" class="bg-no">종신</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">개인연금</th>
+                          <td scope="row">(무)삼성 적립플러스연금보험</td>
+                          <td scope="row">00세</td>
+                          <td scope="row" class="bg-no">종신</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="con-table-header right">
+                    <span class="txt-helper">(단위 : 만원)</span>
+                  </div>
+                  <div class="con-table all-center">
+                    <table class="min-w800px" summary="연령, 연도, 국민연금, 개인연금, 퇴직연금, 주택연금 의 합계(년)에 대한 정보 제공">
+                      <caption>
+                        내연금정보조회 통합내역 표2
+                      </caption>
+                      <colgroup>
+                        <col style="width: 9%" />
+                        <col style="width: 9%" />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col" rowspan="2">연령</th>
+                          <th scope="col" rowspan="2">연도</th>
+                          <th scope="col" rowspan="2">국민연금</th>
+                          <th scope="col" colspan="2">개인연금</th>
+                          <th scope="col" colspan="2">퇴직연금</th>
+                          <th scope="col" rowspan="2">주택연금</th>
+                          <th scope="col" rowspan="2">합계(년)</th>
+                        </tr>
+                        <tr>
+                          <th scope="col">가입상품수</th>
+                          <th scope="col">금액</th>
+                          <th scope="col">가입상품수</th>
+                          <th scope="col">금액</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>00세</td>
+                          <td>0000년</td>
+                          <td class="align-right">000,000,000 원</td>
+                          <td>0개</td>
+                          <td class="align-right">000,000,000 원</td>
+                          <td>00개</td>
+                          <td class="align-right">000,000,000 원</td>
+                          <td class="align-right">000,000,000 원</td>
+                          <td class="align-right">000,000,000 원</td>
+                        </tr>
+                        <tr>
+                          <td>00세</td>
+                          <td>0000년</td>
+                          <td class="align-right">000,000,000 원</td>
+                          <td>0개</td>
+                          <td class="align-right">000,000,000 원</td>
+                          <td>00개</td>
+                          <td class="align-right">000,000,000 원</td>
+                          <td class="align-right">000,000,000 원</td>
+                          <td class="align-right">000,000,000 원</td>
+                        </tr>
+                        <tr>
+                          <td>00세</td>
+                          <td>0000년</td>
+                          <td class="align-right">000,000,000 원</td>
+                          <td>0개</td>
+                          <td class="align-right">000,000,000 원</td>
+                          <td>00개</td>
+                          <td class="align-right">000,000,000 원</td>
+                          <td class="align-right">000,000,000 원</td>
+                          <td class="align-right">000,000,000 원</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <ul class="txt-list dot gray">
+                    <li>국민연금의 첫해 예상연금액은 최초 수급 개시연도 월부터 그 해 12월까지 수령 가능한 연금액의 합입니다.</li>
+                    <li>국민연금은 향후 실제 가입이력과 해마다 변동되는 소득, 물가 등에 따라 달라지므로 실제 받게 되는 금액과 차이가 있을 수 있습니다.</li>
+                    <li>국민연금은 현재 국민연금제도에 따라 산정된 것이므로 향후 법령개정으로 제도가 바뀔 경우 산정금액이 달라질 수 있습니다.</li>
+                    <li>개인연금, 퇴직연금은 가입한 금융회사에서 산출한 예시금액이며 실제수령금액과 다를 수 있습니다.</li>
+                    <li>주택연금 예상 연금액은 주택연금 최초 가입시점에 산정된 금액으로만 제공됩니다.<br />(이용기간 중 인출한도 설정 등 조건이 변경되는 경우 실제 수령하는 연금액과 차이가 있을 수 있습니다.)</li>
+                    <li>개인연금, 퇴직연금 관련 문의사항은 가입한 금융회사로 직접 문의하시기 바랍니다.</li>
+                    <li>주택연금 관련 문의사항은 한국주택금융공사로 직접 문의하시기 바랍니다.</li>
+                  </ul>
+                </div>
+                <!--탭내용-2-->
+                <div class="double-contents dc02" id="tabNav-1" role="tabpanel" aria-labelledby="tabNav-1">
+                  <h3 class="cont-title">홍길동님 연령별 통합 연금 수령액<span class="subtxt ml8">(국민ㆍ개인ㆍ퇴직ㆍ주택 연금)</span></h3>
+                  <!-- 화면 넓이 모두를 쓸 경우 full 클래스 추가 . 그래프가 4:3에 가까운 비율일경우 full  삭제 --> 
+                  <div class="graph-box1 mt0 full">
+                    <span>그래프 영역</span>
+                  </div>
+                  <h3 class="cont-title">홍길동님 65세 예상 연금 수령액</h3>
+                  <div class="con-table all-center">
+                    <table class="min-w200px" summary="국민연금,개인연금,퇴직연금,주택연금 수령액에 대한 정보 제공">
+                      <caption>
+                        나의 예상 연금 수령액
+                      </caption>
+                      <colgroup>
+                        <col />
+                        <col />
+                      </colgroup>
+                      <tfoot>
+                        <tr>
+                          <th scope="row" class="mediumbold fc-primary">합계</th>
+                          <td class="bg mediumbold align-right fc-primary">000,000,000 만원</td>
+                        </tr>
+                      </tfoot>
+                      <tbody>
+                        <tr>
+                          <th scope="row">국민연금</th>
+                          <td class="align-right">00,000,000 만원</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">개인연금</th>
+                          <td class="align-right">00,000,000 만원</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">퇴직연금</th>
+                          <td class="align-right">00,000,000 만원</td>
+                        </tr>
+                        <tr class="color-point">
+                          <th scope="row">주택연금</th>
+                          <td class="align-right">00,000,000 만원</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <h3 class="cont-title">막대 그래프를 클릭하시면 연령별 통합 수령액을 확인할 수 있습니다.</h3>
+                  <!-- 화면 넓이 모두를 쓸 경우 full 클래스 추가 . 그래프가 4:3에 가까운 비율일경우 full  삭제 --> 
+                  <div class="graph-box1 mt0 full">
+                    <span>그래프 영역</span>
+                  </div>
+                  <div class="modal-footer mo-hide">
+                    <!--모바일 화면(1079이하)에서 인쇄버튼 숨김 class="mo-hide" 추가:모바일에서는 인쇄 안됨!!-->
+                    <div class="btn-group full">
+                      <a href="#none" type="button" class="button-primary -lg" onclick="printPage()">인쇄하기</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 내용끝 -->
+        </div>
+        
+      </div>
+    </div>
+
+    <script>
+      commonUI.tabInnerNav(".innerTabWrap", 1);
+
+      // tabList();
+      // function tabList() {
+      //   // 이너탭
+      //   const tabInnerItem = document.querySelectorAll(".tab-innerdouble .double-tab > li > a");
+      //   const tabInnerCont = document.querySelectorAll(".tab-innerdouble .double-contents");
+
+      //   tabInnerItem.forEach((tabitem, index1) => {
+      //     tabitem.addEventListener("click", function () {
+      //       this.closest(".tab-innerdouble")
+      //         .querySelectorAll("li > a")
+      //         .forEach((e) => {
+      //           e.classList.remove("active");
+      //           event.preventDefault();
+      //         });
+      //       this.classList.add("active");
+      //       this.closest(".tab-innerdouble")
+      //         .querySelectorAll(".double-contents")
+      //         .forEach((e) => {
+      //           e.style.display = "none";
+      //         });
+      //       tabInnerCont[index1].style.display = "block";
+      //     });
+      //   });
+      // }
+
+      function printPage() {
+        window.print();
+      }
+      function winPopClose() {
+        self.opener = self;
+        window.close();
+      }
+    </script>
+  </body>
+</html>

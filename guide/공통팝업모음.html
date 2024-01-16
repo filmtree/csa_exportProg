@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>공통사용 팝업 모음</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../js/zoom.js"></script>
+	<script src="../js/ui_temp.js"></script>
+	<script src="../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <section class="guideContainer">
+            <header class="sec-header">
+                <h2>공통 사용 팝업</h2>
+            </header>
+            <div class="sec-contents">
+                <div class="btn-group-guide">
+                    <button class="button-fifth" id="dialogInputPasswordButton">비밀번호 입력</button>
+                    <!-- <button class="button-fifth" id="btn2">팝업</button> -->
+                </div>
+                
+                <div class="btn-group-guide">
+                    <button class="button-primary" onclick="openReportPop();">보고서 출력용 윈도우 팝업</button>
+                    <p class="cont-desc fc-primary">팝업창 가로 사이즈 width:1080px이상으로 띄워야 media query 영향 안받음, 인쇄옵션과는 상관없이 윈도우팝업창내 UI만 해당.</p>
+                </div>
+            </div>
+
+            <!--dialog : 비밀번호 입력-->
+            <div class="modal dim" id="dialogInputPassword">
+                <div class="modalWrap dialog-input-pw">
+                    <div class="modal-header">
+                        <div class="modal-title">
+                            <h3 class="modal-heading">비밀번호 입력</h3>
+                        </div>
+                        <button class="btn-close">모달창닫기</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-body-inner">
+                            <div class="alert-txt-box"><p class="alert-txt">게시글 등록 시 입력하신 비밀번호를 입력하세요.</p></div>
+                            <div class="form-group">
+                                <label class="fm-label" for="비밀번호">비밀번호</label>
+                                <input type="text" id="비밀번호" class="inp-input" placeholder="비밀번호를 입력">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn-group">
+                            <button type="button" class="button-primary -lg">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--//dialog-->
+    
+        <script>
+            document.querySelector('#dialogInputPasswordButton').addEventListener('click', (e) => {
+                commonUI.modal('#dialogInputPassword', '#dialogInputPasswordButton');
+            });
+
+        //보고서 출력 윈도우 팝업 open
+		function openReportPop(){
+			var printPopup = window.open('./template/window_popup_template.html', '_blank', 'width=1080px, height=720px, scrollbars=yes', 'resizable=no');
+		}
+        </script>
+
+    </div>
+
+    <style>
+        .sec-header{height:60px; padding:0 40px; box-sizing:border-box; display:flex; align-items: center; border-bottom:1px solid rgba(0,0,0,0.1);}
+        .sec-header h2{font-size:20px;}
+        .sec-contents{padding:40px; box-sizing:border-box;}
+
+        .btn-group-guide + .btn-group-guide {margin-top:2.4rem;}
+        .btn-group-guide button {margin-right:1.6rem;}
+
+		.test-size-sample {height:72rem;}
+		.test-size-sample-2 {width:60rem; height:40rem;}
+		.test-size-sample-3 {height:50rem;}
+		.test-size-sample-4 {width:48rem; height:36.8rem;}
+		.test-padding-custom {padding:0 3.2rem 4rem 3.2rem;}
+		@media all and (max-width:1079px){
+			.test-size-sample-3 {height:100%;}
+			.modal .modal-body.pad-none .test-padding-custom {padding:2.4rem 1.6rem 1.6rem 1.6rem;}
+		}
+	</style>
+    
+</body>
+</html>

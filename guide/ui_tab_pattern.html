@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<title>UI 가이드</title>
+
+		<script src="../js/lib/jquery-3.7.0.min.js"></script>
+		<script src="../js/lib/jquery-ui.min.js"></script>
+		<script src="../js/lib/jquery.easing.min.js"></script>
+		<script src="../js/lib/swiper-bundle.min.js"></script>
+		<script src="ui_include.js"></script>
+		<script src="../js/ui_common.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="guide.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+		<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css" />
+		<script src="highlight/highlight.min.js"></script>
+		<script>
+			hljs.highlightAll();
+		</script>
+	</head>
+	<body>
+		<div class="guideWrap">
+			<header class="guideHeader"></header>
+			<section class="guideContainer">
+				<header class="sec-header">
+					<h2>Tab Template</h2>
+				</header>
+				<div class="sec-contents">
+					<!-- Start -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">탭 기본</h3>
+					<div class="code-preview">
+            <div class="tabWrap tab-base tab-total">
+              <ul class="tabNav">
+                  <li><a href="#none" id="tabNav1" role="tab" title="선택됨">Tab1</a></li>
+                  <li><a href="#none" id="tabNav2" role="tab">Tab2</a></li>
+              </ul>
+              <div class="tabContent" role="tabpanel" aria-labelledby="tabNav1">
+                Tab1 Contents
+              </div>
+              <div class="tabContent" role="tabpanel" aria-labelledby="tabNav2">
+                Tab2 Contents
+              </div>
+            </div>
+            <script>
+              commonUI.tabNav('.tabWrap', 1);                   
+            </script>
+					<pre><code class="language-xml">&lt;div class=&quot;tabWrap tab-base tab-total&quot;&gt;
+  &lt;ul class=&quot;tabNav&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;tabNav1&quot; role=&quot;tab&quot; title=&quot;선택됨&quot;&gt;Tab1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;tabNav2&quot; role=&quot;tab&quot;&gt;Tab2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;!-- 시뮬레이션 --&gt;
+  &lt;div class=&quot;tabContent&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tabNav1&quot;&gt;
+    Tab1                Tab1                Tab1                Tab1                Tab1                Tab1                
+  &lt;/div&gt;
+  &lt;div class=&quot;tabContent&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tabNav2&quot;&gt;
+    Tab2                Tab2                Tab2                Tab2                Tab2                Tab2                
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  commonUI.tabNav(&#39;.tabWrap&#39;, 1);                   
+&lt;/script&gt;
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">탭 컨텐츠 기본</h3>
+					<div class="code-preview">
+            <div class="tabWrap tab-base tab-content">
+              <ul class="tabNav">
+                  <li><a href="#" id="tabNav1" role="tab" title="선택됨">Tab1</a></li>
+                  <li><a href="#" id="tabNav2" role="tab">Tab2</a></li>
+              </ul>
+              <!-- 시뮬레이션 -->
+              <div class="tabContent" role="tabpanel" aria-labelledby="tabNav1">
+                Tab1 Contents
+              </div>
+              <div class="tabContent" role="tabpanel" aria-labelledby="tabNav2">
+                Tab2 Contents
+              </div>
+            </div>
+            <script>
+              commonUI.tabNav('.tab-content', 1);                   
+            </script>
+					<pre><code class="language-xml">&lt;div class=&quot;tabWrap tab-base&quot;&gt;
+  &lt;ul class=&quot;tabNav&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;tabNav1&quot; role=&quot;tab&quot; title=&quot;선택됨&quot;&gt;Tab1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;tabNav2&quot; role=&quot;tab&quot;&gt;Tab2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;!-- 시뮬레이션 --&gt;
+  &lt;div class=&quot;tabContent&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tabNav1&quot;&gt;
+    Tab1
+  &lt;/div&gt;
+  &lt;div class=&quot;tabContent&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tabNav2&quot;&gt;
+    Tab2
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  commonUI.tabNav(&#39;.tabWrap&#39;, 1);                   
+&lt;/script&gt;
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Tab in Tab</h3>
+					<div class="code-preview">
+            <div class="tabWrap tab-base tab-total ex-tabwrap">
+              <ul class="tabNav">
+                  <li><a href="#" id="tabNav1" role="tab" title="선택됨">Tab1</a></li>
+                  <li><a href="#" id="tabNav2" role="tab">Tab2</a></li>
+              </ul>
+              <div class="tabContent" role="tabpanel" aria-labelledby="tabNav1">
+                <div class="wrap-inner">
+                  <div class="innerTabWrap tab-base">
+                    <ul class="inner-tab">
+                      <li><a href="#tabNav1-1" role="tab">1단계</a></li>
+                      <li><a href="#tabNav1-2" role="tab">2단계</a></li>
+                    </ul>
+                    <!-- 1단계 -->
+                    <div class="inner-contents" id="tabNav1-1" role="tabpanel" aria-labelledby="tabNav1-1" style="display: block;">
+                      Tab in Tab 1
+                    </div>
+                    <!--// 1단계 -->
+                    <!-- 2단계 -->
+                    <div class="inner-contents" id="tabNav1-2" role="tabpanel" aria-labelledby="tabNav1-2">
+                      Tab in Tab 2
+                    </div>
+                    <!--// 2단계 -->
+                  </div>
+                </div>
+              </div>
+              <!-- 종합의견 및 제안 -->
+              <div class="tabContent" role="tabpanel" aria-labelledby="tabNav2">
+                  Tab2
+              </div>  
+            </div>
+            <script>
+                commonUI.tabNav('.ex-tabwrap', 1);
+                commonUI.tabInnerNav('.innerTabWrap', 1);
+            </script>
+          </div>
+					<pre><code class="language-xml">&lt;div class=&quot;tabWrap tab-base tab-total&quot;&gt;
+  &lt;ul class=&quot;tabNav&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;tabNav1&quot; role=&quot;tab&quot; title=&quot;선택됨&quot;&gt;Tab1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;tabNav2&quot; role=&quot;tab&quot;&gt;Tab2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class=&quot;tabContent&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tabNav1&quot;&gt;
+      &lt;div class=&quot;wrap-inner&quot;&gt;
+          &lt;div class=&quot;innerTabWrap tab-base&quot;&gt;
+              &lt;ul class=&quot;inner-tab&quot;&gt;
+                  &lt;li&gt;&lt;a href=&quot;#tabNav1-1&quot; role=&quot;tab&quot;&gt;1단계&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#tabNav1-2&quot; role=&quot;tab&quot;&gt;2단계&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+              &lt;!-- 1단계 --&gt;
+              &lt;div class=&quot;inner-contents&quot; id=&quot;tabNav1-1&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tabNav1-1&quot; style=&quot;display: block;&quot;&gt;
+                Tab in Tab 1
+              &lt;/div&gt;
+              &lt;!--// 1단계 --&gt;
+              &lt;!-- 2단계 --&gt;
+              &lt;div class=&quot;inner-contents&quot; id=&quot;tabNav1-2&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tabNav1-2&quot;&gt;
+                Tab in Tab 2
+              &lt;/div&gt;
+              &lt;!--// 2단계 --&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- 종합의견 및 제안 --&gt;
+  &lt;div class=&quot;tabContent&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tabNav2&quot;&gt;
+      Tab2
+  &lt;/div&gt;  
+&lt;/div&gt;
+&lt;script&gt;
+    commonUI.tabNav(&#39;.tabWrap&#39;, 1);
+    commonUI.tabInnerNav(&#39;.innerTabWrap&#39;, 1);
+&lt;/script&gt;
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Tab in Tab Collapse</h3>
+					<div class="code-preview">
+            <div class="tabWrap tab-base tab-total ex-collapse">
+              <ul class="tabNav">
+                <li><a href="#" id="tabNav1" role="tab" title="선택됨">Tab 1</a></li>
+                <li><a href="#" id="tabNav2" role="tab">Tab 2</a></li>
+              </ul>
+                <div class="tabContent" role="tabpanel" aria-labelledby="tabNav1">
+                  <!-- tab-innerdouble -->
+                  <div class="tab-innerdouble top">
+                  <div class="innerInTabWrap1 tab-base">
+                    <ul class="innerTab double-tab">
+                      <li><a href="#tabNav2-2-1" role="tab" class="active" title="선택됨">Tab in 1</a></li>
+                      <li><a href="#tabNav2-2-2" role="tab">Tab in 2</a></li>
+                    </ul>
+                    <div class="double-contents" id="tabNav2-2-1" role="tabpanel" aria-labelledby="tabNav2-2-1"  style="display: block;">
+                      Tab in Tab 1
+                    </div>
+                    <div class="double-contents" id="tabNav2-2-2" role="tabpanel" aria-labelledby="tabNav1-2-2">
+                      Tab in Tab 2
+                    </div>
+                  </div>                                        
+                </div>
+              </div>
+              <!-- 종합의견 및 제안 -->
+              <div class="tabContent" role="tabpanel" aria-labelledby="tabNav2">
+                  Tab2
+              </div>
+            </div>
+            <script>
+              commonUI.tabNav('.ex-collapse', 1);
+              commonUI.tabInnerNav('.innerInTabWrap1', 1);                    
+            </script>
+          </div>
+					<pre><code class="language-xml">&lt;div class=&quot;tabWrap tab-base tab-total&quot;&gt;
+  &lt;ul class=&quot;tabNav&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;tabNav1&quot; role=&quot;tab&quot; title=&quot;선택됨&quot;&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;tabNav2&quot; role=&quot;tab&quot;&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class=&quot;tabContent&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tabNav1&quot;&gt;
+    &lt;!-- tab-innerdouble --&gt;
+    &lt;div class=&quot;tab-innerdouble top&quot;&gt;
+      &lt;div class=&quot;innerInTabWrap1 tab-base&quot;&gt;
+        &lt;ul class=&quot;innerTab double-tab&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;#tabNav2-2-1&quot; role=&quot;tab&quot; class=&quot;active&quot; title=&quot;선택됨&quot;&gt;Tab in 1&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#tabNav2-2-2&quot; role=&quot;tab&quot;&gt;Tab in 2&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class=&quot;double-contents&quot; id=&quot;tabNav2-2-1&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tabNav2-2-1&quot;  style=&quot;display: block;&quot;&gt;
+          Tab in Tab 1
+        &lt;/div&gt;
+        &lt;div class=&quot;double-contents&quot; id=&quot;tabNav2-2-2&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tabNav1-2-2&quot;&gt;
+          Tab in Tab 2
+        &lt;/div&gt;
+      &lt;/div&gt;                                        
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tabContent&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tabNav2&quot;&gt;
+    Tab2
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  commonUI.tabNav(&#39;.tabWrap&#39;, 1);
+  commonUI.tabInnerNav(&#39;.innerInTabWrap1&#39;, 1);                    
+&lt;/script&gt;
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Tab in Tab in Tab</h3>
+					<div class="code-preview">
+            <div class="tabWrap tab-base tab-total ex-tabtabtab">
+              <ul class="tabNav">
+                  <li><a href="#" id="tabNav1" role="tab" title="선택됨">Tab1</a></li>
+                  <li><a href="#" id="tabNav2" role="tab">Tab2</a></li>
+              </ul>
+              <div class="tabContent" role="tabpanel" aria-labelledby="tabNav1">
+                  <div class="wrap-inner">
+                      <div class="innerTabWrap2 tab-base">
+                          <ul class="inner-tab">
+                              <li><a href="#tabNav1-1" role="tab">Tabin1</a></li>
+                              <li><a href="#tabNav1-2" role="tab">Tabin2</a></li>
+                          </ul>
+                          <div class="inner-contents" id="tabNav1-1" role="tabpanel" aria-labelledby="tabNav1-1">
+                            <!-- tab-innerdouble -->
+                            <div class="tab-innerdouble top">
+                                <div class="innerInTabWrap1 tab-base">
+                                    <ul class="innerTab double-tab">
+                                        <li><a href="#tabNav2-2-1" role="tab">TabinTabin1</a></li>
+                                        <li><a href="#tabNav2-2-2" role="tab">TabinTabin2</a></li>
+                                    </ul>
+                                    <div class="double-contents" id="tabNav2-2-1" role="tabpanel" aria-labelledby="tabNav2-2-1">
+                                      Tab in Tab in Tab 1
+                                    </div>
+                                    <div class="double-contents" id="tabNav2-2-2" role="tabpanel" aria-labelledby="tabNav1-2-2">
+                                      Tab in Tab in Tab 2
+                                    </div>
+                                </div>                                        
+                            </div>
+                          </div>
+                          <div class="inner-contents" id="tabNav1-2" role="tabpanel" aria-labelledby="tabNav1-2">
+                            Tab in 2
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="tabContent" role="tabpanel" aria-labelledby="tabNav2">
+                Tab 02
+              </div>
+            </div>
+            <script>
+                commonUI.tabNav('.ex-tabtabtab', 1);
+                commonUI.tabInnerNav('.innerTabWrap2', 1);
+                commonUI.tabInnerNav('.innerInTabWrap1', 1);
+                commonUI.tabInnerNav('.innerInTabWrap2', 1);                    
+            </script>
+          </div>
+<pre><code class="language-xml">&lt;div class=&quot;tabWrap tab-base tab-total&quot;&gt;
+  &lt;ul class=&quot;tabNav&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;tabNav1&quot; role=&quot;tab&quot;&gt;Tab1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;tabNav2&quot; role=&quot;tab&quot;&gt;Tab2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class=&quot;tabContent&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tabNav1&quot;&gt;
+      &lt;div class=&quot;wrap-inner&quot;&gt;
+          &lt;div class=&quot;innerTabWrap tab-base&quot;&gt;
+              &lt;ul class=&quot;inner-tab&quot;&gt;
+                  &lt;li&gt;&lt;a href=&quot;#tabNav1-1&quot; role=&quot;tab&quot;&gt;Tabin1&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#tabNav1-2&quot; role=&quot;tab&quot;&gt;Tabin2&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+              &lt;div class=&quot;inner-contents&quot; id=&quot;tabNav1-1&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tabNav1-1&quot;&gt;
+                &lt;!-- tab-innerdouble --&gt;
+                &lt;div class=&quot;tab-innerdouble top&quot;&gt;
+                    &lt;div class=&quot;innerInTabWrap1 tab-base&quot;&gt;
+                        &lt;ul class=&quot;innerTab double-tab&quot;&gt;
+                            &lt;li&gt;&lt;a href=&quot;#tabNav2-2-1&quot; role=&quot;tab&quot;&gt;TabinTabin1&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#tabNav2-2-2&quot; role=&quot;tab&quot;&gt;TabinTabin2&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;div class=&quot;double-contents&quot; id=&quot;tabNav2-2-1&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tabNav2-2-1&quot;&gt;
+                          Tab in Tab in Tab 1
+                        &lt;/div&gt;
+                        &lt;div class=&quot;double-contents&quot; id=&quot;tabNav2-2-2&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tabNav1-2-2&quot;&gt;
+                          Tab in Tab in Tab 2
+                        &lt;/div&gt;
+                    &lt;/div&gt;                                        
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;inner-contents&quot; id=&quot;tabNav1-2&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tabNav1-2&quot;&gt;
+                Tab in 2
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tabContent&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tabNav2&quot;&gt;
+    Tab 02
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    commonUI.tabNav(&#39;.tabWrap&#39;, 1);
+    commonUI.tabInnerNav(&#39;.innerTabWrap&#39;, 1);
+    commonUI.tabInnerNav(&#39;.innerInTabWrap1&#39;, 1);
+    commonUI.tabInnerNav(&#39;.innerInTabWrap2&#39;, 1);                    
+&lt;/script&gt;
+        </div>
+            
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Title</h3>
+					<div class="code-preview"></div>
+					<pre><code class="language-xml">
+            
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Title</h3>
+					<div class="code-preview"></div>
+					<pre><code class="language-xml">
+            
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Title</h3>
+					<div class="code-preview"></div>
+					<pre><code class="language-xml">
+            
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Title</h3>
+					<div class="code-preview"></div>
+					<pre><code class="language-xml">
+            
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Title</h3>
+					<div class="code-preview"></div>
+					<pre><code class="language-xml">
+            
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Title</h3>
+					<div class="code-preview"></div>
+					<pre><code class="language-xml">
+            
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Title</h3>
+					<div class="code-preview"></div>
+					<pre><code class="language-xml">
+            
+</code></pre>
+					<!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Title</h3>
+					<div class="code-preview"></div>
+					<pre><code class="language-xml">
+            
+</code></pre>
+					<!-- e:  -->
+
+					<!-- End -->
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

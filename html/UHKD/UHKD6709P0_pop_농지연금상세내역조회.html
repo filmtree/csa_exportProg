@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <!-- 재무상태분석 상세보기 -->
+    <div class="modal full dim" id="pop-university" style="display: block">
+      <!-- basic : width: 800px, wide : width: 1200px -->
+      <div class="modalWrap wide sm-text">
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">농지연금</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <div class="modal-body">
+          <!-- 내용시작 -->
+          <div class="modal-body-inner">
+            <div class="con-table-header right">
+              <span class="txt-helper">(단위 : 만원)</span>
+            </div>
+            <div class="con-table all-center">
+              <table class="">
+                <caption>
+                  계약번호, 계약일자, 연금지급방식, 연금개시(예정)일, 연금수령종료일, 수급(예상)연금액(월), 수급(예상)연금액(년), 조회기준일로 구성된 표.
+                </caption>
+                <colgroup>
+                  <col style="width: 10%;" />
+                  <col style="width: 10%;" />
+                  <col style="width: 10%;" />
+                  <col style="width: 10%;" />
+                  <col style="width: 10%;" />
+                  <col style="width: 10%;" />
+                  <col style="width: 10%;" />
+                  <col style="width: 10%;" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">계약번호</th>
+                    <th scope="col">계약일자</th>
+                    <th scope="col">연금지급방식</th>
+                    <th scope="col">연금개시(예정)일</th>
+                    <th scope="col">연금수령종료일</th>
+                    <th scope="col">수급(예상)연금액(월)</th>
+                    <th scope="col">수급(예상)연금액(년)</th>
+                    <th scope="col">조회기준일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="col">계약번호</td>
+                    <td scope="col">계약일자</td>
+                    <td scope="col">연금지급방식</td>
+                    <td scope="col">연금개시(예정)일</td>
+                    <td scope="col">연금수령종료일</td>
+                    <td scope="col">수급(예상)연금액(월)</td>
+                    <td scope="col">수급(예상)연금액(년)</td>
+                    <td scope="col">조회기준일</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="txt-list dot gray">
+              <li>전후후박형의 경우 10년 이후 조회 시 감액된 금액으로 제공됩니다.</li>
+              <li>농지연금 관련 문의사항은 농지은행(1577-7770)으로 직접 문의하시기 바랍니다.</li>
+            </ul>
+          </div>
+          <!-- 내용끝 -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

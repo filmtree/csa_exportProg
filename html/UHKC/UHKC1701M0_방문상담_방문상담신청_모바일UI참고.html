@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script><!--공통UI layout-->
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body class="scroll-none">
+    <div id="wrapper">
+        <!-- header -->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">진단ㆍ상담 서비스</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                            <li><a href="#none" target="_self">재무진단</a></li>
+                            <li><a href="#none" target="_self">노후준비정보</a></li>
+                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep2">
+                        <button type="button" class="breadcrumb-trigger">방문상담신청</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">상담지사안내</a></li>
+                            <li><a href="#none" target="_self">상담지자체안내</a></li>
+                            <li><a href="#none" target="_self">노후준비종합진단</a></li>
+                            <li><a href="#none" target="_self">온라인상담</a></li>
+                            <li><a href="#none" target="_self">방문상담신청</a></li>
+                            <li><a href="#none" target="_self">교육신청</a></li>
+                            <li><a href="#none" target="_self">강사정보</a></li>
+                            <li><a href="#none" target="_self">자가진단</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep2">
+                        <button type="button" class="breadcrumb-trigger current">방문상담신청</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li class="current"><a href="#none" target="_self">방문상담신청</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">상담예약목록</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner" class="counsel visit">
+            <!--page-title-->
+            <div class="page-header">
+                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>방문상담 신청</h2></div>
+                <div class="page-desc">
+                    <button type="button" class="page-desc-btn _has-tooltip"><span>방문상담 예약</span><i class="ic-only f-pg-desc"></i></button>
+                    <div class="desc-box _tooltipbox">
+                        <div class="desc-box-inner">
+                            <div class="desc-content">
+                                <p>
+                                    방문상담을 위한 방문예약 코너입니다.
+                                    담당컨설턴트의 확인 후 방문 예약일에 해당 지사에 방문하시어 전문 컨설턴트 (<span class="fc-primary">재무설계사, 사회복지사, 노후준비상담사</span> 등)와 1:1 노후준비 상담을 진행하실 수 있습니다.
+                                </p>
+                            </div>
+                            <button type="button" class="ic-only box-close">창닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--//page-title-->
+            <div class="content-wrap visit-reservation">
+                <!--콘텐츠 영역-->
+                <div class="cont-subject">
+                    <h3 class="cont-title">방문상담 예약 일자 </h3>
+                    <p class="cont-desc">방문상담을 신청하고자 하는 지역과 지사, 일정을 선택하여 주세요.<br>
+                    <span class="fc-primary">예약상담시간은 컨설턴트와의 협의 후 최종 확정됩니다.</span></p>
+                </div>
+                
+                <div class="reservation-wrap">
+                    <div class="reservation-date">
+                        <div class="cont-head">
+                            <h4 class="cont-title"><span class="fc-primary">01. </span>지사, 예약 일자 선택</h4>
+                        </div>
+                        <div class="contbox-line">
+                            <span class="item-title">지역ㆍ지사 선택</span>
+                            <div class="form-group">
+                                <select title="지역/지사 선택">
+                                    <option value="지역/지사 선택">지역ㆍ지사 선택</option>
+                                    <option value="">서울 > 서울남부지역본부</option> 
+                                    <option value="">서울 > 서울북부지역본부</option>
+                                    <option value="">서울 > 송파지사</option>
+                                    <option value="">경기 > 경인지역본부</option>
+                                    <option value="">경기 > 남양주지사</option>
+                                    <option value="">인천 > 남동연수지사</option>
+                                    <option value="">강원 > 춘천지사</option>
+                                    <option value="">충남 > 천안지사</option>
+                                    <option value="">충북 > 동청주지사</option>
+                                    <option value="">대전 > 서대전지사</option>
+                                    <option value="">경남 > 창원지사</option>
+                                    <option value="">경북 > 구미지사</option>
+                                    <option value="">대구 > 대구지역본부</option>
+                                    <option value="">울산 > 남울산지사</option>
+                                    <option value="">부산 > 부산지역본부</option>
+                                    <option value="">전남 > 목포지사</option>
+                                    <option value="">전북 > 전주완주지사</option>
+                                    <option value="">광주 > 광주지역본부</option>
+                                    <option value="">제주 > 제주지사</option>
+                                </select>
+                                <select title="상담 지자체 센터 선택">
+                                    <option value="상담 지자체 센터 선택">상담 지자체 센터 선택</option>
+                                    <option value="">부산 > 공창종합사회복지관</option>
+                                    <option value="">부산 > 노인장애인복지과</option>
+                                    <option value="">부산 > 장노년일자리지원센터</option>
+                                    <option value="">부산 > 부산광역시 북구청</option>
+                                    <option value="">부산 > 북이백세누리센터</option>
+                                    <option value="">전북 > 김제노인종합복지관</option>
+                                    <option value="">전북 > 서울대학교 노령화</option>
+                                    <option value="">전북 > 천안지사</option>
+                                </select>
+                            </div>
+                            <div class="date-choose">
+                                <div class="tableDatepicker">
+                                    <div class="datepicker-header">
+                                        <a href="#" class="prev-year"><span>이전년도</span></a>
+                                        <a href="#" class="prev-month"><span>지난달</span></a>
+                                        <strong class="datepicker-value">2023년 12월</strong>
+                                        <a href="#" class="next-month"><span>다음달</span></a>
+                                        <a href="#" class="next-year"><span>다음년도</span></a>
+                                    </div>
+                                    <table class="datepicker-calendar" summary="현재 달력을 통해 방문일자 선택">
+                                        <caption>방문일자 선택 달력</caption>
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="sunday">Su</th>
+                                                <th scope="col">Mo</th>
+                                                <th scope="col">Tu</th>
+                                                <th scope="col">We</th>
+                                                <th scope="col">Th</th>
+                                                <th scope="col">Fr</th>
+                                                <th scope="col" class="saturday">Sa</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="sunday"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><a href="#" class="selected">1</a></td><!--선택된 날짜-->
+                                                <td class="saturday">2</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="sunday">3</td>
+                                                <td><a href="#">4</a></td>
+                                                <td><a href="#">5</a></td>
+                                                <td><a href="#">6</a></td>
+                                                <td><a href="#">7</a></td>
+                                                <td><a href="#">8</a></td>
+                                                <td class="saturday">9</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="sunday">10</td>
+                                                <td><a href="#">11</a></td>
+                                                <td><a href="#">12</a></td>
+                                                <td><a href="#">13</a></td>
+                                                <td><a href="#">14</a></td>
+                                                <td><a href="#">15</a></td>
+                                                <td class="saturday">16</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="sunday">17</td>
+                                                <td><a href="#">18</a></td>
+                                                <td><a href="#">19</a></td>
+                                                <td><a href="#">20</a></td>
+                                                <td><a href="#">21</a></td>
+                                                <td><a href="#">22</a></td>
+                                                <td class="saturday">23</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="sunday">24</td>
+                                                <td><a href="#">25</a></td>
+                                                <td><a href="#">26</a></td>
+                                                <td><a href="#">27</a></td>
+                                                <td><a href="#">28</a></td>
+                                                <td><a href="#">29</a></td>
+                                                <td class="saturday">30</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="sunday">31</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="saturday"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- <div id="innerDatepicker" class="innerDatepicker"></div> -->
+                            </div>
+                        </div>
+                        <div class="guides pc-hide">
+                            <p class="alert-txt">희망하시는 방문일정을 선택해주세요.</p>
+                            <p class="guide-text-nor">날짜를 선택하시면 아래에 상담 가능한 시간이 표시됩니다.</p>
+                        </div>
+                    </div>
+                    <div class="progress-arr"><i class="ic-only ic-twins-arr-blue" aria-hidden="true"></i></div>
+                    <div class="reservation-time active"><!--class="active" 추가하면 모바일화면용 희망 상담시간 선택 콘텐츠 나타남 -->
+                        <div class="mo-fixed">
+                            <div class="cont-head">
+                                <h4 class="cont-title"><span class="fc-primary">02. </span>희망 상담시간 선택</h4>
+                                <button type="button" class="ic-only box-close pc-hide">창닫기</button>
+                            </div>
+                            <div class="contbox-line">
+                                <div class="guides">
+                                    <p class="alert-txt">희망하시는 방문일정을 선택해주세요.</p>
+                                    <p class="guide-text-nor">날짜를 선택하시면 아래에 상담 가능한 시간이 표시됩니다.</p>
+                                </div>
+                                <div class="time-choose">
+                                    <div class="time-choose-view">
+                                        <span class="date">2023년 09월 09일</span><!-- <span class="date no-choice">날짜 미선택</span> -->
+                                        <a href="#" class="button-link pc-hide"><span>날짜 다시 선택</span><i class="ic-only arrow-right" arir-hidden="true"></i></a>
+                                    </div>
+                                    <ul class="time-choose-list">
+                                        <li class="choice-before"><!--날짜 선택 전(날짜선택하기전 까지는 클릭 못함)-->
+                                            <span class="time">11:00</span>
+                                            <button type="button" class="button-primary -sm round">상담예약 신청</button>
+                                        </li>
+                                        <li class="choice"><!--상담시간 선택가능-->
+                                            <span class="time">10:00</span>
+                                            <button type="button" class="button-primary -sm round">상담예약 신청</button>
+                                        </li>
+                                        <li class="choice-disabled"><!--상담시간 선택 못함-->
+                                            <span class="time">13:00</span>
+                                            <button type="button" class="button-primary -sm round">상담예약 신청</button>
+                                        </li>
+                                        <li class="choice-before"><!--날짜 선택 전(날짜선택하기전 까지는 클릭 못함)-->
+                                            <span class="time">14:00</span>
+                                            <button type="button" class="button-primary -sm round">상담예약 신청</button>
+                                        </li>
+                                        <li class="choice-before"><!--날짜 선택 전(날짜선택하기전 까지는 클릭 못함)-->
+                                            <span class="time">15:00</span>
+                                            <button type="button" class="button-primary -sm round">상담예약 신청</button>
+                                        </li>
+                                        <li class="choice-before"><!--날짜 선택 전(날짜선택하기전 까지는 클릭 못함)-->
+                                            <span class="time">16:00</span>
+                                            <button type="button" class="button-primary -sm round">상담예약 신청</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-group fixed">
+                            <button type="button" class="button-primary -lg">예약목록 확인</button>
+                        </div>
+                    </div>
+                    <div class="btn-group fixed pc-hide">
+                        <button type="button" class="button-primary -lg">예약목록 확인</button>
+                    </div>
+                    <script>
+                        $(function() {
+                            // 희망 상담시간 선택 fixed콘텐츠 창닫기 참고용
+                            $('.mo-fixed .cont-head .box-close').click(function(){
+                                var activeParent = $(this).closest(".reservation-time");
+                                console.log(activeParent);
+                                if (activeParent.hasClass('active') == true){
+                                    activeParent.removeClass('active');
+                                    $('body').removeClass('scroll-none');
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+                <!--//콘텐츠 영역-->
+            </div>
+
+            <!-- 공통UI - 만족도조사 -->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer -->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

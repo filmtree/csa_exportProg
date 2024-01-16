@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <button type="button" class="button-primary" id="modalOpenButton">Open</button>
+    
+    <!-- 퇴직연금 정보입력 Modal-->
+    <div class="modal dim full" id="modalTemplate">
+      <div class="modalWrap h720px">
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3>퇴직연금 정보입력</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <div class="modal-body">
+          <!-- 내용시작 -->
+          <div class="modal-body-inner">
+            <!-- survey list -->
+            <ul>
+              <!-- 1 -->
+              <li class="qnalist none col">
+                <p class="question-title"><em class="ic-q">Q</em>입사는 언제 하셨습니까? (퇴직금 중간정산 시 중간정산 연도)</p>
+                <div class="question-answer">
+                  <div class="form-group-txt">
+                    <input type="text" id="input4" class="charLength5 align-right" placeholder="0" title="입사년도" />
+                    <span class="back-txt">년</span>
+                  </div>
+                </div>
+              </li>
+              <!-- 2 -->
+              <li class="qnalist col">
+                <p class="question-title"><em class="ic-q">Q</em>전년도 소득은 한달에 얼마나 됩니까?</p>
+                <div class="question-answer">
+                  <div class="form-group-txt">
+                    <input type="text" id="input3" class="charLength5 align-right" placeholder="0" title="전년도소득월" />
+                    <span class="back-txt">만원</span>
+                  </div>
+                </div>
+              </li>
+              <!-- 3 -->
+              <li class="qnalist col">
+                <p class="question-title"><em class="ic-q">Q</em>퇴직금이 아닌 연금으로 수령하실 경우 몇 세부터 받으실 예정입니까?</p>
+                <div class="question-answer">
+                  <div class="form-group-txt">
+                    <input type="text" id="input2" class="charLength5 align-right" placeholder="0" title="연금수령 받고싶은 나이" />
+                    <span class="back-txt">세</span>
+                  </div>
+                </div>
+              </li>
+              <!-- 4 -->
+              <li class="qnalist col">
+                <p class="question-title"><em class="ic-q">Q</em>연금으로 받으실 경우 몇 년 동안 받기를 원하십니까?</p>
+                <div class="question-answer">
+                  <div class="form-group-txt">
+                    <input type="text" id="input1" class="charLength5 align-right" placeholder="0" title="연금받고싶은 년수" />
+                    <span class="back-txt">년</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!--// survey list -->
+          </div>
+          <!-- 내용끝 -->
+        </div>
+        <div class="modal-footer">
+          <div class="btn-group">
+            <!-- 231201 수정 -->
+            <button type="button" class="button-primary -lg">퇴직연금 수령액 등록</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--// 퇴직연금 정보입력 Modal-->
+
+    <script>
+      document.querySelector("#modalOpenButton").addEventListener("click", () => {
+        commonUI.modal("#modalTemplate", "#modalOpenButton");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+	<script src="../../js/ui_temp.js"></script>
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <style>
+        /* .modal {align-items: flex-start; width:800px; height: 720px;} */
+        .color-box.border {border:1px var(--ui-colr2) solid; background-color: #fff; border-radius: 0; padding:10px 30px; height: 300px; overflow-y: auto;}
+        .color-box.border + .color-box.border {margin-top: 24px; height: 240px; padding:0 16px;}
+        .color-box.border p {height: 40px; align-items: center; display: flex;}
+        .checklist li label{padding-top:8px; padding-bottom: 8px; display: block;}
+        .checklist li .inp-checkbox input {top:8px;}
+        .checklist [class*="depth"] .inner {position: relative;}
+        .checklist [class*="depth"] .inner .inner-arrow  {position: absolute; display: block;  font-size: 0; width:32px; height:40px; background: url(../../images/ico/ic_10_filldarr_active.svg) no-repeat center; top:0px; left:-10px;transform: rotate(180deg);}
+        .checklist .depth1 .inner {padding-left: 22px;}
+        .depth1 .checklist {display: none;}
+        .checklist.active {display: block;}
+        .checklist .depth2 .inner {padding-left: 32px;}
+        .checklist .depth3 .inner {padding-left: 45px;}
+        .checklist .depth2 .inner .inner-arrow {left: 0px;}
+        .checklist .depth3 .inner .inner-arrow {content: ''; width: 3px; height:3px; border-radius: 100%; top:18px; left:30px; background-color: var(--color-base);}
+        .checklist .depth1.close > .inner .inner-arrow, 
+        .checklist .depth2.close > .inner .inner-arrow { background: url(../../images/ico/ic_10_filldarr_default.svg) no-repeat center; }
+        .checklist .depth3.close > .inner .inner-arrow {background: var(--color-gray5);}
+    </style>
+</head>
+<body>
+    <div class="modal full" id="pop-alert3" style="display: block;">
+        <div class="modalWrap h720px">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <h3 class="cont-title">보고서 출력</h3>
+                </div>
+                <button class="btn-close">모달창닫기</button>
+            </div>
+            <div class="modal-body">
+                <!-- 내용시작 -->
+                <div class="modal-body-inner">
+                    <h3 class="cont-title">출력 목록 선택</h3>
+                    <div class="color-box none border">
+                        <ul class="checklist">
+                            <li class="depth1 ">
+                                <div class="inner">
+                                    <span class="inner-arrow">열기/닫기</span>
+                                    <label class="inp-checkbox">
+                                        <input type="checkbox" name="checkbox1">
+                                        <span>분류1</span>
+                                    </label>      
+                                </div>
+                                <ul class="checklist active">
+                                    <li class="depth2">
+                                        <div class="inner">
+                                            <span class="inner-arrow">열기/닫기</span>
+                                            <label class="inp-checkbox">
+                                                <input type="checkbox" name="checkbox1-1">
+                                                <span>분류2</span>
+                                            </label>
+                                        </div>
+                                        <ul class="checklist active">   
+                                            <li class="depth3">
+                                                <div class="inner">
+                                                    <span class="inner-arrow">열기/닫기</span>
+                                                    <label class="inp-checkbox">
+                                                        <input type="checkbox" name="checkbox1-1">
+                                                        <span>분류3</span>
+                                                    </label>
+                                                </div>
+                                            </li>  
+                                            <li class="depth3">
+                                                <div class="inner">
+                                                    <span class="inner-arrow">열기/닫기</span>
+                                                    <label class="inp-checkbox">
+                                                        <input type="checkbox" name="checkbox1-1">
+                                                        <span>분류3</span>
+                                                    </label>
+                                                </div>
+                                            </li> 
+                                            <li class="depth3">
+                                                <div class="inner">
+                                                    <span class="inner-arrow">열기/닫기</span>
+                                                    <label class="inp-checkbox">
+                                                        <input type="checkbox" name="checkbox1-1">
+                                                        <span>분류3</span>
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="depth2 close">
+                                        <div class="inner">
+                                            <span class="inner-arrow">열기/닫기</span>
+                                            <label class="inp-checkbox">
+                                                <input type="checkbox" name="checkbox1-1">
+                                                <span>분류2</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="depth1 close">
+                                <div class="inner">
+                                    <span class="inner-arrow">열기/닫기</span>
+                                    <label class="inp-checkbox">
+                                        <input type="checkbox" name="checkbox1">
+                                        <span>분류1</span>
+                                    </label>
+                                </div>
+                            </li>       
+                        </ul>
+                    </div>
+                    <div class="color-box none border">
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                        <p>선택항목</p>
+                    </div>
+                </div>
+                <!-- 내용끝 -->
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group full">
+                    <a href="#none" type="button" class="button-primary -lg">인쇄하기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    // 열기/닫기
+    const arrows = document.querySelectorAll(".checklist .inner-arrow");
+    arrows.forEach(arrow =>{
+        arrow.addEventListener("click", function(){
+            const findChildren = this.closest("li").querySelectorAll(".checklist").length;
+            if(findChildren !=0){
+                this.closest("li").querySelector(".checklist").classList.toggle('active');
+                this.closest("li").classList.toggle('close');
+            }
+        })
+    }); 
+
+</script>

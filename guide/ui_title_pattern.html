@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>UI 가이드</title>
+
+    <script src="../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+    <script src="../js/lib/jquery.easing.min.js"></script>
+    <script src="../js/lib/swiper-bundle.min.js"></script>
+    <script src="ui_include.js"></script>
+    <script src="../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="guide.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+    <link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css" />
+    <script src="highlight/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </head>
+  <body>
+    <div class="guideWrap">
+      <header class="guideHeader"></header>
+      <section class="guideContainer">
+        <header class="sec-header">
+          <h2>Title Template</h2>
+        </header>
+        <div class="sec-contents">
+          <!-- Start -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Page Title</h3>
+          <div class="code-preview">
+            <div class="page-header">
+              <div class="page-title">
+                <a href="#" class="ic-only back">뒤로가기</a>
+                <h2>온라인 상담</h2>
+              </div>
+              <div class="page-desc">
+                <button type="button" class="page-desc-btn _has-tooltip"><span>온라인 상담 안내</span><i class="ic-only f-pg-desc"></i></button>
+                <div class="desc-box _tooltipbox">
+                  <div class="desc-box-inner">
+                    <div class="desc-content">
+                      <p>재무설계사(CFP,AFPK), 사회복지사, 노후준비상담사 등 공단의 전문 컨설턴트가 노후준비에 관한 1:1 맞춤 상담을 진행하고 있습니다. <span class="fc-primary">재무, 건강, 일/취업, 취미/여가, 주거, 대인관계</span> 등 다양한 영역에 대해 상담신청하여 이용하실 수 있습니다. 국민연금 가입, 납부, 연금지급 등 제도 문의는 <span class="fc-primary">국민연금공단 홈페이지(www.nps.or.kr)나 1355 상담센터</span>를 이용하시기 바랍니다.</p>
+                    </div>
+                    <button type="button" class="ic-only box-close">창닫기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;!--page-title--&gt;
+&lt;div class=&quot;page-header&quot;&gt;
+  &lt;div class=&quot;page-title&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;ic-only back&quot;&gt;뒤로가기&lt;/a&gt;
+    &lt;h2&gt;온라인 상담&lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;page-desc&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;page-desc-btn _has-tooltip&quot;&gt;&lt;span&gt;온라인 상담 안내&lt;/span&gt;&lt;i class=&quot;ic-only f-pg-desc&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;div class=&quot;desc-box _tooltipbox&quot;&gt;
+      &lt;div class=&quot;desc-box-inner&quot;&gt;
+        &lt;div class=&quot;desc-content&quot;&gt;
+          &lt;p&gt;재무설계사(CFP,AFPK), 사회복지사, 노후준비상담사 등 공단의 전문 컨설턴트가 노후준비에 관한 1:1 맞춤 상담을 진행하고 있습니다. &lt;span class=&quot;fc-primary&quot;&gt;재무, 건강, 일/취업, 취미/여가, 주거, 대인관계&lt;/span&gt; 등 다양한 영역에 대해 상담신청하여 이용하실 수 있습니다. 국민연금 가입, 납부, 연금지급 등 제도 문의는 &lt;span class=&quot;fc-primary&quot;&gt;국민연금공단 홈페이지(www.nps.or.kr)나 1355 상담센터&lt;/span&gt;를 이용하시기 바랍니다.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;button&quot; class=&quot;ic-only box-close&quot;&gt;창닫기&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Contents Title</h3>
+          <div class="code-preview">
+            <div class="cont-head">
+              <h3 class="cont-title">개인정보 수집 및 이용에 대한 안내</h3>
+              <p class="cont-desc">아래 안내 내용을 확인하신 후 동의해 주세요.</p>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;cont-head&quot;&gt;
+  &lt;h3 class=&quot;cont-title&quot;&gt;개인정보 수집 및 이용에 대한 안내&lt;/h3&gt;
+  &lt;p class=&quot;cont-desc&quot;&gt;아래 안내 내용을 확인하신 후 동의해 주세요.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+          <!-- e:  -->
+
+					<!-- s:  -->
+					<h3 class="sec-title">Contents Title Big</h3>
+					<div class="code-preview">
+						<div class="cont-head">
+							<h3 class="cont-title big">재무설계 결과보기 (표 형식)</h3>
+							<p class="cont-desc big">
+								모든 분석은 미래가치로 실행됩니다. <br />
+								(연 소득상승률 4.7%, 연물가상승률 2%, 투자수익률 3.7% 적용)
+							</p>
+						</div>
+					</div>
+					<pre><code class="language-xml">&lt;div class=&quot;cont-head&quot;&gt;
+	&lt;h3 class=&quot;cont-title big&quot;&gt;재무설계 결과보기 (표 형식)&lt;/h3&gt;
+	&lt;p class=&quot;cont-desc big&quot;&gt;
+		모든 분석은 미래가치로 실행됩니다. &lt;br /&gt;
+		(연 소득상승률 4.7%, 연물가상승률 2%, 투자수익률 3.7% 적용)
+	&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+					<!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">No Hader Title</h3>
+          <div class="code-preview">
+            <div class="cont-subject">
+              <h3 class="cont-title">방문상담 예약 일자</h3>
+              <p class="cont-desc">
+                방문상담을 신청하고자 하는 지역과 지사, 일정을 선택하여 주세요.<br />
+                <span class="fc-primary">예약상담시간은 컨설턴트와의 협의 후 최종 확정됩니다.</span>
+              </p>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;cont-subject&quot;&gt;
+  &lt;h3 class=&quot;cont-title&quot;&gt;방문상담 예약 일자&lt;/h3&gt;
+  &lt;p class=&quot;cont-desc&quot;&gt;
+    방문상담을 신청하고자 하는 지역과 지사, 일정을 선택하여 주세요.&lt;br /&gt;
+    &lt;span class=&quot;fc-primary&quot;&gt;예약상담시간은 컨설턴트와의 협의 후 최종 확정됩니다.&lt;/span&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Contents Title Contents</h3>
+          <div class="code-preview">
+            <h4 class="cont-title">국민연금 가입중인 고객</h4>
+            <p>공인인증서로 로그인 하시면, 실제 고객님의 가입이력에 기초하여 설계 진행이 가능합니다.</p>
+          </div>
+          <pre><code class="language-xml">&lt;h4 class=&quot;cont-title&quot;&gt;국민연금 가입중인 고객&lt;/h4&gt;
+&lt;p&gt;공인인증서로 로그인 하시면, 실제 고객님의 가입이력에 기초하여 설계 진행이 가능합니다.&lt;/p&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Dot Title</h3>
+          <div class="code-preview">
+            <h3 class="cont-title dot">재무건전성 진단결과</h3>
+          </div>
+          <pre><code class="language-xml">&lt;h3 class=&quot;cont-title dot&quot;&gt;재무건전성 진단결과 &lt;/h3&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">List Number Title</h3>
+          <div class="code-preview">
+            <ol class="txt-list-counter blue-num">
+              <li>
+                <h4 class="num-count-title">사업장이 도산해도 수급권 보장</h4>
+                <p class="phrase">퇴직연금제도에서는 믿을 만한 금융기관을 선정하여 퇴직금을 맡겨 놓기 때문에 사업장이 도산해도 수급권이 보장됩니다.</p>
+              </li>
+              <li>
+                <h4 class="num-count-title"><span></span>제도설계 및 운용과정의 다양한 선택권 부여</h4>
+                <p class="phrase">퇴직급여를 퇴직금제도에서 처럼 일시금으로 수령할 수도 있고, 조건이 충족되면 연금으로 수령할 수도 있습니다. 특히 <span class="fc-primary">DC형의 경우에는 근로자의 추가 부담금 납부가 가능</span>하고 이에 대한 별도의 소득공제 혜택도 주어집니다.</p>
+              </li>
+            </ol>
+          </div>
+          <pre><code class="language-xml">&lt;ol class=&quot;txt-list-counter blue-num&quot;&gt;
+	&lt;li&gt;
+		&lt;h4 class=&quot;num-count-title&quot;&gt;사업장이 도산해도 수급권 보장&lt;/h4&gt;
+		&lt;p class=&quot;phrase&quot;&gt;퇴직연금제도에서는 믿을 만한 금융기관을 선정하여 퇴직금을 맡겨 놓기 때문에 사업장이 도산해도 수급권이 보장됩니다.&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;h4 class=&quot;num-count-title&quot;&gt;&lt;span&gt;&lt;/span&gt;제도설계 및 운용과정의 다양한 선택권 부여&lt;/h4&gt;
+		&lt;p class=&quot;phrase&quot;&gt;퇴직급여를 퇴직금제도에서 처럼 일시금으로 수령할 수도 있고, 조건이 충족되면 연금으로 수령할 수도 있습니다. 특히 &lt;span class=&quot;fc-primary&quot;&gt;DC형의 경우에는 근로자의 추가 부담금 납부가 가능&lt;/span&gt;하고 이에 대한 별도의 소득공제 혜택도 주어집니다.&lt;/p&gt;
+	&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Number Title</h3>
+          <div class="code-preview">
+            <div>
+              <h4 class="cont-title">1. 적립금 운용 방법</h4>
+              <h5 class="cont-title _entitycode mt0"><span class="circled-digit">1</span>원리금 보장형</h5>
+              <p class="cont-desc fc-base mb0">이자율이 사전에 공시되고 원금과 이자가 보장되어 안정적인 투자수익을 달성할 수 있는 상품</p>
+              <h5 class="cont-title _entitycode"><span class="circled-digit">2</span>실적 배당형</h5>
+              <p class="cont-desc fc-base mb24">본인이 낸 운용 실적에 따라 이익과 손실이 결정되는 상품으로 주식이나 채권, 혹은 다양한 펀드들에 투자할 수 있으며, 투자성향과 목표수익률, 위험에 대한 태도 등에 따라 채권형, 주식형, 혼합형 등 다양한 펀드를 선택 가능</p>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;h4 class=&quot;cont-title&quot;&gt;1. 적립금 운용 방법&lt;/h4&gt;
+&lt;h5 class=&quot;cont-title _entitycode mt0&quot;&gt;&lt;span class=&quot;circled-digit&quot;&gt;1&lt;/span&gt;원리금 보장형&lt;/h5&gt;
+&lt;p class=&quot;cont-desc fc-base mb0&quot;&gt;이자율이 사전에 공시되고 원금과 이자가 보장되어...&lt;/p&gt;
+&lt;h5 class=&quot;cont-title _entitycode&quot;&gt;&lt;span class=&quot;circled-digit&quot;&gt;2&lt;/span&gt;실적 배당형&lt;/h5&gt;
+&lt;p class=&quot;cont-desc fc-base mb24&quot;&gt;본인이 낸 운용 실적에 따라 이익과 손실이 결정되는...&lt;/p&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Grid Header</h3>
+          <div class="code-preview">
+            <div class="cont-head">
+              <h3 class="cont-title">신청자 정보</h3>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;cont-head&quot;&gt;
+		&lt;h3 class=&quot;cont-title&quot;&gt;신청자 정보&lt;/h3&gt;
+&lt;/div&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Grid Header 2</h3>
+          <div class="code-preview">
+            <div class="con-table-header">
+              <h3 class="cont-title mb0">자녀 교육자금 및 결혼자금</h3>
+              <div class="btn-wrap modify-txt">
+                <span class="txt-helper">(단위 : 만원)</span>
+                <button class="button-primary -sm round">대학교육비 통계조회
+                  <i class="ic-only arr10_r_white v1" arir-hidden="true"></i>
+								</button>
+              </div>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;con-table-header&quot;&gt;
+	&lt;h3 class=&quot;cont-title mb0&quot;&gt;자녀 교육자금 및 결혼자금&lt;/h3&gt;
+	&lt;div class=&quot;btn-wrap modify-txt&quot;&gt;
+		&lt;span class=&quot;txt-helper&quot;&gt;(단위 : 만원)&lt;/span&gt;
+		&lt;button class=&quot;button-primary -sm round&quot;&gt;대학교육비 통계조회
+			&lt;i class=&quot;ic-only arr10_r_white v1&quot; arir-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+		&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Grid Header 3</h3>
+          <div class="code-preview">
+            <div class="con-table-header">
+              <h3 class="cont-title small mb0">자녀 교육자금 및 결혼자금</h3>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;con-table-header&quot;&gt;
+	&lt;h3 class=&quot;cont-title small mb0&quot;&gt;자녀 교육자금 및 결혼자금&lt;/h3&gt;
+&lt;/div&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- End -->
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

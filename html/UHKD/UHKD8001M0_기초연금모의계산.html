@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- s: header -->
+      <header id="header"></header>
+      <!-- e: header -->
+
+      <!-- s: Loaction Information Link -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-nav">
+          <ol class="breadcrumb-location">
+            <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+            <li class="breadcrumb-depth dep1">
+              <button type="button" class="breadcrumb-trigger">재무진단</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                <li class="current"><a href="#none" target="_self">재무진단</a></li>
+                <li><a href="#none" target="_self">노후준비정보</a></li>
+                <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger current">기초연금모의계산</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">간단재무설계</a></li>
+                <li><a href="#none" target="_self">노후준비자금설계</a></li>
+                <li><a href="#none" target="_self">종합재무설계</a></li>
+                <li><a href="#none" target="_self">목적자금설계</a></li>
+                <li><a href="#none" target="_self">재무계산기</a></li>
+                <li><a href="#none" target="_self">국민연금준비수준</a></li>
+                <li><a href="#none" target="_self">내연금알아보기</a></li>
+                <li><a href="#none" target="_self">국민연금알아보기</a></li>
+                <li class="current"><a href="#none" target="_self">기초연금모의계산</a></li>
+                <li><a href="#none" target="_self">연금제도안내</a></li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <!-- e: Loaction Information Link -->
+
+      <!-- s: Main -->
+      <main id="conatiner" class="finance calculation-basic-pension">
+        <!--s: Page Title-->
+        <div class="page-header">
+          <div class="page-title">
+            <a href="#" class="ic-only back">뒤로가기</a>
+            <h2>기초연금 모의계산</h2>
+          </div>
+        </div>
+        <!--e: Page Title-->
+
+        <!--s: Contents -->
+        <div class="content-wrap">
+          <!-- s: 기초연금은 -->
+          <h3 class="cont-title big dot">기초연금은</h3>
+          <ul class="txt-list-contdesc">
+            <li class="fc-primary">
+              만 65세 이상 어르신 중 소득·재산이 하위 70%에 해당하는 분(소득인정액이 선정기준액 이하인 분)께 나라에서 지급하는 연금입니다.
+              <ul class="txt-list dot small gray">
+                <li>2023년 단독가구 선정기준액(202만원), 부부가구 선정기준액(323.2만원)</li>
+                <li>소득인정액: 기초연금 수급 여부 등을 결정하기 위해 개별가구의 소득과 재산을 각각 소득평가액과 재산의 소득환산액으로 재계산하여 각 소득평가액과 재산의 소득환산액을 합산한 금액</li>
+              </ul>
+            </li>
+            <li class="fc-primary">※ 소득·재산을 단순 합산한 금액이 아님 유의</li>
+          </ul>
+          <!-- e: 기초연금은 -->
+
+          <!-- s: 산정방식 -->
+          <h3 class="cont-title">산정방식</h3>
+          <ul class="txt-list-counter">
+            <li>
+              <ul class="txt-list-contdesc">
+                <li class="fc-primary">소득인정액 = 소득평가액 + 재산의 소득 환산액</li>
+                <li class="fc-primary">
+                  소득평가액 = {0.7 X (근로소득 - 108만원)} + 기타소득*
+                  <ul class="txt-list dot gray">
+                    <li>기타소득: 사업소득, 이자소득, 연금소득, 공적이전소득, 무료임차소득</li>
+                  </ul>
+                </li>
+                <li class="fc-primary">재산의 소득환산액 = [{(일반재산 – 기본재산액①) + (금융재산 – 2,000만원) – 부채} × 0.04(재산의 소득환산율, 연 4%) ÷ 12개월] + 고급 자동차 및 회원권의 가액②)</li>
+                <li>① 대도시(1억 3,500만원), 중소도시(8,500만원), 농·어촌(7,250만원)</li>
+                <li>② 고급자동차(3,000cc 이상 또는 4천만원 이상) 및 회원권은 그 가액을 그대로 적용</li>
+              </ul>
+            </li>
+            <li>
+              <ul class="txt-list-contdesc">
+                <li>기초연금은 국민연금 수급권, 부부 동시 수급, 소득역전방지감액 적용 여부 등에 따라 2023년 기준 월 최소 32,310원부터 최대 32만 3,180원 사이의 금액을 지급합니다.</li>
+                <li>만 65세 이상 어르신 중 소득·재산이 하위 70% 이하에 해당하는 경우 월 최대 32만 3,180원을 지급합니다.</li>
+              </ul>
+            </li>
+            <li>
+              <ul class="txt-list-contdesc">
+                <li>본 기초연금 모의계산 결과는 귀하께서 입력한 내용을 기초로 산정한 것입니다. 실제 공적자료 등에 따라 수령금액은 달라질 수 있으니 단순 참고용으로 활용하여 주시기 바랍니다.</li>
+                <li>자세한 사항은 국민연금공단 고객센터(1355, 유료) 또는 국민연금공단 지사로 문의하여 주시기 바랍니다.</li>
+              </ul>
+            </li>
+          </ul>
+          <!-- e: 산정방식 -->
+
+          <!-- s: 기본정보 -->
+          <div class="cont-head">
+            <h3 class="cont-title">기본정보</h3>
+          </div>
+
+          <!-- s: 가구유형을 입력해주세요. -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">1</span>가구유형을 입력해주세요.</h3>
+            </div>
+            <div class="grid-header-right">
+              <button class="button-primary -sm round" id="modalOpen001">
+                <span>가구유형 설명을 입력하는 이유?</span>
+                <i class="ic-only arr10_r_white" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="con-table sm">
+            <div class="board-wrap bd-data">
+              <div class="bd-row">
+                <div class="bd-col">
+                  <div class="leaf-cell">
+                    <div class="form-group">
+                      <label class="inp-radio free-size-equal">
+                        <input type="radio" id="" name="radioGroup1" checked="checked" />
+                        <span>공개</span>
+                      </label>
+                      <label class="inp-radio free-size-equal">
+                        <input type="radio" id="" name="radioGroup1" />
+                        <span>비공개</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-notice-bottom">
+            <ul class="txt-list dot">
+              <li>단독가구 : 배우자가 없거나, 사실이혼인 경우</li>
+              <li>부부가구 : (사실혼 배우자 포함) 배우자가 있는 경우</li>
+            </ul>
+          </div>
+          <!-- e: 가구유형을 입력해주세요. -->
+
+          <!-- s: 거주지 구분을 입력해주세요. -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">2</span>거주지 구분을 입력해주세요.</h3>
+            </div>
+            <div class="grid-header-right">
+              <button class="button-primary -sm round" id="modalOpen002">
+                <span>거주지 구분을 입력하는 이유?</span>
+                <i class="ic-only arr10_r_white" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="con-table sm">
+            <div class="board-wrap bd-data">
+              <div class="bd-row">
+                <div class="bd-col">
+                  <div class="leaf-cell">
+                    <div class="form-group">
+                      <label class="inp-radio free-size-equal">
+                        <input type="radio" id="" name="radioGroup2" checked="checked" />
+                        <span>1.대도시</span>
+                      </label>
+                      <label class="inp-radio free-size-equal">
+                        <input type="radio" id="" name="radioGroup2" />
+                        <span>2.중소도시</span>
+                      </label>
+                      <label class="inp-radio free-size-equal">
+                        <input type="radio" id="" name="radioGroup2" />
+                        <span>3.농ㆍ어촌</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-notice-bottom">
+            <ul class="txt-list dot">
+              <li>대도시 : 특별시, 광역시의 ‘구’(도농복합군 포함), 특례시</li>
+              <li>중소도시 : 도의 ‘시’와 세종특별자치시</li>
+              <li>
+                농·어촌: 도의 ‘군’<br />
+                ※ 주민등록주소지가 다른 부부가구의 경우 상위도시 기준으로 적용
+              </li>
+            </ul>
+          </div>
+          <!-- e: 거주지 구분을 입력해주세요. -->
+
+          <!-- s: 근로소득을 입력해주세요 -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">3</span>근로소득을 입력해주세요</h3>
+              <p class="cont-desc">(해당사항 없을 경우 미기재)</p>
+            </div>
+            <div class="grid-header-right">
+              <button class="button-primary -sm round" id="modalOpen003">
+                <span>근로소득 선정방법?</span>
+                <i class="ic-only arr10_r_white" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="con-table">
+            <table class="grid-min-width">
+              <caption>본인과 배우자의 근로소득을 입력 할 수 있는 표.</caption>
+              <colgroup>
+                <col style="width: 200px;"/>
+                <col style="width: auto;"/>
+                <col style="width: 200px;"/>
+                <col style="width: auto;"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">본인</th>
+                  <td>
+                    <div class="form-group-txt ac">
+                      <input type="text" id="" class="align-right form-160" placeholder="" aria-label="본인 근로소득" />
+                      <span class="back-txt">만원/월</span>
+                    </div>
+                  </td>
+                  <th scope="row">배우자</th>
+                  <td>
+                    <div class="form-group-txt ac">
+                      <input type="text" id="" class="align-right form-160" placeholder="" aria-label="배우자 근로소득" />
+                      <span class="back-txt">만원/월</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="grid-notice-bottom">
+            <ul class="txt-list dot">
+              <li>3개월 미만 일용근로소득, 건설공사 종사자, 하역(항만)작업 종사자 제외</li>
+              <li>공공일자리 소득(노인일자리사업, 장애인일자리사업, 자활근로, 공공근로 등) 제외</li>
+            </ul>
+          </div>
+          <!-- e: 근로소득을 입력해주세요 -->
+
+          <!-- s: 사업소득을 입력해주세요 -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">4</span>사업소득을 입력해주세요</h3>
+              <p class="cont-desc">(해당사항 없을 경우 미기재)</p>
+            </div>
+            <div class="grid-header-right">
+              <button class="button-primary -sm round" id="modalOpen004">
+                <span>사업소득 산정방법?</span>
+                <i class="ic-only arr10_r_white" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="con-table sm">
+            <div class="board-wrap bd-data">
+              <div class="bd-row">
+                <div class="bd-col">
+                  <div class="leaf-cell">
+                    <div class="form-group-txt"><input type="text" id="" class="align-right form-400" placeholder="" aria-label="사업소득" /><span class="back-txt">만원/월</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-notice-bottom">
+            <p class="grid-notice-title">사업소득의 종류</p>
+            <ul class="txt-list dot">
+              <li>기타사업소득 : 도매업·소매업, 제조업, 기타 사업에서 얻는 소득</li>
+              <li>임대소득 : 부동산·동산·권리 기타 재산의 대여로 발생하는 소득</li>
+            </ul>
+            <p class="grid-note15">※ 매출액이 아닌 필요 경비 등을 공제한 금액을 12개월로 분할하여 입력</p>
+          </div>
+          <!-- e: 사업소득을 입력해주세요 -->
+
+          <!-- s: 이자소득을 입력해주세요 -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">5</span>이자소득을 입력해주세요</h3>
+              <p class="cont-desc">(해당사항 없을 경우 미기재)</p>
+            </div>
+            <div class="grid-header-right">
+              <button class="button-primary -sm round" id="modalOpen005">
+                <span>이자소득 산정방법?</span>
+                <i class="ic-only arr10_r_white" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="con-table sm">
+            <div class="board-wrap bd-data">
+              <div class="bd-row">
+                <div class="bd-col">
+                  <div class="leaf-cell">
+                    <div class="form-group-txt"><input type="text" id="" class="align-right form-400" placeholder="" aria-label="이자소득" /><span class="back-txt">만원/월</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-notice-bottom">
+            <ul class="txt-list dot">
+              <li>예금·적금·주식·채권의 이자와 배당 또는 할인에 의해 발생하는 소득</li>
+            </ul>
+          </div>
+          <!-- e: 이자소득을 입력해주세요 -->
+
+          <!-- s: 연금소득을 입력해주세요 -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">6</span>연금소득을 입력해주세요</h3>
+              <p class="cont-desc">(해당사항 없을 경우 미기재)</p>
+            </div>
+            <div class="grid-header-right">
+              <button class="button-primary -sm round" id="modalOpen006">
+                <span>연금소득 산정방법?</span>
+                <i class="ic-only arr10_r_white" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="con-table sm">
+            <div class="board-wrap bd-data">
+              <div class="bd-row">
+                <div class="bd-col">
+                  <div class="leaf-cell">
+                    <div class="form-group-txt"><input type="text" id="" class="align-right form-400" placeholder="" aria-label="연금소득" /><span class="back-txt">만원/월</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-notice-bottom">
+            <p class="grid-notice-title">민간, 연금보험, 연금저축 등으로부터 정기적으로 발생하는 소득</p>
+            <ul class="txt-list dot">
+              <li>연1회, 연2회 수령하는 연금의 경우 월할하여 입력</li>
+            </ul>
+            <p class="grid-note15">※ 농지연금, 주택연금은 연금소득에 미포함(16번, 17번 항목에 입력)</p>
+          </div>
+          <!-- e: 연금소득을 입력해주세요 -->
+
+          <!-- s: 국민연금 외 공적이전소득을 입력해주세요 -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">7</span>국민연금 외 공적이전소득을 입력해주세요</h3>
+              <p class="cont-desc">(해당사항 없을 경우 미기재)</p>
+            </div>
+            <div class="grid-header-right">
+              <button class="button-primary -sm round" id="modalOpen007">
+                <span>공적이전소득 산정방법?</span>
+                <i class="ic-only arr10_r_white" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="con-table sm">
+            <div class="board-wrap bd-data">
+              <div class="bd-row">
+                <div class="bd-col">
+                  <div class="leaf-cell">
+                    <div class="form-group-txt"><input type="text" id="" class="align-right form-400" placeholder="" aria-label="공적이전소득" /><span class="back-txt">만원/월</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-notice-bottom">
+            <p class="grid-note15-bold">※ 국민연금 수급권자의 (예상)국민연금 급여액은 예상 기초연금 급여액 산정시 공적이전소득에 자동 반영되므로 입력 불필요</p>
+            <p class="grid-notice-title">국민연금 외 공적이전소득의 종류</p>
+            <ul class="txt-list dot">
+              <li>각 직역연금법 및 [국민연금과 직역연금의 연계에 관한 법률]에 의한 급여</li>
+              <li>
+                [산업재해보상보험법]에 의한 보험급여(휴업급여, 장해급여, 유족급여, 상병보상연금, 진폐보상연금, 진폐유족연금 등)<br />
+                ※ 산재급여 발생 원천이 근로소득 산정에서 제외하는 일용근로, 공공일자리, 자활근로로 인한 산재급여(휴업급여) 인경우는 공적이전소득에서 제외
+              </li>
+              <li>[독립유공자예우에 관한 법률], [국가유공자 등 예우 및 지원에 관한 법률], [고엽제후유의증 환자지원 및 단체설립에 관한 법률]에 의한 각종 급여 중 일부 수당 전액 및 일부 보상금 중 43만원 제외</li>
+            </ul>
+          </div>
+          <!-- e: 국민연금 외 공적이전소득을 입력해주세요 -->
+
+          <!-- s: 무료임차소득 관련 내용을 입력해주세요 -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">8</span>무료임차소득 관련 내용을 입력해주세요</h3>
+              <p class="cont-desc">(해당사항 없을 경우 미기재)</p>
+            </div>
+            <div class="grid-header-right">
+              <button class="button-primary -sm round" id="modalOpen008">
+                <span>무료임차소득 산정방법?</span>
+                <i class="ic-only arr10_r_white" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="con-table">
+            <table class="grid-min-width">
+              <caption>지분율과 시가표준액으로 구성된 표.</caption>
+              <colgroup>
+                <col style="width: 200px" />
+                <col style="width: auto" />
+                <col style="width: 200px" />
+                <col style="width: auto" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">지분율</th>
+                  <td>
+                    <div class="form-group-txt ac">
+                      <input type="text" id="" class="align-right form-200" placeholder="" aria-label="지분율" />
+                      <span class="back-txt">%</span>
+                    </div>
+                  </td>
+                  <th scope="row">시가표준액</th>
+                  <td>
+                    <div class="form-group-txt ac">
+                      <input type="text" id="" class="align-right form-200" placeholder="" aria-label="시가표준액" />
+                      <span class="back-txt">만원</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="grid-notice-bottom">
+            <ul class="txt-list dot">
+              <li>무료임차소득 : 자녀 소유의 고가 주택에 거주하는 본인 또는 배우자에 대하여 임차료에 상응하여 소득으로 인정하는 금액</li>
+              <li>지분율 : 자녀 단독 소유일 경우 “100%” 작성, 자녀와 제3자가 공동 소유하고 있는 경우 자녀의 지분율 만큼 입력</li>
+              <li>시가표준액 : 자녀 소유 주택의 시가표준액 입력</li>
+            </ul>
+          </div>
+          <!-- e: 무료임차소득 관련 내용을 입력해주세요 -->
+
+          <!-- s: 금융재산을 입력해주세요 -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">9</span>금융재산을 입력해주세요</h3>
+              <p class="cont-desc">(해당사항 없을 경우 미기재)</p>
+            </div>
+            <div class="grid-header-right">
+              <button class="button-primary -sm round" id="modalOpen009">
+                <span>금융재산 산정방법?</span>
+                <i class="ic-only arr10_r_white" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="con-table sm">
+            <div class="board-wrap bd-data">
+              <div class="bd-row">
+                <div class="bd-col">
+                  <div class="leaf-cell">
+                    <div class="form-group-txt"><input type="text" id="" class="align-right form-400" placeholder="" aria-label=">금융재산" /><span class="back-txt">만원</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-notice-bottom">
+            <p class="grid-notice-title">금융재산의 종류</p>
+            <ul class="txt-list dot">
+              <li>현금 또는 수표, 어음, 주식, 국·공채 등 유가증권</li>
+              <li>예금, 적금, 부금, 보험 및 수익증권 등</li>
+            </ul>
+          </div>
+          <!-- e: 금융재산을 입력해주세요 -->
+
+          <!-- s: 건축물의 시가표준액을 입력해주세요 -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">10</span>건축물의 시가표준액을 입력해주세요</h3>
+              <p class="cont-desc">(해당사항 없을 경우 미기재)</p>
+            </div>
+            <div class="grid-header-right">
+              <button class="button-primary -sm round" id="modalOpen010">
+                <span>건축물 산정방법?</span>
+                <i class="ic-only arr10_r_white" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="con-table sm">
+            <div class="board-wrap bd-data">
+              <div class="bd-row">
+                <div class="bd-col">
+                  <div class="leaf-cell">
+                    <div class="form-group-txt"><input type="text" id="" class="align-right form-400" placeholder="" aria-label=">건축물의 시가표준액" /><span class="back-txt">만원</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-notice-bottom">
+            <ul class="txt-list dot">
+              <li>
+                주택, 건물, 시설물 등의 시가표준액의 합 입력(실 매매가 아님 유의)<br />
+                ※ (부동산 공시가격조회) 씨:리얼 홈페이지: https://seereal.lh.or.kr
+              </li>
+            </ul>
+          </div>
+          <!-- e: 건축물의 시가표준액을 입력해주세요 -->
+
+          <!-- s: 토지의 시가표준액을 입력해주세요 -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">11</span>토지의 시가표준액을 입력해주세요</h3>
+              <p class="cont-desc">(해당사항 없을 경우 미기재)</p>
+            </div>
+            <div class="grid-header-right">
+              <button class="button-primary -sm round" id="modalOpen011">
+                <span>건축물 산정방법?</span>
+                <i class="ic-only arr10_r_white" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="con-table sm">
+            <div class="board-wrap bd-data">
+              <div class="bd-row">
+                <div class="bd-col">
+                  <div class="leaf-cell">
+                    <div class="form-group-txt"><input type="text" id="" class="align-right form-400" placeholder="" aria-label="토지의 시가표준액" /><span class="back-txt">만원</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-notice-bottom">
+            <ul class="txt-list dot">
+              <li>
+                토지의 시가표준액의 합 입력(실 매매가 아님 유의)<br />
+                ※ (부동산 공시가격조회) 씨:리얼 홈페이지: https://seereal.lh.or.kr
+              </li>
+            </ul>
+          </div>
+          <!-- e: 토지의 시가표준액을 입력해주세요 -->
+
+          <!-- s: (임차인의 경우)임차보증금을 입력해주세요 -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">12</span>(임차인의 경우)임차보증금을 입력해주세요</h3>
+              <p class="cont-desc">(해당사항 없을 경우 미기재)</p>
+            </div>
+            <div class="grid-header-right">
+              <button class="button-primary -sm round" id="modalOpen012">
+                <span>임차보증금 산정방법</span>
+                <i class="ic-only arr10_r_white" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="con-table lg">
+            <div class="board-wrap bd-data">
+              <div class="bd-row">
+                <div class="bd-col">
+                  <div class="leaf-cell">
+                    <div class="form-group-txt">
+                      <input type="text" id="" class="align-right form-400" placeholder="" aria-label="임차보증금" /><span class="back-txt">만원</span>
+                      <label class="inp-checkbox ml72">
+                        <input type="checkbox" name="checkbox1" checked="checked" />
+                        <span>주거목적으로 임차중인 경우</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-notice-bottom">
+            <ul class="txt-list dot">
+              <li>주거를 목적으로 하는 주택 전·월세의 경우 “주거목적으로 임차중인 경우”를 체크, 주거 목적이 아닌 경우(상업용 등) 미체크</li>
+            </ul>
+          </div>
+          <!-- e: (임차인의 경우)임차보증금을 입력해주세요 -->
+
+          <!-- s: 항공기·선박의 시가표준액을 입력해주세요 -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">13</span>항공기·선박의 시가표준액을 입력해주세요</h3>
+              <p class="cont-desc">(해당사항 없을 경우 미기재)</p>
+            </div>
+            <div class="grid-header-right">
+              <button class="button-primary -sm round" id="modalOpen013">
+                <span>항공기ㆍ선박 산정방법</span>
+                <i class="ic-only arr10_r_white" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="con-table sm">
+            <div class="board-wrap bd-data">
+              <div class="bd-row">
+                <div class="bd-col">
+                  <div class="leaf-cell">
+                    <div class="form-group-txt"><input type="text" id="" class="align-right form-400" placeholder="" aria-label="항공기·선박의 시가표준액" /><span class="back-txt">만원</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-notice-bottom">
+            <ul class="txt-list dot">
+              <li>항공기 : 사람이 탑승 조정하여 항공에 사용하는 비행기·비행선·활공기·회전익 항공기 그 밖에 이와 유사한 비행기구</li>
+              <li>
+                선박 : 기선·범선·전마선 등 명칭과 관계없이 모든 배를 의미<br />
+                ※ 실 매매가 아님 유의
+              </li>
+            </ul>
+          </div>
+          <!-- e: 항공기·선박의 시가표준액을 입력해주세요 -->
+
+          <!-- s: 회원권의 시가표준액을 입력해주세요 -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">14</span>회원권의 시가표준액을 입력해주세요</h3>
+              <p class="cont-desc">(해당사항 없을 경우 미기재)</p>
+            </div>
+            <div class="grid-header-right">
+              <button class="button-primary -sm round" id="modalOpen014">
+                <span>회원권 산정방법</span>
+                <i class="ic-only arr10_r_white" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="con-table sm">
+            <div class="board-wrap bd-data">
+              <div class="bd-row">
+                <div class="bd-col">
+                  <div class="leaf-cell">
+                    <div class="form-group-txt"><input type="text" id="" class="align-right form-400" placeholder="" aria-label="회원권의 시가표준액" /><span class="back-txt">만원</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-notice-bottom">
+            <ul class="txt-list dot">
+              <li>회원권 : [지방세법] 제6조제14호부터 제18호까지의 규정에 따른 회원권</li>
+              <li>
+                골프회원권, 승마회원권, 콘도미니엄회원권, 종합체육시설이용회원권, 요트회원권<br />
+                ※ 실 매매가 아님 유의
+              </li>
+            </ul>
+          </div>
+          <!-- e: 회원권의 시가표준액을 입력해주세요 -->
+
+          <!-- s: 자동차의 차량가액을 입력해주세요 -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">15</span>자동차의 차량가액을 입력해주세요</h3>
+              <p class="cont-desc">(해당사항 없을 경우 미기재)</p>
+            </div>
+            <div class="grid-header-right">
+              <button class="button-primary -sm round" id="modalOpen015">
+                <span>자동차 산정방법?</span>
+                <i class="ic-only arr10_r_white" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="con-table lg">
+            <div class="con-table">
+              <table class="grid-min-width">
+                <caption>
+                  자동차 가격입력, 주 배기량 3000cc 이상 체크, 차령 10년이상 체크로 구성된 표.
+                </caption>
+                <colgroup>
+                  <col style="width: 200px" />
+                  <col style="width: auto" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">자동차 1</th>
+                    <td>
+                      <div class="form-group-txt">
+                        <input type="text" id="" class="align-right form-160" placeholder="" aria-label="자동차 1의 가격" /><span class="back-txt">만원</span>
+                        <label class="inp-checkbox ml40">
+                          <input type="checkbox" name="checkbox2" checked="checked" />
+                          <span>주3,000cc 이상</span>
+                        </label>
+                        <label class="inp-checkbox ml40">
+                          <input type="checkbox" name="checkbox2" checked="checked" />
+                          <span>차령 10년 이상</span>
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">자동차 2</th>
+                    <td>
+                      <div class="form-group-txt">
+                        <input type="text" id="" class="align-right form-160" placeholder="" aria-label="자동차 2의 가격" /><span class="back-txt">만원</span>
+                        <label class="inp-checkbox ml40">
+                          <input type="checkbox" name="checkbox3" checked="checked" />
+                          <span>주3,000cc 이상</span>
+                        </label>
+                        <label class="inp-checkbox ml40">
+                          <input type="checkbox" name="checkbox3" checked="checked" />
+                          <span>차령 10년 이상</span>
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="grid-notice-bottom">
+            <ul class="txt-list dot">
+              <li>
+                보험개발원의 차량기준가액으로 산정(중고 매매가 아님 유의)<br />
+                ※ (차량기준가액 조회) 보험개발원 홈페이지: https://www.kidi.or.kr
+              </li>
+            </ul>
+          </div>
+          <!-- e: 자동차의 차량가액을 입력해주세요 -->
+
+          <!-- s: 농지연금의 누계액을 입력해주세요 -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">16</span>농지연금의 누계액을 입력해주세요</h3>
+              <p class="cont-desc">(해당사항 없을 경우 미기재)</p>
+            </div>
+          </div>
+          <div class="con-table sm">
+            <div class="board-wrap bd-data">
+              <div class="bd-row">
+                <div class="bd-col">
+                  <div class="leaf-cell">
+                    <div class="form-group-txt"><input type="text" id="" class="align-right form-400" placeholder="" aria-label="농지연금의 누계액" /><span class="back-txt">만원/월</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-notice-bottom">
+            <ul class="txt-list dot">
+              <li>
+                농지연금 수령액은 재산(농지)담보부 금융부채의 성격을 지니고 있으므로, 소득산정 없이 농지연금 수령액 누계를 부채로 산정<br />
+                ※ 월 수령액이 아닌 누계액(농지연금 누적 수령액)임에 유의
+              </li>
+            </ul>
+          </div>
+          <!-- e: 농지연금의 누계액을 입력해주세요 -->
+
+          <!-- s: 주택연금의 누계액을 입력해주세요 -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">17</span>주택연금의 누계액을 입력해주세요</h3>
+              <p class="cont-desc">(해당사항 없을 경우 미기재)</p>
+            </div>
+          </div>
+          <div class="con-table sm">
+            <div class="board-wrap bd-data">
+              <div class="bd-row">
+                <div class="bd-col">
+                  <div class="leaf-cell">
+                    <div class="form-group-txt"><input type="text" id="" class="align-right form-400" placeholder="" aria-label="주택연금의 누계액" /><span class="back-txt">만원/월</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-notice-bottom">
+            <ul class="txt-list dot">
+              <li>
+                주택연금 수령액은 재산담보부 금융부채의 성격을 지니고 있으므로, 소득산정 없이 주택연금 수령액 누계를 부채로 산정<br />
+                ※ 월 수령액이 아닌 누계액(주택연금 누적 수령액)임에 유의
+              </li>
+            </ul>
+          </div>
+          <!-- e: 주택연금의 누계액을 입력해주세요 -->
+
+          <!-- s: 금융기관 대출금의 누계액을 입력해주세요 -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">18</span>금융기관 대출금의 누계액을 입력해주세요</h3>
+              <p class="cont-desc">(해당사항 없을 경우 미기재)</p>
+            </div>
+          </div>
+          <div class="con-table sm">
+            <div class="board-wrap bd-data">
+              <div class="bd-row">
+                <div class="bd-col">
+                  <div class="leaf-cell">
+                    <div class="form-group-txt"><input type="text" id="" class="align-right form-400" placeholder="" aria-label="금융기관 대출금의 누계액" /><span class="back-txt">만원/월</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-notice-bottom">
+            <ul class="txt-list dot">
+              <li>제1금융권, 제2금융권, [대부업 등의 등록 및 금융이용자 보호에 관한 법률] 제2조제1호에 따른 대부(중개)업체가 포함</li>
+              <li>한도 대출(마이너스 대출), 카드론, 단기간 어음할인에 의한 대출은 제외</li>
+            </ul>
+          </div>
+          <!-- e: 금융기관 대출금의 누계액을 입력해주세요 -->
+
+          <!-- s: (임대인의 경우)임대보증금 관련 내용을 입력해주세요 -->
+          <div class="con-table-header am mt56">
+            <div class="grid-header-left">
+              <h3 class="cont-title small"><span class="circled-digit-20">19</span>(임대인의 경우)임대보증금 관련 내용을 입력해주세요</h3>
+              <p class="cont-desc">(해당사항 없을 경우 미기재)</p>
+            </div>
+          </div>
+          <div class="con-table">
+            <table class="grid-min-width">
+              <caption>
+                시가 표준액과 임대보증금으로 구성된 표.
+              </caption>
+              <colgroup>
+                <col style="width: 200px" />
+                <col style="width: auto" />
+                <col style="width: 200px" />
+                <col style="width: auto" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">시가표준액</th>
+                  <td>
+                    <div class="form-group-txt ac">
+                      <input type="text" id="" class="align-right form-200" placeholder="" aria-label="시가표준액" />
+                      <span class="back-txt">만원</span>
+                    </div>
+                  </td>
+                  <th scope="row">임대보증금</th>
+                  <td>
+                    <div class="form-group-txt ac">
+                      <input type="text" id="" class="align-right form-200" placeholder="" aria-label="임대보증금" />
+                      <span class="back-txt">만원</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="grid-notice-bottom">
+            <ul class="txt-list dot">
+              <li>주택, 상가 등을 여러 채 보유한 경우 한 채에 한해서 인정하므로 한 채를 입력</li>
+              <li>주택, 상가 등이 공동지분일 경우 소유 지분의 시가표준액을 입력</li>
+            </ul>
+          </div>
+          <!-- e: (임대인의 경우)임대보증금 관련 내용을 입력해주세요 -->
+
+          <!-- e: 기본정보 -->
+
+          <!-- s: 하단 버튼 -->
+          <div class="cont-bottom">
+            <div class="btn-group">
+              <button type="button" class="button-primary -lg">결과보기</button>
+            </div>
+          </div>
+          <!-- e: 하단 버튼 -->
+
+          <!-- s: 담당자 정보 -->
+          <h4 class="cont-title dot">담당자 정보</h4>
+          <ul class="txt-list dot blue">
+            <li>기초연금센터 기초연금지원부 ㅣ 국민연금 관련 일반상담 및 문의 : 1355(유료)</li>
+          </ul>
+          <!-- e: 담당자 정보 -->
+
+          <!-- 공통UI - 해시태그 링크들 -->
+          <div class="hashtag-wrap"></div>
+          <!--// 공통UI - 해시태그 링크들 -->
+        </div>
+        <!--s: Contents -->
+      </main>
+      <!-- e: Main -->
+
+      <!-- s: footer -->
+      <footer id="footer"></footer>
+      <!-- e: footer -->
+    </div>
+
+    <!-- Modal : 가구유형을 입력하는 이유? -->
+    <div class="modal full notice" id="modal001">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">가구유형을 입력하는 이유?</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <div class="cont-head">
+              <h4 class="cont-title">가구유형에 따라 선정기준액이 달라집니다.</h4>
+              <ul class="txt-list dot fs17">
+                <li>
+                  기초연금은 가구의 소득인정액이 2023년 기준 단독가구 선정기준액(202만원),<br />
+                  부부가구 선정기준액(323.2만원) 이하일 경우 수급 가능합니다.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+      </div>
+    </div>
+    <!-- Modal : 가구유형을 입력하는 이유? -->
+
+    <!-- Modal : 거주지 구분을 입력하는 이유? -->
+    <div class="modal full notice" id="modal002">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">거주지 구분을 입력하는 이유?</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <ul class="txt-list-counter not-last">
+              <li>
+                <div class="cont-head">
+                  <h4 class="cont-title">거주지 구분에 따라 기본재산액이 달라집니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>(기본재산액) 최소한의 주거유지에 필요하다고 인정되는 금액</li>
+                    <li>대도시(1억 3,500만원), 중소도시(8,500만원), 농·어촌(7,250만원)</li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="cont-head">
+                  <h4 class="cont-title">기본재산액은 소득인정액 중 재산의 소득환산액 부분에 적용됩니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>재산의 소득환산액 = [{(일반재산 – 기본재산액) + (금융재산 – 2,000만원) – 부채} × 0.04 ÷ 12개월] + 고급 자동차 및 회원권의 가액</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+      </div>
+    </div>
+    <!-- Modal : 거주지 구분을 입력하는 이유? -->
+
+    <!-- Modal : 근로소득 산정방법? -->
+    <div class="modal full notice" id="modal003">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">근로소득 산정방법?</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <ul class="txt-list-counter not-last">
+              <li>
+                <div class="cont-head">
+                  <h4 class="cont-title">근로소득은 기본공제액과 추가공제가 적용된 금액으로 소득인정액이 산정됩니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>기본공제액(2023년 기준 108만원), 추가공제(30%)</li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="cont-head">
+                  <h4 class="cont-title">기본공제액과 추가공제는 맞벌이일 경우 부부 각각의 근로소득에 반영됩니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>
+                      (예시) 본인(월 200만원), 배우자(월 250만원)의 근로소득이 발생중일 경우<br />
+                      소득인정액 산정<br />
+                      → (본 인) (200만원 – 108만원) × 70% = 644,000원<br />
+                      → (배우자) (250만원 – 108만원) × 70% = 994,000원<br />
+                      → (가구의 소득인정액) 644,000원 + 994,000원 = 1,638,000원
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+      </div>
+    </div>
+    <!-- Modal : 근로소득 산정방법? -->
+
+    <!-- Modal : 사업소득 산정방법? -->
+    <div class="modal full notice" id="modal004">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">사업소득 산정방법?</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <div class="cont-head">
+              <h4 class="cont-title">기타소득은 공적자료로 조회되는 '연간소득액을 기준으로 평균한 소득(금액)'을 반영합니다.</h4>
+              <ul class="txt-list dot fs17">
+                <li>
+                  (기타소득의 종류) 사업소득, 이자소득, 연금소득, 공적이전소득, 무료임차소득<br />
+                  (예시) 연 2,400만원의 사업소득(신고된 소득 가정)이 발생한 경우<br />
+                  소득인정액 산정<br />
+                  → 2,400만원 ÷ 12개월 = 200만원
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+      </div>
+    </div>
+    <!-- Modal : 사업소득 산정방법? -->
+
+    <!-- Modal : 이자소득 산정방법? -->
+    <div class="modal full notice" id="modal005">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">이자소득 산정방법?</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <ul class="txt-list-counter not-last">
+              <li>
+                <div class="cont-head">
+                  <h4 class="cont-title">기타소득은 공적자료로 조회되는 ‘연간소득액을 기준으로 평균한 소득(금액)’을 반영합니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>(기타소득의 종류) 사업소득, 이자소득, 연금소득, 공적이전소득, 무료임차소득</li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="cont-head">
+                  <h4 class="cont-title">이자소득이 있는 경우 그 소득에서 월 4만원을 소득산정에서 제외합니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>
+                      이자소득에서 월 4만원을 차감한 금액이 0보다 작을 경우 0으로 반영<br />
+                      (예시) 연 120만원의 이자소득이 발생한 경우 소득인정액 산정<br />
+                      → 120만원 ÷ 12개월 - 4만원 = 6만원
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+      </div>
+    </div>
+    <!-- Modal : 이자소득 산정방법? -->
+
+    <!-- Modal : 연금소득 산정방법? -->
+    <div class="modal full notice" id="modal006">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">연금소득 산정방법?</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <div class="cont-head">
+              <h4 class="cont-title">기타소득은 공적자료로 조회되는 ‘연간소득액을 기준으로 평균한 소득(금액)’을 반영합니다.</h4>
+              <ul class="txt-list dot fs17">
+                <li>
+                  (기타소득의 종류) 사업소득, 이자소득, 연금소득, 공적이전소득, 무료임차소득<br />
+                  (예시) 연 1회, 매 회 600만원의 연금소득이 발생한 경우 소득인정액 산정<br />
+                  → 600만원 ÷ 12개월 = 50만원
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+      </div>
+    </div>
+    <!-- Modal : 연금소득 산정방법? -->
+
+    <!-- Modal : 공적이전소득 산정방법? -->
+    <div class="modal full notice" id="modal007">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">공적이전소득 산정방법?</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <ul class="txt-list-counter not-last">
+              <li>
+                <div class="cont-head">
+                  <h4 class="cont-title">기타소득은 공적자료로 조회되는 ‘연간소득액을 기준으로 평균한 소득(금액)’을 반영합니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>(기타소득의 종류) 사업소득, 이자소득, 연금소득, 공적이전소득, 무료임차소득</li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="cont-head">
+                  <h4 class="cont-title">공적이전소득은 전월 지급된 급여를 반영합니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>
+                      (예시) 매월 50만원의 공적이전소득이 발생중일 경우 소득인정액 산정<br />
+                      → 50만원
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+      </div>
+    </div>
+    <!-- Modal : 공적이전소득 산정방법? -->
+
+    <!-- Modal : 무료임차소득 산정방법? -->
+    <div class="modal full notice" id="modal008">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">무료임차소득 산정방법?</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <ul class="txt-list-counter not-last">
+              <li>
+                <div class="cont-head">
+                  <h4 class="cont-title">기타소득은 공적자료로 조회되는 ‘연간소득액을 기준으로 평균한 소득(금액)’을 반영합니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>(기타소득의 종류) 사업소득, 이자소득, 연금소득, 공적이전소득, 무료임차소득</li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="cont-head">
+                  <h4 class="cont-title">무료임차소득은 자녀 소유의 주택의 시가표준액이 6억원 이상일 경우 해당됩니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>(기타소득의 종류) 사업소득, 이자소득, 연금소득, 공적이전소득, 무료임차소득</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+      </div>
+    </div>
+    <!-- Modal : 무료임차소득 산정방법? -->
+
+    <!-- Modal : 금융재산 산정방법? -->
+    <div class="modal full notice" id="modal009">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">금융재산 산정방법?</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <div class="cont-head">
+              <ul class="txt-list-counter not-last">
+                <li>
+                  <h4 class="cont-title">금융재산은 가구당 2,000만원을 공제 해줍니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>일상생활유지 및 노후생활 필수자금 성격의 경비 등을 고려</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4 class="cont-title">금융재산은 재산의 소득환산액으로 재계산 합니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>재산의 소득환산액 = [{(일반재산 – 기본재산액) + (금융재산 – 2,000만원) – 부채} × 0.04 ÷ 12개월] + 고급 자동차 및 회원권의 가액</li>
+                    <li>
+                      (예시) 금융재산 1억 7,000만원을 보유중인 어르신의 소득인정액 산정(다른 소득과 재산은 없는 것으로 가정)<br />
+                      → (1억 7,000만원 – 2천만원) × 0.04 ÷ 12개월 = 50만원
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+      </div>
+    </div>
+    <!-- Modal : 금융재산 산정방법? -->
+
+    <!-- Modal : 건축물 산정방법? -->
+    <div class="modal full notice" id="modal010">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">건축물 산정방법?</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <div class="cont-head">
+              <ul class="txt-list-counter not-last">
+                <li>
+                  <h4 class="cont-title">일반재산은 거주지 구분에 따라 기본재산액 산정방법이 달라집니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>(기본재산액) 최소한의 주거유지에 필요하다고 인정되는 금액</li>
+                    <li>대도시(1억 3,500만원), 중소도시(8,500만원), 농·어촌(7,250만원)</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4 class="cont-title">건축물(부동산)은 소득인정액 중 재산의 소득환산액 부분에 적용됩니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>재산의 소득환산액 = [{(일반재산 – 기본재산액) + (금융재산 – 2,000만원) – 부채} × 0.04 ÷ 12개월] + 고급 자동차 및 회원권의 가액</li>
+                    <li>
+                      (예시) 주택(시가표준액 2억 7,000만원)을 보유중인 서울 소재 어르신의 소득인정액 산정(다른 소득과 재산은 없는 것으로 가정)<br />
+                      → (2억 7,000만원 – 1억 3,500만원) × 0.04 ÷ 12개월 = 45만원
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+      </div>
+    </div>
+    <!-- Modal : 건축물 산정방법? -->
+
+    <!-- Modal : 토지 산정방법? -->
+    <div class="modal full notice" id="modal011">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">토지 산정방법?</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <div class="cont-head">
+              <ul class="txt-list-counter not-last">
+                <li>
+                  <h4 class="cont-title">일반재산은 거주지 구분에 따라 기본재산액 산정방법이 달라집니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>(기본재산액) 최소한의 주거유지에 필요하다고 인정되는 금액</li>
+                    <li>대도시(1억 3,500만원), 중소도시(8,500만원), 농·어촌(7,250만원)</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4 class="cont-title">토지(부동산)는 소득인정액 중 재산의 소득환산액 부분에 적용됩니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>재산의 소득환산액 = [{(일반재산 – 기본재산액) + (금융재산 – 2,000만원) – 부채} × 0.04 ÷ 12개월] + 고급 자동차 및 회원권의 가액</li>
+                    <li>
+                      (예시) 토지(시가표준액 2억 6,500만원)을 보유중인 전주 소재 어르신의 소득인정액 산정(다른 소득과 재산은 없는 것으로 가정)<br />
+                      → (2억 6,500만원 – 8,500만원) × 0.04 ÷ 12개월 = 60만원
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+      </div>
+    </div>
+    <!-- Modal : 토지 산정방법? -->
+
+    <!-- Modal : 임차보증금 산정방법? -->
+    <div class="modal full notice" id="modal012">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">임차보증금 산정방법?</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <div class="cont-head">
+              <ul class="txt-list-counter not-last">
+                <li>
+                  <h4 class="cont-title">임차보증금은 임차 목적에 따라 일반재산 산정방법이 달라집니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>임차 목적이 주거인 경우 전·월세계약서 상 임차보증금에 적용률(0.95)를 곱하여 일반재산에 산정</li>
+                    <li>대도시(1억 3,500만원), 중소도시(8,500만원), 농·어촌(7,250만원)</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4 class="cont-title">일반재산은 거주지 구분에 따라 기본재산액 산정 방법이 달라집니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>(기본재산액) 최소한의 주거유지에 필요하다고 인정되는 금액</li>
+                    <li>대도시(1억 3,500만원), 중소도시(8,500만원), 농·어촌(7,250만원)</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4 class="cont-title">임차보증금은 소득인정액 중 재산의 소득환산액 부분에 적용됩니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>재산의 소득환산액 = [{(일반재산 – 기본재산액) + (금융재산 – 2,000만원) – 부채} × 0.04 ÷ 12개월] + 고급 자동차 및 회원권의 가액</li>
+                    <li>
+                      (예시) 주택(임차보증금 3억원)을 주거목적으로 임차중인 세종시 소재 어르신의 소득인정액 산정(다른 소득과 재산은 없는 것으로 가정)<br />
+                      → (3억원 × 0.95 – 8,500만원) × 0.04 ÷ 12개월 = 666,667원
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+      </div>
+    </div>
+    <!-- Modal : 임차보증금 산정방법? -->
+
+    <!-- Modal : 항공기ㆍ선박 산정방법? -->
+    <div class="modal full notice" id="modal013">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">항공기ㆍ선박 산정방법?</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <div class="cont-head">
+              <ul class="txt-list-counter not-last">
+                <li>
+                  <h4 class="cont-title">항공기·선박은 시가표준액에 보정계수를 적용하여 일반재산으로 산정합니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>(보정계수) 3.5</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4 class="cont-title">항공기·선박은 소득인정액 중 재산의 소득환산액 부분에 적용됩니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>재산의 소득환산액 = [{(일반재산 – 기본재산액) + (금융재산 – 2,000만원) – 부채} × 0.04 ÷ 12개월] + 고급 자동차 및 회원권의 가액</li>
+                    <li>(예시) 선박(시가표준액 1억원)을 보유중인 군산 소재 어르신의 소득인정액 산정(다른 소득과 재산은 없는 것으로 가정) → (1억원 × 3.5 – 8,500만원) × 0.04 ÷ 12개월 = 883,334원</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4 class="cont-title">임차보증금은 소득인정액 중 재산의 소득환산액 부분에 적용됩니다.</h4>
+                  <ul class="txt-list dot fs17">
+                    <li>재산의 소득환산액 = [{(일반재산 – 기본재산액) + (금융재산 – 2,000만원) – 부채} × 0.04 ÷ 12개월] + 고급 자동차 및 회원권의 가액</li>
+                    <li>
+                      (예시) 주택(임차보증금 3억원)을 주거목적으로 임차중인 세종시 소재 어르신의 소득인정액 산정(다른 소득과 재산은 없는 것으로 가정)<br />
+                      → (3억원 × 0.95 – 8,500만원) × 0.04 ÷ 12개월 = 666,667원
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+      </div>
+    </div>
+    <!-- Modal : 항공기ㆍ선박 산정방법? -->
+
+    <!-- Modal : 임대보증금 산정방법? -->
+    <div class="modal full notice" id="modal014">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">임대보증금 산정방법?</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <div class="cont-head">
+              <h4 class="cont-title">임대보증금은 시가표준액의 50% 범위 내에서 임대보증금을 부채로 산정합니다.</h4>
+              <ul class="txt-list dot fs17">
+                <li>전세권 설정 등기된 금액 또는 확정일자에 의한 임대보증금 중 시가표준액의 50% 범위 내의 금액을 인정</li>
+                <li>재산의 소득환산액 = [{(일반재산 – 기본재산액) + (금융재산 – 2,000만원) – 부채} × 0.04 ÷ 12개월] + 고급 자동차 및 회원권의 가액</li>
+                <li>
+                  (예시) 임대보증금 3억(시가표준액 5억원)을 보유중인 서울 소재 어르신의 부채 산정<br />
+                  → 시가표준액 5억원의 50%인 2억 5,000만원을 부채로 산정
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+      </div>
+    </div>
+    <!-- Modal : 임대보증금 산정방법? -->
+
+    <!-- Modal : 회원권 산정방법? -->
+    <div class="modal full notice" id="modal014">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">회원권 산정방법?</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <div class="cont-head">
+              <h4 class="cont-title">회원권은 시가표준액 전액이 소득인정액으로 산정됩니다.</h4>
+              <ul class="txt-list dot fs17">
+                <li>재산의 소득환산액 = [{(일반재산 – 기본재산액) + (금융재산 – 2,000만원) – 부채} × 0.04 ÷ 12개월] + 고급 자동차 및 회원권의 가액</li>
+                <li>
+                  (예시) 회원권(시가표준액 5백만원)을 보유중인 서울 소재 어르신의 소득인정액 산정(다른 소득과 재산은 없는 것으로 가정)<br />
+                  → 5백만원
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+      </div>
+    </div>
+    <!-- Modal : 회원권 산정방법? -->
+
+    <!-- Modal : 자동차 산정방법? -->
+    <div class="modal full notice" id="modal015">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">자동차 산정방법?</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <div class="cont-head">
+              <h4 class="cont-title">자동차는 일반재산에 포함되나 고급자동차의 경우 차량가액 전액이 소득인정액으로 산정됩니다.</h4>
+              <ul class="txt-list dot fs17">
+                <li>
+                  (고급자동차) 배기량 3,000cc 이상 또는 차량가액 4,000만원 이상인 자동차<br />
+                  ※ 고급자동차이나 차령이 10년 이상, 생업용 자동차 등의 경우 일반재산으로 산정되며 자세한 사항은 관할 읍·면·동 또는 국민연금공단 지사로 문의하시기 바랍니다.
+                </li>
+                <li>재산의 소득환산액 = [{(일반재산 – 기본재산액) + (금융재산 – 2,000만원) – 부채} × 0.04 ÷ 12개월] + 고급 자동차 및 회원권의 가액</li>
+                <li>
+                  (예시1) 차량(차량가액 5백만원, 배기량 2,000cc)을 보유중인 서울 소재 어르신의 소득인정액 산정(다른 소득과 재산은 없는 것으로 가정)<br />
+                  → (5백만원 – 1억 3,500만원) × 0.04 ÷ 12개월 = 0원
+                </li>
+                <li>
+                  (예시2) 차량(차량가액 5천만원, 배기량 3,000cc)을 보유중인 서울 소재 어르신의 소득인정액 산정(다른 소득과 재산은 없는 것으로 가정)<br />
+                  → 5천만원
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+      </div>
+    </div>
+    <!-- Modal : 자동차 산정방법? -->
+
+    <script>
+      document.querySelector("#modalOpen001").addEventListener("click", () => {
+        commonUI.modal("#modal001", "#modalOpen001");
+      });
+      document.querySelector("#modalOpen002").addEventListener("click", () => {
+        commonUI.modal("#modal002", "#modalOpen002");
+      });
+      document.querySelector("#modalOpen003").addEventListener("click", () => {
+        commonUI.modal("#modal003", "#modalOpen003");
+      });
+      document.querySelector("#modalOpen004").addEventListener("click", () => {
+        commonUI.modal("#modal004", "#modalOpen004");
+      });
+      document.querySelector("#modalOpen005").addEventListener("click", () => {
+        commonUI.modal("#modal005", "#modalOpen005");
+      });
+      document.querySelector("#modalOpen006").addEventListener("click", () => {
+        commonUI.modal("#modal006", "#modalOpen006");
+      });
+      document.querySelector("#modalOpen007").addEventListener("click", () => {
+        commonUI.modal("#modal007", "#modalOpen007");
+      });
+      document.querySelector("#modalOpen008").addEventListener("click", () => {
+        commonUI.modal("#modal008", "#modalOpen008");
+      });
+      document.querySelector("#modalOpen009").addEventListener("click", () => {
+        commonUI.modal("#modal009", "#modalOpen009");
+      });
+      document.querySelector("#modalOpen010").addEventListener("click", () => {
+        commonUI.modal("#modal010", "#modalOpen010");
+      });
+      document.querySelector("#modalOpen011").addEventListener("click", () => {
+        commonUI.modal("#modal011", "#modalOpen011");
+      });
+      document.querySelector("#modalOpen012").addEventListener("click", () => {
+        commonUI.modal("#modal012", "#modalOpen012");
+      });
+      document.querySelector("#modalOpen013").addEventListener("click", () => {
+        commonUI.modal("#modal013", "#modalOpen013");
+      });
+      document.querySelector("#modalOpen014").addEventListener("click", () => {
+        commonUI.modal("#modal014", "#modalOpen014");
+      });
+      document.querySelector("#modalOpen015").addEventListener("click", () => {
+        commonUI.modal("#modal015", "#modalOpen015");
+      });
+    </script>
+  </body>
+</html>

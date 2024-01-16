@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+	<script src="../../js/ui_temp.js"></script> <!-- 231116 추가-->
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header --> <!-- 231116 수정-->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">진단ㆍ상담 서비스</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                            <li><a href="#none" target="_self">재무진단</a></li>
+                            <li><a href="#none" target="_self">노후준비정보</a></li>
+                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep2">
+                        <button type="button" class="breadcrumb-trigger current">노후준비종합진단</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">상담지사안내</a></li>
+                            <li><a href="#none" target="_self">상담지자체안내</a></li>
+                            <li class="current"><a href="#none" target="_self">노후준비종합진단</a></li>
+                            <li><a href="#none" target="_self">온라인상담</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">방문상담신청</a></li>
+                            <li><a href="#none" target="_self">교육신청</a></li>
+                            <li><a href="#none" target="_self">강사정보</a></li>
+                            <li><a href="#none" target="_self">자가진단</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner">
+            <div class="page-header">
+                <div class="page-title"><!--<a href="#" class="ic-only back">뒤로가기</a>--><h2>노후준비종합진단</h2></div>
+                <div class="page-desc">
+                    <button type="button" class="page-desc-btn _has-tooltip"><span>노후준비종합진단 안내</span><i class="ic-only f-pg-desc"></i></button>
+                    <div class="desc-box _tooltipbox">
+                        <div class="desc-box-inner">
+                            <div class="desc-content">
+                                <p>
+                                    노후준비 종합진단을 통해 현재의 노후준비 수준과 유형을 진단하여 균형이는 노후준비를 지원합니다. <br>
+                                    보다 자세한 상담을 원하시면 가까운 국민연금공단 <span class="fc-primary">행복노후준비지원센터</span>를 찾아주세요.
+                                    로그인을 하시면 진단결과가 저장되며, <span class="fc-primary">마이페이지</span>에서 확인 가능합니다.
+                                </p>
+                            </div>
+                            <button type="button" class="ic-only box-close">창닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-wrap">
+                <!-- S : 2311월 -->
+                <!--콘텐츠 영역-->
+                <ul class="equal-list step">
+                    <li class="active">
+                        <em class="unit">01</em>
+                        <div class="type">기본사항</div>
+                    </li>
+                    <li>
+                        <em class="unit">02</em>
+                        <div class="type">재무</div>
+                    </li>
+                    <li>
+                        <em class="unit">03</em>
+                        <div class="type">건강</div>
+                    </li>
+                    <li>
+                        <em class="unit">04</em>
+                        <div class="type">여가활동</div>
+                    </li>
+                    <li>
+                        <em class="unit">05</em>
+                        <div class="type">대인관계</div>
+                    </li>
+                    <li>
+                        <em class="unit">06</em>
+                        <div class="type">종합진단결과</div>
+                    </li>
+                </ul>
+                <h4 class="cont-title">기본사항입력</h4>
+                <p class="cont-desc">아래의 내용을 확인하시고 항목별로 정도를 결정하신 후 선택버튼을 체크해주세요. </p>
+                <!-- survey list -->
+                <ul>
+                    <!-- 1 -->
+                    <li class="qnalist">
+                        <p class="question-title"><em class="ic-q">Q</em>1. 본인의 연령대를 선택하세요.</p>
+                        <div class="question-answer">
+                            <em class="ic-a">A</em>
+                            <div class="inp-check-list label">
+                                <span class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio1">
+                                        <span>20대</span>
+                                    </label>
+                                </span>
+                                <span class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio1">
+                                        <span>30대</span>
+                                    </label>
+                                </span>
+                                <span class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio1">
+                                        <span>40대</span>
+                                    </label>
+                                </span>
+                                <span class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio1">
+                                        <span>50대</span>
+                                    </label>
+                                </span>
+                                <span class="inp-wrap">
+                                    <label class="inp-radio">
+                                        <input type="radio" name="radio1">
+                                        <span>60대 이상</span>
+                                    </label>
+                                </span>
+                            </div>
+                        </dd>
+                    </li>
+                    <!-- 2 -->
+                    <li class="qnalist">
+                        <p class="question-title"><em class="ic-q">Q</em>2. 나의 재무·건강·여가활동·대인관계에 대한 노후준비는 100점 만점에 몇점이다</p>
+                        <div class="question-answer">
+                            <em class="ic-a">A</em>
+                            <div class="inp-select">
+                                <select>
+                                    <option value="default select">default select</option>
+                                    <option value="option1">option1</option>
+                                    <option value="option2">option2</option>
+                                    <option value="option3">option3</option>
+                                </select>
+                            </div>
+                        </dd>
+                    </li>
+                    <!-- 3 -->
+                    <li class="qnalist">
+                        <p class="question-title"><em class="ic-q">Q</em>3. 재무진단 종류를 선택하세요</p>
+                        <div class="question-answer">
+                            <em class="ic-a">A</em>
+                            <div class="inp-check-list label">
+                                <span class="inp-wrap">
+                                    <label class="inp-radio" >
+                                        <input type="radio" name="radio3">
+                                        <span>개인 기준 생활비 진단</span>
+                                    </label>
+                                </span>
+                                <span class="inp-wrap">
+                                    <label class="inp-radio" >
+                                        <input type="radio" name="radio3">
+                                        <span>부부 기준 생활비 진단</span>
+                                    </label>
+                                </span>
+                            </div>
+                        </dd>
+                    </li>
+                </ul>
+                <!--// survey list -->
+                <div class="cont-bottom"><!--MOD-LYB-2023.11.21 : class="full" 삭제(디자인 수정사항 반영)-->
+                    <div class="btn-group">
+                        <button type="button" class="button-primary -lg">다음</button>
+                    </div>
+                </div>
+                <!--//콘텐츠 영역-->
+
+                <!--// E : 2311월 -->
+            </div>
+            <!-- 공통UI - 만족도조사 --> <!-- 231116 수정-->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer --> <!-- 231116 수정-->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

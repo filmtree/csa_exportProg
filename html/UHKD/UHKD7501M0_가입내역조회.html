@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- s: header -->
+      <header id="header"></header>
+      <!-- e: header -->
+
+      <!-- s: Loaction Information Link -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-nav">
+          <ol class="breadcrumb-location">
+            <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+            <li class="breadcrumb-depth dep1">
+              <button type="button" class="breadcrumb-trigger">재무진단</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                <li class="current"><a href="#none" target="_self">재무진단</a></li>
+                <li><a href="#none" target="_self">노후준비정보</a></li>
+                <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger">국민연금알아보기</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">간단재무설계</a></li>
+                <li><a href="#none" target="_self">노후준비자금설계</a></li>
+                <li><a href="#none" target="_self">종합재무설계</a></li>
+                <li><a href="#none" target="_self">목적자금설계</a></li>
+                <li><a href="#none" target="_self">재무계산기</a></li>
+                <li><a href="#none" target="_self">국민연금준비수준</a></li>
+                <li><a href="#none" target="_self">내연금알아보기</a></li>
+                <li class="current"><a href="#none" target="_self">국민연금알아보기</a></li>
+                <li><a href="#none" target="_self">기초연금모의계산</a></li>
+                <li><a href="#none" target="_self">연금제도안내</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger current">가입내역조회</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">예상연금조회</a></li>
+                <li class="current"><a href="#none" target="_self">가입내역조회</a></li>
+                <li><a href="#none" target="_self">장애유족 예상연금조회</li>
+                <li><a href="#none" target="_self">예상연금 모의계산</a></li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <!-- e: Loaction Information Link -->
+
+      <!-- s: Main -->
+      <main id="conatiner" class="finance subscription-history-inquiry">
+        <!--s: Page Title-->
+        <div class="page-header desc-none">
+          <div class="page-title">
+            <a href="#" class="ic-only back">뒤로가기</a>
+            <h2>가입내역 조회</h2>
+          </div>
+        </div>
+        <!--e: Page Title-->
+
+        <!--s: Contents -->
+        <div class="content-wrap">
+          <!-- s: 페이지 타이틀 -->
+          <div class="cont-head">
+            <h3 class="cont-title big">홍길동 <span class="fw-regular">고객님</span></h3>
+            <div class="divide-type ab">
+              <p class="cont-desc big">
+                고객님의 보험료 총 납부내역 및 기간별 상세내역입니다.
+                <br />
+                <span class="fc-primary">
+                  보험료 납부내역은 공단 전산에 반영된 날 (납부 후 최장 4일 경과 후 반영) 기준입니다.<br />
+                  총 납부내역에는 반환일시금 월수와 금액이 포함되어 있습니다.
+                </span>
+              </p>
+              <span class="txt-helper-title"><span class="fw-medium">조회일</span> : 2023년 12월 05일 (<time>11:03</time>)</span>
+            </div>
+          </div>
+          <!-- e: 페이지 타이틀 -->
+
+          <!-- s: 총 납부내역 -->
+          <div class="con-table-header mt56">
+            <h3 class="cont-title mb0">총 납부내역</h3>
+          </div>
+
+          <div class="con-table all-center">
+            <table class="grid-min-width">
+              <caption>
+                납부한 연금보험료, 납부하지 않은 연금보험료(납입예정인 보험료 포함), 납부할 수 없는 연금보험료의 각각 월수와 금액 표.
+              </caption>
+              <colgroup>
+                <col style="width: 15%" />
+                <col style="width: 15%" />
+                <col style="width: 15%" />
+                <col style="width: 15%" />
+                <col style="width: 15%" />
+                <col style="width: 15%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">납부한 연금보험료</th>
+                  <th scope="col" colspan="2">납부하지 않은 연금보험료<br />(납입예정인 보험료 포함)</th>
+                  <th scope="col" colspan="2">납부할 수 없는 연금보험료</th>
+                </tr>
+                <tr>
+                  <th scope="col">월수</th>
+                  <th scope="col">금액</th>
+                  <th scope="col">월수</th>
+                  <th scope="col">금액</th>
+                  <th scope="col">월수</th>
+                  <th scope="col">금액</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>000개월</td>
+                  <td>000,000,000 원</td>
+                  <td>000개월</td>
+                  <td>000,000,000 원</td>
+                  <td>000개월</td>
+                  <td>000,000,000 원</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="con-table all-center">
+            <table class="grid-min-width">
+              <caption>
+                일시금 지급, 반납금 납부, 추납보험료 납부, 업크레딧 납부 각각의 월수와 금액 표.
+              </caption>
+              <colgroup>
+                <col style="width: 12.5%" />
+                <col style="width: 12.5%" />
+                <col style="width: 12.5%" />
+                <col style="width: 12.5%" />
+                <col style="width: 12.5%" />
+                <col style="width: 12.5%" />
+                <col style="width: 12.5%" />
+                <col style="width: 12.5%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">일시금 지급</th>
+                  <th scope="col" colspan="2">반납금 납부</th>
+                  <th scope="col" colspan="2">추납보험료 납부</th>
+                  <th scope="col" colspan="2">실업크레딧 납부</th>
+                </tr>
+                <tr>
+                  <th scope="col">월수</th>
+                  <th scope="col">금액</th>
+                  <th scope="col">월수</th>
+                  <th scope="col">금액</th>
+                  <th scope="col">월수</th>
+                  <th scope="col">금액</th>
+                  <th scope="col">월수</th>
+                  <th scope="col">금액</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>000개월</td>
+                  <td>000,000,000 원</td>
+                  <td>000개월</td>
+                  <td>000,000,000 원</td>
+                  <td>000개월</td>
+                  <td>000,000,000 원</td>
+                  <td>000개월</td>
+                  <td>000,000,000 원</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="con-table mb16 all-center">
+            <table class="grid-min-width">
+              <caption>
+                총 가입 월수와 금액 표.
+              </caption>
+              <colgroup>
+                <col style="width: 240px" />
+                <col style="width: auto" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">총 가입 월수</th>
+                  <td>000개월</td>
+                  <th scope="row">금액</th>
+                  <td>000,000,000 원</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- e: 총 납부내역 -->
+
+          <!-- s: 연금보험료 상세내역 -->
+          <div class="con-table-header">
+            <h3 class="cont-title mb0">연금보험료 상세내역</h3>
+          </div>
+
+          <div class="con-table all-center">
+            <table class="grid-min-width">
+              <caption>
+                기간, 기준소득월액, 납부한 연금보험료의 월수와 금액, 납부하지 않은 보험료(납입예정인 보험료 포함)의 월수와 금액, 종별, 비고로 구성된 표.
+              </caption>
+              <colgroup>
+                <col style="width: 16%" />
+                <col style="width: 16%" />
+                <col style="width: 10%" />
+                <col style="width: 12%" />
+                <col style="width: 10%" />
+                <col style="width: 12%" />
+                <col style="width: 14%" />
+                <col style="width: 10%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" rowspan="2">기간</th>
+                  <th scope="col" rowspan="2">기준소득월액</th>
+                  <th scope="col" colspan="2">납부한 연금보험료</th>
+                  <th scope="col" colspan="2">납부하지 않은 보험료<br />(납입예정인 보험료 포함)</th>
+                  <th scope="col" rowspan="2">종별</th>
+                  <th scope="col" rowspan="2">비고</th>
+                </tr>
+                <tr>
+                  <th scope="col">월수</th>
+                  <th scope="col">금액</th>
+                  <th scope="col">월수</th>
+                  <th scope="col">금액</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0000-07 ~ 0000-05</td>
+                  <td>000,000,000원</td>
+                  <td>000개월</td>
+                  <td>000,000,000원</td>
+                  <td>000개월</td>
+                  <td>0원</td>
+                  <td>사업장</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>0000-07 ~ 0000-05</td>
+                  <td>000,000,000원</td>
+                  <td>000개월</td>
+                  <td>000,000,000원</td>
+                  <td>000개월</td>
+                  <td>0원</td>
+                  <td>사업장</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- e: 연금보험료 상세내역 -->
+
+          <!-- s: 기타 상세내역 -->
+          <!-- 다음페이지에 나오길 바라는 위치에 page-break 적용. -->
+          <div class="con-table-header">
+            <h3 class="cont-title mb0">기타 상세내역</h3>
+          </div>
+
+          <div class="con-table all-center">
+            <table class="grid-min-width">
+              <caption>
+                기간, 기준소득월액, 납부한 연금보험료의 월수와 금액, 납부하지 않은 보험료(납입예정인 보험료 포함)의 월수와 금액, 종별, 비고로 구성된 표.
+              </caption>
+              <colgroup>
+                <col style="width: 16%" />
+                <col style="width: 16%" />
+                <col style="width: 10%" />
+                <col style="width: 12%" />
+                <col style="width: 10%" />
+                <col style="width: 12%" />
+                <col style="width: 14%" />
+                <col style="width: 10%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" rowspan="2">기간</th>
+                  <th scope="col" rowspan="2">기준소득월액</th>
+                  <th scope="col" colspan="2">납부한 연금보험료</th>
+                  <th scope="col" colspan="2">납부하지 않은 보험료<br />(납입예정인 보험료 포함)</th>
+                  <th scope="col" rowspan="2">종별</th>
+                  <th scope="col" rowspan="2">비고</th>
+                </tr>
+                <tr>
+                  <th scope="col">월수</th>
+                  <th scope="col">금액</th>
+                  <th scope="col">월수</th>
+                  <th scope="col">금액</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="100">고객님의 연금보험료 기타상세내역이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- e: 기타 상세내역 -->
+
+          <!-- s: 예상연금월액(노령연금) -->
+          <div class="con-table-header">
+            <h3 class="cont-title mb0">예상연금월액(노령연금)</h3>
+          </div>
+
+          <div class="con-table mb16 align-center">
+            <table class="grid-min-width">
+              <caption>
+                예상연금액(현재가치 기준), 총 예상가입기간(납부월수), 총 예상납부보험료로 구성된 표.
+              </caption>
+              <colgroup>
+                <col style="width: 50%" />
+                <col style="width: 50%" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">예상연금액(현재가치 기준)</th>
+                  <td>0000년 00월 부터 매월 00,000,000원 (연 000,000,000원)</td>
+                </tr>
+                <tr>
+                  <th scope="row">총 예상가입기간(납부월수)</th>
+                  <td>0000년 00월 ~ 0000년 00월 (총 000 개월)</td>
+                </tr>
+                <tr>
+                  <th scope="row">총 예상납부보험료</th>
+                  <td>000,000,000 원</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- e: 예상연금월액(노령연금) -->
+
+          <!-- s: 하단 버튼 영역 -->
+          <div class="cont-bottom printNone">
+            <div class="btn-group">
+              <button type="button" class="button-primary -lg" onclick="window.print();">화면출력</button>
+            </div>
+          </div>
+          <!-- e: 하단 버튼 영역 -->
+
+          <!-- s: 추가 설명 영역 -->
+          <ul class="txt-list dot mt56 printNone">
+            <li>위 납부내역은 공단전산에 반영된 날 (납부 후 최장 4일)을 기준으로 표출되므로 이미 보험료를 납부하셨더라도 납부한 금액에 포함되지 않을 수 있습니다.</li>
+            <li>당월분 연금보험료는 납부기한 전이라도 미납으로 표기될 수 있습니다.</li>
+            <li>연금보험료 및 추납보험료는 연체금이 포함되지 않은 금액입니다.</li>
+            <li>과소납된 월분은(월수,보험료) 납부하지 않은 연금보험료에 포함됩니다.</li>
+            <li>총 납부할 수 없는 금액은 소멸시효 완성으로 인해 징수권이 소멸된 월분 보험료입니다. (징수권 소멸시효 완성 기간은 3년입니다.)</li>
+            <li>납부한 보험료는 사용자 부담금, 본인 기여금, 퇴직금전환금이 포함되어 있는 금액입니다.</li>
+            <li>본 조회내용은 출력하여 증명서로 사용할 수 없으며, 타기관 제출용으로 발급을 받으시려면 &lt;<span class="fc-primary">국민연금 전자민원 서비스 홈페이지</span>&gt;를 이용하시기 바랍니다.</li>
+          </ul>
+          <!-- e: 추가 설명 영역 -->
+
+          <!-- s: 다이렉트 링크 버튼 영역 -->
+          <div class="cont-bottom mt24 printNone">
+            <div class="d-flex gap16">
+              <button type="button" class="button-fourth -md">노후준비자금 통합 계산 바로가기</button>
+              <button type="button" class="button-fourth -md">노후준비자금 계산 바로가기</button>
+            </div>
+          </div>
+          <!-- e: 다이렉트 링크 버튼 영역 -->
+
+          <!-- 공통UI - 해시태그 링크들 -->
+          <div class="hashtag-wrap"></div>
+          <!--// 공통UI - 해시태그 링크들 -->
+        </div>
+        <!--s: Contents -->
+      </main>
+      <!-- e: Main -->
+
+      <!-- s: footer -->
+      <footer id="footer"></footer>
+      <!-- e: footer -->
+    </div>
+  </body>
+</html>

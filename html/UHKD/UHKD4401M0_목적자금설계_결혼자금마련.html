@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script><!--공통UI layout-->
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header -->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">재무진단</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                            <li><a href="#none" target="_self">재무진단</a></li>
+                            <li><a href="#none" target="_self">노후준비정보</a></li>
+                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li> 
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep2">
+                        <button type="button" class="breadcrumb-trigger current">목적자금설계</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">간단재무설계</a></li>
+                            <li><a href="#none" target="_self">노후준비자금설계</a></li>
+                            <li><a href="#none" target="_self">종합재무설계</a></li>
+                            <li class="current"><a href="#none" target="_self">목적자금설계</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">재무계산기</a></li>
+                            <li><a href="#none" target="_self">국민연금준비수준</a></li>
+                            <li><a href="#none" target="_self">내연금알아보기</a></li>
+                            <li><a href="#none" target="_self">국민연금알아보기</a></li>
+                            <li><a href="#none" target="_self">기초연금모의계산</a></li>
+                            <li><a href="#none" target="_self">연금제도안내</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner" class="finance purpose-fund">
+            <!--page-title-->
+            <div class="page-header">
+                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>목적자금설계</h2></div>
+                <div class="page-desc">
+                    <button type="button" class="page-desc-btn _has-tooltip"><span>목적자금설계 안내</span><i class="ic-only f-pg-desc"></i></button>
+                    <div class="desc-box _tooltipbox">
+                        <div class="desc-box-inner">
+                            <div class="desc-content">
+                                <p>다양한 목적의 자금설계를 통해 자가진단을 받아보실 수 있습니다.<br> 입력하신 정보는 국민연금에서 제공하는 서비스 이용과 관련한 목적으로 사용되며, 그 밖의 다른 용도로 사용되어지거나 제3자에게 제공되지 않습니다.</p>
+                            </div>
+                            <button type="button" class="ic-only box-close">창닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--//page-title-->
+            <div class="content-wrap">
+                <!--콘텐츠 영역-->
+                <div class="tabWrap tab-base tab-total">
+                    <ul class="tabNav">
+                        <li><a href="#" id="tabNav1" role="tab" title="선택됨">결혼자금 마련</a></li>
+                        <li><a href="#" id="tabNav2" role="tab">교육자금 마련</a></li>
+                        <li><a href="#" id="tabNav3" role="tab">주택자금 마련</a></li>
+                        <li><a href="#" id="tabNav4" role="tab">창업자금 마련</a></li>
+                    </ul>
+                    <!--결혼자금 마련-->
+                    <div class="tabContent tc01" role="tabpanel" aria-labelledby="tabNav1">
+                        <div class="cont-head">
+                            <h3 class="cont-title big">결혼자금 마련</h3>
+                            <p class="cont-desc big">행복한 결혼설계를 위하여 결혼자금준비에 대한 자가진단을 받아보세요.</p>
+                        </div>
+                        <div class="cont-head">
+                            <h4 class="cont-title">기본정보 입력</h4>
+                        </div>
+                        <div class="board-wrap bd-data">
+                            <div class="bd-row">
+                                <div class="bd-col">
+                                    <div class="th"><span>고객님 현재 나이 (1~100세)</span></div>
+                                    <div class="td">
+                                        <div class="form-group-txt">
+                                            <span class="front-txt">만</span>
+                                            <input type="text" id="" class="align-right" value="0">
+                                            <span class="back-txt">세</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bd-col">
+                                    <div class="th"><span>결혼을 위해 준비된 자산</span></div>
+                                    <div class="td">
+                                        <div class="form-group-txt">
+                                            <input type="text" id="" class="align-right" value="0">
+                                            <span class="back-txt">만원</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bd-row">
+                                <div class="bd-col">
+                                    <div class="th"><span>예상 연물가상승률 (0.0~20.0%)</span></div>
+                                    <div class="td">
+                                        <div class="form-group-txt">
+                                            <input type="text" id="" class="align-right" value="2">
+                                            <span class="back-txt">%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bd-col">
+                                    <div class="th"><span>결혼을 위한 월 저축액</span></div>
+                                    <div class="td">
+                                        <div class="form-group-txt">
+                                            <input type="text" id="" class="align-right" value="0">
+                                            <span class="back-txt">만원</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bd-row">
+                                <div class="bd-col has-help">
+                                    <div class="th"><span>예상 세후투자수익률 (0.00~20.00%)</span>
+                                        <button type="button" class="_has-tooltip"><span class="hidden">도움말</span><i class="ic-only question"></i></button>
+                                        <!--tooltip-->
+                                        <div class="desc-box _tooltipbox">
+                                            <div class="desc-box-inner">
+                                                <div class="desc-content">
+                                                    <p>퇴직연금, 개인연금을 포함한 금융자산을 투자하여 세금을 납부한 후 기대하는 예상 수익률입니다. 퇴직연금 DC형, 개인연금은 투자수익률에 따라 연금액이 결정됩니다. 기본값 : 3.7%(2023.2월 연금저축보험 공시기준이율 - 보험개발원)</p>
+                                                </div>
+                                                <button type="button" class="ic-only box-close">창닫기</button>
+                                            </div>
+                                        </div>
+                                        <!--//tooltip-->
+                                    </div>
+                                    <div class="td">
+                                        <div class="form-group-txt">
+                                            <input type="text" id="" class="align-right" value="3.7">
+                                            <span class="back-txt">%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bd-col">
+                                    <div class="th"><span>예상 결혼자금대출</span></div>
+                                    <div class="td">
+                                        <div class="form-group-txt">
+                                            <input type="text" id="" class="align-right" value="0">
+                                            <span class="back-txt">만원</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="board-bottom">
+                            <p class="cont-desc dot mb0">물가상승률과 세후투자수익률은 한국은행과 국민연금에서 발표한 자료를 바탕으로 기본값이 설정되었으며, 변경 가능합니다.</p>
+                        </div>
+                        <div class="cont-head">
+                            <h4 class="cont-title">결혼정보 입력</h4>
+                        </div>
+                        <div class="board-wrap bd-data">
+                            <div class="bd-row">
+                                <div class="bd-col">
+                                    <div class="th"><span>예상 결혼 나이 (결혼나이는 현재 나이보다 커야 합니다.)</span></div>
+                                    <div class="td">
+                                        <div class="form-group-txt">
+                                            <span class="front-txt">만</span>
+                                            <input type="text" id="" class="align-right" value="0">
+                                            <span class="back-txt">세</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bd-row">
+                                <div class="bd-col">
+                                    <div class="th"><span>예상 결혼 비용<br>
+                                        총 33,050만원(신랑:19,923만원 / 신부13,127만원)<br>
+                                        출처 : 2023 결혼비용 실태 보고서 (듀오)</span>
+                                    </div>
+                                    <div class="td">
+                                        <div class="form-group-txt">
+                                            <input type="text" id="" class="align-right" value="0">
+                                            <span class="back-txt">만원</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cont-bottom">
+                            <div class="btn-group">
+                                <button type="button" class="button-primary -lg">결과보기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--교육자금 마련-->
+                    <div class="tabContent tc02" role="tabpanel" aria-labelledby="tabNav2">
+                        내용2-교육자금 마련
+                    </div>
+                    <!--주택자금 마련-->
+                    <div class="tabContent tc03" role="tabpanel" aria-labelledby="tabNav3">
+                        내용3-주택자금 마련
+                    </div>
+                    <!--창업자금 마련-->
+                    <div class="tabContent tc04" role="tabpanel" aria-labelledby="tabNav4">
+                        내용4-창업자금 마련
+                    </div>
+                </div>
+                <script>
+                    commonUI.tabNav('.tabWrap', 1);
+                </script>
+
+                <!-- 공통UI - 해시태그 링크들 -->
+                <div class="hashtag-wrap"></div>
+                <!--// 공통UI - 해시태그 링크들 -->
+
+                <!--//콘텐츠 영역-->
+            </div>
+
+            <!-- 공통UI - 만족도조사 -->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer -->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

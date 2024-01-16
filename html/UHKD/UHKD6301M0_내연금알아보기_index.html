@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script><!--공통UI layout-->
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header -->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">재무진단</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                            <li class="current"><a href="#none" target="_self">재무진단</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">노후준비정보</a></li>
+                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li> 
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep2">
+                        <button type="button" class="breadcrumb-trigger current">내연금알아보기</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">간단재무설계</a></li>
+                            <li><a href="#none" target="_self">노후준비자금설계</a></li>
+                            <li><a href="#none" target="_self">종합재무설계</a></li>
+                            <li><a href="#none" target="_self">목적자금설계</a></li>
+                            <li><a href="#none" target="_self">재무계산기</a></li>
+                            <li><a href="#none" target="_self">노후를 위한 국민연금 준비수준 알아보기</a></li>
+                            <li class="current"><a href="#none" target="_self">내연금알아보기</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">국민연금알아보기</a></li>
+                            <li><a href="#none" target="_self">기초연금모의계산</a></li>
+                            <li><a href="#none" target="_self">연금제도안내</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner">
+            <!--page-title-->
+            <div class="page-header">
+                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>내연금 알아보기</h2></div>
+            </div>
+            <!--//page-title-->
+            <div class="content-wrap">
+                <!--콘텐츠 영역-->
+                <div class="cont-head">
+                    <h3 class="cont-title">내연금 알아보기<span class="subtxt">(국민연금·개인연금·퇴직연금·주택연금)</span></h3>
+                    <p class="cont-desc">가입중인 <span class="fc-primary">국민·개인·퇴직·주택연금을 한곳에서 확인</span>하여 현재 준비되어 있는 노후자금 상태를 자가 진단할 뿐만 아니라,<br> 
+                        부족한 노후소득에 대해 체계적으로 준비하여 보다 풍족한 노후를 맞이하실 수 있도록 도움을 드리겠습니다.</p>
+                </div>
+                <div class="divide-wrap mt48">
+                    <div class="col box-item">
+                        <span class="item-icon"><img src="../../images/ico/ic_mypension_01.svg" alt="" aria-hidden="true"></span>
+                        <div class="item-text">
+                            <h4 class="cont-title">신청</h4>
+                            <p>가입중인 국민연금, 개인연금, 퇴직연금, 주택연금 정보조회를 신청합니다.</p>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="button-primary">신청하기</button>
+                        </div>
+                    </div>
+                    <div class="col box-item">
+                        <span class="item-icon"><img src="../../images/ico/ic_mypension_02.svg" alt="" aria-hidden="true"></span>
+                        <div class="item-text">
+                            <h4 class="cont-title">조회</h4>
+                            <p>가입중인 국민연금, 개인연금, 퇴직연금, 주택연금 정보를 조회합니다.</p>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="button-primary">조회하기</button>
+                        </div>
+                    </div>
+                    <div class="col box-item">
+                        <span class="item-icon"><img src="../../images/ico/ic_mypension_03.svg" alt="" aria-hidden="true"></span>
+                        <div class="item-text">
+                            <h4 class="cont-title">철회</h4>
+                            <p>가입중인 국민연금, 개인연금, 퇴직연금, 주택연금 정보조회를 철회합니다.</p>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="button-primary">신청 철회하기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="board-bottom divide-type">
+                    <ul class="txt-list dot small fc-gray3">
+                        <li>국민연금만 조회하실 경우 [국민연금 알아보기]를 이용하시면 바로 확인 가능합니다.</li>
+                    </ul>
+                    <a href="#" class="button-secondary -sm round">국민연금 알아보기</a>
+                </div>
+
+                <!-- 공통UI - 해시태그 링크들 -->
+                <div class="hashtag-wrap"></div>
+                <!--// 공통UI - 해시태그 링크들 -->
+
+                <!--//콘텐츠 영역-->
+            </div>
+
+            <!-- 공통UI - 만족도조사 -->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer -->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

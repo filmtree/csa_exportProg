@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lnag="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>테이블</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<div class="code-preview">
+
+	<div class="board-top">
+		<p class="list-count"><span>전체 : <span class="-num">123</span>건</span></p>
+		<div class="item-group">
+			<button type="button" class="button-primary -md w160px">온라인상담 신청</button>
+		</div>
+	</div>
+	<div class="board-wrap bd-list">
+		<table class="tbl-board counsel-online-list">
+			<caption>온라인 상담 리스트</caption>
+			<colgroup>
+				<col class="w8">
+				<col class="w10">
+				<col>
+				<col class="w12">
+				<col class="w12">
+				<col class="w10">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">번호</th>
+					<th scope="col">상담분야</th>
+					<th scope="col">제목</th>
+					<th scope="col">작성일</th>
+					<th scope="col">작성자</th>
+					<th scope="col">처리상태</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="no">999999</td>
+					<td class="category">재무</td>
+					<td class="title"><a href="#"><i class="ic-only ic-secret"><span class="blind">비밀글</span></i>비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임</a></td>
+					<td class="date">2023.10.30</td>
+					<td class="writer">소**</td>
+					<td class="status"><span class="fc-primary">상담완료</span></td>
+				</tr>
+				<tr>
+					<td class="no">999999</td>
+					<td class="category">취미/여가</td>
+					<td class="title"><a href="#">마우스롤오버시 배경색 변경 / 공개글일 경우 자물쇠 아이콘 없습니다.</a></td>
+					<td class="date">2023.10.30</td>
+					<td class="writer">소**</td>
+					<td class="status"><span class="fc-base">접수증</span></td>
+				</tr>
+				<tr>
+					<td class="no">999999</td>
+					<td class="category">대인관계</td>
+					<td class="title"><a href="#"><i class="ic-only ic-secret"><span class="blind">비밀글</span></i>비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임</a></td>
+					<td class="date">2023.10.30</td>
+					<td class="writer">소**</td>
+					<td class="status"><span class="fc-primary">상담완료</span></td>
+				</tr>
+				<tr>
+					<td class="no">999999</td>
+					<td class="category">기타</td>
+					<td class="title"><a href="#"><i class="ic-only ic-secret"><span class="blind">비밀글</span></i>비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임</a></td>
+					<td class="date">2023.10.30</td>
+					<td class="writer">소**</td>
+					<td class="status"><span class="fc-base">접수증</span></td>
+				</tr>
+				<tr>
+					<td class="no">999999</td>
+					<td class="category">건강</td>
+					<td class="title"><a href="#"><i class="ic-only ic-secret"><span class="blind">비밀글</span></i>비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임</a></td>
+					<td class="date">2023.10.30</td>
+					<td class="writer">소**</td>
+					<td class="status"><span class="fc-base">접수증</span></td>
+				</tr>
+				<tr>
+					<td class="no">999999</td>
+					<td class="category">취미/여가</td>
+					<td class="title"><a href="#"><i class="ic-only ic-secret"><span class="blind">비밀글</span></i>비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임</a></td>
+					<td class="date">2023.10.30</td>
+					<td class="writer">소**</td>
+					<td class="status"><span class="fc-base">접수증</span></td>
+				</tr>
+				<tr>
+					<td class="no">999999</td>
+					<td class="category">취미/여가</td>
+					<td class="title"><a href="#"><i class="ic-only ic-secret"><span class="blind">비밀글</span></i>비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임</a></td>
+					<td class="date">2023.10.30</td>
+					<td class="writer">소**</td>
+					<td class="status"><span class="fc-base">접수증</span></td>
+				</tr>
+				<tr>
+					<td class="no">999999</td>
+					<td class="category">취미/여가</td>
+					<td class="title"><a href="#"><i class="ic-only ic-secret"><span class="blind">비밀글</span></i>비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임</a></td>
+					<td class="date">2023.10.30</td>
+					<td class="writer">소**</td>
+					<td class="status"><span class="fc-base">접수증</span></td>
+				</tr>
+				<tr>
+					<td class="no">999999</td>
+					<td class="category">취미/여가</td>
+					<td class="title"><a href="#"><i class="ic-only ic-secret"><span class="blind">비밀글</span></i>비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임</a></td>
+					<td class="date">2023.10.30</td>
+					<td class="writer">소**</td>
+					<td class="status"><span class="fc-base">접수증</span></td>
+				</tr>
+				<tr>
+					<td class="no">999999</td>
+					<td class="category">취미/여가</td>
+					<td class="title"><a href="#"><i class="ic-only ic-secret"><span class="blind">비밀글</span></i>비밀글 제목이 들어갑니다. 한줄로 제한 한줄 이상일 경우 말줄임</a></td>
+					<td class="date">2023.10.30</td>
+					<td class="writer">소**</td>
+					<td class="status"><span class="fc-base">접수증</span></td>
+				</tr>
+				<!--게시물 없을때
+				<tr>
+					<td colspan="6" class="data-none">
+						<p>등록된 게시물이 없습니다.</p>
+					</td>
+				</tr>
+				//게시물 없을때-->
+			</tbody>
+		</table>
+	</div>
+	<div class="paginate">
+		<button type="button" class="page first">처음 목록</button>
+		<button type="button" class="page prev">이전 목록</button>
+		<a href="#" class="num">1</a>
+		<a href="#" class="num current" title="현재페이지">2</a>
+		<a href="#" class="num">3</a>
+		<a href="#" class="num">4</a>
+		<a href="#" class="num">5</a>
+		<a href="#" class="num mo-hide">6</a>
+		<a href="#" class="num mo-hide">7</a>
+		<a href="#" class="num mo-hide">8</a>
+		<a href="#" class="num mo-hide">9</a>
+		<a href="#" class="num mo-hide">9999</a>
+		<button type="button" class="page next">다음 목록</button>
+		<button type="button" class="page last">마지막 목록</button>
+	</div>
+	
+</div>	
+
+			<!-- 내용끝 -->
+		</div>	
+	</section>
+</div>
+
+</body>
+</html>

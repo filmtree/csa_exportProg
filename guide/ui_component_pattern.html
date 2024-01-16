@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>UI 가이드</title>
+
+    <script src="../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+    <script src="../js/lib/jquery.easing.min.js"></script>
+    <script src="../js/lib/swiper-bundle.min.js"></script>
+    <script src="ui_include.js"></script>
+    <script src="../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="guide.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+    <link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css" />
+    <script src="highlight/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </head>
+  <body>
+    <div class="guideWrap">
+      <header class="guideHeader"></header>
+      <section class="guideContainer">
+        <header class="sec-header">
+          <h2>Component Template</h2>
+        </header>
+        <div class="sec-contents">
+          <!-- Start -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Tooltip</h3>
+          <div class="code-preview">
+            <div class="page-desc" style="display: inline-block">
+              <button type="button" class="page-desc-btn _has-tooltip"><span>노후준비종합진단 안내</span><i class="ic-only f-pg-desc"></i></button>
+              <div class="desc-box _tooltipbox">
+                <div class="desc-box-inner">
+                  <div class="desc-content">
+                    <p>
+                      노후준비 종합진단을 통해 현재의 노후준비 수준과 유형을 진단하여 균형이는 노후준비를 지원합니다. <br />
+                      보다 자세한 상담을 원하시면 가까운 국민연금공단
+                      <span class="fc-primary">행복노후준비지원센터</span>를 찾아주세요. 로그인을 하시면 진단결과가 저장되며, <span class="fc-primary">마이페이지</span>에서 확인 가능합니다.
+                    </p>
+                  </div>
+                  <button type="button" class="ic-only box-close">창닫기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;div class=&quot;page-desc&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;page-desc-btn _has-tooltip&quot;&gt;&lt;span&gt;노후준비종합진단 안내&lt;/span&gt;&lt;i class=&quot;ic-only f-pg-desc&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;div class=&quot;desc-box _tooltipbox&quot;&gt;
+        &lt;div class=&quot;desc-box-inner&quot;&gt;
+            &lt;div class=&quot;desc-content&quot;&gt;
+                &lt;p&gt;
+                    노후준비 종합진단을 통해 현재의 노후준비 수준과 유형을 진단하여 균형이는 노후준비를 지원합니다. &lt;br&gt;
+                    보다 자세한 상담을 원하시면 가까운 국민연금공단 &lt;span class=&quot;fc-primary&quot;&gt;행복노후준비지원센터&lt;/span&gt;를 찾아주세요.
+                    로그인을 하시면 진단결과가 저장되며, &lt;span class=&quot;fc-primary&quot;&gt;마이페이지&lt;/span&gt;에서 확인 가능합니다.
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;button type=&quot;button&quot; class=&quot;ic-only box-close&quot;&gt;창닫기&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Tooltip 2</h3>
+          <div class="code-preview">
+            <div class="page-desc">
+              <button type="button" class="page-desc-btn _has-tooltip"><span>간단 재무설계 안내</span><i class="ic-only f-pg-desc"></i></button>
+              <div class="desc-box _tooltipbox">
+                <div class="desc-box-inner">
+                  <div class="desc-content">
+                    <p class="title">편안한 노후를 위해 노후자금 준비에 대한 자가진단을 받아보세요.</p>
+                    <p>고객님이 원하시는 목표수령금액에 필요한 준비자금 계산 및 조회가 가능합니다.</p>
+                  </div>
+                  <button type="button" class="ic-only box-close">창닫기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre><code class="language-xml">&lt;button type=&quot;button&quot; class=&quot;page-desc-btn _has-tooltip&quot;&gt;&lt;span&gt;간단 재무설계 안내&lt;/span&gt;&lt;i class=&quot;ic-only f-pg-desc&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div class=&quot;desc-box _tooltipbox&quot;&gt;
+	&lt;div class=&quot;desc-box-inner&quot;&gt;
+		&lt;div class=&quot;desc-content&quot;&gt;
+			&lt;p class=&quot;title&quot;&gt;편안한 노후를 위해 노후자금 준비에 대한 자가진단을 받아보세요.&lt;/p&gt;
+			&lt;p&gt;고객님이 원하시는 목표수령금액에 필요한 준비자금 계산 및 조회가 가능합니다.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;button type=&quot;button&quot; class=&quot;ic-only box-close&quot;&gt;창닫기&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/div&gt;            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- s:  -->
+          <h3 class="sec-title">Title</h3>
+          <div class="code-preview"></div>
+          <pre><code class="language-xml">
+            
+</code></pre>
+          <!-- e:  -->
+
+          <!-- End -->
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

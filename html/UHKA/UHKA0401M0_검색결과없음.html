@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script><!--공통UI layout-->
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header -->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">통합검색</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">통합검색</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner" class="integrated-search">
+            <!--page-title-->
+            <div class="page-header desc-none"><!--페이지 디스크립션 콘텐츠 없을 경우 class="desc-none" 추가-->
+                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>통합검색</h2></div>
+            </div>
+            <!--//page-title-->
+            <div class="content-wrap">
+                <!--콘텐츠 영역-->
+                <div class="searchbox-wrap">
+                    <div class="searchbox">
+                        <div class="form-group">
+                            <label class="search-label" for="검색어">검색어</label>
+                            <select class="slct-type min-w160px" title="유형 선택">
+                                <option value="유형전체">전체</option>
+                                <option value="제목">제목</option> 
+                                <option value="작성자">내용</option>
+                            </select>
+                            <input type="text" placeholder="" value="연금" class="inp-content w-flexible" title="내용입력">
+                            <button type="button" class="button-primary min-w80px">검색</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="contbox-01">
+                    <div class="con-table-header">
+                        <h3 class="cont-title">전체 <span class="fc-primary">(0건)</span></h3>
+                    </div>
+                    <div class="board-wrap">
+                        <p class="result-none">검색 결과를 찾지 못했습니다.</p>
+                    </div>
+                </div>
+
+                <!-- 공통UI - 해시태그 링크들 -->
+                <div class="hashtag-wrap"></div>
+                <!--// 공통UI - 해시태그 링크들 -->
+
+                <!--//콘텐츠 영역-->
+            </div>
+
+            <!-- 공통UI - 만족도조사 -->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer -->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

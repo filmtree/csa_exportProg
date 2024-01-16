@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>노후준비종합서비스</title>
+  <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+  <script src="../../js/lib/jquery-ui.min.js"></script>
+  <script src="../../js/lib/jquery.easing.min.js"></script>
+  <script src="../../js/lib/swiper-bundle.min.js"></script>
+  <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+  <script src="../../js/zoom.js"></script>
+  <script src="../../js/ui_temp.js"></script>
+  <script src="../../js/ui_common.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <!-- s: header -->
+    <header id="header"></header>
+    <!-- e: header -->
+
+    <!-- s: Loaction Information Link -->
+    <div class="breadcrumb">
+      <div class="breadcrumb-nav">
+        <ol class="breadcrumb-location">
+          <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+          <li class="breadcrumb-depth dep1">
+            <button type="button" class="breadcrumb-trigger">재무진단</button>
+            <ul class="breadcrumb-depth-list">
+              <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+              <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+              <li class="current"><a href="#none" target="_self">재무진단</a></li>
+              <li><a href="#none" target="_self">노후준비정보</a></li>
+              <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+            </ul>
+          </li>
+          <li class="breadcrumb-depth dep2">
+            <button type="button" class="breadcrumb-trigger">국민연금알아보기</button>
+            <ul class="breadcrumb-depth-list">
+              <li><a href="#none" target="_self">간단재무설계</a></li>
+              <li><a href="#none" target="_self">노후준비자금설계</a></li>
+              <li><a href="#none" target="_self">종합재무설계</a></li>
+              <li><a href="#none" target="_self">목적자금설계</a></li>
+              <li><a href="#none" target="_self">재무계산기</a></li>
+              <li><a href="#none" target="_self">국민연금준비수준</a></li>
+              <li><a href="#none" target="_self">내연금알아보기</a></li>
+              <li class="current"><a href="#none" target="_self">국민연금알아보기</a></li>
+              <li><a href="#none" target="_self">기초연금모의계산</a></li>
+              <li><a href="#none" target="_self">연금제도안내</a></li>
+            </ul>
+          </li>
+          <li class="breadcrumb-depth dep2">
+            <button type="button" class="breadcrumb-trigger current">예상연금조회</button>
+            <ul class="breadcrumb-depth-list">
+              <li class="current"><a href="#none" target="_self">예상연금조회</a></li>
+              <li><a href="#none" target="_self">가입내역조회</a></li>
+              <li><a href="#none" target="_self">장애유족 예상연금조회</li>
+              <li><a href="#none" target="_self">예상연금 모의계산</a></li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <!-- e: Loaction Information Link -->
+
+    <!-- s: Main -->
+    <main id="conatiner" class="finance hasTabDepth about-national-pension">
+
+      <!--s: Page Title-->
+      <div class="page-header desc-none">
+        <div class="page-title">
+          <a href="#" class="ic-only back">뒤로가기</a>
+          <h2>예상연금조회</h2>
+        </div>
+      </div>
+      <!--e: Page Title-->
+
+      <!--s: Contents -->
+      <div class="content-wrap">
+        <!-- ========  s: Tab Contents ======== -->
+        <div class="tabWrap tab-base tab-content">
+          <div class="tabwrap-inner">
+            <!-- ========  s: Tab Buttons ======== -->
+            <ul class="tabNav">
+              <li><a href="#" id="tabNav1" role="tab">노령연금조회</a></li>
+              <li><a href="#" id="tabNav2" role="tab">상세연금조회</a></li>
+            </ul>
+            <!-- ========  e: Tab Buttons ======== -->
+
+            <span class="tab-gradient pc-hide" aria-hidden="true"></span>
+            <!-- s: 탭 컨텐츠 공통 바로가기 링크 -->
+            <div class="btn-group consulting-link">
+              <!-- 팝업이면 button태그, 페이지 링크면 a 태그 사용 -->
+              <!-- <button type="button" class="button-fourth w160px">Text</button> -->
+              <a href="#none" class="button-fourth w160px">내연금 알아보기</a>
+              <a href="#none" class="button-fourth w160px">종합재무설계</a>
+              <a href="#none" class="button-fourth w160px">간단재무설계</a>
+              <a href="#none" class="button-fourth w160px">목적자금설계</a>
+            </div>
+            <!-- e: 탭 컨텐츠 공통 바로가기 링크 -->
+          </div>
+
+          <!-- ========  s: Tab Panel 1 ======== -->
+          <div class="tabContent tab-first" role="tabpanel" aria-labelledby="tabNav1">
+
+            <!-- s: Contents Header -->
+            <div class="con-head mt40">
+              <div class="divide-type">
+                <h3 class="cont-title mb0">국민연금 예상연금액 조회</h3>
+                <span class="txt-helper">(조회일 : 2023년 12월 04일 17:03)</span>
+              </div>
+            </div>
+            <!-- e: Contents Header -->
+
+            <!-- s: 국민연금 예상연금액 조회 안내 -->
+            <!-- s: Text Box -->
+            <div class="color-box none develop">
+              <div class="alert-txt-box">
+                <p class="alert-txt"><i class="colorbox-info-icon"></i></p>
+                <p>국민연금 예상연금액은 매년 소비자물가변동률, 전체 가입자 소득수준, 본인 가입이력 등에 따라<br>
+                  <span class="fc-primary">실제 수령 연금액과 다를 수 있음을 알려드립니다.</span></p>
+              </div>
+            </div>
+            <!-- e: Text Box -->
+            <!-- e: 국민연금 예상연금액 조회 안내 -->
+
+            <!-- s: 예상연금액 보기 버튼 -->
+            <div class="btn-group con-leaf-center mt40">
+              <button type="button" class="button-primary -lg" id="viewPensionAmount">예상연금액 보기</button>
+            </div>
+            <!-- e: 예상연금액 보기 버튼 -->
+
+            <!-- s: 국민연금 예상연금액 조회 결과 -->
+            <!-- s: Text Box -->
+            <div class="color-box none develop">
+              <div class="alert-txt-box">
+                <p class="alert-txt">홍길동 고객님</p>
+                <p><span class="fc-primary">2000년 00월(65세)</span> 부터 받게 될 예상연금액은<br>
+                  <em class="alert-emphasis">매월 0,000,000원 입니다.</em></p>
+              </div>
+            </div>
+            <!-- e: Text Box -->
+
+            <!-- s: Info Text List -->
+            <div class="divide-type mt16">
+              <ul class="txt-list dot gray">
+                <li>위 금액은 향후 소득과 물가가 변동없는 것으로 가정하여 산정합니다.</li>
+                <li>현재 납부중인 분은 가입된 소득으로 60세까지 납부를 가정하며, 납부가 중단된 분은 납부된 내역만을 반영합니다.<br>(60세 이상 가입중인 분은 납부기간이 10년 이상인 경우
+                  조회월까지 납부 가정, 10년 미만인 경우 10년이 되는 월까지 납부를 가정합니다.)</li>
+              </ul>
+              <button type="button" class="button-secondary -sm round">지사 연락처 알아보기</button>
+            </div>
+            <!-- e: Info Text List -->
+            <!-- e: 국민연금 예상연금액 조회 결과 -->
+
+            <div class="con-table-header mt56">
+              <h3 class="cont-title mb0">자녀 교육자금 및 결혼자금</h3>
+            </div>
+            <div class="con-table all-center">
+              <table class="grid-min-width">
+                <caption>세전의 예상 노령연금, 세후의 예상 노령연금, 연금 받는 시기, 예상납부 보험료, 예상납부 월수, 예상 가입기간으로 구성된 표.</caption>
+                <colgroup>
+                  <col style="width:10%;" />
+                  <col style="width:25%;" />
+                  <col style="width:15%;" />
+                  <col style="width:15%;" />
+                  <col style="width:15%;" />
+                  <col style="width:auto" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col" colspan="2">예상 노령연금액</th>
+                    <th scope="col">연금 받는 시기</th>
+                    <th scope="col">예상 납부보험료</th>
+                    <th scope="col">예상 납부월수</th>
+                    <th scope="col">예상 가입기간</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">세전</th>
+                    <td>월 0,000,000원</td>
+                    <td rowspan="2">2041년 10월</td>
+                    <td rowspan="2">총 123,840,380원</td>
+                    <td rowspan="2">총 346개월</td>
+                    <td rowspan="2">2001년 07월~ 2036년 09월</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">세후</th>
+                    <td>
+                      <p class="fc-primary">월 0,000,000원</p>
+                      <p>(연 00,000,000원)</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <ul class="txt-list dot">
+              <li>현행 국민연금 제도에 의해 반영된 내용으로 향후 법령 개정 시 연금받는 나이, 산정금액 등이 달라질 수 있습니다.</li>
+              <li class="fc-primary">기존 제공되어 왔던 [미래가치 예상연금액] 서비스는 보다 나은 정보 제공을 위해 개선 진행중이므로 양해를 부탁드립니다.</li>
+            </ul>
+
+            <!-- s: 미래 연금수령시점의 금액으로 환산해보기 버튼 -->
+            <div class="btn-group con-leaf-center mt40">
+              <button type="button" class="button-primary -lg" id="viewPensionAmountResult">미래 연금수령시점의 금액으로
+                환산해보기</button>
+            </div>
+            <!-- e: 미래 연금수령시점의 금액으로 환산해보기 버튼 -->
+
+            <!-- s: Contents Header -->
+            <div class="con-head mt56">
+              <h3 class="cont-title mb0">더욱 더 다양한 연금정보를 알고 싶다면</h3>
+            </div>
+            <!-- e: Contents Header -->
+
+            <!-- s: Card Section-->
+            <div class="pension-information-card divide-wrap mt48">
+              <!-- s: 상세연금 조회하기 -->
+              <div class="col box-item">
+                <span class="item-icon">
+                  <img src="../../images/ico/ic_pension_info_card_01.svg" alt="" aria-hidden="true" />
+                </span>
+                <div class="item-text">
+                  <p>소득과 가입기간 수정하여<br>
+                    다시 연금액을<br>
+                    조회하고 싶다면</p>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="button-primary">상세연금 조회하기</button>
+                </div>
+              </div>
+              <!-- e: 상세연금 조회하기 -->
+              <!-- s: 출산ㆍ군복무 트레딧 제도 알아보기 -->
+              <div class="col box-item">
+                <span class="item-icon">
+                  <img src="../../images/ico/ic_pension_info_card_02.svg" alt="" aria-hidden="true" />
+                </span>
+                <div class="item-text">
+                  <p>보험료 납부없이<br>
+                    연금액을 올리는<br>
+                    꿀팁정보가 궁금하시나요</p>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="button-green">출산ㆍ군복무 트레딧 제도<br>알아보기</button>
+                </div>
+              </div>
+              <!-- e: 출산ㆍ군복무 트레딧 제도 알아보기 -->
+              <!-- s: 수급자 코너 바로가기 -->
+              <div class="col box-item">
+                <span class="item-icon">
+                  <img src="../../images/ico/ic_pension_info_card_03.svg" alt="" aria-hidden="true" />
+                </span>
+                <div class="item-text">
+                  <p>이미 노령연금<br>
+                    (조기노령연금 포함)을<br>
+                    받고 계신 분들은</p>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="button-orange">수급자 코너 바로가기</button>
+                </div>
+              </div>
+              <!-- e: 수급자 코너 바로가기 -->
+              <!-- s: 국민연금 찾아가세요 코너 바로가기 -->
+              <div class="col box-item">
+                <span class="item-icon">
+                  <img src="../../images/ico/ic_pension_info_card_04.svg" alt="" aria-hidden="true" />
+                </span>
+                <div class="item-text">
+                  <p>미청구한<br>
+                    국민연금이 있는지 확인하고<br>
+                    싶으신 분들은</p>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="button-light-orange">국민연금 찾아가세요<br>코너 바로가기</button>
+                </div>
+              </div>
+              <!-- e: 국민연금 찾아가세요 코너 바로가기 -->
+            </div>
+            <!-- e: Card Section-->
+            <!-- s: Contents Information Section -->
+            <div class="divide-type mt56">
+              <div>
+                <h3 class="cont-title dot">담당자 정보</h3>
+                <ul class="txt-list dot fs16 blue">
+                  <li>연금급여실 연금지급부 이정화 ㅣ 국민연금 관련 일반상담 및 문의 : 1355(유료)</li>
+                </ul>
+              </div>
+              <button type="button" class="button-sixth -sm round">상담지사안내</button>
+            </div>
+            <!-- e: Contents Information Section -->
+
+            <!-- ========  e: Tab Panel 1 ======== -->
+
+          </div>
+
+          <!-- ========  s: Tab Panel 2 ======== -->
+          <div class="tabContent tab-second" role="tabpanel" aria-labelledby="tabNav2">
+
+            <!-- s: 상세연금 스텝 -->
+            <ul class="equal-list step top">
+              <li class="active">
+                <em class="unit">01</em>
+                <div class="type">조건설정 및 소득입력</div>
+              </li>
+              <li>
+                <em class="unit">02</em>
+                <div class="type">입력내용 확인</div>
+              </li>
+              <li>
+                <em class="unit">03</em>
+                <div class="type">결과 및 비교조회</div>
+              </li>
+            </ul>
+            <!-- e: 상세연금 스텝 -->
+
+            <!-- s: 페이지 타이틀 -->
+            <div class="cont-head">
+              <h3 class="cont-title big">홍길동 <span class="fw-regular">고객님</span></h3>
+              <p class="cont-desc big">고객님께서는 부양가족연금 대상, 지급희망 연령 등을 선택하시거나, 향후 납부할 소득액을 직접 입력한 뒤 예상연금액을 조회할 수 있습니다.</p>
+            </div>
+            <!-- e: 페이지 타이틀 -->
+
+            <!-- ===== 상세연금 Step 1 : 조건설정 및 소득입력 =====-->
+
+            <section class="step-1">
+              <!-- s: 부양가족연금 대상 선택 -->
+              <div class="con-table-header mt48">
+                <h3 class="cont-title mb0">부양가족연금 대상 선택</h3>
+              </div>
+              <div class="con-table">
+                <table class="grid-min-width">
+                  <caption>부모, 배우자, 자녀의 부양가족연금 현재가치 기준 예상연금액으로 구성된 표.</caption>
+                  <colgroup>
+                    <col style="width: 120px;" />
+                    <col style="width: 120px;" />
+                    <col style="width: auto;" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col" colspan="2">구분</th>
+                      <th scope="col">현재가치 기준 예상연금액</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" rowspan="3">부양가족연금</th>
+                      <th scope="row">부모</th>
+                      <td>
+                        <div class="form-group gap8">
+                          <select class="form-320" title="부모선택">
+                            <option value="선택">선택</option>
+                          </select>
+                          <p class="txt-helper min-340px">※ 수급당시 60세 이상 또는 장애 2급 이상인 경우 (배우자의 부모 포함)</p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">배우자</th>
+                      <td>
+                        <div class="form-group">
+                          <select class="form-320" title="배우자선택">
+                            <option value="선택">선택</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">자녀</th>
+                      <td>
+                        <div class="form-group gap8">
+                          <select class="form-320" title="자녀선택">
+                            <option value="선택">선택</option>
+                          </select>
+                          <p class="txt-helper">※ 수급당시 18세 미만 또는 장애 2급 이상인 경우 (배우자가 혼인 전에 얻은 자녀 포함)</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- e: 부양가족연금 대상 선택 -->
+
+              <!-- s: 가입기간 추가 대상 입력 -->
+              <div class="con-table-header mt48">
+                <h3 class="cont-title mb0">가입기간 추가 대상 입력</h3>
+              </div>
+              <div class="con-table mb16">
+                <table class="grid-min-width">
+                  <caption>출산크레딧(출산에 대한 가입기간 추가 산입)을 위해 2008.1.1 이전, 이후 출생자 정보와 인정가입기간을 입력하는 표.</caption>
+                  <colgroup>
+                    <col style="width: 240px;" />
+                    <col style="width: auto;" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row" rowspan="2">출산 크레딧<p class="txt-helper">&lt;출산에 대한 가입기간 추가 산입&gt;</p>
+                      </th>
+                      <td>
+                        <div class="divide-type-fs gap24-col gap8-row">
+                          <div class="form-group-txt">
+                            <span class="front-txt">2008. 1. 1 이전 출생자 :</span>
+                            <input type="number" id="" class="align-right form-120" placeholder="00" aria-label="2008. 1. 1 이전 출생자" />
+                            <span class="back-txt">명</span>
+                          </div>
+                          <div class="form-group-txt">
+                            <span class="front-txt">2008. 1. 1 이후 출생자 :</span>
+                            <input type="number" id="" class="align-right form-120" placeholder="00" aria-label="2008. 1. 1 이후 출생자" />
+                            <span class="back-txt">명</span>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="form-group-txt">
+                          <span class="front-txt">인정가입기간 :</span>
+                          <input type="number" id="" class="align-right form-120" placeholder="00" aria-label="인정가입기간" />
+                          <span class="back-txt">개월</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <ul class="txt-list dot">
+                <li>2008. 1. 1 이후 출생(입양)한 자녀를 포함, 2자녀 이상인 경우 최고 50개월까지 노령연금 가입기간이 인정됩니다.</li>
+              </ul>
+
+              <div class="con-table mb16">
+                <table class="grid-min-width">
+                  <caption>군복무 크레딧(군복무에 대한 가입기간 추가 산입)을 위해 2008.1.1 이후 군입대 여부와 인정가입기간을 입력하는 표.</caption>
+                  <colgroup>
+                    <col style="width: 240px;" />
+                    <col style="width: auto;" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">군복무 크레딧<p class="txt-helper">&lt;군복무 대한 가입기간 추가 산입&gt;</p>
+                      </th>
+                      <td>
+                        <div class="d-flex gap24-col gap8-row">
+                          <div class="form-group-txt">
+                            <span class="front-txt">2008. 1. 1이후 군입대 여부 :</span>
+                            <label class="inp-checkbox">
+                              <input type="checkbox" name="checkbox1" checked="checked" aria-label="2008. 1. 1이후 군입대 여부" />
+                            </label>
+                          </div>
+                          <div class="form-group-txt">
+                            <span class="front-txt">인정가입기간 :</span>
+                            <input type="number" id="" class="align-right form-120" placeholder="00" aria-label="인정가입기간" />
+                            <span class="back-txt">개월</span>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ul class="txt-list dot">
+                <li>2008. 1. 1 이후 출생(입양)한 자녀를 포함, 2자녀 이상인 경우 최고 50개월까지 노령연금 가입기간이 인정됩니다.</li>
+              </ul>
+
+              <!-- e: 가입기간 추가 대상 입력 -->
+
+              <!-- s: 지급희망연령 선택 -->
+              <div class="con-table-header no-flex mt56">
+                <h3 class="cont-title">자녀 교육자금 및 결혼자금</h3>
+                <p class="cont-desc mb0">고객님의 연금지금개시 연령은 만 65세입니다. 조기노령연금이나 연기연금 수령을 희망하시면 지급희망연령을 선택하십시오.<br>
+                  (조기노령연금은 감액지급, 연기연금은 증액)</p>
+              </div>
+
+              <div class="con-table th-left mb16">
+                <table class="grid-min-width">
+                  <caption>가입기간 종료일자와 노령연금, 조기노령연금, 연기연금에 대한 지급희먕 연령 선택 표.</caption>
+                  <colgroup>
+                    <col style="width: 240px;" />
+                    <col style="width: auto;" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">가입기간 종료일자</th>
+                      <td><span class="fw-medium">0000년 00월 00일</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label class="inp-radio free-size-equal">
+                          <input type="radio" id="AgePaid1" name="AgePaid" checked="checked" />
+                          <span>노령연금</span>
+                        </label>
+                      </th>
+                      <td>0000년 00월 부터 (만65세)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="d-flex-lc">
+                          <label class="inp-radio free-size-equal">
+                            <input type="radio" id="AgePaid2" name="AgePaid" />
+                            <span>조기노령연금</span>
+                          </label>
+                          <div>
+                            <!-- tooltip -->
+                            <button type="button" class="_has-tooltip" title="조기노령연금 안내 보기">
+                              <i class="ic-only question" aria-hidden="true"></i>
+                            </button>
+                            <div class="desc-box type1 _tooltipbox" role="tooltip">
+                              <div class="desc-content align-left">
+                                <h4 class="sr-only">조기노령연금 안내</h4>
+                                <p>10년 이상 가입하고 소득있는 업무에 종사하지 않는 경우, 본인의 희망에 따라서 법정 지급개시연령 5년 전부터 수급이 가능하다, 조기퇴직자가 많은
+                                  우리나라의 현실을 고려하여 이들의 생계유지를 보장하기 위해 도입된 제도로서 이 제도를 인정하는 나라는 많지 않다.</p>
+                                <button type="button" class="ic-only box-close">창닫기</button>
+                              </div>
+                            </div>
+                            <!-- // tooltip -->
+                          </div>
+                        </div>
+                      </th>
+                      <td>
+                        <div class="form-group-txt">
+                          <select class="form-120" title="연령선택">
+                            <option value="선택">00</option>
+                            <option value="선택">60</option>
+                          </select>
+                          <span class="back-txt">세</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="d-flex-lc">
+                          <label class="inp-radio free-size-equal">
+                            <input type="radio" id="AgePaid3" name="AgePaid" />
+                            <span>연기연금</span>
+                          </label>
+                          <!-- tooltip -->
+                          <div>
+                            <button type="button" class="_has-tooltip" title="연기연금 안내 보기">
+                              <i class="ic-only question" aria-hidden="true"></i>
+                            </button>
+                            <div class="desc-box type1 _tooltipbox" role="tooltip">
+                              <div class="desc-content align-left">
+                                <h4 class="sr-only">연기연금 안내</h4>
+                                <p>노령연금의 수급권자(특례노령연금 수급권자 제외)가 연금받는 시기를 늦추는 대신 늦춘만큼 더 많은 연금을 지급하는 제도로ㅡ 노령연금 수급권자가 원할 경우
+                                  1회에 한하여 연금을 받는 시기를 연기할 수 있고, 그 연기되는 1월마다 0.6%씩을 가산하여 연금을 지급하는 제도이다. 이는 노령연금을 받고 있는 중에
+                                  일정금액 이상의 소득있는 업무에 종사하거나 노후소득이 여유가 있을 때 연금의 지급을 연기할 수 있도록 하고 그 대신 연기되는 기간만큼 연금액을 더 받을 수
+                                  있도록 하는 제도로 고령자의 근로의욕을 고취하는데 그 취지가 있다.</p>
+                                <button type="button" class="ic-only box-close">창닫기</button>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- // tooltip -->
+                        </div>
+                      </th>
+                      <td>
+                        <ul class="txt-list dot">
+                          <li>연기구간은 최대 5구간까지 추가 가능합니다.</li>
+                          <li>2046-11-08(지급사유발생일)부터 선택 가능합니다.</li>
+                          <li>2051-11-08(지급사유발생일부터 최대 5년)까지 선택 가능합니다.</li>
+                        </ul>
+                        <div class="divide-type-fs gap24-col gap8-row">
+                          <div class="form-group-txt">
+                            <span class="front-txt">연기시작일 :</span>
+                            <input type="text" id="" class="align-right form-120fx" placeholder="2046-11-08" aria-label="연기시작일" disabled />
+                          </div>
+                          <div class="form-group-txt">
+                            <span class="front-txt">연기종료일 :</span>
+                            <input type="text" id="" class="align-right form-120fx" placeholder="2051-11-08" aria-label="연기종료일" disabled />
+                          </div>
+                          <div class="form-group-txt">
+                            <span class="front-txt">연기비율 :</span>
+                            <select class="form-80" title="연기비율">
+                              <option value="선택">100</option>
+                              <option value="선택">90</option>
+                            </select>
+                            <span class="back-txt">%</span>
+                          </div>
+                          <button type="button" class="button-primary -sm round ml-auto">
+                            <i class="ic-only inner-plus" aria-hidden="true"></i>
+                            <span>입력추가</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- e: 지급희망연령 선택 -->
+
+              <!-- s: 소득있는 업무 종사 시 월 평균소득금액 -->
+              <div class="con-table-header">
+                <h3 class="cont-title mb0">소득있는 업무 종사 시 월 평균소득금액</h3>
+              </div>
+              <div class="con-table all-center">
+                <table class="">
+                  <caption>사업소득 금액과 근로소득 금액을 입력할 수 있는 표.</caption>
+                  <colgroup>
+                    <col style="width: 50%;" />
+                    <col style="width: 50%;" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">사업소득</th>
+                      <th scope="col">근로소득</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="form-group-txt w100 ac">
+                          <input type="number" id="" class="align-right form-320" placeholder="00" aria-label="사업소득" />
+                          <span class="back-txt">원</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group-txt w100 ac">
+                          <input type="number" id="" class="align-right form-320" placeholder="00" aria-label="근로소득" />
+                          <span class="back-txt">원</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ul class="txt-list dot">
+                <li>일정 수준을 초과하는 소득이 있는 업무에 종사하는 경우, 지급개시연령부터 5년동안은 소득 수준에 따라 감액된 연금액으로 지급되며,이 때 부양가족연금액은 지급되지 않습니다.</li>
+              </ul>
+              <!-- e: 소득있는 업무 종사 시 월 평균소득금액 -->
+
+              <!-- s: 향후 소득 및 가입기간 추가 -->
+              <div class="con-table-header mt56">
+                <h3 class="cont-title mb0">향후 소득 및 가입기간 추가</h3>
+                <button type="button" class="button-primary -sm round">예상연금월액표 보기</button>
+              </div>
+              <div class="con-table all-center mb16">
+                <table class="grid-min-width">
+                  <caption>사업소득 금액과 근로소득 금액을 입력할 수 있는 표.</caption>
+                  <colgroup>
+                    <col style="width: 60%;" />
+                    <col style="width: 40%;" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">가입기간</th>
+                      <th scope="col">소득월액</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex-cc gap8">
+                          <div class="form-group-txt">
+                            <input type="text" id="" class="align-right form-80" placeholder="" aria-label="가입기간 시작년도" /><span class="back-txt">년</span>
+                          </div>
+                          <div class="form-group-txt">
+                            <input type="text" id="" class="align-right form-64" placeholder="" aria-label="가입시작 월" /><span class="back-txt">월</span>
+                          </div>
+                          <div>~</div>
+                          <div class="form-group-txt">
+                            <input type="text" id="" class="align-right form-80" placeholder="" aria-label="가입기간 종료년도" /><span class="back-txt">년</span>
+                          </div>
+                          <div class="form-group-txt">
+                            <input type="text" id="" class="align-right form-64" placeholder="" aria-label="가입종료 월" /><span class="back-txt">월</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group-txt ac">
+                          <input type="number" id="" class="align-right form-270" placeholder="00" aria-label="소득월액" />
+                          <span class="back-txt">원</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="divide-type-fe gap16">
+                <button type="button" class="button-tertiary -sm round"><i class="ic-only inner-minus"></i><span>입력삭제</span></button>
+                <button type="button" class="button-primary -sm round"><i class="ic-only inner-plus"></i><span>입력추가</span></button>
+              </div>
+              <!-- e: 향후 소득 및 가입기간 추가 -->
+
+              <!-- s: 이전 다음 버튼 -->
+              <div class="cont-bottom">
+                <div class="btn-group">
+                  <button type="button" class="button-primary -lg">다음</button>
+                </div>
+              </div>
+              <!-- e: 이전 다음 버튼 -->
+            </section>
+
+            <!-- ===== 상세연금 Step 2 : 입력내용 확인 =====-->
+
+            <section class="step-2">
+              <!-- s: 상세연금 스텝 -->
+              <ul class="equal-list step top">
+                <li>
+                  <em class="unit">01</em>
+                  <div class="type">조건설정 및 소득입력</div>
+                </li>
+                <li class="active">
+                  <em class="unit">02</em>
+                  <div class="type">입력내용 확인</div>
+                </li>
+                <li>
+                  <em class="unit">03</em>
+                  <div class="type">결과 및 비교조회</div>
+                </li>
+              </ul>
+              <!-- e: 상세연금 스텝 -->
+
+              <!-- s: 페이지 타이틀 -->
+              <div class="cont-head">
+                <h3 class="cont-title big">홍길동 <span class="fw-regular">고객님</span></h3>
+                <p class="cont-desc big">고객님께서는 부양가족연금 대상, 지급희망 연령 등을 선택하시거나, 향후 납부할 소득액을 직접 입력한 뒤 예상연금액을 조회할 수 있습니다.</p>
+              </div>
+              <!-- e: 페이지 타이틀 -->
+
+              <!-- s: 세부 조건 설정 내용 -->
+              <div class="con-table-header mt48">
+                <h3 class="cont-title mb0">세부조건 설정 내용</h3>
+              </div>
+              <div class="con-table all-center">
+                <table class="grid-min-width">
+                  <caption>부양가족 연금 대상과 지급희망연령을 확인할 수 있는 표.</caption>
+                  <colgroup>
+                    <col style="width: 50%;" />
+                    <col style="width: 50%;" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">구분</th>
+                      <th scope="col">입력내용</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <span>부양가족연금대상</span>
+                        <!-- tooltip -->
+                        <button type="button" class="_has-tooltip" title="부양가족 연금대상 안내 보기">
+                          <i class="ic-only question" aria-hidden="true"></i>
+                        </button>
+                        <div class="desc-box type1 _tooltipbox" role="tooltip">
+                          <div class="desc-content align-left">
+                            <h4 class="sr-only">부양가족연금대상 안내</h4>
+                            <p>연금급여를 지급할 때 기본연금액에 추가하여 지급되는 가족수당 성격의 급여로서, 부양가족연금액은 노령연금(완전, 감액, 조기 및 특례), 장애연금(장애등급 1~3급)
+                              및 유족연금의 수급권자에게 지급되지만, 소득활동에 따른 노령연금, 분할연금, 장애일시보상금, 반환일시금, 사망일시금은 지급대상이 되지 않는다. 부양가족연금은 배우자,
+                              19세미만 또는 장애2급 이상의 자녀(배우자가 혼인 전에 얻은 자녀 포함), 60세 이상(연령상향 적용) 또는 장애2급 이상의 부모(배우자의 부모 포함)를 대상으로
+                              소즉수준이나 가입기간에 관계없이 일정금액이 지급된다.</p>
+                            <button type="button" class="ic-only box-close">창닫기</button>
+                          </div>
+                          <!-- // tooltip -->
+                        </div>
+                      </th>
+                      <td>부모(2명), 배우자(1명), 자녀(5명)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">지급희망연령</th>
+                      <td>65세</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- e: 세부 조건 설정 내용 -->
+
+              <!-- s: 향후 납부할 소득액 입력 내용 -->
+              <div class="con-table-header mt48">
+                <h3 class="cont-title mb0">향후 납부할 소득액 입력 내용</h3>
+              </div>
+
+              <div class="con-table all-center">
+                <table class="grid-min-width">
+                  <caption>가입기간과 입력내용을 확인할 수 있는 표.</caption>
+                  <colgroup>
+                    <col style="width: 50%;" />
+                    <col style="width: 50%;" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">가입기간</th>
+                      <th scope="col">입력내용</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2024년 01월 ~ 2024년 09월</td>
+                      <td>000,000,000원</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- e: 향후 납부할 소득액 입력 내용 -->
+
+              <!-- s: 안내 문구 -->
+              <div class="result-txt color top">
+                <p>고객님께서 입력하신 내용은 위와 같습니다.</p>
+                <p class="downsize">위 내용으로 예상연금액 조회를 하시려면 <span class="fc-primary">“다음”</span> 을, 압력된 항목을 수정하시려면 <span class="fc-primary">“이전”</span> 을 클릭하십시오</p>
+              </div>
+              <!-- e: 안내 문구 -->
+
+              <!-- s: 이전 다음 버튼-->
+              <div class="cont-bottom">
+                <div class="btn-group">
+                  <button type="button" class="button-tertiary -lg">이전</button>
+                  <button type="button" class="button-primary -lg">다음</button>
+                </div>
+              </div>
+              <!-- e: 이전 다음 버튼-->
+            </section>
+
+            <!-- ===== 상세연금 Step 3 : 결과 및 비교조회 =====-->
+
+            <section class="step-3">
+              <!-- s: 상세연금 스텝 -->
+              <ul class="equal-list step top">
+                <li>
+                  <em class="unit">01</em>
+                  <div class="type">조건설정 및 소득입력</div>
+                </li>
+                <li>
+                  <em class="unit">02</em>
+                  <div class="type">입력내용 확인</div>
+                </li>
+                <li class="active">
+                  <em class="unit">03</em>
+                  <div class="type">결과 및 비교조회</div>
+                </li>
+              </ul>
+              <!-- e: 상세연금 스텝 -->
+
+              <!-- s: 페이지 타이틀 -->
+              <div class="cont-head">
+                <h3 class="cont-title big">홍길동 <span class="fw-regular">고객님</span></h3>
+                <p class="cont-desc big">
+                  고객님께서는 부양가족연금 대상, 지급희망 연령 등을 선택하시거나,향후 납부할 소득액을 직접 입력한 뒤 예상연금액을 조회할 수 있습니다.
+                  <br><span class="fc-primary">보험료 납부내역은 공단 전산에 반영된 날 (납부후 최장 4일 경과 후 반영) 기준입니다. 총 납부내역에는 반환일시금 월수와 금액이
+                    포함되어 있습니다.</span>
+                </p>
+              </div>
+              <!-- e: 페이지 타이틀 -->
+
+              <!-- s: 세부 조건 설정 내용 -->
+              <div class="con-table-header mt48">
+                <h3 class="cont-title mb0">세부 조건 설정 내용</h3>
+              </div>
+              <div class="con-table all-center">
+                <table class="grid-min-width">
+                  <caption>예상 연금액의 세전, 세후의 수정 전 현재가치, 수정 후 현재가치의 소득종사 지급연금액, 지급연금액으로 구성된 표.</caption>
+                  <colgroup>
+                    <col style="width: 14%;" />
+                    <col style="width: 14%;" />
+                    <col style="width: 24%;" />
+                    <col style="width: 24%;" />
+                    <col style="width: 24%;" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col" rowspan="2" colspan="2">구분</th>
+                      <th scope="col" rowspan="2">수정 전 현재가치</th>
+                      <th scope="col" colspan="2">수정 후 현재가치</th>
+                    </tr>
+                    <tr>
+                      <th scope="col">소득종사 지급연금액</th>
+                      <th scope="col">지급연금액</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="2">예상연금액</td>
+                      <td>세전</td>
+                      <td>
+                        <p class="fc-primary">
+                          <span>매월 00,000,000원</span><br>
+                          <span>(연 000,000,000원)</span>
+                        </p>
+                      </td>
+                      <td>
+                        <p class="fc-primary">
+                          <span>매월 0원</span><br>
+                          <span>(연 0원)</span>
+                        </p>
+                      </td>
+                      <td>
+                        <p class="fc-primary">
+                          <span>매월 00,000,000원</span><br>
+                          <span>(연 000,000,000원)</span>
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>세후</td>
+                      <td>
+                        <p class="fc-primary">
+                          <span>매월 00,000,000원</span><br>
+                          <span>(연 000,000,000원)</span>
+                        </p>
+                      </td>
+                      <td>
+                        <p class="fc-primary">
+                          <span>매월 0원</span><br>
+                          <span>(연 0원)</span>
+                        </p>
+                      </td>
+                      <td>
+                        <p class="fc-primary">
+                          <span>매월 00,000,000원</span><br>
+                          <span>(연 000,000,000원)</span>
+                        </p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- e: 세부 조건 설정 내용 -->
+
+              <!-- s: 연금계산내역 -->
+              <div class="con-table-header al">
+                <h3 class="cont-title mb0">연금계산내역</h3>
+                <p class="cont-desc big mb0 ml8">(고객님의 예상연금액 연금계산내역입니다.)</p>
+              </div>
+              
+              <div class="con-table">
+                <table class="grid-min-width">
+                  <caption>총 가입개월, 총 납부보험료, 지급률, 연령별 지급률, A값과 설명, B값과 설명, 기본연금액, 부양가족연금액(연간)으로 구성된 표.</caption>
+                  <colgroup>
+                    <col style="width: 240px;"/>
+                    <col style="width: auto;"/>
+                    <col style="width: 240px;"/>
+                    <col style="width: auto;"/>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">총 가입개월</th>
+                      <td>000개월</td>
+                      <th scope="row">총 납부보험료</th>
+                      <td>123,841,920 원</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">지급률</th>
+                      <td>100.00000 %</td>
+                      <th scope="row">연령별 지급률</th>
+                      <td>100.00000 %</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="has-help">
+                          <button href="#none" class="_has-tooltip">
+                            <span>A값</span>
+                            <i class="ic-only question"></i>
+                          </button>
+                          <!-- tooltip -->
+                          <div class="desc-box type1 _tooltipbox">
+                            <div class="desc-content align-left">
+                              <p>연금수급 직전 3년간의 가입자 전체의 평균 소득월액의 평균액</p>
+                              <button type="button" class="ic-only box-close">창닫기</button>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <td>00,000,000 원</td>
+                      <th scope="row">
+                        <div class="has-help">
+                          <button type="button" class="_has-tooltip" title="B값 안내 보기">
+                            <span>B값</span>
+                            <i class="ic-only question" aria-hidden="true"></i>
+                          </button>
+                          <!--tooltip-->
+                          <div class="desc-box type1 _tooltipbox" role="tooltip">
+                            <div class="desc-box-inner">
+                              <div class="desc-content">
+                                <h4 class="sr-only">B값 안내</h4>
+                                <p>가입자 개인의 가입기간 중 기준소득월액을 현재가치로 재평가한 평균액</p>
+                              </div>
+                              <button type="button" class="ic-only box-close">창닫기</button>
+                            </div>
+                          </div>
+                          <!--//tooltip-->
+                        </div>
+                      </th>
+                      <td>00,000,000 원</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">기본연금액</th>
+                      <td>00,000,000 원</td>
+                      <th scope="row">부양가족연금액(연간)</th>
+                      <td>0 원</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <ul class="txt-list mt16 dot">
+                <li>1단계 조건 설정시 부양가족연금대상을 선택하신 경우, 조회결과의 수정 후 예상연금액에 부양가족연금액이 포함됩니다.</li>
+                <li>부양가족연금액은 “수급권 취득 당시를 기준으로 하여” 실제로 부양가족연금 대상자로 인정된 경우에 연금액에 포함되어 지급됩니다.</li>
+              </ul>
+              <!-- e: 연금계산내역 -->
+
+              <!-- s: 이전 다음 버튼 -->
+              <div class="cont-bottom">
+                <div class="btn-group">
+                  <button type="button" class="button-tertiary -lg">이전</button>
+                </div>
+              </div>
+              <!-- e: 이전 다음 버튼 -->
+
+            </section>
+
+            <!-- 공통UI - 해시태그 링크들 -->
+            <div class="hashtag-wrap"></div>
+            <!--// 공통UI - 해시태그 링크들 -->
+
+          </div>
+          <!-- ========  e: Tab Panel 2 ======== -->
+
+        </div>
+        <!-- ========  e: Tab Contents ======== -->
+
+      </div>
+      <!--s: Contents -->
+    </main>
+    <!-- e: Main -->
+
+    <!-- s: footer -->
+    <footer id="footer"></footer>
+    <!-- e: footer -->
+  </div>
+
+  <!-- Modal : 국민연금 예상연금액 -->
+
+  <div class="modal full dim" id="viewPensionAmountModal">
+    <div class="modalWrap">
+
+      <!-- s: Modal Header -->
+      <div class="modal-header">
+        <div class="modal-title">
+          <h3 class="cont-title">국민연금 예상연금액</h3>
+        </div>
+        <button class="btn-close">모달창닫기</button>
+      </div>
+      <!-- e: Modal Header -->
+
+      <!-- s: Modal Contents -->
+      <div class="modal-body">
+        <div class="modal-body-inner">
+          <h4 class="cont-title">국민연금 가입중인 고객</h4>
+          <ul class="txt-list dot fs17">
+            <li>국민연금 예상연금액은 매년 소비자물가변동률, 전체 가입자 소득수준, 본인 가입이력에 따라 <br>
+              <span class="fc-primary">실제 수령 연금액과 다를 수 있음을 알려드립니다.</s></li>
+          </ul>
+        </div>
+      </div>
+      <!-- e: Modal Contents -->
+
+      <!-- s: Modal Footer -->
+      <div class="modal-footer">
+        <div class="btn-group">
+          <button type="button" class="button-primary -lg">예상연금액 보기</button>
+        </div>
+      </div>
+      <!-- e: Modal Footer -->
+
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('#viewPensionAmount').addEventListener('click', () => {
+      commonUI.modal('#viewPensionAmountModal', '#viewPensionAmount');
+    });
+    commonUI.tabNav(".tabWrap", 2);
+  </script>
+</body>
+
+</html>

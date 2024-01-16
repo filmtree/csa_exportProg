@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<title>UI 가이드</title>
+
+		<script src="../js/lib/jquery-3.7.0.min.js"></script>
+		<script src="../js/lib/jquery-ui.min.js"></script>
+		<script src="../js/lib/jquery.easing.min.js"></script>
+		<script src="../js/lib/swiper-bundle.min.js"></script>
+		<script src="ui_include.js"></script>
+		<script src="../js/ui_common.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+		<link rel="stylesheet" type="text/css" href="guide.css" />
+
+		<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css" />
+		<script src="highlight/highlight.min.js"></script>
+		<script>
+			hljs.highlightAll();
+		</script>
+	</head>
+	<body>
+		<div class="guideWrap">
+			<header class="guideHeader"></header>
+			<section class="guideContainer">
+				<header class="sec-header">
+					<h2>탭</h2>
+				</header>
+				<div class="sec-contents">
+					<!-- 내용시작 -->
+
+					<h3 class="sec-title">기본 탭</h3>
+					<div class="code-preview">
+						<div class="tabWrap tab-base">
+							<div class="tabwrap-inner">
+								<ul class="tabNav">
+									<li role="tablist"><a href="#" id="tabNav1-1" role="tab">교육신청 (개인)</a></li>
+									<li role="tablist"><a href="#" id="tabNav1-2" role="tab">교육신청 (단체)</a></li>
+									<li role="tablist"><a href="#" id="tabNav1-3" role="tab">교육신청 현황 (단체)</a></li>
+								</ul>
+								<span class="tab-gradient pc-hide" aria-hidden="true"></span>
+							</div>
+							<!-- tabContent-1 -->
+							<div class="tabContent edu-personal" role="tabpanel" aria-labelledby="tabNav1-1">
+								<div style="text-align: center; padding: 10rem 5rem; background: #eee">내용1-1</div>
+							</div>
+							<!-- tabContent-2 -->
+							<div class="tabContent edu-group active" role="tabpanel" aria-labelledby="tabNav1-2">
+								<div style="text-align: center; padding: 10rem 5rem; background: #d1d1d1">내용1-2</div>
+							</div>
+							<!-- tabContent-3 -->
+							<div class="tabContent edu-group-status" role="tabpanel" aria-labelledby="tabNav1-3">
+								<div style="text-align: center; padding: 10rem 5rem; background: #d9d9d9">내용1-3</div>
+							</div>
+						</div>
+						<script>
+							//commonUI.tabNav('타겟', 활성화 인덱스);
+							commonUI.tabNav('.tabWrap', 1);
+						</script>
+
+						<br /><br />
+						<table class="guide-table">
+							<col style="width: 160px" />
+							<col />
+							<tbody>
+								<tr>
+									<th class="align-left">.tabWrap, <br />.tabNav, <br />.tabContent</th>
+									<td>스크립트 내부용<br />(변경하거나 없으면 기능작동 안함)</td>
+								</tr>
+								<tr>
+									<th class="align-left">.tab-base</th>
+									<td>기본 스타일 적용 (스타일이 다를 경우 삭제 후 자유롭게 네이밍)</td>
+								</tr>
+								<tr>
+									<th class="align-left">.tab-feature</th>
+									<td>실행/초기화로 사용할 선택자(자유롭게 네이밍). 하나의 문서에서 중복 X</td>
+								</tr>
+								<tr>
+									<th class="align-left">탭과 내용의 매칭(접근성)</th>
+									<td>a[id] == .tabContent[aria-labelledby]</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<pre><code class="language-xml">&#x9;&#x3C;div class=&#x22;tabWrap tab-base tab-education&#x22;&#x3E;
+	&#x9;&#x9;&#x3C;div class=&#x22;tabwrap-inner&#x22;&#x3E;
+	&#x9;&#x9;&#x9;&#x3C;ul class=&#x22;tabNav&#x22;&#x3E;
+	&#x9;&#x9;&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22; id=&#x22;tabNav1-1&#x22; role=&#x22;tab&#x22;&#x3E;&#xAD50;&#xC721;&#xC2E0;&#xCCAD; (&#xAC1C;&#xC778;)&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+	&#x9;&#x9;&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22; id=&#x22;tabNav1-2&#x22; role=&#x22;tab&#x22;&#x3E;&#xAD50;&#xC721;&#xC2E0;&#xCCAD; (&#xB2E8;&#xCCB4;)&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+	&#x9;&#x9;&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22; id=&#x22;tabNav1-3&#x22; role=&#x22;tab&#x22;&#x3E;&#xAD50;&#xC721;&#xC2E0;&#xCCAD; &#xD604;&#xD669; (&#xB2E8;&#xCCB4;)&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+	&#x9;&#x9;&#x9;&#x3C;/ul&#x3E;
+	&#x9;&#x9;&#x9;&#x3C;span class=&#x22;tab-gradient pc-hide&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/span&#x3E;
+	&#x9;&#x9;&#x3C;/div&#x3E;
+	&#x9;&#x9;&#x3C;!-- tabContent-1 --&#x3E;
+	&#x9;&#x9;&#x3C;div class=&#x22;tabContent edu-personal&#x22; role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav1-1&#x22;&#x3E;
+	&#x9;&#x9;&#x9;&#x3C;div style=&#x22;text-align:center; padding:10rem 5rem; background:#eee;&#x22;&#x3E;&#xB0B4;&#xC6A9;1-1&#x3C;/div&#x3E;
+	&#x9;&#x9;&#x3C;/div&#x3E;
+	&#x9;&#x9;&#x3C;!-- tabContent-2 --&#x3E;
+	&#x9;&#x9;&#x3C;div class=&#x22;tabContent edu-group active&#x22; role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav1-2&#x22;&#x3E;
+	&#x9;&#x9;&#x9;&#x3C;div style=&#x22;text-align:center; padding:10rem 5rem; background:#d1d1d1;&#x22;&#x3E;&#xB0B4;&#xC6A9;1-2&#x3C;/div&#x3E;
+	&#x9;&#x9;&#x3C;/div&#x3E;
+	&#x9;&#x9;&#x3C;!-- tabContent-3 --&#x3E;
+	&#x9;&#x9;&#x3C;div class=&#x22;tabContent edu-group-status&#x22; role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav1-3&#x22;&#x3E;
+	&#x9;&#x9;&#x9;&#x3C;div style=&#x22;text-align:center; padding:10rem 5rem; background:#d9d9d9;&#x22;&#x3E;&#xB0B4;&#xC6A9;1-3&#x3C;/div&#x3E;
+	&#x9;&#x9;&#x3C;/div&#x3E;
+	&#x9;&#x3C;/div&#x3E;
+	&#x9;&#x3C;script&#x3E;
+	&#x9;&#x9;//commonUI.tabNav(&#x27;&#xD0C0;&#xAC9F;&#x27;, &#xD65C;&#xC131;&#xD654; &#xC778;&#xB371;&#xC2A4;);
+	&#x9;&#x9;commonUI.tabNav(&#x27;.tabWrap&#x27;, 1);
+	&#x9;&#x3C;/script&#x3E;
+</code></pre>
+
+					<!-- 231222 -->
+					<div class="code-preview">
+						<div class="tab-total">
+							<div class="wrap-inner">
+								<div class="tab-base">
+									<ul class="inner-tab">
+										<li role="tablist"><a href="#tabNav1-1" role="tab" class="active">1단계</a></li>
+										<li role="tablist"><a href="#tabNav1-2" role="tab">2단계</a></li>
+										<li role="tablist"><a href="#tabNav1-3" role="tab">3단계</a></li>
+									</ul>
+									<!-- 1단계 -->
+									<div class="inner-contents" id="tabNav1-1" role="tabpanel" aria-labelledby="tabNav1-1" style="display: block">1단계</div>
+									<!--// 1단계 -->
+									<!-- 2단계 -->
+									<div class="inner-contents" id="tabNav1-2" role="tabpanel" aria-labelledby="tabNav1-2">2단계</div>
+									<!--// 2단계 -->
+									<!-- 3단계 -->
+									<div class="inner-contents" id="tabNav1-3" role="tabpanel" aria-labelledby="tabNav1-3">3단계</div>
+									<!--// 3단계 -->
+								</div>
+							</div>
+						</div>
+						<!-- tab-innerdouble -->
+						<div class="tab-innerdouble top">
+							<div class="tab-base">
+								<ul class="double-tab">
+									<li role="tablist"><a href="#tabNav2-2-1" role="tab" class="active" title="선택됨">노령연금조회</a></li>
+									<li role="tablist"><a href="#tabNav2-2-2" role="tab">상세연금조회</a></li>
+								</ul>
+								<div class="double-contents" id="tabNav2-2-1" role="tabpanel" aria-labelledby="tabNav2-2-1" style="display: block">sefd</div>
+								<div class="double-contents" id="tabNav2-2-2" role="tabpanel" aria-labelledby="tabNav1-2-2">sdfsdfsdf</div>
+							</div>
+						</div>
+					</div>
+					<pre><code class="language-xml">
+	&#x3C;div class=&#x22;tab-total&#x22;&#x3E;
+&#x9;&#x9;&#x3C;div class=&#x22;wrap-inner&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x3C;div class=&#x22;tab-base&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;ul class=&#x22;inner-tab&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#tabNav1-1&#x22; role=&#x22;tab&#x22; class=&#x22;active&#x22;&#x3E;1&#xB2E8;&#xACC4;&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#tabNav1-2&#x22; role=&#x22;tab&#x22;&#x3E;2&#xB2E8;&#xACC4;&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#tabNav1-3&#x22; role=&#x22;tab&#x22;&#x3E;3&#xB2E8;&#xACC4;&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;/ul&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;!-- 1&#xB2E8;&#xACC4; --&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;div class=&#x22;inner-contents&#x22; id=&#x22;tabNav1-1&#x22; role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav1-1&#x22; style=&#x22;display: block;&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;1&#xB2E8;&#xACC4; 
+&#x9;&#x9;&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;!--// 1&#xB2E8;&#xACC4; --&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;!-- 2&#xB2E8;&#xACC4; --&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;div class=&#x22;inner-contents&#x22; id=&#x22;tabNav1-2&#x22; role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav1-2&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;2&#xB2E8;&#xACC4;
+&#x9;&#x9;&#x9;&#x9;&#x9;
+&#x9;&#x9;&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;!--// 2&#xB2E8;&#xACC4; --&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;!-- 3&#xB2E8;&#xACC4; --&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;div class=&#x22;inner-contents&#x22; id=&#x22;tabNav1-3&#x22; role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav1-3&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;3&#xB2E8;&#xACC4;
+&#x9;&#x9;&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;!--// 3&#xB2E8;&#xACC4; --&#x3E;
+&#x9;&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;!-- tab-innerdouble --&#x3E;
+&#x9;&#x3C;div class=&#x22;tab-innerdouble top&#x22;&#x3E;
+&#x9;&#x9;&#x3C;div class=&#x22;tab-base&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x3C;ul class=&#x22;double-tab&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#tabNav2-2-1&#x22; role=&#x22;tab&#x22; class=&#x22;active&#x22; title=&#x22;&#xC120;&#xD0DD;&#xB428;&#x22;&#x3E;&#xB178;&#xB839;&#xC5F0;&#xAE08;&#xC870;&#xD68C;&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#tabNav2-2-2&#x22; role=&#x22;tab&#x22;&#x3E;&#xC0C1;&#xC138;&#xC5F0;&#xAE08;&#xC870;&#xD68C;&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x9;&#x9;&#x9;&#x3C;/ul&#x3E;
+&#x9;&#x9;&#x9;&#x3C;div class=&#x22;double-contents&#x22; id=&#x22;tabNav2-2-1&#x22; role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav2-2-1&#x22; style=&#x22;display: block;&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;sefd
+&#x9;&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x9;&#x9;&#x3C;div class=&#x22;double-contents&#x22; id=&#x22;tabNav2-2-2&#x22; role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav1-2-2&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;sdfsdfsdf
+&#x9;&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x9;&#x3C;/div&#x3E;                                        
+&#x9;&#x3C;/div&#x3E;
+
+</code></pre>
+					<script>
+						//commonUI.tabNav('타겟', 활성화 인덱스);
+						commonUI.tabNav('.tab-education', 1);
+						tabList();
+						function tabList() {
+							// 설계안수립 이너탭
+							const tabItem = document.querySelectorAll('.tab-base > .inner-tab > li > a');
+							const tabCont = document.querySelectorAll('.tab-base > .inner-contents');
+							const tabInnerItem = document.querySelectorAll('.tab-innerdouble .double-tab > li > a');
+							const tabInnerCont = document.querySelectorAll('.tab-innerdouble .double-contents');
+							tabItem.forEach((item, index) => {
+								item.addEventListener('click', function () {
+									this.closest('.inner-tab')
+										.querySelectorAll('li > a')
+										.forEach((e) => {
+											e.classList.remove('active');
+											event.preventDefault();
+										});
+									this.classList.add('active');
+									this.closest('.wrap-inner')
+										.querySelectorAll('.inner-contents')
+										.forEach((e) => {
+											e.style.display = 'none';
+										});
+									tabCont[index].style.display = 'block';
+								});
+							});
+
+							tabInnerItem.forEach((tabitem, index1) => {
+								tabitem.addEventListener('click', function () {
+									this.closest('.tab-innerdouble')
+										.querySelectorAll('li > a')
+										.forEach((e) => {
+											e.classList.remove('active');
+											event.preventDefault();
+										});
+									this.classList.add('active');
+									this.closest('.tab-innerdouble')
+										.querySelectorAll('.double-contents')
+										.forEach((e) => {
+											e.style.display = 'none';
+										});
+									tabInnerCont[index1].style.display = 'block';
+								});
+							});
+						}
+					</script>
+					<pre><code class="language-xml">
+	&#x3C;script&#x3E;
+	&#x9;tabList();
+	&#x9;function tabList() {
+	&#x9;// &#xC124;&#xACC4;&#xC548;&#xC218;&#xB9BD; &#xC774;&#xB108;&#xD0ED;
+	&#x9;const tabItem = document.querySelectorAll(&#x27;.tab-base &#x3E; .inner-tab &#x3E; li &#x3E; a&#x27;);
+	&#x9;const tabCont = document.querySelectorAll(&#x27;.tab-base &#x3E; .inner-contents&#x27;);
+	&#x9;const tabInnerItem = document.querySelectorAll(&#x27;.tab-innerdouble .double-tab &#x3E; li &#x3E; a&#x27;);
+	&#x9;const tabInnerCont = document.querySelectorAll(&#x27;.tab-innerdouble .double-contents&#x27;);
+	&#x9;tabItem.forEach((item, index) =&#x3E; {
+	&#x9;&#x9;item.addEventListener(&#x22;click&#x22;, function () {
+	&#x9;&#x9;&#x9;this.closest(&#x27;.inner-tab&#x27;).querySelectorAll(&#x27;li &#x3E; a&#x27;).forEach(e =&#x3E; {
+	&#x9;&#x9;&#x9;&#x9;e.classList.remove(&#x27;active&#x27;);
+	&#x9;&#x9;&#x9;&#x9;event.preventDefault();
+	&#x9;&#x9;&#x9;})
+	&#x9;&#x9;&#x9;this.classList.add(&#x27;active&#x27;);
+	&#x9;&#x9;&#x9;this.closest(&#x27;.wrap-inner&#x27;).querySelectorAll(&#x27;.inner-contents&#x27;).forEach(e =&#x3E; {
+	&#x9;&#x9;&#x9;&#x9;e.style.display = &#x22;none&#x22;;
+	&#x9;&#x9;&#x9;});
+	&#x9;&#x9;&#x9;tabCont[index].style.display = &#x22;block&#x22;;
+	&#x9;&#x9;});
+	&#x9;});
+	
+	&#x9;tabInnerItem.forEach((tabitem, index1) =&#x3E; {
+	&#x9;&#x9;tabitem.addEventListener(&#x22;click&#x22;, function () {     
+	&#x9;&#x9;&#x9;this.closest(&#x27;.tab-innerdouble&#x27;).querySelectorAll(&#x27;li &#x3E; a&#x27;).forEach(e =&#x3E; {
+	&#x9;&#x9;&#x9;&#x9;e.classList.remove(&#x27;active&#x27;);
+	&#x9;&#x9;&#x9;&#x9;event.preventDefault();
+	&#x9;&#x9;&#x9;})
+	&#x9;&#x9;&#x9;this.classList.add(&#x27;active&#x27;);
+	&#x9;&#x9;&#x9;this.closest(&#x27;.tab-innerdouble&#x27;).querySelectorAll(&#x27;.double-contents&#x27;).forEach(e =&#x3E; {
+	&#x9;&#x9;&#x9;&#x9;e.style.display = &#x22;none&#x22;;
+	&#x9;&#x9;&#x9;});
+	&#x9;&#x9;&#x9;tabInnerCont[index1].style.display = &#x22;block&#x22;;
+	&#x9;&#x9;});
+	&#x9;});
+	}
+	&#x3C;/script&#x3E;
+</code></pre>
+
+					<!-- //231222 -->
+					<!-- <h3 class="sec-title">탭의 갯수가 3개 이하이고 가로 전체</h3>
+<div class="code-preview">
+
+<div class="tabWrap tab-base flexible tab-feature2">
+	<ul class="tabNav">
+		<li><a href="#" id="tabNav2-1" role="tab">tab1</a></li>
+		<li><a href="#" id="tabNav2-2" role="tab">tab2</a></li>
+		<li><a href="#" id="tabNav2-3" role="tab">tab3</a></li>
+	</ul>
+	<div class="tabContent" role="tabpanel" aria-labelledby="tabNav2-1">
+		내용2-1
+	</div>
+	<div class="tabContent" role="tabpanel" aria-labelledby="tabNav2-2">
+		내용2-2
+	</div>
+	<div class="tabContent" role="tabpanel" aria-labelledby="tabNav2-3">
+		내용2-3
+	</div>
+</div>
+<script>
+commonUI.tabNav('.tab-feature2', 2);
+</script>
+
+	<br><br>
+	<table class="guide-table">
+		<col style="width:160px"><col>
+		<tbody>
+			<tr>
+				<th class="align-left">.tabWrap.flexible</th>
+				<td>탭의 갯수가 3개 이하이고 가로 전체</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
+<pre><code class="language-xml">&#x3C;div class=&#x22;tabWrap tab-base flexible tab-feature2&#x22;&#x3E;
+&#x9;&#x3C;ul class=&#x22;tabNav&#x22;&#x3E;
+&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22; id=&#x22;tabNav2-1&#x22; role=&#x22;tab&#x22;&#x3E;tab1&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22; id=&#x22;tabNav2-2&#x22; role=&#x22;tab&#x22;&#x3E;tab2&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22; id=&#x22;tabNav2-3&#x22; role=&#x22;tab&#x22;&#x3E;tab3&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x9;&#x3C;/ul&#x3E;
+&#x9;&#x3C;div role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav2-1&#x22; class=&#x22;tabContent&#x22;&#x3E;
+&#x9;&#x9;&#xB0B4;&#xC6A9;2-1
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav2-2&#x22; class=&#x22;tabContent&#x22;&#x3E;
+&#x9;&#x9;&#xB0B4;&#xC6A9;2-2
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav2-3&#x22; class=&#x22;tabContent&#x22;&#x3E;
+&#x9;&#x9;&#xB0B4;&#xC6A9;2-3
+&#x9;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;script&#x3E;
+commonUI.tabNav(&#x27;.tab-feature2&#x27;, 2);
+&#x3C;/script&#x3E;
+</code></pre>
+
+<h3 class="sec-title">가로 사이즈 auto</h3>
+<div class="code-preview">
+
+	<div class="tabWrap tab-base auto tab-feature3">
+		<ul class="tabNav">
+			<li><a href="#" id="tabNav3-1" role="tab">tab1</a></li>
+			<li><a href="#" id="tabNav3-2" role="tab">tab2</a></li>
+		</ul>
+		<div class="tabContent" role="tabpanel" aria-labelledby="tabNav3-1">
+			내용3-1
+		</div>
+		<div class="tabContent" role="tabpanel" aria-labelledby="tabNav3-2">
+			내용3-2
+		</div>
+	</div>
+	<script>
+	commonUI.tabNav('.tab-feature3', 1);
+	</script>
+
+	<br><br>
+	<table class="guide-table">
+		<col style="width:160px"><col>
+		<tbody>
+			<tr>
+				<th class="align-left">.tabWrap.auto</th>
+				<td>가로 사이즈 auto</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
+<pre><code class="language-xml">&#x3C;div class=&#x22;tabWrap tab-base auto tab-feature3&#x22;&#x3E;
+&#x9;&#x3C;ul class=&#x22;tabNav&#x22;&#x3E;
+&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22; id=&#x22;tabNav3-1&#x22; role=&#x22;tab&#x22;&#x3E;tab1&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22; id=&#x22;tabNav3-2&#x22; role=&#x22;tab&#x22;&#x3E;tab2&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x9;&#x3C;/ul&#x3E;
+&#x9;&#x3C;div role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav3-1&#x22; class=&#x22;tabContent&#x22;&#x3E;
+&#x9;&#x9;&#xB0B4;&#xC6A9;3-1
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav3-2&#x22; class=&#x22;tabContent&#x22;&#x3E;
+&#x9;&#x9;&#xB0B4;&#xC6A9;3-2
+&#x9;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;script&#x3E;
+commonUI.tabNav(&#x27;.tab-feature3&#x27;, 1);
+&#x3C;/script&#x3E;
+</code></pre> -->
+
+					<!-- 내용끝 -->
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+	<script src="../../js/ui_temp.js"></script>
+	<script src="../../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <style>
+    </style>
+</head>
+<body>
+    
+    <!-- 노후자금 상세보기 -->
+    <div class="modal full dim" id="pop-university" style="display: block;">
+        <div class="modalWrap">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <h3 class="cont-title">노후자금 상세보기</h3>
+                </div>
+                <button class="btn-close">모달창닫기</button>
+            </div>
+            <div class="modal-body">
+                <!-- 내용시작 -->
+                <div class="modal-body-inner h720px">
+                    <!-- 필요자금 -->
+                    <div class="con-table-header">
+                        <h3 class="cont-title none1">필요자금</h3>
+                        <span class="txt-helper">(단위 : 만원)</span>
+                    </div>
+                    <div class="con-table all-center">
+                        <table class="min-w600px" summary="노후생활비의 연간 필요금액, 필요시기, 필요기간, 연간필요금액(은퇴시가치), 총필요금액(은퇴시가치)에 대한 정보 제공">
+                            <caption>노후 필요자금 분석표</caption>
+                            <colgroup>
+                                <col style="width:15%">
+                                <col style="width:15%">
+                                <col style="width:12%">
+                                <col style="width:12%">
+                                <col style="width:15%">
+                                <col style="width:15%">
+                                <col style="width:15%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">연간 필요금액</th>
+                                    <th scope="col">시작연도</th>
+                                    <th scope="col">필요기간</th>
+                                    <th scope="col">연간증가율</th>			
+                                    <th scope="col">연간 필요금액 <span class="smcolor1">(은퇴시가치)</span></th>
+                                    <th scope="col">총 필요자금 <span class="smcolor1">(은퇴시가치)</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>노후생활비</td>
+                                    <td></td>
+                                    <td>1년</td>
+                                    <td>24년</td>
+                                    <td>2.00%</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="txt-list dot gray minus">
+                        <li>연간증가율은 물가상승률을 이용하였으며 배우자 홀로 남은 기간 동안의 생활비는 69%를 적용하였습니다.
+                        </li>
+                    </ul>
+                    <!-- 준비자금 -->
+                    <h3 class="cont-title is">준비자금</h3>
+                    <div class="con-table-header">
+                        <p class="cont-title small none1">① 공적연금</p>
+                        <span class="txt-helper">(단위 : 만원)</span>
+                    </div>
+                    <div class="con-table all-center">
+                        <table class="min-w600px" summary="공적연금의 종류별 월간금액과 시작년도, 수급기간, 연간증가율, 총준비금액(은퇴시 가치)정보 제공">
+                            <caption>공적연금 정보 표</caption>
+                            <colgroup>
+                                <col width="*" />
+                                <col width="*" />
+                                <col width="*" />
+                                <col width="*" />
+                                <col width="*" />
+                                <col width="*" />
+                                <col width="*" />
+                            </colgroup>
+                            <thead>
+                                <tr>						
+                                    <th scope="col">구분</th>
+                                    <th scope="col">본인/배우자</th>
+                                    <th scope="col">월간금액</th>
+                                    <th scope="col">시작연도</th>
+                                    <th scope="col">수급기간</th>
+                                    <th scope="col">연간 증가율</th>
+                                    <th scope="col">총 준비금액<span class="smcolor1">(은퇴시가치)</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>국민연금</td>
+                                    <td>본인</td>
+                                    <td>0</td>
+                                    <td>    년</td>
+                                    <td>    년</td>
+                                    <td>  %</td>
+                                    <td class="align-right">0</td>
+                                </tr>
+                                <tr>
+                                    <td>국민연금</td>
+                                    <td>배우자</td>
+                                    <td>0</td>
+                                    <td>    년</td>
+                                    <td>    년</td>
+                                    <td>  %</td>
+                                    <td class="align-right">0</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" class="bold align-left">공적연금합계</td>
+                                    <td class="align-right bold">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>                    
+                    <ul class="txt-list dot gray minus">
+                        <li>연간증가율은 물가상승률을 이용하였으며 배우자 홀로 남은 기간 동안의 생활비는 69%를 적용하였습니다.</li>
+                    </ul>
+                    <!-- 퇴직연금 -->
+                    <div class="con-table-header top">
+                        <h3 class="cont-title none1">퇴직연금</h3>
+                        <span class="txt-helper">(단위 : 만원)</span>
+                    </div>
+                    <div class="con-table all-center">
+                        <table class="min-w600px" summary="입사년도, 연간근로소득, 은퇴연도, 수령기간, 연간증가율, 총준비금액을 통안 퇴직금(연금)합계 정보 제공">
+                            <caption>퇴직연금 정보 표</caption>
+                            <colgroup>
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                            </colgroup>
+                            <thead>
+                                <tr>						
+                                    <th scope="col">구분</th>
+                                    <th scope="col">입사년도</th>
+                                    <th scope="col">연간 근로소득</th>
+                                    <th scope="col">은퇴연도</th>
+                                    <th scope="col">수령기간</th>
+                                    <th scope="col">연간 증가율</th>
+                                    <th scope="col">총 준비금액<span class="smcolor1">(은퇴시가치)</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>본인</td>
+                                    <td>년</td>
+                                    <td>0</td>
+                                    <td>2048년</td>
+                                    <td>0년</td>
+                                    <td>4.7%</td>
+                                    <td class="align-right">0</td>
+                                </tr>
+                                <tr>
+                                    <td>배우자</td>
+                                    <td>년</td>
+                                    <td>0</td>
+                                    <td>1993년</td>
+                                    <td>0년</td>
+                                    <td>4.7%</td>
+                                    <td class="align-right">0</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" class="align-left bold">퇴직금(연금)합계</td>
+                                    <td class="align-right bold">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>                   
+                    <ul class="txt-list dot gray minus">
+                        <li>연간증가율은 소득상승률 입니다.</li>
+                    </ul>
+                    <!-- 개인연금 -->
+                    <div class="con-table-header top">
+                        <h3 class="cont-title none1">개인연금</h3>
+                        <span class="txt-helper">(단위 : 만원)</span>
+                    </div>
+                    <div class="con-table all-center">
+                        <table class="min-w600px" summary="개인연금의 가입년도, 월납입금, 수급개시연도, 수령기간, 연간증가율, 총준비금액(미래가치)정보 제공">
+                            <caption>개인연금 정보 표</caption>
+                            <colgroup>
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                            </colgroup>
+                            <thead>
+                                <tr>						
+                                    <th scope="col">구분</th>
+                                    <th scope="col">가입년도</th>
+                                    <th scope="col">월 납입금</th>
+                                    <th scope="col">수급 개시연도</th>
+                                    <th scope="col">수령기간</th>
+                                    <th scope="col">연간 증가율</th>
+                                    <th scope="col">총 준비금액<span class="smcolor1">(은퇴시가치)</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>본인</td>
+                                    <td>년</td>
+                                    <td>0</td>
+                                    <td>년</td>
+                                    <td>년</td>
+                                    <td>%</td>
+                                    <td class="align-right">0</td>
+                                </tr>
+                                <tr>
+                                    <td>배우자</td>
+                                    <td>년</td>
+                                    <td>0</td>
+                                    <td>년</td>
+                                    <td>년</td>
+                                    <td>%</td>
+                                    <td class="align-right">0</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" class="align-left bold">개인연금합계</td>
+                                    <td class="align-right bold">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>                   
+                    <ul class="txt-list dot gray minus">
+                        <li>연간증가율은 설정된 세후투자수익률입니다.</li>
+                        <li>개인연금은 본인과 배우자의 은퇴시점이 상이할 경우 최종은퇴시점의 가치로 환산합니다.</li>
+                    </ul>
+                    <!-- 은퇴가용자산 -->
+                    <div class="con-table-header top">
+                        <h3 class="cont-title none1">은퇴가용자산</h3>
+                        <span class="txt-helper">(단위 : 만원)</span>
+                    </div>
+                    <div class="con-table all-center">
+                        <table class="min-w600px" summary="은퇴가용자산의 명과 현재평가금액, 월저축 및 투자, 총 준비금액 정보 제공">
+                            <caption>은퇴 가용자산 정보 표</caption>
+                            <colgroup>
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                            </colgroup>
+                            <thead>
+                                <tr>						
+                                    <th scope="col" rowspan="2">자산명</th>
+                                    <th scope="col" rowspan="2">현재평가금액</th>
+                                    <th scope="col" colspan="3">월저축 및 투자</th>
+                                    <th scope="col" rowspan="2">총 준비금액<span class="smcolor1">(은퇴시가치)</span></th>
+                                </tr>
+                                <tr>						
+                                    <!-- <th scope="col">월저축액</th>
+                                    <th scope="col">수익률</th>
+                                    <th scope="col">저축기간</th> -->
+                                    <th scope="col">시작연도</th>
+                                    <th scope="col">수급기간</th>
+                                    <th scope="col">연간 증가율</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td colspan="5" class="align-left bold">
+                                    준비금액 합계
+                                </td>
+                                <td class="align-right bold">0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 연도별 상세내역 -->
+                    <div class="con-table-header top">
+                        <h3 class="cont-title none1">연도별 상세내역</h3>
+                        <span class="txt-helper">(단위 : 만원)</span>
+                    </div>
+                    <div class="con-table all-center">
+                        <table class="min-w600px mb20" summary="연도별 필요자금, 연간저축금액, 투자수익, 자산연출, 부족자금, 이용가능자산  상세 정보 제공">
+                            <caption>연도별 상세내역표 </caption>
+                            <colgroup>
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                                    <col width="*" />
+                            </colgroup>
+                            <thead>
+                                <tr>						
+                                    <th scope="col">연도</th>
+                                    <th scope="col">필요자금</th>
+                                    <th scope="col">연간저축금액</th>
+                                    <th scope="col">투자수익</th>
+                                    <th scope="col">자산연출</th>
+                                    <th scope="col">부족자금</th>
+                                    <th scope="col">이용가능자산</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="6" class="bold">현재 자산현황</td>
+                                    <td class="align-right bold">0 </td>
+                                </tr>
+                                <tr>
+                                    <td>2034</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td class="align-right bold">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- 내용끝 -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
