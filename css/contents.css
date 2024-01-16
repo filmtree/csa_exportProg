@@ -3316,13 +3316,23 @@ input.margin {
   .searchbox-wrap {
     position: relative;
     left: -3.2rem;
-    width: calc(100% + 6.4rem);
+    /* width: calc(100% + 6.4rem); */
   }
   .searchbox {
     border-radius: 0;
   }
   .searchbox .search-label {
     display: none;
+  }
+  .csa-training-search .searchbox .search-label {
+    display: block;
+  }
+  .csa-training-search .searchbox .form-group  {
+    flex-wrap: nowrap;
+  }
+  .csa-training-search .searchbox input {
+    width: 100%;
+    min-width: 100px;
   }
   .online-counseling .mo-hide {
     display: none;

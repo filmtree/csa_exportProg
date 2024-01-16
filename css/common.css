@@ -1967,19 +1967,15 @@ input + .txt-helper {
 		display: none;
 	}
 
-	.bd-list td.no {
-		display: none;
-	}
-
-	.bd-list tbody,
-	.bd-list tr,
-	.bd-list th,
-	.bd-list td {
+.bd-list tbody,
+.bd-list tr,
+.bd-list th,
+.bd-list td {
 		display: block;
 		padding: 0;
 		border: none;
 	}
-
+	
 	.bd-list tr {
 		display: flex;
 		flex-wrap: wrap;
@@ -1999,6 +1995,7 @@ input + .txt-helper {
 		background-image: url('../images/ico/ic_14_lock.svg');
 	}
 
+	.tbl-board td.depart,
 	.tbl-board td.category {
 		margin-bottom: 0.8rem;
 		font-size: 1.2rem;
@@ -2009,6 +2006,19 @@ input + .txt-helper {
 		font-size: 1.2rem;
 		color: var(--color-primary);
 	}
+	
+	.bd-list td.no,
+	.tbl-board td:not(.title):first-of-type {
+		position: absolute !important; 
+		width: 1px; 
+		height: 1px; 
+		padding: 0; 
+		margin: -1px; 
+		border: 0;
+		overflow: hidden; 
+		clip: rect(1px, 1px, 1px, 1px); 
+		clip-path: circle(0);
+	}
 
 	.tbl-board td.title ~ td {
 		position: relative;
@@ -2017,12 +2027,18 @@ input + .txt-helper {
 		font-size: 1.2rem;
 	}
 
+	.tbl-board td.view {
+		position: relative;
+		/* margin-right: 0.8rem;
+		padding-right: 0.9rem; */
+		font-size: 1.2rem;
+	}
+
 	.tbl-board td.title ~ td::after {
 		content: '';
 		position: absolute;
-		top: 50%;
+		top: 2px;
 		right: 0;
-		transform: translateY(-50%);
 		width: 1px;
 		height: 16px;
 		background-color: var(--ui-colr3);
@@ -2105,7 +2121,7 @@ input + .txt-helper {
 	input[type='password'],
 	input[type='file'] {
 		height: 4rem;
-		padding: 0.9rem 1.6rem;
+		padding: 0.9rem .8rem;
 	}
 
 	textarea {
