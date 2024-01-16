@@ -168,19 +168,25 @@
               <div class="cont-head">
                 <h3 class="cont-title">CSA 이력 조회</h3>
               </div>
-              <div class="searchbox-wrap csa-training-search">
+              <!-- s: Search Box -->
+              <div class="searchbox-wrap opt-name-registration">
                 <div class="searchbox">
                   <div class="form-group">
-                    <label class="search-label" for="csaName">성명</label>
-                    <input type="text" placeholder="" class="inp-content w-flexible" id="csaName" />
-                    <label class="search-label" id="csaIdNumber">주민등록번호</label>
-                    <input type="text" placeholder="" class="inp-content w-flexible" aria-labelledby="csaIdNumber" title="주민등록번호 앞자리" />
-                    <span class="inp-split">-</span>
-                    <input type="text" placeholder="" class="inp-content w-flexible" aria-labelledby="csaIdNumber" title="주민등록번호 뒷자리" />
+
+                    <label class="search-label" for="searchName">성명</label>
+                    <input type="text" placeholder="" class="inp-content w-flexible" id="searchName" />
+
+                    <label class="search-label" id="registNumber">주민등록번호</label>
+                    <input type="text" placeholder="" class="inp-content w-flexible" aria-labelledby="registNumber" title="앞번호 6자리" />
+                    <span class="inp-split" aria-hidden="true">-</span>
+                    <input type="text" placeholder="" class="inp-content w-flexible" aria-labelledby="registNumber" title="뒷번호 7자리" />
+
                     <button type="button" class="button-primary btn-search min-w80px">조회</button>
+
                   </div>
                 </div>
               </div>
+              <!-- e: Search Box -->              
             </div>
             <!-- ========  e: Tab Panel 1 ======== -->
 
