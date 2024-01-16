@@ -1,8 +1,8 @@
 body,input,textarea,select,table,button {
-	font-family: var(--font-base);
-	font-size: var(--font-base-size);
 	color: var(--color-base);
 	font-weight: 400;
+	font-size: var(--font-base-size);
+	font-family: var(--font-base);
 	letter-spacing: -0.05em;
 }
 
@@ -33,41 +33,41 @@ picture img {
 /* ellipsis */
 .ellipsis {
 	overflow: hidden;
-	white-space: nowrap;
 	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .ellipsis-multi-2 {
-	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	word-wrap: break-word;
-	text-overflow: ellipsis;
-	overflow: hidden;
+	display: -webkit-box;
 	-webkit-line-clamp: 2;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .ellipsis-multi-3 {
-	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	word-wrap: break-word;
-	text-overflow: ellipsis;
-	overflow: hidden;
+	display: -webkit-box;
 	-webkit-line-clamp: 3;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .ellipsis-multi-4 {
-	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	word-wrap: break-word;
-	text-overflow: ellipsis;
-	overflow: hidden;
+	display: -webkit-box;
 	-webkit-line-clamp: 4;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .clearfix::after {
-	content: '';
 	display: block;
 	clear: both;
+	content: '';
 }
 
 /* display */
@@ -76,26 +76,26 @@ picture img {
 }
 
 .sr-only {
-	position: absolute !important;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	border: 0;
-	overflow: hidden;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 	-webkit-clip-path: circle(0); /* 구버전 -webkit-브라우저 */
 	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
 	clip-path: circle(0);
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
 }
 
 .blind {
 	display: block;
 	width: 0;
 	height: 0;
-	line-height: 0;
-	font-size: 0;
 	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
 	text-indent: 100%;
 	white-space: nowrap;
 }
@@ -103,45 +103,45 @@ picture img {
 caption,
 legend,
 .hidden {
-	position: absolute;
-	width: 1px !important;
-	height: 1px !important;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	overflow: hidden;
-	white-space: nowrap;
-	z-index: -1;
 	clip: rect(1px, 1px, 1px, 1px);
 	-webkit-clip-path: inset(100%);
+	position: absolute;
+	z-index: -1;
 	clip-path: inset(100%);
+	margin: 0;
+	border: 0;
+	padding: 0;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 /* ##align */
 /* Left -> RIght */
 .al { 
-	text-align: left !important; 
-	justify-content: flex-start !important;
+	justify-content: flex-start !important; 
+	text-align: left !important;
 }
-.ar { 
-	text-align: right !important;
+.ar {
 	justify-content: flex-end !important; 
+	text-align: right !important; 
 }
 .ac { 
-	text-align: center !important; 
 	justify-content: center !important; 
+	text-align: center !important; 
 }
-.at { 
-	vertical-align: top !important;
+.at {
 	align-items: flex-start !important; 
+	vertical-align: top !important; 
 }
-.am { 
-	vertical-align: middle !important;
+.am {
 	align-items: center !important; 
+	vertical-align: middle !important; 
 }
 .ab { 
-	vertical-align: bottom !important; 
-	align-items: flex-end !important;
+	align-items: flex-end !important; 
+	vertical-align: bottom !important;
 }
 
 /* Top->Bottom */
@@ -727,11 +727,11 @@ legend,
 
 .ic-only {
 	display: inline-block;
-	width: 2rem;
-	height: 2rem;
 	vertical-align: middle;
 	background-position: center;
 	background-repeat: no-repeat;
+	width: 2rem;
+	height: 2rem;
 	overflow: hidden;
 	text-indent: 100%;
 	white-space: nowrap;
@@ -799,17 +799,17 @@ legend,
 }
 
 .ic-only.question {
+	margin-top: -6px;
+	margin-left: 10px;
+	background-image: url('../images/ico/ic_question_tooltip.svg');
 	width: 24px;
 	height: 24px;
-	background-image: url('../images/ico/ic_question_tooltip.svg');
-	margin-left: 10px;
-	margin-top: -6px;
 }
 
 .ic-only.question.small {
+	background-size: cover;
 	width: 14px;
 	height: 14px;
-	background-size: cover;
 }
 
 /* ======================================= Form UI ======================================= */
@@ -819,36 +819,36 @@ input[type='text'],
 input[type='password'],
 input[type='number'],
 input[type='file'] {
-	height: 4.8rem;
 	border: 1px solid var(--ui-colr1);
-	padding: 1.1rem 1.6rem;
 	background-color: #fff;
+	padding: 1.1rem 1.6rem;
+	height: 4.8rem;
 	color: var(--font-base);
 }
 
 textarea {
+	border: 1px solid var(--ui-colr1);
+	background: #fff;
+	padding: 2.4rem;
 	width: 100%;
 	min-height: 10rem;
 	line-height: 1.6;
-	padding: 2.4rem;
-	border: 1px solid var(--ui-colr1);
-	background: #fff;
 }
 
 select {
-	height: 4.8rem;
-	padding: 1.1rem 4rem 1.1rem 1.6rem;
-	color: var(--color-gray5);
 	border: 1px solid var(--ui-colr1);
 	background: #fff url('../images/ico/ic_10_filldarr_default.svg') no-repeat right 1.5rem center / 1rem auto;
+	padding: 1.1rem 4rem 1.1rem 1.6rem;
+	height: 4.8rem;
+	color: var(--color-gray5);
 }
 
 select[multiple] {
-	height: auto;
-	padding: 1.1rem 0.8rem 1.1rem 1.6rem;
-	line-height: 1.5;
 	border: 1px solid var(--ui-colr1);
 	background: none;
+	padding: 1.1rem 0.8rem 1.1rem 1.6rem;
+	height: auto;
+	line-height: 1.5;
 }
 
 select option {
@@ -870,9 +870,9 @@ textarea:focus {
 
 select:focus {
 	outline: none;
-	color: var(--color-base);
 	border-color: var(--color-primary);
 	background-image: url('../images/ico/ic_10_filldarr_active.svg');
+	color: var(--color-base);
 }
 
 select[multiple]:focus {
@@ -885,9 +885,9 @@ input[type='number']:disabled,
 input[type='file']:disabled,
 textarea:disabled,
 select:disabled {
+	border-color: var(--ui-colr2);
 	background-color: var(--ui-colr4);
 	color: var(--ui-colr1);
-	border-color: var(--ui-colr2);
 }
 
 input[type='text'][readonly],
@@ -910,25 +910,25 @@ input[type='checkbox']:checked {
 .inp-radio {
 	display: inline-block;
 	position: relative;
-	min-height: 2.4rem;
-	min-width: 2.4rem;
-	line-height: 1.5;
-	padding-left: 2.4rem;
 	cursor: pointer;
+	padding-left: 2.4rem;
+	min-width: 2.4rem;
+	min-height: 2.4rem;
+	line-height: 1.5;
 }
 
 .inp-radio input {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 2.4rem;
-	height: 2.4rem;
-	background-color: #fff;
-	border: 1px solid var(--ui-colr1);
-	border-radius: 50%;
 	-webkit-appearance: none;
+	position: absolute;
+	top: 0;
+	left: 0;
 	appearance: none;
 	cursor: pointer;
+	border: 1px solid var(--ui-colr1);
+	border-radius: 50%;
+	background-color: #fff;
+	width: 2.4rem;
+	height: 2.4rem;
 }
 
 .inp-radio input + span {
@@ -942,9 +942,9 @@ input[type='checkbox']:checked {
 }
 
 .inp-radio input:disabled {
+	cursor: no-drop;
 	border-color: var(--ui-colr2);
 	background-color: var(--ui-colr4);
-	cursor: no-drop;
 }
 
 .inp-radio input:disabled + span {
@@ -966,9 +966,9 @@ input[type='checkbox']:checked {
 }
 
 .inp-radio input[readonly] {
+	cursor: default;
 	border-color: var(--ui-colr2);
 	background-color: var(--ui-colr4);
-	cursor: default;
 }
 
 .inp-radio input[readonly] + span {
@@ -979,27 +979,27 @@ input[type='checkbox']:checked {
 .inp-checkbox {
 	display: inline-block;
 	position: relative;
+	vertical-align: middle;
+	cursor: pointer;
+	padding-right: 0.8rem;
+	padding-left: 2.4rem;
 	min-width: 2.4rem;
 	min-height: 2.4rem;
 	line-height: 1.5;
-	padding-left: 2.4rem;
-	padding-right: 0.8rem;
-	vertical-align: middle;
-	cursor: pointer;
 }
 
 .inp-checkbox input {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 2.4rem;
-	height: 2.4rem;
-	appearance: none;
 	-webkit-appearance: none;
-	background-color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	appearance: none;
+	cursor: pointer;
 	border: 1px solid var(--ui-colr1);
 	border-radius: 2px 2px;
-	cursor: pointer;
+	background-color: #fff;
+	width: 2.4rem;
+	height: 2.4rem;
 }
 
 .inp-checkbox input + span {
@@ -1009,9 +1009,9 @@ input[type='checkbox']:checked {
 }
 
 .inp-checkbox input:disabled {
+	cursor: no-drop;
 	border-color: var(--ui-colr2);
 	background-color: var(--ui-colr4);
-	cursor: no-drop;
 }
 
 .inp-checkbox input:disabled + span {
@@ -1019,19 +1019,19 @@ input[type='checkbox']:checked {
 }
 
 .inp-checkbox input:checked {
-	background-color: var(--color-primary);
 	border-color: var(--color-primary);
+	background-color: var(--color-primary);
 }
 
 .inp-checkbox input:checked:after {
 	display: block;
-	content: '';
 	position: absolute;
-	left: 0;
 	top: 0;
+	left: 0;
+	background: url('../images/ico/ic_16b_check_white.svg') no-repeat center center;
 	width: 2.2rem;
 	height: 2.2rem;
-	background: url('../images/ico/ic_16b_check_white.svg') no-repeat center center;
+	content: '';
 }
 
 .inp-checkbox input:disabled:checked {
@@ -1048,9 +1048,9 @@ input[type='checkbox']:checked {
 }
 
 .inp-checkbox input[readonly] {
+	cursor: default;
 	border-color: var(--ui-colr2);
 	background-color: var(--ui-colr4);
-	cursor: default;
 }
 
 .inp-checkbox input[readonly] + span {
@@ -1061,17 +1061,17 @@ input[type='checkbox']:checked {
 button,
 *[class*='button-'] {
 	display: inline-block;
-	background: #fff;
-	white-space: nowrap;
-	text-align: center;
 	vertical-align: middle;
+	background: #fff;
+	text-align: center;
+	white-space: nowrap;
 }
 
 *[class*='button-'] {
-	height: 4.8rem;
-	padding: 1.5rem 1.6rem;
 	border: 1px solid var(--color-primary);
 	background-color: var(--color-primary);
+	padding: 1.5rem 1.6rem;
+	height: 4.8rem;
 	color: #fff;
 	font-weight: 500;
 	font-size: 1.6rem;
@@ -1088,14 +1088,14 @@ button,
 }
 
 .button-secondary {
-	background-color: #fff;
 	border: 1px solid var(--color-primary);
+	background-color: #fff;
 	color: var(--color-primary);
 }
 
 .button-tertiary {
-	background-color: #fff;
 	border: 1px solid var(--ui-colr1);
+	background-color: #fff;
 	color: var(--color-base);
 }
 
@@ -1104,8 +1104,8 @@ button,
 }
 
 .button-fourth {
-	background-color: var(--color-gray2);
 	border: 1px solid var(--color-gray2);
+	background-color: var(--color-gray2);
 	color: #fff;
 }
 
@@ -1115,8 +1115,8 @@ button,
 }
 
 .button-fifth {
-	background-color: #fff;
 	border: 1px solid var(--color-base);
+	background-color: #fff;
 	color: var(--color-base);
 }
 
@@ -1125,8 +1125,8 @@ button,
 }
 
 .button-sixth {
-	background-color: var(--color-gray6);
 	border: 1px var(--color-gray6) solid;
+	background-color: var(--color-gray6);
 }
 
 .button-sixth:hover,
@@ -1135,10 +1135,10 @@ button,
 }
 
 .button-text {
-	height: auto;
-	padding: 0.4rem 0;
 	border: none;
 	background-color: transparent;
+	padding: 0.4rem 0;
+	height: auto;
 	color: var(--color-base);
 	font-weight: 400;
 }
@@ -1149,13 +1149,13 @@ button,
 }
 
 .button-link {
-	height: auto;
-	padding: 0.4rem 0;
 	border: none;
 	background-color: transparent;
+	padding: 0.4rem 0;
+	height: auto;
 	color: var(--color-gray4);
-	font-size: 1.5rem;
 	font-weight: 400;
+	font-size: 1.5rem;
 }
 
 .button-link > span {
@@ -1173,8 +1173,8 @@ button,
 }
 
 .button-green {
-	background-color: var(--color-secondary);
 	border: 0;
+	background-color: var(--color-secondary);
 }
 
 .button-green:hover {
@@ -1182,8 +1182,8 @@ button,
 }
 
 .button-orange {
-	background-color: var(--color-point);
 	border: 0;
+	background-color: var(--color-point);
 }
 
 .button-orange:hover {
@@ -1191,8 +1191,8 @@ button,
 }
 
 .button-light-orange {
-	background-color: var(--color-point-light2);
 	border: 0;
+	background-color: var(--color-point-light2);
 }
 
 .button-light-orange:hover {
@@ -1205,27 +1205,27 @@ button,
 }
 
 *[class*='button-']:disabled {
-	background-color: var(--ui-colr2);
 	border-color: var(--ui-colr2);
+	background-color: var(--ui-colr2);
 }
 
 .-lg {
+	padding: 2.3rem 1.6rem;
 	height: 6.4rem;
 	font-size: 1.8rem;
-	padding: 2.3rem 1.6rem;
 }
 
 .-md {
+	padding: 1.9rem 1.6rem;
 	height: 5.6rem;
 	font-size: 1.7rem;
-	padding: 1.9rem 1.6rem;
 }
 
 .-sm {
-	height: 3.6rem;
-	font-size: 1.5rem;
-	font-weight: 400;
 	padding: 0.9rem 1.6rem;
+	height: 3.6rem;
+	font-weight: 400;
+	font-size: 1.5rem;
 }
 
 .round {
@@ -1258,8 +1258,8 @@ button,
 
 /* .type-row 가이드 라디오버튼 그룹 세로 정렬에 사용중 */
 .form-group.type-row > * + * {
-	margin-left: 0;
 	margin-top: 1.6rem;
+	margin-left: 0;
 }
 
 .form-group.type-row.multiple > input:first-of-type {
@@ -1268,9 +1268,9 @@ button,
 
 .mark-required {
 	display: inline-block;
-	font-size: 0;
-	margin: 0 3px;
 	vertical-align: top;
+	margin: 0 3px;
+	font-size: 0;
 }
 
 .mark-required::before {
@@ -1281,16 +1281,16 @@ button,
 
 .field {
 	display: flex;
-	padding: 2.4rem 0;
 	border-bottom: 1px solid var(--ui-colr3);
+	padding: 2.4rem 0;
 }
 
 .field > .field-label {
-	width: 18rem;
-	padding: 1.1rem 0;
 	margin-right: 2.4rem;
-	font-weight: 400;
+	padding: 1.1rem 0;
+	width: 18rem;
 	color: var(--color-gray2);
+	font-weight: 400;
 }
 
 .field > .text-value {
@@ -1306,8 +1306,8 @@ button,
 }
 
 .form-group-controls [class*='button-'] {
-	margin-left: 0.8rem;
 	flex-shrink: 0;
+	margin-left: 0.8rem;
 }
 
 .form-group-email {
@@ -1349,8 +1349,8 @@ button,
 }
 
 .form-group-clear {
-	position: relative;
 	display: inline-flex;
+	position: relative;
 	align-items: center;
 }
 
@@ -1360,15 +1360,15 @@ button,
 
 .form-group-clear .text-clear-btn {
 	position: absolute;
-	right: 1.6rem;
 	top: 50%;
+	right: 1.6rem;
 	transform: translateY(-50%);
+	background: url('../images/ico/ic_24_input_del.svg') no-repeat left center;
 	width: 2.4rem;
 	height: 2.4rem;
-	text-indent: 100%;
 	overflow: hidden;
+	text-indent: 100%;
 	white-space: nowrap;
-	background: url('../images/ico/ic_24_input_del.svg') no-repeat left center;
 }
 
 .form-group-clear.full {
@@ -1419,21 +1419,21 @@ button,
 }
 
 .tbl-board th {
-	padding: 1.6rem;
-	line-height: 1.6;
-	text-align: center;
-	font-weight: 400;
-	color: var(--color-gray2);
 	border-bottom: 1px solid var(--ui-colr3);
 	background-color: var(--ui-colr4);
+	padding: 1.6rem;
+	color: var(--color-gray2);
+	font-weight: 400;
+	line-height: 1.6;
+	text-align: center;
 }
 
 .tbl-board td {
+	border-bottom: 1px solid var(--ui-colr3);
 	padding: 1.6rem;
+	color: var(--color-base);
 	line-height: 1.6;
 	text-align: center;
-	color: var(--color-base);
-	border-bottom: 1px solid var(--ui-colr3);
 }
 
 .tbl-board td.data-none {
@@ -1445,17 +1445,17 @@ button,
 }
 
 .tbl-board .title {
+	overflow: hidden;
 	text-align: left;
 	text-overflow: ellipsis;
-	overflow: hidden;
 	white-space: nowrap;
 }
 
 .con-table {
 	position: relative;
-	overflow-x: auto;
 	margin: 2.4rem 0;
 	border-top: 1px solid var(--color-gray2);
+	overflow-x: auto;
 }
 
 .con-table:last-child {
@@ -1478,21 +1478,21 @@ button,
 
 .con-table th,
 .con-table td {
-	padding: .8rem 1.6rem;
 	border-right: 1px solid var(--ui-colr3);
 	border-bottom: 1px solid var(--ui-colr3);
-	overflow-wrap: break-word;
+	padding: .8rem 1.6rem;
 	height: 5.8rem;
+	overflow-wrap: break-word;
 }
 
 .con-table thead th,
 .con-table tbody th,
 .con-table tfoot th {
+	vertical-align: middle;
 	background-color: var(--ui-colr4);
 	color: var(--color-gray2);
 	font-weight: 400;
 	text-align: center;
-	vertical-align: middle;
 }
 
 .con-table thead + tbody th {
@@ -1578,15 +1578,15 @@ button,
 
 .con-table .ic-handle {
 	display: block;
-	width: 50px;
-	height: 50px;
+	display: none;
+	position: absolute;
+	top: 5.5rem;
+	right: 1rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
 	background: url('../images/ico/ic_hand.png') center center / cover no-repeat;
-	position: absolute;
-	right: 1rem;
-	top: 5.5rem;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	display: none;
+	width: 50px;
+	height: 50px;
 }
 
 .con-table.table-scrolled .ic-handle {
@@ -1602,17 +1602,17 @@ button,
 }
 
 .con-table-header {
-	padding-bottom: 1.6rem;
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 1.6rem;
 }
 
 .con-table-header .sm-title {
+	color: var(--color-base);
+	font-weight: 500;
 	font-size: 1.5rem;
 	line-height: 1.6;
-	font-weight: 500;
-	color: var(--color-base);
 }
 
 .con-table-header:first-child {
@@ -1652,18 +1652,18 @@ button,
 }
 
 .grid-result-bottom {
+	display: flex;
 	position: relative;
-	margin-top: -1px;	
-	padding: .8rem 1.6rem;
-	min-height: 5.7rem;
-	background-color: #F9FAFB;
+	align-items: center;	;
+	z-index: 10;
+	margin-top: -1px;
 	border:0;
 	border-top: 1px solid #999;
 	border-bottom: 1px solid #e5e5e5;
-	font-weight: var(--font-Noto-medium);	;
-	z-index: 10;
-	display: flex;
-	align-items: center;
+	background-color: #F9FAFB;	
+	padding: .8rem 1.6rem;
+	min-height: 5.7rem;
+	font-weight: var(--font-Noto-medium);
 }
 
 .grid-notice-bottom {
@@ -1679,55 +1679,55 @@ button,
 }
 
 .grid-notice-bottom .grid-notice-title {
+	color: var(--color-gray6);
+	font-weight: var(--font-Noto-medium);
 	font-size: 1.5rem;
 	line-height: 2.4rem;
-	font-weight: var(--font-Noto-medium);
-	color: var(--color-gray6);
 }
 
 .grid-note15 {
-	font-size: 1.5rem;
-	font-weight: var(--font-Noto-regular);
-	line-height: 2.4rem;
 	color: var(--color-gray6);
+	font-weight: var(--font-Noto-regular);
+	font-size: 1.5rem;
+	line-height: 2.4rem;
 }
 
 .grid-note15-bold {
-	font-size: 1.5rem;
-	font-weight: var(--font-Noto-medium);
-	line-height: 2.4rem;
 	color: var(--color-gray6);
+	font-weight: var(--font-Noto-medium);
+	font-size: 1.5rem;
+	line-height: 2.4rem;
 }
 
 .grid-note16 {
-	font-size: 1.6rem;
-	font-weight: var(--font-Noto-regular);
-	line-height: 2.4rem;
 	color: var(--color-gray6);
+	font-weight: var(--font-Noto-regular);
+	font-size: 1.6rem;
+	line-height: 2.4rem;
 }
 
 .grid-note17 {
-	font-size: 1.6rem;
-	font-weight: var(--font-Noto-regular);
-	line-height: 2.4rem;
 	color: var(--color-gray6);
+	font-weight: var(--font-Noto-regular);
+	font-size: 1.6rem;
+	line-height: 2.4rem;
 }
 
 .grid-note18 {
-	font-size: 1.6rem;
-	font-weight: var(--font-Noto-regular);
-	line-height: 2.4rem;
 	color: var(--color-gray6);
+	font-weight: var(--font-Noto-regular);
+	font-size: 1.6rem;
+	line-height: 2.4rem;
 }
 
 /* ======================================= Board ======================================= */
 
 .bd-view .view-title {
 	width: 100%;
-	text-align: center;
+	color: var(--color-gray2);
 	font-size: 2.4rem;
 	line-height: 1.5;
-	color: var(--color-gray2);
+	text-align: center;
 }
 
 .data-info {
@@ -1740,19 +1740,19 @@ button,
 
 .data-info .data-set-group .data-set + .data-set {
 	position: relative;
-	padding-left: 1.7rem;
 	margin-left: 1.6rem;
+	padding-left: 1.7rem;
 }
 
 .data-info .data-set-group .data-set + .data-set::before {
-	content: '';
 	position: absolute;
 	top: 50%;
 	left: 0;
 	transform: translateY(-50%);
+	background-color: var(--ui-colr3);
 	width: 1px;
 	height: 16px;
-	background-color: var(--ui-colr3);
+	content: '';
 }
 
 .board-bottom {
@@ -1765,8 +1765,8 @@ button,
 }
 
 .board-bottom .btn-group button {
-	width: 12rem;
 	margin-left: 1.6rem;
+	width: 12rem;
 }
 
 /* ======================================= Board - Div ======================================= */
@@ -1777,8 +1777,8 @@ button,
 }
 
 .bd-data .bd-col {
-	flex: 1;
 	display: flex;
+	flex: 1;
 	border-bottom: 1px solid var(--ui-colr3);
 }
 
@@ -1787,13 +1787,13 @@ button,
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	width: 50%;
-	padding: 1.6rem;
-	line-height: 1.6;
-	color: var(--color-gray2);
-	background-color: var(--ui-colr4);
 	vertical-align: middle;
 	border-left: 1px solid var(--ui-colr3);
+	background-color: var(--ui-colr4);
+	padding: 1.6rem;
+	width: 50%;
+	color: var(--color-gray2);
+	line-height: 1.6;
 }
 
 .bd-data .bd-col.w100 .th {
@@ -1803,9 +1803,9 @@ button,
 .bd-data .bd-col .td {
 	display: flex;
 	align-items: center;
-	width: 50%;
-	padding: 1.6rem;
 	border-left: 1px solid var(--ui-colr3);
+	padding: 1.6rem;
+	width: 50%;
 }
 
 .bd-data .bd-col:first-child .th {
@@ -1813,17 +1813,17 @@ button,
 }
 
 .bd-data.ac .bd-col .td {
-	text-align: center;
 	justify-content: center;
+	text-align: center;
 }
 
 .bd-data .bd-col .leaf-cell {
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	width: 100%;
-	padding: 1.6rem;
+	align-items: center;
 	border: 0 ;
+	padding: 1.6rem;
+	width: 100%;
 }
 
 .bd-data .bd-col .leaf-cell .form-group-txt {
@@ -1883,14 +1883,14 @@ button,
 }
 
 .txt-list.dot > li:before {
-	content: '';
-	width: 0.3rem;
-	height: 0.3rem;
 	position: absolute;
 	top: 1rem;
 	left: 0;
-	background-color: var(--color-base);
 	border-radius: 50%;
+	background-color: var(--color-base);
+	width: 0.3rem;
+	height: 0.3rem;
+	content: '';
 }
 
 .txt-list.dot.fs17 > li:before {
@@ -1903,23 +1903,23 @@ button,
 }
 
 .txt-list-contdesc > li {
+	margin-bottom: .8rem;
 	font-size: 1.7rem;
 	line-height: 2.7rem;
-	margin-bottom: .8rem;
 }
 
 .txt-list-gwalho {
   counter-reset: parenthesis;
-  font-size: 1.4rem;
   color: var(--color-gray6);
+  font-size: 1.4rem;
   line-height: 1.7;
 }
 
 .txt-list-gwalho li::before {
   display: inline-block;
   counter-increment: parenthesis;
-  content: counter(parenthesis) ")";
   margin-right: 0.4rem;
+  content: counter(parenthesis) ")";
 }
 
 .txt-list .txt-list {
@@ -1931,18 +1931,18 @@ button,
 
 .txt-helper-title {
 	display: inline-block;
+	vertical-align: middle;
+	color: var(--color-gray6);
 	font-size: 1.6rem;
 	line-height: 1.6;
-	color: var(--color-gray6);
-	vertical-align: middle;
 }
 
 .txt-helper {
 	display: inline-block;
+	vertical-align: middle;
+	color: var(--color-gray4);
 	font-size: 1.5rem;
 	line-height: 1.6;
-	color: var(--color-gray4);
-	vertical-align: middle;
 }
 
 input + .txt-helper {
@@ -1972,27 +1972,27 @@ input + .txt-helper {
 .bd-list th,
 .bd-list td {
 		display: block;
-		padding: 0;
 		border: none;
+		padding: 0;
 	}
 	
 	.bd-list tr {
 		display: flex;
 		flex-wrap: wrap;
-		padding: 1.6rem 0;
 		border-bottom: 1px solid var(--ui-colr3);
+		padding: 1.6rem 0;
 	}
 
 	.tbl-board td.title {
-		width: 100%;
 		margin-bottom: 0.8rem;
+		width: 100%;
 		font-size: 1.4rem;
 	}
 
 	.tbl-board td.title .ic-secret {
+		background-image: url('../images/ico/ic_14_lock.svg');
 		width: 1.4rem;
 		height: 1.4rem;
-		background-image: url('../images/ico/ic_14_lock.svg');
 	}
 
 	.tbl-board td.depart,
@@ -2003,21 +2003,21 @@ input + .txt-helper {
 
 	.tbl-board td.above {
 		margin-bottom: 0.8rem;
-		font-size: 1.2rem;
 		color: var(--color-primary);
+		font-size: 1.2rem;
 	}
 	
 	.bd-list td.no,
-	.tbl-board td:not(.title):first-of-type {
+	.tbl-board td:not(.title):first-of-type { 
+		clip: rect(1px, 1px, 1px, 1px);
 		position: absolute !important; 
-		width: 1px; 
-		height: 1px; 
-		padding: 0; 
+		clip-path: circle(0); 
 		margin: -1px; 
-		border: 0;
-		overflow: hidden; 
-		clip: rect(1px, 1px, 1px, 1px); 
-		clip-path: circle(0);
+		border: 0; 
+		padding: 0; 
+		width: 1px; 
+		height: 1px;
+		overflow: hidden;
 	}
 
 	.tbl-board td.title ~ td {
@@ -2035,13 +2035,13 @@ input + .txt-helper {
 	}
 
 	.tbl-board td.title ~ td::after {
-		content: '';
 		position: absolute;
 		top: 2px;
 		right: 0;
+		background-color: var(--ui-colr3);
 		width: 1px;
 		height: 16px;
-		background-color: var(--ui-colr3);
+		content: '';
 	}
 
 	.tbl-board td:last-child::after {
@@ -2057,14 +2057,14 @@ input + .txt-helper {
 	}
 
 	.tbl-board .title {
-		display: -webkit-box;
 		word-wrap: break-word;
-		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
-		line-height: 1.6;
+		display: -webkit-box;
 		max-height: 3.2em;
-		word-break: break-all;
+		-webkit-line-clamp: 2;
+		line-height: 1.6;
 		white-space: initial;
+		word-break: break-all;
 	}
 
 	/* ##board-div */
@@ -2073,9 +2073,9 @@ input + .txt-helper {
 	}
 
 	.bd-data .bd-col .th {
+		border-left: 0;
 		width: 25%;
 		min-width: 10rem;
-		border-left: 0;
 	}
 
 }
@@ -2088,23 +2088,23 @@ input + .txt-helper {
 	}
 	
 	.-lg {
+		padding: 1.8rem 1.6rem;
 		height: 5.4rem;
 		font-size: 1.6rem;
-		padding: 1.8rem 1.6rem;
 	}
 
 	.-md {
+		padding: 1.6rem 1.6rem;
 		height: 4.8rem;
 		font-size: 1.5rem;
-		padding: 1.6rem 1.6rem;
 	}
 
 	.-sm {
 		display: inline-flex;
 		align-items: center;
+		padding: 0.6rem 1.6rem !important;
 		height: 3.2rem !important;
 		font-size: 1.3rem !important;
-		padding: 0.6rem 1.6rem !important;
 	}
 
 	.round {
@@ -2120,8 +2120,8 @@ input + .txt-helper {
 	input[type='text'],
 	input[type='password'],
 	input[type='file'] {
-		height: 4rem;
 		padding: 0.9rem .8rem;
+		height: 4rem;
 	}
 
 	textarea {
@@ -2130,9 +2130,9 @@ input + .txt-helper {
 
 	.inp-radio,
 	.inp-checkbox {
+		padding-left: 2rem;
 		min-width: 2rem;
 		min-height: 2rem;
-		padding-left: 2rem;
 	}
 
 	.inp-checkbox input,
@@ -2142,9 +2142,9 @@ input + .txt-helper {
 	}
 
 	.inp-checkbox input:checked:after {
+		background-image: url('../images/ico/ic_12b_check_white.svg');
 		width: 1.8rem;
 		height: 1.8rem;
-		background-image: url('../images/ico/ic_12b_check_white.svg');
 	}
 
 	.inp-checkbox input:disabled:checked:after {
@@ -2156,9 +2156,9 @@ input + .txt-helper {
 	}
 
 	select {
-		height: 4rem;
-		padding: 0.7rem 4rem 0.8rem 1.6rem;
 		background-image: url('../images/ico/ic_14_filldarr_default.svg');
+		padding: 0.7rem 4rem 0.8rem 1.6rem;
+		height: 4rem;
 	}
 
 	select:focus {
@@ -2167,20 +2167,20 @@ input + .txt-helper {
 
 	/* ##button */
 	*[class*='button-'] {
-		height: 4rem;
 		padding: 1.2rem 1.6rem;
+		height: 4rem;
 		font-size: 1.4rem;
 	}
 
 	.button-text {
-		height: auto;
 		padding: 0.6rem 0;
+		height: auto;
 		font-size: 1.4rem;
 	}
 
 	.button-link {
-		height: auto;
 		padding: 0.6rem 0;
+		height: auto;
 		font-size: 1.3rem;
 	}
 
@@ -2191,9 +2191,9 @@ input + .txt-helper {
 
 	/* ##icon */
 	.ic-only.ic-map {
+		background-image: url('../images/ico/ic_16_map_default.svg');
 		width: 1.6rem;
 		height: 1.6rem;
-		background-image: url('../images/ico/ic_16_map_default.svg');
 	}
 
 	.ic-only.ic-info-primary {
@@ -2201,10 +2201,10 @@ input + .txt-helper {
 	}
 
 	.ic-only.question {
+		margin-left: 8px;
+		background-size: cover;
 		width: 16px;
 		height: 16px;
-		background-size: cover;
-		margin-left: 8px;
 	}
 
 	/* ##list-style */
@@ -2246,8 +2246,8 @@ input + .txt-helper {
 	}
 
 	.form-group-email .email-domain-opt {
-		width: 100%;
 		margin: 0.8rem 0 0;
+		width: 100%;
 	}
 
 	.form-group-tel [class*='tel-'] {
@@ -2276,13 +2276,13 @@ input + .txt-helper {
 	}
 
 	.data-info .data-set-group .data-set + .data-set {
-		padding-left: 0.9rem;
 		margin-left: 0.8rem;
+		padding-left: 0.9rem;
 	}
 
 	.board-bottom .btn-group button {
-		width: 8rem;
 		margin-left: 0.8rem;
+		width: 8rem;
 	}
 
 	/* ##board-div */
@@ -2292,8 +2292,8 @@ input + .txt-helper {
 	}
 
 	.bd-data .bd-col .td {
-		width: calc(100% - 25%);
 		padding: 0.8rem;
+		width: calc(100% - 25%);
 		font-size: 1.4rem;
 	}
 
