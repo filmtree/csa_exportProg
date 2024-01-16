@@ -195,22 +195,34 @@
   min-width: var(--grid-minWidth);
 }
 
+/* Grid Scroll Width */
+
+.con-table table,
+.con-table .board-wrap {
+  min-width: 90rem;
+}
+
+.con-table.sm table,
 .con-table.sm .board-wrap {
   min-width: 36rem;
 }
 
+.con-table.md table,
 .con-table.md .board-wrap {
   min-width: 48rem;
 }
 
+.con-table.lg table,
 .con-table.lg .board-wrap {
   min-width: 64rem;
 }
 
+.con-table.xl table,
 .con-table.xl .board-wrap {
   min-width: 76rem;
 }
 
+.con-table.wide table,
 .con-table.wide .board-wrap {
   min-width: 110rem;
 }
@@ -397,6 +409,8 @@
   margin-left: 0;
   margin-top: 0.8rem;
 }
+
+/* CSA 교육 및 시험 */
 
 
 
@@ -878,29 +892,27 @@
   text-align: center;
 }
 
-.circled-digit-20 {
+.circled-digit-24 {
   position: relative;
-  width: 2rem;
-  height: 2rem;
-  margin-left: -.2rem;
-  margin-right: 0.8rem;
-  margin-top: -.4rem;
-  font-size: 1.6rem;
-  font-weight: var(--font-Noto-regular);
-  text-align: center;
-  letter-spacing: -.2rem;
+  padding-left: 3rem;
 }
 
-.circled-digit-20::before {
-  content:"";
+.circled-digit-24 .cont-desc {
+  line-height: 2rem;
+}
+
+.circled-digit-24::before {
+  content: attr(data-list);
   position: absolute;
-  top: .3rem;
-  left: .1rem;
-  width: 100%;
-  height: 100%;
-  line-height: 1.7rem;
+  top: 2px;
+  left: 0;
+  width: 2.4rem;
+  height: 2.4rem;
   border: 1px solid var(--ui-colr1);
   border-radius: 50%;
+  text-align: center;
+  font-weight: var(--font-Noto-regular);
+  line-height: 2rem;
 }
 
 .imgbox.bg-none {
@@ -4251,6 +4263,26 @@ input.margin {
     font-size: 1.4rem;
     font-weight: 500;
   }
+
+  .circled-digit-24 {
+    position: relative;
+    padding-left: 2.4rem;
+  }
+  
+  .circled-digit-24::before {
+    content: attr(data-list);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2.1rem;
+    height: 2.1rem;
+    border: 1px solid var(--ui-colr1);
+    border-radius: 50%;
+    text-align: center;
+    font-weight: var(--font-Noto-regular);
+    line-height: 1.7rem;
+  }
+
   .cont-head._line + .txt-list {
     margin-top: 0;
   }

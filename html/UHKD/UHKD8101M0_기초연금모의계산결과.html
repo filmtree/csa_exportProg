@@ -85,7 +85,7 @@
             <h3 class="cont-title mb0">입력하신 사항</h3>
           </div>
           <div class="con-table all-right">
-            <table class="grid-min-width">
+            <table>
               <caption>
                 입력한 근로소득(신청자), 근로소득(배우자), 사업소득, 이자소득, 연금소득, 공적이전소득(국민연금 외), 무료임차소득, 금융재산, 건축물, 토지, 임차보증금, 항공기ㆍ선박, 회원권, 자동차1, 자동차2, 농지연금, 주택연금, 금융기관, 대출금, 임대보증금 값으로 예상 소득인정액을 보여주는 표.
               </caption>
@@ -166,16 +166,16 @@
           <div class="con-table-header mt56">
             <h3 class="cont-title mb0">국민연금 급여액 관련 사항</h3>
           </div>
-          <div class="con-table">
-            <table class="grid-min-width">
+          <div class="con-table lg">
+            <table>
               <caption>
                 국민연금 급여액등, 소득재분배급여금액(A급여액)로 구성된 표.
               </caption>
               <colgroup>
-                <col style="width: 240px" />
-                <col style="width: auto" />
-                <col style="width: 240px" />
-                <col style="width: auto" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
               </colgroup>
               <tbody>
                 <tr>
@@ -193,13 +193,13 @@
           <div class="con-table-header mt56">
             <h3 class="cont-title mb0">예상 기초연금 급여액</h3>
           </div>
-          <div class="con-table">
-            <table class="grid-min-width">
+          <div class="con-table sm">
+            <table>
               <caption>
                 예상 기초연금 급여액
               </caption>
               <colgroup>
-                <col style="width: 240px" />
+                <col style="width: 40%" />
                 <col style="width: auto" />
               </colgroup>
               <tbody>
@@ -216,7 +216,7 @@
           <div class="con-table-header mt56">
             <h3 class="cont-title mb0">소득인정액 산정</h3>
           </div>
-          <div class="con-table">
+          <div class="con-table lg">
             <div class="board-wrap bd-data">
               <div class="bd-row">
                 <div class="bd-col">
@@ -240,50 +240,52 @@
           <div class="con-table-header mt56">
             <h3 class="cont-title mb0">기초연금액 산정</h3>
           </div>
-          <div class="con-table">
-            <div class="board-wrap bd-data">
-              <div class="bd-row">
-                <div class="bd-col">
-                  <div class="th"><span>국민연금 급여액들 ①</span></div>
-                  <div class="td ar"><span>0,000,000만원</span></div>
-                </div>
-                <div class="bd-col">
-                  <div class="th">
-                    <span>소득재분배급여금액<br />(A급여액)②</span>
-                  </div>
-                  <div class="td ar"><span>0,000,000만원</span></div>
-                </div>
-                <div class="bd-col">
-                  <div class="th"><span>기초연금액</span></div>
-                  <div class="td ar"><span>0,000,000만원</span></div>
-                </div>
-              </div>
-              <div class="bd-row">
-                <div class="bd-col">
-                  <div class="leaf-cell">
-                    <ul class="txt-list dot w100">
-                      <li>
-                        국민연금 급여액등 적용 산식(㉮), A급여액 적용산식(㉯) 중 큰 금액<br />
-                        (㉮): 기준연금액 × 250% - 국민연금 급여액등(①) = 국민연금 급여액등 적용산식의 값 0,000,000원<br />
-                        (㉯): {기준연금액 - 2/3 × 소득재분배급여금액(②)} + 부가연금액 = A급여액 적용산식의 값 0,000,000원<br />
-                        ※ 괄호의 계산 결과가 음(-)의 값일 경우에는 ‘0’으로 처리, 기초연금액의 최댓값은 기준연금액으로 함
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="grid-result-bottom ac">
-                <span class="fc-primary">예상 기초연금액 : : <span>000,000,000</span>원</span>
-              </div>
-            </div>
+          <div class="con-table lg align-center">
+            <table>
+              <caption></caption>
+              <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">국민연금 급여액들 ①</th>
+                  <th scope="col">소득재분배급여금액<br />(A급여액)②</th>
+                  <th scope="col">기초연금액</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0,000,000만원</td>
+                  <td>0,000,000만원</td>
+                  <td>0,000,000만원</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="100">
+                    <span class="fc-primary">예상 기초연금액 : <span>000,000,000</span>원</span>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
           </div>
+          <ul class="txt-list dot w100">
+            <li>
+              국민연금 급여액등 적용 산식(㉮), A급여액 적용산식(㉯) 중 큰 금액<br />
+              (㉮): 기준연금액 × 250% - 국민연금 급여액등(①) = 국민연금 급여액등 적용산식의 값 0,000,000원<br />
+              (㉯): {기준연금액 - 2/3 × 소득재분배급여금액(②)} + 부가연금액 = A급여액 적용산식의 값 0,000,000원<br />
+              ※ 괄호의 계산 결과가 음(-)의 값일 경우에는 ‘0’으로 처리, 기초연금액의 최댓값은 기준연금액으로 함
+            </li>
+          </ul>
           <!-- e: 기초연금액 산정 -->
 
           <!-- s: 소득역전방지감액 산정 -->
           <div class="con-table-header mt56">
             <h3 class="cont-title mb0">소득역전방지감액 산정</h3>
           </div>
-          <div class="con-table">
+          <div class="con-table lg">
             <div class="board-wrap bd-data">
               <div class="bd-row">
                 <div class="bd-col">
@@ -305,7 +307,7 @@
           <div class="con-table-header mt56">
             <h3 class="cont-title mb0">예상 기초연금 급여액 산정</h3>
           </div>
-          <div class="con-table">
+          <div class="con-table lg">
             <div class="board-wrap bd-data">
               <div class="bd-row">
                 <div class="bd-col">

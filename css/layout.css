@@ -1240,6 +1240,11 @@
 	overflow-y: auto;
 }
 
+.modalWrap .modal-body .cont-title {
+	white-space: wrap;
+}
+
+
 .modalWrap .modal-body.pad-none {
 	padding: 0;
 }
