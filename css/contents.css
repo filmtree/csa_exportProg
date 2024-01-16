@@ -72,6 +72,11 @@
   line-height: 1.5;
 }
 
+.cont-head .cont-desc. {
+  font-size: 1.7rem;
+  line-height: 1.5;
+}
+
 .md-title {
   font-size: 1.5rem !important;
   font-weight: 500 !important;
@@ -1460,6 +1465,7 @@
 .cont-title .inner-desc {
   font-size: 1.8rem;
   font-weight: 400;
+  margin-left: .8rem;
 }
 
 .min-w1200px {
@@ -2793,6 +2799,24 @@ input[type="number"]::-webkit-inner-spin-button {
   border: 1px var(--color-primary) solid;
   border-bottom: none;
 }
+
+.tab-total > [role="tabpanel"] {
+  padding-top: 5.6rem !important;
+}
+
+.tab-total > [role="tabpanel"] > .cont-head:first-of-type {
+  padding-top: 0;
+}
+
+.tab-total > [role="tabpanel"] > .cont-head:first-of-type .cont-title {
+  margin-top: 0 !important;
+  margin-right: 0 !important;
+}
+
+.tab-total > [role="tabpanel"] .cont-desc + .txt-list {
+  margin:0;
+}
+
 .tab-total .cont-title.padt {
   padding-top: 56px;
 }

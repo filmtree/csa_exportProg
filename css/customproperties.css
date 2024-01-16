@@ -80,8 +80,12 @@
 	--response-rate-1080: 0.89;
 	--response-rate-768: 0.64;
 
-}
+	/* UI Color */
+	--grid-border: #e5e5e5;
+	--grid-border-top: #222222;
+	--grid-footer-top: #999999;
 
+}
 
 @media all and (max-width: 767px) {
   :root {
