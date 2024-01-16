@@ -299,9 +299,9 @@
 	padding: 2.4rem 3.2rem 3.2rem;
 }
 .reservation-date .item-title {
-	display: block;
-	margin-bottom: 0.8rem;
 	font-weight: 500;
+	margin-bottom: 0.8rem;
+	display: block;
 }
 .reservation-time {
 	flex: 1;

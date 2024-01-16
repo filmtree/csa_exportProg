@@ -1,0 +1,23 @@
+{
+  "name": "csa_exportprog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "g": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filmtree/csa_exportProg.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/filmtree/csa_exportProg/issues"
+  },
+  "homepage": "https://github.com/filmtree/csa_exportProg#readme"
+}
