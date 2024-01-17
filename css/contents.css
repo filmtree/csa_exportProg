@@ -131,6 +131,14 @@
 	text-align: center;
 }
 
+.opt-name-registration .form-group { 
+	border: 0 !important;
+}
+
+.opt-name-registration .form-group + .form-group {
+	padding: 0;
+}
+
 .forms-set .form-group {
 	margin-top: 1.6rem;
 }
@@ -1516,7 +1524,7 @@
 	flex: 0 1 auto;
 }
 
-/* step */
+/* [step] */
 .equal-list.top {
 	margin-top: 48px;
 }
@@ -1553,6 +1561,41 @@
 .equal-list.step li.end .type {
 	color: var(--color-base);
 }
+
+/* [step]- next */
+.step-next-container {
+	display: flex;	
+}
+
+.step-next-container li {
+	position: relative;
+	width: calc((100% - 264px)/4);
+	height: 59px;
+	background: #D9ECFF;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 59px;
+	font-size: 1.8rem;
+}
+
+.step-next-container li:not(:first-of-type) {
+	margin-left: 8.8rem;
+}
+
+.step-next-container li:not(:first-of-type)::before {
+	content: "";
+	position: absolute;
+	left: -72px;
+	top: 0;
+	width: 56px;
+	height: 56px;
+	background: url("../images/ico/ic_56_next.svg") no-repeat left top;
+}
+
+.opt-name-registration + .step-next-container {
+	margin-top: 8rem;
+}
+
 /* hashtag */
 .equal-list.hashtag {
 	align-items: flex-start;
@@ -3837,6 +3880,41 @@ input.margin {
 		margin-top: 0;
 		padding: 0;
 	}
+
+		/* [step]- next */
+	.step-next-container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.step-next-container li {
+		position: relative;
+		width: 80%;
+		height: 59px;
+		background: #D9ECFF;
+		border-radius: 50px;
+		text-align: center;
+		line-height: 59px;
+		font-size: 1.8rem;
+	}
+
+	.step-next-container li:not(:first-of-type) {
+		margin-left: 0;
+		margin-top: 7rem;
+	}
+
+	.step-next-container li:not(:first-of-type)::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: -6rem;
+		width: 4.8rem;
+		height: 4.8rem;
+		background: url("../images/ico/ic_56_next.svg") no-repeat left top / 4.8rem;
+		transform: translateX(-50%) rotate(90deg);
+	}
+
 	/* hashtag 공통UI */
 	.equal-list.hashtag {
 		flex-wrap: wrap;
@@ -4081,6 +4159,10 @@ input.margin {
 	.searchbox-wrap.opt-name-registration .searchbox .form-group {
 		flex-wrap: wrap;
 		gap: 0.8rem 0;
+	}
+
+	.opt-name-registration .form-group {
+		padding-bottom: .8rem !important;
 	}
 
 	.searchbox-wrap.opt-name-registration .form-group .inp-split {
@@ -4691,7 +4773,7 @@ input.margin {
 		margin-left: 0;
 	}
 
-	/* step */
+	/* [step] */
 	.equal-list.step li {
 		padding: 0 0.4rem 0.8rem;
 		min-height: auto;
@@ -4707,7 +4789,7 @@ input.margin {
 		overflow: hidden; /* max-width: 4.3rem;*/
 	}
 
-	/* hashtag */
+	/* [hashtag] */
 	.equal-list.hashtag {
 		flex-direction: column;
 		margin-top: 32px;
@@ -4766,7 +4848,7 @@ input.margin {
 		flex: 0 1 auto;
 	}
 
-	/* modal default */
+	/* [modal default] */
 	.modal.default .modalWrap img {
 		max-width: 100%;
 	}

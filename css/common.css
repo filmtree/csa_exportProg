@@ -321,6 +321,15 @@ legend,
 	justify-content: space-around;
 }
 
+.flex-1 {
+	flex: 1 1 0;
+}
+
+.flex-0 {
+	flex: 0 1 auto;
+}
+
+
 /* Character Align */
 .ws-nw {
 	white-space: nowrap;
@@ -527,6 +536,28 @@ legend,
 }
 .form-640 {
 	width: calc(64rem * 1);
+}
+
+.form-10p {
+	width: 10% !important;
+}
+.form-20p {
+	width: 20% !important;
+}
+.form-25p {
+	width: 25% !important;
+}
+.form-33p {
+	width: 33% !important;
+}
+.form-50p {
+	width: 50% !important;
+}
+.form-75p {
+	width: 75% !important;
+}
+.form-100p {
+	width: 100% !important;
 }
 
 @media screen and (max-width: 1080px) {
