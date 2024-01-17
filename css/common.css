@@ -1814,8 +1814,8 @@ legend,
 /* ======================================= icon ======================================= */
 
 .ic-only {
-	display: inline-block;
 	overflow: hidden;
+	display: inline-block;
 	white-space: nowrap;
 	width: 2rem;
 	height: 2rem;
