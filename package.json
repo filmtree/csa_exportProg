@@ -1,7 +1,6 @@
 {
   "name": "csa_exportprog",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "g": "^2.0.1"
@@ -19,5 +18,6 @@
   "bugs": {
     "url": "https://github.com/filmtree/csa_exportProg/issues"
   },
-  "homepage": "https://github.com/filmtree/csa_exportProg#readme"
+  "homepage": "https://github.com/filmtree/csa_exportProg#readme",
+  "description": ""
 }
