@@ -12,8 +12,8 @@
   "space-before-closing-brace": "\n",
   "vendor-prefix-align": true,
   "sort-order": [
-        "content",
-        "display",
+    "content",
+    "display",
         "visibility",
         "opacity",
         "filter:progid:DXImageTransform.Microsoft.Alpha(Opacity",
@@ -55,11 +55,6 @@
         "column-rule-color",
         "counter-reset",
         "counter-increment",
-        "overflow",
-        "overflow-x",
-        "overflow-y",
-        "-ms-overflow-x",
-        "-ms-overflow-y",
         "float",
         "clear",
         "-webkit-box-sizing",
@@ -161,6 +156,15 @@
         "outline-style",
         "outline-color",
         "outline-offset",
+        "overflow",
+        "overflow-x",
+        "overflow-y",
+        "-ms-overflow-x",
+        "-ms-overflow-y",
+        "-webkit-user-select",
+        "-moz-user-select",
+        "-ms-user-select",
+        "user-select",
         "background",
         "background-color",
         "background-image",
@@ -221,11 +225,11 @@
         "text-overflow",
         "text-overflow-ellipsis",
         "text-overflow-mode",
+        "vertical-align",
         "list-style",
         "list-style-position",
         "list-style-type",
         "list-style-image",
-        "vertical-align",
         "-webkit-hyphens",
         "-moz-hyphens",
         "hyphens",
@@ -309,12 +313,6 @@
         "-ms-transform-origin",
         "-o-transform-origin",
         "transform-origin",
-        "-ms-interpolation-mode",
-        "-webkit-user-select",
-        "-moz-user-select",
-        "-ms-user-select",
-        "user-select"
-    ]
-
-    
+        "-ms-interpolation-mode"
+    ]    
 }
