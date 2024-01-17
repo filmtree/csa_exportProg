@@ -21,12 +21,12 @@
 
 /* ===== skip nav ===== */
 .skip-nav a {
-	display: block;
 	position: fixed;
 	top: -50px;
 	right: 10px;
 	left: 10px;
 	z-index: 20;
+	display: block;
 	background-color: var(--color-gray1);
 	height: 30px;
 	color: #fff;
@@ -3362,7 +3362,12 @@ input.margin {
 	.searchbox-wrap {
 		position: relative;
 		left: -3.2rem;
-		/* width: calc(100% + 6.4rem); */
+		width: calc(100% + 6.4rem);
+	}
+	.tabContent .searchbox-wrap {
+		position: relative;
+		left: -3.2rem;
+		width: auto;
 	}
 	.searchbox {
 		border-radius: 0;

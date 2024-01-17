@@ -2944,6 +2944,64 @@ button,
 	margin-left: 1.6rem;
 }
 
+.attached-file {
+	display: flex;
+}
+
+.attached-file .attached-file,
+.attached-file .attached-label {
+	display: block;
+}
+
+.attached-file .attached-label {
+	position: relative;
+	margin-right: 3.2rem;
+}
+
+.attached-file .attached-label::after {
+	content: "";
+	position: absolute;
+	right: -1.7rem;
+	top: 5px;
+	width: 1px;
+	height: 16px;
+	background-color: var(--ui-colr3);
+}
+
+.board-move {
+	margin-top: 5.6rem;
+}
+
+.board-list-move {
+	display: flex;
+	padding: 2rem 3.2rem;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.direction-label {
+	position: relative;
+	padding-left: 1.8rem;
+	margin-right: 2.4rem;
+}
+
+.direction-label::before {
+	content:"";
+	position:absolute;
+	top:50%;
+	left:0;
+	width: 10px;
+	height: 10px;
+	transform: translateY(-50%);
+}
+
+.direction-label.prev-list::before {
+	background: url("../images/ico/ic_10_fillarr_up.svg") no-repeat center;
+}
+.direction-label.next-list::before {
+	background: url("../images/ico/ic_10_fillarr_down.svg") no-repeat center;
+}
+
+
 /* ======================================= Board - Div ======================================= */
 
 .bd-data .bd-row {
@@ -3033,6 +3091,10 @@ button,
 	margin-top: .4rem;
 }
 
+.txt-list > ul ~ ul li ~ li {
+	margin-top: .4rem;
+}
+
 .txt-list + * {
 	margin-top: 1.6rem;
 }
@@ -3046,11 +3108,16 @@ button,
 	margin-bottom: 1.6rem;
 }
 
+.txt-list.dot > p,
 .txt-list.dot > li {
 	position: relative;
 	padding-left: 1.1rem;
 	font-size: 1.5rem;
 	line-height: 1.6;
+}
+
+.txt-list.fz14 > li ~ li {
+	margin-top: .4rem;
 }
 
 .txt-list.dot.fs16 > li:before {
@@ -3061,6 +3128,7 @@ button,
 	content: none;
 }
 
+.txt-list.dot > p:before,
 .txt-list.dot > li:before {
 	content: "";
 	position: absolute;
@@ -3164,7 +3232,7 @@ input + .txt-helper {
 	.tbl-board td.title {
 		width: 100%;
 		margin-bottom: .8rem;
-		font-size: 1.4rem;
+		font-size: 1.6rem;
 	}
 
 	.tbl-board td.title .ic-secret {
@@ -3451,7 +3519,7 @@ input + .txt-helper {
 	}
 
 	.data-info .data-set-group .data-value {
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 	}
 
 	.data-info .data-set-group .data-set + .data-set {
