@@ -1160,7 +1160,7 @@
 	margin-top: 4rem;
 }
 *[class*='button-'] span {
-	vertical-align: middle;
+	/* vertical-align: middle; */
 }
 .bd-data .bd-col.w100 .td.w25 {
 	width: 25%;
@@ -3111,6 +3111,11 @@ input[type='number']::-webkit-inner-spin-button {
 	width: 13px;
 	height: 14px;
 }
+.ic-only.inner-search-primary {
+	background: url('../images/ico/ic_form_search_p.svg') no-repeat center;
+	width: 13px;
+	height: 14px;
+}
 
 .button-sixth {
 	border: 1px var(--color-gray6) solid;
@@ -4152,6 +4157,7 @@ input.margin {
 		width: 100%;
 	}
 
+	.searchbox-wrap.opt-name-registration .searchbox .flex-1,
 	.searchbox-wrap.opt-name-registration .searchbox .w-flexible {
 		flex-basis: auto;
 	}
@@ -4174,28 +4180,37 @@ input.margin {
 	.searchbox-wrap.opt-name-registration .form-group .inp-content {
 		margin: 0;
 	}
-	.searchbox-wrap.opt-name-registration .form-group .inp-content {
+	.searchbox-wrap.opt-name-registration .form-group select.inp-content {
+		padding: 0.4rem .8rem;
+		text-align: center;
+	}
+	.searchbox-wrap.opt-name-registration .form-group .inp-content:not(select) {
 		padding: 0.4rem;
 		text-align: center;
 	}
 
-	.searchbox-wrap.opt-name-registration .form-group .search-label:nth-of-type(1),
-	.searchbox-wrap.opt-name-registration .form-group .search-label:nth-of-type(2) {
+	.searchbox-wrap.opt-name-registration .form-group:first-of-type .search-label:nth-of-type(1),
+	.searchbox-wrap.opt-name-registration .form-group:first-of-type .search-label:nth-of-type(2) {
 		margin-left: 0;
 		width: 8rem;
 	}
 	
-	.searchbox-wrap.opt-name-registration .form-group .inp-content:nth-of-type(1) {
+	.searchbox-wrap.opt-name-registration .form-group:first-of-type .inp-content:nth-of-type(1) {
 		width: calc(100% - 8rem);
 	}
-
-	.searchbox-wrap.opt-name-registration .form-group .inp-content:nth-of-type(2), 
-	.searchbox-wrap.opt-name-registration .form-group .inp-content:nth-of-type(3) {
+	
+	.searchbox-wrap.opt-name-registration .form-group:first-of-type .inp-content:nth-of-type(2), 
+	.searchbox-wrap.opt-name-registration .form-group:first-of-type .inp-content:nth-of-type(3) {
 		width: calc(50% - 8.2rem);
 	}
-	
-	.searchbox-wrap.opt-name-registration .form-group .btn-search {
+		
+	.searchbox-wrap.opt-name-registration .form-group:first-of-type .btn-search {
 		min-width: 6rem !important;
+	}
+
+	.searchbox-wrap.opt-name-registration .form-group.applied-curriculum .inp-content:nth-of-type(1) {
+		width: calc(100% - 14.8rem) !important;
+		margin-left: .8rem;
 	}
 
 	/* 온라인 상담 */

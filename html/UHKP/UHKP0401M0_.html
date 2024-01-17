@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Page Title</title>
+    <title>노후준비종합서비스</title>
     <script src="../../js/lib/jquery-3.7.0.min.js"></script>
     <script src="../../js/lib/jquery-ui.min.js"></script>
     <script src="../../js/lib/jquery.easing.min.js"></script>
@@ -167,6 +167,7 @@
               <div class="cont-head">
                 <h3 class="cont-title">CSA 이력 조회</h3>
               </div>
+
               <!-- s: Search Box -->
               <div class="searchbox-wrap opt-name-registration">
                 <div class="searchbox">
@@ -189,7 +190,9 @@
               </div>
               <div class="con-table all-center">
                 <table class="grid-fit-scroll">
-                  <caption></caption>
+                  <caption>
+                    순번 , 성명 , 교육대상 , 코드값 , 과정번호 , 과정명 , 교육기간 , 교육 유효기간 , 보수교육 후 유효기간 , 수료여부로 구성된 표.
+                  </caption>
                   <colgroup>
                     <col style="width: 7%" />
                     <col style="width: 8%" />
@@ -269,7 +272,9 @@
               </div>
               <div class="con-table all-center">
                 <table class="grid-fit-scroll">
-                  <caption></caption>
+                  <caption>
+                    순번 , 성명 , 자격종류 , 시험명 , 시험장소 , 수험번호 , 자격번호 , 최초 취득 유효기간 , 보수교육 후 유효기간 , 자격취득일로 구성된 표.
+                  </caption>
                   <colgroup>
                     <col style="width: 7%" />
                     <col style="width: 8%" />
@@ -353,7 +358,11 @@
               </ol>
               <!-- e: Steps -->
 
-              <!-- s: CSA Choice Box -->
+              <!-- s: CSA 과정 선택 -->
+              <div class="con-table-header mt48">
+                <h3 class="cont-title mb0">CSA 과정 선택</h3>
+              </div>
+              <!-- s: Search Box -->
               <div class="searchbox-wrap opt-name-registration choice-box mt48">
                 <div class="searchbox">
                   <div class="form-group">
@@ -374,48 +383,7 @@
                   </div>
                 </div>
               </div>
-              <!-- e: CSA Choice Box -->
-
-              <!-- s: CSA 과정 선택 -->
-              <div class="con-table-header mt48">
-                <h3 class="cont-title mb0">CSA 과정 선택</h3>
-              </div>
-              <div class="con-table">
-                <table>
-                  <caption></caption>
-                  <colgroup>
-                    <col style="width: 18%" />
-                    <col style="width: 23%" />
-                    <col style="width: 18%" />
-                    <col style="width: auto" />
-                  </colgroup>
-                  <tbody>
-                    <tr>
-                      <th scope="row">성명</th>
-                      <td><input value="홍길동" type="text" id="" placeholder="" class="form-100p ac" aria-label="성명" readonly /></td>
-                      <th scope="row">주민등록번호</th>
-                      <td>
-                        <div class="d-flex-cc">
-                          <input value="000000" type="text" placeholder="" class="form-100p ac" aria-labelledby="registNumber" aria-label="앞번호 6자리" readonly />
-                          <span class="inp-split form-32" aria-hidden="true">-</span>
-                          <input value="0000000" type="text" placeholder="" class="form-100p ac" aria-labelledby="registNumber" aria-label="뒷번호 7자리" readonly />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr></tr>
-                    <tr>
-                      <th scope="row">과정명</th>
-                      <td colspan="3">
-                        <div class="form-group">
-                          <select class="form-100p" title="부모선택">
-                            <option value="선택">선택</option>
-                          </select>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <!-- e: Search Box -->
               <!-- e: CSA 과정 선택 -->
 
               <!-- s: CSA 교육 신청 -->
@@ -438,9 +406,7 @@
                       <th scope="row">과정번호</th>
                       <td colspan="2">
                         <div class="form-group">
-                          <div class="form-group">
-                            <input type="text" id="" class="flex-1" placeholder="" aria-label="과정명" />
-                          </div>
+                          <input type="text" id="" class="flex-1" placeholder="" aria-label="과정명" />
                         </div>
                       </td>
                     </tr>
@@ -502,35 +468,34 @@
                       <th scope="row">신청가능인원</th>
                       <td colspan="2">
                         <div class="form-group">
-                          <input type="text" id="" class="flex-1" placeholder="" aria-label="신청가능인원 지원자 수" />
+                          <input type="text" id="" class="flex-1" placeholder="" aria-label="현재접수 인원" />
                           <span class="inp-split">/</span>
-                          <input type="text" id="" class="flex-1" placeholder="" aria-label="신청가능인원 전체" />
+                          <input type="text" id="" class="flex-1" placeholder="" aria-label="교육인원" />
                         </div>
                       </td>
                     </tr>
                     <tr>
-                      <th scope="row">교육대상(필수)</th>
+                      <th scope="row">교육대상(필수)<span class="mark-required">&nbsp;필수입력</span></th>
                       <td colspan="2">
                         <div class="form-group">
-                          <div class="form-group-txt">
-                            <span class="front-txt">연기비율 :</span>
-                            <select class="inp120" title="연령선택">
-                              <option value="선택">00</option>
-                              <option value="선택">60</option>
-                            </select>
-                            <span class="back-txt">세</span>
-                          </div>
-                          <input type="text" id="" class="flex-1" placeholder="" aria-label="신청가능인원 지원자 수" />
+                          <select class="flex-1" aria-label="교육대상종류">
+                            <option value="0">선택</option>
+                          </select>
+                          <input type="text" id="" class="flex-1" placeholder="코드값" aria-label="코드값" readonly />
                           <span class="inp-split">:</span>
-                          <input type="text" id="" class="flex-1" placeholder="" aria-label="신청가능인원 전체" />
+                          <input type="text" id="" class="flex-1" placeholder="코드값 입력" aria-label="코드값 입력" />
                         </div>
                       </td>
                     </tr>
                     <tr>
-                      <th scope="row">핸드폰 번호(필수)</th>
+                      <th scope="row">핸드폰 번호(필수)<span class="mark-required">&nbsp;필수입력</span></th>
                       <td colspan="2">
-                        <div class="form-group">
-                          <input type="text" id="" class="flex-1" placeholder="" aria-label="과정명" />
+                        <div class="form-group-tel">
+                          <input type="text" placeholder="010" class="tel-first" aria-label="휴대전화 식별번호" />
+                          <span class="inp-split">-</span>
+                          <input type="text" class="tel-second" aria-label="휴대전화 중간 번호" />
+                          <span class="inp-split">-</span>
+                          <input type="text" class="tel-third" aria-label="휴대전화 뒷 번호" />
                         </div>
                       </td>
                     </tr>
@@ -538,11 +503,73 @@
                 </table>
               </div>
               <!-- e: CSA 교육 신청 -->
+
+              <!-- s: 하단 버튼 -->
+              <div class="cont-bottom">
+                <div class="btn-group">
+                  <button type="button" class="button-primary -lg">신청하기</button>
+                </div>
+              </div>
+              <!-- e: 하단 버튼 -->
             </div>
             <!-- ========  e: Tab Panel 2 ======== -->
 
             <!-- ========  s: Tab Panel 3 ======== -->
-            <div class="tabContent csa-training-application3" role="tabpanel" aria-labelledby="tabNav3">Tab2 Contents</div>
+            <div class="tabContent csa-training-application3" role="tabpanel" aria-labelledby="tabNav3">
+              <!-- s: Tab Contents Title -->
+              <div class="cont-head">
+                <h3 class="cont-title">CSA 2급 이러닝 면제과목 신청</h3>
+                <p class="cont-desc">
+                  CSA 2급 이러닝 과목 중 보유자격에 따라 면제과목 신청이 가능합니다. CSA 1급, 보수교육, 시험 면제는 아닙니다. 아래 ‘행추가’ 버튼을 눌러 면제과목을 신청하세요!<br />
+                  자격증이 3개인 경우 3번 ‘행추가’ 후에 면제 신청 누르시면 됩니다. 신청한 내역 수정은 다시 조회하여 수정하고 싶은 것을 선택 후 삭제처리 해주세요!
+                </p>
+              </div>
+              <!-- e: Tab Contents Title -->
+
+              <!-- s: Search Box -->
+              <div class="searchbox-wrap opt-name-registration">
+                <div class="searchbox">
+                  <div class="form-group">
+                    <label class="search-label" for="searchName">성명</label>
+                    <input type="text" placeholder="" class="inp-content flex-1" id="searchName" />
+                    <label class="search-label" id="registNumber">주민등록번호</label>
+                    <input type="text" placeholder="" class="inp-content flex-1" aria-labelledby="registNumber" aria-label="앞번호 6자리" />
+                    <span class="inp-split" aria-hidden="true">-</span>
+                    <input type="text" placeholder="" class="inp-content flex-1" aria-labelledby="registNumber" aria-label="뒷번호 7자리" />
+                    <button type="button" class="button-primary btn-search min-w80px">조회</button>
+                  </div>
+                  <div class="form-group applied-curriculum">
+                    <button type="button" class="button-fourth min-w140px">신청한 교육과정</button>
+                    <input type="text" placeholder="" class="inp-content flex-1" aria-label="신청한 교육과정" />
+                  </div>
+                </div>
+              </div>
+              <!-- e: Search Box -->
+
+              <!-- s: -->
+              <div class="con-table-header ar mt56">
+                <div class="d-flex gap8">
+                  <button class="button-secondary -sm round">
+                    <i class="ic-only inner-search-primary" aria-hidden="true"></i>
+                    <span>조회</span>
+                  </button>
+                  <button class="button-primary -sm round">
+                    <i class="ic-only inner-plus" aria-hidden="true"></i>
+                    <span>행추가</span>
+                  </button>
+                </div>
+              </div>
+              <!-- e: -->
+
+              <!-- s: 하단 버튼-->
+              <div class="cont-bottom">
+                <div class="btn-group">
+                  <button type="button" class="button-primary -lg">먼제신청</button>
+                </div>
+              </div>
+              <!-- e: 하단 버튼-->
+
+            </div>
             <!-- ========  e: Tab Panel 3 ======== -->
           </div>
 
@@ -565,7 +592,7 @@
       <!-- e: footer -->
     </div>
     <script>
-      commonUI.tabNav(".tabWrap", 2);
+      commonUI.tabNav(".tabWrap", 3);
     </script>
   </body>
 </html>
