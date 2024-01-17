@@ -172,21 +172,161 @@
               <div class="searchbox-wrap opt-name-registration">
                 <div class="searchbox">
                   <div class="form-group">
-
                     <label class="search-label" for="searchName">성명</label>
                     <input type="text" placeholder="" class="inp-content w-flexible" id="searchName" />
-
                     <label class="search-label" id="registNumber">주민등록번호</label>
                     <input type="text" placeholder="" class="inp-content w-flexible" aria-labelledby="registNumber" title="앞번호 6자리" />
                     <span class="inp-split" aria-hidden="true">-</span>
                     <input type="text" placeholder="" class="inp-content w-flexible" aria-labelledby="registNumber" title="뒷번호 7자리" />
-
                     <button type="button" class="button-primary btn-search min-w80px">조회</button>
-
                   </div>
                 </div>
               </div>
-              <!-- e: Search Box -->              
+              <!-- e: Search Box -->      
+              
+              <!-- s: 교육 이력 -->
+              <div class="con-table-header">
+                <h3 class="cont-title mb0">교육 이력</h3>
+              </div>
+              <div class="con-table all-center">
+                <table class="grid-fit-scroll" >
+                  <caption></caption>
+                  <colgroup>
+                    <col style="width: 7%;"/>
+                    <col style="width: 8%;"/>
+                    <col style="width: 8%;"/>
+                    <col style="width: 8%;"/>
+                    <col style="width: 10%;"/>
+                    <col style="width: 10%;"/>
+                    <col style="width: 7%;"/>
+                    <col style="width: 7%;"/>
+                    <col style="width: 7%;"/>
+                    <col style="width: 7%;"/>
+                    <col style="width: 7%;"/>
+                    <col style="width: 7%;"/>
+                    <col style="width: 7%;"/>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col" rowspan="2">순번</th>
+                      <th scope="col" rowspan="2">성명</th>
+                      <th scope="col" rowspan="2">교육대상</th>
+                      <th scope="col" rowspan="2">코드값</th>
+                      <th scope="col" rowspan="2">과정번호</th>
+                      <th scope="col" rowspan="2">과정명</th>
+                      <th scope="col" colspan="2">교육기간</th>
+                      <th scope="col" colspan="2">교육 유효기간</th>
+                      <th scope="col" colspan="2">보수교육 후<br>유효기간</th>
+                      <th scope="col" rowspan="2">수료<br>여부</th>
+                    </tr>
+                    <tr>
+                      <th scope="col">시작일</th>
+                      <th scope="col">종료일</th>
+                      <th scope="col">시작일</th>
+                      <th scope="col">종료일</th>
+                      <th scope="col">시작일</th>
+                      <th scope="col">종료일</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>성명</td>
+                      <td>교육대상</td>
+                      <td>코드값</td>
+                      <td>과정번호</td>
+                      <td>과정명</td>
+                      <td>시작일</td>
+                      <td>종료일</td>
+                      <td>시작일</td>
+                      <td>종료일</td>
+                      <td>시작일</td>
+                      <td>종료일</td>
+                      <td>수료
+                        여부</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- e: 교육 이력 -->
+              
+              <!-- s: 시험 이력 -->
+              <div class="con-table-header">
+                <h3 class="cont-title mb0">시험 이력</h3>
+              </div>
+              <div class="con-table all-center">
+                <table class="grid-fit-scroll">
+                  <caption></caption>
+                  <colgroup>
+                    <col style="width: 7%;"/>
+                    <col style="width: 8%;"/>
+                    <col style="width: 8%;"/>
+                    <col style="width: 8%;"/>
+                    <col style="width: 11%;"/>
+                    <col style="width: 11%;"/>
+                    <col style="width: 12%;"/>
+                    <col style="width: 7%;"/>
+                    <col style="width: 7%;"/>
+                    <col style="width: 7%;"/>
+                    <col style="width: 7%;"/>
+                    <col style="width: 7%;"/>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col" rowspan="2">순번</th>
+                      <th scope="col" rowspan="2">성명</th>
+                      <th scope="col" rowspan="2">자격종류</th>
+                      <th scope="col" rowspan="2">시험명</th>
+                      <th scope="col" rowspan="2">시험장소</th>
+                      <th scope="col" rowspan="2">수험번호</th>
+                      <th scope="col" rowspan="2">자격번호</th>
+                      <th scope="col" colspan="2">최초 취득 유효기간</th>
+                      <th scope="col" colspan="2">보수교육 후 유효기간</th>
+                      <th scope="col" rowspan="2">자격취득일</th>
+                    </tr>
+                    <tr>
+                      <th scope="col">시작일</th>
+                      <th scope="col">종료일</th>
+                      <th scope="col">시작일</th>
+                      <th scope="col">종료일</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>성명</td>
+                      <td>자격종류</td>
+                      <td>시험명</td>
+                      <td>시험장소</td>
+                      <td>수험번호</td>
+                      <td>자격번호</td>
+                      <td>시작일</td>
+                      <td>종료일</td>
+                      <td>시작일</td>
+                      <td>종료일</td>
+                      <td>자격취득일</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- e: 시험 이력 -->
+              
+
             </div>
             <!-- ========  e: Tab Panel 1 ======== -->
 

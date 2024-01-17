@@ -1807,8 +1807,16 @@ legend,
 }
 
 /* Grid Width */
-.grid-min-width {
+.con-table .grid-min-width {
 	min-width: var(--grid-minWidth);
+}
+
+.con-table .grid-wide-scroll {
+	min-width: 100rem;
+}
+
+.con-table .grid-fit-scroll {
+	min-width: 120rem;
 }
 
 /* ======================================= icon ======================================= */
