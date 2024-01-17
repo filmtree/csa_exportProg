@@ -1842,11 +1842,11 @@ legend,
 	min-width: var(--grid-minWidth);
 }
 
-.con-table .grid-wide-scroll {
+.con-table .grid-wide-width {
 	min-width: 100rem;
 }
 
-.con-table .grid-fit-scroll {
+.con-table .grid-fit-width {
 	min-width: 120rem;
 }
 
@@ -2115,6 +2115,18 @@ input[type="checkbox"]:checked {
 	cursor: pointer;
 }
 
+.inp-checkbox.leaf {
+	display: inline-block;
+	position: relative;
+	min-width: 2.4rem;
+	min-height: 2.4rem;
+	padding-right: 0;
+	padding-left: 0;
+	line-height: 1.5;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
 .inp-checkbox input {
 	-webkit-appearance: none;
 	        appearance: none;
@@ -2182,6 +2194,17 @@ input[type="checkbox"]:checked {
 
 .inp-checkbox input[readonly] + span {
 	color: var(--color-gray4);
+}
+
+/* 체크박스 왼쪽 글자 */
+.inp-checkbox.left {
+	margin-right: 24px;
+	padding-right: 32px;
+	padding-left: 0;
+}
+.inp-checkbox.left input {
+	right: 0;
+	left: auto;
 }
 
 /* ##button */
@@ -2610,8 +2633,29 @@ button,
 	padding: .8rem 1.6rem;
 	border-right: 1px solid var(--ui-colr3);
 	border-bottom: 1px solid var(--ui-colr3);
-
 	overflow-wrap: break-word;
+}
+.con-table.inp-small-padding td {
+	padding: .8rem .4rem;
+}
+.con-table.inp-small-padding td input[type="number"] {
+	text-align: right;
+}
+.con-table.inp-small-padding td input[type="number"],
+.con-table.inp-small-padding td input[type="text"] {
+	padding: .4rem;
+	text-align: center;
+}
+
+.con-table.inp-small-padding td select {
+	padding-left: .8rem;
+}
+
+.con-table td select,
+.con-table td input[type="number"],
+.con-table td input[type="password"],
+.con-table td input[type="text"] {
+	width: 100%;
 }
 
 .con-table thead th,
@@ -2982,6 +3026,10 @@ button,
 }
 
 .txt-list > li ~ li {
+	margin-top: .8rem;
+}
+
+.txt-list > ul ~ ul {
 	margin-top: .4rem;
 }
 
@@ -2989,12 +3037,12 @@ button,
 	margin-top: 1.6rem;
 }
 
-.txt-list > li > * {
+.txt-list > li > *:not(ul) {
 	margin-top: .8rem;
 	margin-bottom: .8rem;
 }
 
-.txt-list > li > *:last-child {
+.txt-list > li > *:last-child:not(ul) {
 	margin-bottom: 1.6rem;
 }
 

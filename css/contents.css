@@ -2680,27 +2680,27 @@ input[type='number']::-webkit-inner-spin-button {
 .txt-box .calling {
 	display: flex;
 	align-items: center;
-	margin-top: 8px;
+	margin-top: .8rem;
 	color: var(--color-gray2);
 }
 .txt-box .calling::before {
 	display: block;
-	margin-right: 8px;
+	margin-right: .8rem;
 	background: url('../images/ico/ic_alert_txt.svg') no-repeat;
-	width: 24px;
-	height: 24px;
+	width: 2.4rem;
+	height: 2.4rem;
 	content: '';
 }
 .txt-box .calling .color-point {
-	margin-left: 3px;
+	margin-left: .3rem;
 	font-weight: 500;
 }
 
 /* 노후준비 점수 */
 .score-wrap {
 	display: flex;
-	margin-top: 56px;
-	margin-bottom: 8px;
+	margin-top: 5.6rem;
+	margin-bottom: .8rem;
 }
 .score {
 	display: flex;
@@ -2708,8 +2708,8 @@ input[type='number']::-webkit-inner-spin-button {
 	justify-content: space-between;
 	align-items: center;
 	background: url('../images/contents/bg_score.svg') no-repeat;
-	min-width: 220px;
-	height: 201px;
+	min-width: 22rem;
+	height: 20.1rem;
 }
 .score p {
 	color: #1a72e7;
@@ -2717,20 +2717,20 @@ input[type='number']::-webkit-inner-spin-button {
 	font-size: 18px;
 }
 .score .score-txt {
-	margin-top: 62px;
+	margin-top: 6.2rem;
 	font-weight: 700;
-	font-size: 64px;
+	font-size: 6.4rem;
 	font-family: 'Pretendard';
 }
 .score-desc-wrap {
-	margin: 16px 0 0 80px;
-	width: calc(100% - 80px);
+	margin: 1.6rem 0 0 8rem;
+	width: calc(100% - 8rem);
 }
 .score-desc-wrap .cont-title {
-	margin-bottom: 24px;
+	margin-bottom: 2.4rem;
 	border-bottom: 1px var(--ui-colr2) solid;
-	padding-bottom: 24px;
-	font-size: 24px;
+	padding-bottom: 2.4rem;
+	font-size: 2.4rem;
 }
 .score-desc-wrap .txt-list > li {
 	font-size: 18px;
@@ -2739,7 +2739,7 @@ input[type='number']::-webkit-inner-spin-button {
 	margin: 0;
 }
 .score-desc-wrap .txt-list.dot.small > li:before {
-	top: 14px;
+	top: 1.4rem;
 }
 .score-desc-wrap .txt-list li .bar {
 	display: inline-flex;
@@ -2750,22 +2750,22 @@ input[type='number']::-webkit-inner-spin-button {
 }
 .score-desc-wrap .txt-list li .bar::before {
 	display: block;
-	margin: 0 24px;
+	margin: 0 2.4rem;
 	background: var(--ui-colr3);
 	width: 1px;
-	height: 16px;
+	height: 1.6rem;
 	content: '';
 }
 .score-desc-wrap .txt-list > li .title {
 	display: inline-block;
-	min-width: 83px;
+	min-width: 8.3rem;
 }
 
 /* table */
 /* .con-table thead th br, .con-table tbody th br {display: none;} */
 .con-wrap .con-table,
 .con-wrap .con-table-header {
-	margin-top: 40px;
+	margin-top: 4rem;
 }
 
 /* 노후준비종합진단-End */
@@ -2773,7 +2773,7 @@ input[type='number']::-webkit-inner-spin-button {
 /* 간단재무설계 S */
 .btn-group.divide {
 	justify-content: center;
-	margin-left: -16px;
+	margin-left: -1.6rem;
 }
 .btn-group.divide [class*='button'] {
 	margin-left: 16px;
@@ -2788,19 +2788,19 @@ input[type='number']::-webkit-inner-spin-button {
 /* 테이블 */
 .con-table + .con-table,
 .con-table + .con-table-header {
-	margin-top: 40px;
+	margin-top: 4rem;
 }
 .con-table-header.top {
-	margin-top: 56px;
+	margin-top: 5.6rem;
 }
 .con-table-header.low {
-	margin-top: 40px;
+	margin-top: 4rem;
 }
 
 /* pop_기타 이벤트 상세보기 */
 .smcolor1 {
 	color: var(--color-gray4);
-	font-size: 15px;
+	font-size: 1.5rem;
 }
 .boldcolor2 {
 	color: var(--color-gray2);
@@ -3338,16 +3338,6 @@ input.margin {
 	text-wrap: nowrap;
 }
 
-/* 체크박스 왼쪽 글자 */
-.inp-checkbox.left {
-	margin-right: 24px;
-	padding-right: 32px;
-	padding-left: 0;
-}
-.inp-checkbox.left input {
-	right: 0;
-	left: auto;
-}
 
 .max-none {
 	max-width: none !important;
