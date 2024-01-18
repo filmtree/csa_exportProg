@@ -1222,6 +1222,17 @@
 	font-weight: 700;
 }
 
+.modalWrap .btn-close {
+	position: absolute;
+	top: 2.5rem;
+	right: 2rem;
+	width: 5rem;
+	height: 5rem;
+	background: url("../images/ico/ic_modal_default_close.svg") center center no-repeat;
+	text-align: left;
+	text-indent: -9999px;
+}
+
 .modalWrap .modal-header .btn-close {
 	position: absolute;
 	top: 2.5rem;
@@ -1236,7 +1247,7 @@
 
 .modalWrap .modal-body {
 	overflow-y: auto;
-	max-height: calc(100vh - 20rem);
+	max-height: calc(1000px - 20rem);
 	min-height: 15rem;
 	padding: 0 3.2rem 4rem 3.2rem;
 }
@@ -1992,14 +2003,23 @@ input.useDatepicker {
 		font-size: 1.8rem;
 	}
 
-	.modal.full .modalWrap .modal-body {
-		height: calc(100% - 5.6rem - 6.4rem);
-		max-height: none;
-		padding-top: 2.4rem;
+	.modal.full .modalWrap .modal-body {		
+		overflow-y: visible;
+		padding: 0;
 	}
 
 	.modal.full .modalWrap .modal-body.h-full {
 		height: calc(100% - 5.6rem);
+	}
+
+	.modalWrap .modal-body .modal-body-inner {
+		padding: 4rem 3.2rem ;
+		height: calc(100vh - 5.6rem);
+		overflow-y: auto;
+	}
+
+	.modal.full .modalWrap:has(.modal-footer) .modal-body .modal-body-inner {
+		height: calc(100vh - 5.6rem - 6.4rem);
 	}
 
 	.modal.full .modalWrap .modal-header .btn-close {
@@ -2030,7 +2050,6 @@ input.useDatepicker {
 	.winPopup .modalWrap .modal-body {
 		padding-bottom: 8rem;
 	}
-
 	.winPopup .modalWrap .cont-head:first-child {
 		padding: 0;
 	}
@@ -2402,9 +2421,9 @@ input.useDatepicker {
 
 	/* ##modal 767 */
 	.modal.full .modalWrap .modal-body {
-		height: calc(100% - 5.6rem - 6.4rem);
+		height: calc(100vh - 5.6rem - 6.4rem);
 		max-height: none;
-		padding: 2.4rem 1.6rem 1.6rem;
+		/* padding: 2.4rem 1.6rem 1.6rem; */
 	}
 
 	.modal.full .modalWrap .modal-body.pad-none {
@@ -2415,6 +2434,18 @@ input.useDatepicker {
 		height: 6.4rem;
 		font-size: 1.8rem;
 	}
+
+	.modal.full .modalWrap .modal-body {
+		overflow-y: visible;
+		padding: 0;
+	}
+	
+	.modal.full .modalWrap .modal-body .modal-body-inner {
+		height: calc(100vh - 5.6rem);
+		padding: 4rem 3.2rem;
+		overflow-y: auto;
+	}
+
 
 	.winPopup .modalWrap .modal-body {
 		padding-bottom: 7rem;
