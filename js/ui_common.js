@@ -615,8 +615,8 @@ const commonUI = {
 				this._initEvents();
 			},
 			_initElements: function () {
-				this.tabNav_a = tab.querySelectorAll(".tabNav > li > a");
-				this.tabContent = tab.querySelectorAll(".tabContent");
+				this.tabNav_a = tab.querySelectorAll(`${target} > .tabNav > li > a`);
+				this.tabContent = tab.querySelectorAll(`${target} > .tabContent`);
 				this.activeName = "active";
 
 				if(optIndex != undefined && optIndex <= this.tabNav_a.length && 0 < optIndex ){

@@ -823,6 +823,7 @@
 .tab-total.type-inner {
 	margin-top: 4.8rem;
 } /* type-inner 클래스는 콘텐츠탭이 콘텐츠 상단에 붙지 않는경우에 사용됨 */
+
 .tab-total.type-inner .tabNav li {
 	background: var(--ui-colr4);
 }
