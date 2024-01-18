@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Title</title>
+
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <button type="button" class="button-primary" id="modalOpenButton">Open</button>
+
+    <div class="modal full dim" id="modalTemplate">
+      <div class="modalWrap h720px">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">CSA 자격시험 장소 안내</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <div class="con-table">
+              <table>
+                <caption>장소, 주소, 교통, 지도, 비고로 구성된 표.</caption>
+                <colgroup>
+                  <col style="width: 25%" />
+                  <col style="width: auto" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">장소</th>
+                    <td>한국방송통신대학교 대전충남지역대학</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">주소</th>
+                    <td><address>대전 유성구 오룡1길 112</address></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">교통</th>
+                    <td>
+                      <ul class="txt-list dot fs16">
+                        <li>
+                          북대전 IC에서 자동차로 고사장까지 5~6분 정도 소요
+                          <ul class="txt-list dot small fz14 gray outdent">
+                            <li>실제 이동시간은 추가로 소요될 수 있음</li>
+                          </ul>
+                        </li>
+                        <li>
+                          대중교통 이용 시 버스 권장
+                          <ul>
+                            <li>- 학교앞 : 918번, 첨단1번</li>
+                            <li>- 탑립종점 : 121번, 701번, 712번</li>
+                            <li>- 테크노밸리12단지 : 705번, 802번</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">지도</th>
+                    <td>
+                      <img src="../../images/temp/400x300.png" class="map-img-43" alt="자격시험 장소 지도">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">비고</th>
+                    <td>
+                      <ul>
+                        <li>학교 지하 주차장에 응시자 전원 주차 가능</li>
+                        <li>대중교총은 많지 않아 이용 시 소요 시간 확인</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+
+        <!-- s: Modal Footer -->
+        <div class="modal-footer">
+          <div class="btn-group">
+            <button type="button" class="btn-close button-primary -lg">닫기</button>
+          </div>
+        </div>
+        <!-- e: Modal Footer -->
+      </div>
+    </div>
+    <script>
+      document.querySelector("#modalOpenButton").addEventListener("click", () => {
+        commonUI.modal("#modalTemplate", "#modalOpenButton");
+      });
+    </script>
+  </body>
+</html>

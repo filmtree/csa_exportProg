@@ -300,6 +300,18 @@ legend,
 	align-items: flex-end !important;
 }
 
+.d-flex-sb {
+	display: flex !important;
+	justify-content: space-between !important;
+	align-items: center !important;
+}
+
+.d-flex-sa {
+	display: flex !important;
+	justify-content: space-around !important;
+	align-items: center !important;
+}
+
 .d-flex-dr {
 	flex-direction: row;
 }
@@ -314,19 +326,16 @@ legend,
 	flex-wrap: wrap;
 }
 
-.d-flex-sb {
-	justify-content: space-between;
-}
-.d-flex-sa {
-	justify-content: space-around;
-}
-
 .flex-1 {
 	flex: 1 1 0;
 }
 
 .flex-0 {
 	flex: 0 1 auto;
+}
+
+.flex-00 {
+	flex: 0 0 auto;
 }
 
 
@@ -707,8 +716,85 @@ legend,
 
 /* ##margin */
 .mg0 {
-	margin: 0;
+	margin: 0 !important;
 }
+.mg4 {
+	margin: .4rem !important;
+}
+.mg8 {
+	margin: .8rem !important;
+}
+.mg16 {
+	margin: 1.6rem !important;
+}
+.mg24 {
+	margin: 2.4rem !important;
+}
+.mg32 {
+	margin: 3.2rem !important;
+}
+.mg40 {
+	margin: 4rem !important;
+}
+
+.mv0 {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+.mv4 {
+	margin-top: .4rem !important;
+	margin-bottom: .4rem !important;
+}
+.mv8 {
+	margin-top: .8rem !important;
+	margin-bottom: .8rem !important;
+}
+.mv16 {
+	margin-top: 1.6rem !important;
+	margin-bottom: 1.6rem !important;
+}
+.mv24 {
+	margin-top: 2.4rem !important;
+	margin-bottom: 2.4rem !important;
+}
+.mv32 {
+	margin-top: 3.2rem !important;
+	margin-bottom: 3.2rem !important;
+}
+.mv40 {
+	margin-top: 4rem !important;
+	margin-bottom: 4rem !important;
+}
+
+.mh0 {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+.mh4 {
+	margin-left: .4rem !important;
+	margin-right: .4rem !important;
+}
+.mh8 {
+	margin-left: .8rem !important;
+	margin-right: .8rem !important;
+}
+.mh16 {
+	margin-left: 1.6rem !important;
+	margin-right: 1.6rem !important;
+}
+.mh24 {
+	margin-left: 2.4rem !important;
+	margin-right: 2.4rem !important;
+}
+.mh32 {
+	margin-left: 3.2rem !important;
+	margin-right: 3.2rem !important;
+}
+.mh40 {
+	margin-left: 4rem !important;
+	margin-right: 4rem !important;
+}
+
 .mt0 {
 	margin-top: 0 !important;
 }
@@ -1838,15 +1924,15 @@ legend,
 }
 
 /* Grid Width */
-.con-table .grid-min-width {
+.con-table.grid-min-width table {
 	min-width: var(--grid-minWidth);
 }
 
-.con-table .grid-wide-width {
+.con-table.grid-wide-width table {
 	min-width: 100rem;
 }
 
-.con-table .grid-fit-width {
+.con-table.grid-fit-width table {
 	min-width: 120rem;
 }
 
@@ -1938,6 +2024,14 @@ legend,
 	height: 14px;
 	background-size: cover;
 }
+
+/* ======================================= Image ======================================= */
+
+.map-img-43 {
+	width: 100%;
+	aspect-ratio: 4/3;
+}
+
 
 /* ======================================= Form UI ======================================= */
 
@@ -2227,6 +2321,13 @@ button,
 	font-weight: 500;
 	line-height: 1;
 }
+
+*[class*="button-"]:has(.ic-only) {
+	display: flex;
+	align-items: center !important;
+	padding: .4rem 1.6rem;
+}
+
 
 .button-primary {
 	background-color: var(--color-primary);
@@ -3087,12 +3188,29 @@ button,
 	margin-top: .8rem;
 }
 
+.txt-list.narrow > li ~ li {
+	margin-top: .4rem;
+}
+
+.txt-list.not-space > li ~ li {
+	margin-top: 0;
+}
+
 .txt-list > ul ~ ul {
 	margin-top: .4rem;
 }
 
+.txt-list > ul > li > ul {
+	margin-top: .8rem;
+}
+
 .txt-list > ul ~ ul li ~ li {
 	margin-top: .4rem;
+}
+
+.txt-list ~ .txt-list.small {
+	margin-top: .8rem;
+	margin-bottom: 0;
 }
 
 .txt-list + * {
@@ -3172,6 +3290,44 @@ button,
 .txt-list .txt-list {
 	margin-bottom: 0 !important;
 }
+
+.outdent {
+	margin-left: -1rem !important;
+}
+
+.td-txt-list {}
+
+.td-txt-list > li {
+	position: relative;
+	padding-left: 1.1rem;
+	font-size: 16px;
+	line-height: 1.6;
+	font-weight: var(--font-Noto-regular);
+	letter-spacing: .08rem;
+}
+
+	.td-txt-list > li::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 50%;
+		width: .3rem;
+		height: .3rem;
+		border-radius: 50%;
+		background-color: #444444;
+		transform: translateY(-50%);
+	}
+
+	.td-txt-list > li > * {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	.box-text-list {
+		border: 1px solid #e5e5e5;
+		padding: 2.4rem;
+	}
 
 
 /* Page Common ========================================================================================== */

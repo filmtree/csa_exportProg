@@ -244,6 +244,12 @@
 	min-width: 110rem;
 }
 
+.con-table .board-wrap,
+.modal .con-table table {
+	min-width: 0 !important;
+}
+
+
 /* ==================================================== Contents Page ==================================================== */
 
 /* 온라인 상담 */
@@ -2839,8 +2845,8 @@ input[type='number']::-webkit-inner-spin-button {
 	box-sizing: border-box;
 	border: 1px var(--ui-colr2) solid;
 	border-bottom: 1px var(--color-primary) solid;
-	padding: 8px;
-	padding-bottom: 0;
+	padding: 0 8px;
+	/* padding-bottom: 0; */
 	height: 100%;
 	color: var(--color-gray5);
 	font-weight: 400;

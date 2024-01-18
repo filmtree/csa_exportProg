@@ -60,6 +60,7 @@ h1, h2, h3, h4, h5,h6 {
 
 em, i, address, small, cite,code {
   font-style: normal;
+  display: inline;
 }
 
 b {
