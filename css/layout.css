@@ -1236,9 +1236,28 @@
 
 .modalWrap .modal-body {
 	overflow-y: auto;
-	height: calc(100% - 10rem - 6.4rem);
+	max-height: calc(100vh - 20rem);
 	min-height: 15rem;
 	padding: 0 3.2rem 4rem 3.2rem;
+}
+
+.modalWrap .modal-body:has(.h720px) {
+	overflow-y: visible;
+	padding: 0;
+}
+
+.modalWrap .modal-body .h720px {
+	height: calc(720px - 10.4rem);
+	overflow-y:auto;
+	padding: 0 3.2rem 4rem 3.2rem;
+}
+
+.modalWrap.h720px:has(.modal-footer) .modal-body {
+	height: calc(720px - 10.4rem - 6.4rem);
+}
+
+.modalWrap.h720px .modal-body {
+	height: calc(720px - 10.4rem);
 }
 
 .modalWrap .modal-body .cont-title {

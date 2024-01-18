@@ -1376,7 +1376,7 @@ legend,
 	height: 32rem !important;
 }
 .h720px {
-	height: 72rem !important;
+	/* height: 72rem !important; */
 }
 
 .min-w50px {
