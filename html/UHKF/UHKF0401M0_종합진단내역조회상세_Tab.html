@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- s: header -->
+      <header id="header"></header>
+      <!-- e: header -->
+
+      <!-- s: Loaction Information Link -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-nav">
+          <ol class="breadcrumb-location">
+            <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+            <li class="breadcrumb-depth dep1">
+              <button type="button" class="breadcrumb-trigger">마이페이지</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                <li><a href="#none" target="_self">재무진단</a></li>
+                <li><a href="#none" target="_self">노후준비정보</a></li>
+                <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                <li class="current"><a href="#none" target="_self">마이페이지</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger current">종합진단 내역 조회</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">내 연금정보</a></li>
+                <li><a href="#none" target="_self">종합재무설계내역 조회</a></li>
+                <li class="current"><a href="#none" target="_self">종합진단 내역 조회</a></li>
+                <li><a href="#none" target="_self">교육신청 내역 조회</a></li>
+                <li><a href="#none" target="_self">CSA관련 조회</a></li>
+                <li><a href="#none" target="_self">CSA교육 조회</a></li>
+                <li><a href="#none" target="_self">CSA시험 조회</a></li>
+                <li><a href="#none" target="_self">나의 자격증 등록 조회</a></li>
+              </ul>
+            </li>
+            <!-- <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger current">나의 CSA 내역 조회</button>
+              <ul class="breadcrumb-depth-list">
+                <li class="current"><a href="#none" target="_self">나의 CSA 내역 조회</a></li>
+                <li><a href="#none" target="_self">CSA 교육 수료내역 조회</a></li>
+                <li><a href="#none" target="_self">CSA 시험 수험표 출력</a></li>
+                <li><a href="#none" target="_self">CSA 시험 결과보기</a></li>
+                <li><a href="#none" target="_self">CSA 합격증서 조회</a></li>
+              </ul>
+            </li> -->
+          </ol>
+        </div>
+      </div>
+      <!-- e: Loaction Information Link -->
+
+      <!-- s: Main -->
+      <main id="conatiner" class="mypage comprehensive-history-details">
+        <!--s: Page Title-->
+        <div class="page-header">
+          <div class="page-title">
+            <a href="#" class="ic-only back">뒤로가기</a>
+            <h2>종합진단 내역 조회 상세</h2>
+          </div>
+          <div class="page-desc">
+            <button type="button" class="page-desc-btn _has-tooltip" title="종합진단 내역 조회 안내 보기">
+              <span>종합진단 내역 조회 안내</span>
+              <i class="ic-only f-pg-desc" aria-hidden="true"></i>
+            </button>
+            <div class="desc-box _tooltipbox" role="tooltip">
+              <div class="desc-box-inner">
+                <div class="desc-content">
+                  <h4 class="sr-only">종합진단 내역 조회 안내</h4>
+                  <p>
+                    노후생활에 대한 꾸준한 관심과 준비로 행복한 노후를 맞이하시기 바랍니다.<br />
+                    최근 10개까지 조회 가능합니다.
+                  </p>
+                </div>
+                <button type="button" class="ic-only box-close">창닫기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--e: Page Title-->
+
+        <!--s: Contents -->
+        <div class="content-wrap">
+          <!-- s: 텍스트 박스-->
+          <div class="color-box none develop">
+            <div class="alert-txt-box">
+              <p class="alert-txt">홍길동 고객님</p>
+              <p>노후준비 진단 내역을 확인하실 수 있습니다.</p>
+              <p>노후생활에 대한 꾸준한 관심과 준비로 행복한 노후를 맞이하시기 바랍니다.(최근 10개까지 조회가 가능합니다.)</p>
+            </div>
+          </div>
+          <!-- e: 텍스트 박스-->
+
+          <!-- ========  s: Tab Contents ======== -->
+          <div class="tabWrap tab-base tab-total">
+            <!-- ========  s: Tab Buttons ======== -->
+            <ul class="tabNav">
+              <li><a href="#none" id="tabNav1" role="tab">기본사항</a></li>
+              <li><a href="#none" id="tabNav2" role="tab">재무</a></li>
+              <li><a href="#none" id="tabNav3" role="tab">건강</a></li>
+              <li><a href="#none" id="tabNav4" role="tab">여가활동</a></li>
+              <li><a href="#none" id="tabNav5" role="tab">대인관계</a></li>
+              <li><a href="#none" id="tabNav6" role="tab">종합진단결과</a></li>
+            </ul>
+            <!-- ========  e: Tab Buttons ======== -->
+
+            <!-- ========  s: Tab Panel 1 ======== -->
+            <div class="tabContent" role="tabpanel" aria-labelledby="tabNav1">
+              <div class="con-head">
+                <h3 class="cont-title dot">진단결과</h3>
+              </div>
+              <div class="con-table all-center">
+                <table>
+                  <caption>
+                    구분, 재무, 건강, 여가활동, 대인관계, 종합진단결과로 구성된 표.
+                  </caption>
+                  <colgroup>
+                    <col style="width: 15%" />
+                    <col style="width: 15%" />
+                    <col style="width: 15%" />
+                    <col style="width: 15%" />
+                    <col style="width: 15%" />
+                    <col style="width: 15%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">구분</th>
+                      <th scope="col">재무</th>
+                      <th scope="col">건강</th>
+                      <th scope="col">여가활동</th>
+                      <th scope="col">대인관계</th>
+                      <th scope="col">종합진단결과</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">점수</th>
+                      <td>93.4</td>
+                      <td>44.6</td>
+                      <td>40.9</td>
+                      <td>52.2</td>
+                      <td>61.5</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">노후준비수준</th>
+                      <td>상</td>
+                      <td>하</td>
+                      <td>하</td>
+                      <td>하</td>
+                      <td>중</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">노후준비유형</th>
+                      <td>노후준비가 충분한 사적자산형</td>
+                      <td>건강주의군 비실천형</td>
+                      <td>비활발군 비실천형</td>
+                      <td>사회적 관계망이 큰 비친밀형</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- s: 하단 버튼 -->
+              <div class="cont-bottom">
+                <div class="btn-group">
+                  <button type="button" class="button-secondary -lg">현재진단유지</button>
+                  <button type="button" class="button-primary -lg">다시 진단</button>
+                </div>
+              </div>
+              <!-- e: 하단 버튼 -->
+            </div>
+            <!-- ========  e: Tab Panel 1 ======== -->
+
+            <!-- ========  s: Tab Panel 2 ======== -->
+            <div class="tabContent" role="tabpanel" aria-labelledby="tabNav2">
+              <h3 class="cont-title dot">나의 재무 진단결과</h3>
+              <div class="color-box">
+                <dl class="result-type-blue">
+                  <dt>노후준비가 충분한 사적 자산형</dt>
+                  <dd>가깝게 지내는 사람들의 수도 적고 이들과의 친밀도도 낮은 유형</dd>
+                </dl>
+                <p class="alert-txt">필요생활비 : 개인 177만원, 부부 277만원, 국민노후보장패널조사(2021)</p>
+              </div>
+              <!-- 
+                  status-txt에 class 추가
+                  여유: spare 
+                  유지: maintain
+                  적정: appropriate
+                  준비: preparate
+                  부족: shortage
+                  보통: normal
+              -->
+              <ul class="data-type-list">
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">예상 노후생활비</dt>
+                    <dd class="description">177만원보다 (123)만원 많음</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt spare">
+                      <span>여유</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">준비된 소득</dt>
+                    <dd class="description">177만원보다 (123)만원 많음</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt maintain">
+                      <span>유지</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">공적연금</dt>
+                    <dd class="description">40대 평균보다 높음</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt appropriate">
+                      <span>적정</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">금융자산</dt>
+                    <dd class="description">40대 평균보다 높음</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt preparate">
+                      <span>준비</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">퇴직연금</dt>
+                    <dd class="description">40대 평균보다 높음</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt shortage">
+                      <span>부족</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">부동산자산</dt>
+                    <dd class="description">40대 평균보다 높음</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt normal">
+                      <span>보통</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">개인연금</dt>
+                    <dd class="description">40대 평균보다 높음</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt preparate">
+                      <span>준비</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">소득활동</dt>
+                    <dd class="description">제 2의 일 관심있음</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt preparate">
+                      <span>준비</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items color">
+                  <dl class="unit-group">
+                    <dt class="unit-title">연금구성</dt>
+                    <dd class="description">
+                      <p>공적연금</p>
+                      <p>퇴직연금</p>
+                      <p>개인연금</p>
+                    </dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status">
+                      <p>40%</p>
+                      <p>141%</p>
+                      <p>75%</p>
+                    </div>
+                    <div class="status-txt none">
+                      <span>1층</span>
+                      <span>2층</span>
+                      <span>3층</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">노후생활비 계산 여부</dt>
+                    <dd class="description">계산안함</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt shortage">
+                      <span>부족</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+              <p class="cont-title dot">위의 유형이 실천할 사항</p>
+              <div class="color-box box-inner-list">
+                <ul class="txt-list dot blue">
+                  <li>공적연금을 통한 노후소득 안정성을 추가로 확보하시기 바랍니다.</li>
+                  <li>국민연금 납부기간 연장, 납부금액 증액, 배우자 국민연금 가입 등에 대한 상담을 받으시기 바랍니다.</li>
+                  <li>노후준비서비스 중 재무적인 부분에 대한 심층상담인 종합재무설계 상담서비스 또는 사기업 금융 전문 상담 서비스를 추가적으로 받으시기 바랍니다.</li>
+                </ul>
+              </div>
+
+              <!-- s: 하단 버튼-->
+              <div class="cont-bottom">
+                <div class="btn-group">
+                  <button type="button" class="button-primary -lg">진단결과 출력</button>
+                </div>
+              </div>
+              <!-- e: 하단 버튼-->
+            </div>
+            <!-- ========  e: Tab Panel 2 ======== -->
+
+            <!-- ========  s: Tab Panel 3 ======== -->
+            <div class="tabContent" role="tabpanel" aria-labelledby="tabNav3">
+              <h3 class="cont-title dot">나의 건강 진단결과</h3>
+              <div class="color-box">
+                <dl class="result-type-orange">
+                  <dt>건강주의군 비실천형</dt>
+                  <dd>현재 건강상태가 양호하지 않으며 건강 생활습관 역시 갖추지 못한 유형</dd>
+                </dl>
+              </div>
+              <!-- 
+                  status-txt에 class 추가
+                  여유: spare 
+                  유지: maintain
+                  적정: appropriate
+                  준비: preparate
+                  부족: shortage
+                  보통: normal
+              -->
+              <ul class="data-type-list">
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">주관적 건강상태</dt>
+                    <dd class="description">보통</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt appropriate">
+                      <span>적정</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">만성질병</dt>
+                    <dd class="description">없음</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt spare">
+                      <span>여유</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">스트레스</dt>
+                    <dd class="description">많이 느끼는편, 관리하지 않음</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt shortage">
+                      <span>부족</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">체질량지수 (BMI)</dt>
+                    <dd class="description">BMI (19.49), 정상체중</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt spare">
+                      <span>여유</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">구강 관리</dt>
+                    <dd class="description">잘 관리중</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt spare">
+                      <span>여유</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">규칙적 운동</dt>
+                    <dd class="description">노력필요</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt spare">
+                      <span>여유</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">체중유지</dt>
+                    <dd class="description">노력필요</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt shortage">
+                      <span>부족</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">충분한 수면</dt>
+                    <dd class="description">하고 있지 못함</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt shortage">
+                      <span>부족</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">정기적 건강검진</dt>
+                    <dd class="description">받고있음</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt spare">
+                      <span>여유</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">영양 섭취</dt>
+                    <dd class="description">잘 하고 있음</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt spare">
+                      <span>여유</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">흡연</dt>
+                    <dd class="description">금연 중</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt spare">
+                      <span>여유</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">음주</dt>
+                    <dd class="description">적정</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt spare">
+                      <span>여유</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items color">
+                  <dl class="unit-group">
+                    <dt class="unit-title">나에게 맞는 운동 계획 수립</dt>
+                    <dd class="description">
+                      <p>언제</p>
+                      <p>어디서</p>
+                      <p>무엇을</p>
+                    </dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status">
+                      <p>월요일</p>
+                      <p>운동센터</p>
+                      <p>워킹, 조깅</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">식습관 평가하기 중 <br />개선할 사항</dt>
+                    <dd class="description">
+                      <p>
+                        어패류(생선, 오징어, 조개 등)를 일주일에 3번 이상 먹는다. <br />
+                        뜨거운 음식을 즐겨 먹지 않는다.<br />
+                        단 음식(아이스크림, 케이크, 스낵, 탄산음료, 꿀, 엿, 설탕 등)을 매일 섭취하지 않는다.
+                      </p>
+                    </dd>
+                  </dl>
+                </li>
+              </ul>
+
+              <p class="cont-title dot">위의 유형이 실천할 사항</p>
+              <div class="color-box box-inner-list">
+                <ul class="txt-list dot blue">
+                  <li>적절한 운동과 식습관 점검 및 전문가 상담을 통한 건강한 생활습관 실천이 필요합니다.</li>
+                  <li>만성진환 완화 방법, 스트레스 원인 파악 및 대처 등 정보를 수집하여 실천하시기 바랍니다.</li>
+                  <li>건강상태가 개선을 위한 모임이나 프로그램이 있다면 참여해 보시기 바랍니다.</li>
+                </ul>
+              </div>
+
+              <div class="cont-bottom">
+                <div class="btn-group">
+                  <button type="button" class="button-tertiary -lg">이전</button>
+                  <button type="submit" class="button-primary -lg">여가활동 진단</button>
+                </div>
+              </div>
+            </div>
+            <!-- ========  e: Tab Panel 3 ======== -->
+
+            <!-- ========  s: Tab Panel 4 ======== -->
+            <div class="tabContent" role="tabpanel" aria-labelledby="tabNav4">
+              <h3 class="cont-title dot">나의 여가활동 진단결과</h3>
+              <div class="color-box">
+                <dl class="result-type-green">
+                  <dt>활발군 비실천형</dt>
+                  <dd>노후 여가생활의 중요성에 대한 인식과 준비는 다소 미흡하지만, 현재의 여가생활은 적극적으로 하고 있는 유형</dd>
+                </dl>
+              </div>
+              <!-- 
+                  status-txt에 class 추가
+                  여유: spare 
+                  유지: maintain
+                  적정: appropriate
+                  준비: preparate
+                  부족: shortage
+                  보통: normal
+              -->              
+              <ul class="data-type-list">
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">여가활동 상태</dt>
+                    <dd class="description">40대 평균과 같거나 높음</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt spare">
+                      <span>여유</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">노후 여가활동 인식 및 준비도</dt>
+                    <dd class="description">40대 평균보다 낮음</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt shortage">
+                      <span>부족</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">여가성향진단</dt>
+                    <dd class="description">
+                      <p>취미형 능력개발형</p>
+                      <p>사진촬영, 악기연주, 미술활동, 글짓기, 독서토론, 전통예술 배우기, 배드민턴, 테니스, 볼링/탁구, 사이클링, 스키, 수상스키, 댄스스포츠, UCC제작, 생활공예</p>
+                    </dd>
+                  </dl>
+                </li>
+              </ul>
+
+              <p class="cont-title dot">위의 유형이 노후준비를 위해 실천할 사항</p>
+              <div class="color-box box-inner-list">
+                <ul class="txt-list dot blue">
+                  <li>현재 여가활동 중 노후에도 지속 가능한 활동을 파악하거나, 새로운 여가활동을 개발해 보시기 바랍니다.</li>
+                </ul>
+              </div>
+
+              <div class="cont-bottom">
+                <div class="btn-group">
+                  <button type="button" class="button-tertiary -lg">이전</button>
+                  <button type="submit" class="button-primary -lg">대인관계 진단</button>
+                </div>
+              </div>
+            </div>
+            <!-- ========  e: Tab Panel 4 ======== -->
+
+            <!-- ========  s: Tab Panel 5 ======== -->
+            <div class="tabContent" role="tabpanel" aria-labelledby="tabNav5">
+              <h3 class="cont-title dot">나의 대인관계 진단결과</h3>
+              <div class="color-box">
+                <dl class="result-type-orange">
+                  <dt>사회적 관계망이 작은 비친밀형</dt>
+                  <dd>가깝게 지내는 사람들의 수도 적고 이들과의 친밀도도 낮은 유형</dd>
+                </dl>
+              </div>
+              <!-- 
+                  status-txt에 class 추가
+                  여유: spare 
+                  유지: maintain
+                  적정: appropriate
+                  준비: preparate
+                  부족: shortage
+                  보통: normal
+              -->              
+              <ul class="data-type-list">
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">전반적 대인관계 만족도</dt>
+                    <dd class="description">보통</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt appropriate">
+                      <span>적정</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">가족과의 관계</dt>
+                    <dd class="description">40대 평균과 같거나 높음</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt spare">
+                      <span>여유</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">친구/이웃/직장동료와의 관계</dt>
+                    <dd class="description">40대 평균과 같거나 높음</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt spare">
+                      <span>여유</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">참석하는 모임에서의 친밀도</dt>
+                    <dd class="description">40대 평균과 같거나 높음</dd>
+                  </dl>
+                  <div class="unit-group">
+                    <div class="status-txt spare">
+                      <span>여유</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="items">
+                  <dl class="unit-group">
+                    <dt class="unit-title">나의 대인관계 스타일</dt>
+                    <dd class="description">
+                      <p>개방형</p>
+                      <p>적절하게 자기표현을 잘 하고 다른 사람의 말도 잘 경청하며 다른 사람에게 호감과 친밀감을 주게 되어 인기가 많음.</p>
+                    </dd>
+                  </dl>
+                </li>
+              </ul>
+
+              <p class="cont-title dot">위의 유형이 노후준비를 위해 실천할 사항</p>
+              <div class="color-box box-inner-list">
+                <ul class="txt-list dot blue">
+                  <li>소극적 대인관계 원인 파악 후 개선을 위해 노력해 보시기 바랍니다.</li>
+                  <li>대인관계 규모 확대 및 친밀도 향상을 위해 노력해 보시기 바랍니다.</li>
+                </ul>
+              </div>
+
+              <div class="cont-bottom">
+                <div class="btn-group">
+                  <button type="button" class="button-tertiary -lg">이전</button>
+                  <button type="submit" class="button-primary -lg">종합 진단결과</button>
+                </div>
+              </div>
+            </div>
+            <!-- ========  e: Tab Panel 5 ======== -->
+
+            <!-- ========  s: Tab Panel 6 ======== -->
+            <div class="tabContent" role="tabpanel" aria-labelledby="tabNav6">
+              <h3 class="blind">나의 노후준비 수준 결과</h3>
+              <div class="score-wrap">
+                <div class="score">
+                  <p>나의 종합점수</p>
+                  <p class="score-txt">97.4</p>
+                </div>
+                <div class="score-desc-wrap">
+                  <p class="cont-title dot">나의 노후준비 수준</p>
+                  <ul class="txt-list dot small">
+                    <li>
+                      <span class="title">연령대 평균</span>
+                      <span class="bar">69.3점</span>
+                    </li>
+                    <li>
+                      <span class="title">나의 수준</span>
+                      <span class="bar">중</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="con-table-header">
+                <h4 class="blind">나의 노후준비 수준 평균 결과</h4>
+                <span class="txt-helper">단위 : 점</span>
+              </div>
+              <div class="con-table all-center">
+                <table summary="">
+                  <caption>
+                    재무, 건강, 여가활동, 대인관계, 연령대평균, 본인점수, 상대적수준으로 구성된 표.
+                  </caption>
+                  <colgroup>
+                    <col />
+                    <col style="width: 20%" />
+                    <col style="width: 20%" />
+                    <col style="width: 20%" />
+                    <col style="width: 20%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">&nbsp;</th>
+                      <th scope="col">재무</th>
+                      <th scope="col">건강</th>
+                      <th scope="col">여가<br />활동</th>
+                      <th scope="col">대인<br />관계</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">연령대<br />평균</th>
+                      <td>61.9</td>
+                      <td>76.0</td>
+                      <td>60.3</td>
+                      <td>69.8</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">본인<br />점수</th>
+                      <td>89.2</td>
+                      <td>58.5</td>
+                      <td>53.6</td>
+                      <td>52.4</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">상대적<br />수준</th>
+                      <td>상</td>
+                      <td>하</td>
+                      <td>중</td>
+                      <td>하</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <ul class="txt-list dot gray top">
+                  <li>평균점수는 전 국민 설문조사 결과를 바탕으로 작성하였습니다.</li>
+                  <li>노후준비수준 (상위 25% / 이상 25~75% / 하위 25%미만)</li>
+                </ul>
+              </div>
+              <p class="cont-title dot">나의 노후준비 수준 비교</p>
+              <p class="cont-desc">4대 영역 노후준비는 연령대 평균과 비교하여 특정 영역의 점수가 지나치게 낮은 경우 해당 영역을 먼저 개선하는 방향으로 노후준비를 하시기 바랍니다.</p>
+              <div class="graph-box1 full">그래프 영역</div>
+              <div class="txt-box">
+                <p class="detail">자세한 상담은 16개 노후준비지원센터의 노후준비전문상담사를 만나보세요</p>
+                <p class="calling">문의 : 국번없이 <span class="color-point">1355</span>(유료)</p>
+                <p class="rel-txt">※ 국민연금 노후준비서비스는 「국민연금법」과 「노후준비지원법」에 의해 제공되는 국가복지사업으로 모든 서비스는 무료로 제공됩니다.</p>
+              </div>
+
+              <div class="cont-bottom">
+                <div class="btn-group">
+                  <button type="button" class="button-tertiary -lg">이전</button>
+                  <button type="submit" class="button-primary -lg">다시 진단하기</button>
+                </div>
+              </div>
+            </div>
+            <!-- ========  e: Tab Panel 6 ======== -->
+          </div>
+          <!-- ========  e: Tab Contents ======== -->
+          <script>
+            commonUI.tabNav(".tabWrap", 1);
+          </script>
+        </div>
+        <!--s: Contents -->
+
+        <!-- s: Common UI - Survey -->
+        <div class="page-satisfaction"></div>
+        <!-- e: Common UI - Survey -->
+      </main>
+      <!-- e: Main -->
+
+      <!-- s: footer -->
+      <footer id="footer"></footer>
+      <!-- e: footer -->
+    </div>
+  </body>
+</html>

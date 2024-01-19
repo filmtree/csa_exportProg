@@ -2670,11 +2670,6 @@ input[type='number']::-webkit-inner-spin-button {
 	aspect-ratio: auto 2.4/1;
 }
 
-.graph-box1 > * {
-	width: 100% !important;
-	aspect-ratio: auto 4/2.897 !important;
-}
-
 .graph-box1 > svg {
 	width: 100% !important;
 	aspect-ratio: auto 4/2.897 !important;
@@ -2729,6 +2724,11 @@ input[type='number']::-webkit-inner-spin-button {
 	margin-top: 5.6rem;
 	margin-bottom: .8rem;
 }
+
+.tabContent .score-wrap:first-of-type {
+	margin-top: 0;
+}
+
 .score {
 	display: flex;
 	flex-direction: column-reverse;
@@ -4383,7 +4383,7 @@ input.margin {
 		width: calc(100% / 3);
 	}
 	.cont-bottom .btn-group button {
-		padding: 1.5rem 1rem;
+		padding: 1rem;
 		letter-spacing: -0.07em;
 	}
 	.pension-plan .plan-step05 .divide-type {
@@ -5250,6 +5250,7 @@ input.margin {
 		margin: 0 -16px;
 		background: var(--ui-colr3);
 		padding-top: 16px;
+		min-width: 40rem;
 	}
 	.tab-total .tabNav li {
 		height: auto;

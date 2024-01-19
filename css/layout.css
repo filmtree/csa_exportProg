@@ -1329,6 +1329,10 @@
 }
 
 /* ##tab - Tab_4depth */
+.tabWrap {
+	position: relative;
+}
+
 .tabWrap .tabContent {
 	display: none;
 }
@@ -1340,6 +1344,7 @@
 .tabWrap .tabContent.pos-sw {
 	display: block;
 	position: absolute;
+	width: 100%;
 	left: -99999px;
 }
 
