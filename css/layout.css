@@ -1222,17 +1222,6 @@
 	font-weight: 700;
 }
 
-.modalWrap .btn-close {
-	position: absolute;
-	top: 2.5rem;
-	right: 2rem;
-	width: 5rem;
-	height: 5rem;
-	background: url("../images/ico/ic_modal_default_close.svg") center center no-repeat;
-	text-align: left;
-	text-indent: -9999px;
-}
-
 .modalWrap .modal-header .btn-close {
 	position: absolute;
 	top: 2.5rem;
