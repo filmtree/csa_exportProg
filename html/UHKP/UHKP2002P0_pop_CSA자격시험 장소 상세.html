@@ -29,6 +29,7 @@
           <div class="modal-title">
             <h3 class="cont-title">CSA 자격시험 장소 안내</h3>
           </div>
+          <button class="btn-close">모달창닫기</button>
         </div>
         <!-- e: Modal Header -->
 
@@ -37,7 +38,9 @@
           <div class="modal-body-inner">
             <div class="con-table">
               <table>
-                <caption>장소, 주소, 교통, 지도, 비고로 구성된 표.</caption>
+                <caption>
+                  장소, 주소, 교통, 지도, 비고로 구성된 표.
+                </caption>
                 <colgroup>
                   <col style="width: 25%" />
                   <col style="width: auto" />
@@ -75,7 +78,7 @@
                   <tr>
                     <th scope="row">지도</th>
                     <td>
-                      <img src="../../images/temp/400x300.png" class="map-img-43" alt="자격시험 장소 지도">
+                      <img src="../../images/temp/400x300.png" class="map-img-43" alt="자격시험 장소 지도" />
                     </td>
                   </tr>
                   <tr>
@@ -102,7 +105,8 @@
         </div>
         <!-- e: Modal Footer -->
       </div>
-      <button class="btn-close">모달창닫기</button>
+      <!-- 화면 우측 상단의 모달 닫기는 물리위치는 상단이지맘 논리 위치가 가장 뒷 순서이기 때문에 이곳으로 와야함. -->
+      <!-- <button class="btn-close">모달창닫기</button> -->
     </div>
     <script>
       document.querySelector("#modalOpenButton").addEventListener("click", () => {

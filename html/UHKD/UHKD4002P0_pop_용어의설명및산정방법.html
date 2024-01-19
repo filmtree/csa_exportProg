@@ -1,140 +1,141 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>노후준비종합서비스</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
-	<script src="../../js/lib/jquery-ui.min.js"></script>
-	<script src="../../js/lib/jquery.easing.min.js"></script>
-	<script src="../../js/lib/swiper-bundle.min.js"></script>
-	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
-	<script src="../../js/zoom.js"></script>
-	<script src="../../js/ui_temp.js"></script>
-	<script src="../../js/ui_common.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
 
-	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <style>
-    </style>
-</head>
-<body>
-    
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
     <!-- 용어의 설명 및 산정방법-->
-    <div class="modal full dim" id="pop-cash" style="display: block;">
-        <div class="modalWrap">
-            <div class="modal-header">
-                <div class="modal-title">
-                    <h3 class="cont-title">용어의 설명 및 산정방법</h3>
-                </div>
-            </div>
-            <div class="modal-body">
-                <!-- 내용시작 -->
-                <div class="modal-body-inner h720px">
-                    <h3 class="blind">용어의 설명 및 산정방법</h3>
-                    <p class="cont-desc small">
-                        국민연금액은 전체 가입자의 평균소득월액과 고객님의 가입기간 중 기준소득월액 평균액을 반영하여 산정되므로 예상연금액 미래가치는 평균소득상승률과 기준소득상승률에 따라 달라집니다. <br>
-                        홈페이지에서의 미래가치 예상연금액은 최근 5년간의 경제변수 실적치를 반영하여 단일가정이 아닌 다양한 산정조건(최근 5개년 간 소득상승률의 최저․평균․최고치)으로 확인해 보실 수 있도록 하였습니다.<br>
-                        이에 따라 맞춤형 예상연금액 조회가 가능해졌지만 실제로 받게 되는 연금액은 향후 가입자의 가입이력과 해마다 변동되는 경제변수의 실현 값에 따라 달라지므로 참고하시기 바랍니다.
-                    </p>
-                    <p class="cont-title">변경 전·후 비교</p>
-                    <div class="con-table all-center">
-                        <table class="min-w600px" summary="구분, 2022년 기준, 2023년 기준, 비고가 나열된 표 입니다.">
-                            <caption>변경 전 후 비교</caption>
-                            <colgroup>
-                                    <col style="width:30%" />
-                                    <col style="width:20%" />
-                                    <col style="width:20%" />
-                                    <col />
-                            </colgroup>
-                            <thead>
-                                <tr>						
-                                    <th scope="col">구분</th>
-                                    <th scope="col">2022년 기준</th>
-                                    <th scope="col">2023년 기준</th>
-                                    <th scope="col">비고</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>						
-                                    <td>전체가입자<br />평균소득상승률</td>
-                                    <td>3.3%, 4.1%, 4.9%</td>
-                                    <td>3.3%, 4.4%, 5.2%</td>
-                                    <td>최근 5년(2018~2022)간 최저, 평균, 최고치 적용</td>
-                                </tr>
-                                <tr>						
-                                    <td>가입자 기준소득월액 상승률</td>
-                                    <td>3.3%, 4.1%, 4.9%</td>
-                                    <td>3.3%, 4.4%, 5.2%</td>
-                                    <td>직접 선택 입력 가능</td>
-                                </tr>
-                                <tr>						
-                                    <td>물가상승률</td>
-                                    <td class="ac">1.4%</td>
-                                    <td class="ac">2.0%</td>
-                                    <td>최근 5년(2018~2022)간 평균값</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>                    
-                    <p class="cont-title small">1. 용어 설명</p>
-                    <ol class="txt-list">
-                        <li><strong>① 평균소득상승률 :</strong> 국민연금 가입자(지역, 사업장) 전체의 평균소득 상승률</li>
-                        <li><strong>② 기준소득상승률 :</strong> 가입자 개인의 소득 상승률</li>
-                        <li><strong>③ 납부보험료 총액 :</strong> 현재의 기준소득금액으로 만60세까지 납부 시 납부 보험료 총액</li>
-                        <li><strong>④ 평균소득월액(A값) :</strong> 연금수급 전 3년간의 전체가입자의 평균소득을 평균한 금액</li>
-                        <li><strong>⑤ 가입기간 중 평균액(B값) :</strong> 가입자 개인의 가입기간 중 기준소득 평균액</li>
-                    </ol>
-                    <p class="cont-title small">2. 미래가치 연금액 산정방법</p>
-                    <ol class="txt-list">
-                        <li><strong>① 소득상승률 :</strong> 최근 5년 동안 국민연금가입자 소득상승률의 최저 값, 평균 값, 최고 값 만큼 각각 상승한다고 가정하여 산정</li>
-                        <li><strong>② 물가변동률 :</strong> 최근 5년간 평균치 적용</li>
-                    </ol>
-                    <div class="con-table all-center">
-                        <table class="min-w600px" summary="구분, 현재가치, 미래가치가 나열된 표 입니다.">
-                            <caption>미래가치 연금액 산정</caption>
-                            <colgroup>
-                                    <col width="22%" />
-                                    <col width="39%" />
-                                    <col />
-                            </colgroup>
-                            <thead>
-                                <tr>						
-                                    <th scope="col">구분</th>
-                                    <th scope="col">현재가치</th>
-                                    <th scope="col">미래가치</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>						
-                                    <td>평균소득월액<br />(A값)</td>
-                                    <td>현재 조회시점의 A값</td>
-                                    <td><strong>미래 수급개시시점</strong>의 A값<br />&#8594; 평균소득월액 상승률 반영</td>
-                                </tr>
-                                <tr>						
-                                    <td>가입기간 중<br />기준소득월액의<br />평균액(B값)</td>
-                                    <td>전체 가입기간 중 소득에 대해 <strong>현재 시점까지만 재평가율</strong> 적용(미래시점까지는 재평가율 미적용)</td>
-                                    <td>전체 가입기간 중 소득에 대해 <strong>미래 수급개시시점까지 재평가율</strong> 적용</td>
-                                </tr>
-                                <tr>						
-                                    <td>납부보험료총액</td>
-                                    <td>현재까지 납부보험료+만60세까지 <strong>현재 소득기준</strong>으로 납부하였을 경우 보험료총액</td>
-                                    <td>현재까지 납부보험료+만60세까지 <strong>상승된 소득기준</strong>으로 납부하였을 경우 보험료 총액</td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <!-- 내용끝 -->
-            </div>
-            <button class="btn-close">모달창닫기</button>
-
+    <div class="modal full dim" id="pop-cash" style="display: block">
+      <div class="modalWrap">
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">용어의 설명 및 산정방법</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
         </div>
+        <div class="modal-body">
+          <!-- 내용시작 -->
+          <div class="modal-body-inner h720px">
+            <h3 class="blind">용어의 설명 및 산정방법</h3>
+            <p class="cont-desc small">
+              국민연금액은 전체 가입자의 평균소득월액과 고객님의 가입기간 중 기준소득월액 평균액을 반영하여 산정되므로 예상연금액 미래가치는 평균소득상승률과 기준소득상승률에 따라 달라집니다. <br />
+              홈페이지에서의 미래가치 예상연금액은 최근 5년간의 경제변수 실적치를 반영하여 단일가정이 아닌 다양한 산정조건(최근 5개년 간 소득상승률의 최저․평균․최고치)으로 확인해 보실 수 있도록 하였습니다.<br />
+              이에 따라 맞춤형 예상연금액 조회가 가능해졌지만 실제로 받게 되는 연금액은 향후 가입자의 가입이력과 해마다 변동되는 경제변수의 실현 값에 따라 달라지므로 참고하시기 바랍니다.
+            </p>
+            <p class="cont-title">변경 전·후 비교</p>
+            <div class="con-table all-center">
+              <table class="min-w600px" summary="구분, 2022년 기준, 2023년 기준, 비고가 나열된 표 입니다.">
+                <caption>
+                  변경 전 후 비교
+                </caption>
+                <colgroup>
+                  <col style="width: 30%" />
+                  <col style="width: 20%" />
+                  <col style="width: 20%" />
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">2022년 기준</th>
+                    <th scope="col">2023년 기준</th>
+                    <th scope="col">비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>전체가입자<br />평균소득상승률</td>
+                    <td>3.3%, 4.1%, 4.9%</td>
+                    <td>3.3%, 4.4%, 5.2%</td>
+                    <td>최근 5년(2018~2022)간 최저, 평균, 최고치 적용</td>
+                  </tr>
+                  <tr>
+                    <td>가입자 기준소득월액 상승률</td>
+                    <td>3.3%, 4.1%, 4.9%</td>
+                    <td>3.3%, 4.4%, 5.2%</td>
+                    <td>직접 선택 입력 가능</td>
+                  </tr>
+                  <tr>
+                    <td>물가상승률</td>
+                    <td class="ac">1.4%</td>
+                    <td class="ac">2.0%</td>
+                    <td>최근 5년(2018~2022)간 평균값</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="cont-title small">1. 용어 설명</p>
+            <ol class="txt-list">
+              <li><strong>① 평균소득상승률 :</strong> 국민연금 가입자(지역, 사업장) 전체의 평균소득 상승률</li>
+              <li><strong>② 기준소득상승률 :</strong> 가입자 개인의 소득 상승률</li>
+              <li><strong>③ 납부보험료 총액 :</strong> 현재의 기준소득금액으로 만60세까지 납부 시 납부 보험료 총액</li>
+              <li><strong>④ 평균소득월액(A값) :</strong> 연금수급 전 3년간의 전체가입자의 평균소득을 평균한 금액</li>
+              <li><strong>⑤ 가입기간 중 평균액(B값) :</strong> 가입자 개인의 가입기간 중 기준소득 평균액</li>
+            </ol>
+            <p class="cont-title small">2. 미래가치 연금액 산정방법</p>
+            <ol class="txt-list">
+              <li><strong>① 소득상승률 :</strong> 최근 5년 동안 국민연금가입자 소득상승률의 최저 값, 평균 값, 최고 값 만큼 각각 상승한다고 가정하여 산정</li>
+              <li><strong>② 물가변동률 :</strong> 최근 5년간 평균치 적용</li>
+            </ol>
+            <div class="con-table all-center">
+              <table class="min-w600px" summary="구분, 현재가치, 미래가치가 나열된 표 입니다.">
+                <caption>
+                  미래가치 연금액 산정
+                </caption>
+                <colgroup>
+                  <col width="22%" />
+                  <col width="39%" />
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">현재가치</th>
+                    <th scope="col">미래가치</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>평균소득월액<br />(A값)</td>
+                    <td>현재 조회시점의 A값</td>
+                    <td><strong>미래 수급개시시점</strong>의 A값<br />&#8594; 평균소득월액 상승률 반영</td>
+                  </tr>
+                  <tr>
+                    <td>가입기간 중<br />기준소득월액의<br />평균액(B값)</td>
+                    <td>전체 가입기간 중 소득에 대해 <strong>현재 시점까지만 재평가율</strong> 적용(미래시점까지는 재평가율 미적용)</td>
+                    <td>전체 가입기간 중 소득에 대해 <strong>미래 수급개시시점까지 재평가율</strong> 적용</td>
+                  </tr>
+                  <tr>
+                    <td>납부보험료총액</td>
+                    <td>현재까지 납부보험료+만60세까지 <strong>현재 소득기준</strong>으로 납부하였을 경우 보험료총액</td>
+                    <td>현재까지 납부보험료+만60세까지 <strong>상승된 소득기준</strong>으로 납부하였을 경우 보험료 총액</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- 내용끝 -->
+        </div>
+        <!-- 화면 우측 상단의 모달 닫기는 물리위치는 상단이지맘 논리 위치가 가장 뒷 순서이기 때문에 이곳으로 와야함. -->
+        <!-- <button class="btn-close">모달창닫기</button> -->
+      </div>
     </div>
-
-</body>
+  </body>
 </html>

@@ -1,177 +1,180 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>노후준비종합서비스</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
-	<script src="../../js/lib/jquery-ui.min.js"></script>
-	<script src="../../js/lib/jquery.easing.min.js"></script>
-	<script src="../../js/lib/swiper-bundle.min.js"></script>
-	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
-	<script src="../../js/zoom.js"></script>
-	<script src="../../js/ui_temp.js"></script>
-	<script src="../../js/ui_common.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
 
-	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <style>
-    </style>
-</head>
-<body>
-    
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
     <!-- 주택자금 상세보기 -->
-    <div class="modal full dim" id="pop-university" style="display: block;">
-        <div class="modalWrap">
-            <div class="modal-header">
-                <div class="modal-title">
-                    <h3 class="cont-title">주택자금 상세보기</h3>
-                </div>
-            </div>
-            <div class="modal-body">
-                <!-- 내용시작 -->
-                <div class="modal-body-inner h720px">
-                    <!-- 필요자금 -->
-                    <div class="con-table-header">
-                        <h3 class="cont-title none1">필요자금</h3>
-                        <span class="txt-helper">(단위 : 만원)</span>
-                    </div>
-                    <div class="con-table all-center">
-                        <table class="min-w600px" summary="구분, 필요자금 현재가치, 필요시기, 증가율, 필요금액 은퇴시 가치 필요금액합계 미래가치">
-                            <caption>필요금액 합계</caption>
-                            <colgroup>
-								<col style="width:15%">
-								<col style="width:20%">
-								<col style="width:20%">
-								<col style="width:15%">
-								<col style="width:25%">
-							</colgroup>
-                            <tbody>
-                                <tr>
-                                    <th scope="col">구분</th>
-                                    <th scope="col">주택자금 <span class="smcolor1">(현재가치)</span></th>
-                                    <th scope="col">필요시기</th>
-                                    <th scope="col">증가율</th>
-                                    <th scope="col" class="borderR">필요금액 <span class="smcolor1">(미래가치)</span></th>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td>2023년</td>
-                                    <td>2.00%</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="4" class="borderL align-left">
-                                        <span class="boldcolor2">필요금액 합계</span> <span class="smcolor1">(미래가치)</span>
-                                    </td>
-                                    <td class="align-right bold">0</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <ul class="txt-list dot gray top">
-                            <li>증가율은 물가 상승률 2.00%를 적용하였습니다.</li>
-                        </ul>
-                    </div>
-                    <!-- 준비자금 -->
-                    <div class="con-table-header top">
-                        <h3 class="cont-title none1">준비자금</h3>
-                        <span class="txt-helper">(단위 : 만원)</span>
-                    </div>
-                    <div class="con-table all-center">
-                        <table class="min-w600px" summary="구분, 필요자금 현재가치, 필요시기, 증가율, 필요금액 은퇴시 가치 필요금액합계 미래가치">
-                            <caption>필요금액 합계</caption>
-                            <colgroup>
-								<col style="width:15%">
-								<col style="width:20%">
-								<col style="width:20%">
-								<col style="width:15%">
-								<col style="width:20%">
-								<col style="width:30%">
-							</colgroup>
-                            <tbody>
-                                <tr>
-                                    <th scope="col" rowspan="2">자산명</th>
-                                    <th scope="col" rowspan="2">현재평가금액</th>
-                                    <th scope="row" colspan="3">월저축 및 투자</th>
-                                    <th scope="col" rowspan="2">총준비금액 <span class="smcolor1">(미래가치)</span></th>    
-                                </tr>
-                                <tr>
-                                    <th scope="col">필요시기</th>
-                                    <th scope="col">수익율</th>
-                                    <th scope="col">저축기간</th>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="5" class="borderL align-left">
-                                        <span class="boldcolor2">준비금액 합계</span>
-                                    </td>
-                                    <td class="align-right bold">0</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- 연도별 상세내역 -->
-                    <div class="con-table-header top">
-                        <h3 class="cont-title none1">연도별 상세내역</h3>
-                        <span class="txt-helper">(단위 : 만원)</span>
-                    </div>
-                    <div class="con-table all-center">
-                        <table class="min-w600px mb20" summary="연도별 필요자금, 연간저축금액, 투자수익, 자산연출, 부족자금, 이용가능자산  상세 정보 제공">
-                            <caption>연도별 상세내역표 </caption>
-                            <colgroup>
-                                    <col width="*">
-                                    <col width="*">
-                                    <col width="18%">
-                                    <col width="*">
-                                    <col width="*">
-                                    <col width="*">
-                                    <col width="18%">
-                            </colgroup>
-                            <thead>
-                                <tr>						
-                                    <th scope="col">연도</th>
-                                    <th scope="col">필요자금</th>
-                                    <th scope="col">연간저축금액</th>
-                                    <th scope="col">투자수익</th>
-                                    <th scope="col">자산연출</th>
-                                    <th scope="col">부족자금</th>
-                                    <th scope="col">이용가능자산</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td colspan="6" class="bold">현재 자산현황</td>
-                                    <td class="align-right bold">0</td>
-                                </tr>
-                                <tr>
-                                    <td>2036</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td class="align-right">0</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <!-- 내용끝 -->
-            </div>
-            <button class="btn-close">모달창닫기</button>
+    <div class="modal full dim" id="pop-university" style="display: block">
+      <div class="modalWrap">
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">주택자금 상세보기</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
         </div>
+        <div class="modal-body">
+          <!-- 내용시작 -->
+          <div class="modal-body-inner h720px">
+            <!-- 필요자금 -->
+            <div class="con-table-header">
+              <h3 class="cont-title none1">필요자금</h3>
+              <span class="txt-helper">(단위 : 만원)</span>
+            </div>
+            <div class="con-table all-center">
+              <table class="min-w600px" summary="구분, 필요자금 현재가치, 필요시기, 증가율, 필요금액 은퇴시 가치 필요금액합계 미래가치">
+                <caption>
+                  필요금액 합계
+                </caption>
+                <colgroup>
+                  <col style="width: 15%" />
+                  <col style="width: 20%" />
+                  <col style="width: 20%" />
+                  <col style="width: 15%" />
+                  <col style="width: 25%" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">주택자금 <span class="smcolor1">(현재가치)</span></th>
+                    <th scope="col">필요시기</th>
+                    <th scope="col">증가율</th>
+                    <th scope="col" class="borderR">필요금액 <span class="smcolor1">(미래가치)</span></th>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>2023년</td>
+                    <td>2.00%</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4" class="borderL align-left"><span class="boldcolor2">필요금액 합계</span> <span class="smcolor1">(미래가치)</span></td>
+                    <td class="align-right bold">0</td>
+                  </tr>
+                </tbody>
+              </table>
+              <ul class="txt-list dot gray top">
+                <li>증가율은 물가 상승률 2.00%를 적용하였습니다.</li>
+              </ul>
+            </div>
+            <!-- 준비자금 -->
+            <div class="con-table-header top">
+              <h3 class="cont-title none1">준비자금</h3>
+              <span class="txt-helper">(단위 : 만원)</span>
+            </div>
+            <div class="con-table all-center">
+              <table class="min-w600px" summary="구분, 필요자금 현재가치, 필요시기, 증가율, 필요금액 은퇴시 가치 필요금액합계 미래가치">
+                <caption>
+                  필요금액 합계
+                </caption>
+                <colgroup>
+                  <col style="width: 15%" />
+                  <col style="width: 20%" />
+                  <col style="width: 20%" />
+                  <col style="width: 15%" />
+                  <col style="width: 20%" />
+                  <col style="width: 30%" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="col" rowspan="2">자산명</th>
+                    <th scope="col" rowspan="2">현재평가금액</th>
+                    <th scope="row" colspan="3">월저축 및 투자</th>
+                    <th scope="col" rowspan="2">총준비금액 <span class="smcolor1">(미래가치)</span></th>
+                  </tr>
+                  <tr>
+                    <th scope="col">필요시기</th>
+                    <th scope="col">수익율</th>
+                    <th scope="col">저축기간</th>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td colspan="5" class="borderL align-left">
+                      <span class="boldcolor2">준비금액 합계</span>
+                    </td>
+                    <td class="align-right bold">0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- 연도별 상세내역 -->
+            <div class="con-table-header top">
+              <h3 class="cont-title none1">연도별 상세내역</h3>
+              <span class="txt-helper">(단위 : 만원)</span>
+            </div>
+            <div class="con-table all-center">
+              <table class="min-w600px mb20" summary="연도별 필요자금, 연간저축금액, 투자수익, 자산연출, 부족자금, 이용가능자산  상세 정보 제공">
+                <caption>
+                  연도별 상세내역표
+                </caption>
+                <colgroup>
+                  <col width="*" />
+                  <col width="*" />
+                  <col width="18%" />
+                  <col width="*" />
+                  <col width="*" />
+                  <col width="*" />
+                  <col width="18%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">연도</th>
+                    <th scope="col">필요자금</th>
+                    <th scope="col">연간저축금액</th>
+                    <th scope="col">투자수익</th>
+                    <th scope="col">자산연출</th>
+                    <th scope="col">부족자금</th>
+                    <th scope="col">이용가능자산</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="6" class="bold">현재 자산현황</td>
+                    <td class="align-right bold">0</td>
+                  </tr>
+                  <tr>
+                    <td>2036</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="align-right">0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- 내용끝 -->
+        </div>
+        <!-- 화면 우측 상단의 모달 닫기는 물리위치는 상단이지맘 논리 위치가 가장 뒷 순서이기 때문에 이곳으로 와야함. -->
+        <!-- <button class="btn-close">모달창닫기</button> -->
+      </div>
     </div>
-
-</body>
+  </body>
 </html>

@@ -1,58 +1,65 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>노후준비종합서비스</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
-	<script src="../../js/lib/jquery-ui.min.js"></script>
-	<script src="../../js/lib/jquery.easing.min.js"></script>
-	<script src="../../js/lib/swiper-bundle.min.js"></script>
-	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
-	<script src="../../js/zoom.js"></script>
-	<script src="../../js/ui_temp.js"></script>
-	<script src="../../js/ui_common.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
 
-	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
     <style>
-    </style>
-</head>
-<body>
-    <style>
-        .title-version {color: var(--color-gray2); font-weight: 500;}
-        .txt-list.border {border-top:1px var(--color-gray2) solid; padding: 16px 0; border-bottom: 1px var(--ui-colr3) solid;}
+      .title-version {
+        color: var(--color-gray2);
+        font-weight: 500;
+      }
+      .txt-list.border {
+        border-top: 1px var(--color-gray2) solid;
+        padding: 16px 0;
+        border-bottom: 1px var(--ui-colr3) solid;
+      }
     </style>
     <!-- 배우자의 예상연금 조회절차 -->
-    <div class="modal full dim" id="pop-university" style="display: block;">
-        <div class="modalWrap max-w600px">
-            <div class="modal-header">
-                <div class="modal-title">
-                    <h3 class="cont-title">배우자의 예상연금 조회절차</h3>
-                </div>
-            </div>
-            <div class="modal-body">
-                <!-- 내용시작 -->
-                <div class="modal-body-inner">
-                    <ul class="txt-list dot blue fz16 title-version">
-                        <li>배우자의 예상연금을 조회하시는 경우 반드시 다음과 같은 절차로 진행하세요</li>
-                    </ul>
-                    <ol class="txt-list border">
-                        <li>1. 배우자 공인인증 로그인</li>
-                        <li>2. 배우자 예상연금액 확인</li>
-                        <li>3. 로그아웃</li>
-                        <li>4. 본인 공인인증 재로그인</li>
-                        <li>5. 설계진행</li>
-                    </ol>
-                </div>
-                <!-- 내용끝 -->
-            </div>
-            <button class="btn-close">모달창닫기</button>
+    <div class="modal full dim" id="pop-university" style="display: block">
+      <div class="modalWrap max-w600px">
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">배우자의 예상연금 조회절차</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
         </div>
+        <div class="modal-body">
+          <!-- 내용시작 -->
+          <div class="modal-body-inner">
+            <ul class="txt-list dot blue fz16 title-version">
+              <li>배우자의 예상연금을 조회하시는 경우 반드시 다음과 같은 절차로 진행하세요</li>
+            </ul>
+            <ol class="txt-list border">
+              <li>1. 배우자 공인인증 로그인</li>
+              <li>2. 배우자 예상연금액 확인</li>
+              <li>3. 로그아웃</li>
+              <li>4. 본인 공인인증 재로그인</li>
+              <li>5. 설계진행</li>
+            </ol>
+          </div>
+          <!-- 내용끝 -->
+        </div>
+        <!-- 화면 우측 상단의 모달 닫기는 물리위치는 상단이지맘 논리 위치가 가장 뒷 순서이기 때문에 이곳으로 와야함. -->
+        <!-- <button class="btn-close">모달창닫기</button> -->
+      </div>
     </div>
-
-</body>
+  </body>
 </html>

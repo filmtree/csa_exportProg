@@ -1,193 +1,194 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>노후준비종합서비스</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
-	<script src="../../js/lib/jquery-ui.min.js"></script>
-	<script src="../../js/lib/jquery.easing.min.js"></script>
-	<script src="../../js/lib/swiper-bundle.min.js"></script>
-	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
-	<script src="../../js/zoom.js"></script>
-	<script src="../../js/ui_temp.js"></script>
-	<script src="../../js/ui_common.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
 
-	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <style>
-    </style>
-</head>
-<body>
-    
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
     <!-- 현금흐름분석 상세보기-->
-    <div class="modal full dim" id="pop-cash" style="display: block;">
-        <div class="modalWrap">
-            <div class="modal-header">
-                <div class="modal-title">
-                    <h3 class="cont-title">현금흐름분석 상세보기</h3>
-                </div>
-            </div>
-            <div class="modal-body">
-                <!-- 내용시작 -->
-                <div class="modal-body-inner h720px">
-                    <h3 class="cont-title">현금흐름분석</h3>
-                    <div class="con-table all-center">
-                        <table class="min-w600px" summary="소득과 소비별 연평균, 월평균, 총유입대비, 구성비의 현금흐름분석 정보 제공">
-                            <caption>현금흐름분석 테이블</caption>
-                            <colgroup>
-                                    <col width="10%" />
-                                    <col width="18%" />
-                                    <col width="18%" />
-                                    <col width="18%" />
-                                    <col width="18%" />
-                                    <col width="*" />
-                            </colgroup>
-                            <thead>
-                                <tr>						
-                                    <th scope="col" colspan="2">구분</th>
-                                    <th scope="col">연평균</th>
-                                    <th scope="col">월평균</th>
-                                    <th scope="col">총유입 대비 (%)</th>
-                                    <th scope="col">구성비 (%)</th>
-                                </tr>
-                            </thead>
-                            <tbody> 
-                                <tr>
-                                    <th scope="row" rowspan="15" class="bg-no bold">유입</th>
-                                    <td colspan="5" class="bg-no bold">본인소득</td>
-                                </tr>                                        
-                                <tr>
-                                    <th scope="row" class="bg-no">근로소득</th>
-                                    <td>600,000,000</td>
-                                    <td>50,000,000</td>
-                                    <td>100.00%</td>
-                                    <td>100.00%</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="bg-no">사업소득</th>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0.00%</td>
-                                    <td>0.00%</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="bg-no">금융소득</th>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0.00%</td>
-                                    <td>0.00%</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="bg-no">임대소득</th>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0.00%</td>
-                                    <td>0.00%</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="bg-no">기타소득</th>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0.00%</td>
-                                    <td>0.00%</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="bg-no">소계</th>
-                                    <td>600,000,000</td>
-                                    <td>50,000,000</td>
-                                    <td>100.00%</td>
-                                    <td>100.00%</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="5" class="bold">배우자소득</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="bg-no">근로소득</th>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0.00%</td>
-                                    <td>0.00%</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="bg-no">사업소득</th>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0.00%</td>
-                                    <td>0.00%</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="bg-no">금융소득</th>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0.00%</td>
-                                    <td>0.00%</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="bg-no">임대소득</th>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0.00%</td>
-                                    <td>0.00%</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="bg-no">기타소득</th>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0.00%</td>
-                                    <td>0.00%</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="bg-no">소계</th>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0.00%</td>
-                                    <td>0.00%</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="bg-no bold">합계</th>
-                                    <td class="bold">600,000,000</td>
-                                    <td class="bold">50,000,000</td>
-                                    <td class="bold">100.00%</td>
-                                    <td class="bold">100.00%</td>
-                                </tr>
-                                <tr>
-                                    <th scope="col" class="bg-no bold" rowspan="3">유출</th>
-                                    <td colspan="5" class="bold">소비지출</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="bg-no">소계</th>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0.00%</td>
-                                    <td>0.00%</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="bg-no bold">합계</th>
-                                    <td class="bold">0</td>
-                                    <td class="bold">0</td>
-                                    <td class="bold">0.00%</td>
-                                    <td class="bold">0.00%</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" colspan="2" class="bold">잉여여력(유입-유출)</th>
-                                    <td class="bg bold">600,000,000</td>
-                                    <td class="bg bold">50,000,000</td>
-                                    <td class="bg bold">100.00%</td>
-                                    <td class="bg bold"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <!-- 내용끝 -->
-            </div>
-            <button class="btn-close">모달창닫기</button>
+    <div class="modal full dim" id="pop-cash" style="display: block">
+      <div class="modalWrap">
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">현금흐름분석 상세보기</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
         </div>
+        <div class="modal-body">
+          <!-- 내용시작 -->
+          <div class="modal-body-inner h720px">
+            <h3 class="cont-title">현금흐름분석</h3>
+            <div class="con-table all-center">
+              <table class="min-w600px" summary="소득과 소비별 연평균, 월평균, 총유입대비, 구성비의 현금흐름분석 정보 제공">
+                <caption>
+                  현금흐름분석 테이블
+                </caption>
+                <colgroup>
+                  <col width="10%" />
+                  <col width="18%" />
+                  <col width="18%" />
+                  <col width="18%" />
+                  <col width="18%" />
+                  <col width="*" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col" colspan="2">구분</th>
+                    <th scope="col">연평균</th>
+                    <th scope="col">월평균</th>
+                    <th scope="col">총유입 대비 (%)</th>
+                    <th scope="col">구성비 (%)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" rowspan="15" class="bg-no bold">유입</th>
+                    <td colspan="5" class="bg-no bold">본인소득</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">근로소득</th>
+                    <td>600,000,000</td>
+                    <td>50,000,000</td>
+                    <td>100.00%</td>
+                    <td>100.00%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">사업소득</th>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td>0.00%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">금융소득</th>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td>0.00%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">임대소득</th>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td>0.00%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">기타소득</th>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td>0.00%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">소계</th>
+                    <td>600,000,000</td>
+                    <td>50,000,000</td>
+                    <td>100.00%</td>
+                    <td>100.00%</td>
+                  </tr>
+                  <tr>
+                    <td colspan="5" class="bold">배우자소득</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">근로소득</th>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td>0.00%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">사업소득</th>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td>0.00%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">금융소득</th>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td>0.00%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">임대소득</th>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td>0.00%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">기타소득</th>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td>0.00%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">소계</th>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td>0.00%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no bold">합계</th>
+                    <td class="bold">600,000,000</td>
+                    <td class="bold">50,000,000</td>
+                    <td class="bold">100.00%</td>
+                    <td class="bold">100.00%</td>
+                  </tr>
+                  <tr>
+                    <th scope="col" class="bg-no bold" rowspan="3">유출</th>
+                    <td colspan="5" class="bold">소비지출</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no">소계</th>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td>0.00%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="bg-no bold">합계</th>
+                    <td class="bold">0</td>
+                    <td class="bold">0</td>
+                    <td class="bold">0.00%</td>
+                    <td class="bold">0.00%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" colspan="2" class="bold">잉여여력(유입-유출)</th>
+                    <td class="bg bold">600,000,000</td>
+                    <td class="bg bold">50,000,000</td>
+                    <td class="bg bold">100.00%</td>
+                    <td class="bg bold"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- 내용끝 -->
+        </div>
+        <!-- 화면 우측 상단의 모달 닫기는 물리위치는 상단이지맘 논리 위치가 가장 뒷 순서이기 때문에 이곳으로 와야함. -->
+        <!-- <button class="btn-close">모달창닫기</button> -->
+      </div>
     </div>
-
-</body>
+  </body>
 </html>

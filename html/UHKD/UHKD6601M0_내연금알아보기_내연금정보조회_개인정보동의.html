@@ -1,79 +1,85 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>노후준비종합서비스</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
-	<script src="../../js/lib/jquery-ui.min.js"></script>
-	<script src="../../js/lib/jquery.easing.min.js"></script>
-	<script src="../../js/lib/swiper-bundle.min.js"></script>
-	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
-	<script src="../../js/zoom.js"></script>
-    <script src="../../js/ui_temp.js"></script><!--공통UI layout-->
-	<script src="../../js/ui_common.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
 
-	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">
-</head>
-<body>
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <!--공통UI layout-->
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  </head>
+  <body>
     <div id="wrapper">
-        <!-- header -->
-        <header id="header"></header>
-        <!-- //header -->
+      <!-- header -->
+      <header id="header"></header>
+      <!-- //header -->
 
-        <!-- content -->
-        <div class="breadcrumb">
-            <div class="breadcrumb-nav">
-                <ol class="breadcrumb-location">
-                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
-                    <li class="breadcrumb-depth dep1">
-                        <button type="button" class="breadcrumb-trigger">재무진단</button>
-                        <ul class="breadcrumb-depth-list">
-                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
-                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
-                            <li class="current"><a href="#none" target="_self">재무진단</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
-                            <li><a href="#none" target="_self">노후준비정보</a></li>
-                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li> 
-                        </ul>
-                    </li>
-                    <li class="breadcrumb-depth dep2">
-                        <button type="button" class="breadcrumb-trigger current">내연금알아보기</button>
-                        <ul class="breadcrumb-depth-list">
-                            <li><a href="#none" target="_self">간단재무설계</a></li>
-                            <li><a href="#none" target="_self">노후준비자금설계</a></li>
-                            <li><a href="#none" target="_self">종합재무설계</a></li>
-                            <li><a href="#none" target="_self">목적자금설계</a></li>
-                            <li><a href="#none" target="_self">재무계산기</a></li>
-                            <li><a href="#none" target="_self">노후를 위한 국민연금 준비수준 알아보기</a></li>
-                            <li class="current"><a href="#none" target="_self">내연금알아보기</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
-                            <li><a href="#none" target="_self">국민연금알아보기</a></li>
-                            <li><a href="#none" target="_self">기초연금모의계산</a></li>
-                            <li><a href="#none" target="_self">연금제도안내</a></li>
-                        </ul>
-                    </li>
-                </ol>
-            </div>
+      <!-- content -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-nav">
+          <ol class="breadcrumb-location">
+            <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+            <li class="breadcrumb-depth dep1">
+              <button type="button" class="breadcrumb-trigger">재무진단</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                <li class="current"><a href="#none" target="_self">재무진단</a></li>
+                <!--현재 메뉴 표시 li에 class="current" 추가-->
+                <li><a href="#none" target="_self">노후준비정보</a></li>
+                <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger current">내연금알아보기</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">간단재무설계</a></li>
+                <li><a href="#none" target="_self">노후준비자금설계</a></li>
+                <li><a href="#none" target="_self">종합재무설계</a></li>
+                <li><a href="#none" target="_self">목적자금설계</a></li>
+                <li><a href="#none" target="_self">재무계산기</a></li>
+                <li><a href="#none" target="_self">노후를 위한 국민연금 준비수준 알아보기</a></li>
+                <li class="current"><a href="#none" target="_self">내연금알아보기</a></li>
+                <!--현재 메뉴 표시 li에 class="current" 추가-->
+                <li><a href="#none" target="_self">국민연금알아보기</a></li>
+                <li><a href="#none" target="_self">기초연금모의계산</a></li>
+                <li><a href="#none" target="_self">연금제도안내</a></li>
+              </ul>
+            </li>
+          </ol>
         </div>
+      </div>
 
-        <main id="conatiner">
-            <!--page-title-->
-            <div class="page-header">
-                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>내연금 알아보기</h2></div>
-            </div>
-            <!--//page-title-->
-            <div class="content-wrap">
-                <!--콘텐츠 영역-->
-                <div class="cont-head">
-                    <h3 class="cont-title">연금보험 정보제공 요청 및 제3자 제공 동의에 관한 사항</h3>
-                    <p class="cont-desc">아래 안내 내용을 확인하신 후 동의해 주세요.</p>
-                </div>
-                <div class="forms-set">
-                    <div class="textarea-wrap">
-                        <textarea rows="5" class="h320px">
+      <main id="conatiner">
+        <!--page-title-->
+        <div class="page-header">
+          <div class="page-title">
+            <a href="#" class="ic-only back">뒤로가기</a>
+            <h2>내연금 알아보기</h2>
+          </div>
+        </div>
+        <!--//page-title-->
+        <div class="content-wrap">
+          <!--콘텐츠 영역-->
+          <div class="cont-head">
+            <h3 class="cont-title">연금보험 정보제공 요청 및 제3자 제공 동의에 관한 사항</h3>
+            <p class="cont-desc">아래 안내 내용을 확인하신 후 동의해 주세요.</p>
+          </div>
+          <div class="forms-set">
+            <div class="textarea-wrap">
+              <textarea rows="5" class="h320px">
 가. 연금보험 정보를 제공받는 자
 국민연금공단 중앙노후준비지원센터장
 나. 연금보험 정보를 제공하는 자
@@ -87,28 +93,29 @@
 마. 보유·이용기간
 서비스 제공일로부터 5년[「노후준비 지원법」 제17조제3항]
 바. 동의거부권리 및 동의거부시 불이익
-개인(신용)정보의 제3자 제공은 거부할 수 있으며, 이 경우 해당 정보가 없는 노후준비 서비스가 제공됩니다.</textarea>
-                    </div>
-                    <p class="cont-desc type3 mt16"><span class="fc-primary">(필수)</span> [금융실명거래 및 비밀보장에 관한 법률] 제4조, [개인정보 보호법] 제17조 및 [신용정보의 이용 및 보호에 관한 법률] 제32조에 따라 위의 본인 정보를 국민연금공단 중앙노후준비지원센터에 제공하는 것에</p>
-                    <div class="form-group">
-                        <label class="inp-checkbox">
-                            <input type="radio" name="radioGroup1" checked="checked">
-                            <span>동의</span>
-                        </label>
-                        <label class="inp-checkbox">
-                            <input type="radio" name="radioGroup1">
-                            <span>동의하지 않음</span>
-                        </label>
-                    </div>
-                </div>
+개인(신용)정보의 제3자 제공은 거부할 수 있으며, 이 경우 해당 정보가 없는 노후준비 서비스가 제공됩니다.</textarea
+              >
+            </div>
+            <p class="cont-desc type3 mt16"><span class="fc-primary">(필수)</span> [금융실명거래 및 비밀보장에 관한 법률] 제4조, [개인정보 보호법] 제17조 및 [신용정보의 이용 및 보호에 관한 법률] 제32조에 따라 위의 본인 정보를 국민연금공단 중앙노후준비지원센터에 제공하는 것에</p>
+            <div class="form-group">
+              <label class="inp-checkbox">
+                <input type="radio" name="radioGroup1" checked="checked" />
+                <span>동의</span>
+              </label>
+              <label class="inp-checkbox">
+                <input type="radio" name="radioGroup1" />
+                <span>동의하지 않음</span>
+              </label>
+            </div>
+          </div>
 
-                <div class="cont-head">
-                    <h3 class="cont-title">개인정보 수집ㆍ이용에 관한 사항</h3>
-                    <p class="cont-desc">아래 안내 내용을 확인하신 후 동의해 주세요.</p>
-                </div>
-                <div class="forms-set">
-                    <div class="textarea-wrap">
-                        <textarea rows="5" class="h320px">
+          <div class="cont-head">
+            <h3 class="cont-title">개인정보 수집ㆍ이용에 관한 사항</h3>
+            <p class="cont-desc">아래 안내 내용을 확인하신 후 동의해 주세요.</p>
+          </div>
+          <div class="forms-set">
+            <div class="textarea-wrap">
+              <textarea rows="5" class="h320px">
 가. 수집·이용 목적
 국민연금공단 ‘내연금’ 홈페이지(노후준비포털)를 통한 연금보험 정보 조회 제공 및 공단의 노후준비 상담
 나. 수집·이용할 항목
@@ -122,98 +129,101 @@
 [개인연금, 퇴직연금 신청 및 조회이력]
 - 보유기간 : 서비스 제공일로부터 5년[「노후준비 지원법」 제17조제3항]
 라. 동의거부 권리 및 동의거부시 불이익
-귀하께서는 개인정보 수집·이용에 관한 사항에 대한 동의를 거부하실 수 있습니다. 다만, 개인정보 수집·이용 거부시에는 귀하에게 개인연금 퇴직연금 정보의 조회서비스 제공이 불가능합니다.</textarea>
-                    </div>
-                    <p class="cont-desc type3 mt16"><span class="fc-primary">(필수)</span> 「개인정보 보호법」 제15조(개인정보의 수집·이용)에 따라 위의 내용과 같이 본인의 정보를 국민연금공단이 수집하는 것에</p>
-                    <div class="form-group">
-                        <label class="inp-checkbox">
-                            <input type="radio" name="radioGroup2" checked="checked">
-                            <span>동의</span>
-                        </label>
-                        <label class="inp-checkbox">
-                            <input type="radio" name="radioGroup2">
-                            <span>동의하지 않음</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="cont-head">
-                    <h3 class="cont-title">고유식별정보 수집에 대한 안내</h3>
-                    <p class="cont-desc">개인정보보호법 제15조 제1항 제3호에 따라 정보주체의 동의없이 개인정보를 수집ㆍ이용합니다.</p>
-                </div>
-                <div class="con-table all-center mg0">
-                    <table summary="개인정보 처리 사유, 항목, 수집근거, 보유기간에 대한 내용이 나열된 표">
-                        <caption>고유식별정보 수집에 대한 안내 표</caption>
-                        <colgroup>
-                            <col style="width:25%">
-                            <col style="width:25%">
-                            <col style="width:25%">
-                            <col style="width:25%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col">개인정보 처리 사유</th>
-                                <th scope="col">항목</th>
-                                <th scope="col">수집근거</th>
-                                <th scope="col">보유기간</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="fc-primary">연금보험 정보 조회 제공 및 공단의 노후준비 상담</td>
-                                <td class="fc-primary">주민등록번호</td>
-                                <td class="fc-primary">노후준비 지원법 시행령 제18조<br>(고유식별정보의 처리)</td>
-                                <td class="fc-primary">서비스 제공일로부터 5년</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="cont-desc type3 mt16">위 고지사항에 대해 확인하였습니까?</p>
-                <div class="form-group">
-                    <label class="inp-checkbox">
-                        <input type="radio" name="radioGroup3">
-                        <span>확인했습니다.</span>
-                    </label>
-                </div>
-                <div class="form-group mt56">
-                    <label class="inp-checkbox">
-                        <input type="radio" name="radioGroup4">
-                        <span class="fc-gray2 mediumbold">위 사항에 대하여 일괄 동의합니다.</span>
-                    </label>
-                </div>
-
-                <div class="cont-bottom">
-                    <div class="btn-group">
-                        <button type="button" class="button-tertiary -lg">취소</button>
-                        <button type="button" class="button-primary -lg">확인</button>
-                    </div>
-                </div>
-
-                <div class="cont-head divide-type">
-                    <h3 class="cont-title dot">담당자 정보</h3>
-                    <a href="#" class="button-sixth -sm round">상담지사안내</a>
-                </div>
-                <ul class="txt-list dot fs16 blue mg0">
-                    <li>전산 장애문의 : 노후준비지원실 노후준비서비스개발부 이정우 ㅣ 문의 : 063-713-5983</li>
-                </ul>
-
-                <!-- 공통UI - 해시태그 링크들 -->
-                <div class="hashtag-wrap"></div>
-                <!--// 공통UI - 해시태그 링크들 -->
-
-                <!--//콘텐츠 영역-->
+귀하께서는 개인정보 수집·이용에 관한 사항에 대한 동의를 거부하실 수 있습니다. 다만, 개인정보 수집·이용 거부시에는 귀하에게 개인연금 퇴직연금 정보의 조회서비스 제공이 불가능합니다.</textarea
+              >
             </div>
+            <p class="cont-desc type3 mt16"><span class="fc-primary">(필수)</span> 「개인정보 보호법」 제15조(개인정보의 수집·이용)에 따라 위의 내용과 같이 본인의 정보를 국민연금공단이 수집하는 것에</p>
+            <div class="form-group">
+              <label class="inp-checkbox">
+                <input type="radio" name="radioGroup2" checked="checked" />
+                <span>동의</span>
+              </label>
+              <label class="inp-checkbox">
+                <input type="radio" name="radioGroup2" />
+                <span>동의하지 않음</span>
+              </label>
+            </div>
+          </div>
 
-            <!-- 공통UI - 만족도조사 -->
-            <div class="page-satisfaction"></div>
-            <!-- //공통UI - 만족도조사 -->
-        </main>
-        <!-- //content -->
+          <div class="cont-head">
+            <h3 class="cont-title">고유식별정보 수집에 대한 안내</h3>
+            <p class="cont-desc">개인정보보호법 제15조 제1항 제3호에 따라 정보주체의 동의없이 개인정보를 수집ㆍ이용합니다.</p>
+          </div>
+          <div class="con-table all-center mg0">
+            <table summary="개인정보 처리 사유, 항목, 수집근거, 보유기간에 대한 내용이 나열된 표">
+              <caption>
+                고유식별정보 수집에 대한 안내 표
+              </caption>
+              <colgroup>
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">개인정보 처리 사유</th>
+                  <th scope="col">항목</th>
+                  <th scope="col">수집근거</th>
+                  <th scope="col">보유기간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fc-primary">연금보험 정보 조회 제공 및 공단의 노후준비 상담</td>
+                  <td class="fc-primary">주민등록번호</td>
+                  <td class="fc-primary">노후준비 지원법 시행령 제18조<br />(고유식별정보의 처리)</td>
+                  <td class="fc-primary">서비스 제공일로부터 5년</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="cont-desc type3 mt16">위 고지사항에 대해 확인하였습니까?</p>
+          <div class="form-group">
+            <label class="inp-checkbox">
+              <input type="radio" name="radioGroup3" />
+              <span>확인했습니다.</span>
+            </label>
+          </div>
+          <div class="form-group mt56">
+            <label class="inp-checkbox">
+              <input type="radio" name="radioGroup4" />
+              <span class="fc-gray2 mediumbold">위 사항에 대하여 일괄 동의합니다.</span>
+            </label>
+          </div>
 
-        <!-- footer -->
-        <footer id="footer"></footer>
-        <!-- //footer -->
+          <div class="cont-bottom">
+            <div class="btn-group">
+              <button type="button" class="button-tertiary -lg">취소</button>
+              <button type="button" class="button-primary -lg">확인</button>
+            </div>
+          </div>
+
+          <div class="cont-head divide-type">
+            <h3 class="cont-title dot">담당자 정보</h3>
+            <a href="#" class="button-sixth -sm round">상담지사안내</a>
+          </div>
+          <ul class="txt-list dot fs16 blue mg0">
+            <li>전산 장애문의 : 노후준비지원실 노후준비서비스개발부 이정우 ㅣ 문의 : 063-713-5983</li>
+          </ul>
+
+          <!-- 공통UI - 해시태그 링크들 -->
+          <div class="hashtag-wrap"></div>
+          <!--// 공통UI - 해시태그 링크들 -->
+
+          <!--//콘텐츠 영역-->
+        </div>
+
+        <!-- 공통UI - 만족도조사 -->
+        <div class="page-satisfaction"></div>
+        <!-- //공통UI - 만족도조사 -->
+      </main>
+      <!-- //content -->
+
+      <!-- footer -->
+      <footer id="footer"></footer>
+      <!-- //footer -->
     </div>
     <!-- //wrapper -->
-</body>
+  </body>
 </html>

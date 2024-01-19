@@ -1,650 +1,686 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>노후준비종합서비스</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
-	<script src="../../js/lib/jquery-ui.min.js"></script>
-	<script src="../../js/lib/jquery.easing.min.js"></script>
-	<script src="../../js/lib/swiper-bundle.min.js"></script>
-	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
-	<script src="../../js/zoom.js"></script>
-    <script src="../../js/ui_temp.js"></script><!--공통UI layout-->
-	<script src="../../js/ui_common.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
 
-	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">
-</head>
-<body>
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <!--공통UI layout-->
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  </head>
+  <body>
     <div id="wrapper">
-        <!-- header -->
-        <header id="header"></header>
-        <!-- //header -->
+      <!-- header -->
+      <header id="header"></header>
+      <!-- //header -->
 
-        <!-- content -->
-        <div class="breadcrumb">
-            <div class="breadcrumb-nav">
-                <ol class="breadcrumb-location">
-                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
-                    <li class="breadcrumb-depth dep1">
-                        <button type="button" class="breadcrumb-trigger">재무진단</button>
-                        <ul class="breadcrumb-depth-list">
-                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
-                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
-                            <li><a href="#none" target="_self">재무진단</a></li>
-                            <li><a href="#none" target="_self">노후준비정보</a></li>
-                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li> 
-                        </ul>
-                    </li>
-                    <li class="breadcrumb-depth dep2">
-                        <button type="button" class="breadcrumb-trigger">연금제도 안내</button>
-                        <ul class="breadcrumb-depth-list">
-                            <li><a href="#none" target="_self">간단재무설계</a></li>
-                            <li><a href="#none" target="_self">노후준비자금설계</a></li>
-                            <li><a href="#none" target="_self">종합재무설계</a></li>
-                            <li><a href="#none" target="_self">목적자금설계</a></li>
-                            <li><a href="#none" target="_self">재무계산기</a></li>
-                            <li><a href="#none" target="_self">국민연금준비수준</a></li>
-                            <li><a href="#none" target="_self">내연금알아보기</a></li>
-                            <li><a href="#none" target="_self">국민연금알아보기</a></li>
-                            <li><a href="#none" target="_self">기초연금모의계산</a></li>
-                            <li class="current"><a href="#none" target="_self">연금제도 안내</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
-                        </ul>
-                    </li>
-                    <li class="breadcrumb-depth dep3">
-                        <button type="button" class="breadcrumb-trigger current">개인연금제도 안내</button>
-                        <ul class="breadcrumb-depth-list">
-                            <li><a href="#none" target="_self">퇴직연금제도 안내</a></li>
-                            <li class="current"><a href="#none" target="_self">개인연금제도 안내</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
-                        </ul>
-                    </li>
-                </ol>
+      <!-- content -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-nav">
+          <ol class="breadcrumb-location">
+            <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+            <li class="breadcrumb-depth dep1">
+              <button type="button" class="breadcrumb-trigger">재무진단</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                <li><a href="#none" target="_self">재무진단</a></li>
+                <li><a href="#none" target="_self">노후준비정보</a></li>
+                <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger">연금제도 안내</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">간단재무설계</a></li>
+                <li><a href="#none" target="_self">노후준비자금설계</a></li>
+                <li><a href="#none" target="_self">종합재무설계</a></li>
+                <li><a href="#none" target="_self">목적자금설계</a></li>
+                <li><a href="#none" target="_self">재무계산기</a></li>
+                <li><a href="#none" target="_self">국민연금준비수준</a></li>
+                <li><a href="#none" target="_self">내연금알아보기</a></li>
+                <li><a href="#none" target="_self">국민연금알아보기</a></li>
+                <li><a href="#none" target="_self">기초연금모의계산</a></li>
+                <li class="current"><a href="#none" target="_self">연금제도 안내</a></li>
+                <!--현재 메뉴 표시 li에 class="current" 추가-->
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep3">
+              <button type="button" class="breadcrumb-trigger current">개인연금제도 안내</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">퇴직연금제도 안내</a></li>
+                <li class="current"><a href="#none" target="_self">개인연금제도 안내</a></li>
+                <!--현재 메뉴 표시 li에 class="current" 추가-->
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <main id="conatiner" class="finance hasTabDepth">
+        <!--4뎁스 탭이 있을경우 class="hasTabDepth" 추가-->
+        <!--page-title-->
+        <div class="page-header desc-none">
+          <!--페이지 디스크립션 콘텐츠 없을 경우 class="desc-none" 추가-->
+          <div class="page-title">
+            <a href="#" class="ic-only back">뒤로가기</a>
+            <h2>개인연금제도 안내</h2>
+          </div>
+        </div>
+        <!--//page-title-->
+        <div class="content-wrap">
+          <!--콘텐츠 영역-->
+          <div class="tabWrap tab-base tab-personal-pension">
+            <div class="tabwrap-inner">
+              <ul class="tabNav">
+                <li><a href="#" id="tabNav1-1" role="tab">세제적격 개인연금</a></li>
+                <li><a href="#" id="tabNav1-2" role="tab">연금저축의 유형과 계약이전</a></li>
+                <li><a href="#" id="tabNav1-3" role="tab">소득공제와 연금소득세</a></li>
+                <li><a href="#" id="tabNav1-4" role="tab">연금보험</a></li>
+              </ul>
+              <span class="tab-gradient pc-hide" aria-hidden="true"></span>
             </div>
+            <!-- tabContent-1 -->
+            <div class="tabContent tc01" role="tabpanel" aria-labelledby="tabNav1-1">
+              <div class="cont-head">
+                <h3 class="cont-title dot big">세제적격 개인연금</h3>
+                <p class="cont-desc big">
+                  개인연금은 연금보장 3층 구조의 마지막 단계로, 개인이 일정금액을 적립하여 연금으로 원리금을 수령할 수 있는 장기 금융상품입니다.<br />
+                  세제적격 개인연금은 국민연금, 퇴직연금 외에 추가적으로 노후준비를 할 수 있도록 정부가 소득공제 혜택을 부여한 상품입니다.<br />
+                  우리나라에서는 1994년 세제혜택 개인연금이 처음 도입되었고, 2001년부터 새로운 개인연금저축 제도(연금저축)를 도입하여 운영하고 있습니다.
+                </p>
+              </div>
+              <h4 class="cont-title mg0">연금저축과 종전 개인연금저축과 비교</h4>
+              <div class="con-table">
+                <span class="ic-handle"></span>
+                <table class="min-w600px" summary="연금저축과 개인연금저축의 가입대상,계약기간,소득공제,소득세,중도해지또는일시금수령시 적용세율, 과제표준액 등이 나열된 표">
+                  <caption>
+                    연금저축과 종전 개인연금저축과 비교 표
+                  </caption>
+                  <colgroup>
+                    <col style="width: 20%" />
+                    <col style="width: 20%" />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col" colspan="2">구분</th>
+                      <th scope="col">연금저축</th>
+                      <th scope="col">개인연금저축</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" colspan="2">가입대상</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>만18세이상 국내거주자</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>만20세이상 국내거주자</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" rowspan="2">계약기간</th>
+                      <th scope="row">적립기간</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>10년 이상</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>좌동</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">연금지급기간</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>적립기간 만료후 만 55세 이후부터 5년이상</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>좌동</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" colspan="2">가입한도</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>분기 300만원 이하</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>좌동</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" rowspan="2">소득공제<br />(적립기간중)</th>
+                      <th scope="row">범위</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>연간 저축금액의 100%</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>연간 저축금액의 40%</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">한도</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>300만원</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>72만원</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" rowspan="2">소득세<br />(연금수령시)</th>
+                      <th scope="row">적용세율</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>연금소득세(5.5%) 원천징수</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>비과세</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">과세표준액</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>이자+소득공제를 받은 적립원금 누계액금</li>
+                        </ul>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" rowspan="3">중도해지 <br />또는 <br />일시금수령시</th>
+                      <th scope="row">적용세율</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>기타소득세(22.0%) 부과</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>이자소득세(15.4%) 부과</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">과세표준액</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>소득공제 받은 납입원금 (연300만원)+이자</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>이자</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5년이내 <br />중도해지시 <br />추가징수</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>납입금액(연간 300만원 한도)의 2% 해지가산세 부과</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>소득공제분 추징<br />(납입금액의 4% 연간 72천원 한도)</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" colspan="2">근거법</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>조세특례제한법 제86조의 2</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>조세특례제한법 제88조</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" colspan="2">적용기준</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>2001. 2. 1일 이후 가입분</li>
+                          <li>2005. 12월 이후 가입분부터 퇴직 연금불입액을 포함하여 소득공제가 연간 240만원에서 300만원으로 한도확대</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>2000.12월말까지 가입분<br />(2001년부터 판매중지)</li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="rel-txt fs14">출처 : 국민연금 CSA 전문상담사과정</p>
+              <div class="note-list-box">
+                <ul class="txt-list-gwalho">
+                  <li>연금저축의 소득공제는 연 240만원에서 2005. 12월 이후 퇴직연금 포함 연 300만원으로 확대</li>
+                  <li>주민세 등 포함</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- tabContent-2 -->
+            <div class="tabContent tc02" role="tabpanel" aria-labelledby="tabNav1-2">
+              <div class="cont-head">
+                <h3 class="cont-title dot big">연금저축의 유형과 계약이전</h3>
+                <p class="cont-desc big">
+                  연금저축은 은행, 자산운용회사 등에서 취급하는 신탁형 상품과 생명보험사, 손해보험사 등에서 취급하는 보험형이 있습니다.<br />
+                  신탁형은 실적배당상품으로 자유적립식으로 소득에 따라 신축적으로 납입이 가능하고 연금은 확정기간만이 가능합니다.<br />
+                  보험형은 정액의 보험료만 납입이 가능하고 원금보장이 됩니다. 고정금리형과 시중금리 연동형 상품이 있으며, 종신연금 지급은 생명보험사만이 가능합니다.
+                </p>
+              </div>
+              <h4 class="cont-title mg0">세계적격 개인연금의 유형</h4>
+              <div class="con-table">
+                <span class="ic-handle"></span>
+                <table class="min-w600px" summary="연금저축과 개인연금저축의 가입대상,계약기간,소득공제,소득세,중도해지또는일시금수령시 적용세율, 과제표준액 등이 나열된 표">
+                  <caption>
+                    세계적격 개인연금의 유형 표
+                  </caption>
+                  <colgroup>
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">은행<br /><span class="fc-gray3">(농·수협중앙회 포함)</span></th>
+                      <th scope="col">자산운용회사·뮤추얼펀드</th>
+                      <th scope="col">생명보험회사·우체국·생명공제<br /><span class="fc-gray3">(농·수협중앙회·회원조합,신협중앙회)</span></th>
+                      <th scope="col">손해보험</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">납입방식</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>자유적립식</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>자유적립식</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>정액식</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>정액식</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">연금지급 방식</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>확정기간형</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>확정기간형</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>확정기간형</li>
+                          <li>종신연금형</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>확정기간형</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">상품형태</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>채권형</li>
+                          <li>주식형(주식10%이내)</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>국공채형, 채권형</li>
+                          <li>주식형</li>
+                          <li>혼합형</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>고정금리형</li>
+                          <li>금리연동형</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>고정금리형</li>
+                          <li>금리연동형</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">수익률 및 <br />원금 보장여부</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>실적배당(원금보장)</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>실적배당 (수익률에 따라 원금손실 가능)</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>원리금 보장형</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>원리금 보장형</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">예금자 보호</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>5천만원까지 보호</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>보호 대상이 아님</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>생명보험회사는 5천만원까지 보호</li>
+                          <li>우체국은 정부에서 지급보장</li>
+                          <li>생명공제는 보호 대상이 아님</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>5천만원까지 보호</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" rowspan="3">주요특징</th>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>자유적립식이므로 소득수준에 따라 신축적으로 납입 가능</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>좌동</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>원리금보장형이므로 운용 수익률에 관계없이 약정한 금리로 연금수령</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>좌동</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>추가 보험료로 다양한 보장성 특약 제공</li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>좌동</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>납입원금 보장</li>
+                        </ul>
+                      </td>
+                      <td></td>
+                      <td>
+                        <ul class="txt-list dot small fs16">
+                          <li>종신염금형의 경우 사망 시까지 연금 보장</li>
+                        </ul>
+                      </td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="rel-txt fs14">출처 : 국민연금 CSA 전문상담사과정</p>
+            </div>
+
+            <!-- tabContent-3 -->
+            <div class="tabContent tc03" role="tabpanel" aria-labelledby="tabNav1-3">
+              <div class="cont-head">
+                <h3 class="cont-title dot big">소득공제와 연금소득세</h3>
+              </div>
+              <div class="contbox-01">
+                <h4 class="cont-title none">1. 소득공제</h4>
+                <p class="cont-desc fc-base">연금저축은 소득공제의 혜택이 있으나, 연금을 받을 때 연금소득세가 부과됩니다.</p>
+
+                <h5 class="cont-title _entitycode mt48"><span class="circled-digit">1</span>소득공제 요건</h5>
+                <ul class="txt-list dot fs17 mg0">
+                  <li>가입자격 : 만 18세 이상의 국내 거주자</li>
+                  <li>저축기간 : 불입기간은 10년 이상일 것</li>
+                  <li>저축한도 : 분기마다 3백만 원 이내에서 불입할 것(퇴직보험 포함)</li>
+                  <li>지급조건 : 불입계약기간 만료 후, 만 55세 이후부터 5년 이상 연금으로 지급받는 저축일 것</li>
+                </ul>
+                <h5 class="cont-title _entitycode"><span class="circled-digit">2</span>소득공제(조세특례제한법 제86조의 2)</h5>
+                <p class="cont-desc fc-base">불입한 금액 전액(퇴직연금 합산 연간 300만원 한도)</p>
+                <h5 class="cont-title _entitycode"><span class="circled-digit">3</span>가입대상</h5>
+                <p class="cont-desc fc-base">근로자 및 사업 소득자</p>
+              </div>
+              <!--//contbox-1-->
+              <div class="contbox-02">
+                <h4 class="cont-title none">2. 중도해지 시 불이익</h4>
+                <p class="cont-desc fc-base">연금저축은 노후생활을 위하여 국가가 세제상 혜택을 제공하는 것이기 때문에 중도에 해지하거나, 연금이외의 형태로 지급받을 경우 불이익을 받습니다.</p>
+                <h5 class="cont-title _entitycode mt48"><span class="circled-digit">1</span>중도해지의 불이익</h5>
+                <ul class="txt-list dot fs17 mg0">
+                  <li>중도해지 또는 연금이외의 형태(일시금)로 수령 시 : 소득공제 받은 금액과 이자를 기타소득으로 보아 22%의 세율 (주민세 포함)을 적용하여 기타소득세 부과</li>
+                  <li>5년 이내 해지 시 : 가입일로부터 5년 이내 해지 시에는 기타소득세에 추가하여 불입액의 2.2%를 추징</li>
+                </ul>
+              </div>
+              <!--//contbox-2-->
+              <div class="contbox-03">
+                <h4 class="cont-title">3. 연금소득세</h4>
+                <p class="cont-desc fc-base mb0">
+                  연금저축 가입자는 보험료 납입 기간 동안 소득공제 혜택을 받는 대신, 연금 수령 시 연금소득세를 납부하여야 합니다. (5.5% 세율로 원천징수)<br />
+                  공적연금, 퇴직연금, 개인연금 합한 금액이 연 600만원 이하일 경우 분리과세를 선택하면 5.5% 과세되지만, 600만원을 초과하게 되면 다른 소득과 합산하여 종합소득으로 과세됩니다. (900만원 한도 내에서 연금소득공제)
+                </p>
+              </div>
+              <p class="rel-txt fs14">출처 : 국민연금 CSA 전문상담사과정</p>
+              <!--//contbox-3-->
+            </div>
+
+            <!-- tabContent-4 -->
+            <div class="tabContent tc04" role="tabpanel" aria-labelledby="tabNav1-4">
+              <div class="cont-head">
+                <h3 class="cont-title dot big">연금보험</h3>
+              </div>
+              <div class="contbox-01">
+                <h4 class="cont-title none">1. 개요</h4>
+                <p class="cont-desc fc-base mb40">
+                  보험사의 연금보험은 은행과 금리를 적용하는 방법은 거의 동일하지만 연금보험만이 위험에 따른 보장을 한다는 점이 다릅니다.<br />
+                  위험에 대한 보장을 위해서는 사망률이 적용되는데 이것이 일반 은행상품과 다른 요소가 됩니다.<br />
+                  제 1보험기간은 위험에 대해 보장하는 기간으로 위험보장기간이라 하며, 제 2보험기간은 연금이 지급되는 기간입니다.
+                </p>
+                <div class="imgbox all-none">
+                  <picture>
+                    <source srcset="../../images/contents/img_pensionplan_graph06_m.png" media="(max-width:520px)" />
+                    <img
+                      src="../../images/contents/img_pensionplan_graph06.png"
+                      alt="위험에 대한 보장을 위해서는 사망률이 적용되는데 이것이 일반 은행상품과 다른 요소가 됩니다.
+                                제 1보험기간은 위험에 대해 보장하는 기간으로 위험보장기간이라 하며, 제 2보험기간은 연금이 지급되는 기간입니다."
+                    />
+                  </picture>
+                </div>
+              </div>
+              <!--//contbox-1-->
+              <div class="contbox-02">
+                <h4 class="cont-title mg0">2. 상품종류</h4>
+                <div class="con-table">
+                  <span class="ic-handle"></span>
+                  <table summary="연금보험의 세제지원,적용금리,연금수령,연금형태,납입방법에 따른 상품종류가 나열된 표">
+                    <caption>
+                      연금보험의 상품종류 표
+                    </caption>
+                    <colgroup>
+                      <col style="width: 28%" />
+                      <col />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">구분방법</th>
+                        <th scope="col">상품종류</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">세제지원</th>
+                        <td>세제적격상품(개인연금저축, 연금저축), 세제비적격 상품</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">적용금리</th>
+                        <td>확정금리형상품, 금리연동형상품(공시이율 적용), 실적배당형상품</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">연금수령</th>
+                        <td>종신형, 확정형, 상속형</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">연금형태</th>
+                        <td>정액형상품, 체증형상품(물가상승률 및 인플레이션 적용)</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">납입방법</th>
+                        <td>단기납상품, 일시납(즉시연금보험)상품</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <h5 class="cont-title _entitycode"><span class="circled-digit">1</span>세제지원</h5>
+                <p class="cont-desc fc-base mb0">연금보험 상품 중 세제비적격 상품은 소득공제가 되지 않지만, 10년 이상 유지 시 비과세 혜택이 있습니다.</p>
+                <h5 class="cont-title _entitycode"><span class="circled-digit">2</span>적용금리</h5>
+                <p class="cont-desc fc-base mb0">
+                  확정금리형상품은 확정금리로 적립되며, 금리연동형상품은 변동금리에 따라 적립되며 최저보증 연금액이 설정되어 있습니다.<br />
+                  실적배당형상품은 보험료 중 일부를 주식 등의 유가증권에 투자하여 운용실적에 따른 이익으로 연금을 지급합니다.
+                </p>
+              </div>
+              <!--//contbox-2-->
+              <div class="contbox-03">
+                <h4 class="cont-title none">3. 변액연금</h4>
+                <p class="cont-desc fc-base mb40">변액연금은 실적배당형 보험상품으로 계약자가 납입한 보험료의 일부로 펀드를 조성하여 유가증권 등에 투자하고 별도의 계정인 특별계정에 편입하여 운용실적에 따라 계약자에게 투자이익을 배분하는 자기책임주의 원칙이 적용되는 상품입니다.</p>
+                <div class="imgbox all-none">
+                  <picture>
+                    <source srcset="../../images/contents/img_pensionplan_graph07_m.png" media="(max-width:520px)" />
+                    <img src="../../images/contents/img_pensionplan_graph07.png" alt="변액연금은 실적배당형 보험상품으로 계약자가 납입한 보험료의 일부로 펀드를 조성하여 유가증권 등에 투자하고 별도의 계정인 특별계정에 편입하여 운용실적에 따라 계약자에게 투자이익을 배분하는 자기책임주의 원칙이 적용되는 상품입니다." />
+                  </picture>
+                </div>
+                <h5 class="cont-title _entitycode"><span class="circled-digit">1</span>변액연금의 주요 특징</h5>
+                <ul class="txt-list dot fs17 mg0">
+                  <li>노후 연금액이 확정되지 않고 투자실적에 따라 변합니다.</li>
+                  <li>투자의 위험은 계약자가 부담하며 보험료는 특별계정에서 펀드(안정형, 성장형, 혼합형)로 운용됩니다.</li>
+                  <li>보험료는 입금당시 한 구좌(unit)의 시가로 환산하여 구좌 수로 적립되며 보험금 및 연금액은 적립된 특별계정(separate account)의 시 가에 따라 달라집니다.</li>
+                  <li>연금 가입자가 불입한 보험료의 원리금에 대한 보장이 없습니다. 그러나 납입기간 경과 후 연금개시시점부터는 납입보험료 원금에 대한 최저보증이 있습니다.</li>
+                  <li>특별계정은 주식 등에 투자하여 “high risk & high return” 추구와 인플레이션 헤지를 기대하지만 예금자보호법으로 보호되지 않습니다.</li>
+                  <li>“유니버설(universal)” 변액상품의 경우 보험료 납입 시기 및 금액을 자유롭게 조절할 수 있는 탄력성이 있습니다.</li>
+                </ul>
+              </div>
+              <!--//contbox-3-->
+              <p class="rel-txt fs14">출처 : 국민연금 CSA 전문상담사과정</p>
+            </div>
+          </div>
+          <script>
+            commonUI.tabNav(".tabWrap", 1);
+          </script>
+
+          <!-- 공통UI - 해시태그 링크들 -->
+          <div class="hashtag-wrap"></div>
+          <!--// 공통UI - 해시태그 링크들 -->
+
+          <!--//콘텐츠 영역-->
         </div>
 
-        <main id="conatiner" class="finance hasTabDepth"><!--4뎁스 탭이 있을경우 class="hasTabDepth" 추가-->
-            <!--page-title-->
-            <div class="page-header desc-none"><!--페이지 디스크립션 콘텐츠 없을 경우 class="desc-none" 추가-->
-                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>개인연금제도 안내</h2></div>
-            </div>
-            <!--//page-title-->
-            <div class="content-wrap">
-                <!--콘텐츠 영역-->
-                <div class="tabWrap tab-base tab-personal-pension">
-                    <div class="tabwrap-inner">
-                        <ul class="tabNav">
-                            <li><a href="#" id="tabNav1-1" role="tab">세제적격 개인연금</a></li>
-                            <li><a href="#" id="tabNav1-2" role="tab">연금저축의 유형과 계약이전</a></li>
-                            <li><a href="#" id="tabNav1-3" role="tab">소득공제와 연금소득세</a></li>
-                            <li><a href="#" id="tabNav1-4" role="tab">연금보험</a></li>
-                        </ul>
-                        <span class="tab-gradient pc-hide" aria-hidden="true"></span>
-                    </div>
-                    <!-- tabContent-1 -->
-                    <div class="tabContent tc01" role="tabpanel" aria-labelledby="tabNav1-1">
-                        <div class="cont-head">
-                            <h3 class="cont-title dot big">세제적격 개인연금</h3>
-                            <p class="cont-desc big">개인연금은 연금보장 3층 구조의 마지막 단계로, 개인이 일정금액을 적립하여 연금으로 원리금을 수령할 수 있는 장기 금융상품입니다.<br>
-                                세제적격 개인연금은 국민연금, 퇴직연금 외에 추가적으로 노후준비를 할 수 있도록 정부가 소득공제 혜택을 부여한 상품입니다.<br>
-                                우리나라에서는 1994년 세제혜택 개인연금이 처음 도입되었고, 2001년부터 새로운 개인연금저축 제도(연금저축)를 도입하여 운영하고 있습니다.
-                            </p>
-                        </div>
-                        <h4 class="cont-title mg0">연금저축과 종전 개인연금저축과 비교</h4>
-                        <div class="con-table"><span class="ic-handle"></span>
-                            <table class="min-w600px" summary="연금저축과 개인연금저축의 가입대상,계약기간,소득공제,소득세,중도해지또는일시금수령시 적용세율, 과제표준액 등이 나열된 표">
-                                <caption>연금저축과 종전 개인연금저축과 비교 표</caption>
-                                <colgroup>
-                                    <col style="width:20%;"><col style="width:20%;"><col><col>
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th scope="col" colspan="2">구분</th>
-                                        <th scope="col">연금저축</th>
-                                        <th scope="col">개인연금저축</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row" colspan="2">가입대상</th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>만18세이상 국내거주자</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>만20세이상 국내거주자</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" rowspan="2">계약기간</th>
-                                        <th scope="row">적립기간</th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>10년 이상</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>좌동</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">연금지급기간</th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>적립기간 만료후 만 55세 이후부터 5년이상</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>좌동</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" colspan="2">가입한도</th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>분기 300만원 이하</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>좌동</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" rowspan="2">소득공제<br>(적립기간중)</th>
-                                        <th scope="row">범위</th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>연간 저축금액의 100%</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>연간 저축금액의 40%</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">한도</th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>300만원</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>72만원</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" rowspan="2">소득세<br>(연금수령시)</th>
-                                        <th scope="row">적용세율</th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>연금소득세(5.5%) 원천징수</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>비과세</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">과세표준액</th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>이자+소득공제를 받은 적립원금 누계액금</li>
-                                            </ul>
-                                        </td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" rowspan="3">중도해지 <br>또는 <br>일시금수령시</th>
-                                        <th scope="row">적용세율</th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>기타소득세(22.0%) 부과</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>이자소득세(15.4%) 부과</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">과세표준액</th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>소득공제 받은 납입원금 (연300만원)+이자</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>이자</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">5년이내 <br>중도해지시 <br>추가징수</th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>납입금액(연간 300만원 한도)의 2% 해지가산세 부과</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>소득공제분 추징<br>(납입금액의 4% 연간 72천원 한도)</li>
-                                            </ul></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" colspan="2">근거법</th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>조세특례제한법 제86조의 2</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>조세특례제한법 제88조</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" colspan="2">적용기준</th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>2001. 2. 1일 이후 가입분</li>
-                                                <li>2005. 12월 이후 가입분부터 퇴직 연금불입액을 포함하여 소득공제가 연간 240만원에서 300만원으로 한도확대</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>2000.12월말까지 가입분<br>(2001년부터 판매중지)</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <p class="rel-txt fs14">출처 : 국민연금 CSA 전문상담사과정</p>
-                        <div class="note-list-box">
-                            <ul class="txt-list-gwalho">
-                                <li>연금저축의 소득공제는 연 240만원에서 2005. 12월 이후 퇴직연금 포함 연 300만원으로 확대</li>
-                                <li>주민세 등 포함</li>
-                            </ul>
-                        </div>
-                    </div>
+        <!-- 공통UI - 만족도조사 -->
+        <div class="page-satisfaction"></div>
+        <!-- //공통UI - 만족도조사 -->
+      </main>
+      <!-- //content -->
 
-                    <!-- tabContent-2 -->
-                    <div class="tabContent tc02" role="tabpanel" aria-labelledby="tabNav1-2">
-                        <div class="cont-head">
-                            <h3 class="cont-title dot big">연금저축의 유형과 계약이전</h3>
-                            <p class="cont-desc big">연금저축은 은행, 자산운용회사 등에서 취급하는 신탁형 상품과 생명보험사, 손해보험사 등에서 취급하는 보험형이 있습니다.<br>
-                                신탁형은 실적배당상품으로 자유적립식으로 소득에 따라 신축적으로 납입이 가능하고 연금은 확정기간만이 가능합니다.<br>
-                                보험형은 정액의 보험료만 납입이 가능하고 원금보장이 됩니다. 고정금리형과 시중금리 연동형 상품이 있으며, 종신연금 지급은 생명보험사만이 가능합니다.
-                            </p>
-                        </div>
-                        <h4 class="cont-title mg0">세계적격 개인연금의 유형</h4>
-                        <div class="con-table"><span class="ic-handle"></span>
-                            <table class="min-w600px" summary="연금저축과 개인연금저축의 가입대상,계약기간,소득공제,소득세,중도해지또는일시금수령시 적용세율, 과제표준액 등이 나열된 표">
-                                <caption>세계적격 개인연금의 유형 표</caption>
-                                <colgroup>
-                                    <col><col><col><col><col>
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th scope="col"></th>
-                                        <th scope="col">은행<br><span class="fc-gray3">(농·수협중앙회 포함)</span></th>
-                                        <th scope="col">자산운용회사·뮤추얼펀드</th>
-                                        <th scope="col">생명보험회사·우체국·생명공제<br><span class="fc-gray3">(농·수협중앙회·회원조합,신협중앙회)</span></th>
-                                        <th scope="col">손해보험</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">납입방식</th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>자유적립식</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>자유적립식</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>정액식</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>정액식</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">연금지급 방식</th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>확정기간형</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>확정기간형</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>확정기간형</li>
-                                                <li>종신연금형</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>확정기간형</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">상품형태</th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>채권형</li>
-                                                <li>주식형(주식10%이내)</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>국공채형, 채권형</li>
-                                                <li>주식형</li>
-                                                <li>혼합형</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>고정금리형</li>
-                                                <li>금리연동형</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>고정금리형</li>
-                                                <li>금리연동형</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">수익률 및 <br>원금 보장여부</th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>실적배당(원금보장)</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>실적배당 (수익률에 따라 원금손실 가능)</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>원리금 보장형</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>원리금 보장형</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">예금자 보호</th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>5천만원까지 보호</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>보호 대상이 아님</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>생명보험회사는 5천만원까지 보호</li>
-                                                <li>우체국은 정부에서 지급보장</li>
-                                                <li>생명공제는 보호 대상이 아님</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>5천만원까지 보호</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" rowspan="3">주요특징 </th>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>자유적립식이므로 소득수준에 따라 신축적으로 납입 가능</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>좌동</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>원리금보장형이므로 운용 수익률에 관계없이 약정한 금리로 연금수령</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>좌동</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>추가 보험료로 다양한 보장성 특약 제공</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>좌동</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>납입원금 보장</li>
-                                            </ul>
-                                        </td>
-                                        <td></td>
-                                        <td>
-                                            <ul class="txt-list dot small fs16">
-                                                <li>종신염금형의 경우 사망 시까지 연금 보장</li>
-                                            </ul>
-                                        </td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <p class="rel-txt fs14">출처 : 국민연금 CSA 전문상담사과정</p>
-                    </div>
-
-                    <!-- tabContent-3 -->
-                    <div class="tabContent tc03" role="tabpanel" aria-labelledby="tabNav1-3">
-                        <div class="cont-head">
-                            <h3 class="cont-title dot big">소득공제와 연금소득세</h3>
-                        </div>
-                        <div class="contbox-01">
-                            <h4 class="cont-title none">1. 소득공제</h4>
-                            <p class="cont-desc fc-base">연금저축은 소득공제의 혜택이 있으나, 연금을 받을 때 연금소득세가 부과됩니다.</p>
-
-                            <h5 class="cont-title _entitycode mt48"><span class="circled-digit">1</span>소득공제 요건</h5>
-                            <ul class="txt-list dot fs17 mg0">
-                                <li>가입자격 : 만 18세 이상의 국내 거주자</li>
-                                <li>저축기간 : 불입기간은 10년 이상일 것</li>
-                                <li>저축한도 : 분기마다 3백만 원 이내에서 불입할 것(퇴직보험 포함)</li>
-                                <li>지급조건 : 불입계약기간 만료 후, 만 55세 이후부터 5년 이상 연금으로 지급받는 저축일 것</li>
-                            </ul>
-                            <h5 class="cont-title _entitycode"><span class="circled-digit">2</span>소득공제(조세특례제한법 제86조의 2)</h5>
-                            <p class="cont-desc fc-base">불입한 금액 전액(퇴직연금 합산 연간 300만원 한도)</p>
-                            <h5 class="cont-title _entitycode"><span class="circled-digit">3</span>가입대상</h5>
-                            <p class="cont-desc fc-base">근로자 및 사업 소득자</p>
-                        </div>
-                        <!--//contbox-1-->
-                        <div class="contbox-02">
-                            <h4 class="cont-title none">2. 중도해지 시 불이익</h4>
-                            <p class="cont-desc fc-base">연금저축은 노후생활을 위하여 국가가 세제상 혜택을 제공하는 것이기 때문에 중도에 해지하거나, 연금이외의 형태로 지급받을 경우 불이익을 받습니다.</p>
-                            <h5 class="cont-title _entitycode mt48"><span class="circled-digit">1</span>중도해지의 불이익</h5>
-                            <ul class="txt-list dot fs17 mg0">
-                                <li>중도해지 또는 연금이외의 형태(일시금)로 수령 시 : 소득공제 받은 금액과 이자를 기타소득으로 보아 22%의 세율 (주민세 포함)을 적용하여 기타소득세 부과</li>
-                                <li>5년 이내 해지 시 : 가입일로부터 5년 이내 해지 시에는 기타소득세에 추가하여 불입액의 2.2%를 추징</li>
-                            </ul>
-                        </div>
-                        <!--//contbox-2-->
-                        <div class="contbox-03">
-                            <h4 class="cont-title">3. 연금소득세</h4>
-                            <p class="cont-desc fc-base mb0">연금저축 가입자는 보험료 납입 기간 동안 소득공제 혜택을 받는 대신, 연금 수령 시 연금소득세를 납부하여야 합니다. (5.5% 세율로 원천징수)<br>
-                                공적연금, 퇴직연금, 개인연금 합한 금액이 연 600만원 이하일 경우 분리과세를 선택하면 5.5% 과세되지만, 600만원을 초과하게 되면 다른 소득과 합산하여 종합소득으로 과세됩니다. (900만원 한도 내에서 연금소득공제)</p>
-                        </div>
-                        <p class="rel-txt fs14">출처 : 국민연금 CSA 전문상담사과정</p>
-                        <!--//contbox-3-->
-                    </div>
-
-                    <!-- tabContent-4 -->
-                    <div class="tabContent tc04" role="tabpanel" aria-labelledby="tabNav1-4">
-                        <div class="cont-head">
-                            <h3 class="cont-title dot big">연금보험 </h3>
-                        </div>
-                        <div class="contbox-01">
-                            <h4 class="cont-title none">1. 개요</h4>
-                            <p class="cont-desc fc-base mb40">보험사의 연금보험은 은행과 금리를 적용하는 방법은 거의 동일하지만 연금보험만이 위험에 따른 보장을 한다는 점이 다릅니다.<br>
-                                위험에 대한 보장을 위해서는 사망률이 적용되는데 이것이 일반 은행상품과 다른 요소가 됩니다.<br>
-                                제 1보험기간은 위험에 대해 보장하는 기간으로 위험보장기간이라 하며, 제 2보험기간은 연금이 지급되는 기간입니다.</p>
-                            <div class="imgbox all-none">
-                                <picture>
-                                    <source srcset="../../images/contents/img_pensionplan_graph06_m.png" media="(max-width:520px)">
-                                    <img src="../../images/contents/img_pensionplan_graph06.png" alt="위험에 대한 보장을 위해서는 사망률이 적용되는데 이것이 일반 은행상품과 다른 요소가 됩니다.
-                                제 1보험기간은 위험에 대해 보장하는 기간으로 위험보장기간이라 하며, 제 2보험기간은 연금이 지급되는 기간입니다.">
-                                </picture>
-                            </div>
-                        </div>
-                        <!--//contbox-1-->
-                        <div class="contbox-02">
-                            <h4 class="cont-title mg0">2. 상품종류</h4>
-                            <div class="con-table"><span class="ic-handle"></span>
-                                <table summary="연금보험의 세제지원,적용금리,연금수령,연금형태,납입방법에 따른 상품종류가 나열된 표">
-                                    <caption>연금보험의 상품종류 표</caption>
-                                    <colgroup>
-                                        <col style="width:28%"><col>
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">구분방법</th>
-                                            <th scope="col">상품종류</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">세제지원</th>
-                                            <td>세제적격상품(개인연금저축, 연금저축), 세제비적격 상품</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">적용금리</th>
-                                            <td>확정금리형상품, 금리연동형상품(공시이율 적용), 실적배당형상품</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">연금수령</th>
-                                            <td>종신형, 확정형, 상속형</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">연금형태</th>
-                                            <td>정액형상품, 체증형상품(물가상승률 및 인플레이션 적용)</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">납입방법</th>
-                                            <td>단기납상품, 일시납(즉시연금보험)상품</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <h5 class="cont-title _entitycode"><span class="circled-digit">1</span>세제지원</h5>
-                            <p class="cont-desc fc-base mb0">연금보험 상품 중 세제비적격 상품은 소득공제가 되지 않지만, 10년 이상 유지 시 비과세 혜택이 있습니다.</p>
-                            <h5 class="cont-title _entitycode"><span class="circled-digit">2</span>적용금리</h5>
-                            <p class="cont-desc fc-base mb0">확정금리형상품은 확정금리로 적립되며, 금리연동형상품은 변동금리에 따라 적립되며 최저보증 연금액이 설정되어 있습니다.<br>
-                                실적배당형상품은 보험료 중 일부를 주식 등의 유가증권에 투자하여 운용실적에 따른 이익으로 연금을 지급합니다.
-                            </p>
-                        </div>
-                        <!--//contbox-2-->
-                        <div class="contbox-03">
-                            <h4 class="cont-title none">3. 변액연금</h4>
-                            <p class="cont-desc fc-base mb40">변액연금은 실적배당형 보험상품으로 계약자가 납입한 보험료의 일부로 펀드를 조성하여 유가증권 등에 투자하고 별도의 계정인 특별계정에 편입하여 운용실적에 따라 계약자에게 투자이익을 배분하는 자기책임주의 원칙이 적용되는 상품입니다.</p>
-                            <div class="imgbox all-none">
-                                <picture>
-                                    <source srcset="../../images/contents/img_pensionplan_graph07_m.png" media="(max-width:520px)">
-                                    <img src="../../images/contents/img_pensionplan_graph07.png" alt="변액연금은 실적배당형 보험상품으로 계약자가 납입한 보험료의 일부로 펀드를 조성하여 유가증권 등에 투자하고 별도의 계정인 특별계정에 편입하여 운용실적에 따라 계약자에게 투자이익을 배분하는 자기책임주의 원칙이 적용되는 상품입니다.">
-                                </picture>
-                            </div>
-                            <h5 class="cont-title _entitycode"><span class="circled-digit">1</span>변액연금의 주요 특징</h5>
-                            <ul class="txt-list dot fs17 mg0">
-                                <li>노후 연금액이 확정되지 않고 투자실적에 따라 변합니다.</li>
-                                <li>투자의 위험은 계약자가 부담하며 보험료는 특별계정에서 펀드(안정형, 성장형, 혼합형)로 운용됩니다.</li>
-                                <li>보험료는 입금당시 한 구좌(unit)의 시가로 환산하여 구좌 수로 적립되며 보험금 및 연금액은 적립된 특별계정(separate account)의 시 가에 따라 달라집니다.</li>
-                                <li>연금 가입자가 불입한 보험료의 원리금에 대한 보장이 없습니다. 그러나 납입기간 경과 후 연금개시시점부터는 납입보험료 원금에 대한 최저보증이 있습니다.</li>
-                                <li>특별계정은 주식 등에 투자하여 “high risk & high return” 추구와 인플레이션 헤지를 기대하지만 예금자보호법으로 보호되지 않습니다.</li>
-                                <li>“유니버설(universal)” 변액상품의 경우 보험료 납입 시기 및 금액을 자유롭게 조절할 수 있는 탄력성이 있습니다.</li>
-                            </ul>
-                        </div>
-                        <!--//contbox-3-->
-                        <p class="rel-txt fs14">출처 : 국민연금 CSA 전문상담사과정</p>
-                    </div>
-                </div>
-                <script>
-                    commonUI.tabNav('.tabWrap', 1);
-                </script>
-
-                <!-- 공통UI - 해시태그 링크들 -->
-                <div class="hashtag-wrap"></div>
-                <!--// 공통UI - 해시태그 링크들 -->
-
-                <!--//콘텐츠 영역-->
-            </div>
-
-            <!-- 공통UI - 만족도조사 -->
-            <div class="page-satisfaction"></div>
-            <!-- //공통UI - 만족도조사 -->
-        </main>
-        <!-- //content -->
-
-        <!-- footer -->
-        <footer id="footer"></footer>
-        <!-- //footer -->
+      <!-- footer -->
+      <footer id="footer"></footer>
+      <!-- //footer -->
     </div>
     <!-- //wrapper -->
-</body>
+  </body>
 </html>

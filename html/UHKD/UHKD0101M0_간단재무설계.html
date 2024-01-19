@@ -1,581 +1,579 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>노후준비종합서비스</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
-	<script src="../../js/lib/jquery-ui.min.js"></script>
-	<script src="../../js/lib/jquery.easing.min.js"></script>
-	<script src="../../js/lib/swiper-bundle.min.js"></script>
-	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
-	<script src="../../js/zoom.js"></script>
-	<script src="../../js/ui_temp.js"></script> 
-	<script src="../../js/ui_common.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
 
-	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">
-</head>
-<body>
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  </head>
+  <body>
     <div id="wrapper">
-        <!-- header -->
-        <header id="header"></header>
-        <!-- //header -->
+      <!-- header -->
+      <header id="header"></header>
+      <!-- //header -->
 
-        <!-- content -->
-        <div class="breadcrumb">
-            <div class="breadcrumb-nav">
-                <ol class="breadcrumb-location">
-                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
-                    <li class="breadcrumb-depth dep1">
-                        <button type="button" class="breadcrumb-trigger">재무진단</button>
-                        <ul class="breadcrumb-depth-list">
-                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
-                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
-                            <li><a href="#none" target="_self">재무진단</a></li>
-                            <li><a href="#none" target="_self">노후준비정보</a></li>
-                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
-                        </ul>
-                    </li>
-                    <li class="breadcrumb-depth dep2">
-                        <button type="button" class="breadcrumb-trigger current">간단재무진단</button>
-                        <ul class="breadcrumb-depth-list">
-                            <li><a href="#none" target="_self">상담지사안내</a></li>
-                            <li><a href="#none" target="_self">상담지자체안내</a></li>
-                            <li class="current"><a href="#none" target="_self">노후준비종합진단</a></li>
-                            <li><a href="#none" target="_self">온라인상담</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
-                            <li><a href="#none" target="_self">방문상담신청</a></li>
-                            <li><a href="#none" target="_self">교육신청</a></li>
-                            <li><a href="#none" target="_self">강사정보</a></li>
-                            <li><a href="#none" target="_self">자가진단</a></li>
-                        </ul>
-                    </li>
-                </ol>
-            </div>
+      <!-- content -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-nav">
+          <ol class="breadcrumb-location">
+            <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+            <li class="breadcrumb-depth dep1">
+              <button type="button" class="breadcrumb-trigger">재무진단</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                <li><a href="#none" target="_self">재무진단</a></li>
+                <li><a href="#none" target="_self">노후준비정보</a></li>
+                <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger current">간단재무진단</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">상담지사안내</a></li>
+                <li><a href="#none" target="_self">상담지자체안내</a></li>
+                <li class="current"><a href="#none" target="_self">노후준비종합진단</a></li>
+                <li><a href="#none" target="_self">온라인상담</a></li>
+                <!--현재 메뉴 표시 li에 class="current" 추가-->
+                <li><a href="#none" target="_self">방문상담신청</a></li>
+                <li><a href="#none" target="_self">교육신청</a></li>
+                <li><a href="#none" target="_self">강사정보</a></li>
+                <li><a href="#none" target="_self">자가진단</a></li>
+              </ul>
+            </li>
+          </ol>
         </div>
+      </div>
 
-        <main id="conatiner">
-            <div class="page-header">
-                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>간단재무 설계</h2></div>
-                <div class="page-desc">
-                    <button type="button" class="page-desc-btn _has-tooltip"><span>간단 재무설계 안내</span><i class="ic-only f-pg-desc"></i></button>
-                    <div class="desc-box _tooltipbox">
-                        <div class="desc-box-inner">
-                            <div class="desc-content">
-                                <p class="title">편안한 노후를 위해 노후자금 준비에 대한 자가진단을 받아보세요.</p>
-                                <p>
-                                    고객님이 원하시는 목표수령금액에 필요한 준비자금 계산 및 조회가 가능합니다.
-                                </p>
-                            </div>
-                            <button type="button" class="ic-only box-close">창닫기</button>
-                        </div>
-                    </div>
+      <main id="conatiner">
+        <div class="page-header">
+          <div class="page-title">
+            <a href="#" class="ic-only back">뒤로가기</a>
+            <h2>간단재무 설계</h2>
+          </div>
+          <div class="page-desc">
+            <button type="button" class="page-desc-btn _has-tooltip"><span>간단 재무설계 안내</span><i class="ic-only f-pg-desc"></i></button>
+            <div class="desc-box _tooltipbox">
+              <div class="desc-box-inner">
+                <div class="desc-content">
+                  <p class="title">편안한 노후를 위해 노후자금 준비에 대한 자가진단을 받아보세요.</p>
+                  <p>고객님이 원하시는 목표수령금액에 필요한 준비자금 계산 및 조회가 가능합니다.</p>
                 </div>
+                <button type="button" class="ic-only box-close">창닫기</button>
+              </div>
             </div>
-            <div class="content-wrap">
-                <!-- S : 2311월 -->
-                <!--콘텐츠 영역-->
-                <div class="cont-head">
-                    <h3 class="cont-title">기본정보 입력</h3>
+          </div>
+        </div>
+        <div class="content-wrap">
+          <!-- S : 2311월 -->
+          <!--콘텐츠 영역-->
+          <div class="cont-head">
+            <h3 class="cont-title">기본정보 입력</h3>
+          </div>
+          <div class="board-wrap bd-write">
+            <div class="field equal-list form">
+              <div class="items">
+                <label class="field-label" for="현재나이">현재나이 (1~100세) </label>
+                <div class="form-group-txt">
+                  <input type="text" id="현재나이" class="charLength7 align-right" placeholder="0" />
+                  <span class="back-txt">세</span>
                 </div>
-                <div class="board-wrap bd-write">
-                    <div class="field equal-list form">
-                        <div class="items">
-                            <label class="field-label" for="현재나이">현재나이 (1~100세)
-                            </label>
-                            <div class="form-group-txt"> 
-                                <input type="text" id="현재나이" class="charLength7 align-right" placeholder="0">
-                                <span class="back-txt">세</span>
-                            </div>
-                        </div>
-                        <div class="items">
-                            <label class="field-label" for="예상 기대수명">
-                                <button type="button" class="_has-tooltip"><span>예상 기대수명 (1~100세)</span><i class="ic-only question"></i></button>
-                                <!-- tooltip -->
-                                <div class="desc-box type1 _tooltipbox">
-                                    <div class="desc-content">
-                                        <div class="title">예상 기대수명</div>
-                                        <p>고객님과 동일한 연령인 분들의 평균 생존 기간입니다. 기대수명은 변경 입력이 가능합니다.</p>
-                                        <button type="button" class="ic-only box-close">창닫기</button>
-                                    </div>
-                                </div>
-                            </label>
-                            <div class="form-group-txt"> 
-                                <input type="text" id="예상 기대수명" class="charLength7 align-right" placeholder="0">
-                                <span class="back-txt">세</span>
-                            </div>
-                        </div>
+              </div>
+              <div class="items">
+                <label class="field-label" for="예상 기대수명">
+                  <button type="button" class="_has-tooltip"><span>예상 기대수명 (1~100세)</span><i class="ic-only question"></i></button>
+                  <!-- tooltip -->
+                  <div class="desc-box type1 _tooltipbox">
+                    <div class="desc-content">
+                      <div class="title">예상 기대수명</div>
+                      <p>고객님과 동일한 연령인 분들의 평균 생존 기간입니다. 기대수명은 변경 입력이 가능합니다.</p>
+                      <button type="button" class="ic-only box-close">창닫기</button>
                     </div>
-                    <div class="field equal-list form">
-                        <div class="items">
-                            <label class="field-label" for="예상 은퇴연령">
-                                <button type="button" class="_has-tooltip"><span>예상 은퇴연령 (1~100세)</span><i class="ic-only question"></i></button>
-                                <!-- tooltip -->
-                                <div class="desc-box type1 _tooltipbox">
-                                    <div class="desc-content">
-                                        <div class="title">예상 은퇴연령</div>
-                                        <p>퇴직 후 생계를 목적으로 소득활동을 더 이상 하지 않을 것으로 예상하는 나이를 입력하시기 바랍니다. 은퇴 나이틑 현재 고객님의 나이보다 많아야 합니다.</p>
-                                        <button type="button" class="ic-only box-close">창닫기</button>
-                                    </div>
-                                </div>
-                            </label>
-                            <div class="form-group-txt"> 
-                                <input type="text" id="예상 은퇴연령" class="charLength7 align-right" placeholder="0">
-                                <span class="back-txt">세</span>
-                            </div>
-                        </div>
-                        <div class="items">
-                            <label class="field-label" for="예상 연소득상승률">
-                                <button type="button" class="_has-tooltip"><span>예상 연소득상승률 (0~20%)</span><i class="ic-only question"></i></button>
-                                <!-- tooltip -->
-                                <div class="desc-box type1 _tooltipbox">
-                                    <div class="desc-content">
-                                        <div class="title">예상 연소득상승률</div>
-                                        <p>소득이 매년 상승하는 비율입니다. 국민연금의 미래가치 예상연금액과 퇴직연금액은 소득상승률에 따라 영향을 받습니다. <br>
-                                            기본값 : 4.7%(2019-2023 국민연금 A값 상승률 – 국민연금)</p>
-                                        <button type="button" class="ic-only box-close">창닫기</button>
-                                    </div>
-                                </div>
-                            </label>
-                            <div class="form-group-txt"> 
-                                <input type="text" id="예상 연소득상승률" class="charLength7 align-right" placeholder="0">
-                                <span class="back-txt">%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field equal-list form">
-                        <div class="items">
-                            <label class="field-label" for="예상 연물가 상승률">
-                                <button type="button" class="_has-tooltip"><span>예상 연물가 상승률 (0.0~20.0%)</span><i class="ic-only question"></i></button>
-                                <!-- tooltip -->
-                                <div class="desc-box type1 _tooltipbox">
-                                    <div class="desc-content">
-                                        <div class="title">예상 연물가 상승률</div>
-                                        <p>매년 물가가 상승하는 비율입니다. 국민연금 수령 금액은 물가상승률에 따라 매년 증액됩니다. 
-                                        기본값 : 2% (2018-2022 소비자 물가 상승률 평균 – 통계청)</p>
-                                        <button type="button" class="ic-only box-close">창닫기</button>
-                                    </div>
-                                </div>
-                            </label>
-                            <div class="form-group-txt"> 
-                                <input type="text" id="예상 연물가 상승률" class="charLength7 align-right" placeholder="0">
-                                <span class="back-txt">%</span>
-                            </div>
-                        </div>
-                        <div class="items">
-                            <label class="field-label" for="예상 세후투자 수익률">
-                                <button type="button" class="_has-tooltip"><span>예상 세후투자 수익률 (0.00~20.00)</span><i class="ic-only question"></i></button>
-                                <!-- tooltip -->
-                                <div class="desc-box type1 _tooltipbox">
-                                    <div class="desc-content">
-                                        <div class="title">예상 세후투자 수익률</div>
-                                        <p>퇴직연금, 개인연금을 포함한 금융자산을 투자하여 세금을 납부한 후 기대하는 예상 수익률입니다.
-                                        퇴직연금 DC형, 개인연금은 투자수익률에 따라 연금액이 결정됩니다. 기본값 : 3.7%(2023.2월 연금저축보험 공시기준이율 – 보험개발원)</p>
-                                        <button type="button" class="ic-only box-close">창닫기</button>
-                                    </div>
-                                </div>
-                            </label>
-                            <div class="form-group-txt"> 
-                                <input type="text" id="예상 세후투자 수익률" class="charLength7 align-right" placeholder="0">
-                                <span class="back-txt">%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="txt-list dot fz14 gray top">
-                        <li>물가상승률과 세후투자수익률은 통계청과 보험개발원에서 발표한 자료를 바탕으로 기본값이 설정되어 있습니다.</li>
-                    </ul>
+                  </div>
+                </label>
+                <div class="form-group-txt">
+                  <input type="text" id="예상 기대수명" class="charLength7 align-right" placeholder="0" />
+                  <span class="back-txt">세</span>
                 </div>
-
-                <h3 class="cont-title">은퇴후 필요 노후자금 입력</h3>
-                <div class="board-wrap bd-write">
-                    <div class="field equal-list form">
-                        <div class="items">
-                            <label class="field-label" for="노후 월생활비">노후 월생활비 (현재시점기준)
-                            </label>
-                            <div class="form-group-txt col">
-                                <div class="need-inner">
-                                    <span class="front-txt">월</span> 
-                                    <input type="text" id="노후 월생활비" class="charLength7 align-right" placeholder="0">
-                                    <span class="back-txt">만원</span>
-                                </div>
-                                <button type="button" class="button-fourth" id="btn1">노후생활비통계</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h3 class="cont-title">준비중인 노후자금 입력</h3>
-                <div class="board-wrap bd-write">
-                    <div class="field equal-list form">
-                        <div class="items small">
-                            <label class="field-label" for="수령예정 국민연금액">수령예정 국민연금액
-                            </label>
-                            <div class="form-group-txt">
-                                <span class="front-txt">월</span> 
-                                <input type="text" id="수령예정 국민연금액" class="charLength5 align-right" placeholder="0">
-                                <span class="back-txt">만원 (현재 물가기준)</span>
-                            </div>
-                        </div>
-                        <div class="items small">
-                            <label class="field-label" for="국민연금 가입 월 수">국민연금 가입 월 수
-                            </label>
-                            <div class="form-group-txt"> 
-                                <input type="text" id="국민연금 가입 월 수" class="charLength8 align-right" placeholder="0">
-                                <span class="back-txt">개월</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field equal-list form">
-                        <div class="items small">
-                            <label class="field-label" for="퇴직금 퇴직연금">퇴직금/ 퇴직연금
-                            </label>
-                            <div class="form-group-txt col"> 
-                                <div class="need-inner">
-                                    <input type="text" id="퇴직금 퇴직연금" class="charLength7 align-right" placeholder="0">
-                                    <span class="back-txt">만원</span>
-                                </div>
-                                <div class="equal-list">
-                                    <button type="button" class="button-fourth">퇴직금 계산기</button>
-                                    <button type="button" class="button-fourth" id="btn2">퇴직연금 계산기</button>
-                                </div>
-                                <ul class="txt-list dot fz14 gray top">
-                                    <li>퇴직금 또는 퇴직연금을 모르실 경우 퇴직금 계산기를 이용하시기 바랍니다.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field equal-list form">
-                        <div class="items small">
-                            <label class="field-label" for="수령예정 개인연금액">수령예정 개인연금액
-                            </label>
-                            <div class="form-group-txt col">
-                                <div class="need-inner">
-                                    <span class="front-txt">월</span> 
-                                    <input type="text" id="수령예정 개인연금액" class="charLength7 align-right" placeholder="0">
-                                    <span class="back-txt">만원</span>
-                                </div>
-                                <button type="button" class="button-fourth" id="btn3">개인연금 계산기</button>
-                                <ul class="txt-list dot fz14 gray top">
-                                    <li>퇴직금 또는 퇴직연금을 모르실 경우 퇴직금 계산기를 이용하시기 바랍니다.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field equal-list form">
-                        <div class="items small">
-                            <label class="field-label" for="개인연금 수령연령">개인연금 수령연령</label>
-                            <div class="form-group-txt">
-                                <input type="text" id="개인연금 수령연령" class="charLength8 align-right" placeholder="0">
-                                <span class="back-txt">세</span>
-                            </div>
-                        </div>
-                        <div class="items small">
-                            <label class="field-label" for="개인연금 수령기간">개인연금 수령기간</label>
-                            <div class="form-group-txt"> 
-                                <input type="text" id="개인연금 수령기간" class="charLength8 align-right" placeholder="0">
-                                <span class="back-txt">개월</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cont-bottom">
-                    <div class="btn-group">
-                        <button type="submit" class="button-primary -lg">결과 조회</button>
-                    </div>
-                </div>
-                <!-- layer -->
-                <!-- layer 노후 필요 생활비 통계 -->
-                <div class="modal dim full" id="pop-alert1">
-                    <div class="modalWrap">
-                        <div class="modal-header">
-                            <div class="modal-title">
-                                <h3>노후 필요 생활비 통계</h3>
-                            </div>
-                            <button class="btn-close">모달창닫기</button>
-                        </div>
-                        <div class="modal-body">
-                            <!-- 내용시작 -->
-                            <div class="con-table-header col">
-                                <h4 class="sm-title fz16">2021년 국민노후보장 패널 조사 월평균 노후생활비</h4>
-                                <span class="txt-helper">(단위:만원/월)</span>
-                            </div>
-                            <div class="con-table all-center">
-                                <table summary="월평균 노후생활비안에 들어가는 부부의 생활수준, 최소노후생활비 생활수준과 개인의 적정노후생활비, 최소노후생활비의 생활수준">
-                                    <caption>월평균 노후생활비</caption>
-                                    <colgroup>
-                                            <col width="*" />
-                                            <col width="14%" />
-                                            <col width="19%" />
-                                            <col width="19%" />
-                                            <col width="19%" />
-                                            <col width="19%" />
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2" rowspan="2" scope="col">구분</th>
-                                            <th colspan="2" scope="col">부부</th>
-                                            <th colspan="2" scope="col">개인</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">최소노후생활비</th>
-                                            <th scope="col">적정노후생활비</th>
-                                            <th scope="col">최소노후생활비</th>
-                                            <th scope="col">적정노후생활비</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>                                        
-                                        <tr>
-                                            <th scope="row" rowspan="4">연령대</th>
-                                            <th scope="row">50대</th>
-                                            <td>219.3</td>
-                                            <td>306.8</td>
-                                            <td>139.1</td>
-                                            <td>198.3</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">60대</th>
-                                            <td>207.1</td>
-                                            <td>288.8</td>
-                                            <td>129.0</td>
-                                            <td>183.8</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">70대</th>
-                                            <td>181.9</td>
-                                            <td>251.3</td>
-                                            <td>113.4</td>
-                                            <td>161.7</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">80대 이상</th>
-                                            <td>162.3</td>
-                                            <td>226.8</td>
-                                            <td>99.9</td>
-                                            <td>144.0</td>
-                                        </tr>                    
-                                        <tr>
-                                            <th scope="row" rowspan="3">거주<br />지역</th>
-                                            <th scope="row">서울</th>
-                                            <td>232.0</td>
-                                            <td>330.1</td>
-                                            <td>144.0</td>
-                                            <td>205.3</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">광역시</th>
-                                            <td>203.7</td>
-                                            <td>279.9</td>
-                                            <td>122.2</td>
-                                            <td>173.9</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">도</th>
-                                            <td>185.8</td>
-                                            <td>258.7</td>
-                                            <td>119.0</td>
-                                            <td>170.1</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" colspan="2">전체</th>
-                                            <td>198.7</td>
-                                            <td>277.0</td>
-                                            <td>124.3</td>
-                                            <td>177.3</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <ul class="txt-list dot doubletop">
-                                    <li>중고령자의 주관적 인식에 따라 노후에 필요로 하는 월생활비 수준을 의미</li>
-                                    <li>최소생활비는 특별한질병등이없는건강한노년임을전제(가정)할때드는비용을, 적정생활비는 표준적인 생활을 하는 데 흡족한 비용을 의미함</li>
-                                </ul>
-                            </div>
-                            <!-- 내용끝 -->
-                        </div>
-                    </div>
-                </div>
-                <!-- // layer 노후 필요 생활비 통계 -->
-
-                <!-- ================= Modal ================= -->
-                <!-- UHKD0103P0 퇴직연금 정보입력 Modal-->
-                <div class="modal dim full" id="pop-alert2">
-                    <div class="modalWrap">
-                        <div class="modal-header">
-                            <div class="modal-title">
-                                <h3>퇴직연금 정보입력</h3>
-                            </div>
-                            <button class="btn-close">모달창닫기</button>
-                        </div>
-                        <div class="modal-body">
-                            <!-- 내용시작 -->
-                            <div class="modal-body-inner">
-                                <!-- survey list -->
-                                <ul>
-                                    <!-- 1 -->
-                                    <li class="qnalist none col">
-                                        <p class="question-title"><em class="ic-q">Q</em>입사는 언제 하셨습니까? (퇴직금 중간정산 시 중간정산 연도)</p>
-                                        <div class="question-answer">
-                                            <div class="form-group-txt"> 
-                                                <input type="text" id="input4" class="charLength5 align-right" placeholder="0" title="입사년도">
-                                                <span class="back-txt">년</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!-- 2 -->
-                                    <li class="qnalist col">
-                                        <p class="question-title"><em class="ic-q">Q</em>전년도 소득은 한달에 얼마나 됩니까?</p>
-                                        <div class="question-answer">
-                                            <div class="form-group-txt"> 
-                                                <input type="text" id="input3" class="charLength5 align-right" placeholder="0" title="전년도소득월">
-                                                <span class="back-txt">만원</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!-- 3 -->
-                                    <li class="qnalist col">
-                                        <p class="question-title"><em class="ic-q">Q</em>퇴직금이 아닌 연금으로 수령하실 경우 몇 세부터 받으실 예정입니까?</p>
-                                        <div class="question-answer">
-                                            <div class="form-group-txt"> 
-                                                <input type="text" id="input2" class="charLength5 align-right" placeholder="0" title="연금수령 받고싶은 나이">
-                                                <span class="back-txt">세</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!-- 4 -->
-                                    <li class="qnalist col">
-                                        <p class="question-title"><em class="ic-q">Q</em>연금으로 받으실 경우 몇 년 동안 받기를 원하십니까?</p>
-                                        <div class="question-answer">
-                                            <div class="form-group-txt"> 
-                                                <input type="text" id="input1" class="charLength5 align-right" placeholder="0" title="연금받고싶은 년수">
-                                                <span class="back-txt">년</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <!--// survey list -->
-                            </div>
-                            <!-- 내용끝 -->
-                        </div>
-                        <div class="modal-footer">
-                            <div class="btn-group">
-                                <!-- 231201 수정 -->
-                                <button type="button" class="button-primary -lg">퇴직연금 수령액 등록</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--// 퇴직연금 정보입력 Modal-->
-
-                <!-- UHKD0104P0 개인연금정보입력 정보입력 Modal-->
-                <div class="modal dim full" id="pop-alert3">
-                    <div class="modalWrap h720px">
-                        <div class="modal-header">
-                            <div class="modal-title">
-                                <h3>개인연금정보입력</h3>
-                            </div>
-                            <button class="btn-close">모달창닫기</button>
-                        </div>
-                        <div class="modal-body">
-                            <!-- 내용시작 -->
-                            <div class="modal-body-inner">
-                                <!-- survey list -->
-                                <ul>
-                                    <!-- 1 -->
-                                    <li class="qnalist none col">
-                                        <p class="question-title"><em class="ic-q">Q</em>개인연금의 가입 년도는 언제입니까?</p>
-                                        <div class="question-answer">
-                                            <div class="form-group-txt"> 
-                                                <input type="text" id="input5" class="charLength5 align-right" placeholder="0" title="개인연금의 가입 년도">
-                                                <span class="back-txt">년도</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!-- 2 -->
-                                    <li class="qnalist col">
-                                        <p class="question-title"><em class="ic-q">Q</em>매 월 개인연금 납입액은 얼마입니까?</p>
-                                        <div class="question-answer">
-                                            <div class="form-group-txt"> 
-                                                <input type="text" id="input6" class="charLength5 align-right" placeholder="0" title="매 월 개인연금 납입액">
-                                                <span class="back-txt">만원</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!-- 3 -->
-                                    <li class="qnalist col">
-                                        <p class="question-title"><em class="ic-q">Q</em>개인연금의 전체 납입 기간은 몇 년입니까?</p>
-                                        <div class="question-answer">
-                                            <div class="form-group-txt"> 
-                                                <input type="text" id="input7" class="charLength5 align-right" placeholder="0" title="개인연금의 전체 납입 기간">
-                                                <span class="back-txt">년</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!-- 4 -->
-                                    <li class="qnalist col">
-                                        <p class="question-title"><em class="ic-q">Q</em>개인연금은 몇 세 부터 받으실 예정입니까? (단, 은퇴 이후만)</p>
-                                        <div class="question-answer">
-                                            <div class="form-group-txt"> 
-                                                <input type="text" id="input8" class="charLength5 align-right" placeholder="0" title="개인연금 희망연세">
-                                                <span class="back-txt">세</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!-- 5 -->
-                                    <li class="qnalist col">
-                                        <p class="question-title"><em class="ic-q">Q</em>개인연금은 몇 년 동안 받으실 예정입니까?</p>
-                                        <div class="question-answer">
-                                            <div class="form-group-txt"> 
-                                                <input type="text" id="input8" class="charLength5 align-right" placeholder="0" title="개인연금 희망년수">
-                                                <span class="back-txt">년</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <!--// survey list -->
-                            </div>
-                            <!-- 내용끝 -->
-                        </div>
-                        <div class="modal-footer">
-                            <div class="btn-group">
-                                <!-- 231201 수정 -->
-                                <button type="button" class="button-primary -lg">개인연금 수령액 등록</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--// 개인연금정보입력 정보입력 Modal -->
-
-                <script>
-                document.querySelector('#btn1').addEventListener('click', ()=>{
-                    commonUI.modal('#pop-alert1', '#btn1');
-                });
-                document.querySelector('#btn2').addEventListener('click', ()=>{
-                    commonUI.modal('#pop-alert2', '#btn2');
-                });
-                document.querySelector('#btn3').addEventListener('click', ()=>{
-                    commonUI.modal('#pop-alert3', '#btn3');
-                });
-                </script>
-                <!-- // layer -->
-                <!-- 공통UI - 해시태그 링크들 -->
-                <div class="hashtag-wrap"></div>
-                <!--// 공통UI - 해시태그 링크들 -->
-                <!--//콘텐츠 영역-->
-
-                <!--// E : 2311월 -->
+              </div>
             </div>
-            <!-- 공통UI - 만족도조사 -->
-            <div class="page-satisfaction"></div>
-            <!-- //공통UI - 만족도조사 -->
-        </main>
-        <!-- //content -->
+            <div class="field equal-list form">
+              <div class="items">
+                <label class="field-label" for="예상 은퇴연령">
+                  <button type="button" class="_has-tooltip"><span>예상 은퇴연령 (1~100세)</span><i class="ic-only question"></i></button>
+                  <!-- tooltip -->
+                  <div class="desc-box type1 _tooltipbox">
+                    <div class="desc-content">
+                      <div class="title">예상 은퇴연령</div>
+                      <p>퇴직 후 생계를 목적으로 소득활동을 더 이상 하지 않을 것으로 예상하는 나이를 입력하시기 바랍니다. 은퇴 나이틑 현재 고객님의 나이보다 많아야 합니다.</p>
+                      <button type="button" class="ic-only box-close">창닫기</button>
+                    </div>
+                  </div>
+                </label>
+                <div class="form-group-txt">
+                  <input type="text" id="예상 은퇴연령" class="charLength7 align-right" placeholder="0" />
+                  <span class="back-txt">세</span>
+                </div>
+              </div>
+              <div class="items">
+                <label class="field-label" for="예상 연소득상승률">
+                  <button type="button" class="_has-tooltip"><span>예상 연소득상승률 (0~20%)</span><i class="ic-only question"></i></button>
+                  <!-- tooltip -->
+                  <div class="desc-box type1 _tooltipbox">
+                    <div class="desc-content">
+                      <div class="title">예상 연소득상승률</div>
+                      <p>
+                        소득이 매년 상승하는 비율입니다. 국민연금의 미래가치 예상연금액과 퇴직연금액은 소득상승률에 따라 영향을 받습니다. <br />
+                        기본값 : 4.7%(2019-2023 국민연금 A값 상승률 – 국민연금)
+                      </p>
+                      <button type="button" class="ic-only box-close">창닫기</button>
+                    </div>
+                  </div>
+                </label>
+                <div class="form-group-txt">
+                  <input type="text" id="예상 연소득상승률" class="charLength7 align-right" placeholder="0" />
+                  <span class="back-txt">%</span>
+                </div>
+              </div>
+            </div>
+            <div class="field equal-list form">
+              <div class="items">
+                <label class="field-label" for="예상 연물가 상승률">
+                  <button type="button" class="_has-tooltip"><span>예상 연물가 상승률 (0.0~20.0%)</span><i class="ic-only question"></i></button>
+                  <!-- tooltip -->
+                  <div class="desc-box type1 _tooltipbox">
+                    <div class="desc-content">
+                      <div class="title">예상 연물가 상승률</div>
+                      <p>매년 물가가 상승하는 비율입니다. 국민연금 수령 금액은 물가상승률에 따라 매년 증액됩니다. 기본값 : 2% (2018-2022 소비자 물가 상승률 평균 – 통계청)</p>
+                      <button type="button" class="ic-only box-close">창닫기</button>
+                    </div>
+                  </div>
+                </label>
+                <div class="form-group-txt">
+                  <input type="text" id="예상 연물가 상승률" class="charLength7 align-right" placeholder="0" />
+                  <span class="back-txt">%</span>
+                </div>
+              </div>
+              <div class="items">
+                <label class="field-label" for="예상 세후투자 수익률">
+                  <button type="button" class="_has-tooltip"><span>예상 세후투자 수익률 (0.00~20.00)</span><i class="ic-only question"></i></button>
+                  <!-- tooltip -->
+                  <div class="desc-box type1 _tooltipbox">
+                    <div class="desc-content">
+                      <div class="title">예상 세후투자 수익률</div>
+                      <p>퇴직연금, 개인연금을 포함한 금융자산을 투자하여 세금을 납부한 후 기대하는 예상 수익률입니다. 퇴직연금 DC형, 개인연금은 투자수익률에 따라 연금액이 결정됩니다. 기본값 : 3.7%(2023.2월 연금저축보험 공시기준이율 – 보험개발원)</p>
+                      <button type="button" class="ic-only box-close">창닫기</button>
+                    </div>
+                  </div>
+                </label>
+                <div class="form-group-txt">
+                  <input type="text" id="예상 세후투자 수익률" class="charLength7 align-right" placeholder="0" />
+                  <span class="back-txt">%</span>
+                </div>
+              </div>
+            </div>
+            <ul class="txt-list dot fz14 gray top">
+              <li>물가상승률과 세후투자수익률은 통계청과 보험개발원에서 발표한 자료를 바탕으로 기본값이 설정되어 있습니다.</li>
+            </ul>
+          </div>
 
-        <!-- footer -->
-        <footer id="footer"></footer>
+          <h3 class="cont-title">은퇴후 필요 노후자금 입력</h3>
+          <div class="board-wrap bd-write">
+            <div class="field equal-list form">
+              <div class="items">
+                <label class="field-label" for="노후 월생활비">노후 월생활비 (현재시점기준) </label>
+                <div class="form-group-txt col">
+                  <div class="need-inner">
+                    <span class="front-txt">월</span>
+                    <input type="text" id="노후 월생활비" class="charLength7 align-right" placeholder="0" />
+                    <span class="back-txt">만원</span>
+                  </div>
+                  <button type="button" class="button-fourth" id="btn1">노후생활비통계</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="cont-title">준비중인 노후자금 입력</h3>
+          <div class="board-wrap bd-write">
+            <div class="field equal-list form">
+              <div class="items small">
+                <label class="field-label" for="수령예정 국민연금액">수령예정 국민연금액 </label>
+                <div class="form-group-txt">
+                  <span class="front-txt">월</span>
+                  <input type="text" id="수령예정 국민연금액" class="charLength5 align-right" placeholder="0" />
+                  <span class="back-txt">만원 (현재 물가기준)</span>
+                </div>
+              </div>
+              <div class="items small">
+                <label class="field-label" for="국민연금 가입 월 수">국민연금 가입 월 수 </label>
+                <div class="form-group-txt">
+                  <input type="text" id="국민연금 가입 월 수" class="charLength8 align-right" placeholder="0" />
+                  <span class="back-txt">개월</span>
+                </div>
+              </div>
+            </div>
+            <div class="field equal-list form">
+              <div class="items small">
+                <label class="field-label" for="퇴직금 퇴직연금">퇴직금/ 퇴직연금 </label>
+                <div class="form-group-txt col">
+                  <div class="need-inner">
+                    <input type="text" id="퇴직금 퇴직연금" class="charLength7 align-right" placeholder="0" />
+                    <span class="back-txt">만원</span>
+                  </div>
+                  <div class="equal-list">
+                    <button type="button" class="button-fourth">퇴직금 계산기</button>
+                    <button type="button" class="button-fourth" id="btn2">퇴직연금 계산기</button>
+                  </div>
+                  <ul class="txt-list dot fz14 gray top">
+                    <li>퇴직금 또는 퇴직연금을 모르실 경우 퇴직금 계산기를 이용하시기 바랍니다.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="field equal-list form">
+              <div class="items small">
+                <label class="field-label" for="수령예정 개인연금액">수령예정 개인연금액 </label>
+                <div class="form-group-txt col">
+                  <div class="need-inner">
+                    <span class="front-txt">월</span>
+                    <input type="text" id="수령예정 개인연금액" class="charLength7 align-right" placeholder="0" />
+                    <span class="back-txt">만원</span>
+                  </div>
+                  <button type="button" class="button-fourth" id="btn3">개인연금 계산기</button>
+                  <ul class="txt-list dot fz14 gray top">
+                    <li>퇴직금 또는 퇴직연금을 모르실 경우 퇴직금 계산기를 이용하시기 바랍니다.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="field equal-list form">
+              <div class="items small">
+                <label class="field-label" for="개인연금 수령연령">개인연금 수령연령</label>
+                <div class="form-group-txt">
+                  <input type="text" id="개인연금 수령연령" class="charLength8 align-right" placeholder="0" />
+                  <span class="back-txt">세</span>
+                </div>
+              </div>
+              <div class="items small">
+                <label class="field-label" for="개인연금 수령기간">개인연금 수령기간</label>
+                <div class="form-group-txt">
+                  <input type="text" id="개인연금 수령기간" class="charLength8 align-right" placeholder="0" />
+                  <span class="back-txt">개월</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cont-bottom">
+            <div class="btn-group">
+              <button type="submit" class="button-primary -lg">결과 조회</button>
+            </div>
+          </div>
+          <!-- layer -->
+          <!-- layer 노후 필요 생활비 통계 -->
+          <div class="modal dim full" id="pop-alert1">
+            <div class="modalWrap">
+              <div class="modal-header">
+                <div class="modal-title">
+                  <h3>노후 필요 생활비 통계</h3>
+                </div>
+                <button class="btn-close">모달창닫기</button>
+              </div>
+              <div class="modal-body">
+                <!-- 내용시작 -->
+                <div class="con-table-header col">
+                  <h4 class="sm-title fz16">2021년 국민노후보장 패널 조사 월평균 노후생활비</h4>
+                  <span class="txt-helper">(단위:만원/월)</span>
+                </div>
+                <div class="con-table all-center">
+                  <table summary="월평균 노후생활비안에 들어가는 부부의 생활수준, 최소노후생활비 생활수준과 개인의 적정노후생활비, 최소노후생활비의 생활수준">
+                    <caption>
+                      월평균 노후생활비
+                    </caption>
+                    <colgroup>
+                      <col width="*" />
+                      <col width="14%" />
+                      <col width="19%" />
+                      <col width="19%" />
+                      <col width="19%" />
+                      <col width="19%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th colspan="2" rowspan="2" scope="col">구분</th>
+                        <th colspan="2" scope="col">부부</th>
+                        <th colspan="2" scope="col">개인</th>
+                      </tr>
+                      <tr>
+                        <th scope="col">최소노후생활비</th>
+                        <th scope="col">적정노후생활비</th>
+                        <th scope="col">최소노후생활비</th>
+                        <th scope="col">적정노후생활비</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" rowspan="4">연령대</th>
+                        <th scope="row">50대</th>
+                        <td>219.3</td>
+                        <td>306.8</td>
+                        <td>139.1</td>
+                        <td>198.3</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">60대</th>
+                        <td>207.1</td>
+                        <td>288.8</td>
+                        <td>129.0</td>
+                        <td>183.8</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">70대</th>
+                        <td>181.9</td>
+                        <td>251.3</td>
+                        <td>113.4</td>
+                        <td>161.7</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">80대 이상</th>
+                        <td>162.3</td>
+                        <td>226.8</td>
+                        <td>99.9</td>
+                        <td>144.0</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" rowspan="3">거주<br />지역</th>
+                        <th scope="row">서울</th>
+                        <td>232.0</td>
+                        <td>330.1</td>
+                        <td>144.0</td>
+                        <td>205.3</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">광역시</th>
+                        <td>203.7</td>
+                        <td>279.9</td>
+                        <td>122.2</td>
+                        <td>173.9</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">도</th>
+                        <td>185.8</td>
+                        <td>258.7</td>
+                        <td>119.0</td>
+                        <td>170.1</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" colspan="2">전체</th>
+                        <td>198.7</td>
+                        <td>277.0</td>
+                        <td>124.3</td>
+                        <td>177.3</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <ul class="txt-list dot doubletop">
+                    <li>중고령자의 주관적 인식에 따라 노후에 필요로 하는 월생활비 수준을 의미</li>
+                    <li>최소생활비는 특별한질병등이없는건강한노년임을전제(가정)할때드는비용을, 적정생활비는 표준적인 생활을 하는 데 흡족한 비용을 의미함</li>
+                  </ul>
+                </div>
+                <!-- 내용끝 -->
+              </div>
+            </div>
+          </div>
+          <!-- // layer 노후 필요 생활비 통계 -->
+
+          <!-- ================= Modal ================= -->
+          <!-- UHKD0103P0 퇴직연금 정보입력 Modal-->
+          <div class="modal dim full" id="pop-alert2">
+            <div class="modalWrap">
+              <div class="modal-header">
+                <div class="modal-title">
+                  <h3>퇴직연금 정보입력</h3>
+                </div>
+                <button class="btn-close">모달창닫기</button>
+              </div>
+              <div class="modal-body">
+                <!-- 내용시작 -->
+                <div class="modal-body-inner">
+                  <!-- survey list -->
+                  <ul>
+                    <!-- 1 -->
+                    <li class="qnalist none col">
+                      <p class="question-title"><em class="ic-q">Q</em>입사는 언제 하셨습니까? (퇴직금 중간정산 시 중간정산 연도)</p>
+                      <div class="question-answer">
+                        <div class="form-group-txt">
+                          <input type="text" id="input4" class="charLength5 align-right" placeholder="0" title="입사년도" />
+                          <span class="back-txt">년</span>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- 2 -->
+                    <li class="qnalist col">
+                      <p class="question-title"><em class="ic-q">Q</em>전년도 소득은 한달에 얼마나 됩니까?</p>
+                      <div class="question-answer">
+                        <div class="form-group-txt">
+                          <input type="text" id="input3" class="charLength5 align-right" placeholder="0" title="전년도소득월" />
+                          <span class="back-txt">만원</span>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- 3 -->
+                    <li class="qnalist col">
+                      <p class="question-title"><em class="ic-q">Q</em>퇴직금이 아닌 연금으로 수령하실 경우 몇 세부터 받으실 예정입니까?</p>
+                      <div class="question-answer">
+                        <div class="form-group-txt">
+                          <input type="text" id="input2" class="charLength5 align-right" placeholder="0" title="연금수령 받고싶은 나이" />
+                          <span class="back-txt">세</span>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- 4 -->
+                    <li class="qnalist col">
+                      <p class="question-title"><em class="ic-q">Q</em>연금으로 받으실 경우 몇 년 동안 받기를 원하십니까?</p>
+                      <div class="question-answer">
+                        <div class="form-group-txt">
+                          <input type="text" id="input1" class="charLength5 align-right" placeholder="0" title="연금받고싶은 년수" />
+                          <span class="back-txt">년</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <!--// survey list -->
+                </div>
+                <!-- 내용끝 -->
+              </div>
+              <div class="modal-footer">
+                <div class="btn-group">
+                  <!-- 231201 수정 -->
+                  <button type="button" class="button-primary -lg">퇴직연금 수령액 등록</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--// 퇴직연금 정보입력 Modal-->
+
+          <!-- UHKD0104P0 개인연금정보입력 정보입력 Modal-->
+          <div class="modal dim full" id="pop-alert3">
+            <div class="modalWrap h720px">
+              <div class="modal-header">
+                <div class="modal-title">
+                  <h3>개인연금정보입력</h3>
+                </div>
+                <button class="btn-close">모달창닫기</button>
+              </div>
+              <div class="modal-body">
+                <!-- 내용시작 -->
+                <div class="modal-body-inner">
+                  <!-- survey list -->
+                  <ul>
+                    <!-- 1 -->
+                    <li class="qnalist none col">
+                      <p class="question-title"><em class="ic-q">Q</em>개인연금의 가입 년도는 언제입니까?</p>
+                      <div class="question-answer">
+                        <div class="form-group-txt">
+                          <input type="text" id="input5" class="charLength5 align-right" placeholder="0" title="개인연금의 가입 년도" />
+                          <span class="back-txt">년도</span>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- 2 -->
+                    <li class="qnalist col">
+                      <p class="question-title"><em class="ic-q">Q</em>매 월 개인연금 납입액은 얼마입니까?</p>
+                      <div class="question-answer">
+                        <div class="form-group-txt">
+                          <input type="text" id="input6" class="charLength5 align-right" placeholder="0" title="매 월 개인연금 납입액" />
+                          <span class="back-txt">만원</span>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- 3 -->
+                    <li class="qnalist col">
+                      <p class="question-title"><em class="ic-q">Q</em>개인연금의 전체 납입 기간은 몇 년입니까?</p>
+                      <div class="question-answer">
+                        <div class="form-group-txt">
+                          <input type="text" id="input7" class="charLength5 align-right" placeholder="0" title="개인연금의 전체 납입 기간" />
+                          <span class="back-txt">년</span>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- 4 -->
+                    <li class="qnalist col">
+                      <p class="question-title"><em class="ic-q">Q</em>개인연금은 몇 세 부터 받으실 예정입니까? (단, 은퇴 이후만)</p>
+                      <div class="question-answer">
+                        <div class="form-group-txt">
+                          <input type="text" id="input8" class="charLength5 align-right" placeholder="0" title="개인연금 희망연세" />
+                          <span class="back-txt">세</span>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- 5 -->
+                    <li class="qnalist col">
+                      <p class="question-title"><em class="ic-q">Q</em>개인연금은 몇 년 동안 받으실 예정입니까?</p>
+                      <div class="question-answer">
+                        <div class="form-group-txt">
+                          <input type="text" id="input8" class="charLength5 align-right" placeholder="0" title="개인연금 희망년수" />
+                          <span class="back-txt">년</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <!--// survey list -->
+                </div>
+                <!-- 내용끝 -->
+              </div>
+              <div class="modal-footer">
+                <div class="btn-group">
+                  <!-- 231201 수정 -->
+                  <button type="button" class="button-primary -lg">개인연금 수령액 등록</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--// 개인연금정보입력 정보입력 Modal -->
+
+          <script>
+            document.querySelector("#btn1").addEventListener("click", () => {
+              commonUI.modal("#pop-alert1", "#btn1");
+            });
+            document.querySelector("#btn2").addEventListener("click", () => {
+              commonUI.modal("#pop-alert2", "#btn2");
+            });
+            document.querySelector("#btn3").addEventListener("click", () => {
+              commonUI.modal("#pop-alert3", "#btn3");
+            });
+          </script>
+          <!-- // layer -->
+          <!-- 공통UI - 해시태그 링크들 -->
+          <div class="hashtag-wrap"></div>
+          <!--// 공통UI - 해시태그 링크들 -->
+          <!--//콘텐츠 영역-->
+
+          <!--// E : 2311월 -->
+        </div>
+        <!-- 공통UI - 만족도조사 -->
+        <div class="page-satisfaction"></div>
+        <!-- //공통UI - 만족도조사 -->
+      </main>
+      <!-- //content -->
+
+      <!-- footer -->
+      <footer id="footer"></footer>
     </div>
     <!-- //wrapper -->
-</body>
+  </body>
 </html>

@@ -1,155 +1,194 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>노후준비종합서비스</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
-	<script src="../../js/lib/jquery-ui.min.js"></script>
-	<script src="../../js/lib/jquery.easing.min.js"></script>
-	<script src="../../js/lib/swiper-bundle.min.js"></script>
-	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
-	<script src="../../js/zoom.js"></script>
-    <script src="../../js/ui_temp.js"></script><!--공통UI layout-->
-	<script src="../../js/ui_common.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
 
-	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">
-</head>
-<body>
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <!--공통UI layout-->
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  </head>
+  <body>
     <div id="wrapper">
-        <!-- header -->
-        <header id="header"></header>
-        <!-- //header -->
+      <!-- header -->
+      <header id="header"></header>
+      <!-- //header -->
 
-        <!-- content -->
-        <div class="breadcrumb">
-            <div class="breadcrumb-nav">
-                <ol class="breadcrumb-location">
-                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
-                    <li class="breadcrumb-depth dep1">
-                        <button type="button" class="breadcrumb-trigger">재무진단</button>
-                        <ul class="breadcrumb-depth-list">
-                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
-                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
-                            <li><a href="#none" target="_self">재무진단</a></li>
-                            <li><a href="#none" target="_self">노후준비정보</a></li>
-                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li> 
-                        </ul>
-                    </li>
-                    <li class="breadcrumb-depth dep2">
-                        <button type="button" class="breadcrumb-trigger current">노후준비자금설계</button>
-                        <ul class="breadcrumb-depth-list">
-                            <li><a href="#none" target="_self">간단재무설계</a></li>
-                            <li class="current"><a href="#none" target="_self">노후준비자금설계</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
-                            <li><a href="#none" target="_self">종합재무설계</a></li>
-                            <li><a href="#none" target="_self">목적자금설계</a></li>
-                            <li><a href="#none" target="_self">재무계산기</a></li>
-                            <li><a href="#none" target="_self">국민연금준비수준</a></li>
-                            <li><a href="#none" target="_self">내연금알아보기</a></li>
-                            <li><a href="#none" target="_self">국민연금알아보기</a></li>
-                            <li><a href="#none" target="_self">기초연금모의계산</a></li>
-                            <li><a href="#none" target="_self">연금제도안내</a></li>
-                        </ul>
-                    </li>
-                </ol>
+      <!-- content -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-nav">
+          <ol class="breadcrumb-location">
+            <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+            <li class="breadcrumb-depth dep1">
+              <button type="button" class="breadcrumb-trigger">재무진단</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                <li><a href="#none" target="_self">재무진단</a></li>
+                <li><a href="#none" target="_self">노후준비정보</a></li>
+                <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger current">노후준비자금설계</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">간단재무설계</a></li>
+                <li class="current"><a href="#none" target="_self">노후준비자금설계</a></li>
+                <!--현재 메뉴 표시 li에 class="current" 추가-->
+                <li><a href="#none" target="_self">종합재무설계</a></li>
+                <li><a href="#none" target="_self">목적자금설계</a></li>
+                <li><a href="#none" target="_self">재무계산기</a></li>
+                <li><a href="#none" target="_self">국민연금준비수준</a></li>
+                <li><a href="#none" target="_self">내연금알아보기</a></li>
+                <li><a href="#none" target="_self">국민연금알아보기</a></li>
+                <li><a href="#none" target="_self">기초연금모의계산</a></li>
+                <li><a href="#none" target="_self">연금제도안내</a></li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <main id="conatiner" class="finance pension-plan">
+        <!--page-title-->
+        <div class="page-header">
+          <div class="page-title">
+            <a href="#" class="ic-only back">뒤로가기</a>
+            <h2>노후준비자금 설계</h2>
+          </div>
+          <div class="page-desc">
+            <button type="button" class="page-desc-btn _has-tooltip"><span>노후준비자금 설계 안내</span><i class="ic-only f-pg-desc"></i></button>
+            <div class="desc-box _tooltipbox">
+              <div class="desc-box-inner">
+                <div class="desc-content">
+                  <p class="title-sm">노후에 필요한 준비자금을 국민·개인·퇴직연금의 시뮬레이션을 통해 알아보는 프로그램입니다.</p>
+                  <p>
+                    본 설계 프로그램은 다양한 가정들에 기반을 두고 계산되므로 미래의 실제 수령 금액과는 차이가 날 수 있습니다. 고객님의 모든 정보는 본 설계프로그램과 재무설계 프로그램 이외의 다른 목적으로 사용되지 않음을 알려드립니다.<br />
+                    고객님이 입력하신 정보는 저장되지 않습니다.
+                  </p>
+                </div>
+                <button type="button" class="ic-only box-close">창닫기</button>
+              </div>
             </div>
+          </div>
+        </div>
+        <!--//page-title-->
+        <div class="content-wrap plan-step05">
+          <!--콘텐츠 영역-->
+          <ul class="equal-list step">
+            <li class="active">
+              <em class="unit">01</em>
+              <div class="type">기본정보 설정</div>
+            </li>
+            <li class="active">
+              <em class="unit">02</em>
+              <div class="type">국민연금 설계</div>
+            </li>
+            <li class="active">
+              <em class="unit">03</em>
+              <div class="type">퇴직연금 설계</div>
+            </li>
+            <li class="active">
+              <em class="unit">04</em>
+              <div class="type">개인연금 설계</div>
+            </li>
+            <li class="active">
+              <em class="unit">05</em>
+              <div class="type">통합 설계결과</div>
+            </li>
+          </ul>
+          <div class="cont-head">
+            <h3 class="cont-title big">통합 설계결과</h3>
+          </div>
+          <div class="divide-type">
+            <p class="cont-desc big">고객님께서는 66세부터 국민연금 <span class="fc-primary">매월 1,506만원</span>, 0세부터 퇴직연금 매월 0만원, 0세부터 개인연금 매월 0만원을 받으실 수 있습니다. (미래가치 기준)</p>
+            <button type="button" class="button-primary -sm round">상세표 확인</button>
+          </div>
+          <div class="tabWrap tab-base tab-total type-inner">
+            <ul class="tabNav">
+              <li><a href="#" id="tabNav1" role="tab" class="active" title="선택됨">DB(확정급여형)</a></li>
+              <li><a href="#" id="tabNav2" role="tab">DC(확정기여형)</a></li>
+            </ul>
+            <!-- DB(확정급여형) -->
+            <div class="tabContent active" role="tabpanel" aria-labelledby="tabNav1">
+              <!-- 화면 넓이 모두를 쓸 경우 full 클래스 추가 . 그래프가 4:3에 가까운 비율일경우 full  삭제 -->
+              <div class="graph-box1 full">
+                <span>그래프 영역1</span>
+              </div>
+            </div>
+            <!-- DC(확정기여형) -->
+            <div class="tabContent" role="tabpanel" aria-labelledby="tabNav2">
+              <!-- 화면 넓이 모두를 쓸 경우 full 클래스 추가 . 그래프가 4:3에 가까운 비율일경우 full  삭제 -->
+              <div class="graph-box1 full">
+                <svg width="100%" height="270" viewBox="0 0 700 270" style="transform: scaleY(-1)">
+                  <polyline stroke="#74bfff" stroke-width="2" fill="none" points="50, 135 150, 228.75 250, 228.75 350, 135 450, 228.75 550, 228.75 "></polyline>
+                  <polyline stroke="#ff7d7d" stroke-width="2" fill="none" points="50, 41.25 150, 228.75 250, 228.75 350, 260 450, 260 550, 260 650, 260 "></polyline>
+                  <polyline stroke="#badc58" stroke-width="2" fill="none" points="50, 244.375 150, 244.375 250, 244.375 "></polyline>
+                  <polyline stroke="#e056fd" stroke-width="2" fill="none" points="50, 10 150, 10 250, 10 "></polyline>
+                  <polyline stroke="#fab1a0" stroke-width="2" fill="none" points="50, 72.5 150, 41.25 250, 10 "></polyline>
+                  <polyline stroke="#ffeaa7" stroke-width="2" fill="none" points="50, 10 150, 10 250, 72.5 "></polyline>
+                  <circle r="2.5" cx="50" cy="135" stroke="#74bfff" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="150" cy="228.75" stroke="#74bfff" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="250" cy="228.75" stroke="#74bfff" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="350" cy="135" stroke="#74bfff" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="450" cy="228.75" stroke="#74bfff" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="550" cy="228.75" stroke="#74bfff" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="50" cy="41.25" stroke="#ff7d7d" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="150" cy="228.75" stroke="#ff7d7d" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="250" cy="228.75" stroke="#ff7d7d" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="350" cy="260" stroke="#ff7d7d" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="450" cy="260" stroke="#ff7d7d" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="550" cy="260" stroke="#ff7d7d" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="650" cy="260" stroke="#ff7d7d" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="50" cy="244.375" stroke="#badc58" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="150" cy="244.375" stroke="#badc58" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="250" cy="244.375" stroke="#badc58" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="50" cy="10" stroke="#e056fd" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="150" cy="10" stroke="#e056fd" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="250" cy="10" stroke="#e056fd" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="50" cy="72.5" stroke="#fab1a0" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="150" cy="41.25" stroke="#fab1a0" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="250" cy="10" stroke="#fab1a0" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="50" cy="10" stroke="#ffeaa7" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="150" cy="10" stroke="#ffeaa7" stroke-width="2" fill="#fff"></circle>
+                  <circle r="2.5" cx="250" cy="72.5" stroke="#ffeaa7" stroke-width="2" fill="#fff"></circle>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <script>
+            commonUI.tabNav(".tabWrap", 1);
+          </script>
+
+          <!-- 공통UI - 해시태그 링크들 -->
+          <div class="hashtag-wrap"></div>
+          <!--// 공통UI - 해시태그 링크들 -->
+
+          <!--//콘텐츠 영역-->
         </div>
 
-        <main id="conatiner" class="finance pension-plan">
-            <!--page-title-->
-            <div class="page-header">
-                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>노후준비자금 설계</h2></div>
-                <div class="page-desc">
-                    <button type="button" class="page-desc-btn _has-tooltip"><span>노후준비자금 설계 안내</span><i class="ic-only f-pg-desc"></i></button>
-                    <div class="desc-box _tooltipbox">
-                        <div class="desc-box-inner">
-                            <div class="desc-content">
-                                <p class="title-sm">노후에 필요한 준비자금을 국민·개인·퇴직연금의 시뮬레이션을 통해 알아보는 프로그램입니다.</p>
-                                <p>본 설계 프로그램은 다양한 가정들에 기반을 두고 계산되므로 미래의 실제 수령 금액과는 차이가 날 수 있습니다. 고객님의 모든 정보는 본 설계프로그램과 재무설계 프로그램 이외의 다른 목적으로 사용되지 않음을 알려드립니다.<br>
-                                    고객님이 입력하신 정보는 저장되지 않습니다.</p>
-                            </div>
-                            <button type="button" class="ic-only box-close">창닫기</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--//page-title-->
-            <div class="content-wrap plan-step05">
-                <!--콘텐츠 영역-->
-                <ul class="equal-list step">
-                    <li class="active">
-                        <em class="unit">01</em>
-                        <div class="type">기본정보 설정</div>
-                    </li>
-                    <li class="active">
-                        <em class="unit">02</em>
-                        <div class="type">국민연금 설계</div>
-                    </li>
-                    <li class="active">
-                        <em class="unit">03</em>
-                        <div class="type">퇴직연금 설계</div>
-                    </li>
-                    <li class="active">
-                        <em class="unit">04</em>
-                        <div class="type">개인연금 설계</div>
-                    </li>
-                    <li class="active">
-                        <em class="unit">05</em>
-                        <div class="type">통합 설계결과</div>
-                    </li>
-                </ul>
-                <div class="cont-head">
-                    <h3 class="cont-title big">통합 설계결과</h3>
-                </div>
-                <div class="divide-type">
-                    <p class="cont-desc big">고객님께서는 66세부터 국민연금 <span class="fc-primary">매월 1,506만원</span>, 0세부터 퇴직연금 매월 0만원, 0세부터 개인연금 매월 0만원을 받으실 수 있습니다. (미래가치 기준)</p>
-                    <button type="button" class="button-primary -sm round">상세표 확인</button>
-                </div>
-                <div class="tabWrap tab-base tab-total type-inner">
-                    <ul class="tabNav">
-                        <li><a href="#" id="tabNav1" role="tab" class="active" title="선택됨">DB(확정급여형)</a></li>
-                        <li><a href="#" id="tabNav2" role="tab">DC(확정기여형)</a></li>
-                    </ul>
-                    <!-- DB(확정급여형) -->
-                    <div class="tabContent active" role="tabpanel" aria-labelledby="tabNav1">
-                        <!-- 화면 넓이 모두를 쓸 경우 full 클래스 추가 . 그래프가 4:3에 가까운 비율일경우 full  삭제 --> 
-                        <div class="graph-box1 full">
-                            <span>그래프 영역1</span>
-                        </div>
-                    </div>
-                    <!-- DC(확정기여형) -->
-                    <div class="tabContent" role="tabpanel" aria-labelledby="tabNav2">
-                        <!-- 화면 넓이 모두를 쓸 경우 full 클래스 추가 . 그래프가 4:3에 가까운 비율일경우 full  삭제 --> 
-                        <div class="graph-box1 full">
-                            <span>그래프 영역2</span>
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    commonUI.tabNav('.tabWrap', 1);
-                </script>
+        <!-- 공통UI - 만족도조사 -->
+        <div class="page-satisfaction"></div>
+        <!-- //공통UI - 만족도조사 -->
+      </main>
+      <!-- //content -->
 
-                <!-- 공통UI - 해시태그 링크들 -->
-                <div class="hashtag-wrap"></div>
-                <!--// 공통UI - 해시태그 링크들 -->
-
-                <!--//콘텐츠 영역-->
-            </div>
-
-            <!-- 공통UI - 만족도조사 -->
-            <div class="page-satisfaction"></div>
-            <!-- //공통UI - 만족도조사 -->
-        </main>
-        <!-- //content -->
-
-        <!-- footer -->
-        <footer id="footer"></footer>
-        <!-- //footer -->
+      <!-- footer -->
+      <footer id="footer"></footer>
+      <!-- //footer -->
     </div>
     <!-- //wrapper -->
-</body>
+  </body>
 </html>

@@ -24,13 +24,12 @@
 
     <div class="modal full dim" id="modalTemplate">
       <div class="modalWrap h720px">
-
         <!-- s: Modal Header -->
         <div class="modal-header">
           <div class="modal-title">
             <h3 class="cont-title">연금정보제공 기관(총 85개소)</h3>
           </div>
-          <!-- <button class="btn-close">모달창닫기</button> -->
+          <button class="btn-close">모달창닫기</button>
         </div>
         <!-- e: Modal Header -->
 
@@ -41,8 +40,8 @@
               <table>
                 <caption></caption>
                 <colgroup>
-                  <col style="width: 25%;"/>
-                  <col style="width: auto;"/>
+                  <col style="width: 25%" />
+                  <col style="width: auto" />
                 </colgroup>
                 <thead>
                   <tr>
@@ -86,13 +85,13 @@
         </div> -->
         <!-- e: Modal Footer -->
 
-        <button class="btn-close">모달창닫기</button>
-
+        <!-- 화면 우측 상단의 모달 닫기는 물리위치는 상단이지맘 논리 위치가 가장 뒷 순서이기 때문에 이곳으로 와야함. -->
+        <!-- <button class="btn-close">모달창닫기</button> -->
       </div>
     </div>
     <script>
-      document.querySelector('#modalOpenButton').addEventListener('click', () => {
-        commonUI.modal('#modalTemplate', '#modalOpenButton');
+      document.querySelector("#modalOpenButton").addEventListener("click", () => {
+        commonUI.modal("#modalTemplate", "#modalOpenButton");
       });
     </script>
   </body>

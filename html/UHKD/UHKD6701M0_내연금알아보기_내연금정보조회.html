@@ -1,343 +1,349 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>노후준비종합서비스</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
-	<script src="../../js/lib/jquery-ui.min.js"></script>
-	<script src="../../js/lib/jquery.easing.min.js"></script>
-	<script src="../../js/lib/swiper-bundle.min.js"></script>
-	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
-	<script src="../../js/zoom.js"></script>
-    <script src="../../js/ui_temp.js"></script><!--공통UI layout-->
-	<script src="../../js/ui_common.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
 
-	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">
-</head>
-<body>
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <!--공통UI layout-->
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  </head>
+  <body>
     <div id="wrapper">
-        <!-- header -->
-        <header id="header"></header>
-        <!-- //header -->
+      <!-- header -->
+      <header id="header"></header>
+      <!-- //header -->
 
-        <!-- content -->
-        <div class="breadcrumb">
-            <div class="breadcrumb-nav">
-                <ol class="breadcrumb-location">
-                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
-                    <li class="breadcrumb-depth dep1">
-                        <button type="button" class="breadcrumb-trigger">재무진단</button>
-                        <ul class="breadcrumb-depth-list">
-                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
-                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
-                            <li class="current"><a href="#none" target="_self">재무진단</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
-                            <li><a href="#none" target="_self">노후준비정보</a></li>
-                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li> 
-                        </ul>
-                    </li>
-                    <li class="breadcrumb-depth dep2">
-                        <button type="button" class="breadcrumb-trigger current">내연금알아보기</button>
-                        <ul class="breadcrumb-depth-list">
-                            <li><a href="#none" target="_self">간단재무설계</a></li>
-                            <li><a href="#none" target="_self">노후준비자금설계</a></li>
-                            <li><a href="#none" target="_self">종합재무설계</a></li>
-                            <li><a href="#none" target="_self">목적자금설계</a></li>
-                            <li><a href="#none" target="_self">재무계산기</a></li>
-                            <li><a href="#none" target="_self">노후를 위한 국민연금 준비수준 알아보기</a></li>
-                            <li class="current"><a href="#none" target="_self">내연금알아보기</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
-                            <li><a href="#none" target="_self">국민연금알아보기</a></li>
-                            <li><a href="#none" target="_self">기초연금모의계산</a></li>
-                            <li><a href="#none" target="_self">연금제도안내</a></li>
-                        </ul>
-                    </li>
-                </ol>
+      <!-- content -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-nav">
+          <ol class="breadcrumb-location">
+            <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+            <li class="breadcrumb-depth dep1">
+              <button type="button" class="breadcrumb-trigger">재무진단</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                <li class="current"><a href="#none" target="_self">재무진단</a></li>
+                <!--현재 메뉴 표시 li에 class="current" 추가-->
+                <li><a href="#none" target="_self">노후준비정보</a></li>
+                <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger current">내연금알아보기</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">간단재무설계</a></li>
+                <li><a href="#none" target="_self">노후준비자금설계</a></li>
+                <li><a href="#none" target="_self">종합재무설계</a></li>
+                <li><a href="#none" target="_self">목적자금설계</a></li>
+                <li><a href="#none" target="_self">재무계산기</a></li>
+                <li><a href="#none" target="_self">노후를 위한 국민연금 준비수준 알아보기</a></li>
+                <li class="current"><a href="#none" target="_self">내연금알아보기</a></li>
+                <!--현재 메뉴 표시 li에 class="current" 추가-->
+                <li><a href="#none" target="_self">국민연금알아보기</a></li>
+                <li><a href="#none" target="_self">기초연금모의계산</a></li>
+                <li><a href="#none" target="_self">연금제도안내</a></li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <main id="conatiner">
+        <!--page-title-->
+        <div class="page-header">
+          <div class="page-title">
+            <a href="#" class="ic-only back">뒤로가기</a>
+            <h2>내연금 알아보기</h2>
+          </div>
+        </div>
+        <!--//page-title-->
+        <div class="content-wrap">
+          <!--콘텐츠 영역-->
+          <div class="cont-head divide-type">
+            <h3 class="cont-title fs24">국민연금</h3>
+            <div class="btn-wrap">
+              <a href="#none" class="button-primary -sm round"><span>상세내역 조회</span><i class="ic-only arr10_r_white" arir-hidden="true"></i></a>
             </div>
+          </div>
+          <div class="divide-wrap colorbox-set">
+            <div class="col">
+              <h3 class="cont-title">수급 개시 연령</h3>
+              <div class="color-box">
+                <dl class="result-type-blue">
+                  <dt>00 세</dt>
+                  <dd>0000년 00월</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="col">
+              <div class="cont-head fx-justify-spacebetween">
+                <h3 class="cont-title">예상연금액</h3>
+                <div class="item-group">
+                  <select class="select-small">
+                    <option>미래가치(4.1)</option>
+                    <option>option</option>
+                    <option>option</option>
+                  </select>
+                </div>
+              </div>
+              <div class="color-box">
+                <dl class="result-type-blue">
+                  <dt>연 000,000,000원</dt>
+                  <dd>월 0,000,000원</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <ul class="txt-list dot gray">
+            <li>국민연금 예상연금액은 현재 소득으로 만 60세까지 납부하실 경우를 가정하여 산정한 금액입니다. 다만, 상실 또는 납부 예외 중인 경우에는 현재까지 납부된 내역만으로 예상연금액을 산정합니다.</li>
+          </ul>
+
+          <!-- s: 군인연금 -->
+          <div class="cont-head divide-type">
+            <h3 class="cont-title fs24">군인연금</h3>
+            <div class="btn-wrap">
+              <a href="#none" class="button-primary -sm round"><span>상세내역 조회</span><i class="ic-only arr10_r_white" arir-hidden="true"></i></a>
+            </div>
+          </div>
+          <div class="divide-wrap colorbox-set">
+            <div class="col">
+              <h3 class="cont-title">수급 개시 연령</h3>
+              <div class="color-box khaki">
+                <dl class="result-type-khaki">
+                  <dt>00세</dt>
+                  <dd>0000년 00월</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="col">
+              <h3 class="cont-title">예상연금액</h3>
+              <div class="color-box khaki">
+                <dl class="result-type-khaki">
+                  <dt>연 000,000,000원</dt>
+                  <dd>월 0,000,000원</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <ul class="txt-list dot gray">
+            <li>군인연금 수급자만 연금정보 조회가 가능합니다.</li>
+            <li>상기 연금정보는 연금사업자가 산정한 예상금액으로 실제 수령금액과 차이가 있을 수 있습니다. 자세한 내용은 해당 연금사업자에게 문의 부탁드립니다.</li>
+          </ul>
+          <!-- e: 군인연금 -->
+
+          <!-- s: 별정우체국연금 -->
+          <div class="cont-head divide-type">
+            <h3 class="cont-title fs24">별정우체국연금</h3>
+            <div class="btn-wrap">
+              <a href="#none" class="button-primary -sm round"><span>상세내역 조회</span><i class="ic-only arr10_r_white" arir-hidden="true"></i></a>
+            </div>
+          </div>
+          <div class="divide-wrap colorbox-set">
+            <div class="col">
+              <h3 class="cont-title">수급 개시 연령</h3>
+              <div class="color-box rose">
+                <dl class="result-type-rose">
+                  <dt>00세</dt>
+                  <dd>0000년 00월</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="col">
+              <h3 class="cont-title">예상연금액</h3>
+              <div class="color-box rose">
+                <dl class="result-type-rose">
+                  <dt>연 000,000,000원</dt>
+                  <dd>월 0,000,000원</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <ul class="txt-list dot gray">
+            <li>수급개시 예정일은 조회일자에 따라 다를 수 있습니다.</li>
+            <li>상기 연금정보는 연금사업자가 산정한 예상금액으로 실제 수령금액과 차이가 있을 수 있습니다. 자세한 내용은 해당 연금사업자에게 문의 부탁드립니다.</li>
+          </ul>
+          <!-- e: 별정우체국연금 -->
+
+          <!-- s: 퇴직연금 -->
+          <div class="cont-head divide-type">
+            <h3 class="cont-title fs24">퇴직연금</h3>
+            <div class="btn-wrap">
+              <a href="#none" class="button-primary -sm round"><span>상세내역 조회</span><i class="ic-only arr10_r_white" arir-hidden="true"></i></a>
+            </div>
+          </div>
+          <div class="divide-wrap colorbox-set">
+            <div class="col">
+              <h3 class="cont-title">총 가입상품수</h3>
+              <div class="color-box orange">
+                <dl class="result-type-orange">
+                  <dt>00 개</dt>
+                </dl>
+              </div>
+            </div>
+            <div class="col">
+              <h3 class="cont-title">예시연금액</h3>
+              <div class="color-box orange">
+                <dl class="result-type-orange">
+                  <dt>연 000,000,000원</dt>
+                  <dd>월 0,000,000원</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <ul class="txt-list dot gray">
+            <li>퇴직연금 예시연금액은 가입중인 퇴직연금이 2개 이상일 경우 각 연금상품의 수령 첫해년도 연금액을 합산하여 연/월로 나타낸 금액입니다.</li>
+            <li>상기 연금정보는 연금사업자가 산정한 예상금액으로 실제 수령금액과 차이가 있을 수 있습니다. 자세한 내용은 해당 연금사업자에게 문의 부탁드립니다.</li>
+          </ul>
+          <!-- e: 퇴직연금 -->
+
+          <!-- s: 개인연금 -->
+          <div class="cont-head divide-type">
+            <h3 class="cont-title fs24">개인연금</h3>
+            <div class="btn-wrap">
+              <a href="#none" class="button-primary -sm round"><span>상세내역 조회</span><i class="ic-only arr10_r_white" arir-hidden="true"></i></a>
+            </div>
+          </div>
+          <div class="divide-wrap colorbox-set">
+            <div class="col">
+              <h3 class="cont-title">총 가입상품수</h3>
+              <div class="color-box green">
+                <dl class="result-type-green">
+                  <dt>00 개</dt>
+                </dl>
+              </div>
+            </div>
+            <div class="col">
+              <h3 class="cont-title">예시연금액</h3>
+              <div class="color-box green">
+                <dl class="result-type-green">
+                  <dt>연 000,000,000원</dt>
+                  <dd>월 0,000,000원</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <ul class="txt-list dot gray">
+            <li>개인연금 예시연금액은 가입중인 개인연금이 2개 이상일 경우 각 연금상품의 수령 첫해년도 연금액을 합산하여 연/월로 나타낸 금액입니다.</li>
+            <li>상기 연금정보는 연금사업자가 산정한 예상금액으로 실제 수령금액과 차이가 있을 수 있습니다. 자세한 내용은 해당 연금사업자에게 문의 부탁드립니다.</li>
+          </ul>
+          <!-- e: 개인연금 -->
+
+          <!-- s: 주택연금 -->
+          <div class="cont-head divide-type">
+            <h3 class="cont-title fs24">주택연금</h3>
+            <div class="btn-wrap">
+              <a href="#none" class="button-primary -sm round"><span>상세내역 조회</span><i class="ic-only arr10_r_white" arir-hidden="true"></i></a>
+            </div>
+          </div>
+          <div class="divide-wrap colorbox-set">
+            <div class="col">
+              <h3 class="cont-title">총 가입상품수</h3>
+              <div class="color-box red">
+                <dl class="result-type-red">
+                  <dt>00 개</dt>
+                </dl>
+              </div>
+            </div>
+            <div class="col">
+              <h3 class="cont-title">예시연금액</h3>
+              <div class="color-box red">
+                <dl class="result-type-red">
+                  <dt>연 000,000,000원</dt>
+                  <dd>월 0,000,000원</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <ul class="txt-list dot gray">
+            <li>주택연금 예상 연금액은 주택연금 최초 가입시점에 산정된 금액입니다.</li>
+            <li>상기 연금정보는 연금사업자가 산정한 예상금액으로 실제 수령금액과 차이가 있을 수 있습니다. 자세한 내용은 해당 연금사업자에게 문의 부탁드립니다.</li>
+          </ul>
+          <!-- e: 주택연금 -->
+
+          <!-- s: 농지연금 -->
+          <div class="cont-head divide-type">
+            <h3 class="cont-title fs24">농지연금</h3>
+            <div class="btn-wrap">
+              <a href="#none" class="button-primary -sm round"><span>상세내역 조회</span><i class="ic-only arr10_r_white" arir-hidden="true"></i></a>
+            </div>
+          </div>
+          <div class="divide-wrap colorbox-set">
+            <div class="col">
+              <h3 class="cont-title">총 가입상품수</h3>
+              <div class="color-box olive">
+                <dl class="result-type-olive">
+                  <dt>00 개</dt>
+                </dl>
+              </div>
+            </div>
+            <div class="col">
+              <h3 class="cont-title">예시연금액</h3>
+              <div class="color-box olive">
+                <dl class="result-type-olive">
+                  <dt>연 000,000,000원</dt>
+                  <dd>월 0,000,000원</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <ul class="txt-list dot gray">
+            <li>전후후박형의 경우 수급개시로부터 10년 이후 조회 시 감액된 금액으로 조회됩니다.</li>
+            <li>농지연금 예상연금액은 가입중인 농지연금이 2개 이상일 경우 각 연금상품의 수령 연금액을 합산하여 연/월로 나타낸 금액입니다.</li>
+            <li>상기 연금정보는 연금사업자가 산정한 예상금액으로 실제 수령금액과 차이가 있을 수 있습니다. 자세한 내용은 해당 연금사업자에게 문의 부탁드립니다.</li>
+          </ul>
+          <!-- e: 농지연금 -->
+
+          <!-- s: 하단 버튼  -->
+          <div class="cont-bottom">
+            <div class="btn-group">
+              <button type="button" class="button-primary -lg" onclick="window.open('./UHKD6702P0_pop_통합내역조회.html', '_blank', 'width=1080px, height=720px, scrollbars=yes', 'resizable=no');">통합내역조회</button>
+            </div>
+          </div>
+          <ul class="txt-list dot gray mt24">
+            <li>[통합내역조회]를 클릭하면 국민연금, 직역연금, 퇴직연금, 개인연금, 주택연금, 농지연금의 정보를 상세내역표 및 그래프를 통해 자세하게 확인하실수 있습니다.</li>
+            <li>직역연금(군인연금, 별정우체국연금), 주택연금, 농지연금 미가입자의 정보연계 신청정보는 최초 조회시 철회됩니다. 향후 해당 연금 가입 이후 다시 조회 신청해주시기 바랍니다.</li>
+          </ul>
+          <!-- e: 하단 버튼 -->
+
+          <div class="cont-head divide-type">
+            <h3 class="cont-title dot">담당자 정보</h3>
+            <a href="#" class="button-sixth -sm round">상담지사안내</a>
+          </div>
+          <ul class="txt-list dot fs16 blue mg0">
+            <li>전산 장애문의 : 노후준비지원실 노후준비서비스개발부 이정우 ㅣ 문의 : 063-713-5983</li>
+          </ul>
+
+          <!-- 공통UI - 해시태그 링크들 -->
+          <div class="hashtag-wrap"></div>
+          <!--// 공통UI - 해시태그 링크들 -->
+
+          <!--//콘텐츠 영역-->
         </div>
 
-        <main id="conatiner">
-            <!--page-title-->
-            <div class="page-header">
-                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>내연금 알아보기</h2></div>
-            </div>
-            <!--//page-title-->
-            <div class="content-wrap">
-                <!--콘텐츠 영역-->
-                <div class="cont-head divide-type">
-                    <h3 class="cont-title fs24">국민연금</h3>
-                    <div class="btn-wrap">
-                        <a href="#none" class="button-primary -sm round"><span>상세내역 조회</span><i class="ic-only arr10_r_white" arir-hidden="true"></i></a>                            
-                    </div>
-                </div>
-                <div class="divide-wrap colorbox-set">
-                    <div class="col">
-                        <h3 class="cont-title">수급 개시 연령</h3>
-                        <div class="color-box">
-                            <dl class="result-type-blue">
-                                <dt>00 세</dt>
-                                <dd>0000년 00월</dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="cont-head fx-justify-spacebetween">
-                            <h3 class="cont-title">예상연금액</h3>
-                            <div class="item-group">
-                                <select class="select-small">
-                                    <option>미래가치(4.1)</option>
-                                    <option>option</option>
-                                    <option>option</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="color-box">
-                            <dl class="result-type-blue">
-                                <dt>연 000,000,000원</dt>
-                                <dd>월 0,000,000원</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <ul class="txt-list dot gray">
-                    <li>국민연금 예상연금액은 현재 소득으로 만 60세까지 납부하실 경우를 가정하여 산정한 금액입니다. 다만, 상실 또는 납부 예외 중인 경우에는 현재까지 납부된 내역만으로 예상연금액을 산정합니다.</li>
-                </ul>
+        <!-- 공통UI - 만족도조사 -->
+        <div class="page-satisfaction"></div>
+        <!-- //공통UI - 만족도조사 -->
+      </main>
+      <!-- //content -->
 
-                <!-- s: 군인연금 -->
-                <div class="cont-head divide-type">
-                    <h3 class="cont-title fs24">군인연금</h3>
-                    <div class="btn-wrap">
-                        <a href="#none" class="button-primary -sm round"><span>상세내역 조회</span><i class="ic-only arr10_r_white" arir-hidden="true"></i></a>                            
-                    </div>
-                </div>
-                <div class="divide-wrap colorbox-set">
-                    <div class="col">
-                        <h3 class="cont-title">수급 개시 연령</h3> 
-                        <div class="color-box khaki">
-                            <dl class="result-type-khaki">
-                                <dt>00세</dt>
-                                <dd>0000년 00월</dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <h3 class="cont-title">예상연금액</h3>
-                        <div class="color-box khaki">
-                            <dl class="result-type-khaki">
-                                <dt>연 000,000,000원</dt>
-                                <dd>월 0,000,000원</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <ul class="txt-list dot gray">
-                    <li>군인연금 수급자만 연금정보 조회가 가능합니다.</li>
-                    <li>상기 연금정보는 연금사업자가 산정한 예상금액으로 실제 수령금액과 차이가 있을 수 있습니다. 자세한 내용은 해당 연금사업자에게 문의 부탁드립니다.</li>
-                </ul>
-                <!-- e: 군인연금 -->
-
-                <!-- s: 별정우체국연금 -->
-                <div class="cont-head divide-type">
-                    <h3 class="cont-title fs24">별정우체국연금</h3>
-                    <div class="btn-wrap">
-                        <a href="#none" class="button-primary -sm round"><span>상세내역 조회</span><i class="ic-only arr10_r_white" arir-hidden="true"></i></a>                            
-                    </div>
-                </div>
-                <div class="divide-wrap colorbox-set">
-                    <div class="col">
-                        <h3 class="cont-title">수급 개시 연령</h3> 
-                        <div class="color-box rose">
-                            <dl class="result-type-rose">
-                                <dt>00세</dt>
-                                <dd>0000년 00월</dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <h3 class="cont-title">예상연금액</h3>
-                        <div class="color-box rose">
-                            <dl class="result-type-rose">
-                                <dt>연 000,000,000원</dt>
-                                <dd>월 0,000,000원</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <ul class="txt-list dot gray">
-                    <li>수급개시 예정일은 조회일자에 따라 다를 수 있습니다.</li>
-                    <li>상기 연금정보는 연금사업자가 산정한 예상금액으로 실제 수령금액과 차이가 있을 수 있습니다. 자세한 내용은 해당 연금사업자에게 문의 부탁드립니다.</li>
-                </ul>
-                <!-- e: 별정우체국연금 -->
-
-                <!-- s: 퇴직연금 -->
-                <div class="cont-head divide-type">
-                <h3 class="cont-title fs24">퇴직연금</h3>
-                <div class="btn-wrap">
-                    <a href="#none" class="button-primary -sm round"><span>상세내역 조회</span><i class="ic-only arr10_r_white" arir-hidden="true"></i></a>                            
-                </div>
-                </div>
-                <div class="divide-wrap colorbox-set">
-                    <div class="col">
-                        <h3 class="cont-title">총 가입상품수</h3>
-                        <div class="color-box orange">
-                            <dl class="result-type-orange">
-                                <dt>00 개</dt>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <h3 class="cont-title">예시연금액</h3>
-                        <div class="color-box orange">
-                            <dl class="result-type-orange">
-                                <dt>연 000,000,000원</dt>
-                                <dd>월 0,000,000원</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <ul class="txt-list dot gray">
-                    <li>퇴직연금 예시연금액은 가입중인 퇴직연금이 2개 이상일 경우 각 연금상품의 수령 첫해년도 연금액을 합산하여 연/월로 나타낸 금액입니다.</li>
-                    <li>상기 연금정보는 연금사업자가 산정한 예상금액으로 실제 수령금액과 차이가 있을 수 있습니다. 자세한 내용은 해당 연금사업자에게 문의 부탁드립니다.</li>
-                </ul>
-                <!-- e: 퇴직연금 -->
-
-                <!-- s: 개인연금 -->
-                <div class="cont-head divide-type">
-                    <h3 class="cont-title fs24">개인연금</h3>
-                    <div class="btn-wrap">
-                        <a href="#none" class="button-primary -sm round"><span>상세내역 조회</span><i class="ic-only arr10_r_white" arir-hidden="true"></i></a>                            
-                    </div>
-                </div>
-                <div class="divide-wrap colorbox-set">
-                    <div class="col">
-                        <h3 class="cont-title">총 가입상품수</h3> 
-                        <div class="color-box green">
-                            <dl class="result-type-green">
-                                <dt>00 개</dt>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <h3 class="cont-title">예시연금액</h3>
-                        <div class="color-box green">
-                            <dl class="result-type-green">
-                                <dt>연 000,000,000원</dt>
-                                <dd>월 0,000,000원</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <ul class="txt-list dot gray">
-                    <li>개인연금 예시연금액은 가입중인 개인연금이 2개 이상일 경우 각 연금상품의 수령 첫해년도 연금액을 합산하여 연/월로 나타낸 금액입니다.</li>
-                    <li>상기 연금정보는 연금사업자가 산정한 예상금액으로 실제 수령금액과 차이가 있을 수 있습니다. 자세한 내용은 해당 연금사업자에게 문의 부탁드립니다.</li>
-                </ul>
-                <!-- e: 개인연금 -->
-
-                <!-- s: 주택연금 -->
-                <div class="cont-head divide-type">
-                    <h3 class="cont-title fs24">주택연금</h3>
-                    <div class="btn-wrap">
-                        <a href="#none" class="button-primary -sm round"><span>상세내역 조회</span><i class="ic-only arr10_r_white" arir-hidden="true"></i></a>                            
-                    </div>
-                </div>
-                <div class="divide-wrap colorbox-set">
-                    <div class="col">
-                        <h3 class="cont-title">총 가입상품수</h3>
-                        <div class="color-box red">
-                            <dl class="result-type-red">
-                                <dt>00 개</dt>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <h3 class="cont-title">예시연금액</h3>
-                        <div class="color-box red">
-                            <dl class="result-type-red">
-                                <dt>연 000,000,000원</dt>
-                                <dd>월 0,000,000원</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <ul class="txt-list dot gray">
-                    <li>주택연금 예상 연금액은 주택연금 최초 가입시점에 산정된 금액입니다.</li>
-                    <li>상기 연금정보는 연금사업자가 산정한 예상금액으로 실제 수령금액과 차이가 있을 수 있습니다. 자세한 내용은 해당 연금사업자에게 문의 부탁드립니다.</li>
-                </ul>
-                <!-- e: 주택연금 -->
-
-                <!-- s: 농지연금 -->
-                <div class="cont-head divide-type">
-                    <h3 class="cont-title fs24">농지연금</h3>
-                    <div class="btn-wrap">
-                        <a href="#none" class="button-primary -sm round"><span>상세내역 조회</span><i class="ic-only arr10_r_white" arir-hidden="true"></i></a>                            
-                    </div>
-                </div>
-                <div class="divide-wrap colorbox-set">
-                    <div class="col">
-                        <h3 class="cont-title">총 가입상품수</h3> 
-                        <div class="color-box olive">
-                            <dl class="result-type-olive">
-                                <dt>00 개</dt>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <h3 class="cont-title">예시연금액</h3>
-                        <div class="color-box olive">
-                            <dl class="result-type-olive">
-                                <dt>연 000,000,000원</dt>
-                                <dd>월 0,000,000원</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <ul class="txt-list dot gray">
-                    <li>전후후박형의 경우 수급개시로부터 10년 이후 조회 시 감액된 금액으로 조회됩니다.</li>
-                    <li>농지연금 예상연금액은 가입중인 농지연금이 2개 이상일 경우 각 연금상품의 수령 연금액을 합산하여 연/월로 나타낸 금액입니다.</li>
-                    <li>상기 연금정보는 연금사업자가 산정한 예상금액으로 실제 수령금액과 차이가 있을 수 있습니다. 자세한 내용은 해당 연금사업자에게 문의 부탁드립니다.</li>
-                </ul>
-                <!-- e: 농지연금 -->
-
-                <!-- s: 하단 버튼  -->                
-                <div class="cont-bottom">
-                    <div class="btn-group">
-                        <button type="button" class="button-primary -lg" onclick="window.open('./UHKD6702P0_pop_통합내역조회.html', '_blank', 'width=1080px, height=720px, scrollbars=yes', 'resizable=no');">통합내역조회</button>
-                    </div>
-                </div>
-                <ul class="txt-list dot gray mt24">
-                    <li>[통합내역조회]를 클릭하면 국민연금, 직역연금, 퇴직연금, 개인연금, 주택연금, 농지연금의 정보를 상세내역표 및 그래프를 통해 자세하게 확인하실수 있습니다.</li>
-                    <li>직역연금(군인연금, 별정우체국연금), 주택연금, 농지연금 미가입자의 정보연계 신청정보는 최초 조회시 철회됩니다. 향후 해당 연금 가입 이후 다시 조회 신청해주시기 바랍니다.</li>
-                </ul>
-                <!-- e: 하단 버튼 -->
-
-                <div class="cont-head divide-type">
-                    <h3 class="cont-title dot">담당자 정보</h3>
-                    <a href="#" class="button-sixth -sm round">상담지사안내</a>
-                </div>
-                <ul class="txt-list dot fs16 blue mg0">
-                    <li>전산 장애문의 : 노후준비지원실 노후준비서비스개발부 이정우 ㅣ 문의 : 063-713-5983</li>
-                </ul>
-
-                <!-- 공통UI - 해시태그 링크들 -->
-                <div class="hashtag-wrap"></div>
-                <!--// 공통UI - 해시태그 링크들 -->
-
-                <!--//콘텐츠 영역-->
-            </div>
-
-            <!-- 공통UI - 만족도조사 -->
-            <div class="page-satisfaction"></div>
-            <!-- //공통UI - 만족도조사 -->
-        </main>
-        <!-- //content -->
-
-        <!-- footer -->
-        <footer id="footer"></footer>
-        <!-- //footer -->
+      <!-- footer -->
+      <footer id="footer"></footer>
+      <!-- //footer -->
     </div>
     <!-- //wrapper -->
-</body>
+  </body>
 </html>
