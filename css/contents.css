@@ -127,6 +127,23 @@
 	margin-left: 2.4rem;
 }
 
+.board-search-basic .form-group {
+	flex-wrap: nowrap;
+}
+.board-search-basic .form-group .slct-type {
+	min-width: 16rem;
+}
+
+.board-search-basic .form-group .inp-content {
+	width: 100%;
+}
+.board-search-basic .form-group button {
+	min-width: 10rem;
+}
+
+.opt-name-registration .search-label {
+	min-width: 4.8rem;
+}
 .opt-name-registration .inp-content {
 	text-align: center;
 }
@@ -1424,7 +1441,11 @@
 }
 
 /* 노후준비종합진단 */
-/* 2311월 */
+
+.cont-head .cont-title {
+	white-space: wrap;
+}
+
 .cont-title {
 	margin-top: 5.6rem;
 	margin-right: 1.6rem;
@@ -1435,6 +1456,7 @@
 	line-height: 1.5;
 	white-space: nowrap;
 }
+
 .cont-title:first-child {
 	margin-top: 0;
 }
@@ -3381,10 +3403,10 @@ input.margin {
 
 @media screen and (max-width: 1079px) {
 	.content-wrap {
-		padding: 0 3.2rem 0 3.2rem;
+		padding: 0 3.2rem 8rem 3.2rem;
 	}
 	.cont-head:first-child {
-		padding-top: 2.4rem;
+		padding-top: 4.8rem;
 	}
 	.hasTabDepth .content-wrap .hashtag-wrap {
 		padding: 0 3.2rem;
@@ -3396,9 +3418,9 @@ input.margin {
 		width: calc(100% + 6.4rem);
 	}
 	.tabContent .searchbox-wrap {
-		position: relative;
+		/* position: relative;
 		left: -3.2rem;
-		width: auto;
+		width: auto; */
 	}
 	.searchbox {
 		border-radius: 0;
@@ -3409,11 +3431,14 @@ input.margin {
 
 	.searchbox-wrap.opt-name-registration {
 		left: unset;
+		margin-top: 0 !important;
+		width: 100%;
 	}
 
 	.searchbox-wrap.opt-name-registration .searchbox .search-label {
 		display: block;
 		white-space: nowrap;
+		min-width: 4.8rem;
 	}
 	.searchbox-wrap.opt-name-registration .searchbox .form-group {
 		flex-wrap: nowrap;
@@ -3436,6 +3461,10 @@ input.margin {
 		margin-left: 0;
 		width: 100%;
 	}
+
+	[class*="form-group-"] > .inp-split {
+    padding: 0;
+}
 	.searchbox.online-counseling .form-group select {
 		flex: 1;
 		margin-top: 0;
@@ -3603,13 +3632,13 @@ input.margin {
 	}
 	.hasTabDepth .content-wrap {
 		padding: 0 0 8rem 0;
+		top: 52px;
 	}
 	.hasTabDepth .content-wrap .tabContent {
 		padding: 0 3.2rem;
 	}
 	.hasTabDepth .content-wrap .tabwrap-inner {
-		/* position: absolute; 20240111 */
-		position: relative;
+		position: absolute;
 		top: -8.8rem;
 		width: 100%;
 	}
@@ -3706,6 +3735,9 @@ input.margin {
 		margin-bottom: 0.8rem;
 		width: 100%;
 	}
+	.searchbox.edu-apply-group .inp-content {
+		width: calc(100% - 16.8rem);
+	}
 	.counsel.education .edu-group-list tbody tr {
 		position: relative;
 		padding-bottom: 5.6rem;
@@ -3770,7 +3802,7 @@ input.margin {
 		margin-top: 0;
 	}
 	.hasTabDepth .page-header.desc-none + .content-wrap .tabwrap-inner {
-		top: 0;
+		top: -48px;
 	}
 	.hasTabDepth .page-header.desc-none + .content-wrap .tabContent {
 		/* padding-top: 4.8rem; 20240111 */
@@ -3796,12 +3828,13 @@ input.margin {
 	.integrated-search.hasTabDepth .searchbox-wrap {
 		left: 0;
 		width: 100%;
+		margin-top: 4.8rem;
 	}
 	.integrated-search .searchbox .slct-type {
 		margin-left: 0;
 	}
 	.integrated-search .page-header.desc-none + .content-wrap .tabwrap-inner {
-		top: 11.2rem;
+		top: -20.8rem;
 	}
 	/* 목적자금설계 */
 	[class*='purpose-fund'] .bd-data .th,
@@ -4147,7 +4180,7 @@ input.margin {
 @media screen and (max-width: 767px) {
 	/*--------- S: [노후준비종합진단] ---------*/
 	.content-wrap {
-		padding: 0 1.6rem 0 1.6rem;
+		padding: 0 1.6rem 8rem 1.6rem;
 	}
 	.hasTabDepth .content-wrap .hashtag-wrap {
 		padding: 0 1.6rem;
@@ -4158,6 +4191,7 @@ input.margin {
 	.cont-head .cont-title {
 		margin-bottom: 0.8rem;
 		font-size: 1.6rem;
+		white-space: wrap;
 	}
 	.cont-head .cont-desc {
 		font-size: 1.5rem;
@@ -4177,6 +4211,25 @@ input.margin {
 	}
 	.searchbox {
 		padding: 1.6rem;
+	}
+
+	.board-search-basic .form-group {
+		flex-wrap: wrap;
+		min-width: 30rem;
+		gap:8px;
+	}
+	.board-search-basic .form-group .slct-type {
+		min-width: 12rem !important;
+	}
+	
+	.board-search-basic .form-group .inp-content {
+		width: calc(100% - 12.8rem);
+		margin-left: 0;
+	}
+	.board-search-basic .form-group button {
+		min-width: 0;
+		width: 100%;
+		margin-left: 0;
 	}
 
 	.searchbox-wrap.opt-name-registration {
@@ -4205,6 +4258,7 @@ input.margin {
 	.searchbox-wrap.opt-name-registration .form-group .search-label,
 	.searchbox-wrap.opt-name-registration .form-group .inp-content {
 		margin: 0;
+		width: 8rem;
 	}
 	.searchbox-wrap.opt-name-registration .form-group select.inp-content {
 		padding: 0.4rem .8rem;
@@ -4338,7 +4392,7 @@ input.margin {
 		margin-top: 0;
 	}
 	.searchbox.edu-apply-group .slct-type {
-		min-width: 12rem;
+		min-width: 12rem !important;
 	}
 	.searchbox.edu-apply-group .btn-search {
 		margin-top: 0.8rem;
@@ -4549,7 +4603,7 @@ input.margin {
 		padding-top: 2.4rem;
 	}
 	.integrated-search.hasTabDepth .searchbox-wrap {
-		margin-bottom: 4.8rem;
+		margin-bottom: 0;
 	}
 	.integrated-search .searchbox .slct-type {
 		margin-bottom: 0.8rem;
@@ -4559,7 +4613,7 @@ input.margin {
 		margin-left: 0;
 	}
 	.integrated-search .page-header.desc-none + .content-wrap .tabwrap-inner {
-		top: 12rem;
+		top: -16.8rem;
 	}
 	.integrated-search .button-link {
 		color: var(--color-gray4);

@@ -3391,7 +3391,7 @@ input + .txt-helper {
 	.tbl-board td.title {
 		width: 100%;
 		margin-bottom: .8rem;
-		font-size: 1.6rem;
+		font-size: 1.4rem;
 	}
 
 	.tbl-board td.title .ic-secret {

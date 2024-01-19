@@ -2048,13 +2048,15 @@ input.useDatepicker {
 	}
 	/* ##만족도 조사 */
 	.page-satisfaction {
-		/* margin-bottom: 10rem; */
+		margin-bottom: 10rem;
+		margin-top: 0;
 	}
 
 	/* ##datepicker */
 	.period-calendar {
-		border: 1px solid var(--color-primary);
+		/* border: 1px solid var(--color-primary); */
 		background-color: #ffffff;
+		gap: .4rem;
 	}
 
 	.period-calendar input {
@@ -2109,7 +2111,7 @@ input.useDatepicker {
 
 @media all and (max-width:767px) {
 	#conatiner {
-		padding-bottom: 8rem;
+		padding-bottom: 5.6rem;
 	}
 
 	.mo-hide {
@@ -2475,7 +2477,8 @@ input.useDatepicker {
 	/* ##만족도 조사 */
 
 	.page-satisfaction {
-		/* margin-bottom: 5.6rem; */
+		margin-bottom: 5.6rem;
+		margin-top: 0;
 	}
 
 	.satisfaction-head {
