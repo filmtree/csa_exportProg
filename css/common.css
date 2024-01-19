@@ -191,6 +191,10 @@ legend,
 	margin-left: auto;
 }
 
+.block-center {
+	margin: 0 auto !important;
+}
+
 /* ##flex-option */
 .d-flex {
 	display: flex;

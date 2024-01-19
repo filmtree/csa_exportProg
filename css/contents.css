@@ -2670,6 +2670,26 @@ input[type='number']::-webkit-inner-spin-button {
 	aspect-ratio: auto 2.4/1;
 }
 
+.graph-box1 > * {
+	width: 100% !important;
+	aspect-ratio: auto 4/2.897 !important;
+}
+
+.graph-box1 > svg {
+	width: 100% !important;
+	aspect-ratio: auto 4/2.897 !important;
+}
+
+.graph-box1.half > svg {
+	width: 100% !important;
+	aspect-ratio: auto 4/2.897 !important;
+}
+
+.graph-box1.full > svg {
+	width: 100% !important;
+	aspect-ratio: auto 2.4/1 !important;
+}
+
 /* txt 박스 */
 .txt-box {
 	margin-top: 16px;

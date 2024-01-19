@@ -19,7 +19,6 @@
 
   <body>
     <div id="wrapper">
-
       <!-- s: header -->
       <header id="header"></header>
       <!-- e: header -->
@@ -67,26 +66,25 @@
         </div>
       </div>
       <!-- e: Loaction Information Link -->
-      
+
       <!-- s: Main -->
       <main id="conatiner" class="education 화면아이디">
-
         <!--s: Page Title-->
         <div class="page-header">
           <div class="page-title">
             <a href="#" class="ic-only back">뒤로가기</a>
-            <h2>Title</h2>
+            <h2>종합재무설계내역 조회</h2>
           </div>
           <div class="page-desc">
-            <button type="button" class="page-desc-btn _has-tooltip" title="Title 안내 보기">
-              <span>Title 안내</span>
+            <button type="button" class="page-desc-btn _has-tooltip" title="종합재무설계내역 조회 안내 보기">
+              <span>종합재무설계내역 조회 안내</span>
               <i class="ic-only f-pg-desc" aria-hidden="true"></i>
             </button>
             <div class="desc-box _tooltipbox" role="tooltip">
               <div class="desc-box-inner">
                 <div class="desc-content">
-                  <h4 class="sr-only">Title 안내</h4>
-                  <p>안내 내용</p>
+                  <h4 class="sr-only">종합재무설계내역 조회 안내</h4>
+                  <p>종합재무설계 내역은 5개까지 저장되며, 5개를 초과하는 경우 최근 저장된 순으로 보여집니다.</p>
                 </div>
                 <button type="button" class="ic-only box-close">창닫기</button>
               </div>
@@ -94,13 +92,85 @@
           </div>
         </div>
         <!--e: Page Title-->
-        
-        <!--s: Contents -->
-        <div class="content-wrap">
 
-          <!-- s: Common UI - HashTag Banner -->
-          <div class="hashtag-wrap"></div>
-          <!-- e: Common UI - HashTag Banner -->
+        <!--s: Contents --> 
+        <div class="content-wrap">
+          <!-- s: 텍스트 박스-->
+          <div class="color-box none develop">
+            <div class="alert-txt-box">
+              <p class="alert-txt">홍길동 고객님</p>
+              <p>설계하신 종합재무설계 내역을 확인 및 수정하여 재설계를 진행하실 수 있습니다.</p>
+              <p>종합재무설계 내역은 5개까지 저장되며, 5개를 초과하는 경우 최근 저장된 순으로 보여집니다.</p>
+            </div>
+          </div>
+          <!-- e: 텍스트 박스-->
+
+          <!-- s: 설계내역 그리드 -->
+          <div class="con-table all-center mt56">
+            <table>
+              <caption>최초설계일자, 설계일자, 관리로 구성된 표.</caption>
+              <colgroup>
+                <col style="width: 43%" />
+                <col style="width: 43%" />
+                <col style="width: 14%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">최초설계일자</th>
+                  <th scope="col">설계일자</th>
+                  <th scope="col">관리</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2023년 12월 06일 10:18:47</td>
+                  <td>2023년 12월 06일</td>
+                  <td class="">
+                    <button type="button" class="button-tertiary -sm round block-center">
+                      <i class="ic-only inner-delete" aria-hidden="true"></i><span>삭제</span>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2023년 12월 06일 10:18:47</td>
+                  <td>2023년 12월 06일</td>
+                  <td class="">
+                    <button type="button" class="button-tertiary -sm round block-center">
+                      <i class="ic-only inner-delete" aria-hidden="true"></i><span>삭제</span>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2023년 12월 06일 10:18:47</td>
+                  <td>2023년 12월 06일</td>
+                  <td class="">
+                    <button type="button" class="button-tertiary -sm round block-center">
+                      <i class="ic-only inner-delete" aria-hidden="true"></i><span>삭제</span>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2023년 12월 06일 10:18:47</td>
+                  <td>2023년 12월 06일</td>
+                  <td class="">
+                    <button type="button" class="button-tertiary -sm round block-center">
+                      <i class="ic-only inner-delete" aria-hidden="true"></i><span>삭제</span>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2023년 12월 06일 10:18:47</td>
+                  <td>2023년 12월 06일</td>
+                  <td class="">
+                    <button type="button" class="button-tertiary -sm round block-center">
+                      <i class="ic-only inner-delete" aria-hidden="true"></i><span>삭제</span>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- e: 설계내역 그리드 -->
 
         </div>
         <!--s: Contents -->
@@ -108,14 +178,12 @@
         <!-- s: Common UI - Survey -->
         <div class="page-satisfaction"></div>
         <!-- e: Common UI - Survey -->
-
       </main>
       <!-- e: Main -->
 
       <!-- s: footer -->
       <footer id="footer"></footer>
       <!-- e: footer -->
-
     </div>
   </body>
 </html>

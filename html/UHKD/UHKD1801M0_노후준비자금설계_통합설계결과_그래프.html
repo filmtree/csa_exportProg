@@ -116,55 +116,24 @@
             <p class="cont-desc big">고객님께서는 66세부터 국민연금 <span class="fc-primary">매월 1,506만원</span>, 0세부터 퇴직연금 매월 0만원, 0세부터 개인연금 매월 0만원을 받으실 수 있습니다. (미래가치 기준)</p>
             <button type="button" class="button-primary -sm round">상세표 확인</button>
           </div>
-          <div class="tabWrap tab-base tab-total type-inner">
+          <!--  display:none일 경우 그래프 사이즈 인식 문제 해결을 위해  display:none이 아니라 위치값 변경을 위한 position-switch 클래스 추가  -->
+          <div class="tabWrap position-switch tab-total">
             <ul class="tabNav">
-              <li><a href="#" id="tabNav1" role="tab" class="active" title="선택됨">DB(확정급여형)</a></li>
+              <li><a href="#" id="tabNav1" role="tab">DB(확정급여형)</a></li>
               <li><a href="#" id="tabNav2" role="tab">DC(확정기여형)</a></li>
             </ul>
             <!-- DB(확정급여형) -->
             <div class="tabContent active" role="tabpanel" aria-labelledby="tabNav1">
               <!-- 화면 넓이 모두를 쓸 경우 full 클래스 추가 . 그래프가 4:3에 가까운 비율일경우 full  삭제 -->
               <div class="graph-box1 full">
-                <span>그래프 영역1</span>
+                graph1
               </div>
             </div>
             <!-- DC(확정기여형) -->
             <div class="tabContent" role="tabpanel" aria-labelledby="tabNav2">
               <!-- 화면 넓이 모두를 쓸 경우 full 클래스 추가 . 그래프가 4:3에 가까운 비율일경우 full  삭제 -->
               <div class="graph-box1 full">
-                <svg width="100%" height="270" viewBox="0 0 700 270" style="transform: scaleY(-1)">
-                  <polyline stroke="#74bfff" stroke-width="2" fill="none" points="50, 135 150, 228.75 250, 228.75 350, 135 450, 228.75 550, 228.75 "></polyline>
-                  <polyline stroke="#ff7d7d" stroke-width="2" fill="none" points="50, 41.25 150, 228.75 250, 228.75 350, 260 450, 260 550, 260 650, 260 "></polyline>
-                  <polyline stroke="#badc58" stroke-width="2" fill="none" points="50, 244.375 150, 244.375 250, 244.375 "></polyline>
-                  <polyline stroke="#e056fd" stroke-width="2" fill="none" points="50, 10 150, 10 250, 10 "></polyline>
-                  <polyline stroke="#fab1a0" stroke-width="2" fill="none" points="50, 72.5 150, 41.25 250, 10 "></polyline>
-                  <polyline stroke="#ffeaa7" stroke-width="2" fill="none" points="50, 10 150, 10 250, 72.5 "></polyline>
-                  <circle r="2.5" cx="50" cy="135" stroke="#74bfff" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="150" cy="228.75" stroke="#74bfff" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="250" cy="228.75" stroke="#74bfff" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="350" cy="135" stroke="#74bfff" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="450" cy="228.75" stroke="#74bfff" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="550" cy="228.75" stroke="#74bfff" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="50" cy="41.25" stroke="#ff7d7d" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="150" cy="228.75" stroke="#ff7d7d" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="250" cy="228.75" stroke="#ff7d7d" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="350" cy="260" stroke="#ff7d7d" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="450" cy="260" stroke="#ff7d7d" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="550" cy="260" stroke="#ff7d7d" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="650" cy="260" stroke="#ff7d7d" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="50" cy="244.375" stroke="#badc58" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="150" cy="244.375" stroke="#badc58" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="250" cy="244.375" stroke="#badc58" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="50" cy="10" stroke="#e056fd" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="150" cy="10" stroke="#e056fd" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="250" cy="10" stroke="#e056fd" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="50" cy="72.5" stroke="#fab1a0" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="150" cy="41.25" stroke="#fab1a0" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="250" cy="10" stroke="#fab1a0" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="50" cy="10" stroke="#ffeaa7" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="150" cy="10" stroke="#ffeaa7" stroke-width="2" fill="#fff"></circle>
-                  <circle r="2.5" cx="250" cy="72.5" stroke="#ffeaa7" stroke-width="2" fill="#fff"></circle>
-                </svg>
+                graph2
               </div>
             </div>
           </div>
