@@ -1330,18 +1330,6 @@
 	display: block;
 }
 
-.tabWrap .tabContent.pos-sw {
-	display: block;
-	position: absolute;
-	width: 100%;
-	left: -99999px;
-}
-
-.tabWrap .tabContent.pos-sw.active {
-	position: relative;
-	left: unset;
-}
-
 .tabWrap .double-contents,
 .tabWrap .inner-contents {
 	display: none !important;

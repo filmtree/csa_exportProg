@@ -619,11 +619,6 @@ const commonUI = {
 				this.tabContent = tab.querySelectorAll(`.tabContent`);
 				this.activeName = "active";
 
-				/*  그래프 loading시 display:none 으로 인해 사이즈 인식 못하는 부분 수정을 위한 클래스 추가. */
-				// if(tab.classList.contains('position-switch')) {
-				// 	[...this.tabContent].map(tab => tab.classList.add('pos-sw'))
-				// } 
-
 				if(optIndex != undefined && optIndex <= this.tabNav_a.length && 0 < optIndex ){
 					this.optIndex = optIndex -1;
 				} else {
