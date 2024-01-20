@@ -71,6 +71,10 @@
 	line-height: 1.5;
 }
 
+.cont-head + .board-wrap {
+	margin-top:1.6rem;
+}
+
 .md-title {
 	margin: 0 0 1.6rem !important;
 	color: var(--color-gray2) !important;
@@ -219,7 +223,7 @@
 }
 
 .board-wrap span {
-	white-space: nowrap;
+	/* white-space: nowrap; */
 }
 
 .con-table .board-wrap {
@@ -878,7 +882,7 @@
 	margin-bottom: 4.8rem;
 }
 .hasTabDepth .page-header.desc-none + .content-wrap .tabContent > .cont-head:first-child {
-	margin-bottom: 5.6rem;
+	margin-top: 5.6rem;
 }
 .hasTabDepth .page-header.desc-none + .content-wrap .cont-head:first-child .cont-title {
 	margin: 0;
@@ -1989,8 +1993,15 @@
 	align-self: flex-end;
 	margin-left: auto;
 }
+.modify-txt > div {
+	display: flex;
+}
 .con-table .ic-handle {
 	top: 0.2px;
+}
+.btn-wrap.align-right.minus-margin {
+	display: flex;
+	justify-content: flex-end;
 }
 
 /* 추가질문 */
@@ -3170,7 +3181,7 @@ input[type='number']::-webkit-inner-spin-button {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	margin-left: 16px;
+	margin-left: 8px;
 }
 select.margin,
 input.margin {
@@ -3393,8 +3404,86 @@ input.margin {
 }
 
 .cont-head + .con-table-header {
-	margin-top:4rem;
+	margin-top: 4rem;
 } 
+
+.cont-head + [class*="button-"] {
+	margin-top:1.6rem !important;
+}
+
+.contbox-01 {
+	margin-top: 4rem;
+}
+
+.searchbox-wrap + .tabWrap {
+	margin-top: 5.6rem;
+}
+
+.fm-item-set {
+	margin-top: .8rem;
+}
+
+.cont-title + .color-box {
+	margin-top: .8rem;
+}
+.forms-set {
+	margin-top: .8rem;
+}
+
+.cont-head + .con-table {
+	margin-top: 1.6rem !important;
+}
+
+h5.cont-title + .txt-list {
+	margin-top: .8rem !important;
+}
+
+.cont-head + .color-box {
+	margin-top: 1.6rem;
+}
+
+.cont-head + .graph-box1 {
+	margin-top: 1.6rem !important;
+}
+
+.board-bottom > *:first-child {
+	margin-top:0;
+}
+
+.con-table-header .cont-title {
+	margin-right: .8rem;
+}
+
+.con-table-header .cont-title p.cont-desc,
+.con-table-header .cont-title + .cont-desc {
+	margin-top: 0;
+	margin-left: 0 !important;
+}
+
+.cont-title + .equal-list .items .con-table-header {
+	margin-top:1.6rem;
+}
+
+.cont-title + .equal-list .items .con-table-header .modify-txt {
+	display: flex !important;
+	align-items: center;
+}
+
+.cont-title + .equal-list .items .con-table-header + .color-box {
+	margin-top: 1.6rem !important;
+}
+
+.inner-contents .equal-list.half {
+	margin-top: 1.6rem;
+}
+
+.cont-title.big + .txt-list-contdesc {
+	margin-top: 1.6rem;
+}
+.cont-title.big + .txt-list-contdesc ~ .txt-list-counter{
+	margin-top: 1.6rem;
+}
+
 
 /* responsive */
 /* ==================================================== Break Point ==================================================== */
@@ -3417,8 +3506,10 @@ input.margin {
 		width: calc(100% + 6.4rem);
 		margin-top: 0;
 	}
-	.txt-list + .searchbox-wrap {
-		/* margin-top: 4rem; */
+	.txt-list + .searchbox-wrap.board-search-basic {
+		margin-top: 2.4rem;
+		width: 100%;
+		left:0;
 	}
 	.searchbox-wrap + .board-top {
 		margin-top: 2.4rem;
@@ -3839,7 +3930,7 @@ input.margin {
 		margin-left: 0;
 	}
 	.integrated-search .page-header.desc-none + .content-wrap .tabwrap-inner {
-		top: -20.8rem;
+		top: -15.8rem;
 	}
 	/* 목적자금설계 */
 	[class*='purpose-fund'] .bd-data .th,
@@ -4095,15 +4186,31 @@ input.margin {
 		margin: 0 !important;
 	} 
 
-	/* 중간에 텍스트 있는데 100% 만들어야 하는 경우 */
 	.equal-list.form .items .form-group-txt.max-about {
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
+		align-items: center;
+		gap: 8px;
 	}
+
 	.equal-list.form .items .form-group-txt.max-about [class*='charLength'] {
 		width: calc(100% - 36px);
 	}
+
 	.equal-list.form .items .form-group-txt.max-about .equal-list.w100 {
-		flex-direction: column;
+		/* flex-direction: column; */
+		gap:8px;
+		margin-left: 2rem;
+	}
+
+	.equal-list.form .items .form-group-txt.max-about .equal-list.w100 > [class*='button-'] {
+		margin-top: 0;
+		height: 4.8rem;
+    padding: 1.5rem 1.6rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+		width: 104px;
+		text-align: center;
+		justify-content: center;
 	}
 
 	.btn-wrap.modify-txt {
@@ -4209,17 +4316,18 @@ input.margin {
 		width: calc(50% - 136px) !important;
 		margin: 0 !important;
 	} 
-	.tab-second,
-	.tab-first {
+	.about-national-pension-tab .tc01,
+	.about-national-pension-tab .tab02  {
 		padding-top: 16rem !important;
 	}
 
 	.divide-type:has(.txt-helper-title) {
 		flex-wrap: wrap;
 	}
-	.content-wrap .con-table-header:first-child {
+	.content-wrap > .con-table-header:first-child {
 		padding-top: 4rem;
 	}
+
 	.con-table-header + .color-box {
 		margin-top: 1.6rem !important;
 	}
@@ -4228,6 +4336,70 @@ input.margin {
 	}
 	.txt-list + .tabWrap {
 		margin-top: 2.4rem;
+	}
+	.searchbox-wrap + .tabWrap {
+		margin-top: 0;
+	}
+	.content-wrap > .tabWrap:first-child .tabContent .cont-head {
+		padding-top: 4rem;
+		margin-top: 0 !important;
+	}
+
+	.content-wrap > .tabWrap.tab-retirement-pension .tabContent .cont-head {
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+
+	.content-wrap > .tabWrap.tab-retirement-pension .tabContent .rel-txt {
+		margin-top: .8rem;
+
+	}
+	.content-wrap > .tabWrap.tab-retirement-pension .tabContent .txt-list-counter {
+		margin-top: 4rem !important;
+	}
+	.content-wrap > .tabWrap.tab-retirement-pension .tabContent .txt-list-counter li {
+		padding: 2.4rem 0;
+	}
+	.content-wrap > .tabWrap.tab-retirement-pension .tabContent .txt-list-counter .num-count-title::before,
+	.content-wrap > .tabWrap.tab-retirement-pension .tabContent .txt-list-counter .num-count-title {
+		font-size: 1.8rem;
+	}
+	.content-wrap > .tabWrap.tab-retirement-pension .tabContent .txt-list-counter p {
+		font-size: 1.6rem;
+	}
+	.content-wrap > .tabWrap.tab-retirement-pension .tabContent.tc02 [class*="contbox-"] > .cont-head {
+		padding-top: 0 !important;
+	}
+
+	.content-wrap > .tabWrap:first-child .about-national-pension-tab .tabContent .cont-head {
+		margin-top: 0 !important;
+	}
+
+	.content-wrap > .tabWrap:first-child .tabContent .cont-head ~ .cont-head {
+		padding-top: 0 !important;
+	}
+
+	.content-wrap > .cont-title:first-child {
+		margin-top: 4rem;
+	}
+
+	.contbox-04 h5.cont-title._entitycode + .con-table {
+		margin-top: 1.6rem !important;
+	}
+	.contbox-04 h5.cont-title._entitycode,
+	.contbox-03 h5.cont-title._entitycode {
+		margin-top: 4rem !important;
+	}
+
+	.searchbox-wrap.opt-name-registration {
+		margin-top: 1.6rem !important;
+	}
+
+	.tab-personal-pension h4.cont-title {
+		margin-top: 1.6rem !important;
+	}
+	.tab-personal-pension .cont-head .cont-desc.big {
+		font-size: 1.6rem;
 	}
 } /* 1079 */
 
@@ -4428,6 +4600,7 @@ input.margin {
 	}
 	.reservation-date .contbox-line {
 		padding: 2.4rem 1.6rem 2.4rem;
+		margin-top: .8rem;
 	}
 	/* 방문상담신청-innerDatepicker 커스텀 */
 	.innerDatepicker {
@@ -4548,8 +4721,14 @@ input.margin {
 		font-size: 1.5rem;
 	}
 	.hasTabDepth .page-header.desc-none + .content-wrap .tabContent > .cont-head:first-child {
-		margin-bottom: 4rem;
+		margin-bottom: 0;
 	}
+
+	.hasTabDepth .page-header.desc-none + .content-wrap .tabContent .step-2 .cont-head,
+	.hasTabDepth .page-header.desc-none + .content-wrap .tabContent .step-3 .cont-head {
+		margin-top: 4rem !important;
+	}
+
 	.tab-retirement-pension .tabContent [class*='contbox-'] + [class*='contbox-'],
 	.tab-personal-pension .tabContent [class*='contbox-'] + [class*='contbox-'] {
 		margin-top: 4rem;
@@ -4560,8 +4739,9 @@ input.margin {
 	}
 	.hasTabDepth .tab-retirement-pension .tabContent.tc02 .contbox-01 > .cont-head,
 	.hasTabDepth .tab-retirement-pension .tabContent.tc02 .contbox-02 > .cont-head {
-		margin-bottom: 4rem;
+		margin-bottom: 0;
 	}
+
 	.cont-head._line {
 		border-bottom: 0;
 		padding-bottom: 0.8rem;
@@ -4645,7 +4825,7 @@ input.margin {
 	}
 	.tab-personal-pension .tabContent.tc03 .cont-title.mt48,
 	.tab-personal-pension .tabContent.tc03 .cont-title._entitycode {
-		margin-top: 3.2rem;
+		margin-top: 3.2rem !important;
 	}
 	.tabContent .rel-txt {
 		margin-top: 0.8rem !important;
@@ -4694,7 +4874,10 @@ input.margin {
 		font-size: 1.8rem;
 	}
 	.board-bottom {
-		margin-top: 2.4rem;
+		margin-top: .8rem;
+	}
+	.board-bottom .cont-desc {
+		margin-top: 0;
 	}
 	.board-bottom .cont-desc.dot {
 		font-size: 1.2rem;
@@ -5065,8 +5248,9 @@ input.margin {
 	.unit-group {
 		flex-direction: column;
 		align-items: baseline;
-		align-self: end;
+		/* align-self: end; */
 	}
+
 	.unit-group .unit-title {
 		min-width: auto;
 	}
@@ -5581,12 +5765,12 @@ input.margin {
 		min-width: 30rem;
 	}
 
+	/* Response Modify SM */
 	.tabNav + .btn-group.consulting-link {
 		margin-top:0;
 		padding-top:2.8rem;
 		background-color: #ffffff;
 	}
-
 
 	.btn-group.consulting-link [class*='button-'] {
 		width: calc(50% - 1rem);
@@ -5595,8 +5779,8 @@ input.margin {
 	.ic-only.inner-plus {
 		margin-top: 0 !important;
 	}
-	.tab-second,
-	.tab-first {
+	.about-national-pension-tab .tc01,
+	.about-national-pension-tab .tab02 {
 		padding-top: 20rem !important;
 	}
 
@@ -5605,7 +5789,7 @@ input.margin {
 	}
 
 	.tabContent > .cont-head:first-child {
-		padding-top: 1.4rem !important;
+		padding-top: 2.4rem !important;
 	}
 	.cont-desc {
 		margin-top: .8rem;
@@ -5613,9 +5797,109 @@ input.margin {
 	.cont-head + .con-table-header {
 		margin-top: 2rem;
 	}
+
 	.content-wrap > .cont-head:first-child {
 		padding-top: 2.4rem;
 	}
+	.data-info .data-set-group {
+    flex-wrap: wrap;
+	}
+	.color-box + .tabWrap {
+		margin-top: 2.4rem;
+	}
+	.contbox-01 {
+		margin-top: 2rem;
+	}
+	.hasTabDepth .page-header.desc-none + .content-wrap .tabContent > .cont-head:first-child {
+    margin-top: 0;
+}
+	.content-wrap > .tabWrap:first-child .tabContent .cont-head {
+		margin-top: 0;
+		padding-top: 0;
+	}
+	.content-wrap > .tabWrap:first-child .tabContent .cont-head ~ .cont-head {
+		margin-top: 4rem !important;
+	}
+	.content-wrap > .tabWrap:first-child .tabContent.tc04 .cont-head {
+		margin-top: 0;
+		padding-top: 0;
+	}
+	.content-wrap > .cont-title:first-child {
+		margin-top: 2rem;
+	}
+	.cont-head + .txt-list-counter {
+		margin-top:2.4rem;
+	}
+	.cont-head + .cont-title.mg0 {
+		margin-top: 2rem !important;
+	}
+
+	.equal-list.form .items .form-group-txt.max-about .equal-list.w100 {
+		/* flex-direction: column; */
+		gap:8px;
+		margin-left: 2.4rem;
+	}
+
+	.equal-list.form .items .form-group-txt.max-about > input {
+		width: 21rem !important;
+		flex: 0 0 auto;
+	}
+	.equal-list.form .items .form-group-txt.max-about .equal-list.w100 > [class*='button-'] {
+		height: 4.8rem !important;
+		padding: 1.5rem 1.6rem !important;
+		font-size: 1.6rem !important;
+		font-weight: 500 !important;
+		width: 100%;
+	}
+	.content-wrap > .tabWrap:first-child .about-national-pension-tab .tabContent .cont-head {
+		padding-top: 0 !important;
+	}
+
+	.cont-head + .tabWrap {
+		margin-top: 4rem;
+	}
+
+	.con-table .board-wrap {
+		margin-top: 0 !important;
+	}
+	.con-table .board-wrap label span {
+		white-space: nowrap;
+	}
+	.cont-desc + .graph-box {
+		margin-top: 2rem;
+	}
+
+	.content-wrap > .tabWrap.tab-retirement-pension .tabContent .cont-head p {
+		font-size: 1.5rem !important;
+	}
+	.content-wrap > .tabWrap.tab-retirement-pension .tabContent .txt-list-counter {
+		margin-top: 1.6rem !important;
+	}
+	.content-wrap > .tabWrap.tab-retirement-pension .tabContent .txt-list-counter .num-count-title::before,
+	.content-wrap > .tabWrap.tab-retirement-pension .tabContent .txt-list-counter .num-count-title {
+		font-size: 1.6rem;
+	}
+	.content-wrap > .tabWrap.tab-retirement-pension .tabContent .txt-list-counter p {
+		font-size: 1.5rem;
+	}
+
+	.content-wrap > .tabWrap.tab-retirement-pension .tabContent.tc02 .cont-head + .divide-wrap {
+		margin-top: 2.4rem;
+	}
+	.content-wrap > .tabWrap.tab-retirement-pension .tabContent.tc03 [class*="contbox-"] {
+		margin-top: 2.4rem;
+	}
+	.content-wrap > .tabWrap.tab-retirement-pension .tabContent.tc03 h5.cont-title {
+		margin-top: 1.6rem !important;
+	}
+
+	.has-help {
+		pointer-events: none;
+	}
+	.has-help i {
+		display: none;
+	}
+
 } /* 767px */
 
 @media screen and (max-width: 768px) {

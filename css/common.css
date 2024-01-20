@@ -515,137 +515,137 @@ legend,
 
 /* Response Form Size */
 .form-32fx {
-	width: calc(3.2rem * 1);
+	width: calc(3.2rem * 1) !important;
 }
 .form-48fx {
-	width: calc(4.8rem * 1);
+	width: calc(4.8rem * 1) !important;
 }
 .form-64fx {
-	width: calc(6.4rem * 1);
+	width: calc(6.4rem * 1) !important;
 }
 .form-72fx {
-	width: calc(7.2rem * 1);
+	width: calc(7.2rem * 1) !important;
 }
 .form-80fx {
-	width: calc(8rem * 1);
+	width: calc(8rem * 1) !important;
 }
 .form-100fx {
-	width: calc(10rem * 1);
+	width: calc(10rem * 1) !important;
 }
 .form-120fx {
-	width: calc(12rem * 1);
+	width: calc(12rem * 1) !important;
 }
 .form-140fx {
-	width: calc(14rem * 1);
+	width: calc(14rem * 1) !important;
 }
 .form-160fx {
-	width: calc(16rem * 1);
+	width: calc(16rem * 1) !important;
 }
 .form-200fx {
-	width: calc(20rem * 1);
+	width: calc(20rem * 1) !important;
 }
 .form-240fx {
-	width: calc(24rem * 1);
+	width: calc(24rem * 1) !important;
 }
 .form-280fx {
-	width: calc(28rem * 1);
+	width: calc(28rem * 1) !important;
 }
 .form-320fx {
-	width: calc(32rem * 1);
+	width: calc(32rem * 1) !important;
 } 
 .form-360fx {
-	width: calc(36rem * 1);
+	width: calc(36rem * 1) !important;
 } 
 .form-400fx {
-	width: calc(40rem * 1);
+	width: calc(40rem * 1) !important;
 }
 .form-440fx {
-	width: calc(44rem * 1);
+	width: calc(44rem * 1) !important;
 }
 .form-480fx {
-	width: calc(48rem * 1);
+	width: calc(48rem * 1) !important;
 }
 .form-520fx {
-	width: calc(52rem * 1);
+	width: calc(52rem * 1) !important;
 }
 .form-560fx {
-	width: calc(56rem * 1);
+	width: calc(56rem * 1) !important;
 }
 .form-600fx {
-	width: calc(60rem * 1);
+	width: calc(60rem * 1) !important;
 }
 .form-640fx {
-	width: calc(64rem * 1);
+	width: calc(64rem * 1) !important;
 }
 
 .form-32 {
-	width: calc(3.2rem * 1);
+	width: calc(3.2rem * 1) !important;
 }
 .form-40 {
-	width: calc(4rem * 1);
+	width: calc(4rem * 1) !important;
 }
 .form-44 {
-	width: calc(4.4rem * 1);
+	width: calc(4.4rem * 1) !important;
 }
 .form-48 {
-	width: calc(4.8rem * 1);
+	width: calc(4.8rem * 1) !important;
 }
 .form-64 {
-	width: calc(6.4rem * 1);
+	width: calc(6.4rem * 1) !important;
 }
 .form-72 {
-	width: calc(7.2rem * 1);
+	width: calc(7.2rem * 1) !important;
 }
 .form-80 {
-	width: calc(8rem * 1);
+	width: calc(8rem * 1) !important;
 }
 .form-100 {
-	width: calc(10rem * 1);
+	width: calc(10rem * 1) !important;
 }
 .form-120 {
-	width: calc(12rem * 1);
+	width: calc(12rem * 1) !important;
 }
 .form-140 {
-	width: calc(14rem * 1);
+	width: calc(14rem * 1) !important;
 }
 .form-160 {
-	width: calc(16rem * 1);
+	width: calc(16rem * 1) !important;
 }
 .form-200 {
-	width: calc(20rem * 1);
+	width: calc(20rem * 1) !important;
 }
 .form-240 {
-	width: calc(24rem * 1);
+	width: calc(24rem * 1) !important;
 }
 .form-280 {
-	width: calc(28rem * 1);
+	width: calc(28rem * 1) !important;
 }
 .form-320 {
-	width: calc(32rem * 1);
+	width: calc(32rem * 1) !important;
 } 
 .form-360 {
-	width: calc(36rem * 1);
+	width: calc(36rem * 1) !important;
 } 
 .form-400 {
-	width: calc(40rem * 1);
+	width: calc(40rem * 1) !important;
 }
 .form-440 {
-	width: calc(44rem * 1);
+	width: calc(44rem * 1) !important;
 }
 .form-480 {
-	width: calc(48rem * 1);
+	width: calc(48rem * 1) !important;
 }
 .form-520 {
-	width: calc(52rem * 1);
+	width: calc(52rem * 1) !important;
 }
 .form-560 {
-	width: calc(56rem * 1);
+	width: calc(56rem * 1) !important;
 }
 .form-600 {
-	width: calc(60rem * 1);
+	width: calc(60rem * 1) !important;
 }
 .form-640 {
-	width: calc(64rem * 1);
+	width: calc(64rem * 1) !important;
 }
 
 .form-10p {
@@ -672,145 +672,145 @@ legend,
 
 @media screen and (max-width: 1080px) {
 	.form-32 {
-		width: calc(3.2rem * var(--response-rate-1080));
+		width: calc(3.2rem * var(--response-rate-1080)) !important;
 	}
 	.form-40 {
-		width: calc(4rem * var(--response-rate-1080));
+		width: calc(4rem * var(--response-rate-1080)) !important;
 	}
 	.form-44 {
-		width: calc(4.4rem * var(--response-rate-1080));
+		width: calc(4.4rem * var(--response-rate-1080)) !important;
 	}
 	.form-48 {
-		width: calc(4.8rem * var(--response-rate-1080));
+		width: calc(4.8rem * var(--response-rate-1080)) !important;
 	}
 	.form-64 {
-		width: calc(6.4rem * var(--response-rate-1080));
+		width: calc(6.4rem * var(--response-rate-1080)) !important;
 	}
 	.form-72 {
-		width: calc(7.2rem * var(--response-rate-1080));
+		width: calc(7.2rem * var(--response-rate-1080)) !important;
 	}
 	.form-80 {
-		width: calc(8rem * var(--response-rate-1080));
+		width: calc(8rem * var(--response-rate-1080)) !important;
 	}
 	.form-100 {
-		width: calc(10rem * var(--response-rate-1080));
+		width: calc(10rem * var(--response-rate-1080)) !important;
 	}
 	.form-120 {
-		width: calc(12rem * var(--response-rate-1080));
+		width: calc(12rem * var(--response-rate-1080)) !important;
 	}
 	.form-140 {
-		width: calc(14rem * var(--response-rate-1080));
+		width: calc(14rem * var(--response-rate-1080)) !important;
 	}
 	.form-160 {
-		width: calc(16rem * var(--response-rate-1080));
+		width: calc(16rem * var(--response-rate-1080)) !important;
 	}
 	.form-200 {
-		width: calc(20rem * var(--response-rate-1080));
+		width: calc(20rem * var(--response-rate-1080)) !important;
 	}
 	.form-240 {
-		width: calc(24rem * var(--response-rate-1080));
+		width: calc(24rem * var(--response-rate-1080)) !important;
 	}
 	.form-280 {
-		width: calc(28rem * var(--response-rate-1080));
+		width: calc(28rem * var(--response-rate-1080)) !important;
 	}
 	.form-320 {
-		width: calc(32rem * var(--response-rate-1080));
+		width: calc(32rem * var(--response-rate-1080)) !important;
 	}
 	.form-360 {
-		width: calc(36rem * var(--response-rate-1080));
+		width: calc(36rem * var(--response-rate-1080)) !important;
 	}
 	.form-400 {
-		width: calc(40rem * var(--response-rate-1080));
+		width: calc(40rem * var(--response-rate-1080)) !important;
 	}
 	.form-440 {
-		width: calc(44rem * var(--response-rate-1080));
+		width: calc(44rem * var(--response-rate-1080)) !important;
 	}
 	.form-480 {
-		width: calc(48rem * var(--response-rate-1080));
+		width: calc(48rem * var(--response-rate-1080)) !important;
 	}
 	.form-520 {
-		width: calc(52rem * var(--response-rate-1080));
+		width: calc(52rem * var(--response-rate-1080)) !important;
 	}
 	.form-560 {
-		width: calc(56rem * var(--response-rate-1080));
+		width: calc(56rem * var(--response-rate-1080)) !important;
 	}
 	.form-600 {
-		width: calc(60rem * var(--response-rate-1080));
+		width: calc(60rem * var(--response-rate-1080)) !important;
 	}
 	.form-640 {
-		width: calc(64rem * var(--response-rate-1080));
+		width: calc(64rem * var(--response-rate-1080)) !important;
 	}
 }
 
 @media screen and (max-width: 768px) {
 	.form-32 {
-		width: calc(3.2rem * var(--response-rate-768));
+		width: calc(3.2rem * var(--response-rate-768)) !important;
 	}
 	.form-40 {
-		width: calc(4rem * var(--response-rate-768));
+		width: calc(4rem * var(--response-rate-768)) !important;
 	}
 	.form-44 {
-		width: calc(4.4rem * var(--response-rate-768));
+		width: calc(4.4rem * var(--response-rate-768)) !important;
 	}
 	.form-48 {
-		width: calc(4.8rem * var(--response-rate-768));
+		width: calc(4.8rem * var(--response-rate-768)) !important;
 	}
 	.form-64 {
-		width: calc(6.4rem * var(--response-rate-768));
+		width: calc(6.4rem * var(--response-rate-768)) !important;
 	}
 	.form-72 {
-		width: calc(7.2rem * var(--response-rate-768));
+		width: calc(7.2rem * var(--response-rate-768)) !important;
 	}
 	.form-80 {
-		width: calc(8rem * var(--response-rate-768));
+		width: calc(8rem * var(--response-rate-768)) !important;
 	}
 	.form-100 {
-		width: calc(10rem * var(--response-rate-768));
+		width: calc(10rem * var(--response-rate-768)) !important;
 	}
 	.form-120 {
-		width: calc(12rem * var(--response-rate-768));
+		width: calc(12rem * var(--response-rate-768)) !important;
 	}
 	.form-140 {
-		width: calc(14rem * var(--response-rate-768));
+		width: calc(14rem * var(--response-rate-768)) !important;
 	}
 	.form-160 {
-		width: calc(16rem * var(--response-rate-768));
+		width: calc(16rem * var(--response-rate-768)) !important;
 	}
 	.form-200 {
-		width: calc(20rem * var(--response-rate-768));
+		width: calc(20rem * var(--response-rate-768)) !important;
 	}
 	.form-240 {
-		width: calc(24rem * var(--response-rate-768));
+		width: calc(24rem * var(--response-rate-768)) !important;
 	}
 	.form-280 {
-		width: calc(28rem * var(--response-rate-768));
+		width: calc(28rem * var(--response-rate-768)) !important;
 	}
 	.form-320 {
-		width: calc(32rem * var(--response-rate-768));
+		width: calc(32rem * var(--response-rate-768)) !important;
 	}
 	.form-360 {
-		width: calc(36rem * var(--response-rate-768));
+		width: calc(36rem * var(--response-rate-768)) !important;
 	}
 	.form-400 {
-		width: calc(40rem * var(--response-rate-768));
+		width: calc(40rem * var(--response-rate-768)) !important;
 	}
 	.form-440 {
-		width: calc(44rem * var(--response-rate-768));
+		width: calc(44rem * var(--response-rate-768)) !important;
 	}
 	.form-480 {
-		width: calc(48rem * var(--response-rate-768));
+		width: calc(48rem * var(--response-rate-768)) !important;
 	}
 	.form-520 {
-		width: calc(52rem * var(--response-rate-768));
+		width: calc(52rem * var(--response-rate-768)) !important;
 	}
 	.form-560 {
-		width: calc(56rem * var(--response-rate-768));
+		width: calc(56rem * var(--response-rate-768)) !important;
 	}
 	.form-600 {
-		width: calc(60rem * var(--response-rate-768));
+		width: calc(60rem * var(--response-rate-768)) !important;
 	}
 	.form-640 {
-		width: calc(64rem * var(--response-rate-768));
+		width: calc(64rem * var(--response-rate-768)) !important;
 	}
 }
 
@@ -2355,6 +2355,7 @@ input[type="checkbox"]:checked {
 	display: block;
 	margin-left: .8rem;
 	line-height: 1.5;
+	white-space: nowrap;
 }
 
 .inp-checkbox input:disabled {
@@ -2764,6 +2765,7 @@ button,
 
 .form-group-txt .back-txt {
 	margin-left: .8rem;
+	white-space: nowrap;
 }
 
 .form-group-period {
@@ -2939,7 +2941,8 @@ button,
 	color: var(--color-primary);
 }
 
-.con-table table:has(tfoot) tbody tr:last-of-type > * {
+.con-table.footer-grid table:has(tfoot) tbody th[rowspan],
+.con-table.footer-grid table:has(tfoot) tbody tr:last-of-type > * {
 	border-bottom: 1px solid #999999;
 }
 
