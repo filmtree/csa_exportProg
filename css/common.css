@@ -342,6 +342,57 @@ legend,
 	flex: 0 0 auto;
 }
 
+.gap4 {
+	gap: 0.4rem;
+}
+
+.gap8 {
+	gap: 0.8rem;
+}
+
+.gap16 {
+	gap: 1.6rem;
+}
+
+.gap24 {
+	gap: 2.4rem;
+}
+
+.gap4-col {
+	column-gap: 0.4rem;
+}
+
+.gap8-col {
+	column-gap: 0.8rem;
+}
+
+.gap16-col {
+	column-gap: 1.6rem;
+}
+
+.gap24-col {
+	column-gap: 2.4rem;
+}
+
+.gap4-row {
+	row-gap: 0.4rem;
+}
+.gap8-row {
+	row-gap: 0.8rem;
+}
+.gap16-row {
+	row-gap: 1.6rem;
+}
+.gap24-row {
+	row-gap: 2.4rem;
+}
+
+:is(.gap4, .gap8, .gap16, .gap24, .gap4-col, .gap8-col, .gap16-col, .gap24-col, .gap4-row, .gap8-row, .gap16-row, .gap24-row).form-group > * + *,
+:is(.gap4, .gap8, .gap16, .gap24, .gap4-col, .gap8-col, .gap16-col, .gap24-col, .gap4-row, .gap8-row, .gap16-row, .gap24-row).form-group-txt + .form-group-txt,
+:is(.gap4, .gap8, .gap16, .gap24, .gap4-col, .gap8-col, .gap16-col, .gap24-col, .gap4-row, .gap8-row, .gap16-row, .gap24-row) .form-group > * + *,
+:is(.gap4, .gap8, .gap16, .gap24, .gap4-col, .gap8-col, .gap16-col, .gap24-col, .gap4-row, .gap8-row, .gap16-row, .gap24-row) .form-group-txt + .form-group-txt {
+	margin: 0;
+}
 
 /* Character Align */
 .ws-nw {
@@ -365,6 +416,52 @@ legend,
 .flex-nowrap {
 	flex-wrap: nowrap;
 }
+
+.divide-type {
+	display: flex;
+	justify-content: space-between;
+}
+
+.divide-type-fs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.divide-type-fc {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.divide-type-fe {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.divide-type-sa {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.divide-type-sb {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+.divide-type .txt-list.dot.gray li ~ li {
+	margin-top: 0;
+}
+
 
 /* ##font-color */
 .fc-primary {
@@ -1940,6 +2037,21 @@ legend,
 	min-width: 120rem;
 }
 
+.scroll-y {
+	height: 30rem;
+	overflow-y: auto;
+}
+/*font size*/
+.fs14 {
+	font-size: 1.4rem;
+}
+.fs16 {
+	font-size: 1.6rem;
+}
+.fs17 {
+	font-size: 1.7rem;
+}
+
 /* ======================================= icon ======================================= */
 
 .ic-only {
@@ -2709,7 +2821,7 @@ button,
 .con-table {
 	position: relative;
 	overflow-x: auto;
-	margin: 2.4rem 0;
+	margin: 2.4rem 0 0;
 	border-top: 1px solid var(--color-gray2);
 }
 
@@ -3176,7 +3288,7 @@ button,
 /* ##list-style */
 .txt-list {
 	margin-top: .8rem;
-	margin-bottom: .8rem;
+	/* margin-bottom: .8rem; */
 }
 
 .txt-list .item-label {

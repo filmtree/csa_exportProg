@@ -38,13 +38,6 @@
 	top: 10px;
 }
 
-.content-wrap {
-	position: relative;
-	margin: 0 auto;
-	padding: 0 4rem 0 4rem;
-	max-width: 128rem;
-}
-
 /* ===== contents title ===== */
 .cont-head .cont-title-h2 {
 	color: var(--color-gray2);
@@ -266,6 +259,163 @@
 	min-width: 0 !important;
 }
 
+/* hashtag */
+.equal-list.hashtag {
+	align-items: flex-start;
+	margin-top: 80px;
+	margin-left: -16px;
+}
+.equal-list.hashtag li {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 16px;
+}
+.equal-list.hashtag li a {
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 8px 4px rgba(0, 0, 0, 0.06);
+	border: 1px var(--color-primary) solid;
+	border-radius: 16px;
+	padding: 16px;
+	min-height: 90px;
+}
+.equal-list.hashtag li .color-point {
+	font-weight: 500;
+	font-size: 15px;
+}
+.equal-list.hashtag li a:hover {
+	color: var(--color-base);
+}
+.equal-list.hashtag li .color-point + span {
+	margin-top: auto;
+}
+.equal-list.hashtag li:before {
+	display: block;
+	position: absolute;
+	right: 16px;
+	bottom: 16px;
+	z-index: -1;
+	width: 32px;
+	height: 32px;
+	content: '';
+}
+.equal-list.hashtag li:first-child::before {
+	background: url(../images/ico/ic_hashtag1.svg) no-repeat -2px 0px;
+}
+/* 원본 이미지 뒤에 그림자 있음 나중에 svg 이미지 수정완료 231201 */
+.equal-list.hashtag li:nth-child(2)::before {
+	background: url(../images/ico/ic_hashtag2.svg) no-repeat 0px 0px;
+}
+.equal-list.hashtag li:nth-child(3)::before {
+	background: url(../images/ico/ic_hashtag3.svg) no-repeat -4px 0px;
+}
+.equal-list.hashtag li:nth-child(4)::before {
+	background: url(../images/ico/ic_hashtag4.svg) no-repeat 0px 0px;
+}
+
+
+.divide-type {
+	display: flex;
+	justify-content: space-between;
+}
+
+.divide-type-fs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.divide-type-fc {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.divide-type-fe {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.divide-type-sa {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.divide-type-sb {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.gap4 {
+	gap: 0.4rem;
+}
+
+.gap8 {
+	gap: 0.8rem;
+}
+
+.gap16 {
+	gap: 1.6rem;
+}
+
+.gap24 {
+	gap: 2.4rem;
+}
+
+.gap4-col {
+	column-gap: 0.4rem;
+}
+
+.gap8-col {
+	column-gap: 0.8rem;
+}
+
+.gap16-col {
+	column-gap: 1.6rem;
+}
+
+.gap24-col {
+	column-gap: 2.4rem;
+}
+
+.gap4-row {
+	row-gap: 0.4rem;
+}
+.gap8-row {
+	row-gap: 0.8rem;
+}
+.gap16-row {
+	row-gap: 1.6rem;
+}
+.gap24-row {
+	row-gap: 2.4rem;
+}
+
+:is(.gap4, .gap8, .gap16, .gap24, .gap4-col, .gap8-col, .gap16-col, .gap24-col, .gap4-row, .gap8-row, .gap16-row, .gap24-row).form-group > * + *,
+:is(.gap4, .gap8, .gap16, .gap24, .gap4-col, .gap8-col, .gap16-col, .gap24-col, .gap4-row, .gap8-row, .gap16-row, .gap24-row).form-group-txt + .form-group-txt,
+:is(.gap4, .gap8, .gap16, .gap24, .gap4-col, .gap8-col, .gap16-col, .gap24-col, .gap4-row, .gap8-row, .gap16-row, .gap24-row) .form-group > * + *,
+:is(.gap4, .gap8, .gap16, .gap24, .gap4-col, .gap8-col, .gap16-col, .gap24-col, .gap4-row, .gap8-row, .gap16-row, .gap24-row) .form-group-txt + .form-group-txt {
+	margin: 0;
+}
+
+.divide-type .txt-list.dot.gray li ~ li {
+	margin-top: 0;
+}
+
+.divide-type + .con-table {
+	margin-top: 1.6rem;
+}
+
 
 /* ==================================================== Contents Page ==================================================== */
 
@@ -450,33 +600,10 @@
 	width: 100%;
 }
 
-/* CSA 교육 및 시험 */
-
 
 /* ==================================================== Break Point ==================================================== */
 
-@media screen and (min-width: 768px) {
-	.innerDatepicker .ui-datepicker .ui-datepicker-title > select {
-		padding: 0.9rem 3.6rem 1.1rem 1.6rem;
-		height: 4.8rem;
-		font-size: 2.4rem;
-	}
-	.innerDatepicker .ui-datepicker .ui-datepicker-title > .ui-datepicker-year {
-		margin-right: 1.6rem;
-	}
-	.innerDatepicker .ui-datepicker table {
-		font-size: 1.4rem;
-	}
-	.innerDatepicker .ui-datepicker th {
-		height: 6.2rem;
-		font-weight: 600;
-		font-size: 1.4rem;
-	}
-	.innerDatepicker .ui-datepicker td a {
-		height: 6.2rem;
-		line-height: 3.4;
-	}
-}
+
 
 /* 방문상담신청-innerDatepicker(table형태) */
 .tableDatepicker {
@@ -567,29 +694,6 @@
 }
 .datepicker-calendar tbody .saturday {
 	color: #1a72e7;
-}
-
-/* ==================================================== Break Point ==================================================== */
-
-@media screen and (max-width: 768px) {
-	.tableDatepicker {
-		padding: 1.6rem 2.7rem 2.7rem;
-	}
-	.datepicker-header .datepicker-value {
-		font-size: 1.5rem;
-	}
-	.datepicker-header {
-		height: 4rem;
-	}
-	.datepicker-calendar td {
-		height: 3.8rem;
-		line-height: 1.5;
-	}
-	.datepicker-calendar thead th {
-		height: 4rem;
-		font-weight: 500;
-		font-size: 1.1rem;
-	}
 }
 
 /* 교육신청 */
@@ -697,101 +801,6 @@
 	margin-top: 4rem;
 }
 
-.divide-type {
-	display: flex;
-	justify-content: space-between;
-}
-
-.divide-type-fs {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-items: center;
-}
-
-.divide-type-fc {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-}
-
-.divide-type-fe {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-end;
-	align-items: center;
-}
-
-.divide-type-sa {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
-}
-
-.divide-type-sb {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
-}
-
-.gap4 {
-	gap: 0.4rem;
-}
-
-.gap8 {
-	gap: 0.8rem;
-}
-
-.gap16 {
-	gap: 1.6rem;
-}
-
-.gap24 {
-	gap: 2.4rem;
-}
-
-.gap4-col {
-	column-gap: 0.4rem;
-}
-
-.gap8-col {
-	column-gap: 0.8rem;
-}
-
-.gap16-col {
-	column-gap: 1.6rem;
-}
-
-.gap24-col {
-	column-gap: 2.4rem;
-}
-
-.gap4-row {
-	row-gap: 0.4rem;
-}
-.gap8-row {
-	row-gap: 0.8rem;
-}
-.gap16-row {
-	row-gap: 1.6rem;
-}
-.gap24-row {
-	row-gap: 2.4rem;
-}
-
-:is(.gap4, .gap8, .gap16, .gap24, .gap4-col, .gap8-col, .gap16-col, .gap24-col, .gap4-row, .gap8-row, .gap16-row, .gap24-row).form-group > * + *,
-:is(.gap4, .gap8, .gap16, .gap24, .gap4-col, .gap8-col, .gap16-col, .gap24-col, .gap4-row, .gap8-row, .gap16-row, .gap24-row).form-group-txt + .form-group-txt,
-:is(.gap4, .gap8, .gap16, .gap24, .gap4-col, .gap8-col, .gap16-col, .gap24-col, .gap4-row, .gap8-row, .gap16-row, .gap24-row) .form-group > * + *,
-:is(.gap4, .gap8, .gap16, .gap24, .gap4-col, .gap8-col, .gap16-col, .gap24-col, .gap4-row, .gap8-row, .gap16-row, .gap24-row) .form-group-txt + .form-group-txt {
-	margin: 0;
-}
-
-.divide-type .txt-list.dot.gray li ~ li {
-	margin-top: 0;
-}
 
 .pension-plan .board-bottom.divide-type .txt-list {
 	flex: 1;
@@ -845,10 +854,10 @@
 	background: var(--ui-colr4);
 }
 .pension-plan .plan-step05 .divide-type + .con-table {
-	margin-top: 4.8rem;
+	/* margin-top: 4.8rem; */
 }
 .pension-plan .plan-step05 .con-table + .con-table {
-	margin-top: 4rem;
+	/* margin-top: 4rem; */
 }
 /* 연금제도 안내 */
 .hasTabDepth .page-header {
@@ -1625,61 +1634,6 @@
 	margin-top: 8rem;
 }
 
-/* hashtag */
-.equal-list.hashtag {
-	align-items: flex-start;
-	margin-top: 80px;
-	margin-left: -16px;
-}
-.equal-list.hashtag li {
-	display: flex;
-	position: relative;
-	flex-direction: column;
-	justify-content: center;
-	margin-left: 16px;
-}
-.equal-list.hashtag li a {
-	display: flex;
-	flex-direction: column;
-	box-shadow: 0 8px 4px rgba(0, 0, 0, 0.06);
-	border: 1px var(--color-primary) solid;
-	border-radius: 16px;
-	padding: 16px;
-	min-height: 90px;
-}
-.equal-list.hashtag li .color-point {
-	font-weight: 500;
-	font-size: 15px;
-}
-.equal-list.hashtag li a:hover {
-	color: var(--color-base);
-}
-.equal-list.hashtag li .color-point + span {
-	margin-top: auto;
-}
-.equal-list.hashtag li:before {
-	display: block;
-	position: absolute;
-	right: 16px;
-	bottom: 16px;
-	z-index: -1;
-	width: 32px;
-	height: 32px;
-	content: '';
-}
-.equal-list.hashtag li:first-child::before {
-	background: url(../images/ico/ic_hashtag1.svg) no-repeat -2px 0px;
-}
-/* 원본 이미지 뒤에 그림자 있음 나중에 svg 이미지 수정완료 231201 */
-.equal-list.hashtag li:nth-child(2)::before {
-	background: url(../images/ico/ic_hashtag2.svg) no-repeat 0px 0px;
-}
-.equal-list.hashtag li:nth-child(3)::before {
-	background: url(../images/ico/ic_hashtag3.svg) no-repeat -4px 0px;
-}
-.equal-list.hashtag li:nth-child(4)::before {
-	background: url(../images/ico/ic_hashtag4.svg) no-repeat 0px 0px;
-}
 /* 간단재무설계 입력폼 */
 .equal-list.form {
 }
@@ -2383,7 +2337,7 @@
 }
 /* table 바깥으로 이어서 쓸때 */
 .txt-list.minus {
-	margin-top: -8px;
+	/* margin-top: -8px; */
 }
 
 /* dot size-2px */
@@ -3402,25 +3356,21 @@ input.margin {
 /* ==================================================== Break Point ==================================================== */
 
 @media screen and (max-width: 1079px) {
-	.content-wrap {
-		padding: 0 3.2rem 8rem 3.2rem;
+
+	.tab-total > [role='tabpanel'] {
+    padding-top: 2.4rem !important;
 	}
+
 	.cont-head:first-child {
 		padding-top: 4.8rem;
 	}
 	.hasTabDepth .content-wrap .hashtag-wrap {
 		padding: 0 3.2rem;
 	}
-
 	.searchbox-wrap {
 		position: relative;
 		left: -3.2rem;
 		width: calc(100% + 6.4rem);
-	}
-	.tabContent .searchbox-wrap {
-		/* position: relative;
-		left: -3.2rem;
-		width: auto; */
 	}
 	.searchbox {
 		border-radius: 0;
@@ -3428,7 +3378,6 @@ input.margin {
 	.searchbox .search-label {
 		display: none;
 	}
-
 	.searchbox-wrap.opt-name-registration {
 		left: unset;
 		margin-top: 0 !important;
@@ -3631,8 +3580,9 @@ input.margin {
 		margin-bottom: 0 !important;
 	}
 	.hasTabDepth .content-wrap {
-		padding: 0 0 8rem 0;
-		top: 52px;
+		padding: 0;
+		/* padding: 0 0 8rem 0; */
+		top: 0;
 	}
 	.hasTabDepth .content-wrap .tabContent {
 		padding: 0 3.2rem;
@@ -3683,7 +3633,7 @@ input.margin {
 		display: none;
 	}
 	.hasTabDepth .content-wrap .tabWrap .tabNav a {
-		padding: 1rem 0 1.6rem;
+		padding: 1.2rem 0 1.2rem;
 		height: 4.8rem;
 		color: var(--color-gray4);
 		font-weight: 400;
@@ -3802,10 +3752,10 @@ input.margin {
 		margin-top: 0;
 	}
 	.hasTabDepth .page-header.desc-none + .content-wrap .tabwrap-inner {
-		top: -48px;
+		top: 0;
 	}
 	.hasTabDepth .page-header.desc-none + .content-wrap .tabContent {
-		/* padding-top: 4.8rem; 20240111 */
+		padding-top: 4.8rem;
 	}
 	.tab-retirement-pension .tabContent.tc01 .cont-head .cont-title {
 		font-size: 1.8rem;
@@ -4178,10 +4128,7 @@ input.margin {
 /* ==================================================== Break Point ==================================================== */
 
 @media screen and (max-width: 767px) {
-	/*--------- S: [노후준비종합진단] ---------*/
-	.content-wrap {
-		padding: 0 1.6rem 8rem 1.6rem;
-	}
+
 	.hasTabDepth .content-wrap .hashtag-wrap {
 		padding: 0 1.6rem;
 	}
@@ -4450,6 +4397,7 @@ input.margin {
 	}
 	.pension-plan .plan-step05 .divide-type .cont-desc {
 		line-height: 1.5;
+		font-size: 1.4rem;
 	}
 	.pension-plan .plan-step05 .divide-type button {
 		margin-top: 0.8rem;
@@ -4499,6 +4447,7 @@ input.margin {
 	}
 	.hasTabDepth .page-header.desc-none + .content-wrap .cont-head:first-child .cont-desc {
 		margin-top: 0.8rem;
+		font-size: 1.4rem;
 	}
 	.hasTabDepth .tab-retirement-pension .tabContent.tc02 .contbox-01 > .cont-head,
 	.hasTabDepth .tab-retirement-pension .tabContent.tc02 .contbox-02 > .cont-head {
@@ -4755,7 +4704,7 @@ input.margin {
 	}
 
 	.cont-desc.big {
-		font-size: 16px;
+		font-size: 16px !important;
 	}
 
 	.cont-title .inner-desc {
@@ -5313,9 +5262,15 @@ input.margin {
 		padding-top: 16px;
 		min-width: 40rem;
 	}
+	.divide-type + .tab-total {
+		margin-top: 2.4rem;
+	}
 	.tab-total .tabNav li {
 		height: auto;
 		min-height: 44px;
+	}
+	.tab-total > [role='tabpanel'] {
+    padding-top: 1.6rem !important;
 	}
 	.tab-total .tabContent {
 		background: #fff;
@@ -5509,12 +5464,51 @@ input.margin {
 	}
 } /* 767px */
 
-/* ==================================================== Break Point ==================================================== */
+@media screen and (max-width: 768px) {
+	.tableDatepicker {
+		padding: 1.6rem 2.7rem 2.7rem;
+	}
+	.datepicker-header .datepicker-value {
+		font-size: 1.5rem;
+	}
+	.datepicker-header {
+		height: 4rem;
+	}
+	.datepicker-calendar td {
+		height: 3.8rem;
+		line-height: 1.5;
+	}
+	.datepicker-calendar thead th {
+		height: 4rem;
+		font-weight: 500;
+		font-size: 1.1rem;
+	}
 
-@media screen and (min-width: 768px) {
 	/*--------- S: [노후준비종합진단] ---------*/
 	[class*='purpose-fund'] .cont-head:first-child {
 		padding-top: 0;
 	}
 	/*--------- E: [노후준비종합진단] ---------*/
+}
+@media screen and (min-width: 768px) {
+	.innerDatepicker .ui-datepicker .ui-datepicker-title > select {
+		padding: 0.9rem 3.6rem 1.1rem 1.6rem;
+		height: 4.8rem;
+		font-size: 2.4rem;
+	}
+	.innerDatepicker .ui-datepicker .ui-datepicker-title > .ui-datepicker-year {
+		margin-right: 1.6rem;
+	}
+	.innerDatepicker .ui-datepicker table {
+		font-size: 1.4rem;
+	}
+	.innerDatepicker .ui-datepicker th {
+		height: 6.2rem;
+		font-weight: 600;
+		font-size: 1.4rem;
+	}
+	.innerDatepicker .ui-datepicker td a {
+		height: 6.2rem;
+		line-height: 3.4;
+	}
 }
