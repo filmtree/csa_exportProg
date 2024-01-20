@@ -2994,9 +2994,12 @@ button,
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-bottom: 1.6rem;
 }
 
+.con-table-header + .board-wrap,
+.con-table-header + .con-table {
+	margin-top:1.6rem;
+}
 .con-table-header .sm-title {
 	color: var(--color-base);
 	font-size: 1.5rem;
@@ -3835,5 +3838,10 @@ input + .txt-helper {
 	.grid-result-bottom {
 		min-height: unset;
 		padding: .8rem;
+	}
+
+	.con-table-header + .board-wrap,
+	.con-table-header + .con-table {
+		margin-top: .8rem;
 	}
 }

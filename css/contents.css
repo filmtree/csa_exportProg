@@ -47,7 +47,7 @@
 }
 
 .cont-head .cont-title {
-	margin-bottom: 1.6rem;
+	margin-bottom: 0;
 	color: var(--color-gray2);
 	font-weight: 700;
 	font-size: 2rem;
@@ -55,9 +55,10 @@
 }
 
 .cont-head .cont-desc {
-	margin-bottom: 1.6rem;
+	margin-bottom: 0;
 	font-size: 1.7rem;
 	line-height: 1.6;
+	margin-top: 1.6rem;
 }
 
 .cont-head .cont-desc.big {
@@ -86,7 +87,14 @@
 
 /* ===== search-content ===== */
 .searchbox-wrap {
-	margin-bottom: 4.8rem;
+	margin-top: 1.6rem;
+}
+.searchbox-wrap + .board-top {
+	margin-top: 4rem;
+	margin-bottom:0;
+}
+.board-top + .board-wrap {
+	margin-top: 1.6rem;
 }
 .searchbox {
 	border-radius: 1.6rem 1.6rem;
@@ -229,6 +237,10 @@
 	min-width: 90rem;
 }
 
+.equal-list .con-table table {
+	min-width: 0;
+}
+
 .con-table.sm table,
 .con-table.sm .board-wrap {
 	min-width: 36rem;
@@ -260,9 +272,11 @@
 }
 
 /* hashtag */
+.hashtag-wrap {
+	margin-top: 80px;
+}
 .equal-list.hashtag {
 	align-items: flex-start;
-	margin-top: 80px;
 	margin-left: -16px;
 }
 .equal-list.hashtag li {
@@ -719,19 +733,19 @@
 .divide-wrap {
 	display: flex;
 }
-.pension-plan .plan-step01 .board-wrap {
-	padding-top: 2.4rem;
-	height: calc(100% - 4.6rem);
-}
-.pension-plan .plan-step01 .con-table .form-group-txt input {
-	width: 100%;
-}
 .divide-wrap .col {
 	margin-right: 4rem;
 	width: 50%;
 }
 .divide-wrap > .col:last-child {
 	margin-right: 0;
+}
+.pension-plan .plan-step01 .board-wrap {
+	padding-top: 2.4rem;
+	height: calc(100% - 4.6rem);
+}
+.pension-plan .plan-step01 .con-table .form-group-txt input {
+	width: 100%;
 }
 .imgbox {
 	display: flex;
@@ -1273,7 +1287,7 @@
 	overflow-y: auto;
 }
 .financial-calculator .board-bottom.divide-type {
-	margin-bottom: 1.6rem;
+	/* margin-bottom: 1.6rem; */
 }
 .financial-calculator .board-bottom.divide-type .txt-list {
 	margin-top: 0;
@@ -1458,7 +1472,6 @@
 .cont-title {
 	margin-top: 5.6rem;
 	margin-right: 1.6rem;
-	margin-bottom: 1.6rem;
 	color: var(--color-gray2);
 	font-weight: 700;
 	font-size: 2rem;
@@ -1470,7 +1483,8 @@
 	margin-top: 0;
 }
 .cont-desc {
-	margin-bottom: 1.6rem;
+	margin-bottom: 0;
+	margin-top: 1.6rem;
 	color: var(--color-gray2);
 	font-size: 1.7rem;
 	line-height: 1.6;
@@ -1486,8 +1500,11 @@
 	content: '';
 }
 .cont-title.big {
-	margin-top: 24px;
+	/* margin-top: 24px; */
 	font-size: 24px;
+}
+.con-table-header .cont-title.big {
+	margin-top: 0;
 }
 .cont-desc.big {
 	font-size: 1.8rem;
@@ -2047,6 +2064,10 @@
 	background-color: var(--ui-colr4);
 	padding-bottom: 1.6rem;
 }
+.con-table-header + .color-box {
+	margin-top:1.6rem;
+}
+
 [class*='result-type'] {
 	padding: 4rem 1.6rem 2.4rem;
 	text-align: center;
@@ -2803,6 +2824,9 @@ input[type='number']::-webkit-inner-spin-button {
 .con-table-header.low {
 	margin-top: 4rem;
 }
+.con-table + .btn-wrap {
+	margin-top: 1.6rem;
+} 
 
 /* pop_기타 이벤트 상세보기 */
 .smcolor1 {
@@ -3350,7 +3374,27 @@ input.margin {
 	max-width: none !important;
 }
 
-/* // 간단재무설계 E */
+.form-group-txt.select2-btn2 {
+	flex-wrap: nowrap;
+	gap: 8px !important;
+}
+
+.form-group-txt.select2-btn2 button {
+	width: 120px !important;
+	margin: 0 !important;
+ }		
+.form-group-txt.select2-btn2 select {		
+	width: calc(50% - 136px) !important;
+	margin: 0 !important;
+} 
+
+.con-table-header + .color-box {
+	margin-top: 4rem !important;
+}
+
+.cont-head + .con-table-header {
+	margin-top:4rem;
+} 
 
 /* responsive */
 /* ==================================================== Break Point ==================================================== */
@@ -3361,7 +3405,7 @@ input.margin {
     padding-top: 2.4rem !important;
 	}
 
-	.cont-head:first-child {
+	.content-wrap > .cont-head:first-child {
 		padding-top: 4.8rem;
 	}
 	.hasTabDepth .content-wrap .hashtag-wrap {
@@ -3371,6 +3415,17 @@ input.margin {
 		position: relative;
 		left: -3.2rem;
 		width: calc(100% + 6.4rem);
+		margin-top: 0;
+	}
+	.txt-list + .searchbox-wrap {
+		/* margin-top: 4rem; */
+	}
+	.searchbox-wrap + .board-top {
+		margin-top: 2.4rem;
+		margin-bottom:0;
+	}
+	.board-top + .board-wrap {
+		margin-top: 1.6rem;
 	}
 	.searchbox {
 		border-radius: 0;
@@ -3822,6 +3877,11 @@ input.margin {
 	[class*='purpose-fund'] .tabContent .divide-wrap .col + .col .cont-head {
 		padding-top: 3.2rem;
 	}
+
+	.txt-list + .divide-wrap.mt0 {
+		margin-top: 4rem !important;
+	}
+
 	/* 재무계산기 */
 	.financial-calculator .divide-wrap .col + .col {
 		margin-top: 3.2rem;
@@ -3930,9 +3990,11 @@ input.margin {
 	}
 
 	/* hashtag 공통UI */
+	.hashtag-wrap {
+		margin-top: 24px;
+	}
 	.equal-list.hashtag {
 		flex-wrap: wrap;
-		margin-top: 24px;
 	}
 	.equal-list.hashtag li {
 		flex: 0 1 auto;
@@ -4018,9 +4080,20 @@ input.margin {
 		margin-left: 0;
 	}
 	.equal-list.form .form-group-txt select + select {
-		margin-top: 8px;
-		margin-left: 0px;
+		/* margin-top: 8px; */
+		/* margin-left: 8px; */
 	}
+
+	.form-group-txt.select2-btn2 {
+		flex-wrap: nowrap;
+		gap: 8px !important;
+	}
+
+	.form-group-txt.select2-btn2 button,		
+	.form-group-txt.select2-btn2 select {		
+		width: calc(50% - 8px) !important;
+		margin: 0 !important;
+	} 
 
 	/* 중간에 텍스트 있는데 100% 만들어야 하는 경우 */
 	.equal-list.form .items .form-group-txt.max-about {
@@ -4123,11 +4196,45 @@ input.margin {
 	.btn-group.consulting-link {
 		margin-top: 2rem;
 	}
+
+	.form-group-txt.select2-btn2 {
+		flex-wrap: nowrap;
+		gap: 8px !important;
+	}
+
+	.form-group-txt.select2-btn2 button {
+		width: 120px !important;
+	}		
+	.form-group-txt.select2-btn2 select {		
+		width: calc(50% - 136px) !important;
+		margin: 0 !important;
+	} 
+	.tab-second,
+	.tab-first {
+		padding-top: 16rem !important;
+	}
+
+	.divide-type:has(.txt-helper-title) {
+		flex-wrap: wrap;
+	}
+	.content-wrap .con-table-header:first-child {
+		padding-top: 4rem;
+	}
+	.con-table-header + .color-box {
+		margin-top: 1.6rem !important;
+	}
+	.content-wrap .board-wrap:first-child {
+		margin-top: 4rem;
+	}
+	.txt-list + .tabWrap {
+		margin-top: 2.4rem;
+	}
 } /* 1079 */
 
 /* ==================================================== Break Point ==================================================== */
 
 @media screen and (max-width: 767px) {
+
 
 	.hasTabDepth .content-wrap .hashtag-wrap {
 		padding: 0 1.6rem;
@@ -4136,13 +4243,15 @@ input.margin {
 		margin-top: 3.2rem;
 	}
 	.cont-head .cont-title {
-		margin-bottom: 0.8rem;
+		margin-bottom: 0;
 		font-size: 1.6rem;
 		white-space: wrap;
 	}
 	.cont-head .cont-desc {
 		font-size: 1.5rem;
 		line-height: 1.5;
+		margin-top: .8rem;
+		margin-bottom: 0;
 	}
 	.cont-bottom {
 		margin-top: 4rem;
@@ -4153,7 +4262,7 @@ input.margin {
 	}
 	.searchbox-wrap {
 		left: -1.6rem;
-		margin-bottom: 2.4rem;
+		margin-bottom: 0;
 		width: calc(100% + 3.2rem);
 	}
 	.searchbox {
@@ -4585,7 +4694,7 @@ input.margin {
 		font-size: 1.8rem;
 	}
 	.board-bottom {
-		margin-top: 0.8rem;
+		margin-top: 2.4rem;
 	}
 	.board-bottom .cont-desc.dot {
 		font-size: 1.2rem;
@@ -4682,7 +4791,7 @@ input.margin {
 	}
 
 	.cont-title {
-		margin: 4rem 0 0.8rem;
+		margin: 4rem 0 0;
 		font-size: 1.6rem;
 	}
 
@@ -4728,6 +4837,10 @@ input.margin {
 	}
 
 	.con-table-header {
+	}
+
+	.cont-title + .board-wrap {
+		margin-top: .8rem;
 	}
 
 	/* in 버튼두개일때 */
@@ -4837,9 +4950,11 @@ input.margin {
 	}
 
 	/* [hashtag] */
+	.hashtag-wrap {
+		margin-top: 32px;
+	}
 	.equal-list.hashtag {
 		flex-direction: column;
-		margin-top: 32px;
 	}
 	.equal-list.hashtag li {
 		margin-top: 8px;
@@ -4932,6 +5047,9 @@ input.margin {
 
 	.color-box.none {
 		padding: 16px;
+	}
+	.con-table-header + .color-box {
+		margin-top: .8rem !important;
 	}
 
 	/* data-type-list */
@@ -5046,9 +5164,11 @@ input.margin {
 		padding: 0.8rem;
 		height: auto;
 	}
+	.con-table-header.mt56 {
+		margin-top: 3.2rem !important;
+	}
 	.con-table-header {
 		margin-top: 1.6rem;
-		padding-bottom: 0.8rem;
 	}
 	.con-table-header .sm-title {
 		margin-top: 0;
@@ -5401,9 +5521,14 @@ input.margin {
 		display: none;
 	}
 
+
+
 	/* 화살표 */
 	.equal-list.arr {
 		flex-direction: column;
+	}
+	.cont-title + .equal-list {
+		margin-top: 2.4rem;
 	}
 	.equal-list.arr .progress-arr {
 		margin-top: 0px;
@@ -5416,6 +5541,7 @@ input.margin {
 		width: 36px;
 		height: 36px;
 	}
+
 
 	/* 프로그래스바  */
 	.progressbar-wrap {
@@ -5455,12 +5581,40 @@ input.margin {
 		min-width: 30rem;
 	}
 
+	.tabNav + .btn-group.consulting-link {
+		margin-top:0;
+		padding-top:2.8rem;
+		background-color: #ffffff;
+	}
+
+
 	.btn-group.consulting-link [class*='button-'] {
 		width: calc(50% - 1rem);
 	}
 
 	.ic-only.inner-plus {
 		margin-top: 0 !important;
+	}
+	.tab-second,
+	.tab-first {
+		padding-top: 20rem !important;
+	}
+
+	.divide-type:has(.txt-helper-title) {
+		flex-wrap: wrap;
+	}
+
+	.tabContent > .cont-head:first-child {
+		padding-top: 1.4rem !important;
+	}
+	.cont-desc {
+		margin-top: .8rem;
+	}
+	.cont-head + .con-table-header {
+		margin-top: 2rem;
+	}
+	.content-wrap > .cont-head:first-child {
+		padding-top: 2.4rem;
 	}
 } /* 767px */
 
