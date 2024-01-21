@@ -2999,6 +2999,11 @@ button,
 	align-items: center;
 }
 
+.cont-title.big + .con-table-header {
+	margin-top: 2.4rem;
+}
+
+
 .con-table-header + .board-wrap,
 .con-table-header + .con-table {
 	margin-top:1.6rem;

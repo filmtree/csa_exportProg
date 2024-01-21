@@ -888,8 +888,14 @@
 	margin: 0;
 }
 .hasTabDepth .page-header.desc-none + .content-wrap .cont-head:first-child .cont-desc {
-	margin-top: 1.6rem;
+	margin-top: 4rem;
 	margin-bottom: 0;
+}
+.hasTabDepth .page-header.desc-none + .content-wrap .cont-head .cont-title + .cont-desc {
+	margin-top: .8rem;
+}
+.hasTabDepth .page-header.desc-none + .content-wrap .cont-head + .txt-list-counter {
+	margin-top: 4rem;
 }
 .txt-list-counter {
 	counter-reset: num-counter;
@@ -938,6 +944,23 @@
 .hasTabDepth .tab-retirement-pension .tabContent.tc02 .contbox-02 > .cont-head {
 	margin-bottom: 4.8rem;
 }
+
+.hasTabDepth .tab-retirement-pension .tabContent.tc03 [class*="contbox-"] h5.cont-title {
+	margin-top: 2.4rem !important;
+}
+
+.hasTabDepth .tab-retirement-pension .tabContent.tc03 [class*="contbox-"] h5.cont-title + .cont-desc {
+	margin-top: .8rem !important;
+}
+
+.hasTabDepth .tab-retirement-pension .tabContent.tc03 [class*="contbox-"] h5.cont-title + .con-table {
+	margin-top: 1.6rem !important;
+}
+.hasTabDepth .tab-retirement-pension .tabContent.tc03 [class*="contbox-"] .con-table + h5.cont-title  {
+	margin-top: 4rem !important;
+}
+ 
+
 .cont-head._line {
 	margin-bottom: 0 !important;
 	border-bottom: 1px solid var(--color-base);
@@ -1073,7 +1096,9 @@
 .tab-personal-pension .tabContent.tc03 .cont-desc {
 	margin-bottom: 0;
 }
-
+.tab-personal-pension .tabContent .cont-head + .cont-title {
+	margin-top: 4rem !important;
+}
 .cont-title.mg0 {
 	margin: 0;
 }
@@ -1472,6 +1497,9 @@
 .cont-head .cont-title {
 	white-space: wrap;
 }
+.cont-head + .cont-title {
+	margin-top: 4rem !important;
+}
 
 .cont-title {
 	margin-top: 5.6rem;
@@ -1808,6 +1836,10 @@
 	border-radius: 0;
 	min-height: 320px;
 }
+.cont-title + .equal-list.half {
+	margin-top: 1.6rem;
+}
+
 .result-txt {
 	font-weight: 700;
 	font-size: 18px;
@@ -1990,6 +2022,8 @@
 	margin-top: 16px;
 }
 .modify-txt {
+	display: flex;
+	align-items: center;
 	align-self: flex-end;
 	margin-left: auto;
 }
@@ -2661,6 +2695,10 @@ input[type='number']::-webkit-inner-spin-button {
 	width: 100%;
 }
 
+* + .graph-box {
+	margin-top: 1.6rem;
+}
+
 .graph-box1 {
 	border: 1px var(--ui-colr2) solid;
 	background-color: #fff;
@@ -2733,7 +2771,11 @@ input[type='number']::-webkit-inner-spin-button {
 .score-wrap {
 	display: flex;
 	margin-top: 5.6rem;
-	margin-bottom: .8rem;
+	/* margin-bottom: .8rem; */
+}
+
+.score-wrap + * {
+	margin-top: 2.4rem;
 }
 
 .tabContent .score-wrap:first-of-type {
@@ -3081,8 +3123,19 @@ input[type='number']::-webkit-inner-spin-button {
 }
 
 /* 종합재무 설계 form */
-.total-finance {
+.total-finance .cont-head + div.con-table-header .cont-title {
+	margin-top: 0;
 }
+.total-finance .cont-head + div .cont-title {
+	margin-top: 2.4rem;
+}
+.total-finance .cont-head + div .txt-list + .cont-title {
+	margin-top: 5.6rem;
+}
+.total-finance .cont-head + div .txt-list + .cont-title + .equal-list {
+	margin-top: 1.6rem;
+}
+
 .form-group-txt .center-txt {
 	margin: 0 8px;
 }
@@ -3374,109 +3427,87 @@ input.margin {
 .desc-box[class*='type'] .desc-content {
 	padding-right: 30px;
 }
-
-/* txt-wrap */
 .txt-wrap {
 	text-wrap: nowrap;
 }
-
-
 .max-none {
 	max-width: none !important;
 }
-
 .form-group-txt.select2-btn2 {
 	flex-wrap: nowrap;
 	gap: 8px !important;
 }
-
 .form-group-txt.select2-btn2 button {
 	width: 120px !important;
 	margin: 0 !important;
- }		
+}		
 .form-group-txt.select2-btn2 select {		
 	width: calc(50% - 136px) !important;
 	margin: 0 !important;
 } 
-
 .con-table-header + .color-box {
 	margin-top: 4rem !important;
 }
-
+.items .con-table-header ~ .color-box {
+	margin-top: 1.6rem !important;
+}
 .cont-head + .con-table-header {
 	margin-top: 4rem;
 } 
-
 .cont-head + [class*="button-"] {
 	margin-top:1.6rem !important;
 }
-
 .contbox-01 {
 	margin-top: 4rem;
 }
-
 .searchbox-wrap + .tabWrap {
 	margin-top: 5.6rem;
 }
-
 .fm-item-set {
 	margin-top: .8rem;
 }
-
 .cont-title + .color-box {
 	margin-top: .8rem;
+}
+.cont-head + .color-box {
+	margin-top: 1.6rem;
 }
 .forms-set {
 	margin-top: .8rem;
 }
-
 .cont-head + .con-table {
 	margin-top: 1.6rem !important;
 }
-
 h5.cont-title + .txt-list {
 	margin-top: .8rem !important;
 }
-
-.cont-head + .color-box {
-	margin-top: 1.6rem;
-}
-
 .cont-head + .graph-box1 {
 	margin-top: 1.6rem !important;
 }
-
 .board-bottom > *:first-child {
 	margin-top:0;
 }
-
 .con-table-header .cont-title {
 	margin-right: .8rem;
 }
-
 .con-table-header .cont-title p.cont-desc,
 .con-table-header .cont-title + .cont-desc {
 	margin-top: 0;
 	margin-left: 0 !important;
 }
-
 .cont-title + .equal-list .items .con-table-header {
 	margin-top:1.6rem;
 }
-
 .cont-title + .equal-list .items .con-table-header .modify-txt {
 	display: flex !important;
 	align-items: center;
 }
-
 .cont-title + .equal-list .items .con-table-header + .color-box {
 	margin-top: 1.6rem !important;
 }
-
 .inner-contents .equal-list.half {
 	margin-top: 1.6rem;
 }
-
 .cont-title.big + .txt-list-contdesc {
 	margin-top: 1.6rem;
 }
@@ -3484,8 +3515,27 @@ h5.cont-title + .txt-list {
 	margin-top: 1.6rem;
 }
 
+.cont-head + .divide-wrap {
+	margin-top: 1.6rem;
+}
 
-/* responsive */
+.inner-contents h3.cont-title ~ p.cont-title {
+	margin-top: 4rem;
+}
+.inner-contents h3.cont-title ~ p.cont-title ~ .three-quarters {
+	margin-top: 1.6rem;
+}
+.cont-title.big + .equal-list.divide-border {
+	margin-top: 1.6rem;
+}
+
+.innerTabWrap .double-contents .cont-title.top + .board-wrap.bd-write {
+	margin-top: 1.6rem;
+}
+.forms-set ~ .cont-desc.type3 + .form-group {
+	margin-top: 1.6rem;
+}
+
 /* ==================================================== Break Point ==================================================== */
 
 @media screen and (max-width: 1079px) {
@@ -4205,9 +4255,9 @@ h5.cont-title + .txt-list {
 	.equal-list.form .items .form-group-txt.max-about .equal-list.w100 > [class*='button-'] {
 		margin-top: 0;
 		height: 4.8rem;
-    padding: 1.5rem 1.6rem;
-    font-size: 1.6rem;
-    font-weight: 500;
+		padding: 1.5rem 1.6rem;
+		font-size: 1.6rem;
+		font-weight: 500;
 		width: 104px;
 		text-align: center;
 		justify-content: center;
@@ -4303,12 +4353,10 @@ h5.cont-title + .txt-list {
 	.btn-group.consulting-link {
 		margin-top: 2rem;
 	}
-
 	.form-group-txt.select2-btn2 {
 		flex-wrap: nowrap;
 		gap: 8px !important;
 	}
-
 	.form-group-txt.select2-btn2 button {
 		width: 120px !important;
 	}		
@@ -4320,19 +4368,20 @@ h5.cont-title + .txt-list {
 	.about-national-pension-tab .tab02  {
 		padding-top: 16rem !important;
 	}
-
 	.divide-type:has(.txt-helper-title) {
 		flex-wrap: wrap;
 	}
 	.content-wrap > .con-table-header:first-child {
 		padding-top: 4rem;
 	}
-
 	.con-table-header + .color-box {
 		margin-top: 1.6rem !important;
 	}
 	.content-wrap .board-wrap:first-child {
 		margin-top: 4rem;
+	}
+	.content-wrap .con-table .board-wrap {
+		margin-top: 0;
 	}
 	.txt-list + .tabWrap {
 		margin-top: 2.4rem;
@@ -4344,15 +4393,12 @@ h5.cont-title + .txt-list {
 		padding-top: 4rem;
 		margin-top: 0 !important;
 	}
-
 	.content-wrap > .tabWrap.tab-retirement-pension .tabContent .cont-head {
 		margin-top: 0 !important;
 		margin-bottom: 0 !important;
 	}
-
 	.content-wrap > .tabWrap.tab-retirement-pension .tabContent .rel-txt {
 		margin-top: .8rem;
-
 	}
 	.content-wrap > .tabWrap.tab-retirement-pension .tabContent .txt-list-counter {
 		margin-top: 4rem !important;
@@ -4400,6 +4446,13 @@ h5.cont-title + .txt-list {
 	}
 	.tab-personal-pension .cont-head .cont-desc.big {
 		font-size: 1.6rem;
+	}
+	.content-wrap .tab-education .edu-group .board-wrap + .cont-head {
+		margin-top: 4rem !important;
+	}
+
+	.content-wrap .csa-training-guide-tab .csa-training-guide1 .cont-head ~ .cont-head {
+		margin-top: 4rem !important;
 	}
 } /* 1079 */
 
@@ -5898,6 +5951,16 @@ h5.cont-title + .txt-list {
 	}
 	.has-help i {
 		display: none;
+	}
+	.content-wrap .tab-education .tabContent .searchbox-wrap + .cont-head {
+		margin-top: 2.4rem !important;
+	}
+
+	.content-wrap .tabWrap.csa-training-guide-tab .tabContent.csa-training-guide1 .cont-head ~ .cont-head {
+		margin-top: 2.4rem !important;
+	}
+	.content-wrap .tabWrap.csa-training-guide-tab .tabContent.csa-training-guide2 > ul > li {
+		margin-top: 2.4rem;
 	}
 
 } /* 767px */
