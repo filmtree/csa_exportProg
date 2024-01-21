@@ -341,7 +341,7 @@ function headerPrint() {
 			<li>
 				<a href="#1depth" class="menu-dep1"><span>재무진단</span></a>
 				<ul class="dep2">
-					<li><a href="#2depth">간단재무설계</a></li>
+					<li><a href="../UHKD/UHKD0101M0_간단재무설계.html">간단재무설계</a></li>
 					<li><a href="#2depth">노후준비자금설계</a></li>
 					<li><a href="#2depth">종합재무설계</a></li>
 					<li><a href="#2depth">목적자금설계</a></li>

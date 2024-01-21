@@ -122,6 +122,37 @@ legend,
 	        clip-path: inset(100%);
 }
 
+/* h3 Contents */
+.mg-section-divide,
+.mg-h3-section {
+	margin-top: 5.6rem !important;
+}
+
+/* h4 Contents */
+.mg-in-section-divide,
+.mg-h4-section {
+	margin-top: 4.8rem !important;
+}
+
+/* h5 Contents */
+.mg-h5-section {
+	margin-top: 4rem !important;
+}
+
+/* section inner margin */
+.mg-contents {
+	margin-top: 1.6rem !important;
+}
+
+.mg-title-desc {
+	margin-top: .8rem !important;
+}
+
+/* 텍스트 문단끼리의 마진 */
+.mg-paragraph {
+	margin-top: 2.4rem !important;
+}
+
 /* ##align */
 /* Left -> RIght */
 .al {
@@ -2823,7 +2854,7 @@ button,
 .con-table {
 	position: relative;
 	overflow-x: auto;
-	margin: 2.4rem 0 0;
+	margin: 1.6rem 0 0;
 	border-top: 1px solid var(--color-gray2);
 }
 
@@ -2895,6 +2926,9 @@ button,
 .con-table tfoot td:last-child {
 	border-right: 0;
 	border-left: 1px solid var(--ui-colr3);
+}
+.con-table tbody td:only-child {
+	border-left: 0;
 }
 
 .con-table tbody tr th.bg,
@@ -3000,7 +3034,7 @@ button,
 }
 
 .cont-title.big + .con-table-header {
-	margin-top: 2.4rem;
+	margin-top: 1.6rem;
 }
 
 
@@ -3209,6 +3243,8 @@ button,
 	position: relative;
 	padding-left: 1.8rem;
 	margin-right: 2.4rem;
+	display: flex;
+	align-items:center;
 }
 
 .direction-label::before {
@@ -3644,6 +3680,36 @@ input + .txt-helper {
 		display: block;
 	}
 
+	/* h3 Contents */
+	.mg-section-divide,
+	.mg-h3-section {
+		margin-top: 4.8rem !important;
+	}
+
+	/* h4 Contents */
+	.mg-in-section-divide,
+	.mg-h4-section {
+		margin-top: 3.6rem !important;
+	}
+
+	/* h5 Contents */
+	.mg-h5-section {
+		margin-top: 3.6rem !important;
+	}
+
+	/* section inner margin */
+	.mg-contents {
+		margin-top: .8rem !important;
+	}
+
+	.mg-title-desc {
+		margin-top: .8rem !important;
+	}
+
+	/* 텍스트 문단끼리의 마진 */
+	.mg-paragraph {
+		margin-top: 1.6rem !important;
+	}
 
 	/* ##Form */
 	input[type="text"],

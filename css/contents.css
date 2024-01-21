@@ -75,6 +75,10 @@
 	margin-top:1.6rem;
 }
 
+.cont-title + .board-wrap.bd-write {
+	margin-top:1.6rem;
+}
+
 .md-title {
 	margin: 0 0 1.6rem !important;
 	color: var(--color-gray2) !important;
@@ -502,6 +506,10 @@
 	margin-bottom: 0.8rem;
 	display: block;
 }
+.visit-reservation .reservation-time .contbox-line,
+.visit-reservation .reservation-date .contbox-line {
+	margin-top: 1.6rem;
+}
 .reservation-time {
 	flex: 1;
 }
@@ -864,6 +872,9 @@
 .pension-plan .plan-step05 .divide-type .cont-desc {
 	margin-bottom: 0;
 }
+.pension-plan .plan-step05 .graph-box1 {
+	margin-top: 0;
+}
 .tab-total.type-inner {
 	margin-top: 4.8rem;
 } /* type-inner 클래스는 콘텐츠탭이 콘텐츠 상단에 붙지 않는경우에 사용됨 */
@@ -876,6 +887,12 @@
 }
 .pension-plan .plan-step05 .con-table + .con-table {
 	/* margin-top: 4rem; */
+}
+.content-wrap.plan-step05 .divide-type {
+	margin-top: 1.6rem !important;
+}
+.content-wrap.plan-step05 .divide-type .cont-desc {
+	margin-top: 0 !important;
 }
 /* 연금제도 안내 */
 .hasTabDepth .page-header {
@@ -892,7 +909,7 @@
 	margin-bottom: 0;
 }
 .hasTabDepth .page-header.desc-none + .content-wrap .cont-head .cont-title + .cont-desc {
-	margin-top: .8rem;
+	margin-top: 1.6rem;
 }
 .hasTabDepth .page-header.desc-none + .content-wrap .cont-head + .txt-list-counter {
 	margin-top: 4rem;
@@ -951,6 +968,7 @@
 
 .hasTabDepth .tab-retirement-pension .tabContent.tc03 [class*="contbox-"] h5.cont-title + .cont-desc {
 	margin-top: .8rem !important;
+	margin-bottom: 1.6rem !important;
 }
 
 .hasTabDepth .tab-retirement-pension .tabContent.tc03 [class*="contbox-"] h5.cont-title + .con-table {
@@ -1109,7 +1127,7 @@
 	margin-top: 4.8rem;
 }
 .tabContent .rel-txt {
-	margin-top: 2.4rem;
+	margin-top: 1.6rem;
 }
 .cont-desc.mb0 {
 	margin-bottom: 0;
@@ -1358,10 +1376,15 @@
 .financial-analysis .txt-list {
 	margin-bottom: 0;
 }
-/* 내연금 알아보기 */
 .subtxt {
 	font-weight: 400;
 	font-size: 1.8rem;
+}
+.subtxt-h4 {
+	font-weight: 400;
+	font-size: 1.8rem;
+	margin-left:.8rem;
+	line-height: 30px;
 }
 .divide-wrap .box-item {
 	display: flex;
@@ -3350,8 +3373,6 @@ input.margin {
 .layer-up {
 	display: block;
 }
-
-/* 설계안수립 */
 .color-box.develop {
 	margin-top: 24px;
 }
@@ -3371,12 +3392,15 @@ input.margin {
 	color: var(--color-gray2);
 	font-size: 17px;
 }
-
 .color-box.develop .alert-txt-box em.alert-emphasis {
 	font-weight: 500;
 	font-size: 2.2rem;
 	line-height: 1.5;
 }
+.color-box + .cont-table {
+	margin-top: 5.6rem;
+}
+
 
 /* 프로그레스바  */
 .equal-list.progress-box .progressbar-wrap {
@@ -3446,7 +3470,7 @@ input.margin {
 	margin: 0 !important;
 } 
 .con-table-header + .color-box {
-	margin-top: 4rem !important;
+	margin-top: 1.6rem !important;
 }
 .items .con-table-header ~ .color-box {
 	margin-top: 1.6rem !important;
@@ -3464,22 +3488,22 @@ input.margin {
 	margin-top: 5.6rem;
 }
 .fm-item-set {
-	margin-top: .8rem;
+	margin-top: 1.6rem;
 }
 .cont-title + .color-box {
-	margin-top: .8rem;
+	margin-top: 1.6rem;
 }
 .cont-head + .color-box {
 	margin-top: 1.6rem;
 }
 .forms-set {
-	margin-top: .8rem;
+	margin-top: 1.6rem;
 }
 .cont-head + .con-table {
 	margin-top: 1.6rem !important;
 }
 h5.cont-title + .txt-list {
-	margin-top: .8rem !important;
+	margin-top: 1.6rem !important;
 }
 .cont-head + .graph-box1 {
 	margin-top: 1.6rem !important;
@@ -3488,7 +3512,7 @@ h5.cont-title + .txt-list {
 	margin-top:0;
 }
 .con-table-header .cont-title {
-	margin-right: .8rem;
+	margin-right: 1.6rem;
 }
 .con-table-header .cont-title p.cont-desc,
 .con-table-header .cont-title + .cont-desc {
@@ -4694,6 +4718,17 @@ h5.cont-title + .txt-list {
 	.field .form-group .form-group-txt > * + * {
 		margin-top: 0.8rem;
 	}
+	.field.data-info {
+		flex-wrap: wrap;
+		gap: .8rem;
+	}
+	.field.data-info .data-set-group {
+		flex-wrap: nowrap;
+	}
+	.field.data-info .data-set-group .data-set {
+		display: flex;
+		flex-wrap: wrap;
+	}
 	/* 노후준비자금 설계 */
 	.pension-plan .plan-step01 .board-wrap {
 		padding-top: 0.8rem;
@@ -4726,6 +4761,7 @@ h5.cont-title + .txt-list {
 		padding: 1rem;
 		letter-spacing: -0.07em;
 	}
+
 	.pension-plan .plan-step05 .divide-type {
 		flex-flow: column wrap;
 		align-items: flex-start;

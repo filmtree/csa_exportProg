@@ -94,7 +94,7 @@
         <!--e: Page Title-->
 
         <!-- s: Print Header -->
-        <header class="print-header">
+        <header class="print-header" aria-hidden="true">
           <h2>장애유족예상연금 조회</h2>
         </header>
         <!-- e: Print Header -->
@@ -102,14 +102,14 @@
         <!--s: Contents -->
         <div class="content-wrap pension-survivors-disabilities">
           <!-- s: 장애ㆍ유족예상연금 -->
-          <div class="con-table-header">
-            <h3 class="cont-title mb0">장애ㆍ유족예상연금</h3>
+          <div class="con-table-header mg-h4-section">
+            <h4 class="cont-title mb0">장애ㆍ유족예상연금</h4>
             <div class="d-flex gap8">
               <a href="https://www.nps.or.kr/jsppage/info/easy/easy_04_03.jsp" class="button-primary -sm round printNone">장애연금 수급요건 확인</a>
               <a href="https://www.nps.or.kr/jsppage/info/easy/easy_04_04.jsp" class="button-primary -sm round printNone">유족연금 수급요건 확인</a>
             </div>
           </div>
-          <div class="con-table all-center footer-grid">
+          <div class="con-table all-center footer-grid mg-contents">
             <table>
               <caption>
                 유족연금, 장애연금 1급, 2급, 3급, 4급의 예상연금액과 현재까지 납부보험료로 구성된 표.
@@ -156,7 +156,7 @@
               </tfoot>
             </table>
           </div>
-          <ul class="txt-list dot mt16">
+          <ul class="txt-list dot mg-contents">
             <li class="fc-primary">장애 또는 유족연금 수급요건에 해당하는 경우 지급사유발생일(유족연금: 사망일, 장애연금: 장애결정 기준일*)을 조회일 현재로 가정할 때 예상금액입니다.</li>
             <li>장애결정 기준일은 장애심사가 완료된 후 확정됩니다.</li>
             <li>정확한 수급요건 및 지급사유발생일은 국민연금공단 지사로 문의 바랍니다.</li>
@@ -164,12 +164,12 @@
           <!-- e: 장애ㆍ유족예상연금 -->
 
           <!-- s: 연금계산내역 -->
-          <div class="con-table-header al mt56">
-            <h3 class="cont-title mb0">연금계산내역</h3>
-            <p class="cont-desc big mb0 ml8">(홍길동 고객님의 예상 장애 유족 연금 계산내역입니다.)</p>
+          <div class="con-table-header al mg-h4-section">
+            <h4 class="cont-title mb0">연금계산내역</h4>
+            <p class="cont-desc big ml8">(홍길동 고객님의 예상 장애 유족 연금 계산내역입니다.)</p>
           </div>
 
-          <div class="con-table all-center mb16">
+          <div class="con-table all-center mg-contents">
             <table>
               <caption>
                 총가입개월, 총 납부보험료, A값, B값으로 구성된 표.
@@ -235,7 +235,7 @@
           <!-- e: 연금계산내역 -->
 
           <!-- s: 하단 버튼 -->
-          <div class="cont-bottom printNone">
+          <div class="cont-bottom printNone mg-section-divide">
             <div class="btn-group">
               <button type="button" class="button-primary -lg" onclick="window.print();">화면출력</button>
             </div>
@@ -243,7 +243,7 @@
           <!-- e: 하단 버튼 -->
 
           <!-- s: 추가 설명 -->
-          <ul class="txt-list dot mt56">
+          <ul class="txt-list dot mg-section-divide">
             <li>현재까지 납부보험료 총액은 조회일이 속하는 월분까지 납부한 것으로 가정하여 계산함에 따라 납부내역 조회에서 조회된 금액과차이가 있을 수 있습니다.</li>
             <li>장애 및 유족연금의 예상연금액은 조회일 현재 수급사유발생 기준이므로 사유발생일에 따라 금액에 차이가 있을 수있습니다.</li>
             <li>장애 및 유족연금은 초진일 또는 사망일 기준으로 연금보험료 납부요건 및 초진일 등이 충족되어야 지급됩니다.</li>
