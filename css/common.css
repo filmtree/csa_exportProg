@@ -3381,6 +3381,10 @@ button,
 	margin-top: .8rem;
 }
 
+.modal .txt-list > li ~ li {
+	margin-top: .4rem;
+}
+
 .txt-list.narrow > li ~ li {
 	margin-top: .4rem;
 }

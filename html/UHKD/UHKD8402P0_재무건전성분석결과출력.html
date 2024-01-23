@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <!-- 프린트 윈도우 팝업 -->
+    <div class="winPopup">
+      <div class="modalWrap">
+        <!-- s: Popup Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">재무건전성 분석결과</h3>
+          </div>
+          <button class="btn-close printNone" onclick="winPopClose();">윈도우창닫기</button>
+        </div>
+        <!-- e: Popup Header -->
+        <!-- s: Contents -->
+        <div class="modal-body">
+          <div class="cont-head">
+            <h3 class="cont-title dot">재무건전성 진단결과</h3>
+          </div>
+          <div class="color-box">
+            <dl class="result-type-green">
+              <dt>현수준 유지</dt>
+              <dd>고객님의 재무건전성이 [현수준 유지] 진단이 나왔습니다.</dd>
+            </dl>
+          </div>
+          <p class="cont-desc type2">
+            현재 고객님 재무상태의 <span class="fc-primary">순자산은 800,000만원</span>이고 현금흐름의 <span class="fc-primary">잉여여력은 225만원</span>이 발생하였습니다.<br />
+            재무적정성은 현금유동성 <span class="fc-gray3 mediumbold">[적정]</span>, 저축적정성 <span class="fc-gray3 mediumbold">[적정]</span>, 부채적정성<span class="fc-gray3 mediumbold">[적정]</span>으로 평가되었습니다.
+          </p>
+          <ul class="txt-list dot gray">
+            <li>
+              본 재무현황 진단은 고객님이 입력하신 재무정보를 바탕으로 통계청 가계 통계 데이터와 적정성분석을 통해 평가되었습니다.<br />
+              제안된 입력값을 바탕으로 산정되었기 때문에 현재 재무상황을 직접적으로 반영하지 않을 수 있습니다.<br />
+              정밀한 진단은 노후설계 컨설턴트와 상의하시길 바랍니다.
+            </li>
+          </ul>
+          <!-- s: Grid -->
+          <div class="con-table-header mg-boxtobox">
+            <h3 class="cont-title">현금흐름분석</h3>
+            <span class="txt-helper">(단위 : 만원 / 월)</span>
+          </div>
+          <div class="con-table all-center response">
+            <table summary="구분(소득), 원금균등상환(저축 및 투자,비소비지출,소비지출)에 대한 내용이 나열된 표">
+              <caption>
+                현금흐름분석 표
+              </caption>
+              <colgroup>
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">구분</th>
+                  <th scope="col" colspan="2">원금균등상환</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" rowspan="3" class="border">소득</th>
+                  <td>900</td>
+                  <th scope="row">저축 및 투자</th>
+                  <td>200</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <th scope="row">비소비지출</th>
+                  <td>90</td>
+                </tr>
+                <tr class="color-point">
+                  <td class="fc-base">0</td>
+                  <th scope="row">소비지출</th>
+                  <td class="fc-base">500</td>
+                </tr>
+                <tr>
+                  <th class="fc-gray2" scope="row">소계</th>
+                  <td class="bg fc-gray2">900</td>
+                  <th class="fc-gray2" scope="row">소계</th>
+                  <td class="bg fc-gray2">790</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="txt-list dot gray">
+            <li>고객님 가계의 잉여여력(유입-유출)은 <span class="fc-primary">225만원</span>입니다.</li>
+            <li>비소득지출은 보험지출 및 대출상환액을 포함합니다.</li>
+          </ul>
+          <!-- e: Grid -->
+
+          <!-- s: Graph -->
+          <div class="graph-box1 mg-boxtobox">
+            <span>그래프 영역</span>
+          </div>
+          <!-- e: Graph -->
+
+          <!-- s: Grid -->
+          <div class="con-table-header mg-boxtobox">
+            <h3 class="cont-title mb0">재무상태분석</h3>
+            <span class="txt-helper">(단위 : 만원 / 월)</span>
+          </div>
+          <div class="con-table all-center response">
+            <table summary="자산(금융자산,부동산,기타자산), 부채(소비자부채,주거관련부채)에 대한 내용이 나열된 표">
+              <caption>
+                재무상태분석 표
+              </caption>
+              <colgroup>
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">자산</th>
+                  <th scope="col" colspan="2">부채</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">금융자산</th>
+                  <td>2,000</td>
+                  <th scope="row">소비자부채</th>
+                  <td>10,000</td>
+                </tr>
+                <tr>
+                  <th scope="row">부동산</th>
+                  <td>0</td>
+                  <th scope="row">주거관련부채</th>
+                  <td>10,000</td>
+                </tr>
+                <tr class="color-point">
+                  <th scope="row">기타자산</th>
+                  <td class="fc-base">0</td>
+                  <th scope="row"></th>
+                  <td class="fc-base"></td>
+                </tr>
+                <tr>
+                  <th class="fc-gray2" scope="row">소계</th>
+                  <td class="bg fc-gray2">2,000</td>
+                  <th class="fc-gray2" scope="row">소계</th>
+                  <td class="bg fc-gray2">20,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="txt-list dot gray">
+            <li>고객님 가계의 순자산(자산-부채)은 <span class="fc-primary">800,000만원</span>입니다.</li>
+            <li>금융자산은 현금 및 현금등가물, 투자금융자산을 포함합니다.</li>
+          </ul>
+          <!-- e: Grid -->
+
+          <!-- s: Graph -->
+          <div class="graph-box1 mg-boxtobox">
+            <span>그래프 영역</span>
+          </div>
+          <!-- e: Graph -->
+
+          <!-- s: Grid -->
+          <div class="cont-head mg-boxtobox">
+            <h3 class="cont-title">재무건전성 분석 결과보기</h3>
+          </div>
+          <div class="con-table all-center">
+            <table summary="저축적정성(고객님,적정치,비교분석)에 대한 내용이 나열된 표">
+              <caption>
+                저축적정성 표
+              </caption>
+              <colgroup>
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 50%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="3">저축적정성</th>
+                </tr>
+                <tr>
+                  <th scope="col">고객님</th>
+                  <th scope="col">적정치</th>
+                  <th scope="col">비교분석</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>22.0%</td>
+                  <td>20.0%</td>
+                  <td>적정 대비 2% 높습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="txt-list dot gray">
+            <li>고객님의 가계의 월간 저축및투자는 1,000만원이고, 총유입은 1,500만원으로 저축률은 67.0%입니다.</li>
+          </ul>
+          <!-- e: Grid -->
+
+          <!-- s: Grid -->
+          <div class="con-table all-center mg-boxtobox">
+            <table summary="비상예비자금(고객님,적정치,비교분석)에 대한 내용이 나열된 표">
+              <caption>
+                비상예비자금 표
+              </caption>
+              <colgroup>
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 50%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="3">비상예비자금</th>
+                </tr>
+                <tr>
+                  <th scope="col">고객님</th>
+                  <th scope="col">적정치</th>
+                  <th scope="col">비교분석</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1,000</td>
+                  <td>3,540</td>
+                  <td>적정 대비 2,540만원 적습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="txt-list dot gray">
+            <li>고객님의 가계의 비상예비자금은 비상시 사용할 수 있는 현금 및 등가물 자산입니다.</li>
+            <li>적정한 비상예비자금은(소비지출+비소비지출)x6개월 금액입니다</li>
+          </ul>
+          <!-- e: Grid -->
+
+          <!-- s: Grid -->
+          <div class="con-table all-center mg-boxtobox">
+            <table summary="대출상환적정성(고객님,적정치,비교분석)에 대한 내용이 나열된 표">
+              <caption>
+                대출상환적정성 표
+              </caption>
+              <colgroup>
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 50%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="3">대출상환적정성</th>
+                </tr>
+                <tr>
+                  <th scope="col">고객님</th>
+                  <th scope="col">적정치</th>
+                  <th scope="col">비교분석</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>22.0%</td>
+                  <td>20.0%</td>
+                  <td>적정 대비 2% 높습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="txt-list dot gray">
+            <li>고객님의 가계의 월간 총대출상환액은 1,500만원이고, 총유입은 1,500만원으로 대출상환률은 100%입니다.</li>
+          </ul>
+          <!-- e: Grid -->
+
+          <!-- s: Grid -->
+          <div class="con-table all-center mg-boxtobox">
+            <table summary="총자산대비 부채(고객님,적정치,비교분석)에 대한 내용이 나열된 표">
+              <caption>
+                총자산대비 부채 표
+              </caption>
+              <colgroup>
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 50%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="3">총자산대비 부채</th>
+                </tr>
+                <tr>
+                  <th scope="col">고객님</th>
+                  <th scope="col">적정치</th>
+                  <th scope="col">비교분석</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1,000</td>
+                  <td>3,540</td>
+                  <td>적정 대비 90% 낮습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="txt-list dot gray">
+            <li>고객님의 가계의 월간 총부채 금액은 3,000만원이고, 총자산은 830,000만원으로 총부채비율은 2.7%입니다.</li>
+          </ul>
+          <!-- e: Grid -->
+
+          <!-- s: Grid -->
+          <div class="con-table all-center mg-boxtobox">
+            <table summary="구분, 적정성 판단기준, 적정성여부에 대한 내용이 나열된 표">
+              <caption>
+                재무건전성 분석 결과 표
+              </caption>
+              <colgroup>
+                <col style="width: 30%" />
+                <col style="width: 40%" />
+                <col style="width: 30%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">구분</th>
+                  <th scope="col">적정성 판단기준</th>
+                  <th scope="col">적정성여부</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>비상시예비자금</td>
+                  <td>(비소비지출+소비지출) X (6개월)</td>
+                  <td>부족</td>
+                </tr>
+                <tr>
+                  <td>저축의 적정성</td>
+                  <td>총소득의 20.0% 이상</td>
+                  <td>적정</td>
+                </tr>
+                <tr>
+                  <td>대출상환 적정성</td>
+                  <td>총대출상환금액이 총소득의 36.0% 이내</td>
+                  <td>적정</td>
+                </tr>
+                <tr>
+                  <td>총부채의 적정성</td>
+                  <td>총자산대비 총부채가 40.0% 이내</td>
+                  <td>과다</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="txt-list dot gray">
+            <li>적정기준은 동일소득대 및 연령대 통계청자료를 바탕으로 고객님의 적정기준을 산정한 것입니다.</li>
+          </ul>
+          <!-- e: Grid -->
+        </div>
+
+        <!-- e: Contents -->
+        <!-- s: Footer -->
+        <div class="modal-footer">
+          <div class="btn-group full">
+            <a href="#none" type="button" class="button-primary -lg" onclick="printPage()">인쇄하기</a>
+          </div>
+        </div>
+        <!-- e: Footer -->
+      </div>
+    </div>
+
+    <script>
+      // Window Popup Close
+      function winPopClose() {
+        self.opener = self;
+        window.close();
+      }
+
+      // Print
+      function printPage() {
+        window.print();
+      }
+    </script>
+  </body>
+</html>

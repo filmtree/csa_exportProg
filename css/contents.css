@@ -257,6 +257,10 @@
 	min-width: 0;
 }
 
+.winPopup .con-table table {
+	min-width: 0;
+}
+
 .equal-list .con-table table {
 	min-width: 0;
 }
