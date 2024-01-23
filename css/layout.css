@@ -1318,6 +1318,7 @@
 
 .winPopup .modalWrap {
 	max-width: initial;
+	box-shadow: none;
 }
 
 .winPopup .modalWrap .modal-footer {
@@ -1326,6 +1327,7 @@
 
 .winPopup .modalWrap .modal-body {
 	padding-bottom: 9rem;
+  max-height: none;
 }
 
 /* ##tab - Tab_4depth */

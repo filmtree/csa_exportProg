@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Title</title>
+
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <button type="button" class="button-primary" id="modalOpenButton">Open</button>
+
+    <div class="modal full dim" id="modalTemplate" style="display: block;">
+      <div class="modalWrap diagnosing-modal">
+
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">원하시는 서비스를 선택해 주세요</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <div class="diagnosing-wrap">
+              <button type="button" class="diagnosing-card before">
+                <h4 class="diagnosing-card-title">로그인 없이 진단하기</h4>
+                <p class="diagnosing-card-info">진단결과가 저장되지 않으며, 
+                  결과 리포트 출력은 가능합니다.</p>
+              </button>
+              <button type="button" class="diagnosing-card after">
+                <h4 class="diagnosing-card-title">로그인 후 진단하기</h4>
+                <p class="diagnosing-card-info">공인인증서 로그인을 하시면
+                  진단결과가 자동 저장되며 
+                  추후에 확인이 가능합니다.</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+
+      </div>
+    </div>
+    <script>
+      document.querySelector('#modalOpenButton').addEventListener('click', () => {
+        commonUI.modal('#modalTemplate', '#modalOpenButton');
+      });
+    </script>
+  </body>
+</html>

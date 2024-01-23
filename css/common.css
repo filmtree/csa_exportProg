@@ -122,6 +122,12 @@ legend,
 	        clip-path: inset(100%);
 }
 
+/* 컨텐츠 섹션별 마진 설정 */
+
+.mg-contents-first {
+	margin-top: 0 !important;
+}
+
 /* h3 Contents */
 .mg-section-divide,
 .mg-h3-section {
@@ -129,12 +135,13 @@ legend,
 }
 
 /* h4 Contents */
-.mg-in-section-divide,
+.mg-inner-divide,
 .mg-h4-section {
 	margin-top: 4.8rem !important;
 }
 
 /* h5 Contents */
+.mg-boxtobox,
 .mg-h5-section {
 	margin-top: 4rem !important;
 }
@@ -2917,7 +2924,7 @@ button,
 	vertical-align: middle;
 }
 
-.con-table thead + tbody th {
+.con-table.tbody-th-white thead + tbody th {
 	background-color: transparent;
 }
 
@@ -2985,9 +2992,33 @@ button,
 	font-weight: var(--font-Noto-medium);
 }
 
+.con-table.small th,
+.con-table.small th *,
+.con-table.small td,
+.con-table.small td * {
+	font-size: 1.4rem;
+}
+
+.con-table.small th {
+	padding: 1.6rem .8rem;
+}
+
+.con-table.small td {
+	padding: .8rem .8rem;
+}
+
+.con-table:has(thead tr:nth-child(2)) th {
+	padding: 1.1rem .8rem;
+	height: auto !important;
+}
 
 .con-table.all-center td {
 	text-align: center;
+}
+
+.con-table.all-center td img,
+.con-table.all-center td button {
+	margin: 0 auto;
 }
 
 .con-table.all-right tbody td {

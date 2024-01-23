@@ -20,9 +20,9 @@
     <div class="winPopup">
       <div class="modalWrap">
         <!-- s: Popup Header -->
-        <div class="modal-header">
+        <div class="modal-header printNone">
           <div class="modal-title">
-            <h3 class="cont-title">Title</h3>
+            <h3 class="cont-title">CSA 합격증서 출력</h3>
           </div>
           <button class="btn-close printNone" onclick="winPopClose();">윈도우창닫기</button>
         </div>
@@ -31,13 +31,20 @@
         <div class="modal-body">
           <!-- s: Contents Header -->
           <div class="cont-head">
-            <h4 class="cont-title dot">TItle</h4>
+            <h4 class="blind">CSA 합격증</h4>
           </div>
           <!-- e: Contents Header -->
 
           <!-- s: Contents Body -->
-
+          <section>
+            <div class="acceptance-certificate">
+              합격증서 이미지 필요함.
+              <div class="acceptance-certificate-name">홍길동</div>
+              <div class="acceptance-certificate-birth">0000-00-00</div>
+            </div>
+          </section>
           <!-- e: Contents Body -->
+
         </div>
         <!-- e: Contents -->
         <!-- s: Footer -->
@@ -51,10 +58,6 @@
     </div>
 
     <script>
-      // Window Popup open
-      function openReportPop() {
-        var printPopup = window.open("./template/window_popup_template.html", "_blank", "width=1080px", "height=720px", "scrollbars=yes", "resizable=no");
-      }
 
       // Window Popup Close
       function winPopClose() {

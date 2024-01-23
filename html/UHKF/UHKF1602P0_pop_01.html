@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Title</title>
+
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <button type="button" class="button-primary" id="modalOpenButton">Open</button>
+
+    <div class="modal full dim" id="modalTemplate">
+      <div class="modalWrap">
+
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">2급</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner h720px">
+            <div class="con-table-header">
+              <h4 class="cont-title">2023 노후준비 상담사(CSA) 자격시험 상세보기</h4>
+            </div>
+            <div class="con-table mg-contents all-center">
+              <table>
+                <caption>
+                  성명, 과목, 생년월일, 총점, 수험번호, 합격여부, 시험명, 노후준비총론, 자격구분, 재무설계 시험장소, 건강설계, 시험일, 여가대인관계 설계, 시험 시작시간, 시험 종료시간, 자격번호로 구성된 표.
+                </caption>
+                <colgroup>
+                  <col style="width: 20;"/>
+                  <col style="width: 30;"/>
+                  <col style="width: 20;"/>
+                  <col style="width: 30;"/> 
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">성명</th>
+                    <td>성명</td>
+                    <th scope="row">과목</th>
+                    <th scope="col">점수</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">생년월일</th>
+                    <td>생년월일</td>
+                    <th scope="row">총점</th>
+                    <td>총점</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">수험번호</th>
+                    <td>수험번호</td>
+                    <th scope="row">합격여부</th>
+                    <td>합격여부</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">시험명</th>
+                    <td>시험명</td>
+                    <th scope="row">노후준비 총론</th>
+                    <td>노후준비 총론</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">자격구분</th>
+                    <td>자격구분</td>
+                    <th scope="row">재무설계</th>
+                    <td>재무설계</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">시험장소</th>
+                    <td>시험장소</td>
+                    <th scope="row">건강설계</th>
+                    <td>건강설계</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">시험일</th>
+                    <td>시험일</td>
+                    <th scope="row">여가대인관계 설계</th>
+                    <td>여가대인관계 설계</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">시험 시작시간</th>
+                    <td></td>
+                    <th scope="row">시험 종료시간</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">자격번호</th>
+                    <td colspan="3">자격번호</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+
+      </div>
+    </div>
+    <script>
+      document.querySelector('#modalOpenButton').addEventListener('click', () => {
+        commonUI.modal('#modalTemplate', '#modalOpenButton');
+      });
+    </script>
+  </body>
+</html>

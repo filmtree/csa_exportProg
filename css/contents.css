@@ -165,6 +165,14 @@
 	padding: 0;
 }
 
+.opt-name-registration .form-group.my-certificate {
+	
+}
+
+.opt-name-registration .form-group.my-certificate select {
+	width: calc(100% - 88px);
+}
+
 .forms-set .form-group {
 	margin-top: 1.6rem;
 }
@@ -243,6 +251,10 @@
 .con-table table,
 .con-table .board-wrap {
 	min-width: 90rem;
+}
+
+.con-table.response table {
+	min-width: 0;
 }
 
 .equal-list .con-table table {
@@ -626,6 +638,157 @@
 	width: 100%;
 }
 
+/* 강사정보 */
+.instructor-profile-container {
+	margin-top: 2.4rem;
+}
+
+.instructor-profile-list {
+	display: grid;
+	gap: 2.4rem;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.instructor-profile-list .instructor-profile-item {
+}
+
+.instructor-profile-card {
+	border: 1px solid #e5e5e5;
+	padding: 2.4rem;	
+}
+
+.instructor-profile-card .instructor-profile-photo {
+	width: 234px;
+	height: 312px;
+	background-color: #F9FAFB;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.instructor-profile-card .instructor-profile-photo > img {
+	width: 100%;
+}
+.instructor-profile-card .instructor-profile-name {
+	margin-top: 2.4rem;
+	font-size: 2.2rem;
+	font-weight: var(--font-Noto-bold);
+}
+.instructor-profile-card .instructor-profile-description {
+	width: 100%;
+	margin-top: 2.4rem;
+	padding-top: 2.4rem;
+	border-top : 1px solid #e5e5e5
+}
+
+.instructor-profile-card .instructor-profile-description dt {
+	font-size: 1.4rem;
+	line-height: 2.4rem;
+	color: var(--color-gray6);
+}
+
+.instructor-profile-card .instructor-profile-description dd {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	word-wrap: break-word;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-line-clamp: 1;
+	height: 26px;
+	font-size: 1.6rem;
+	font-weight: var(--font-Noto-regular);
+	line-height: 1.6;
+}
+
+.instructor-profile-card .instructor-profile-description .more-detail {
+	margin-top: 1.6rem;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.instructor-profile-card .instructor-profile-description .more-detail .button-link {
+	padding: 0;
+	height: 23px;
+}
+.instructor-profile-card .instructor-profile-description .more-detail .button-link .ic-only {
+	margin-left: .4rem;
+}
+
+.instructor-detail .modalWrap {
+	width: 1000px;
+	height: 660px;
+	max-width: unset;
+}
+
+.instructor-detail .modalWrap .modal-header {
+	height: 9.6rem;
+}
+.instructor-detail .modalWrap .modal-body {
+	height: 560px;
+	overflow: hidden;
+	padding-right: 0;
+}
+
+.instructor-detail .modal-body-inner {
+	display: flex;
+	gap: 40px;
+}
+
+.instructor-detail .modal-body-inner .detail-instructor-photo {
+	width: 39rem;
+}
+.instructor-detail .modal-body-inner .detail-instructor-photo > img {
+	width: 100%;
+}
+.detail-instructor-information {
+  width: calc(100% - 43rem);
+	overflow: auto;
+}
+
+.detail-instructor-information .detail-instructor-head {
+	padding-bottom: 2.4rem;
+	margin-right: 3.2rem;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.detail-instructor-information .detail-instructor-name {
+	font-size: 4rem;
+	font-weight: var(--font-Noto-bold);
+	line-height: 6rem;
+}
+.detail-instructor-information .detail-instructor-team {
+	margin-top: .8rem;
+	font-size: 1.6rem;
+	line-height: 1.6;
+	color: #444444;
+}
+.detail-instructor-information .detail-instructor-team span {
+	display: block;
+}
+.detail-instructor-history {
+	max-height: 37.7rem;
+	padding-right: 3.2rem;
+	overflow: auto;
+	padding-top: 2.4rem;
+}
+.detail-instructor-history ul li:not(:first-child) {
+	margin-top: 1.6rem;
+}
+.detail-instructor-history ul li h2 {
+	font-size: 1.4rem;
+	color: var(--color-gray6);
+	line-height: 24px;
+}
+.detail-instructor-history ul li p {
+	font-size: 1.6rem;
+	color: var(--color-gray1);
+	line-height: 26px;
+}
+.detail-instructor-history ul li p .quotation {
+	font-size: 1.5rem;
+	color: var(--color-gray4);
+}
 
 /* ==================================================== Break Point ==================================================== */
 
@@ -1706,6 +1869,54 @@
 	margin-top: 8rem;
 }
 
+/* 노후준비 종합진단 원하는 서비스 선택 팝업 */
+
+.diagnosing-modal {
+	width: 720px;
+}
+
+.diagnosing-wrap {
+	display: flex;
+	gap: 2.4rem;
+	width: 640px;	
+}
+
+.diagnosing-wrap .diagnosing-card {
+	display: flex;
+	width: 308px;
+	height: 342px;
+	padding: 24px 32px;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 24px;
+	flex: 1 0 0;
+	border: 1px solid #e5e5e5;
+	border-radius: 16px;
+	background: no-repeat center bottom 3.2rem;
+}
+.diagnosing-wrap .diagnosing-card:hover {
+	border: 1px solid var(--color-primary);
+}
+.diagnosing-wrap .diagnosing-card.before {
+	background-image: url("../images/ico/ic_diagnosing_01.svg");
+}
+.diagnosing-wrap .diagnosing-card.after {
+	background-image: url("../images/ico/ic_diagnosing_02.svg");
+}
+
+.diagnosing-card-title {
+	font-size: 2.2rem;
+	line-height: 32px;
+	font-weight: var(--font-Noto-bold);
+}
+
+.diagnosing-card-info {
+	font-size: 1.8rem;
+	line-height: 1.5;
+	white-space: initial;
+}
+
 /* 간단재무설계 입력폼 */
 .equal-list.form {
 }
@@ -2729,6 +2940,14 @@ input[type='number']::-webkit-inner-spin-button {
 	width: 100%;
 }
 
+.graph-box1.visible-graph {
+	display: none;
+}
+
+.graph-box1.visible-graph.active {
+	display: block;
+}
+
 .graph-box1.half {
 	aspect-ratio: auto 4/2.897;
 }
@@ -2736,6 +2955,10 @@ input[type='number']::-webkit-inner-spin-button {
 .graph-box1.full {
 	margin-top: 40px;
 	aspect-ratio: auto 2.4/1;
+}
+
+.cont-desc + .graph-box1.full {
+	margin-top: 1.6rem;
 }
 
 .graph-box1 > svg {
@@ -2798,7 +3021,11 @@ input[type='number']::-webkit-inner-spin-button {
 }
 
 .score-wrap + * {
-	margin-top: 2.4rem;
+	/* margin-top: 2.4rem; */
+}
+
+.score-wrap + .con-table-header {
+	margin-top: 1.6rem;
 }
 
 .tabContent .score-wrap:first-of-type {
@@ -3207,7 +3434,7 @@ input[type='number']::-webkit-inner-spin-button {
 	height: 20px;
 }
 .ic-only.inner-plus {
-	margin-top: -4px;
+	/* margin-top: -4px; */
 	background: url('../images/ico/ic_form_plus_w.svg') no-repeat center;
 	width: 11px;
 	height: 11px;
@@ -3558,6 +3785,86 @@ h5.cont-title + .txt-list {
 }
 .forms-set ~ .cont-desc.type3 + .form-group {
 	margin-top: 1.6rem;
+}
+
+/* 마이페이지 */
+.certificate-print-container {
+	padding:1.6rem;
+}
+
+.certificate-contents {
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
+	padding: 4rem;
+	border: 1px solid #e5e5e5;
+}
+
+.certificate-print-container .certificate-issue-number {
+	font-size: 1.8rem;
+	color: var(--color-gray4);
+}
+
+.certificate-header h1 {
+	margin-top: 2.4rem;
+	font-size: 4rem;
+	font-weight: var(--font-Noto-bold);
+	text-align: center;
+	color: var(--color-gray1);
+}
+
+.certificate-body {
+	margin-top: 4rem;
+}
+
+.certificate-body ul {
+	/* padding: 0 12rem; */
+	max-width: 51.4rem;
+	margin: 0 auto;
+}
+
+.certificate-body ul li {
+	display: flex;
+	gap:2px;
+	font-size: 2rem;
+	font-weight: var(--font-Noto-medium);
+}
+
+.certificate-body ul li ~ li {
+	margin-top: 1.6rem;
+}
+
+.certificate-body ul li .certi-index {
+	display: flex;
+	justify-content: space-between;
+	width: 86px;
+}
+
+.certificate-body ul li .certi-user-info {
+	margin-left: 4px;	
+}
+
+.certificate-body .certificate-describe {
+	text-align: center;
+	margin-top: 4rem;
+	font-size: 1.8rem;
+}
+.certificate-print-container .certificate-footer {
+	margin-top: 2.4rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2.4rem;
+}
+
+.certificate-footer .certificate-date {
+	font-size: 1.8rem;
+}
+
+.certificate-footer .certificate-chairman {
+	font-size: 2.4rem;
+	font-weight: var(--font-Noto-bold);
 }
 
 /* ==================================================== Break Point ==================================================== */
@@ -4589,6 +4896,10 @@ h5.cont-title + .txt-list {
 		width: calc(50% - 8.2rem);
 	}
 		
+	.searchbox-wrap.opt-name-registration .form-group.my-certificate select {
+		width: calc(100% - 6.8rem);
+	}
+	.searchbox-wrap.opt-name-registration .form-group.my-certificate button,
 	.searchbox-wrap.opt-name-registration .form-group:first-of-type .btn-search {
 		min-width: 6rem !important;
 	}
@@ -5108,9 +5419,6 @@ h5.cont-title + .txt-list {
 		margin-left: 4px;
 	}
 
-	.con-table-header {
-	}
-
 	.cont-title + .board-wrap {
 		margin-top: .8rem;
 	}
@@ -5517,6 +5825,12 @@ h5.cont-title + .txt-list {
 		display: none;
 	}
 
+	.diagnosing-wrap {
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
 	/* 설문조사 레이어팝업 내 참고 텍스트 */
 	.rel-txt {
 		margin-top: 24px;
@@ -5556,7 +5870,6 @@ h5.cont-title + .txt-list {
 	/* 노후준비 점수 */
 	.score-wrap {
 		margin-top: 40px;
-		margin-bottom: 24px;
 	}
 	.score {
 		display: flex;
@@ -5592,6 +5905,7 @@ h5.cont-title + .txt-list {
 	}
 	.score-desc-wrap .txt-list li .bar {
 		font-size: 14px;
+		margin-bottom: 0;
 	}
 	.score-desc-wrap .txt-list li .bar::before {
 		margin: 0 20px;

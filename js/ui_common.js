@@ -624,7 +624,7 @@ const commonUI = {
 				} else {
 					this.optIndex = 0;
 				}
-				this.selectedTab = this.tabNav_a[this.optIndex];
+				this.selectedTab = this.tabNav_a[this.optIndex];			
 			},
 			_initEvents: function () {
 				this.setSelectItem(this.selectedTab, this.optIndex);
@@ -645,9 +645,15 @@ const commonUI = {
 					el.setAttribute('tabindex', '-1')
 					if (index == num) {
 						el.classList.add(this.activeName);
+						if(el.querySelector('.visible-graph')) {
+							el.querySelector('.visible-graph').classList.add(this.activeName); // graph
+						}
 						el.setAttribute('aria-hidden', 'false');
 					} else {
 						el.classList.remove(this.activeName);
+						if(el.querySelector('.visible-graph')) {
+							el.querySelector('.visible-graph').classList.remove(this.activeName); // graph
+						}
 						el.removeAttribute('title');
 						el.setAttribute('aria-hidden', 'true');
 					}

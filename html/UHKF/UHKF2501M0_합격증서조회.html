@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  </head>
+
+  <body>
+    <div id="wrapper">
+
+      <!-- s: header -->
+      <header id="header"></header>
+      <!-- e: header -->
+
+      <!-- s: Loaction Information Link -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-nav">
+          <ol class="breadcrumb-location">
+            <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+            <li class="breadcrumb-depth dep1">
+              <button type="button" class="breadcrumb-trigger">마이페이지</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                <li><a href="#none" target="_self">재무진단</a></li>
+                <li><a href="#none" target="_self">노후준비정보</a></li>
+                <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                <li class="current"><a href="#none" target="_self">마이페이지</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger">CSA시험 조회</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">내 연금정보</a></li>
+                <li><a href="#none" target="_self">종합재무설계내역 조회</a></li>
+                <li><a href="#none" target="_self">종합진단 내역 조회</a></li>
+                <li><a href="#none" target="_self">교육신청 내역 조회</a></li>
+                <li><a href="#none" target="_self">CSA관련 조회</a></li>
+                <li><a href="#none" target="_self">CSA교육 조회</a></li>
+                <li class="current"><a href="#none" target="_self">CSA시험 조회</a></li>
+                <li><a href="#none" target="_self">나의 자격증 등록 조회</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger current">CSA 합격증서 조회</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">나의 CSA 내역 조회</a></li>
+                <li><a href="#none" target="_self">CSA 교육 수료내역 조회</a></li>
+                <li><a href="#none" target="_self">CSA 시험 수험표 출력</a></li>
+                <li><a href="#none" target="_self">CSA 시험 결과보기</a></li>
+                <li class="current"><a href="#none" target="_self">CSA 합격증서 조회</a></li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <!-- e: Loaction Information Link -->
+      
+      <!-- s: Main -->
+      <main id="conatiner" class="mypage">
+
+        <!--s: Page Title-->
+        <div class="page-header">
+          <div class="page-title">
+            <a href="#" class="ic-only back">뒤로가기</a>
+            <h2>CSA 합격증서 조회</h2>
+          </div>
+        </div>
+        <!--e: Page Title-->
+        
+        <!--s: Contents -->
+        <div class="content-wrap inquiry-acceptance-certificate">
+
+          <div class="cont-head">
+            <h4 class="cont-title">CSA 합격증서 조회</h4>
+            <p class="cont-desc">
+              본인의 취득한 CSA 자격증의 합격증서를 발급받을 수 있습니다.<br>
+              아래 ‘나의 CSA 자격증’에서 출력할 합격증서를 고른 뒤 ‘보기’를 눌러주세요.
+            </p>
+          </div>
+          <ul class="txt-list dot small fz14 gray mg-contents">
+            <li>다만, 로그인하신 정보와 성명, 주민번호가 불일치한 경우 조회가 불가능합니다.</li>
+          </ul>
+
+          <div class="searchbox-wrap opt-name-registration">
+            <div class="searchbox">
+              <div class="form-group">
+                <label class="search-label" for="searchName">성명</label>
+                <input type="text" placeholder="" class="inp-content flex-1" id="searchName" />
+                <label class="search-label" id="registNumber">주민등록번호</label>
+                <input type="text" placeholder="" class="inp-content flex-1" aria-labelledby="registNumber" aria-label="앞번호 6자리" />
+                <span class="inp-split" aria-hidden="true">-</span>
+                <input type="text" placeholder="" class="inp-content flex-1" aria-labelledby="registNumber" aria-label="뒷번호 7자리" />
+                <button type="button" class="button-primary btn-search min-w80px">조회</button>                
+              </div>
+              <div class="form-group my-certificate">
+                <select class="inp-select" aria-label="자격증 리스트">
+                  <option value="0">나의 CSA 자격증</option>
+                </select>
+                <button type="button" class="button-fourth min-w80px" onclick="openReportPop();">보기</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--s: Contents -->
+
+        <!-- s: Common UI - Survey -->
+        <div class="page-satisfaction"></div>
+        <!-- e: Common UI - Survey -->
+
+      </main>
+      <!-- e: Main -->
+
+      <!-- s: footer -->
+      <footer id="footer"></footer>
+      <!-- e: footer -->
+
+    </div>
+    <script>
+      // Window Popup open
+      function openReportPop() {
+        var printPopup = window.open("UHKF2502P0_ printpop_CSA합격증서출력.html", "_blank", "width=800px, height=786px, scrollbars=yes, resizable=no");
+      }
+    </script>
+  </body>
+</html>

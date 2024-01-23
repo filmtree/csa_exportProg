@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Title</title>
+
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <button type="button" class="button-primary" id="modalOpenButton">Open</button>
+
+    <div class="modal full dim" id="modalTemplate">
+      <div class="modalWrap wide">
+
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">대인관계 실천과제</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner h720px">
+            <div class="con-table all-center">
+              <table>
+                <caption></caption>
+                <colgroup>
+                  <col style="width: 6%;"/>
+                  <col style="width: 15%;"/>
+                  <col style="width: auto"/>
+                  <col style="width: 16%;"/>
+                  <col style="width: 16%;"/>
+                  <col style="width: 12%;"/>
+                  <col style="width: 12%;"/>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">선택</th>
+                    <th scope="col">세부영역</th>
+                    <th scope="col">현상태</th>
+                    <th scope="col">실천계획</th>
+                    <th scope="col">실행여부</th>
+                    <th scope="col">과제선정일자</th>
+                    <th scope="col">실행일자</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="2">
+                      <div class="form-group ac">
+                        <label class="inp-checkbox leaf">
+                          <input type="checkbox" name="checkbox1" checked="checked" aria-label="선택" />
+                        </label>
+                      </div>
+                    </td>
+                    <td rowspan="2">예상 노후생활비</td>
+                    <td>적정 177만원 보다 73만원 많음</td>
+                    <td rowspan="2">현 상태 유지</td>
+                    <td rowspan="2">
+                      <select class="min-w100px" aria-label="실행여부">
+                        <option value="0">미실행</option>
+                        <option value="1">실행</option>
+                      </select>
+                    </td>
+                    <td rowspan="2">2023-03-13</td>
+                    <td rowspan="2">2023-03-13</td>
+                  </tr>
+                  <tr>
+                    <td>여유</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <div class="form-group ac">
+                        <label class="inp-checkbox leaf">
+                          <input type="checkbox" name="checkbox1" checked="checked" aria-label="선택" />
+                        </label>
+                      </div>
+                    </td>
+                    <td rowspan="2">예상 노후생활비</td>
+                    <td>적정 177만원 보다 73만원 많음</td>
+                    <td rowspan="2">현 상태 유지</td>
+                    <td rowspan="2">
+                      <select class="min-w100px" aria-label="실행여부">
+                        <option value="0">미실행</option>
+                        <option value="1">실행</option>
+                      </select>
+                    </td>
+                    <td rowspan="2">2023-03-13</td>
+                    <td rowspan="2">2023-03-13</td>
+                  </tr>
+                  <tr>
+                    <td>여유</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <div class="form-group ac">
+                        <label class="inp-checkbox leaf">
+                          <input type="checkbox" name="checkbox1" checked="checked" aria-label="선택" />
+                        </label>
+                      </div>
+                    </td>
+                    <td rowspan="2">예상 노후생활비</td>
+                    <td>적정 177만원 보다 73만원 많음</td>
+                    <td rowspan="2">현 상태 유지</td>
+                    <td rowspan="2">
+                      <select class="min-w100px" aria-label="실행여부">
+                        <option value="0">미실행</option>
+                        <option value="1">실행</option>
+                      </select>
+                    </td>
+                    <td rowspan="2">2023-03-13</td>
+                    <td rowspan="2">2023-03-13</td>
+                  </tr>
+                  <tr>
+                    <td>여유</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <div class="form-group ac">
+                        <label class="inp-checkbox leaf">
+                          <input type="checkbox" name="checkbox1" checked="checked" aria-label="선택" />
+                        </label>
+                      </div>
+                    </td>
+                    <td rowspan="2">예상 노후생활비</td>
+                    <td>적정 177만원 보다 73만원 많음</td>
+                    <td rowspan="2">현 상태 유지</td>
+                    <td rowspan="2">
+                      <select class="min-w100px" aria-label="실행여부">
+                        <option value="0">미실행</option>
+                        <option value="1">실행</option>
+                      </select>
+                    </td>
+                    <td rowspan="2">2023-03-13</td>
+                    <td rowspan="2">2023-03-13</td>
+                  </tr>
+                  <tr>
+                    <td>여유</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <div class="form-group ac">
+                        <label class="inp-checkbox leaf">
+                          <input type="checkbox" name="checkbox1" checked="checked" aria-label="선택" />
+                        </label>
+                      </div>
+                    </td>
+                    <td rowspan="2">예상 노후생활비</td>
+                    <td>적정 177만원 보다 73만원 많음</td>
+                    <td rowspan="2">현 상태 유지</td>
+                    <td rowspan="2">
+                      <select class="min-w100px" aria-label="실행여부">
+                        <option value="0">미실행</option>
+                        <option value="1">실행</option>
+                      </select>
+                    </td>
+                    <td rowspan="2">2023-03-13</td>
+                    <td rowspan="2">2023-03-13</td>
+                  </tr>
+                  <tr>
+                    <td>여유</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+
+        <!-- s: Modal Footer -->
+        <div class="modal-footer">
+          <div class="btn-group">
+            <button type="button" class="button-tertiary -lg">삭제</button>
+            <button type="button" class="button-primary -lg">수정</button>
+          </div>
+        </div>
+        <!-- e: Modal Footer -->
+
+      </div>
+    </div>
+    <script>
+      document.querySelector('#modalOpenButton').addEventListener('click', () => {
+        commonUI.modal('#modalTemplate', '#modalOpenButton');
+      });
+    </script>
+  </body>
+</html>

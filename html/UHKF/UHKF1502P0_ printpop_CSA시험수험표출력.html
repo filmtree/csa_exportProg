@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <!-- 프린트 윈도우 파업 -->
+    <div class="winPopup">
+      <div class="modalWrap">
+        <!-- s: Popup Header -->
+        <div class="modal-header printNone">
+          <div class="modal-title">
+            <h3 class="cont-title">CSA 시험 수험표 출력</h3>
+          </div>
+          <button class="btn-close printNone" onclick="winPopClose();">윈도우창닫기</button>
+        </div>
+        <!-- e: Popup Header -->
+        <!-- s: Contents -->
+        <div class="modal-body">
+          <!-- s: Contents Header -->
+          <div class="cont-head">
+            <h4 class="blind">CSA 시험 수험표</h4>
+          </div>
+          <!-- e: Contents Header -->
+
+          <!-- s: Contents Body -->
+          <section>
+            <div class="con-table-header">
+              <h4 class="cont-title">2023 노후준비 상담사(CSA) 자격시험<span class="subtxt">(수험표)</span></h4>
+            </div>
+            <div class="con-table response mg-contents all-center">
+              <table>
+                <caption>성명, 생년월일, 수험번호, 시험명, 자격구분, 시험장소, 시험일, 시험 시작시간, 시험 종료시간으로 구성된 표.</caption>
+                <colgroup>
+                  <col style="width: 20%;"/>
+                  <col style="width: 30%;"/>
+                  <col style="width: 20%;"/>
+                  <col style="width: 30%;"/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">성명</th>
+                    <td colspan="3">성명</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">생년월일</th>
+                    <td>생년월일</td>
+                    <th scope="row">수험번호</th>
+                    <td>수험번호</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">시험명</th>
+                    <td>시험명</td>
+                    <th scope="row">자격구분</th>
+                    <td>자격구분</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">시험장소</th>
+                    <td>시험장소</td>
+                    <th scope="row">시험일</th>
+                    <td>시험일</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">시험 시작시간</th>
+                    <td>시작시간</td>
+                    <th scope="row">시험 종료시간</th>
+                    <td>종료시간</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <!-- e: Contents Body -->
+
+          <ul class="txt-list dot small fz14 gray mg-paragraph">
+            <li>신분증, 컴퓨터용 수성사인펜 등 준비물 확인</li>
+            <li>응시자는 고사실에 위치한 수험번호별 지정된 고사실 및 자리를 확인 후 입실</li>
+            <li>당일 응시자가 많은 경우 차량 주차가 어려워 대중교통 이용 요망</li>
+            <li>시험 시작 30분 전까지 입실 요망</li>
+            <li>건물 내 및 주변 흡연 불가, 음식물 등 고사장 반입 금지</li>
+            <li>자세한 사항은 시험 공고 확인 요청</li>
+          </ul>
+
+        </div>
+        <!-- e: Contents -->
+        <!-- s: Footer -->
+        <div class="modal-footer">
+          <div class="btn-group full">
+            <a href="#none" type="button" class="button-primary -lg" onclick="printPage()">인쇄하기</a>
+          </div>
+        </div>
+        <!-- e: Footer -->
+      </div>
+    </div>
+
+    <script>
+
+      // Window Popup Close
+      function winPopClose() {
+        self.opener = self;
+        window.close();
+      }
+
+      // Print
+      function printPage() {
+        window.print();
+      }
+    </script>
+  </body>
+</html>

@@ -54,11 +54,66 @@
 		padding: 5px;
 		height: auto;
 	}
-
+	.winPopup .modalWrap {
+		max-width: initial;
+		box-shadow: none;
+		border-top:0;
+	}
   .modalWrap {
     box-shadow: none;
   }
+	.certification {
+		height: 260mm;
+	}
+	.certification .modalWrap {
+		border-top: 0;
+		height: 100%;
+	}
+	.certificate-print-container {
+		padding: 0;
+		height: 100%;
+	}
+	.certification .modal-body {
+		padding:0;
+		height: 100%;
 
+	}
+	.certificate-contents {
+		height: 100%;
+		padding: 0;
+		border: 0;
+	}
+	.certificate-contents .certificate-header {
+		text-align: center;
+	}
+	.certificate-contents .certificate-header h1 {
+		font-size: 6rem;
+		letter-spacing: .5cm;
+		margin-left: .5cm;
+	}
+	.certificate-contents .certificate-header {
+		margin-top: 1.5cm;
+	}
+	.certificate-contents .certificate-body {
+		margin-top: 2cm;
+	}
+	.certificate-contents .certificate-body ul {
+		margin-left: 3cm;
+	}
+	.certificate-contents .certificate-describe {
+		margin-top: 3.5cm;
+		font-size: 1.6rem;
+	}
+	.certificate-contents .certificate-footer {
+		margin-top: 3.5cm;
+	}
+	.certificate-contents .certificate-footer .certificate-date {
+		font-size: 2rem;
+	}
+	.certificate-contents .certificate-footer .certificate-chairman {
+		font-size: 3rem;
+	}
+	
 	* {
 		-webkit-print-color-adjust: exact;
 		print-color-adjust: exact;
@@ -71,7 +126,6 @@
 	@page {
 		size: A4;
 		margin: .8cm 1.5cm;
-		marks: cross;	
 	}
 
 	

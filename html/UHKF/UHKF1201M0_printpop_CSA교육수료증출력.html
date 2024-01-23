@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <!-- 프린트 윈도우 파업 -->
+    <div class="winPopup certification">
+      <div class="modalWrap">
+        <!-- s: Popup Header -->
+        <div class="modal-header printNone">
+          <div class="modal-title">
+            <h3 class="cont-title">CSA 교육 수료증 출력</h3>
+          </div>
+          <button class="btn-close printNone" onclick="winPopClose();">윈도우창닫기</button>
+        </div>
+        <!-- e: Popup Header -->
+        <!-- s: Contents -->
+        <div class="modal-body">
+          <!-- s: Contents Header -->
+          <div class="cont-head">
+            <h4 class="blind">CSA 교육 수료증</h4>
+          </div>
+          <!-- e: Contents Header -->
+
+          <!-- s: Contents Body -->
+          <section class="certificate-print-container">
+            <div class="certificate-contents">
+              <div class="certificate-issue-number">[발급번호 제 CSA-2023-0000000000호]</div>
+              <div class="certificate-header">
+                <h1>수료증</h1>
+              </div>
+              <div class="certificate-body">
+                <ul>
+                  <li>
+                    <div class="certi-index"><span>성</span><span>명</span></div>
+                    <span class="certi-colon">:</span>
+                    <div class="certi-user-info">홍 길 동</div>
+                  </li>
+                  <li>
+                    <div class="certi-index">생 년 월 일</div>
+                    <span class="certi-colon">:</span>
+                    <div class="certi-user-info">0000. 00. 00</div>
+                  </li>
+                  <li>
+                    <div class="certi-index">교 육 과 정</div>
+                    <span class="certi-colon">:</span>
+                    <div class="certi-user-info">교육과정 교육과정 교육과정</div>
+                  </li>
+                  <li>
+                    <div class="certi-index">교 육 기 간</div>
+                    <span class="certi-colon">:</span>
+                    <div class="certi-user-info">교육기간</div>
+                  </li>
+                  <li>
+                    <div class="certi-index"><span>수</span> <span>료</span> <span>일</span></div>
+                    <span class="certi-colon">:</span>
+                    <div class="certi-user-info">0000. 00. 00</div>
+                  </li>
+                </ul>
+                <p class="certificate-describe">
+                  위 사람은 <strong class="fw-medium">노후준비지원법</strong> 제11조 및 같은 법 시행규칙 제 6조에 따라<br>
+                  국민연금공단에서 시행하는 상기 교육 과정을 수료하였으므로 이 증서를 드립니다.
+                </p>
+              </div>
+              <div class="certificate-footer">
+                <div class="certificate-date">0000년 00월 00일</div>
+                <div class="certificate-chairman">국민연금공단 이사장</div>
+              </div>
+            </div>
+          </section>
+          <!-- e: Contents Body -->
+        </div>
+        <!-- e: Contents -->
+        <!-- s: Footer -->
+        <div class="modal-footer">
+          <div class="btn-group full">
+            <a href="#none" type="button" class="button-primary -lg" onclick="printPage()">인쇄하기</a>
+          </div>
+        </div>
+        <!-- e: Footer -->
+      </div>
+    </div>
+
+    <script>
+
+      // Window Popup Close
+      function winPopClose() {
+        self.opener = self;
+        window.close();
+      }
+
+      // Print
+      function printPage() {
+        window.print();
+      }
+    </script>
+  </body>
+</html>
