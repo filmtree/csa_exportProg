@@ -195,7 +195,7 @@
               <div class="cont-bottom printNone">
                 <div class="btn-group">
                   <button type="button" class="button-tertiary -lg">이전</button>
-                  <button type="button" class="button-primary -lg btn-report-print" onclick="window.print();">보고서 출력</button>
+                  <button type="button" class="button-primary -lg btn-report-print" onclick="openReportPop();">보고서 출력</button>
                 </div>
               </div>
             </div>
@@ -228,5 +228,10 @@
       <!-- //footer -->
     </div>
     <!-- //wrapper -->
+    <script>
+      function openReportPop() {
+        var printPopup = window.open("UHKD4502P0_결혼자금결과출력.html", "winow", "width=800px, height=720px, scrollbars=yes, resizable=no");
+      }
+    </script>
   </body>
 </html>

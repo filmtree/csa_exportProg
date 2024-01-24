@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <!-- 프린트 윈도우 팝업 -->
+    <div class="winPopup">
+      <div class="modalWrap">
+        <!-- s: Popup Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">결혼자금마련 결과보기</h3>
+          </div>
+          <button class="btn-close printNone" onclick="winPopClose();">윈도우창닫기</button>
+        </div>
+        <!-- e: Popup Header -->
+
+        <!-- s: Contents -->
+        <div class="modal-body">
+
+          <!-- s: Contents Body -->
+          <div class="cont-head">
+            <h4 class="cont-title dot">결혼준비자금 진단결과</h4>
+          </div>
+          <div class="color-box">
+            <dl class="result-type-green">
+              <dt>충분</dt>
+              <dd>고객님의 결혼준비자금이 [충분]진단이 나왔습니다.</dd>
+            </dl>
+          </div>
+          <ul class="txt-list dot fs17">
+            <li>
+              결혼시점에서 <span class="fc-primary">필요자금은 11,717만원</span>이 될 것입니다.<br />
+              하지만, 준비될 결혼자금은 51,192만원이므로 <span class="fc-primary">39,475만원의 잉여자금</span> 이 발생합니다.<br />
+              현재 상태를 유지하셔도 결혼자금에 무리가 없습니다.
+            </li>
+            <li>
+              제안된 입력 값을 바탕으로 산정되었기 때문에 현재 재무상황을 직접적으로 반영하지 않을 수 있습니다.<br />
+              정밀한 진단은 CSA컨설턴트와 상담하시길 바랍니다.
+            </li>
+          </ul>
+          <div class="cont-head mg-boxtobox">
+            <h4 class="cont-title">과부족 지급현황</h4>
+          </div>
+          <div class="graph-box1 full">
+            <span>그래프 영역</span>
+          </div>
+          <div class="cont-head mg-boxtobox">
+            <h4 class="cont-title">준비자금현황</h4>
+          </div>
+          <div class="graph-box1 full">
+            <span>그래프 영역</span>
+          </div>
+          <div class="con-table-header right mg-boxtobox">
+            <span class="txt-helper">(단위 : 만원)</span>
+          </div>
+          <div class="con-table all-center">
+            <table summary="구분, 금액, 비중 (필요자금, 준비자금, 노후잉여자금)에 대한 내용이 나열된 표">
+              <caption>
+                결혼준비자금 진단 결과 표
+              </caption>
+              <colgroup>
+                <col width="25%" />
+                <col width="25%" />
+                <col width="25%" />
+                <col width="25%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">구분</th>
+                  <th scope="col">금액</th>
+                  <th scope="col">비중</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" colspan="2">필요자금</th>
+                  <td>11,717</td>
+                  <td>100.0%</td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="4" class="border">준비자금</th>
+                  <th scope="row">준비된 자산</th>
+                  <td>13,373</td>
+                  <td>114.0%</td>
+                </tr>
+                <tr>
+                  <th scope="row">저축금액</th>
+                  <td>32,819</td>
+                  <td>280.0%</td>
+                </tr>
+                <tr>
+                  <th scope="row">대출자금</th>
+                  <td>5,000</td>
+                  <td>43.0%</td>
+                </tr>
+                <tr class="color-point">
+                  <th scope="row">소계</th>
+                  <td class="bg fc-base">51,192</td>
+                  <td class="bg fc-base">437.0%</td>
+                </tr>
+                <tr class="mediumbold">
+                  <th scope="row" colspan="2">과부족자금(필요자금-준비자금)</th>
+                  <td class="bg">잉여자금 39,475</td>
+                  <td class="bg">337.0%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- e: Contents Body -->
+        </div>
+        <!-- e: Contents -->
+        <!-- s: Footer -->
+        <div class="modal-footer">
+          <div class="btn-group full">
+            <a href="#none" type="button" class="button-primary -lg" onclick="printPage()">인쇄하기</a>
+          </div>
+        </div>
+        <!-- e: Footer -->
+      </div>
+    </div>
+
+    <script>
+      // Window Popup open
+
+
+      // Window Popup Close
+      function winPopClose() {
+        self.opener = self;
+        window.close();
+      }
+
+      // Print
+      function printPage() {
+        window.print();
+      }
+    </script>
+  </body>
+</html>
