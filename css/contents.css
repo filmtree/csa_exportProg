@@ -3867,6 +3867,80 @@ h5.cont-title + .txt-list {
 	font-weight: var(--font-Noto-bold);
 }
 
+/* Footer Popup */
+.conditions-use-csa .conditions-use-article:not(:first-child) {
+	margin-top: 5.6rem;
+}
+.conditions-use-csa .condition-use-section {
+	margin-top: 4rem;
+}
+.conditions-use-csa .condition-use-section h5 {
+	font-size: 1.8rem;
+	font-weight: var(--font-Noto-bold);
+	line-height: 1.5;
+	color: #222222;
+}
+.conditions-use-csa .use-main-text {
+	margin-top: 1.6rem;
+	font-size: 1.6rem;
+	color: #444444;
+}
+
+.conditions-use-csa .use-detail-text {
+	font-size: 1.5rem;
+	line-height: 1.6;
+	color: #444444;
+}
+
+.conditions-use-csa .use-main-list {
+	margin-top: 1.6rem;
+}
+
+.conditions-use-csa .use-main-list ol {
+	margin-top: .4rem;
+	padding-left: 1.4rem;
+}
+
+.conditions-use-csa .use-main-list li {
+	margin-top: 1.6rem;
+	line-height: 26px;
+	margin-top: .4rem;
+	color: #444444;
+}
+
+.conditions-use-csa ol:not(.use-main-list) li,
+.conditions-use-csa .use-main-list li li {
+	font: 1.5rem;
+	list-style-type: decimal;	
+	line-height: 1.6;
+}
+
+.conditions-use-csa .use-main-text + ol {
+	padding-left: 4rem;
+}
+
+.conditions-use-csa .use-main-list > li {
+	position: relative;
+	padding-left: 2.6rem;
+}
+
+.conditions-use-csa .use-main-list > li::before {
+	position: absolute;
+	top: 4px;
+	left: 0;
+	border: 1px solid #444444;
+	border-radius: 50%;
+	width: 2rem;
+	height: 2rem;
+	content: attr(data-list);
+	font-weight: var(--font-Noto-medium);
+	line-height: 1.2;
+	text-align: center;
+	font-size: 15px;
+	text-indent: -1px;
+	letter-spacing: -1px;
+}
+
 /* ==================================================== Break Point ==================================================== */
 
 @media screen and (max-width: 1079px) {
@@ -4171,6 +4245,46 @@ h5.cont-title + .txt-list {
 		border-width: 2px;
 		color: var(--color-gray2);
 	}
+
+
+	.modal-tab .main-tab > .tabNav {
+		position: relative;
+		margin: 0;
+		flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 0 1.6rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    white-space: nowrap;
+	}
+
+	.modal-tab .main-tab > .tabNav::before {
+    position: absolute;
+    top: 4.7rem;
+    left: 0;
+    background: var(--ui-colr2);
+    width: 100%;
+    height: 1px;
+    content: '';
+	}
+	.modal-tab .main-tab > .tabNav > li {
+		margin-right: 2.4rem;
+	}
+	.modal-tab .main-tab > .tabNav > li:after {
+		content:none;
+	}
+	.modal-tab .main-tab > ul > li > a {
+		padding: 1.2rem 0;
+    height: 4.8rem;
+    color: var(--color-gray4);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.6;
+	}
+	.modal-tab .tab-innerdouble {
+		padding: 0 1.6rem;
+	}
+
 	.counsel.education .edu-personal-list tbody tr {
 		position: relative;
 		padding-bottom: 5.6rem;
@@ -4678,7 +4792,7 @@ h5.cont-title + .txt-list {
 		width: 16px;
 		height: 16px;
 	}
-	
+
 	.diagnosing-wrap {
 		display: flex;
 		width: 100%;

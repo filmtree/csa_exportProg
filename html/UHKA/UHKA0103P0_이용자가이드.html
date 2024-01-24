@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>이용자가이드</title>
+
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <button type="button" class="button-primary" id="modalOpenButton">Open</button>
+
+    <div class="modal full dim" id="modalTemplate" style="display: block">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">이용자 가이드</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body modal-tab">
+          <!-- <div class="modal-body-inner h720px">
+          </div> -->
+
+          <!-- ===== s: Tab Depth1 ===== -->
+
+          <div class="tabWrap t-depth-1 main-tab">
+            <ul class="tabNav">
+              <li><a href="#" id="tabNav1" role="tab">Tab1</a></li>
+              <li><a href="#" id="tabNav2" role="tab">Tab2</a></li>
+            </ul>
+            <!-- 시뮬레이션 -->
+            <div class="tabContent" role="tabpanel" aria-labelledby="tabNav1">
+
+              <!-- ===== s: Tab Depth2 ===== -->
+
+              <div class="t-depth-2 tab-total">
+                <ul class="tabNav">
+                  <li><a href="#" id="tabInNav1" role="tab">Tab In 1</a></li>
+                  <li><a href="#" id="tabInNav2" role="tab">Tab In 2</a></li>
+                </ul>
+                <div class="tabContent" role="tabpanel" aria-labelledby="tabInNav1">
+
+                  <!-- ===== s: Tab Depth3 ===== -->
+
+                  <div class="tab-innerdouble top">
+                    <div class="t-depth-3 tab-base">
+                      <ul class="innerTab double-tab">
+                        <li><a href="#tabNav2-2-1" id="tabInSubNav1" role="tab">Tab In Sub 1</a></li>
+                        <li><a href="#tabNav2-2-2" id="tabInSubNav2" role="tab">Tab In Sub 2</a></li>
+                      </ul>
+                      <div class="double-contents" role="tabpanel" aria-labelledby="tabInSubNav1">Tab in Tab 1</div>
+                      <div class="double-contents" role="tabpanel" aria-labelledby="tabInSubNav2">Tab in Tab 2</div>
+                    </div>
+                  </div>
+
+                  <!-- ===== e: Tab Depth3 ===== -->
+
+                </div>
+                <div class="tabContent" role="tabpanel" aria-labelledby="tabInNav2">Tab2</div>
+              </div>
+
+              <!-- ===== e: Tab Depth2 =====-->
+
+            </div>
+            <div class="tabContent" role="tabpanel" aria-labelledby="tabNav2">
+              Tab Depth 1 - 2
+            </div>
+          </div>
+
+          <!-- ===== e: Tab Depth1 ===== -->
+
+        </div>
+        <!-- e: Modal Contents -->
+
+        <!-- s: Modal Footer -->
+        <div class="modal-footer">
+          <div class="btn-group">
+            <button type="button" class="button-primary -lg">Button</button>
+          </div>
+        </div>
+        <!-- e: Modal Footer -->
+      </div>
+    </div>
+    <script>
+      commonUI.tabInnerNav(".t-depth-1", 1);
+      commonUI.tabInnerNav(".t-depth-2", 1);
+      commonUI.tabInnerNav(".t-depth-3", 1);
+
+      document.querySelector("#modalOpenButton").addEventListener("click", () => {
+        commonUI.modal("#modalTemplate", "#modalOpenButton");
+      });
+    </script>
+  </body>
+</html>
