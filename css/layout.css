@@ -1976,7 +1976,7 @@ input.useDatepicker {
 		font-size: 1.8rem;
 	}
 
-	.modalWrap .modal-body {
+	.modalWrap:has(.modal-footer) .modal-body {
 		height: calc(100% - 5.9rem - 5.4rem);
 		padding: 0 1.6rem 1.6rem;
 	}

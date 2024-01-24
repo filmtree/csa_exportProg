@@ -49,6 +49,11 @@
 		padding: 0 !important;
 	}
 
+	.con-table .board-wrap,
+	.con-table table {
+		min-width: 0 !important;
+	}
+
 	.con-table th,
 	.con-table td {
 		padding: 5px;
@@ -113,21 +118,27 @@
 	.certificate-contents .certificate-footer .certificate-chairman {
 		font-size: 3rem;
 	}
+
 	
 	* {
 		-webkit-print-color-adjust: exact;
 		print-color-adjust: exact;
 	}
 	
-	.page-break {
-    page-break-before: always;
-  }
 
 	@page {
 		size: A4;
+		margin: 1.5cm 1.5cm;
+	}
+
+	@page :first {
 		margin: .8cm 1.5cm;
 	}
 
+
+	.page-break {
+		break-before: page;
+	}
 	
 
 }

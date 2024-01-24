@@ -1725,6 +1725,9 @@ legend,
 .min-w1000px {
 	min-width: 100rem !important;
 }
+.min-w1100px {
+	min-width: 110rem !important;
+}
 .max-w600px {
 	max-width: 600px !important;
 }

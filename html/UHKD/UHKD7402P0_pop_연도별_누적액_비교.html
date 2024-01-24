@@ -23,11 +23,11 @@
     <button type="button" class="button-primary" id="modalOpenButton">Open</button>
 
     <div class="modal full dim" id="modalTemplate">
-      <div class="modalWrap h720px">
+      <div class="modalWrap">
         <!-- s: Modal Header -->
         <div class="modal-header">
           <div class="modal-title">
-            <h3 class="cont-title">연금정보제공 기관(총 85개소)</h3>
+            <h3 class="cont-title">연도별 누적액 비교</h3>
           </div>
           <button class="btn-close">모달창닫기</button>
         </div>
@@ -36,43 +36,54 @@
         <!-- s: Modal Contents -->
         <div class="modal-body">
           <div class="modal-body-inner">
-            <div class="con-table">
+            <div class="con-table all-right">
               <table>
                 <caption>은행, 증권, 생명보험, 손해보험, 기타 연금사업자의 기관명으로 구성된 표.</caption>
                 <colgroup>
-                  <col style="width: 25%" />
-                  <col style="width: auto" />
+                  <col style="width: 16%;" />
+                  <col style="width: 28%;" />
+                  <col style="width: 28%;" />
+                  <col style="width: 28%;" />
                 </colgroup>
                 <thead>
                   <tr>
-                    <th scope="col">구분</th>
-                    <th scope="col">기관명</th>
+                    <th scope="col">연도</th>
+                    <th scope="col">수정전 현재가치(A)</th>
+                    <th scope="col">수정후 현재가치(B)</th>
+                    <th scope="col">증감(B-A)</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th>은행</th>
-                    <td>경남은행, 광주은행, 대구은행, 부산은행, 수협은행, 신한은행, 우리은행, 전북은행, 제주은행, 한국씨티은행, IBK기업은행, KB국민은행, KDB산업은행, KEB하나은행(구 외환은행, 하나은행), NH농협은행, SC제일은행(16개소)</td>
+                    <td class="ac">2033년</td>
+                    <td>0원</td>
+                    <td>원</td>
+                    <td>0원</td>
                   </tr>
                   <tr>
-                    <th>증권</th>
-                    <td>골든브릿지투자증권, 교보증권, 대신증권, 동부증권, 리딩투자증권, 메리츠종금증권, 미래에셋대우증권, 삼성증권, 신영증권, 신한금융투자, 유안타증권, 유진투자증권, 이베스트투자증권, 케이프투자증권(구 LIG투자증권), 키움증권, 펀드온라인코리아, 하나금융투자, 하이투자증권, 한국투자증권, 한양증권, 한화투자증권, 흥국증권, BNK투자증권, HMC투자증권, IBK투자증권, KB증권, KTB투자증권, NH투자증권, SK증권(29개소)</td>
+                    <td class="ac">2033년</td>
+                    <td>0원</td>
+                    <td>원</td>
+                    <td>0원</td>
                   </tr>
                   <tr>
-                    <th>생명보험</th>
-                    <td>교보라이프플래닛생명, 교보생명, 동부생명, 동양생명, 라이나생명, 메트라이프생명, 미래에셋생명, 삼성생명, 신한생명, 알리안츠생명, 에이스생명, 푸르덴셜생명, 하나생명, 한화생명, 현대라이프생명, 흥국생명, AIA생명, BNP파리바카디프생명, DGB생명, IBK연금, ING생명, KB생명, KDB생명, NH농협생명, PCA생명(25개소)</td>
+                    <td class="ac">2033년</td>
+                    <td>0원</td>
+                    <td>원</td>
+                    <td>0원</td>
                   </tr>
                   <tr>
-                    <th>손해보험</th>
-                    <td>동부화재, 롯데손해보험, 메리츠화재, 삼성화재, 한화손해보험, 현대해상, 흥국화재, KB손해보험, MG손해보험, The-K손해보험(10개소)</td>
-                  </tr>
-                  <tr>
-                    <th>기타 연금사업자</th>
-                    <td>근로복지공단, 신협중앙회, 수협중앙회, 새마을금고중앙회, 우체국 우정사업본부(5개소)</td>
+                    <td class="ac">2033년</td>
+                    <td>0원</td>
+                    <td>원</td>
+                    <td>0원</td>
                   </tr>
                 </tbody>
               </table>
             </div>
+            <ul class="txt-list dot">
+              <li>향후 물가상승률을 미반영한 금액입니다.</li>
+            </ul>
           </div>
         </div>
         <!-- e: Modal Contents -->

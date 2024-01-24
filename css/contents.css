@@ -649,8 +649,9 @@
 
 .instructor-profile-list {
 	display: grid;
+	grid-template-columns: repeat(auto-fill, 282px);
 	gap: 2.4rem;
-	grid-template-columns: repeat(4, 1fr);
+	justify-content: center;
 }
 
 .instructor-profile-list .instructor-profile-item {
@@ -728,26 +729,22 @@
 .instructor-detail .modalWrap .modal-header {
 	height: 9.6rem;
 }
+
 .instructor-detail .modalWrap .modal-body {
-	height: 560px;
+	min-height: 560px;
 	overflow: hidden;
 	padding-right: 0;
 }
 
-.instructor-detail .modal-body-inner {
-	display: flex;
-	gap: 40px;
+.detail-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(39rem, auto));
+	column-gap: 4rem;
+	row-gap: 2rem;
 }
 
-.instructor-detail .modal-body-inner .detail-instructor-photo {
-	width: 39rem;
-}
-.instructor-detail .modal-body-inner .detail-instructor-photo > img {
+.instructor-detail .detail-instructor-photo > img {
 	width: 100%;
-}
-.detail-instructor-information {
-  width: calc(100% - 43rem);
-	overflow: auto;
 }
 
 .detail-instructor-information .detail-instructor-head {
@@ -1882,9 +1879,8 @@
 .diagnosing-wrap {
 	display: flex;
 	gap: 2.4rem;
-	width: 640px;	
+	width: 100%;	
 }
-
 .diagnosing-wrap .diagnosing-card {
 	display: flex;
 	width: 308px;
@@ -4682,6 +4678,20 @@ h5.cont-title + .txt-list {
 		width: 16px;
 		height: 16px;
 	}
+	
+	.diagnosing-wrap {
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+		padding: 4rem 3.2rem;
+	}
+
+	/* 강사정보 */
+	.detail-container {
+		padding: 3.2rem 0;
+
+	}
+
 	/*--------- E: [노후준비종합진단] ---------*/
 
 	/* 재무진단 - 국민연금 알아보기 Mobile */
@@ -5833,6 +5843,7 @@ h5.cont-title + .txt-list {
 		display: flex;
 		width: 100%;
 		flex-wrap: wrap;
+		padding: 4rem 3.2rem;
 	}
 
 	/* 설문조사 레이어팝업 내 참고 텍스트 */
@@ -6315,6 +6326,31 @@ h5.cont-title + .txt-list {
 	}
 	.content-wrap .tabWrap.csa-training-guide-tab .tabContent.csa-training-guide2 > ul > li {
 		margin-top: 2.4rem;
+	}
+
+	/* 강사정보 */
+	.instructor-detail .modal-body {
+		height: calc(100vh - 5.6rem) !important;
+	}
+	.detail-instructor-information {
+		margin-top: -17.5rem;
+	}
+	.detail-container {
+		padding: 3.2rem 0;
+	}
+	.detail-instructor-photo {
+		padding: 0 3.2rem;
+	}
+	.detail-instructor-head {
+		padding: 1.6rem 0 1.6rem 3.2rem !important;
+		background-color: rgba(255,255,255,.7);
+	}
+	.detail-instructor-head .detail-instructor-name {
+		font-size: 3.2rem;
+	}
+	.detail-instructor-history {
+		padding-left: 3.2rem;
+		max-height: none;
 	}
 
 } /* 767px */

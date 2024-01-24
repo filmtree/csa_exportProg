@@ -22,7 +22,7 @@
         <!-- s: Popup Header -->
         <div class="modal-header">
           <div class="modal-title">
-            <h3 class="cont-title">결혼자금마련 결과보기</h3>
+            <h3 class="cont-title">주택자금마련 결과보기</h3>
           </div>
           <button class="btn-close printNone" onclick="winPopClose();">윈도우창닫기</button>
         </div>
@@ -33,20 +33,16 @@
 
           <!-- s: Contents Body -->
           <div class="cont-head">
-            <h4 class="cont-title dot">결혼준비자금 진단결과</h4>
+            <h4 class="cont-title dot">주택준비자금 진단결과</h4>
           </div>
           <div class="color-box">
             <dl class="result-type-green">
               <dt>충분</dt>
-              <dd>고객님의 결혼준비자금이 [충분]진단이 나왔습니다.</dd>
+              <dd>고객님의 주택준비자금이 [충분]진단이 나왔습니다.</dd>
             </dl>
           </div>
           <ul class="txt-list dot fs17">
-            <li>
-              결혼시점에서 <span class="fc-primary">필요자금은 11,717만원</span>이 될 것입니다.<br />
-              하지만, 준비될 결혼자금은 51,192만원이므로 <span class="fc-primary">39,475만원의 잉여자금</span> 이 발생합니다.<br />
-              현재 상태를 유지하셔도 결혼자금에 무리가 없습니다.
-            </li>
+            <li>창업시점에서 <span class="fc-primary">필요자금은 64,680만원</span>이 될 것입니다. 하지만, 준비될 창업자금은 1,349,718만원이므로 <span class="fc-primary">1,285,038만원의 잉여자금</span> 이 발생합니다. 현재상태를 유지하셔도 창업자금에 무리가 없습니다.</li>
             <li>
               제안된 입력 값을 바탕으로 산정되었기 때문에 현재 재무상황을 직접적으로 반영하지 않을 수 있습니다.<br />
               정밀한 진단은 CSA컨설턴트와 상담하시길 바랍니다.
@@ -58,7 +54,9 @@
           <div class="graph-box1 full">
             <span>그래프 영역</span>
           </div>
-          <div class="cont-head mg-boxtobox">
+          <!-- 출력 화면에서 페이지에서 잘리면 안될 경우, 
+            다음페이지로 넘길 위치에 page-break 클래스 입력. -->
+          <div class="cont-head mg-boxtobox page-break">
             <h4 class="cont-title">준비자금현황</h4>
           </div>
           <div class="graph-box1 full">
@@ -68,9 +66,9 @@
             <span class="txt-helper">(단위 : 만원)</span>
           </div>
           <div class="con-table all-center">
-            <table summary="구분, 금액, 비중 (필요자금, 준비자금, 노후잉여자금)에 대한 내용이 나열된 표">
+            <table>
               <caption>
-                결혼준비자금 진단 결과 표
+                구분, 금액, 비중 (필요자금, 준비자금, 과부족자금(필요자금-준비자금))으로 구성된 표.
               </caption>
               <colgroup>
                 <col width="25%" />
@@ -99,8 +97,8 @@
                 </tr>
                 <tr>
                   <th scope="row">저축금액</th>
-                  <td>32,819</td>
-                  <td>280.0%</td>
+                  <td>5,000</td>
+                  <td>43.0%</td>
                 </tr>
                 <tr>
                   <th scope="row">대출자금</th>
@@ -114,7 +112,7 @@
                 </tr>
                 <tr class="mediumbold">
                   <th scope="row" colspan="2">과부족자금(필요자금-준비자금)</th>
-                  <td class="bg">잉여자금 39,475</td>
+                  <td class="bg">잉여자금 4,632,586</td>
                   <td class="bg">337.0%</td>
                 </tr>
               </tbody>
