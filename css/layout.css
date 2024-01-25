@@ -1383,6 +1383,9 @@
 .tabWrap .tabContent {
   display: none;
 }
+.tabWrap .tabContent:has(.t-depth-sub) {
+	padding-top: 0 !important;
+}
 
 .tabWrap .tabContent.active {
   display: block;
@@ -2110,6 +2113,10 @@ input.useDatepicker {
   .modal.full .modalWrap .modal-body.modal-tab .tab-total .tab-innerdouble.top {
     margin-top: 4rem;
   }
+	.modal.full .modalWrap .modal-body.modal-tab .modal-body-inner {
+		padding: 0;
+    overflow: auto;
+  }
 
   .modal-tab .tab-innerdouble {
     padding: 0 1.6rem;
@@ -2534,6 +2541,11 @@ input.useDatepicker {
     padding: 4rem 3.2rem;
     overflow-y: auto;
   }
+
+	.modal.full .modalWrap .modal-body.modal-tab .tabWrap {
+		min-width: 768px;
+	}
+
   .modal.full .modalWrap .modal-body.modal-tab {
     padding-top: 0;
   }
