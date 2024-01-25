@@ -1270,8 +1270,22 @@
   margin-bottom: 0;
 }
 
+.modalWrap .modal-body.mCustomScrollbar table.mb30 {
+  margin-bottom: 0 !important;
+}
+
+.modalWrap .modal-body.mCustomScrollbar th,
+.modalWrap .modal-body.mCustomScrollbar td {
+  /* padding: 0.8rem !important; */
+}
+
+.modalWrap:has(.h720px) .modal-body,
+.modalWrap .modal-body:has(.h720px) {
+  /* height: calc(716px - 10rem); */
+}
+
 .modalWrap .modal-body .modal-body-inner {
-  padding: 0 3.2rem 3rem 3.2rem;
+  padding: 2.4rem 3.2rem 3rem 3.2rem;
   overflow: visible;
   height: auto;
 }
@@ -1282,7 +1296,7 @@
 }
 
 .modalWrap:has(.modal-footer) .modal-body .modal-body-inner {
-  padding: 0 3.2rem 2.4rem 3.2rem;
+  padding: 2.4rem 3.2rem 2.4rem 3.2rem;
 }
 
 .modalWrap .modal-body:has(.h720px) {

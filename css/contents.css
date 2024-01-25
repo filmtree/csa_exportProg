@@ -3999,6 +3999,17 @@ h5.cont-title + .txt-list {
 	margin-top: 1.6rem;
 }
 
+/* 배우자 예상연금 조회 절차 */
+.title-version {
+  color: var(--color-gray2);
+  font-weight: 500;
+}
+.txt-list.border {
+  border-top: 1px var(--color-gray2) solid;
+  padding: 16px 0;
+  border-bottom: 1px var(--ui-colr3) solid;
+}
+
 
 /* ==================================================== Break Point ==================================================== */
 

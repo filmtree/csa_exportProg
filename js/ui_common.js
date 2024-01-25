@@ -34,9 +34,7 @@ const commonUI = {
     this.pageDescToggle();
     this.tableScrollMarking();
     this.useDatepicker();
-    setTimeout(function(){
-      this.modalScrollBarCustom();
-    },0)
+		this.modalScrollBarCustom();
   },
   deviceCheck: function () {
     var UserAgent = navigator.userAgent;
@@ -701,7 +699,11 @@ const commonUI = {
 		$modalScrollBox = $(".modal .modal-body");
     if(!$modalScrollBox) return;
 		
-		$modalScrollBox.mCustomScrollbar();
+		$modalScrollBox.mCustomScrollbar({
+      // advanced: {
+      //   updateOnContentResize: true // 컨텐츠 크기 변경 시 자동으로 업데이트
+      // },
+    });
 				
 		var $draggerContainer = $(".mCSB_draggerContainer");
 		var $draggerRail = $(".mCSB_draggerRail");
