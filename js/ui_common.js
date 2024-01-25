@@ -34,7 +34,9 @@ const commonUI = {
     this.pageDescToggle();
     this.tableScrollMarking();
     this.useDatepicker();
-		this.modalScrollBarCustom();
+    setTimeout(function(){
+      this.modalScrollBarCustom();
+    },0)
   },
   deviceCheck: function () {
     var UserAgent = navigator.userAgent;
@@ -696,17 +698,17 @@ const commonUI = {
   },
   modalScrollBarCustom: function () {
 		
-		// $modalScrollBox = $(".modal .modal-body");
-    // if(!$modalScrollBox) return;
+		$modalScrollBox = $(".modal .modal-body");
+    if(!$modalScrollBox) return;
 		
-		// $modalScrollBox.mCustomScrollbar();
+		$modalScrollBox.mCustomScrollbar();
 				
-		// var $draggerContainer = $(".mCSB_draggerContainer");
-		// var $draggerRail = $(".mCSB_draggerRail");
+		var $draggerContainer = $(".mCSB_draggerContainer");
+		var $draggerRail = $(".mCSB_draggerRail");
 		
-		// if ($draggerContainer.length && $draggerRail.length) {
-		// 	$draggerRail.detach().appendTo($draggerContainer);
-		// }
+		if ($draggerContainer.length && $draggerRail.length) {
+			$draggerRail.detach().appendTo($draggerContainer);
+		}
   }
 };
 
