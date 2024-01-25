@@ -47,7 +47,7 @@
               </div>
 
               <div class="detail-instructor-history">
-                <ul>
+                <ul class="detail-instructor-inner">
                   <li>
                     <h2>강의경력</h2>
                     <p>2019년-현재까지, 총 130여건 강의</p>
@@ -76,8 +76,21 @@
       </div>
     </div>
     <script>
-      document.querySelector("#modalOpenButton").addEventListener("click", () => {
-        commonUI.modal("#modalTemplate", "#modalOpenButton");
+      $(function () {
+        $modalScrollBox2 = $(".detail-instructor-history");
+        if (!$modalScrollBox) return;
+
+        $modalScrollBox2.mCustomScrollbar();
+
+        var $draggerContainer = $(".mCSB_draggerContainer");
+        var $draggerRail = $(".mCSB_draggerRail");
+
+        if ($draggerContainer.length && $draggerRail.length) {
+          $draggerRail.detach().appendTo($draggerContainer);
+        }
+      });
+      document.querySelector('#modalOpenButton').addEventListener('click', () => {
+        commonUI.modal('#modalTemplate', '#modalOpenButton');
       });
     </script>
   </body>

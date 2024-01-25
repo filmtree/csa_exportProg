@@ -181,3 +181,23 @@
 	margin-left: 2.4rem;
 	background: url('../images/ico/ic_14b_linearr_right.svg') no-repeat center center;
 }
+
+/* mCustomScrollBar */
+
+.mCSB_inside>.mCSB_container {
+	margin-right: 0;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	background-color: rgba(0, 0, 0, .2);
+	width: 8px;
+}
+
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+	background-color: rgba(0, 0, 0, .3);
+}
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+	background-color: rgba(0, 0, 0, .4);
+}
+.mCSB_scrollTools .mCSB_draggerRail {
+	background-color: transparent !important;
+}
