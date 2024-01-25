@@ -96,19 +96,25 @@
                   </ul>
                   <!-- s: UHKD2701M0-현금흐름분석 -->
                   <div class="inner-contents" id="tabNav1-1" role="tabpanel" aria-labelledby="tabNav1-1" style="display: block">
-                    <h3 class="cont-title none">1. 현금흐름분석</h3>
+                    
+                  </div>
+                  <!-- e: UHKD2701M0-현금흐름분석 -->
+
+                  <!-- s: UHKD2801M0-재무상태분석 -->
+                  <div class="inner-contents" id="tabNav1-2" role="tabpanel" aria-labelledby="tabNav1-2">
+                    <h3 class="cont-title">1. 재무상태분석</h3>
                     <div class="equal-list half">
                       <div class="items">
-                        <p class="cont-title small">①&nbsp;&nbsp;유입현황</p>
+                        <p class="cont-title small">①&nbsp;&nbsp;자산현황</p>
                         <div class="color-box none">data</div>
                       </div>
                       <div class="items">
-                        <p class="cont-title small">②&nbsp;&nbsp;유출현황</p>
+                        <p class="cont-title small">②&nbsp;&nbsp;부채현황</p>
                         <div class="color-box none">data</div>
                       </div>
                     </div>
                     <div class="con-table-header top">
-                      <p class="cont-title small none1">③&nbsp;&nbsp;현금흐름표</p>
+                      <p class="cont-title small none1">③&nbsp;&nbsp;재무상태표</p>
                       <div class="btn-wrap modify-txt">
                         <div>
                           <a href="#none" class="button-primary -sm round">
@@ -119,128 +125,103 @@
                       </div>
                     </div>
                     <div class="con-table all-center">
-                      <table class="min-w800px" summary="현금의 유입과 유출에 따른 구분과 대출원금, 대출잔액, 대출금리, 월상환액의 상세 정보 제공">
+                      <table class="min-w800px" summary="자산과 부채의 구분별 평가금액, 총자산대비, 구성비와 순자산에 대한 정보 제공">
                         <caption>
-                          현금흐름표
+                          재무상태표
                         </caption>
                         <colgroup>
-                          <col style="width: 10%" />
                           <col style="width: 12%" />
                           <col style="width: 12%" />
-                          <col style="width: 17%" />
-                          <col style="width: 17%" />
-                          <col style="width: 17%" />
+                          <col style="width: 12%" />
+                          <col style="width: 20%" />
+                          <col style="width: 20%" />
                           <col style="width: auto" />
                         </colgroup>
                         <thead>
                           <tr>
                             <th scope="col" colspan="3">구분</th>
-                            <th scope="col">연평균</th>
-                            <th scope="col">월평균</th>
-                            <th scope="col">총유입대비(%)</th>
-                            <th scope="col">구성비(%)</th>
+                            <th scope="col">평가금액<span>(만원)</span></th>
+                            <th scope="col">총자산대비<span>(%)</span></th>
+                            <th scope="col" class="last">구성비</th>
                           </tr>
                         </thead>
                         <tfoot>
                           <tr>
-                            <th scope="row" colspan="3" class="fc-primary">잉여여력(유입-유출)</th>
-                            <td class="bg fc-primary">600,000,000</td>
-                            <td class="bg fc-primary">50,000,000</td>
-                            <td class="bg fc-primary">100.00%</td>
+                            <th scope="row" colspan="3" class="fc-primary">순자산(자산-부채)</th>
+                            <td class="bg fc-primary">0</td>
+                            <td class="bg fc-primary">0.00%</td>
                             <td class="bg fc-primary"></td>
                           </tr>
                         </tfoot>
                         <tbody>
                           <tr>
-                            <th scope="row" rowspan="5" class="bg-no">유입</th>
-                            <th scope="row" colspan="2" class="bg-no">근로소득</th>
-                            <td>600,000,000</td>
-                            <td>50,000,000</td>
-                            <td>100.00%</td>
-                            <td>100.00%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row" colspan="2" class="bg-no">사업소득</th>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0.00%</td>
-                            <td>0.00%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row" colspan="2" class="bg-no">임대소득</th>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0.00%</td>
-                            <td>0.00%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row" colspan="2" class="bg-no">금융/기타소득</th>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0.00%</td>
-                            <td>0.00%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row" colspan="2">소계</th>
-                            <td class="bg">600,000,000</td>
-                            <td class="bg">50,000,000</td>
-                            <td class="bg">100.00%</td>
-                            <td class="bg">100.00%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row" rowspan="5" class="bg-no">유출</th>
-                            <th scope="row" colspan="2" class="bg-no">소비지출</th>
-                            <td></td>
+                            <th scope="row" rowspan="5" class="bg-no">자산</th>
+                            <th scope="row" colspan="2" class="bg-no">금융자산</th>
                             <td></td>
                             <td></td>
                             <td></td>
                           </tr>
                           <tr>
-                            <th scope="row" rowspan="2" class="bg-no">비소비지출</th>
-                            <th scope="row" class="bg-no">부채상환</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <th scope="row" class="bg-no">보험료</th>
-                            <td></td>
+                            <th scope="row" rowspan="2" class="bg-no">부동산</th>
+                            <th scope="row" class="bg-no">주거부동산</th>
                             <td></td>
                             <td></td>
                             <td></td>
                           </tr>
                           <tr>
-                            <th scope="row" colspan="2" class="bg-no">저축및투자</th>
+                            <th scope="row" class="bg-no">투자부동산</th>
                             <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th scope="row" colspan="2" class="bg-no">기타자산</th>
                             <td></td>
                             <td></td>
                             <td></td>
                           </tr>
                           <tr>
                             <th scope="row" colspan="2">소계</th>
-                            <td class="bg">0</td>
-                            <td class="bg">0</td>
-                            <td class="bg">0.00%</td>
-                            <td class="bg">0.00%</td>
+                            <td class="bg"></td>
+                            <td class="bg"></td>
+                            <td class="bg"></td>
+                          </tr>
+                          <tr>
+                            <th scope="row" rowspan="4" class="bg-no">부채</th>
+                            <th scope="row" colspan="2" class="bg-no">소비자부채</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th scope="row" colspan="2" class="bg-no">주거관련부채</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th scope="row" colspan="2" class="bg-no">기타부채</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th scope="row" colspan="2">소계</th>
+                            <td class="bg"></td>
+                            <td class="bg"></td>
+                            <td class="bg"></td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
                     <ul class="txt-list dot gray minus">
-                      <li>총 유입대비(%)란 총유입을 기준으로 각 항목이 차지하는 비율을 의미합니다.</li>
+                      <li>총 자산대비(%)란 총자산에서 부채 각 항목 및 순자산이 차지하는 비율을 의미합니다.</li>
                     </ul>
                     <div class="color-box none">
                       <p class="result-txt">
-                        조유미 고객님 가계의 잉여력은 <span class="color-point"><em>월</em> <em>000,000</em></span
-                        >입니다.
+                        조유미 고객님 가계의 순자산은 <span class="color-point"><em>00000</em><em>만원</em> </span>입니다.
                       </p>
                     </div>
-                  </div>
-                  <!-- e: UHKD2701M0-현금흐름분석 -->
-
-                  <!-- s: UHKD2801M0-재무상태분석 -->
-                  <div class="inner-contents" id="tabNav1-2" role="tabpanel" aria-labelledby="tabNav1-2">
                   </div>
                   <!-- e: UHKD2801M0-재무상태분석 -->
 

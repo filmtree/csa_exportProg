@@ -1213,7 +1213,7 @@
   max-width: 120rem;
 }
 
-.modalWrap.footer {
+.modalWrap.footer-user-guide {
   max-width: 100rem;
 }
 
@@ -2115,7 +2115,7 @@ input.useDatepicker {
   }
 	.modal.full .modalWrap .modal-body.modal-tab .modal-body-inner {
 		padding: 0;
-    overflow: auto;
+    overflow: auto; 
   }
 
   .modal-tab .tab-innerdouble {
