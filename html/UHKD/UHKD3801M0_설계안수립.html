@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+	<script src="../../js/ui_temp.js"></script>
+	<script src="../../js/ui_common.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+
+        <!-- header -->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">진단ㆍ상담 서비스</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                            <li><a href="#none" target="_self">재무진단</a></li>
+                            <li><a href="#none" target="_self">노후준비정보</a></li>
+                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep2">
+                        <button type="button" class="breadcrumb-trigger current">노후준비종합진단</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">상담지사안내</a></li>
+                            <li><a href="#none" target="_self">상담지자체안내</a></li>
+                            <li class="current"><a href="#none" target="_self">노후준비종합진단</a></li>
+                            <li><a href="#none" target="_self">온라인상담</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">방문상담신청</a></li>
+                            <li><a href="#none" target="_self">교육신청</a></li>
+                            <li><a href="#none" target="_self">강사정보</a></li>
+                            <li><a href="#none" target="_self">자가진단</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner" class="finance">
+            <div class="page-header">
+                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>설계안 수립</h2></div>
+            </div>
+            <div class="content-wrap total-finance">
+                <div class="tabWrap tab-base tab-total">
+
+                    <ul class="tabNav">
+                        <li><a href="#" id="tabNav1" role="tab" title="선택됨">시뮬레이션</a></li>
+                        <li><a href="#" id="tabNav2" role="tab">종합의견 및 제안</a></li>
+                    </ul>
+
+                    <!-- s: 시뮬레이션 UHKD3601M0 ~ UHKD4201M0 -->
+                    <div class="tabContent" role="tabpanel" aria-labelledby="tabNav1">
+                        <div class="wrap-inner">
+                            <div class="innerTabWrap tab-base">
+                                <ul class="inner-tab">
+                                    <li><a href="#tabNav1-1" role="tab">1단계</a></li>
+                                    <li><a href="#tabNav1-2" role="tab">2단계</a></li>
+                                    <li><a href="#tabNav1-3" role="tab">3단계</a></li>
+                                </ul>
+
+                                <!-- s: 1단계 UHKD3601M0 -->
+                                <div class="inner-contents" id="tabNav1-1" role="tabpanel" aria-labelledby="tabNav1-1">
+                                </div>
+                                <!-- e: 1단계 UHKD3601M0 -->
+
+                                <!-- s: 2단계 UHKD3701M0 ~ UHKD4001M0 -->
+                                <div class="inner-contents" id="tabNav1-2" role="tabpanel" aria-labelledby="tabNav1-2">
+                                    <div class="equal-list dot">
+                                        <h3 class="cont-title dot none1 txt-wrap">2단계</h3>
+                                        <span>노후자금 해결안을 위해 국민연금자금 조정이 가능합니다.</span>
+                                    </div>
+                                    <div class="tab-innerdouble top">
+                                        <div class="innerInTabWrap1 tab-base">
+                                            <ul class="innerTab double-tab">
+                                                <li><a href="#tabNav2-2-1" role="tab" class="active" title="선택됨">노령연금조회</a></li>
+                                                <li><a href="#tabNav2-2-2" role="tab">상세연금조회</a></li>
+                                            </ul>
+
+                                            <!-- s: 2단계 - 노령연금조회 UHKD3701M0 -->
+                                            <div class="double-contents" id="tabNav2-2-1" role="tabpanel" aria-labelledby="tabNav2-2-1"  style="display: block;">
+                                            </div>
+                                            <!-- e: 2단계 - 노령연금조회 UHKD3701M0 -->
+
+                                            <!-- s: 2단계 - 상세연금조회 UHKD3801M0 ~ UHKD4001M0 -->
+                                            <div class="double-contents" id="tabNav2-2-2" role="tabpanel" aria-labelledby="tabNav1-2-2">
+                                                <h3 class="blind">상세연금조회</h3>
+                                                <div class="color-box none develop">
+                                                    <div class="alert-txt-box">
+                                                        <p class="alert-txt">홍길동 고객님</p>
+                                                        <p>고객님께서는 현재 소득으로 만 60세까지 납부하실 경우 노령연금을 아래와 같이 수령할 것으로 예상됩니다. <br>
+                                                            다만, 상실 또는 납부예외 중인 경우에는 현재까지 납부된 내역만으로 예상연금액을 산정합니다.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <!-- s: Step 01 UHKD3801M0-->
+                                                <ul class="equal-list step top">
+                                                    <li class="active">
+                                                        <em class="unit">01</em>
+                                                        <div class="type">조건설정 및 소득입력</div>
+                                                    </li>
+                                                    <li class="">
+                                                        <em class="unit">02</em>
+                                                        <div class="type">입력내용 확인</div>
+                                                    </li>
+                                                    <li>
+                                                        <em class="unit">03</em>
+                                                        <div class="type">결과 및 비교조회</div>
+                                                    </li>
+                                                </ul>
+                                                <div class="con-table-header top">
+                                                    <h4 class="cont-title small none1">부양가족연금 대상 선택</h4>
+                                                </div>
+                                                <div class="con-table all-center">
+                                                    <table class="min-w1000px" summary="부양가족연금 대상 선택을 위한 부모, 배우자, 자녀 입력">
+                                                        <caption>부양가족연금 대상 선택</caption>
+                                                        <colgroup>
+                                                            <col style="width:15%"/>
+                                                            <col style="width:10%"/>
+                                                            <col style="width:auto"/>
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" colspan="2">구분</th>
+                                                                <th scope="col">입력내용</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row" rowspan="3" class="bg-no">부양가족연금<br />대상</th>
+                                                                <th scope="row" class="bg-no">부모</th>
+                                                                <td>
+                                                                    <div class="form-group-txt">
+                                                                        <select name="" id="" title="부양가족연금" class="charLength8 not">
+                                                                            <option value="">선택</option>
+                                                                        </select>
+                                                                        <span class="back-txt align-left">※ 수급당시 60세 이상 또는 장애 2급 이상인 경우(배우자의 부모 포함)</span>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="bg-no">배우자</th>
+                                                                <td>
+                                                                    <div class="form-group-txt">
+                                                                        <select name="" id="" title="부양가족연금 대상 배우자 선택" class="charLength8 not">
+                                                                            <option value="">선택</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="bg-no">자녀</th>
+                                                                <td>
+                                                                    <div class="form-group-txt">
+                                                                        <select name="" id="" title="부양가족연금 대상 자녀  선택" class="charLength8 not">
+                                                                            <option value="">선택</option>
+                                                                        </select>
+                                                                        <span class="back-txt align-left">※수급당시 18세 미만 또는 장애 2급 이상인 경우(배우자가 혼인 전에 얻은 자녀 포함)</span>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="con-table-header top">
+                                                    <h4 class="cont-title small none1">가입기간 추가 대상 입력</h4>
+                                                </div>
+                                                <div class="con-table all-center">
+                                                    <table class="min-w1000px" summary="출산에 대한 가입기간 추가 산입을 위해 출생자와 인정가입기간 입력">
+                                                        <caption>가입기간 추가 대상입력</caption>
+                                                        <colgroup>
+                                                            <col style="width:30%"/>
+                                                            <col style="width:auto"/>
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row" rowspan="2">출산 크레딧<br>
+                                                                    <span class="smcolor1">&lt;출산에 대한 가입기간 추가 산입&gt;</span>
+                                                                </th>
+                                                                <td>
+                                                                    <div class="form-group-txt">
+                                                                        <span class="front-txt">2008. 1. 1 이전 출생자 :</span>
+                                                                        <input type="text" id="" class="charLength3 margin align-right" placeholder="0">
+                                                                        <span class="center-txt">명</span>
+                                                                        <span class="center-txt">2008. 1. 1 이후 출생자 :</span>
+                                                                        <input type="text" id="" class="charLength3 margin align-right" placeholder="0">
+                                                                        <span class="back-txt">명</span>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="form-group-txt">
+                                                                        <span class="front-txt">인정가입기간 : </span>
+                                                                        <input type="text" id="" class="charLength6 margin align-right" placeholder="0">
+                                                                        <span class="back-txt">개월</span>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <ul class="txt-list dot gray minus">
+                                                    <li>2008. 1. 1 이후 출생(입양)한 자녀를 포함, 2자녀 이상인 경우 최고 50개월까지 노령연금 가입기간이 인정됩니다.</li>
+                                                </ul>
+                                                <div class="con-table all-center">
+                                                    <table class="min-w1000px" summary="군복무에 대한 가입기간 추가 산입을 위해 출생자와 인정가입기간 입력">
+                                                        <caption>군복무 크레딧</caption>
+                                                        <colgroup>
+                                                            <col style="width:30%"/>
+                                                            <col style="width:auto"/>
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row" rowspan="2">군복무 크레딧<br>
+                                                                    <span class="smcolor1">&lt;군복무 대한 가입기간 추가 산입&gt;</span>
+                                                                </th>
+                                                                <td>
+                                                                    <div class="form-group-txt">
+                                                                        <label class="inp-checkbox left">
+                                                                            <span>2008. 1. 1 이후 군입대 여부 :</span>
+                                                                            <input type="checkbox" name="checkboxGroup1">
+                                                                        </label>
+                                                                        <span class="front-txt">인정가입기간 : </span>
+                                                                        <input type="text" id="" class="charLength3 margin align-right" placeholder="0">
+                                                                        <span class="back-txt">개월</span>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <ul class="txt-list dot gray minus">
+                                                    <li>2008. 1. 1 이후 입대하여 병역의무를 이행한 현역병 및 공익근무요원에게 6개월의 노령연금 가입기간이 인정됩니다.</li>
+                                                </ul>
+                                                <div class="con-table-header top">
+                                                    <h4 class="cont-title small none1">지급희망연령 선택</h4>                                                    
+                                                </div>
+                                                <p class="cont-desc">고객님의 연금지금개시 연령은 만 65세입니다. 조기노령연금이나 연기연금 수령을 희망하시면 지급희망연령을 선택하십시오. <br>
+                                                    (조기노령연금은 감액지급, 연기연금은 증액)</p>
+                                                <div class="con-table all-center top">
+                                                    <table class="min-w1200px" summary="연금의 종류별 지급희망연령 선택">
+                                                        <caption>지급희망연령 선택</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%"/>
+                                                            <col style="width:auto"/>
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row" class="align-left">가입기간 종료일자</th>
+                                                                <td class="align-left bold">
+                                                                    0000년 00월 00일
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="align-left">
+                                                                    <label class="inp-radio">
+                                                                        <input type="radio" name="radioGroup1">
+                                                                        <span>노령연금</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td class="align-left">0000년 00월 부터 (만65세)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="align-left">
+                                                                    <div class="">
+                                                                        <a href="#none" class="_has-tooltip">
+                                                                            <label class="inp-radio">
+                                                                                <input type="radio" name="radioGroup1">
+                                                                                <span>조기노령연금</span>
+                                                                            </label>
+                                                                            <i class="ic-only question"></i>
+                                                                        </a>
+                                                                        <!-- tooltip -->
+                                                                        <div class="desc-box type1 _tooltipbox">
+                                                                            <div class="desc-content align-left">
+                                                                                <p class="padr">10년 이상 가입하고 소득있는 업무에 종사하지 않는 경우, 본인의 희망에 따라서 법정 지급개시연령 5년 전부터 수급이 가능하다. 
+                                                                                    조기퇴직자가 많은 우리나라의 현실을 고려하여 이들의 생계유지를 보장하기 위해 도입된 제도로서 이 제도를 인정하는 나라는 많지않다.
+                                                                                </p>
+                                                                                <button type="button" class="ic-only box-close">창닫기</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <td>
+                                                                    <div class="form-group-txt">
+                                                                        <select class="charLength3">
+                                                                            <option>선택</option>
+                                                                        </select>
+                                                                        <span class="back-txt">세</span>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="align-left">
+                                                                    <div class="">
+                                                                        <a href="#none" class="_has-tooltip">
+                                                                            <label class="inp-radio">
+                                                                                <input type="radio" name="radioGroup1">
+                                                                                <span>연기연금</span>
+                                                                            </label>
+                                                                            <i class="ic-only question"></i>
+                                                                        </a>
+                                                                        <!-- tooltip -->
+                                                                        <div class="desc-box type1 _tooltipbox">
+                                                                            <div class="desc-content align-left">
+                                                                                <p class="padr">노령연금의 수급권자(특례노령연금 수급권자 제외)가 연금받는 시기를 늦추는 대신 늦춘만큼 더 많은 연금을 지급하는 제도로, 노령연금 수급권자가 원할 경우 1회에 한하여 연금을 받는 시기를 연기할 수 있고, 그 연기되는 1월마다 0.6%씩을 가산하여 연금을 지급하는 제도이다. 이는 노령연금을 받고 있는 중에 일정금액 이상의 소득있는 업무에 종사하거나 노후소득이 여유가 있을 때 연금의 지급을 연기할 수 있도록 하고 그 대신 연기되는 기간만큼 연금액을 더 받을 수 있도록 하는 제도로 고령자의 근로의욕을 고취하는데 그 취지가 있다
+                                                                                </p>
+                                                                                <button type="button" class="ic-only box-close">창닫기</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <td class="align-left">
+                                                                    <div class="form-group-txt">
+                                                                        <select class="charLength3">
+                                                                            <option>선택</option>
+                                                                        </select>
+                                                                        <select class="charLength3 margin">
+                                                                            <option>선택</option>
+                                                                        </select>
+                                                                        <span class="center-txt">~</span>
+                                                                        <select class="charLength3">
+                                                                            <option>선택</option>
+                                                                        </select>
+                                                                        <select class="charLength3 margin">
+                                                                            <option>선택</option>
+                                                                        </select>
+                                                                        <input type="text" id="" class="charLength3 margin align-right" placeholder="0">
+                                                                        <span class="center-txt">개월</span>
+                                                                        <span class="center-txt">연기비율 :</span>
+                                                                        <select class="charLength3">
+                                                                            <option>선택</option>
+                                                                        </select>
+                                                                        <span class="back-txt">%</span>
+                                                                    </div>
+                                                                    <ul class="txt-list dot gray">
+                                                                        <li>법정 지급개시연령부터 5년 이내에 1회에 한하여 연기신청 가능하며 <br>
+                                                                            2015. 7. 29 이후 신청자는 부분연기(50, 60, 70, 80,90, 100%)가능
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>                                                
+                                                <div class="con-table-header top">
+                                                    <h4 class="cont-title small none1">향후 소득 및 가입기간 추가</h4>
+                                                    <div class="btn-wrap modify-txt">
+                                                        <div>
+                                                            <a href="#none" class="button-primary -sm round">
+                                                                예상연금월액표 보기
+                                                            </a>                             
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="con-table all-center">
+                                                    <table class="min-w1000px" summary="향후의 소득월액과 가입기간 정보 입력">
+                                                        <caption>향후 소득 및 가입기간 추가</caption>
+                                                        <colgroup>
+                                                            <col style="width:55%"/>
+                                                            <col style="width:auto"/>
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">가입기간</th>
+                                                                <th scope="col">소득월액</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="form-group-txt center">
+                                                                        <input type="text" class="charLength3 align-right" value="" placeholder="0">
+                                                                        <span class="center-txt">년</span>
+                                                                        <input type="text" class="charLength2 align-right" value="" placeholder="0">
+                                                                        <span class="center-txt">월</span>
+                                                                        <span class="center-txt">~</span>
+                                                                        <input type="text" class="charLength3 align-right" value="" placeholder="0">
+                                                                        <span class="center-txt">년</span>
+                                                                        <input type="text" class="charLength2 align-right" value="" placeholder="0">
+                                                                        <span class="center-txt">월</span>
+                                                                    </div> 
+                                                                </td>                                                               </td>
+                                                                <td>
+                                                                    <div class="form-group-txt center"> 
+                                                                        <input type="text" id="" class="charLength8 align-right" placeholder="0">
+                                                                        <span class="back-txt">원</span>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="btn-wrap align-right minus-margin">
+                                                    <a href="#none" class="button-tertiary -sm round">
+                                                        <i class="ic-only inner-minus after" arir-hidden="true"></i>
+                                                        입력삭제
+                                                    </a>
+                                                    <a href="#none" class="button-primary -sm round">
+                                                        <i class="ic-only inner-plus after" arir-hidden="true"></i>
+                                                        입력추가
+                                                    </a>
+                                                </div>
+                                                <div class="cont-bottom">
+                                                    <div class="btn-group">
+                                                        <button type="button" class="button-tertiary -lg">이전</button>
+                                                        <button type="button" class="button-primary -lg">다음</button>
+                                                    </div>
+                                                </div>
+                                                <!-- e: Step 01 UHKD3801M0-->
+                                               
+                                            </div>
+                                            <!-- e: 2단계 - 상세연금조회 UHKD3801M0 ~ UHKD4001M0 -->
+
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <!-- e: 2단계 UHKD3701M0 ~ UHKD4001M0 -->
+
+                                <!-- s: 3단계 UHKD4101M0 ~ UHKD4201M0-->
+                                <div class="inner-contents" id="tabNav1-3" role="tabpanel" aria-labelledby="tabNav1-3">
+                                </div>
+                                <!-- e: 3단계 UHKD4101M0 ~ UHKD4201M0 -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: 시뮬레이션 UHKD3601M0 ~ UHKD4201M0 -->
+
+                    <!-- s: 종합의견 및 제안 UHKD4301M0 -->
+                    <div class="tabContent" role="tabpanel" aria-labelledby="tabNav2">
+                    </div>
+                    <!-- e: 종합의견 및 제안 UHKD4301M0 -->
+
+                </div>
+                <script>
+                    commonUI.tabNav('.tabWrap', 1);
+                    commonUI.tabInnerNav('.innerTabWrap', 2);
+                    commonUI.tabInnerNav('.innerInTabWrap1', 2);
+                    commonUI.tabInnerNav('.innerInTabWrap2', 1);                    
+                </script>
+                <!-- 공통UI - 해시태그 링크들 -->
+                <div class="hashtag-wrap"></div>
+                <!--// 공통UI - 해시태그 링크들 -->
+                
+            </div>
+            <script>
+                // document.querySelector('#btn1').addEventListener('click', (e)=>{
+                //     commonUI.modal('#pop-alert1', '#btn1');
+                // });
+            </script>
+            <!-- 공통UI - 만족도조사 -->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer -->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

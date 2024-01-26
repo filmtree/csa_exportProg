@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>노후준비종합서비스</title>
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<script src="../../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../../js/lib/jquery-ui.min.js"></script>
+	<script src="../../js/lib/jquery.easing.min.js"></script>
+	<script src="../../js/lib/swiper-bundle.min.js"></script>
+	<script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../../js/zoom.js"></script>
+	<script src="../../js/ui_temp.js"></script>
+	<script src="../../js/ui_common.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+
+        <!-- header -->
+        <header id="header"></header>
+        <!-- //header -->
+
+        <!-- content -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-nav">
+                <ol class="breadcrumb-location">
+                    <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+                    <li class="breadcrumb-depth dep1">
+                        <button type="button" class="breadcrumb-trigger">진단ㆍ상담 서비스</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                            <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                            <li><a href="#none" target="_self">재무진단</a></li>
+                            <li><a href="#none" target="_self">노후준비정보</a></li>
+                            <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                        </ul>
+                    </li>
+                    <li class="breadcrumb-depth dep2">
+                        <button type="button" class="breadcrumb-trigger current">노후준비종합진단</button>
+                        <ul class="breadcrumb-depth-list">
+                            <li><a href="#none" target="_self">상담지사안내</a></li>
+                            <li><a href="#none" target="_self">상담지자체안내</a></li>
+                            <li class="current"><a href="#none" target="_self">노후준비종합진단</a></li>
+                            <li><a href="#none" target="_self">온라인상담</a></li><!--현재 메뉴 표시 li에 class="current" 추가-->
+                            <li><a href="#none" target="_self">방문상담신청</a></li>
+                            <li><a href="#none" target="_self">교육신청</a></li>
+                            <li><a href="#none" target="_self">강사정보</a></li>
+                            <li><a href="#none" target="_self">자가진단</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="conatiner" class="finance">
+            <div class="page-header">
+                <div class="page-title"><a href="#" class="ic-only back">뒤로가기</a><h2>설계안 수립</h2></div>
+            </div>
+            <div class="content-wrap total-finance">
+                <div class="tabWrap tab-base tab-total">
+
+                    <ul class="tabNav">
+                        <li><a href="#" id="tabNav1" role="tab" title="선택됨">시뮬레이션</a></li>
+                        <li><a href="#" id="tabNav2" role="tab">종합의견 및 제안</a></li>
+                    </ul>
+
+                    <!-- s: 시뮬레이션 UHKD3601M0 ~ UHKD4201M0 -->
+                    <div class="tabContent" role="tabpanel" aria-labelledby="tabNav1">
+                        <div class="wrap-inner">
+                            <div class="innerTabWrap tab-base">
+                                <ul class="inner-tab">
+                                    <li><a href="#tabNav1-1" role="tab">1단계</a></li>
+                                    <li><a href="#tabNav1-2" role="tab">2단계</a></li>
+                                    <li><a href="#tabNav1-3" role="tab">3단계</a></li>
+                                </ul>
+
+                                <!-- s: 1단계 UHKD3601M0 -->
+                                <div class="inner-contents" id="tabNav1-1" role="tabpanel" aria-labelledby="tabNav1-1">
+                                </div>
+                                <!-- e: 1단계 UHKD3601M0 -->
+
+                                <!-- s: 2단계 UHKD3701M0 ~ UHKD4001M0 -->
+                                <div class="inner-contents" id="tabNav1-2" role="tabpanel" aria-labelledby="tabNav1-2">
+                                    <div class="equal-list dot">
+                                        <h3 class="cont-title dot none1 txt-wrap">2단계</h3>
+                                        <span>노후자금 해결안을 위해 국민연금자금 조정이 가능합니다.</span>
+                                    </div>
+                                    <div class="tab-innerdouble top">
+                                        <div class="innerInTabWrap1 tab-base">
+                                            <ul class="innerTab double-tab">
+                                                <li><a href="#tabNav2-2-1" role="tab" class="active" title="선택됨">노령연금조회</a></li>
+                                                <li><a href="#tabNav2-2-2" role="tab">상세연금조회</a></li>
+                                            </ul>
+
+                                            <!-- s: 2단계 - 노령연금조회 UHKD3701M0 -->
+                                            <div class="double-contents" id="tabNav2-2-1" role="tabpanel" aria-labelledby="tabNav2-2-1"  style="display: block;">
+                                                <div class="con-table-header top double-btn">
+                                                    <h4 class="cont-title none1">예상 노령연금액 (세전)</h4>
+                                                    <div class="btn-wrap modify-txt">
+                                                        <div>
+                                                            <a href="#none" class="button-primary -sm round">
+                                                                향후의 소득 및 가입기간을 수정하여 재계산 바로가기
+                                                                <i class="ic-only arr10_r_white v1" arir-hidden="true"></i>
+                                                            </a>   
+                                                            <a href="#none" class="button-primary -sm round">
+                                                                미래가치산정 기준안내
+                                                                <i class="ic-only arr10_r_white v1" arir-hidden="true"></i>
+                                                            </a>                          
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="con-table all-center">
+                                                    <table class="min-w800px" summary="예상 노령연금액의 현재가치와 미래가치 기준의 예상연금액에 대한 산출기준, 예상연금액, 예상 가입기간, 수령시작 년월, 기본연금액, 지급률, 총예상 납부율 등에 관한 상세 정보 제공">
+                                                        <caption>예상 노령연금액 상세 정보</caption>
+                                                        <colgroup>
+                                                            <col style="width:27%">
+                                                            <col style="width:35%">
+                                                            <col style="width:auto">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">구분</th>
+                                                                <th scope="col">현재가치 기준 예상연금액</th>
+                                                                <th scope="col">미래가치 기준 예상연금액</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row" class="bg-no">산출기준</th>
+                                                                <td class="align-left">현재 화폐가치 기준(소득상승률 비적용)</td>
+                                                                <td>
+                                                                    <div class="form-group-txt">
+                                                                        <span class="front-txt txt-wrap">소득상승률 적용 : 연</span>
+                                                                        <select class="w100">
+                                                                            <option>선택</option>
+                                                                        </select>
+                                                                        <span class="back-txt">%</span>
+                                                                        <a href="#none" class="button-sixth -sm round">
+                                                                            재계산
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="bg-no">예상연금액</th>
+                                                                <td class="align-left">최소가입기간(10년)이 부족하여 연금액을 산정할 수 없습니다.</td>
+                                                                <td class="align-left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="bg-no">총 예상 가입기간 (납부월수)</th>
+                                                                <td class="align-left">
+                                                                    2010년 01월 ~ 
+                                                                    2023년 06월
+                                                                    (총  80 개월)
+                                                                </td>
+                                                                <td class="align-left">
+                                                                    2010년 01월 ~ 
+                                                                    2023년 06월
+                                                                    (총 0개월)
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="bg-no">수령시작 년/월</th>
+                                                                <td class="align-left">
+                                                                    향후 가입기간을 추가하여 예상연금액을 계산해 보실 수 있습니다.
+                                                                </td>
+                                                                <td class="align-left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="bg-no">기본연금액</th>
+                                                                <td class="align-left">0 원</td>
+                                                                <td class="align-left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="bg-no">지급률</th>
+                                                                <td class="align-left">100%</td>
+                                                                <td class="align-left">100%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="bg-no">총 예상 납부보험료</th>
+                                                                <td class="align-left">15,825,520 원</td>
+                                                                <td class="align-left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="bg-no">
+                                                                    <div class="">
+                                                                        <a href="#none" class="_has-tooltip"><span>A값</span><i class="ic-only question"></i></a>
+                                                                        <!-- tooltip -->
+                                                                        <div class="desc-box type1 _tooltipbox">
+                                                                            <div class="desc-content align-left">
+                                                                                <p>연금수급직전 3년간의 가입자 전체의 평균 소득월액의 평균액</p>
+                                                                                <button type="button" class="ic-only box-close">창닫기</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                <td class="align-left">0 원</td>
+                                                                <td class="align-left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row" class="bg-no"> 
+                                                                    <div class="">
+                                                                        <a href="#none" class="_has-tooltip"><span>B값</span><i class="ic-only question"></i></a>
+                                                                        <!-- tooltip -->
+                                                                        <div class="desc-box type1 _tooltipbox">
+                                                                            <div class="desc-content align-left">
+                                                                                <p>가입자 개인의 가입기간중 기준소득월액을 현재가치로 재평가한 평균액</p>
+                                                                                <button type="button" class="ic-only box-close">창닫기</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                <td class="align-left">0 원</td>
+                                                                <td class="align-left"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <!-- e: 2단계 - 노령연금조회 UHKD3701M0 -->
+
+                                            <!-- s: 2단계 - 상세연금조회 UHKD3801M0 ~ UHKD4001M0 -->
+                                            <div class="double-contents" id="tabNav2-2-2" role="tabpanel" aria-labelledby="tabNav1-2-2">
+                                               
+                                            </div>
+                                            <!-- e: 2단계 - 상세연금조회 UHKD3801M0 ~ UHKD4001M0 -->
+
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <!-- e: 2단계 UHKD3701M0 ~ UHKD4001M0 -->
+
+                                <!-- s: 3단계 UHKD4101M0 ~ UHKD4201M0-->
+                                <div class="inner-contents" id="tabNav1-3" role="tabpanel" aria-labelledby="tabNav1-3">
+                                </div>
+                                <!-- e: 3단계 UHKD4101M0 ~ UHKD4201M0 -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: 시뮬레이션 UHKD3601M0 ~ UHKD4201M0 -->
+
+                    <!-- s: 종합의견 및 제안 UHKD4301M0 -->
+                    <div class="tabContent" role="tabpanel" aria-labelledby="tabNav2">
+                    </div>
+                    <!-- e: 종합의견 및 제안 UHKD4301M0 -->
+
+                </div>
+                <script>
+                    commonUI.tabNav('.tabWrap', 1);
+                    commonUI.tabInnerNav('.innerTabWrap', 2);
+                    commonUI.tabInnerNav('.innerInTabWrap1', 1);
+                    commonUI.tabInnerNav('.innerInTabWrap2', 1);                    
+                </script>
+                <!-- 공통UI - 해시태그 링크들 -->
+                <div class="hashtag-wrap"></div>
+                <!--// 공통UI - 해시태그 링크들 -->
+                
+            </div>
+            <script>
+                // document.querySelector('#btn1').addEventListener('click', (e)=>{
+                //     commonUI.modal('#pop-alert1', '#btn1');
+                // });
+            </script>
+            <!-- 공통UI - 만족도조사 -->
+            <div class="page-satisfaction"></div>
+            <!-- //공통UI - 만족도조사 -->
+        </main>
+        <!-- //content -->
+
+        <!-- footer -->
+        <footer id="footer"></footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>
