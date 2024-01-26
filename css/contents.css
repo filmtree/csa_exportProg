@@ -3946,7 +3946,7 @@ h5.cont-title + .txt-list {
 	min-height: 61.6rem;
 }
 
-.footer-user-guide .page-title {
+.footer-user-guide .tab-title {
 	font-size: 40px;
 	font-weight: var(--font-Noto-bold);
 	line-height: 150%; 
