@@ -4931,7 +4931,7 @@ h5.cont-title + .txt-list {
 
   /* 재무진단 - 국민연금 알아보기 Mobile */
   .btn-group.consulting-link {
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
   .form-group-txt.select2-btn2 {
     flex-wrap: nowrap;
@@ -4945,7 +4945,7 @@ h5.cont-title + .txt-list {
     margin: 0 !important;
   }
   .about-national-pension-tab .tc01,
-  .about-national-pension-tab .tab02 {
+  .about-national-pension-tab .tc02 {
     padding-top: 16rem !important;
   }
   .divide-type:has(.txt-helper-title) {
@@ -5435,6 +5435,9 @@ h5.cont-title + .txt-list {
   .txt-list.fs16 li,
   .txt-list.fs17 li {
     font-size: 1.4rem;
+  }
+  .txt-list.fs17 li::before {
+    top: 1rem !important;
   }
   .txt-list > li + li {
     margin-top: 0.4rem;
@@ -6404,14 +6407,29 @@ h5.cont-title + .txt-list {
 
   /* 재무진단 - 국민연금 알아보기 Mobile */
   .btn-group.consulting-link {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 0.4rem;
-    margin-top: 2rem;
+    padding-top: 4rem;
     padding: 0.8rem;
     min-width: 30rem;
   }
+  
+  .btn-group.consulting-link:has([class*="button-"]:only-child) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .btn-group.consulting-link [class*="button-"].w160px {
+    width: 100% !important;
+  }
+
+  .subscription-history-inquiry .divide-type {
+    flex-wrap: wrap;
+    row-gap: .8rem;
+  }
+
 
   /* Response Modify SM */
   .tabNav + .btn-group.consulting-link {
@@ -6428,7 +6446,7 @@ h5.cont-title + .txt-list {
     margin-top: 0 !important;
   }
   .about-national-pension-tab .tc01,
-  .about-national-pension-tab .tab02 {
+  .about-national-pension-tab .tc02 {
     padding-top: 20rem !important;
   }
 

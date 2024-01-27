@@ -3024,6 +3024,10 @@ button,
 	margin: 0 auto;
 }
 
+.con-table.all-center td [class*="d-flex"] button {
+	margin: 0;
+}
+
 .con-table.all-right tbody td {
 	text-align: right;
 }
@@ -3422,6 +3426,10 @@ button,
 	margin-bottom: .8rem;
 }
 
+.txt-list > li > p {
+	margin: 0 !important;
+}
+
 .txt-list > li > *:last-child:not(ul) {
 	margin-bottom: 1.6rem;
 }
@@ -3554,6 +3562,15 @@ input + .txt-helper {
 
 /* ==================================================== Break Point ==================================================== */
 @media screen and (max-width: 1079px) {
+
+	.content-wrap .mg-h3-section:first-of-type {
+		margin-top: 0 !important;
+	}
+
+	.content-wrap .mg-h3-section:first-of-type {
+		margin-top: 0 !important;
+	}
+
 	/* ##form field */
 	.bd-write .field {
 		flex-direction: column;
@@ -3682,6 +3699,7 @@ input + .txt-helper {
 		min-width: 10rem;
 		border-left: 0;
 	}
+
 }
 
 /* ==================================================== Break Point Tablet ==================================================== */
@@ -3728,6 +3746,10 @@ input + .txt-helper {
 	.mg-in-section-divide,
 	.mg-h4-section {
 		margin-top: 3.6rem !important;
+	}
+
+	.content-wrap .mg-h4-section:first-of-type {
+		margin-top: 0 !important;
 	}
 
 	/* h5 Contents */
