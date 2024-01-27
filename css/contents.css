@@ -3946,20 +3946,35 @@ h5.cont-title + .txt-list {
 	min-height: 61.6rem;
 }
 
-.footer-user-guide .tab-title {
+.footer-user-guide .guide-tab-title {
 	font-size: 40px;
 	font-weight: var(--font-Noto-bold);
 	line-height: 150%; 
 	letter-spacing: -2px;
 	color: #222222;
 }
-.footer-user-guide .tab-title + .tab-innerdouble {
+
+.footer-user-guide .guide-tab-title + .tab-innerdouble {
 	margin-top: 5.6rem !important;
 }
-.footer-user-guide .tab-pannel-inner {
-	margin: 4rem 0;
+
+.footer-user-guide .guide-tab-title {
+  margin-top: 6.4rem;
 }
-.footer-user-guide .page-title {
+
+.footer-user-guide .tab-total .tab-panel-inner {
+  padding-top: 5.6rem;
+}
+
+.footer-user-guide .tab-total .guide-tab-title {
+  margin-top:0;
+}
+
+.footer-user-guide .tab-innerdouble .tab-panel-inner {
+	padding: 4rem 0;
+}
+
+.footer-user-guide .guide-page-title {
 	position: relative;
 	display:inline-block;
 	font-size: 24px;
@@ -3968,8 +3983,10 @@ h5.cont-title + .txt-list {
 	letter-spacing: -1.2px;
 	color: var(--color-primary);
 }
-
-.footer-user-guide .page-title::after {
+.footer-user-guide .guide-page-title ~ .guide-page-title {
+  margin-top: 4.8rem;
+}
+.footer-user-guide .guide-page-title::after {
 	content: "";
 	position: absolute;
 	width: 7px;
@@ -3980,23 +3997,95 @@ h5.cont-title + .txt-list {
 	background-color: var(--color-primary);
 }
 
-.footer-user-guide .page-description {
+.footer-user-guide .guide-page-description {
 	margin-top: 1.6rem;
 	font-size: 18px;
 	font-weight: 400;
-	line-height: 150%;
+	line-height: 1.5;
 	letter-spacing: -0.9px;
 }
-.footer-user-guide .section-title {
+.footer-user-guide .guide-section-title {
 	margin-top: 4rem;
-	font-size: 17px;
-	font-weight: var()--font-Noto-bold;
-	line-height: 160%;
+	font-size: 20px;
+	font-weight: var(--font-Noto-bold);
+	line-height: 1.6;
 	letter-spacing: -0.85px;
 }
 
-.footer-user-guide .section-paragraph {
+.footer-user-guide .guide-section-list-title {
 	margin-top: 1.6rem;
+	font-size: 18px;
+	font-weight: var(--font-Noto-medium);
+	line-height: 1.5;
+	letter-spacing: -0.9px;
+}
+
+.footer-user-guide .guide-section-list {
+  margin-top: .8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-user-guide .guide-section-list > li {
+  position: relative;
+  padding-left: 1.1rem;
+	font-size: 1.7rem;
+	font-weight: var(--font-Noto-regular);
+	line-height: 1.6;
+	letter-spacing: -0.85px;
+  color: var(--color-base);
+}
+
+.footer-user-guide .guide-section-list > li::before {
+  content: "";
+  position: absolute;
+  top: 1.3rem;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: var(--color-base);
+}
+
+* + .guide-section-numlist {
+  margin-top: 2.4rem;
+}
+
+.footer-user-guide .guide-section-numlist {
+  counter-reset: section-numlist;
+}
+
+.footer-user-guide .guide-section-numlist li {
+  position: relative;
+  padding-left: 3.4rem;
+  font-size: 1.7rem;
+  line-height: 1.6;
+  letter-spacing: .85px;
+}
+.footer-user-guide .guide-section-numlist li:not(:first-child) {
+  margin-top: 1.6rem;
+}
+.footer-user-guide .guide-section-numlist li::before {
+  counter-increment: section-numlist; 
+  content: counter(section-numlist); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  font-size: 1.4rem;
+  line-height: 24px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer-user-guide .guide-section-paragraph {
+	margin-top: 1.6rem;
+  font-size: 1.7rem;
+  line-height: 1.5;
 }
 
 /* 배우자 예상연금 조회 절차 */

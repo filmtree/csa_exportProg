@@ -49,8 +49,8 @@
 	/* Form Message (Default), Controlar “Line” icon (Default) */
 	--color-gray5: #999999;
 
-/* Form Message (Disable), Button Message (Disable) 
- / Form Border (Default), Check Line (Default), Button Line (Default) */
+	/* Form Message (Disable), Button Message (Disable) 
+	/ Form Border (Default), Check Line (Default), Button Line (Default) */
 	--ui-colr1: #cccccc; 
 
 	/* Form border (Disable 
