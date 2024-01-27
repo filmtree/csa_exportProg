@@ -2557,7 +2557,7 @@ input.useDatepicker {
   }
 
 	.modal.full .modalWrap .modal-body.modal-tab .tabWrap {
-		min-width: 768px;
+		/* min-width: 768px; */
 	}
 
   .modal.full .modalWrap .modal-body.modal-tab {

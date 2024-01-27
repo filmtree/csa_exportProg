@@ -6270,8 +6270,12 @@ h5.cont-title + .txt-list {
   .tab-innerdouble .double-tab li {
     height: 38px;
   }
+  
   .tab-innerdouble .double-tab a {
     font-size: 14px;
+    border-radius: 0 !important;
+    min-width: 14rem;
+    border: 1px var(--ui-colr2) solid;
   }
 
   .smcolor1 {
