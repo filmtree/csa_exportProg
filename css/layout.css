@@ -2078,7 +2078,9 @@ input.useDatepicker {
   .modal.full .modalWrap .modal-body {
     overflow-y: visible;
     padding: 0;
-    max-height: calc(100vh - 5.6rem);
+    height: calc(100vh - 5.6rem);
+    /* max-height: calc(100vh - 5.6rem); */
+    max-height: none;
   }
 
   .modal.full .modalWrap .modal-body.h-full {
