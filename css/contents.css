@@ -3947,6 +3947,7 @@ h5.cont-title + .txt-list {
 }
 
 .footer-user-guide .guide-tab-title {
+  margin-top: 6.4rem;
 	font-size: 40px;
 	font-weight: var(--font-Noto-bold);
 	line-height: 150%; 
@@ -3958,12 +3959,8 @@ h5.cont-title + .txt-list {
 	margin-top: 5.6rem !important;
 }
 
-.footer-user-guide .guide-tab-title {
-  margin-top: 6.4rem;
-}
-
 .footer-user-guide .tab-total .tab-panel-inner {
-  padding-top: 5.6rem;
+  padding: 5.6rem 1.6rem 0;
 }
 
 .footer-user-guide .tab-total .guide-tab-title {
@@ -5034,6 +5031,12 @@ h5.cont-title + .txt-list {
   .content-wrap .csa-training-guide-tab .csa-training-guide1 .cont-head ~ .cont-head {
     margin-top: 4rem !important;
   }
+
+  /* 이용자 가이드 */
+  .footer-user-guide .guide-tab-title {
+    padding: 0 1.6rem;
+  }
+
 } /* 1079 */
 
 /* ==================================================== Break Point ==================================================== */
@@ -6605,6 +6608,32 @@ h5.cont-title + .txt-list {
     padding-left: 3.2rem;
     max-height: none;
   }
+
+  /* 이용자 가이드 */
+  .footer-user-guide .guide-tab-title {
+    font-size: 32px;
+  }
+  .footer-user-guide .guide-tab-title + .tab-innerdouble {
+    margin-top: 3.2rem !important;
+  }
+  .footer-user-guide .tab-innerdouble .tab-panel-inner {
+    padding: 3.2rem 0;
+  }
+  .footer-user-guide .guide-page-title {
+    font-size: 20px;
+  }
+  .footer-user-guide .guide-page-description {
+    font-size: 16px;
+  }
+  .footer-user-guide .guide-section-title {
+    font-size: 18px;
+}
+.footer-user-guide .guide-section-paragraph {
+  font-size: 1.5rem;
+}
+.footer-user-guide .tab-total .tab-panel-inner {
+  padding: 4rem 1.6rem 0;
+}
 } /* 767px */
 
 @media screen and (max-width: 768px) {

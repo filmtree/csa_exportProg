@@ -2087,9 +2087,9 @@ input.useDatepicker {
 
   .modalWrap .modal-body .modal-body-inner {
     padding: 4rem 3.2rem;
-    height: calc(100vh - 5.6rem);
-    overflow: hidden;
-    overflow-y: auto;
+    /* height: calc(100vh - 5.6rem); */
+    height: 100%;
+    
   }
 
   .modal.full .modalWrap:has(.modal-footer) .modal-body .modal-body-inner {
@@ -2129,7 +2129,7 @@ input.useDatepicker {
   }
 	.modal.full .modalWrap .modal-body.modal-tab .modal-body-inner {
 		padding: 0;
-    overflow: auto; 
+    /* overflow: auto;  */
   }
 
   .modal-tab .tab-innerdouble {
@@ -2551,9 +2551,11 @@ input.useDatepicker {
   }
 
   .modal.full .modalWrap .modal-body .modal-body-inner {
-    height: calc(100vh - 5.6rem);
+    /* height: calc(100vh - 5.6rem); */
+    height: 100%;
     padding: 4rem 3.2rem;
     overflow-y: auto;
+    overflow-x: hidden;
   }
 
 	.modal.full .modalWrap .modal-body.modal-tab .tabWrap {
