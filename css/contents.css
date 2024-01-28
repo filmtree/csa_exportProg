@@ -3946,20 +3946,32 @@ h5.cont-title + .txt-list {
 	min-height: 61.6rem;
 }
 
-.footer-user-guide .page-title {
+.footer-user-guide .guide-tab-title {
+  margin-top: 6.4rem;
 	font-size: 40px;
 	font-weight: var(--font-Noto-bold);
 	line-height: 150%; 
 	letter-spacing: -2px;
 	color: #222222;
 }
-.footer-user-guide .tab-title + .tab-innerdouble {
+
+.footer-user-guide .guide-tab-title + .tab-innerdouble {
 	margin-top: 5.6rem !important;
 }
-.footer-user-guide .tab-pannel-inner {
-	margin: 4rem 0;
+
+.footer-user-guide .tab-total .tab-panel-inner {
+  padding: 5.6rem 1.6rem 0;
 }
-.footer-user-guide .page-title {
+
+.footer-user-guide .tab-total .guide-tab-title {
+  margin-top:0;
+}
+
+.footer-user-guide .tab-innerdouble .tab-panel-inner {
+	padding: 4rem 0;
+}
+
+.footer-user-guide .guide-page-title {
 	position: relative;
 	display:inline-block;
 	font-size: 24px;
@@ -3968,8 +3980,10 @@ h5.cont-title + .txt-list {
 	letter-spacing: -1.2px;
 	color: var(--color-primary);
 }
-
-.footer-user-guide .page-title::after {
+.footer-user-guide .guide-page-title ~ .guide-page-title {
+  margin-top: 4.8rem;
+}
+.footer-user-guide .guide-page-title::after {
 	content: "";
 	position: absolute;
 	width: 7px;
@@ -3980,23 +3994,106 @@ h5.cont-title + .txt-list {
 	background-color: var(--color-primary);
 }
 
-.footer-user-guide .page-description {
+.footer-user-guide .guide-page-description {
 	margin-top: 1.6rem;
 	font-size: 18px;
 	font-weight: 400;
-	line-height: 150%;
+	line-height: 1.5;
 	letter-spacing: -0.9px;
 }
-.footer-user-guide .section-title {
+.footer-user-guide .guide-section-title {
 	margin-top: 4rem;
-	font-size: 17px;
-	font-weight: var()--font-Noto-bold;
-	line-height: 160%;
+	font-size: 20px;
+	font-weight: var(--font-Noto-bold);
+	line-height: 1.6;
 	letter-spacing: -0.85px;
 }
 
-.footer-user-guide .section-paragraph {
+.footer-user-guide .guide-section-list-title {
 	margin-top: 1.6rem;
+	font-size: 18px;
+	font-weight: var(--font-Noto-medium);
+	line-height: 1.5;
+	letter-spacing: -0.9px;
+}
+
+.footer-user-guide .guide-section-list {
+  margin-top: .8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-user-guide .guide-section-list > li {
+  position: relative;
+  padding-left: 1.1rem;
+	font-size: 1.7rem;
+	font-weight: var(--font-Noto-regular);
+	line-height: 1.6;
+	letter-spacing: -0.85px;
+  color: var(--color-base);
+}
+
+.footer-user-guide .guide-section-list > li::before {
+  content: "";
+  position: absolute;
+  top: 1.3rem;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: var(--color-base);
+}
+
+* + .guide-section-numlist {
+  margin-top: 2.4rem;
+}
+
+.footer-user-guide .guide-section-numlist {
+  counter-reset: section-numlist;
+}
+
+.footer-user-guide .guide-section-numlist li {
+  position: relative;
+  padding-left: 3.4rem;
+  font-size: 1.7rem;
+  line-height: 1.6;
+  letter-spacing: .85px;
+}
+.footer-user-guide .guide-section-numlist li:not(:first-child) {
+  margin-top: 1.6rem;
+}
+.footer-user-guide .guide-section-numlist li::before {
+  counter-increment: section-numlist; 
+  content: counter(section-numlist); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  font-size: 1.4rem;
+  line-height: 24px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer-user-guide .guide-section-paragraph {
+	margin-top: 1.6rem;
+  font-size: 1.7rem;
+  line-height: 1.5;
+}
+
+/* 배우자 예상연금 조회 절차 */
+.title-version {
+  color: var(--color-gray2);
+  font-weight: 500;
+}
+.txt-list.border {
+  border-top: 1px var(--color-gray2) solid;
+  padding: 16px 0;
+  border-bottom: 1px var(--ui-colr3) solid;
 }
 
 
@@ -4831,7 +4928,7 @@ h5.cont-title + .txt-list {
 
   /* 재무진단 - 국민연금 알아보기 Mobile */
   .btn-group.consulting-link {
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
   .form-group-txt.select2-btn2 {
     flex-wrap: nowrap;
@@ -4845,7 +4942,7 @@ h5.cont-title + .txt-list {
     margin: 0 !important;
   }
   .about-national-pension-tab .tc01,
-  .about-national-pension-tab .tab02 {
+  .about-national-pension-tab .tc02 {
     padding-top: 16rem !important;
   }
   .divide-type:has(.txt-helper-title) {
@@ -4934,6 +5031,12 @@ h5.cont-title + .txt-list {
   .content-wrap .csa-training-guide-tab .csa-training-guide1 .cont-head ~ .cont-head {
     margin-top: 4rem !important;
   }
+
+  /* 이용자 가이드 */
+  .footer-user-guide .guide-tab-title {
+    padding: 0 1.6rem;
+  }
+
 } /* 1079 */
 
 /* ==================================================== Break Point ==================================================== */
@@ -5335,6 +5438,9 @@ h5.cont-title + .txt-list {
   .txt-list.fs16 li,
   .txt-list.fs17 li {
     font-size: 1.4rem;
+  }
+  .txt-list.fs17 li::before {
+    top: 1rem !important;
   }
   .txt-list > li + li {
     margin-top: 0.4rem;
@@ -6167,8 +6273,12 @@ h5.cont-title + .txt-list {
   .tab-innerdouble .double-tab li {
     height: 38px;
   }
+  
   .tab-innerdouble .double-tab a {
     font-size: 14px;
+    border-radius: 0 !important;
+    min-width: 14rem;
+    border: 1px var(--ui-colr2) solid;
   }
 
   .smcolor1 {
@@ -6304,14 +6414,29 @@ h5.cont-title + .txt-list {
 
   /* 재무진단 - 국민연금 알아보기 Mobile */
   .btn-group.consulting-link {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 0.4rem;
-    margin-top: 2rem;
+    padding-top: 4rem;
     padding: 0.8rem;
     min-width: 30rem;
   }
+  
+  .btn-group.consulting-link:has([class*="button-"]:only-child) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .btn-group.consulting-link [class*="button-"].w160px {
+    width: 100% !important;
+  }
+
+  .subscription-history-inquiry .divide-type {
+    flex-wrap: wrap;
+    row-gap: .8rem;
+  }
+
 
   /* Response Modify SM */
   .tabNav + .btn-group.consulting-link {
@@ -6328,7 +6453,7 @@ h5.cont-title + .txt-list {
     margin-top: 0 !important;
   }
   .about-national-pension-tab .tc01,
-  .about-national-pension-tab .tab02 {
+  .about-national-pension-tab .tc02 {
     padding-top: 20rem !important;
   }
 
@@ -6483,6 +6608,32 @@ h5.cont-title + .txt-list {
     padding-left: 3.2rem;
     max-height: none;
   }
+
+  /* 이용자 가이드 */
+  .footer-user-guide .guide-tab-title {
+    font-size: 32px;
+  }
+  .footer-user-guide .guide-tab-title + .tab-innerdouble {
+    margin-top: 3.2rem !important;
+  }
+  .footer-user-guide .tab-innerdouble .tab-panel-inner {
+    padding: 3.2rem 0;
+  }
+  .footer-user-guide .guide-page-title {
+    font-size: 20px;
+  }
+  .footer-user-guide .guide-page-description {
+    font-size: 16px;
+  }
+  .footer-user-guide .guide-section-title {
+    font-size: 18px;
+}
+.footer-user-guide .guide-section-paragraph {
+  font-size: 1.5rem;
+}
+.footer-user-guide .tab-total .tab-panel-inner {
+  padding: 4rem 1.6rem 0;
+}
 } /* 767px */
 
 @media screen and (max-width: 768px) {

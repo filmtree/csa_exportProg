@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Title</title>
-
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
     <script src="../../js/lib/jquery-3.7.0.min.js"></script>
     <script src="../../js/lib/jquery-ui.min.js"></script>
     <script src="../../js/lib/jquery.easing.min.js"></script>
@@ -14,10 +15,6 @@
     <script src="../../js/zoom.js"></script>
     <script src="../../js/ui_temp.js"></script>
     <script src="../../js/ui_common.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
-    <style></style>
   </head>
   <body>
     <button type="button" class="button-primary" id="modalOpenButton">Open</button>
@@ -36,6 +33,7 @@
 
         <!-- s: Modal Contents -->
         <div class="modal-body">
+          <div class="modal-body-inner">
             <div class="diagnosing-wrap">
               <button type="button" class="diagnosing-card before">
                 <h4 class="diagnosing-card-title">로그인 없이 진단하기</h4>
@@ -49,6 +47,7 @@
                   추후에 확인이 가능합니다.</p>
               </button>
             </div>
+          </div>
         </div>
         <!-- e: Modal Contents -->
 

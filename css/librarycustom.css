@@ -185,7 +185,7 @@
 /* mCustomScrollBar */
 
 .mCSB_inside>.mCSB_container {
-	margin-right: 0;
+	margin-right: 0 !important;
 }
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
 	background-color: rgba(0, 0, 0, .2);

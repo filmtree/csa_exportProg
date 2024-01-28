@@ -187,6 +187,20 @@ input[type="password"]:-webkit-input-placeholder {
   letter-spacing: 0;
 }
 
+/* 웹킷 브라우저 (예: 크롬, 사파리)용 */
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* Firefox 브라우저용 */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
 /* disabled 마우스 커서 */
 *[disabled], 
 .disabled, 
