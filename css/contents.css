@@ -4394,11 +4394,23 @@ h5.cont-title + .txt-list {
   width: 16rem;
 }
 
+/* 노후준비 서비스 */
+.service-contents-header {
+  display: grid;
+  column-gap: 5.6rem;
+  grid-template-columns: 50% calc(50% - 5.6rem);
+}
+
+.service-contents-header .service-contents-rightheader img {
+  width: 100%;
+}
+.service-4th-area {
+  margin-top: 5.6rem;
+}
+
 /* ==================================================== Break Point ==================================================== */
 
 @media screen and (max-width: 1079px) {
-
-
 
   .tab-total > [role="tabpanel"] {
     padding-top: 2.4rem !important;
