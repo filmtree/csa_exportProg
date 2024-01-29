@@ -19,7 +19,7 @@
   <body>
     <button type="button" class="button-primary" id="modalOpenButton">Open</button>
 
-    <div class="modal full dim active" id="modalTemplate">
+    <div class="modal full dim" id="modalTemplate">
       <div class="modalWrap footer-user-guide">
         <!-- s: Modal Header -->
         <div class="modal-header">
@@ -1443,15 +1443,15 @@
       </div>
     </div>
     <script>
-      commonUI.tabInnerNav(".t-depth-main", 4); // 홈페이지 안내, 로그인, 서비스 이용안내, 용어해설집
-      commonUI.tabInnerNav(".t-depth-homepage", 1); // 이용안내, 보안프로그램
-      commonUI.tabInnerNav(".t-depth-homepage-useinfo", 1); // 웹콘텐츠 접근성지침, 메뉴안내, 편리한서비스, 모바일홈페이지, 장애인지원
-      commonUI.tabInnerNav(".t-depth-login", 1); // 로그인 안내, 공인인증서 안내
-      commonUI.tabInnerNav(".t-depth-login-certi", 1); // 공인인증서란? 발급절차, 발급기관
-      commonUI.tabInnerNav(".t-depth-service", 1); // 내연금알아보기, 자가진단, 종합재무설계, 상담신청, 강의신청 탭
-      commonUI.tabInnerNav(".t-depth-service-mypension", 1); // 예상연금조회, 예상연금 모의계산
-      commonUI.tabInnerNav(".t-depth-service-mypension-expected", 1); // 노령연금조회, 상세연금조회
-      commonUI.tabInnerNav(".t-depth-service-mypension-comprehensive", 1); // 고객재무정보, 재무분석, 설계안수립
+      commonUI.tabInnerNav(".t-depth-main", 1); // 1.홈페이지 안내, 2.로그인, 3.서비스 이용안내, 4.용어해설집
+      commonUI.tabInnerNav(".t-depth-homepage", 1); // 1.이용안내, 2.보안프로그램
+      commonUI.tabInnerNav(".t-depth-homepage-useinfo", 1); // 1.웹콘텐츠 접근성지침, 2.메뉴안내, 3.편리한서비스, 4.모바일홈페이지, 5.장애인지원
+      commonUI.tabInnerNav(".t-depth-login", 1); // 1.로그인 안내, 2.공인인증서 안내
+      commonUI.tabInnerNav(".t-depth-login-certi", 1); // 1.공인인증서란?, 2.발급절차, 3.발급기관
+      commonUI.tabInnerNav(".t-depth-service", 1); // 1.내연금알아보기, 2.자가진단, 3.종합재무설계, 4.상담신청, 5.강의신청 탭
+      commonUI.tabInnerNav(".t-depth-service-mypension", 1); // 1.예상연금조회, 2.예상연금 모의계산
+      commonUI.tabInnerNav(".t-depth-service-mypension-expected", 1); // 1.노령연금조회, 2.상세연금조회
+      commonUI.tabInnerNav(".t-depth-service-mypension-comprehensive", 1); // 1.고객재무정보, 2.재무분석, 3.설계안수립
 
       document.querySelector("#modalOpenButton").addEventListener("click", () => {
         commonUI.modal("#modalTemplate", "#modalOpenButton");
