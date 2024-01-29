@@ -696,21 +696,17 @@ const commonUI = {
   },
   modalScrollBarCustom: function () {
 		
-		$modalScrollBox = $(".modal .modal-body");
-    if(!$modalScrollBox) return;
+		// $modalScrollBox = $(".modal .modal-body");
+    // if(!$modalScrollBox) return;
 		
-		$modalScrollBox.mCustomScrollbar({
-      // advanced: {
-      //   updateOnContentResize: true // 컨텐츠 크기 변경 시 자동으로 업데이트
-      // },
-    });
+		// $modalScrollBox.mCustomScrollbar();
 				
-		var $draggerContainer = $(".mCSB_draggerContainer");
-		var $draggerRail = $(".mCSB_draggerRail");
+		// var $draggerContainer = $(".mCSB_draggerContainer");
+		// var $draggerRail = $(".mCSB_draggerRail");
 		
-		if ($draggerContainer.length && $draggerRail.length) {
-			$draggerRail.detach().appendTo($draggerContainer);
-		}
+		// if ($draggerContainer.length && $draggerRail.length) {
+		// 	$draggerRail.detach().appendTo($draggerContainer);
+		// }
   }
 };
 
