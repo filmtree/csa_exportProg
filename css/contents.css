@@ -4130,6 +4130,9 @@ h5.cont-title + .txt-list {
   color: var(--color-gray2);
   font-weight: 500;
 }
+.title-version li {
+  min-height: 2.6rem;
+}
 .txt-list.border {
   border-top: 1px var(--color-gray2) solid;
   padding: 16px 0;

@@ -2896,12 +2896,23 @@ button,
 
 .con-table th,
 .con-table td {
-	height: 5.8rem;
+	height: 5.8rem;	
 	padding: .8rem 1.6rem;
 	border-right: 1px solid var(--ui-colr3);
 	border-bottom: 1px solid var(--ui-colr3);
 	overflow-wrap: break-word;
 }
+
+.mCustomScrollbar .con-table th,
+.mCustomScrollbar .con-table td {
+	height: 4.1rem;	
+	padding: .8rem 1.6rem;
+	border-right: 1px solid var(--ui-colr3);
+	border-bottom: 1px solid var(--ui-colr3);
+	overflow-wrap: break-word;
+	box-sizing: content-box;
+}
+
 .con-table.inp-small-padding td {
 	padding: .8rem .4rem;
 }
