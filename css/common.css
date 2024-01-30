@@ -30,6 +30,10 @@ picture img {
 	overflow: hidden;
 }
 
+.scroll-custom {
+	padding: .8rem 0;
+}
+
 /* ellipsis */
 .ellipsis {
 	overflow: hidden;
@@ -2709,6 +2713,10 @@ button,
 	padding: 0 .8rem;
 }
 
+.data-contents {
+  width: 100%;
+}
+
 .form-group-controls {
 	display: inline-flex;
 }
@@ -3210,6 +3218,10 @@ button,
 
 .data-info .data-set-group {
 	display: flex;
+}
+
+.data-info .data-set-group.date {
+	margin-left: auto;
 }
 
 .data-info .data-set-group .data-set + .data-set {

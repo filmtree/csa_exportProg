@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+  </head>
+  <body>
+    <button type="button" class="button-primary" id="modalOpenButton">Open</button>
+
+    <div class="modal full dim" id="modalTemplate">
+      <div class="modalWrap footer-user-guide">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">이용자 가이드</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body modal-tab">
+          <div class="modal-body-inner">
+            <!-- ===== s: Tab Depth1 ===== -->
+
+            <div class="tabWrap t-depth-main main-tab response">
+              <ul class="tabNav">
+                <li>
+                  <a href="#" id="userGuideTab1" role="tab">홈페이지 안내</a>
+                </li>
+                <li>
+                  <a href="#" id="userGuideTab2" role="tab">로그인</a>
+                </li>
+                <li>
+                  <a href="#" id="userGuideTab3" role="tab">서비스 이용안내</a>
+                </li>
+                <li>
+                  <a href="#" id="userGuideTab4" role="tab">용어해설집</a>
+                </li>
+              </ul>
+
+              <!-- ===== s: Tab 홈페이지 안내 Panel -->
+              <div class="tabContent homepage-info" role="tabpanel" aria-labelledby="userGuideTab1">
+                <!-- ===== s: 홈페이지 안내 ===== -->
+
+                <div class="t-depth-homepage tab-total">
+                  <ul class="tabNav">
+                    <li>
+                      <a href="#" id="userGuideTab1Use" role="tab">이용안내</a>
+                    </li>
+                    <li>
+                      <a href="#" id="userGuideTab1Program" role="tab">보안프로그램</a>
+                    </li>
+                  </ul>
+
+                  <!-- ===== s: Tab 홈페이지 안내 - 이용안내 Panel -->
+                  <div class="tabContent homepage-info-use" role="tabpanel" aria-labelledby="userGuideTab1Use">
+                    <h4 class="guide-tab-title">이용안내</h4>
+
+                    <!-- ===== s: 이용안내 Sub Tab ===== -->
+
+                    <div class="tab-innerdouble top">
+                      <div class="t-depth-homepage-useinfo tab-base">
+                        <ul class="innerTab double-tab">
+                          <li>
+                            <a href="#" id="userGuideTab1D1UseAcc" role="tab">웹 콘텐츠 접근성 지침</a>
+                          </li>
+                          <li>
+                            <a href="#" id="userGuideTab1D1UseMenu" role="tab">메뉴안내</a>
+                          </li>
+                          <li>
+                            <a href="#" id="userGuideTab1D1UseService" role="tab">편리한 서비스</a>
+                          </li>
+                          <li>
+                            <a href="#" id="userGuideTab1D1UseMobile" role="tab">모바일 홈페이지</a>
+                          </li>
+                          <li>
+                            <a href="#" id="userGuideTab1D1UseSupport" role="tab">장애인지원</a>
+                          </li>
+                        </ul>
+
+                        <!-- ===== s: UHKA0104P0 Tab 홈페이지 안내 - 이용안내 - 웹 콘텐츠 접근성 지침 Panel -->
+                        <div class="double-contents homepage-accessiblility" role="tabpanel" aria-labelledby="userGuideTab1D1UseAcc">
+                        </div>
+                        <!-- ===== e: UHKA0104P0 Tab 홈페이지 안내 - 이용안내 - 웹 콘텐츠 접근성 지침 Panel -->
+
+                        <!-- ===== s: UHKA0105P0 Tab 홈페이지 안내 - 이용안내 - 메뉴안내 Panel -->
+                        <div class="double-contents homepage-menu-info" role="tabpanel" aria-labelledby="userGuideTab1D1UseMenu">
+                        </div>
+                        <!-- ===== e: UHKA0105P0 Tab 홈페이지 안내 - 이용안내 - 메뉴안내 Panel -->
+
+                        <!-- ===== s: UHKA0106P0 Tab 홈페이지 안내 - 이용안내 - 편리한 서비스 Panel -->
+                        <div class="double-contents homepage-service" role="tabpanel" aria-labelledby="userGuideTab1D1UseService">
+                        </div>
+                        <!-- ===== e: UHKA0106P0 Tab 홈페이지 안내 - 이용안내 - 편리한 서비스 Panel -->
+
+                        <!-- ===== s: UHKA0107P0 Tab 홈페이지 안내 - 이용안내 - 모바일 홈페이지 Panel -->
+                        <div class="double-contents homepage-mobile" role="tabpanel" aria-labelledby="userGuideTab1D1UseMobile">
+                        </div>
+                        <!-- ===== e: UHKA0107P0 Tab 홈페이지 안내 - 이용안내 - 모바일 홈페이지 Panel -->
+
+                        <!-- ===== s: UHKA0108P0 Tab 홈페이지 안내 - 이용안내 - 장애인 지원 Panel -->
+                        <div class="double-contents homepage-support" role="tabpanel" aria-labelledby="userGuideTab1D1UseSupport">
+                        </div>
+                        <!-- ===== e: UHKA0108P0 Tab 홈페이지 안내 - 이용안내 - 장애인 지원 Panel -->
+                      </div>
+                    </div>
+
+                    <!-- ===== e: 이용안내 Sub Tab ===== -->
+                  </div>
+                  <!-- ===== e: Tab 홈페이지 안내 - 이용안내 Panel -->
+
+                  <!-- ===== s: UHKA0109P0 Tab 홈페이지 안내 - 보안프로그램 Panel -->
+                  <div class="tabContent homepage-secure" role="tabpanel" aria-labelledby="userGuideTab1Program">
+                  </div>
+                  <!-- ===== e: UHKA0109P0 Tab 홈페이지 안내 - 보안프로그램 Panel -->
+                </div>
+                <!-- ===== e: 홈페이지 안내 =====-->
+              </div>
+              <!-- ===== e: Tab 홈페이지 안내 Panel -->
+
+              <!-- ===== s: Tab 로그인 Panel -->
+              <div class="tabContent use-login" role="tabpanel" aria-labelledby="userGuideTab2">
+                <!-- ===== s: Tab 로그인 ===== -->
+
+                <div class="t-depth-login tab-total">
+                  <ul class="tabNav">
+                    <li>
+                      <a href="#" id="userGuideTab2Login" role="tab">로그인 안내</a>
+                    </li>
+                    <li>
+                      <a href="#" id="userGuideTab2Certi" role="tab">공인인증서 안내</a>
+                    </li>
+                  </ul>
+
+                  <!-- ===== s: UHKA0110P0 로그인 - 로그인 안내 ===== -->
+                  <div class="tabContent login-info" role="tabpanel" aria-labelledby="userGuideTab2Login">
+                  </div>
+                  <!-- ===== e: UHKA0110P0 로그인 - 로그인 안내 ===== -->
+
+                  <!-- ===== s: 로그인 - 공인인증서 안내 ===== -->
+                  <div class="tabContent login-certification" role="tabpanel" aria-labelledby="userGuideTab2Certi">
+                    <h4 class="guide-tab-title">공인인증서 안내</h4>
+
+                    <div class="tab-innerdouble top">
+                      <div class="t-depth-login-certi tab-base">
+                        <ul class="innerTab double-tab">
+                          <li>
+                            <a href="#" id="userGuideTab2CertiAbout" role="tab">공인인증서란?</a>
+                          </li>
+                          <li>
+                            <a href="#" id="userGuideTab2CertiSteps" role="tab">발급절차</a>
+                          </li>
+                          <li>
+                            <a href="#" id="userGuideTab2CertiOrg" role="tab">발급기관</a>
+                          </li>
+                        </ul>
+
+                        <!-- ===== s: UHKA0111P0 로그인 - 공인인증서 안내 - 공인인증서란? ===== -->
+                        <div class="double-contents login-certi-about" role="tabpanel" aria-labelledby="userGuideTab2CertiAbout">
+                        </div>
+                        <!-- ===== e: UHKA0111P0 로그인 - 공인인증서 안내 - 공인인증서란? ===== -->
+
+                        <!-- ===== s: UHKA0112P0 로그인 - 공인인증서 안내 - 발급절차 ===== -->
+                        <div class="double-contents login-certi-step" role="tabpanel" aria-labelledby="userGuideTab2CertiSteps">
+                        </div>
+                        <!-- ===== e: UHKA0112P0 로그인 - 공인인증서 안내 - 발급절차 ===== -->
+
+                        <!-- ===== s: UHKA0113P0 로그인 - 공인인증서 안내 - 발급기관 ===== -->
+                        <div class="double-contents login-certi-org" role="tabpanel" aria-labelledby="userGuideTab2CertiOrg">
+                        </div>
+                        <!-- ===== e: UHKA0113P0 로그인 - 공인인증서 안내 - 발급기관 ===== -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ===== e: 로그인 - 공인인증서 안내 ===== -->
+                </div>
+
+                <!-- ===== e: Tab 로그인 =====-->
+              </div>
+              <!-- ===== e: Tab 로그인 Panel -->
+
+              <!-- ===== s: Tab 서비스 이용안내 Panel -->
+              <div class="tabContent service-useinfo" role="tabpanel" aria-labelledby="userGuideTab3">
+                <!-- ===== s: Tab 서비스 이용안내 ===== -->
+
+                <div class="t-depth-service tab-total">
+                  <ul class="tabNav">
+                    <li>
+                      <a href="#" id="userGuideTab3MyPens" role="tab">내연금알아보기</a>
+                    </li>
+                    <li>
+                      <a href="#" id="userGuideTab3Self" role="tab">자가진단</a>
+                    </li>
+                    <li>
+                      <a href="#" id="userGuideTab3Total" role="tab">종합재무설계</a>
+                    </li>
+                    <li>
+                      <a href="#" id="userGuideTab3Counsel" role="tab">상담신청</a>
+                    </li>
+                    <li>
+                      <a href="#" id="userGuideTab3Lect" role="tab">강의신청</a>
+                    </li>
+                  </ul>
+
+                  <!-- ===== s: 서비스 이용안내 - 내연금알아보기 ===== -->
+
+                  <div class="tabContent service-mypension" role="tabpanel" aria-labelledby="userGuideTab3MyPens">
+                    <div class="wrap-inner">
+                      <div class="t-depth-service-mypension tab-base">
+                        <ul class="inner-tab">
+                          <li>
+                            <a href="#tabNav1-1" id="userGuideTab3MyPensSearch" role="tab">예상연금조회</a>
+                          </li>
+                          <li>
+                            <a href="#tabNav1-2" id="userGuideTab3MyPensCalc" role="tab">예상연금 모의계산</a>
+                          </li>
+                        </ul>
+
+                        <!-- ===== s: 서비스 이용안내 - 내연금알아보기 - 예상연금조회 -->
+
+                        <div class="inner-contents service-expected" role="tabpanel" aria-labelledby="userGuideTab3MyPensSearch">
+                          <h4 class="guide-tab-title">예상연금조회</h4>
+                          <div class="tab-innerdouble top">
+                            <div class="t-depth-service-mypension-expected tab-base">
+                              <ul class="innerTab double-tab">
+                                <li>
+                                  <a href="#" id="userGuideTab3MyPensSearchOld" role="tab">노령연금조회</a>
+                                </li>
+                                <li>
+                                  <a href="#" id="userGuideTab3MyPensSearchDetail" role="tab">상세연금조회</a>
+                                </li>
+                              </ul>
+
+                              <!-- ===== s: UHKA0114P0 서비스 이용안내 - 내연금알아보기 - 예상연금조회 - 노령연금조회 ===== -->
+                              <div class="double-contents service-oldage" role="tabpanel" aria-labelledby="userGuideTab3MyPensSearchOld">
+                              </div>
+                              <!-- ===== e: UHKA0114P0 서비스 이용안내 - 내연금알아보기 - 예상연금조회 - 노령연금조회 ===== -->
+
+                              <!-- ===== s: UHKA0115P0 서비스 이용안내 - 내연금알아보기 - 예상연금조회 - 상세연금조회===== -->
+                              <div class="double-contents service-detailed" role="tabpanel" aria-labelledby="userGuideTab3MyPensSearchDetail">
+                              </div>
+                              <!-- ===== e: UHKA0115P0 서비스 이용안내 - 내연금알아보기 - 예상연금조회 - 상세연금조회===== -->
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- ===== e: 서비스 이용안내 - 내연금알아보기 - 예상연금조회 -->
+
+                        <!-- ===== s: UHKA0116P0 서비스 이용안내 - 내연금알아보기 예상연금 모의계산 -->
+                        <div class="inner-contents service-estimated" role="tabpanel" aria-labelledby="userGuideTab3MyPensCalc">
+                        </div>
+                        <!-- ===== e: UHKA0116P0 서비스 이용안내 - 내연금알아보기 예상연금 모의계산 -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ===== e: 서비스 이용안내 - 내연금알아보기 ===== -->
+
+                  <!-- ===== s: UHKA0117P0 서비스 이용안내 - 자가진단 ===== -->
+                  <div class="inner-contents service-selfdiag" role="tabpanel" aria-labelledby="userGuideTab3Self">
+                  </div>
+                  <!-- ===== e: UHKA0117P0 서비스 이용안내 - 자가진단 ===== -->
+
+                  <!-- ===== s: 서비스 이용안내 - 종합재무설계 ===== -->
+                  <div class="tabContent service-comprehensive" role="tabpanel" aria-labelledby="userGuideTab3Total">
+                    <div class="wrap-inner">
+                      <div class="t-depth-service-mypension-comprehensive tab-base">
+                        <ul class="inner-tab">
+                          <li>
+                            <a href="#" id="userGuideTab3TotalCustom" role="tab">고객재무정보</a>
+                          </li>
+                          <li>
+                            <a href="#" id="userGuideTab3TotalAnal" role="tab">재무분석</a>
+                          </li>
+                          <li>
+                            <a href="#" id="userGuideTab3TotalStr" role="tab">설계안수립</a>
+                          </li>
+                        </ul>
+
+                        <!-- ===== s: UHKA0118P0 서비스 이용안내 - 종합재무설계 - 고객재무정보 ===== -->
+                        <div class="inner-contents service-customer" role="tabpanel" aria-labelledby="serGuideTab3TotalCustom">
+                        </div>
+                        <!-- ===== e: UHKA0118P0 서비스 이용안내 - 종합재무설계 - 고객재무정보 ===== -->
+
+                        <!-- ===== s: UHKA0119P0 서비스 이용안내 - 종합재무설계 - 재무분석 ===== -->
+                        <div class="inner-contents service-financial" role="tabpanel" aria-labelledby="userGuideTab3TotalAnal">
+                        </div>
+                        <!-- ===== e: UHKA0119P0 서비스 이용안내 - 종합재무설계 - 재무분석 ===== -->
+
+                        <!-- ===== s: UHKA0120P0 서비스 이용안내 - 종합재무설계 - 설계안수립 ===== -->
+                        <div class="inner-contents service-designplan" role="tabpanel" aria-labelledby="userGuideTab3TotalStr">
+                        </div>
+                        <!-- ===== e: UHKA0120P0 서비스 이용안내 - 종합재무설계 - 설계안수립 ===== -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ===== e: 서비스 이용안내 - 종합재무설계 ===== -->
+
+                  <!-- ===== s: UHKA0121P0 서비스 이용안내 - 상담신청 ===== -->
+                  <div class="inner-contents service-consultation" role="tabpanel" aria-labelledby="userGuideTab3Counsel">
+                  </div>
+                  <!-- ===== e: UHKA0121P0 서비스 이용안내 - 상담신청 ===== -->
+
+                  <!-- ===== s: UHKA0122P0 서비스 이용안내 - 강의신청 ===== -->
+                  <div class="inner-contents service-lecture" role="tabpanel" aria-labelledby="userGuideTab3Lect">
+                  </div>
+                  <!-- ===== e: UHKA0122P0 서비스 이용안내 - 강의신청 ===== -->
+                </div>
+
+                <!-- ===== e: Tab 서비스 이용안내 ===== -->
+              </div>
+              <!-- ===== e: Tab 서비스 이용안내 Panel -->
+
+              <!-- ===== s: UHKA0103P0 Tab 용어해설집 Panel -->
+              <div class="tabContent service-glossary" role="tabpanel" aria-labelledby="userGuideTab4">
+                <h4 class="guide-tab-title">용어해설집</h4>
+                <div class="tab-panel-inner term-search-wrap">
+                  <!-- s: Search Box -->
+                  <div class="searchbox-wrap board-search-basic">
+                    <div class="searchbox term-searchbox">
+                      <h5 class="term-searchbox-title">검색하기</h5>
+                      <div class="form-group">
+                        <select class="slct-type min-w160px" aria-label="작성자 선택">
+                          <option value="">전체</option>
+                          <option value="">관리자</option>
+                        </select>
+                        <input type="text" placeholder="내용을 입력해주세요" class="inp-content w-flexible" aria-label="CSA시험 및 결과 검색 입력" />
+                        <button type="button" class="button-primary btn-search min-w80px">검색</button>
+                      </div>
+                      <p class="term-search-result-text">'전체'에 대한 결과 <span class="fc-primary">557개</span>가 있습니다.</p>
+                      <div class="term-search-index">
+                        <ol>
+                          <li><button type="button" class="term-index-item">가</button></li>
+                          <li><button type="button" class="term-index-item">나</button></li>
+                          <li><button type="button" class="term-index-item">다</button></li>
+                          <li><button type="button" class="term-index-item">라</button></li>
+                          <li><button type="button" class="term-index-item">마</button></li>
+                          <li><button type="button" class="term-index-item">바</button></li>
+                          <li><button type="button" class="term-index-item">사</button></li>
+                          <li><button type="button" class="term-index-item">아</button></li>
+                          <li><button type="button" class="term-index-item">자</button></li>
+                          <li><button type="button" class="term-index-item">차</button></li>
+                          <li><button type="button" class="term-index-item">카</button></li>
+                          <li><button type="button" class="term-index-item">타</button></li>
+                          <li><button type="button" class="term-index-item">파</button></li>
+                          <li><button type="button" class="term-index-item">하</button></li>
+                          <li><button type="button" class="term-index-item all">A~Z</button></li>
+                          <li><button type="button" class="term-index-item all">0~9</button></li>
+                          <li><button type="button" class="term-index-item all active">전체보기</button></li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- e: Search Box -->
+
+                  <!-- s: Search Result -->
+                  <div class="term-search-result">
+                    <div class="term-search-inner">
+                      <h5 class="term-searchbox-title">검색결과</h5>
+                      <div class="term-result-container">
+                        <div class="term-result-list-box scroll-custom">
+                          <ul class="term-result-list">
+                            <li><button type="button">부동산 기획대출 PF : Project Financing</button></li>
+                            <li><button type="button">부동산 담보대출</button></li>
+                            <li><button type="button">부동산펀드</button></li>
+                            <li><button type="button">부양가족연금액</button></li>
+                            <li><button type="button">부원 (部員)</button></li>
+                            <li><button type="button">부화업</button></li>
+                            <li><button type="button">분기납</button></li>
+                            <li><button type="button">2 이상 적용 사업장가입자</button></li>
+                            <li><button type="button">5%보고(주식 등의 대량보유상황보고)</button></li>
+                            <li><button type="button">A값</button></li>
+                            <li><button type="button">BIS자기자본비율</button></li>
+                            <li><button type="button">B값</button></li>
+                            <li><button type="button">CBO(후순위채)펀드</button></li>
+                            <li><button type="button">CD금리</button></li>
+                            <li><button type="button">CI보험</button></li>
+                            <li><button type="button">2 이상 적용 사업장가입자</button></li>
+                            <li><button type="button">5%보고(주식 등의 대량보유상황보고)</button></li>
+                            <li><button type="button">A값</button></li>
+                            <li><button type="button">BIS자기자본비율</button></li>
+                            <li><button type="button">B값</button></li>
+                            <li><button type="button">CBO(후순위채)펀드</button></li>
+                            <li><button type="button">CD금리</button></li>
+                            <li><button type="button">CI보험</button></li>
+                          </ul>
+                        </div>
+                        <div class="term-result-contents">
+                          <h6 class="term-result-word">부동산 기획대출 PF : Project Financing</h6>
+                          <p class="term-result-description">
+                            부동산개발 관련 특정 프로젝트의 사업성을 평가하여 그 사업에서 발생할 미래 현금흐름(Cash Flow)을 제공된 차입원리금의 주된 상환재원으로 하는 대출을 의미한다. 사업자 대출 중 부동산개발을 전제로 한 일체의 토지매입 자금대출, 형식상 수분양자 중도금대출이나 사실상 부동산개발 관련 기성고대출, 부동산개발 관련 시공사에 대한 대출(어음할인 포함)중 사업부지 매입 및 해당 사업부지 개발에 소요되는 대출(운전자금 및 대환자금대출 제외)이 이에 포함된다.출처 : 금감원 금융교실
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- e: Search Result -->
+                </div>
+              </div>
+              <!-- ===== e: UHKA0103P0 Tab 용어해설집 Panel -->
+            </div>
+            <!-- ===== e: Tab Depth1 ===== -->
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+      </div>
+    </div>
+    <script>
+      // commonUI.tabInnerNav(".t-depth-main", 4); // 1.홈페이지 안내, 2.로그인, 3.서비스 이용안내, 4.용어해설집
+      commonUI.tabInnerNav(".t-depth-homepage", 1); // 1.이용안내, 2.보안프로그램
+      commonUI.tabInnerNav(".t-depth-homepage-useinfo", 1); // 1.웹콘텐츠 접근성지침, 2.메뉴안내, 3.편리한서비스, 4.모바일홈페이지, 5.장애인지원
+      commonUI.tabInnerNav(".t-depth-login", 1); // 1.로그인 안내, 2.공인인증서 안내
+      commonUI.tabInnerNav(".t-depth-login-certi", 1); // 1.공인인증서란?, 2.발급절차, 3.발급기관
+      commonUI.tabInnerNav(".t-depth-service", 1); // 1.내연금알아보기, 2.자가진단, 3.종합재무설계, 4.상담신청, 5.강의신청 탭
+      commonUI.tabInnerNav(".t-depth-service-mypension", 1); // 1.예상연금조회, 2.예상연금 모의계산
+      commonUI.tabInnerNav(".t-depth-service-mypension-expected", 1); // 1.노령연금조회, 2.상세연금조회
+      commonUI.tabInnerNav(".t-depth-service-mypension-comprehensive", 1); // 1.고객재무정보, 2.재무분석, 3.설계안수립
+
+      document.querySelector("#modalOpenButton").addEventListener("click", () => {
+        commonUI.modal("#modalTemplate", "#modalOpenButton");
+        commonUI.tabInnerNav(".t-depth-main", 4); // 1.홈페이지 안내, 2.로그인, 3.서비스 이용안내, 4.용어해설집
+      });
+    </script>
+  </body>
+</html>
