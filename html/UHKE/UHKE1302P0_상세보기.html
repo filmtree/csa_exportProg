@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Title</title>
+
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <button type="button" class="button-primary" id="modalOpenButton">Open</button>
+
+    <div class="modal full dim active" id="modalTemplate">
+      <div class="modalWrap">
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">기초연금</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner relation-service-detail">
+            <p class="desc-txt">생활이 어려운 어르신에게 안정적인 소득기반을 제공하여 생활안정을 지원하는 서비스입니다.</p>
+            <ul>
+              <li class="relation-qnalist">
+                <p class="relation-question-title">
+                  <span class="relation-ic-q">Q</span>
+                  누가해당되나요?
+                </p>
+                <div class="relation-question-answer">
+                  <em class="relation-ic-a">A</em>
+                  <div class="relation-answer-wrap">
+                    <p>만 65세 이상, 한국 국적을 가지고 있는 국내 거주 어르신 중 가구의 소득인정액이 선정기준액 이하인 경우 해당됩니다.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="relation-qnalist">
+                <p class="relation-question-title">
+                  <em class="relation-ic-q">Q</em>
+                  무엇을 받을 수있나요?/어떤서비스인가요?
+                </p>
+                <div class="relation-question-answer">
+                  <em class="relation-ic-a">A</em>
+                  <div class="relation-answer-wrap">
+                    <p>매월 현금지급</p>
+                    <ul>
+                      <li>- 단, 소득수준이 상대적으로 높거나 부부 모두가 기초연금을 받는 경우 감액되어 지급될 수 있습니다.
+                        <ul class="txt-list dot small fz14 gray">
+                          <li>직역연금 수급권자 및 그 배우자는 기초연금 수급대상에서 제외하나, 특례대상과 예외대상은 수급권자의 범위에 포함됩니다.</li>
+                          <li>자세한 사항은 읍/면/동 행정복지센터에 문의바랍니다.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="relation-qnalist">
+                <p class="relation-question-title">
+                  <em class="relation-ic-q">Q</em>
+                  어떻게신청하나요?
+                </p>
+                <div class="relation-question-answer">
+                  <em class="relation-ic-a">A</em>
+                  <div class="relation-answer-wrap">
+                    <p>주소지 관할 행정복지센터(주민센터) 또는 국민연금공단 지사를 방문하세요.</p>
+                    <p>인터넷(www.bokjiro.go.kr) 으로도 신청이 가능합니다.</p>
+                    <ul>
+                      <li>- 단, 소득수준이 상대적으로 높거나 부부 모두가 기초연금을 받는 경우 감액되어 지급될 수 있습니다.
+                        <ul class="txt-list dot small fz14 gray">
+                          <li>만 65세 생일이 속하는 달의 1개월 전부터 접수가 가능합니다. (준비물 : 신분증, 통장 사본)</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="relation-qnalist">
+                <p class="relation-question-title">
+                  <em class="relation-ic-q">Q</em>
+                  더 자세한내용을알고싶어요!
+                </p>
+                <div class="relation-question-answer">
+                  <em class="relation-ic-a">A</em>
+                  <div class="relation-answer-wrap">
+                    <p>보건복지부 콜센터(☎129) 또는 국민연금공단 콜센터(☎1355) 로 전화주세요.</p>
+                    <p>기초연금 홈페이지(www.basicpension.mohw.go.kr) 를 참고하세요.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+      </div>
+    </div>
+    <script>
+      document.querySelector("#modalOpenButton").addEventListener("click", () => {
+        commonUI.modal("#modalTemplate", "#modalOpenButton");
+      });
+    </script>
+  </body>
+</html>

@@ -214,7 +214,8 @@ input[type="number"] {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;  
+  width: 8px;  
+  height: 8px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: rgba(102, 102, 102, 0.20);
@@ -224,7 +225,6 @@ input[type="number"] {
 ::-webkit-scrollbar-track {
   background-color: #FFFFFF; 
   border-radius: 10px;
-  padding: 2px;  
   /* box-shadow: inset 0px 0px 5px white; */
 }
 

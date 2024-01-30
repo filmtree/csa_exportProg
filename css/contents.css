@@ -124,6 +124,17 @@
   padding-top: 0;
   padding-bottom: 2.4rem;
 }
+.board-search-preparation .searchbox {
+  display: flex;
+  gap: 2.4rem;
+
+}
+.board-search-preparation .searchbox .form-group {
+  width: 100%;
+  border-bottom: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+}
 .searchbox .form-group:only-child {
   border: none;
   padding-bottom: 0;
@@ -163,9 +174,6 @@
 
 .opt-name-registration .form-group + .form-group {
   padding: 0;
-}
-
-.opt-name-registration .form-group.my-certificate {
 }
 
 .opt-name-registration .form-group.my-certificate select {
@@ -4597,14 +4605,208 @@ h5.cont-title + .txt-list {
   line-height: 1.6;
   letter-spacing: -0.85px;
 }
-
 .counsel-data {
   display: flex;
   justify-content: center;
 }
-
 .counsel-data > img {
   width: 100%;
+}
+
+/* 노후준비정보 */
+.preparation-financial .tabWrap.tab-total .tabContent .cont-head.mg-h4-section {
+  margin-top: 5.6rem !important;
+}
+
+.relation-service-container .relation-service-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 2.4rem;
+}
+
+.relation-service-list .relation-service-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.relation-service-card {
+  border: 1px solid #e5e5e5;
+  padding: 2.4rem;
+}
+
+.relation-service-card .relation-service-head {
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.realtion-servcie-tag {
+  font-size: 0;
+}
+
+.realtion-servcie-tag .rs-tag {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: var(--font-Noto-medium);
+  padding: .4rem 2rem;
+  border-radius: 1.5rem;
+}
+
+.tag-financial {
+  background-color: #FF8908;
+}
+
+.tag-cash {
+  background-color: #1A72E7;
+}
+.tag-info {
+  background-color: #73B705;
+}
+.tag-service {
+  background-color: #FFA928;
+}
+.tag-bank {
+  background-color: #48A5FF;
+}
+
+.realtion-servcie-tag .rs-tag + .rs-tag {
+  margin-left: .8rem;
+}
+
+.relation-service-card .relation-service-body {
+  margin-top: 2.4rem;
+}
+
+.relation-service-body .relation-service-title {
+  font-size: 2.2rem;
+  font-weight: var(--font-Noto-bold);
+  line-height: 1.5;
+  letter-spacing: -1.1px;
+  color: #222222;
+}
+
+.relation-service-body .cont-desc {
+  min-height: 5.5rem;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  line-height: 1.6;
+}
+
+.relation-service-body .txt-list {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 2.4rem !important;
+  padding: 2.4rem 0;
+}
+
+.relation-service-footer {
+  margin-top: auto  ;
+}
+
+.relation-service-footer .relation-service-btnset {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+}
+
+.relation-service-detail {
+  padding-top: 0 !important;
+}
+.relation-service-detail .desc-txt {
+  font-size: 1.7rem;
+  line-height: 1.6;
+  letter-spacing: -.85px;
+}
+
+.relation-service-detail .relation-qnalist .relation-question-title, 
+.relation-service-detail .relation-qnalist .relation-question-answer {
+  display: grid;
+  grid-template-columns: 4rem auto;
+  column-gap: 1.6rem;
+  align-items: center;  
+
+}
+.relation-service-detail .relation-qnalist .relation-question-answer {
+  align-items: start;  
+  margin-top: 1.6rem;
+  letter-spacing: -.8px;
+}
+
+.relation-service-detail .relation-qnalist .relation-question-answer .relation-answer-wrap {
+  margin-top: .8rem;
+  line-height: 1.6;
+}
+.relation-service-detail .relation-qnalist .relation-question-answer .relation-answer-wrap li {
+  letter-spacing: -.8px;
+}
+.relation-service-detail .relation-qnalist .relation-answer-wrap .txt-list {
+  margin-top: .4rem;
+}
+
+.relation-service-detail .relation-qnalist {
+  padding: 4rem 0;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 1.6rem;
+  color: var(--color-base);
+  line-height: 1.6;
+  letter-spacing: -.8px;
+}
+.relation-service-detail .relation-qnalist .relation-ic-a,
+.relation-service-detail .relation-qnalist .relation-ic-q {
+  display: block;
+  font-size: 0;
+  width: 4rem;
+  height: 4rem;
+  background: url("../images/ico/ic_qna_question.svg") no-repeat center;
+}
+.relation-service-detail .relation-qnalist .relation-ic-a {
+  background: url("../images/ico/ic_qna_anwser.svg") no-repeat center;
+}
+
+.external-site-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr; 
+  gap: 2.4rem;
+}
+
+.external-site-box {
+  padding: 2.4rem;
+  border: 1px solid #e5e5e5;
+}
+.external-site-box .external-site-head {
+  display: flex;
+  justify-content: center;
+  height: 6rem;
+}
+
+.external-site-body {
+  margin-top: 2.4rem;
+}
+.external-site-body .external-site-title {
+  font-size: 2.2rem;
+  font-weight: var(--font-Noto-bold);
+  line-height: 1.5;
+  letter-spacing: -1.1px;
+}
+
+.external-site-body .cont-desc {
+  min-height: 5.4rem;
+  margin-top:1rem;
+}
+
+.external-site-footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 2.4rem;
+  margin-top: 2.4rem;;
+  border-top: 1px solid #e5e5e5;
+}
+
+.external-site-footer > [class*="button"] {
+  min-width: 16rem;
 }
 
 /* ==================================================== Break Point ==================================================== */
@@ -4632,6 +4834,27 @@ h5.cont-title + .txt-list {
     width: 100%;
     left: 0;
   }
+
+  .board-search-preparation .searchbox {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .board-search-preparation .form-group {
+    margin-top: .8rem;
+  }
+
+  .board-search-preparation .date-period {
+    display: flex;
+    width: 100%;
+  }
+  .board-search-preparation .date-period .form-group-period {
+    width: calc(100% - 9.6rem);
+  }
+  .board-search-preparation .searchbox .form-group + .date-period {
+    margin-top: .8rem;
+  }
+
   .searchbox-wrap + .board-top {
     margin-top: 2.4rem;
     margin-bottom: 0;
@@ -5589,6 +5812,14 @@ h5.cont-title + .txt-list {
     font-size:1.2rem;
     margin-bottom: .8rem;
   }
+
+  /* 노후준비정보 1079*/
+  .preparation-financial .tabWrap.tab-total .tabContent .cont-head.mg-h4-section {
+    margin-top: 4.8rem !important;
+  }
+  .relation-service-detail {
+    padding-top: 4rem !important;
+  }
 } /* 1079 */
 
 /* ==================================================== Break Point ==================================================== */
@@ -5626,24 +5857,34 @@ h5.cont-title + .txt-list {
   .searchbox {
     padding: 1.6rem;
   }
-
-  .board-search-basic .form-group {
+  .board-search-preparation .searchbox {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .board-search-preparation .searchbox .form-group {
     flex-wrap: wrap;
     min-width: 30rem;
-    gap: 8px;
   }
-  .board-search-basic .form-group .slct-type {
+
+  .board-search-basic .searchbox .form-group .slct-type {
     min-width: 12rem !important;
   }
 
-  .board-search-basic .form-group .inp-content {
+  .board-search-basic .searchbox .form-group .inp-content {
     width: calc(100% - 12.8rem);
     margin-left: 0;
   }
-  .board-search-basic .form-group button {
+  .board-search-basic .searchbox .form-group button {
     min-width: 0;
     width: 100%;
     margin-left: 0;
+  }
+  .board-search-preparation .searchbox .date-period .form-group-period {
+    width: 100%;
+  }
+  .board-search-preparation .searchbox .date-period > button {
+    width: 100%;
+    margin-top: .8rem;
   }
 
   .searchbox-wrap.opt-name-registration {
@@ -7236,6 +7477,21 @@ h5.cont-title + .txt-list {
   .importance-preparation-list {
     grid-template: repeat(2, 1fr) / repeat(1, 1fr);
   }
+
+  /* 노후준비정보  767*/
+  .preparation-financial .tabWrap.tab-total .tabContent .cont-head.mg-h4-section {
+    margin-top: 4rem !important;
+  }
+  .relation-service-container .relation-service-list {
+    grid-template-columns: 1fr;
+  }
+  .external-site-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr; 
+    gap: 2.4rem;
+  }
+  
 } /* 767px */
 
 @media screen and (max-width: 768px) {
