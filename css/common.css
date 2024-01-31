@@ -3457,8 +3457,10 @@ button,
 	margin-bottom: 1.6rem;
 }
 
+.txt-list.dot > span,
 .txt-list.dot > p,
 .txt-list.dot > li {
+	display: block;
 	position: relative;
 	padding-left: 1.1rem;
 	font-size: 1.5rem;
@@ -3477,8 +3479,9 @@ button,
 	content: none;
 }
 
-.txt-list.dot > p:before,
-.txt-list.dot > li:before {
+.txt-list.dot > span::before,
+.txt-list.dot > p::before,
+.txt-list.dot > li::before {
 	content: "";
 	position: absolute;
 	top: 1rem;
@@ -3525,8 +3528,6 @@ button,
 .outdent {
 	margin-left: -1rem !important;
 }
-
-.td-txt-list {}
 
 .td-txt-list > li {
 	position: relative;

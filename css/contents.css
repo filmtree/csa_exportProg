@@ -2621,24 +2621,30 @@
 .txt-list.doubletop {
   margin-top: 24px;
 }
-.txt-list.dot.blue > li:before {
+.txt-list.dot.blue > li::before {
   background-color: var(--color-primary);
 }
 .txt-list.dot > li.fc-primary::before {
   background-color: var(--color-primary);
 }
 
+.txt-list.dot.gray > span,
+.txt-list.dot.gray > p,
 .txt-list.dot.gray > li {
   color: var(--color-gray6);
 }
 
-.txt-list.dot.gray > li:before {
+.txt-list.dot.gray > span::before,
+.txt-list.dot.gray > p::before,
+.txt-list.dot.gray > li::before {
   background-color: var(--color-gray5);
 }
 
 .txt-list.dot.black > li {
   color: var(--color-gray2);
 }
+.txt-list.dot.fz14 > span,
+.txt-list.dot.fz14 > p,
 .txt-list.dot.fz14 > li {
   font-size: 14px;
 }
@@ -2654,7 +2660,9 @@
 }
 
 /* dot size-2px */
-.txt-list.dot.small > li:before {
+.txt-list.dot.small > span::before,
+.txt-list.dot.small > p::before,
+.txt-list.dot.small > li::before {
   top: 11px;
   width: 2px;
   height: 2px;
@@ -4657,22 +4665,49 @@ h5.cont-title + .txt-list {
   padding: .4rem 2rem;
   border-radius: 1.5rem;
 }
-
+/* 재무 */
 .tag-financial {
   background-color: #FF8908;
 }
-
+/* 현금 */
 .tag-cash {
   background-color: #1A72E7;
 }
+/* 정보 */
 .tag-info {
   background-color: #73B705;
 }
+/* 서비스 */
 .tag-service {
   background-color: #FFA928;
 }
+/* 금융 */
 .tag-bank {
   background-color: #48A5FF;
+}
+/* 건강 */
+.tag-health {
+  background-color: #8834F2;
+}
+/* 관리 */
+.tag-management {
+  background-color: #00B17C;
+}
+/* 상담 */
+.tag-counsel {
+  background-color: #F30049;
+}
+/* 교육 */
+.tag-edu {
+  background-color: #2D2C77;
+}
+/* 대인관계 */
+.tag-rel {
+  background-color: #00B0C8;
+}
+/* 여가 */
+.tag-rest {
+  background-color: #FF6421;  
 }
 
 .realtion-servcie-tag .rs-tag + .rs-tag {
@@ -4746,6 +4781,12 @@ h5.cont-title + .txt-list {
 }
 .relation-service-detail .relation-qnalist .relation-answer-wrap .txt-list {
   margin-top: .4rem;
+}
+.relation-service-detail .relation-qnalist .relation-question-answer .relation-answer-wrap a {
+  color: var(--color-primary);
+}
+.relation-service-detail .relation-qnalist .relation-question-answer .relation-answer-wrap a:hover {
+  text-decoration: underline;
 }
 
 .relation-service-detail .relation-qnalist {
@@ -6747,6 +6788,8 @@ h5.cont-title + .txt-list {
     width: 0.2rem;
     height: 0.2rem;
   }
+  .txt-list.dot.fz14 > span,
+  .txt-list.dot.fz14 > p,
   .txt-list.dot.fz14 > li {
     font-size: 12px;
   }
