@@ -4808,6 +4808,41 @@ h5.cont-title + .txt-list {
 .relation-service-detail .relation-qnalist .relation-ic-a {
   background: url("../images/ico/ic_qna_anwser.svg") no-repeat center;
 }
+.relation-service-detail .relation-qnalist .relation-answer-wrap p:not(.txt-list) {
+  position: relative;
+  padding-left: 1.4rem;
+}
+.relation-service-detail .relation-qnalist .relation-answer-wrap p:not(.txt-list)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #666666;
+}
+
+.relation-service-detail .relation-qnalist p ~ p {
+  margin-top: 1.6rem;
+}
+
+.relation-answer-wrap p:not(.txt-list) ~ .txt-list,
+.relation-answer-wrap p:not(.txt-list) ~ ul {
+  padding-left: 1rem;
+}
+
+.relation-answer-wrap ul.fs16 li {
+  position: relative;
+}
+.relation-answer-wrap ul.fs16 li::before {
+  content: "";
+  position: absolute;
+  top:10px;
+  width: 6px;
+  height: 1px;
+  background-color: #444444;
+}
 
 .external-site-list {
   display: grid;
