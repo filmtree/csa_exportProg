@@ -4780,7 +4780,7 @@ h5.cont-title + .txt-list {
   letter-spacing: -.8px;
 }
 .relation-service-detail .relation-qnalist .relation-answer-wrap .txt-list {
-  margin-top: .4rem;
+  margin-top: .8rem;
 }
 .relation-service-detail .relation-qnalist .relation-question-answer .relation-answer-wrap a {
   color: var(--color-primary);
@@ -4823,8 +4823,16 @@ h5.cont-title + .txt-list {
   background-color: #666666;
 }
 
+.relation-service-detail .relation-qnalist .relation-answer-wrap p:not(.txt-list):only-child {
+  padding:0;
+}
+
+.relation-service-detail .relation-qnalist .relation-answer-wrap p:not(.txt-list):only-child::before {
+  content: none;
+}
+
 .relation-service-detail .relation-qnalist p ~ p {
-  margin-top: 1.6rem;
+  margin-top: .8rem;
 }
 
 .relation-answer-wrap p:not(.txt-list) ~ .txt-list,
@@ -4832,16 +4840,25 @@ h5.cont-title + .txt-list {
   padding-left: 1rem;
 }
 
-.relation-answer-wrap ul.fs16 li {
+.relation-answer-wrap p:not(.txt-list) ~ ol {
+  padding-left: 2.4rem !important;
+}
+
+.relation-answer-wrap ul.fs16 > li {
   position: relative;
 }
-.relation-answer-wrap ul.fs16 li::before {
+
+.relation-answer-wrap ul.fs16 > li::before {
   content: "";
   position: absolute;
   top:10px;
   width: 6px;
   height: 1px;
   background-color: #444444;
+}
+
+.relation-answer-wrap ol > li {
+  list-style-type: decimal;
 }
 
 .external-site-list {
