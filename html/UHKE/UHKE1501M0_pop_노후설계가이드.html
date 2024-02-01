@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Title</title>
+
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <button type="button" class="button-primary" id="modalOpenButton" aria-haspopup="dialog" aria-controls="oldDesignGuide">Open</button>
+
+    <div class="modal full dim" role="dialog" aria-modal="true" id="oldDesignGuide">
+      <div class="modalWrap">
+
+        <!-- s: Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">노후설계가이드</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <!-- e: Modal Header -->
+
+        <!-- s: Modal Contents -->
+        <div class="modal-body">
+          <div class="modal-body-inner">
+            <!-- ========  s: Tab Contents ======== -->
+            <div class="tabWrap tab-base tab-total mt0">
+              <!-- ========  s: Tab Buttons ======== -->
+              <ul class="tabNav">
+                  <li><a href="#none" id="tabNav1" role="tab">국민연금제도</a></li>
+                  <li><a href="#none" id="tabNav2" role="tab">재무설계</a></li>
+              </ul>
+              <!-- ========  e: Tab Buttons ======== -->
+              <!-- ========  s: Tab Panel 1 ======== -->
+              <div class="tabContent" role="tabpanel" aria-labelledby="tabNav1">
+                <ol>
+                  <li class="qnalist none col">
+                    <p class="question-title"><em class="ic-q">Q</em>1. 국민연금 꼭 가입해야 하나요?</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>2. 국민연금과 다른 연금은 어떻게 다른가요?</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>3. 국민연금 기금은 어떻게 운용되나요?</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>4. 국민연금 얼마나 내는건가요?</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>5. 소득이 없는데 보험료를 내야 하나요?</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>6. 사업을 하는데 국민연금 어떻게 되는 건가요?</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>7. 내가 받을 수 있는 연금의 종류는 무엇이 있나요?</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>8. 나도 장애연금을 받을 수 있나요?</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>9. 사망 시 가족들이 받을 수 있는 급여로는 무엇이 있나요?</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>10. 국민연금 100% 활용법</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+              <!-- ========  e: Tab Panel 1 ======== -->
+              <!-- ========  s: Tab Panel 2 ======== -->
+              <div class="tabContent" role="tabpanel" aria-labelledby="tabNav2">
+                <ol>
+                  <li class="qnalist none col">
+                    <p class="question-title"><em class="ic-q">Q</em>1. 왜 노후설계를 해야 하는가?</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>2. 재무설계가 중요한 이유</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>3. 재무설계의 실행절차</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>4. 우리집 재무상태 얼마나 건강한가?</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>5. 우리집 재무건정성 정밀진단</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>6. 우리집 재무건강 3원칙</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>7. 건강한 가계부 만들기</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>8. 3층으로 준비하는 노후자금</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>9. 국민연금으로 시작하는 노후자금</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>10. 국민연금 100% 활용하기</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>11. 퇴직연금으로 준비하는 노후자금</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>12. 개인연금으로 준비하는 노후자금</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>13. 금융상품 절세특강</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>14. 20대의 재무설계 사례</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>15. 30대의 재무설계 사례</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>16. 40대의 재무설계 사례</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>17. 50대의 재무설계 사례</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>18. 60대의 재무설계 사례</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>19. 샐러리맨의 재무설계 사례</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>20. 자영업자의 재무설계 사례</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>21. 맞벌이 부부의 재무설계 사례</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>22. 저소득층의 재무설계 사례</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>23. 중산층의 재무설계 사례</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="qnalist col">
+                    <p class="question-title"><em class="ic-q">Q</em>24. 고소득층의 재무설계 사례</p>
+                    <div class="question-answer">
+                      <a href="#" class="button-primary -sm round">
+                        <span>상세보기</span>
+                        <i class="ic-only arr10_r_white" arir-hidden="true"></i>
+                      </a>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+              <!-- ========  e: Tab Panel 2 ======== -->
+            </div>
+            <!-- ========  e: Tab Contents ======== -->
+            
+          </div>
+        </div>
+        <!-- e: Modal Contents -->
+
+      </div>
+    </div>
+    <script>
+      commonUI.tabNav('.tabWrap', 1);
+
+      document.querySelector('#modalOpenButton').addEventListener('click', () => {
+        commonUI.modal('#oldDesignGuide', '#modalOpenButton');
+      });
+    </script>
+  </body>
+</html>

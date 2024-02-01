@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- s: header -->
+      <header id="header"></header>
+      <!-- e: header -->
+
+      <!-- s: Loaction Information Link -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-nav">
+          <ol class="breadcrumb-location">
+            <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+            <li class="breadcrumb-depth dep1">
+              <button type="button" class="breadcrumb-trigger">노후준비정보</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                <li><a href="#none" target="_self">재무진단</a></li>
+                <li class="current"><a href="#none" target="_self">노후준비정보</a></li>
+                <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                <li><a href="#none" target="_self">마이페이지</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger">노후준비소식</button>
+              <ul class="breadcrumb-depth-list">
+                <li class="current"><a href="#none" target="_self">노후준비소식</a></li>
+                <li><a href="#none" target="_self">노후준비정보</a></li>
+                <li><a href="#none" target="_self">노후준비동영상</a></li>
+                <li><a href="#none" target="_self">콘텐츠</a></li>
+                <li><a href="#none" target="_self">방문상담신청</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep3">
+              <button type="button" class="breadcrumb-trigger current">카드뉴스</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">노후준비소식</a></li>
+                <!-- 노후준비정보 -->
+                <li><a href="#none" target="_self">재무</a></li>
+                <li><a href="#none" target="_self">건 강</a></li>
+                <li><a href="#none" target="_self">여가</a></li>
+                <li><a href="#none" target="_self">대인관계</a></li>
+                <!-- 노후준비동영상 -->
+                <li><a href="#none" target="_self">노후준비강의</a></li>
+                <li><a href="#none" target="_self">홍보영상</a></li>
+                <!-- 콘텐츠 -->
+                <li class="current"><a href="#none" target="_self">카드뉴스</a></li>
+                <li><a href="#none" target="_self">간행물</a></li>
+                <!-- 방문상담신청 -->
+                <li><a href="#none" target="_self">방문상담예약 목록</a></li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <!-- e: Loaction Information Link -->
+
+      <!-- s: Main -->
+      <main id="conatiner" class="preparation">
+        <!--s: Page Title-->
+        <div class="page-header">
+          <div class="page-title">
+            <a href="#" class="ic-only back">뒤로가기</a>
+            <h2>카드뉴스</h2>
+          </div>
+        </div>
+        <!--e: Page Title-->
+
+        <!--s: Contents -->
+        <div class="content-wrap retirement-card-news">
+          <!-- s: search -->
+          <div class="searchbox-wrap board-search-preparation">
+            <div class="searchbox">
+              <div class="form-group">
+                <label class="search-label">검색어</label>
+                <select class="slct-type min-w120px" aria-label="검색구분 선택">
+                  <option value="">전체</option>
+                  <option value="">분류</option>
+                  <option value="">제목</option>
+                  <option value="">내용</option>
+                </select>
+                <input type="text" placeholder="내용을 입력해주세요" class="inp-content w-flexible" aria-label="검색어 입력" />
+              </div>
+              <div class="form-group date-period">
+                <label class="search-label">검색기간</label>
+                <div class="form-group-period period-calendar">
+                  <label class="hidden">시작 날짜 선택</label>
+                  <input type="text" class="useDatepicker dateFrom" placeholder="날짜를 선택하세요" title="검색기간 시작일" />
+                  <span class="inp-split">-</span>
+                  <label class="hidden">종료 날짜 선택</label>
+                  <input type="text" class="useDatepicker dateTo" placeholder="날짜를 선택하세요" title="검색기간 종료일" />
+                </div>
+                <button type="button" class="button-primary btn-search min-w80px">조회</button>
+              </div>
+            </div>
+          </div>
+          <!-- e: search -->
+
+          <!-- s: 카드뉴스 리스트 -->
+          <!-- header -->
+          <div class="con-table-header cardnews-list-head"><span class="txt-helper">전체 : 15건 </span></div>
+          <!-- grid -->
+          <ul class="cardnews-list">
+            <!-- s: list -->
+            <li class="cardnews-subject">
+              <div class="cardnews-thumbnail">
+                <img src="../../images/temp/cardnews_temp_001.png" alt="" />
+              </div>
+              <div class="cardnews-tag-label">
+                <div class="cardnews-tag realtion-servcie-tag">
+                  <span class="rs-tag tag-financial">재무</span>
+                  <!-- <span class="rs-tag tag-health">건강</span>
+                  <span class="rs-tag tag-rest">여가</span>
+                  <span class="rs-tag tag-rel">대인관계</span> 
+                  <span class="rs-tag tag-common">공통</span>
+                --></div>
+                <div class="cardnews-label">(서민금융진흥원) 올바른 신용 & 체크카드 사용방법</div>
+              </div>
+            </li>
+            <!-- e: list -->
+            <li class="cardnews-subject">
+              <div class="cardnews-thumbnail">
+                <img src="../../images/temp/cardnews_temp_002.png" alt="" />
+              </div>
+              <div class="cardnews-tag-label">
+                <div class="cardnews-tag realtion-servcie-tag">
+                  <span class="rs-tag tag-health">건강</span>
+                </div>
+                <div class="cardnews-label">(건강보험심사평가원 웹툰) 모바일로 간편하게 '약! 찍어보는 안심정보'</div>
+              </div>
+            </li>
+            <li class="cardnews-subject">
+              <div class="cardnews-thumbnail">
+                <img src="../../images/temp/cardnews_temp_003.png" alt="" />
+              </div>
+              <div class="cardnews-tag-label">
+                <div class="cardnews-tag realtion-servcie-tag">
+                  <span class="rs-tag tag-rest">여가</span>
+                </div>
+                <div class="cardnews-label">카드뉴스⑦ 나만의 여가활동 만들기</div>
+              </div>
+            </li>
+            <li class="cardnews-subject">
+              <div class="cardnews-thumbnail">
+                <img src="../../images/temp/cardnews_temp_004.png" alt="" />
+              </div>
+              <div class="cardnews-tag-label">
+                <div class="cardnews-tag realtion-servcie-tag">
+                  <span class="rs-tag tag-rel">대인관계</span>
+                </div>
+                <div class="cardnews-label">(서민금융진흥원) 올바른 신용 & 체크카드 사용방법</div>
+              </div>
+            </li>
+            <li class="cardnews-subject">
+              <div class="cardnews-thumbnail">
+                <img src="../../images/temp/cardnews_temp_005.png" alt="" />
+              </div>
+              <div class="cardnews-tag-label">
+                <div class="cardnews-tag realtion-servcie-tag">
+                  <span class="rs-tag tag-common">공통</span>
+                </div>
+                <div class="cardnews-label">웹툰_노후준비 사람들 무슨 일해?(일반상담사 ①)</div>
+              </div>
+            </li>
+            <li class="cardnews-subject">
+              <div class="cardnews-thumbnail">
+                <img src="../../images/temp/cardnews_temp_005.png" alt="" />
+              </div>
+              <div class="cardnews-tag-label">
+                <div class="cardnews-tag realtion-servcie-tag">
+                  <span class="rs-tag tag-common">공통</span>
+                </div>
+                <div class="cardnews-label">웹툰_노후준비 사람들 무슨 일해?(일반상담사 ①)</div>
+              </div>
+            </li>
+            <li class="cardnews-subject">
+              <div class="cardnews-thumbnail">
+                <img src="../../images/temp/cardnews_temp_005.png" alt="" />
+              </div>
+              <div class="cardnews-tag-label">
+                <div class="cardnews-tag realtion-servcie-tag">
+                  <span class="rs-tag tag-common">공통</span>
+                </div>
+                <div class="cardnews-label">웹툰_노후준비 사람들 무슨 일해?(일반상담사 ①)</div>
+              </div>
+            </li>
+            <li class="cardnews-subject">
+              <div class="cardnews-thumbnail">
+                <img src="../../images/temp/cardnews_temp_005.png" alt="" />
+              </div>
+              <div class="cardnews-tag-label">
+                <div class="cardnews-tag realtion-servcie-tag">
+                  <span class="rs-tag tag-common">공통</span>
+                </div>
+                <div class="cardnews-label">웹툰_노후준비 사람들 무슨 일해?(일반상담사 ①)</div>
+              </div>
+            </li>
+            <li class="cardnews-subject">
+              <div class="cardnews-thumbnail">
+                <img src="../../images/temp/cardnews_temp_005.png" alt="" />
+              </div>
+              <div class="cardnews-tag-label">
+                <div class="cardnews-tag realtion-servcie-tag">
+                  <span class="rs-tag tag-common">공통</span>
+                </div>
+                <div class="cardnews-label">웹툰_노후준비 사람들 무슨 일해?(일반상담사 ①)</div>
+              </div>
+            </li>
+            <li class="cardnews-subject">
+              <div class="cardnews-thumbnail">
+                <img src="../../images/temp/cardnews_temp_005.png" alt="" />
+              </div>
+              <div class="cardnews-tag-label">
+                <div class="cardnews-tag realtion-servcie-tag">
+                  <span class="rs-tag tag-common">공통</span>
+                </div>
+                <div class="cardnews-label">웹툰_노후준비 사람들 무슨 일해?(일반상담사 ①)</div>
+              </div>
+            </li>
+          </ul>
+          <!-- e: 카드뉴스 리스트 -->
+
+          <!-- s: Pagination -->
+          <div class="paginate">
+            <button type="button" class="page first">처음 목록</button>
+            <button type="button" class="page prev">이전 목록</button>
+            <a href="#" class="num">1</a>
+            <a href="#" class="num current" title="현재페이지">2</a>
+            <a href="#" class="num">3</a>
+            <a href="#" class="num">4</a>
+            <a href="#" class="num">5</a>
+            <a href="#" class="num mo-hide">6</a>
+            <a href="#" class="num mo-hide">7</a>
+            <a href="#" class="num mo-hide">8</a>
+            <a href="#" class="num mo-hide">9</a>
+            <a href="#" class="num mo-hide">9999</a>
+            <button type="button" class="page next">다음 목록</button>
+            <button type="button" class="page last">마지막 목록</button>
+          </div>
+          <!-- e: Pagination -->
+
+          <!-- s: Common UI - HashTag Banner -->
+          <div class="hashtag-wrap"></div>
+          <!-- e: Common UI - HashTag Banner -->
+        </div>
+        <!--s: Contents -->
+
+        <!-- s: Common UI - Survey -->
+        <div class="page-satisfaction"></div>
+        <!-- e: Common UI - Survey -->
+      </main>
+      <!-- e: Main -->
+
+      <!-- s: footer -->
+      <footer id="footer"></footer>
+      <!-- e: footer -->
+    </div>
+  </body>
+</html>
