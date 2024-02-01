@@ -22,7 +22,7 @@
   <body>
     <button type="button" class="button-primary" id="modalOpenButton">Open</button>
 
-    <section class="modal full dim active" id="modalTemplate">
+    <div class="modal full dim active" id="modalTemplate">
       <div class="modalWrap">
         <!-- s: Modal Header -->
         <div class="modal-header">
@@ -108,7 +108,7 @@
         </div>
         <!-- e: Modal Contents -->
       </div>
-    </section>
+    </div>
     <script>
       document.querySelector("#modalOpenButton").addEventListener("click", () => {
         commonUI.modal("#modalTemplate", "#modalOpenButton");
