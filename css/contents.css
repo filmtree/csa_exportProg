@@ -5001,6 +5001,8 @@ h5.cont-title + .txt-list {
   display: flex;
   align-items: center;
   width: 160px;
+  height: 160px;
+  overflow: hidden;
   aspect-ratio: 1/1;
 }
 
@@ -5056,6 +5058,11 @@ h5.cont-title + .txt-list {
 }
 .publication-list .publication-link:hover {
   border: 1px solid var(--color-primary);
+}
+.publication-list .publication-link .publication-thumbnail {
+  width: 232px;
+  height: 325px;
+  overflow: hidden;
 }
 .publication-list .publication-link .publication-thumbnail img {
   width: 100%;
@@ -7677,7 +7684,7 @@ h5.cont-title + .txt-list {
     height: calc(100vh - 5.6rem) !important;
   }
   .detail-instructor-information {
-    margin-top: -17.5rem;
+    margin-top: -2.5rem;
   }
   .detail-container {
     padding: 3.2rem 0;

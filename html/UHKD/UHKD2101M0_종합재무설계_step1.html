@@ -118,8 +118,10 @@
           <div class="con-table-header">
             <p class="cont-title none1">고객가족 사항</p>
           </div>
-          <div class="con-table all-center">
-            <table class="min-w1000px" summary="본인, 배우자의 이름, 주민등록번호, 나이, 성별 등 개인정보입력">
+          <!-- 20240202수정 : class추가 - grid-fit-width -->
+          <div class="con-table all-center grid-fit-width">
+            <!-- 20240202수정 : class삭제 - min-w1000px -->
+            <table class="" summary="본인, 배우자의 이름, 주민등록번호, 나이, 성별 등 개인정보입력">
               <caption>
                 본인, 배우자 개인정보 입력
               </caption>
@@ -138,7 +140,8 @@
                   <th scope="row"><label>본인</label></th>
                   <td>
                     <div class="form-group-txt">
-                      <input type="text" class="charLength6" value="" placeholder="이름" style="max-width: 244px; width: 100%" />
+                      <!-- 20240202수정 : class삭제 - charLength6  -->
+                      <input type="text" class="" value="" placeholder="이름" style="max-width: 244px; width: 100%" />
                     </div>
                   </td>
                   <th scope="row"><label for="coSN1">생년월일</label></th>
@@ -177,7 +180,8 @@
                   <th scope="row"><label>배우자</label></th>
                   <td>
                     <div class="form-group-txt">
-                      <input type="text" class="charLength6" value="" placeholder="이름" style="max-width: 244px; width: 100%" />
+                      <!-- 20240202수정 : class삭제 - charLength6  -->
+                      <input type="text" class="" value="" placeholder="이름" style="max-width: 244px; width: 100%" />
                     </div>
                   </td>
                   <th scope="row"><label>생년월일</label></th>
@@ -214,11 +218,12 @@
                 </tr>
               </tbody>
             </table>
-            <ul class="txt-list dot gray top">
-              <li>개인정보 보호를 위하여 배우자 성명은 입력하지 않습니다.</li>
-              <li>본인 및 배우자 나이는 ‘만’나이이며, 자녀 정보 또한 ‘만’나이를 입력합니다.</li>
-            </ul>
           </div>
+          <!-- 20240202수정 : 위치 변경 -->
+          <ul class="txt-list dot gray top">
+            <li>개인정보 보호를 위하여 배우자 성명은 입력하지 않습니다.</li>
+            <li>본인 및 배우자 나이는 ‘만’나이이며, 자녀 정보 또한 ‘만’나이를 입력합니다.</li>
+          </ul>
           <!-- 자녀추가 -->
           <div class="con-table-header lowdouble">
             <div class="btn-wrap modify-txt">
@@ -258,12 +263,14 @@
                   <td><label for="coname">자녀</label></td>
                   <td>
                     <div class="form-group-txt">
-                      <input type="text" class="charLength6" value="" placeholder="이름" />
+                      <!-- 20240202수정 : class삭제 - charLength6  -->
+                      <input type="text" class="" value="" placeholder="이름" />
                     </div>
                   </td>
                   <td>
                     <div class="form-group-txt">
-                      <input type="text" class="charLength6 align-right" value="" placeholder="0" />
+                      <!-- 20240202수정 : class삭제 - charLength6  -->
+                      <input type="text" class="align-right" value="" placeholder="0" />
                       <span class="back-txt">세</span>
                     </div>
                   </td>
@@ -359,10 +366,11 @@
                 </tr>
               </tbody>
             </table>
-            <ul class="txt-list dot gray top">
-              <li>상기 가정치의 값은 직접 수정하실 수 있습니다.</li>
-            </ul>
           </div>
+          <!-- 20240202수정 : 위치 변경 -->
+          <ul class="txt-list dot gray top">
+            <li>상기 가정치의 값은 직접 수정하실 수 있습니다.</li>
+          </ul>
           <div class="cont-bottom">
             <div class="btn-group">
               <button type="button" class="button-primary -lg" id="btn1">다음 (저장)</button>
