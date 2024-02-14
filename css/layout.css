@@ -1360,6 +1360,10 @@
   display: flex;
 }
 
+.winPopup {
+	/* min-width:1080px; */
+}
+
 .winPopup .con-table .board-wrap,
 .winPopup .con-table table {
   min-width: 0 !important;
@@ -1386,7 +1390,8 @@
 
 .winPopup .modalWrap .modal-body {
   padding-bottom: 9rem;
-  max-height: none;
+  overflow: visible;
+  /* max-height: none; */
 }
 
 /* ##tab - Tab_4depth */
@@ -2148,7 +2153,7 @@ input.useDatepicker {
 
   .winPopup .modalWrap .modal-body {
     padding-bottom: 8rem;
-    max-height: calc(100vh - 10.6rem);
+    /* max-height: calc(100vh - 10.6rem); */
   }
   .winPopup .modalWrap .cont-head:first-child {
     padding: 0;
