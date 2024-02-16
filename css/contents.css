@@ -827,6 +827,28 @@
   display: block;
 }
 
+/* 교육안내 */
+.education-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4rem;
+  margin-top: 2.4rem;
+}
+
+.education-card {
+  border: 1px solid #e5e5e5;
+  padding: 2.4rem;
+}
+
+.education-title {
+  font-size: 22px;
+  font-weight: var(--font-Noto-bold);
+  padding-bottom: 2.4rem;
+  margin-bottom: 2.4rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+
 /* ==================================================== Break Point ==================================================== */
 
 /* 방문상담신청-innerDatepicker(table형태) */
@@ -6148,6 +6170,12 @@ h5.cont-title + .txt-list {
   .promotion-video-container .promotion-video-notice {
     font-size: 3.2rem;
   }
+
+  /* 교육안내 */
+.education-card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 } /* 1079 */
 
 /* ==================================================== Break Point ==================================================== */
