@@ -658,6 +658,7 @@
 }
 
 .instructor-profile-card {
+  height: 100%;
   border: 1px solid #e5e5e5;
   padding: 2.4rem;
   cursor: pointer;
@@ -688,7 +689,10 @@
 }
 .instructor-profile-card .instructor-profile-description {
   width: 100%;
-  margin-top: 2.4rem;
+  height: calc(100% - 380px);
+  display: flex;
+  flex-direction: column;
+  margin: 2.4rem 0 1.6rem;  
   padding-top: 2.4rem;
   border-top: 1px solid #e5e5e5;
 }
@@ -697,6 +701,10 @@
   font-size: 1.4rem;
   line-height: 2.4rem;
   color: var(--color-gray6);
+}
+
+.instructor-profile-card .instructor-profile-description dt ~ dt {
+  margin-top: 1.6rem;
 }
 
 .instructor-profile-card .instructor-profile-description dd {
@@ -712,8 +720,21 @@
   line-height: 1.6;
 }
 
+.instructor-profile-card .instructor-profile-description dd.row-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  height: auto;
+  font-size: 1.6rem;
+  font-weight: var(--font-Noto-regular);
+  line-height: 1.6;
+}
+
 .instructor-profile-card .instructor-profile-description .more-detail {
-  margin-top: 1.6rem;
+  margin-top: auto;
   display: flex;
   justify-content: flex-end;
 }
@@ -737,25 +758,28 @@
 }
 
 .instructor-detail .modalWrap .modal-body {
-  min-height: 560px;
+  min-height: 660px;
   overflow: hidden;
   padding-right: 0;
 }
 
 .detail-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, calc((390 / 10) * 1%) calc((570 / 10) * 1%));
+  grid-template-columns: repeat(auto-fit, calc((400 / 9.36) * 1%) calc((480 / 9.36) * 1%));
   column-gap: 4rem;
   row-gap: 2rem;
+  padding: 0 3.2rem;
 }
 
+.instructor-detail .detail-instructor-photo {
+  font-size: 0;
+}
 .instructor-detail .detail-instructor-photo > img {
   width: 100%;
 }
 
 .detail-instructor-information .detail-instructor-head {
-  padding-bottom: 2.4rem;
-  margin-right: 3.2rem;
+  padding-bottom: 2.4rem;  
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -774,8 +798,7 @@
   display: block;
 }
 .detail-instructor-history {
-  max-height: 37.7rem;
-  padding-right: 3.2rem;
+  max-height: 37.7rem;  
   overflow: auto;
 }
 .detail-instructor-history .detail-instructor-inner {
@@ -795,9 +818,13 @@
   color: var(--color-gray1);
   line-height: 26px;
 }
+.detail-instructor-history ul li p ~ p {
+  margin-top: .8rem;
+}
 .detail-instructor-history ul li p .quotation {
   font-size: 1.5rem;
   color: var(--color-gray4);
+  display: block;
 }
 
 /* ==================================================== Break Point ==================================================== */

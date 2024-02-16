@@ -386,15 +386,13 @@ const commonUI = {
       modal.classList.add("active");
       modalWrap.setAttribute("tabindex", "0");
       modalWrap.focus();
-      // 페이지 고정
       document.querySelector("body").style.overflow = "hidden";
     }
     function modalClose() {
       modal.classList.remove("active");
       modalWrap.removeAttribute("tabIndex");
+      document.querySelector("body").style.overflow = "auto";        
       if (backObj) document.querySelector(backObj).focus();
-      // 페이지 고정해제
-      document.querySelector("body").style.overflow = "visible";
     }
 
     modalOpen();
