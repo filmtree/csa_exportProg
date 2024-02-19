@@ -671,7 +671,7 @@
 
 .instructor-profile-card .instructor-profile-photo {
   width: 234px;
-  height: 312px;
+  height: 304px;
   background-color: #f9fafb;
   overflow: hidden;
   display: flex;
@@ -680,8 +680,11 @@
 }
 
 .instructor-profile-card .instructor-profile-photo > img {
-  width: 100%;
+  width: 234px;
+  height: 304px;
+  object-fit: contain;
 }
+
 .instructor-profile-card .instructor-profile-name {
   margin-top: 2.4rem;
   font-size: 2.2rem;
@@ -773,9 +776,15 @@
 
 .instructor-detail .detail-instructor-photo {
   font-size: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
+
 .instructor-detail .detail-instructor-photo > img {
   width: 100%;
+  /* height: 520px; */
+  object-fit: contain;
 }
 
 .detail-instructor-information .detail-instructor-head {
@@ -1846,6 +1855,9 @@
 
 /* width equal-list */
 .equal-list {
+  display: flex;
+}
+.equal-list.three-quarters .items .equal-list {
   display: flex;
 }
 .equal-list li,
@@ -5988,7 +6000,7 @@ h5.cont-title + .txt-list {
 
   /* 강사정보 */
   .detail-container {
-    padding: 3.2rem 0;
+    padding: 3.2rem 1.6rem;
   }
   .detail-instructor-history {
     max-height: 100vh;
