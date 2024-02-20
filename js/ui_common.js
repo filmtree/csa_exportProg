@@ -408,6 +408,77 @@ const commonUI = {
       modalWrap.focus();
     });
   },
+
+  /* 모달 팝업 접근성 설정시 사용. 20240220 */
+  // modal: function (target, backObj) {
+  //   const modal = document.querySelector(target);
+  //   const dimmed = document.querySelector(".dim");
+  //   const modalWrap = modal.querySelector(".modalWrap");
+  //   const btns = modal.querySelectorAll(".btn-close");
+  //   modalFn = {
+  //     init: function () {
+  //       this.modalOpen();
+  //       this.initEvent();
+  //       this.trapFocus(modalWrap);            
+  //     },
+  //     initEvent: function () {
+  //       btns.forEach((btn) => {
+  //         btn.addEventListener("click", () => {
+  //           this.modalClose();
+  //         });
+  //       });
+  //       window.addEventListener("keydown", (e) => {
+  //         if (e.key === "Escape") {
+  //           this.modalClose();
+  //         }
+  //       });
+  //       window.addEventListener("click", (e) => {          
+  //         if(e.target === dimmed) {
+  //           this.modalClose();
+  //         }
+  //       })
+  //     },
+  //     modalOpen: function() {
+  //       modal.classList.add("active");
+  //       modalWrap.setAttribute("tabindex", "0");
+  //       modalWrap.focus();
+  //       document.querySelector("body").style.overflow = "hidden";
+  //       modal.setAttribute("aria-hidden", "false"); 
+  //       modal.setAttribute("role", "dialog"); 
+  //     },
+  //     modalClose: function() {
+  //       modal.classList.remove("active");
+  //       modalWrap.removeAttribute("tabIndex");
+  //       document.querySelector("body").style.overflow = "auto";
+  //       if (backObj) document.querySelector(backObj).focus();
+  //       modal.setAttribute("aria-hidden", "true"); 
+  //     },  
+  //     trapFocus: function(el) {
+  //       const focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
+  //       const focusableElements = el.querySelectorAll(focusableElementsString);
+  //       const firstFocusableElement = focusableElements[0];
+  //       const lastFocusableElement = focusableElements[focusableElements.length - 1];
+  
+  //       el.addEventListener('keydown', function(e) {
+  //         let isTabPressed = (e.key === 'Tab');
+  //         if (!isTabPressed) return;
+  //         if (e.shiftKey) { 
+  //           if (document.activeElement === firstFocusableElement) {
+  //             lastFocusableElement.focus(); 
+  //             e.preventDefault();
+  //           }
+  //         } else { 
+  //           if (document.activeElement === lastFocusableElement) {
+  //             firstFocusableElement.focus(); 
+  //             e.preventDefault();
+  //           }
+  //         }
+  //       });
+  //     }
+  //   }
+  //   modalFn.init();    
+  // },  
+
   accordion: function () {
     const target = document.querySelectorAll(".accWrap");
     if (target.length < 1) return;
@@ -633,7 +704,7 @@ const commonUI = {
     };
     tabFun.init();
   },
-  /* 기존 tabNav에 접근성 설정을 해야할 경우 아래 스크립트 사용. */
+  /* 기존 tabNav에 접근성 설정을 해야할 경우 아래 스크립트 사용. 20240220 */
   // tabNav: function (target, selectIndex) {
   //   const tabs = document.querySelectorAll(target);
   //   tabs.forEach((tab) => {
@@ -721,6 +792,8 @@ const commonUI = {
   //     tabFn.init();
   //   });
   // },
+
+  /* 접근성 용으로 수정 20240220 */
   tabInnerNav: function (target, selectIndex) {
     const tabs = document.querySelectorAll(target);
     tabs.forEach((tab) => {
