@@ -34,7 +34,7 @@ const commonUI = {
     this.pageDescToggle();
     this.tableScrollMarking();
     this.useDatepicker();
-		this.modalScrollBarCustom();
+    this.modalScrollBarCustom();
   },
   deviceCheck: function () {
     var UserAgent = navigator.userAgent;
@@ -391,7 +391,7 @@ const commonUI = {
     function modalClose() {
       modal.classList.remove("active");
       modalWrap.removeAttribute("tabIndex");
-      document.querySelector("body").style.overflow = "auto";        
+      document.querySelector("body").style.overflow = "auto";
       if (backObj) document.querySelector(backObj).focus();
     }
 
@@ -643,44 +643,72 @@ const commonUI = {
     tabFun.init();
   },
   /* Tab in Tab */
-  tabInnerNav: function (target, viewNum) {
+  tabInnerNav: function (target, selectIndex) {
     const tabs = document.querySelectorAll(target);
-    tabs.forEach((tab, tabIndex) => {
-      const tabFun = {
+    tabs.forEach((tab) => {
+      const tabFn = {
         init: function () {
-          this._initElements();
-          this._initEvents();
+          this.initElements();
+          this.initEvents();
         },
-        _initElements: function () {
-          this.tabNav_a = tab.querySelectorAll(`${target} > ul > li > [role="tab"]`);
-          this.tabContent = tab.querySelectorAll(`${target} > [role="tabpanel"]`);
-          this.activeName = "active";
+        initElements: function () {
+          this.tabButtons = tab.querySelectorAll(`${target} > ul > li > [role="tab"]`);
+          this.tabContents = tab.querySelectorAll(`${target} > [role="tabpanel"]`);
+          this.activeClass = "active";
 
-          if (viewNum != undefined && viewNum <= this.tabNav_a.length && 0 < viewNum) {
-            this.optIndex = viewNum - 1;
+          if (selectIndex != undefined && selectIndex <= this.tabButtons.length && 0 < selectIndex) {
+            this.showIndex = selectIndex - 1;
           } else {
-            this.optIndex = 0;
+            this.showIndex = 0;
           }
-          this.selectedTab = this.tabNav_a[this.optIndex];
+          this.selectedTab = this.tabButtons[this.showIndex];
+          this.tabContents.forEach((panel) => panel.setAttribute("tabindex", "0"));
         },
-        _initEvents: function () {
-          this.setSelectItem(this.selectedTab, this.optIndex);
-          this.tabNav_a.forEach((el, index) => {
-            el.addEventListener("click", (e) => {
+        initEvents: function () {
+          this.setSelectItem(this.selectedTab, this.showIndex);
+          this.tabButtons.forEach((tabButton, index) => {
+            tabButton.addEventListener("click", (e) => {
               e.preventDefault();
-              this.setSelectItem(el, index);
+              this.setSelectItem(tabButton, index);
+            });
+
+            tabButton.addEventListener("keydown", (e) => {
+              let prevIndex = (index - 1 + this.tabButtons.length) % this.tabButtons.length;
+              let nextIndex = (index + 1) % this.tabButtons.length;
+
+              switch (e.key) {
+                case "ArrowLeft":
+                  e.preventDefault();
+                  this.tabButtons[prevIndex].focus();
+                  this.setSelectItem(this.tabButtons[prevIndex], prevIndex);
+                  break;
+                case "ArrowRight":
+                  e.preventDefault();
+                  this.tabButtons[nextIndex].focus();
+                  this.setSelectItem(this.tabButtons[nextIndex], nextIndex);
+                  break;
+              }
             });
           });
         },
         setSelectTab: function (el) {
-          this.tabNav_a.forEach((tab) => tab.classList.remove(this.activeName));
-          el.classList.add(this.activeName);
+          this.tabButtons.forEach((tab) => {
+            tab.classList.remove(this.activeClass);
+            tab.setAttribute("aria-selected", "false");
+            tab.setAttribute("tabindex", "-1");
+          });
+
+          el.classList.add(this.activeClass);
+          el.setAttribute("aria-selected", "true");
+          el.removeAttribute("tabindex");
         },
         setSelectContents: function (num) {
-          this.tabContent.forEach((content, index) => {
-            content.classList.remove(this.activeName);
+          this.tabContents.forEach((content, index) => {
+            content.classList.remove(this.activeClass);
+            content.setAttribute("aria-hidden", "true");
             if (index == num) {
-              content.classList.add(this.activeName);
+              content.classList.add(this.activeClass);
+              content.setAttribute("aria-hidden", "false");
             }
           });
         },
@@ -689,26 +717,25 @@ const commonUI = {
           this.setSelectContents(index);
         },
       };
-      tabFun.init();
+      tabFn.init();
     });
   },
   modalScrollBarCustom: function () {
-		
-		$modalScrollBox = $(".modal .modal-body");
-		$modalCustomScrollBox = $(".scroll-custom");
-    if(!$modalScrollBox) return;
-    if(!$modalCustomScrollBox) return;
-		
-		$modalScrollBox.mCustomScrollbar();
-		$modalCustomScrollBox.mCustomScrollbar();
-				
-		var $draggerContainer = $(".mCSB_draggerContainer");
-		var $draggerRail = $(".mCSB_draggerRail");
-		
-		if ($draggerContainer.length && $draggerRail.length) {
-			$draggerRail.detach().appendTo($draggerContainer);
-		}
-  }
+    $modalScrollBox = $(".modal .modal-body");
+    $modalCustomScrollBox = $(".scroll-custom");
+    if (!$modalScrollBox) return;
+    if (!$modalCustomScrollBox) return;
+
+    $modalScrollBox.mCustomScrollbar();
+    $modalCustomScrollBox.mCustomScrollbar();
+
+    var $draggerContainer = $(".mCSB_draggerContainer");
+    var $draggerRail = $(".mCSB_draggerRail");
+
+    if ($draggerContainer.length && $draggerRail.length) {
+      $draggerRail.detach().appendTo($draggerContainer);
+    }
+  },
 };
 
 const checkVailds = {
