@@ -19,7 +19,7 @@
   <body>
     <button type="button" class="button-primary" id="modalOpenButton">Open</button>
 
-    <div class="modal full dim" role="dialog" aria-modal="true"  id="modalTemplate">
+    <div class="modal full dim" role="dialog" aria-modal="true" id="modalTemplate">
       <div class="modalWrap footer-user-guide">
         <!-- s: Modal Header -->
         <div class="modal-header">
@@ -1021,10 +1021,10 @@
                       <div class="t-depth-service-mypension tab-base">
                         <ul class="inner-tab">
                           <li>
-                            <a href="#tabNav1-1" id="userGuideTab3MyPensSearch" role="tab">예상연금조회</a>
+                            <a href="#" id="userGuideTab3MyPensSearch" role="tab">예상연금조회</a>
                           </li>
                           <li>
-                            <a href="#tabNav1-2" id="userGuideTab3MyPensCalc" role="tab">예상연금 모의계산</a>
+                            <a href="#" id="userGuideTab3MyPensCalc" role="tab">예상연금 모의계산</a>
                           </li>
                         </ul>
 
@@ -1183,7 +1183,7 @@
                   <!-- ===== s: 서비스 이용안내 - 종합재무설계 ===== -->
                   <div class="tabContent service-comprehensive" role="tabpanel" aria-labelledby="userGuideTab3Total">
                     <div class="wrap-inner">
-                      <div class="t-depth-service-mypension-comprehensive tab-base">
+                      <div class="t-depth-service-comprehensive tab-base">
                         <ul class="inner-tab">
                           <li>
                             <a href="#" id="userGuideTab3TotalCustom" role="tab">고객재무정보</a>
@@ -1197,7 +1197,7 @@
                         </ul>
 
                         <!-- ===== s: UHKA0118P0 서비스 이용안내 - 종합재무설계 - 고객재무정보 ===== -->
-                        <div class="inner-contents service-customer" role="tabpanel" aria-labelledby="serGuideTab3TotalCustom">
+                        <div class="inner-contents service-customer" role="tabpanel" aria-labelledby="userGuideTab3TotalCustom">
                           <h4 class="guide-tab-title">고객재무정보</h4>
                           <div class="tab-panel-inner">
                             <p class="guide-page-description">종합재무설계를 위해 고객의 정보를 입력하는 화면입니다.STEP01(기본정보)부터 STEP06(부채정보)까지 순서대로 진행되며, 각 단계별로 내용을 입력하시면 됩니다.</p>
@@ -1359,6 +1359,7 @@
       </div>
     </div>
     <script>
+      commonUI.tabInnerNav(".t-depth-main", 1); // 1.홈페이지 안내, 2.로그인, 3.서비스 이용안내, 4.용어해설집
       commonUI.tabInnerNav(".t-depth-homepage", 1); // 1.이용안내, 2.보안프로그램
       commonUI.tabInnerNav(".t-depth-homepage-useinfo", 1); // 1.웹콘텐츠 접근성지침, 2.메뉴안내, 3.편리한서비스, 4.모바일홈페이지, 5.장애인지원
       commonUI.tabInnerNav(".t-depth-login", 1); // 1.로그인 안내, 2.공인인증서 안내
@@ -1366,12 +1367,10 @@
       commonUI.tabInnerNav(".t-depth-service", 1); // 1.내연금알아보기, 2.자가진단, 3.종합재무설계, 4.상담신청, 5.강의신청 탭
       commonUI.tabInnerNav(".t-depth-service-mypension", 1); // 1.예상연금조회, 2.예상연금 모의계산
       commonUI.tabInnerNav(".t-depth-service-mypension-expected", 1); // 1.노령연금조회, 2.상세연금조회
-      commonUI.tabInnerNav(".t-depth-service-mypension-comprehensive", 1); // 1.고객재무정보, 2.재무분석, 3.설계안수립
+      commonUI.tabInnerNav(".t-depth-service-comprehensive", 1); // 1.고객재무정보, 2.재무분석, 3.설계안수립
 
       document.querySelector("#modalOpenButton").addEventListener("click", () => {
         commonUI.modal("#modalTemplate", "#modalOpenButton");
-        commonUI.tabInnerNav(".t-depth-main", 1); // 1.홈페이지 안내, 2.로그인, 3.서비스 이용안내, 4.용어해설집
-
       });
     </script>
   </body>

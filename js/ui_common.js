@@ -616,29 +616,21 @@ const commonUI = {
         this.selectedTab = el;
         this.selectedTab.classList.add(this.activeName);
       },
-      setSelectContents: function (num) {
-        this.tabContent.forEach((el, index) => {
-          el.setAttribute("tabindex", "-1");
-          if (index == num) {
-            el.classList.add(this.activeName);
-            if (el.querySelector(".visible-graph")) {
-              el.querySelector(".visible-graph").classList.add(this.activeName); // graph
-            }
-            el.setAttribute("aria-hidden", "false");
-          } else {
-            el.classList.remove(this.activeName);
-            if (el.querySelector(".visible-graph")) {
-              el.querySelector(".visible-graph").classList.remove(this.activeName); // graph
-            }
-            el.removeAttribute("title");
-            el.setAttribute("aria-hidden", "true");
-          }
-        });
-      },
-      setSelectItem: function (el, index) {
-        this.setSelectTab(el);
-        this.setSelectContents(index);
-      },
+			setSelectContents: function (num) {
+				this.tabContent.forEach((el, index) => {
+					if (index == num) {
+						el.classList.add(this.activeName);
+						el.setAttribute('title', '선택됨');
+					} else {
+						el.classList.remove(this.activeName);
+						el.removeAttribute('title');
+					}
+				});
+			},
+			setSelectItem: function (el, index){
+				this.setSelectTab(el);
+				this.setSelectContents(index);
+			}
     };
     tabFun.init();
   },
@@ -657,12 +649,19 @@ const commonUI = {
           this.activeClass = "active";
 
           if (selectIndex != undefined && selectIndex <= this.tabButtons.length && 0 < selectIndex) {
-            this.showIndex = selectIndex - 1;
+              this.showIndex = selectIndex - 1;
           } else {
-            this.showIndex = 0;
+              this.showIndex = 0;
           }
           this.selectedTab = this.tabButtons[this.showIndex];
           this.tabContents.forEach((panel) => panel.setAttribute("tabindex", "0"));
+
+          this.tabButtons.forEach((tabButton, index) => {
+              let id = tabButton.getAttribute('id');
+              if(!id) return;
+              this.tabContents[index].setAttribute('id', `${id}Panel`);
+              tabButton.setAttribute('aria-control', this.tabContents[index].getAttribute('id'))
+          });
         },
         initEvents: function () {
           this.setSelectItem(this.selectedTab, this.showIndex);
@@ -691,29 +690,29 @@ const commonUI = {
             });
           });
         },
-        setSelectTab: function (el) {
-          this.tabButtons.forEach((tab) => {
-            tab.classList.remove(this.activeClass);
-            tab.setAttribute("aria-selected", "false");
-            tab.setAttribute("tabindex", "-1");
+        setSelectTab: function (selectTab) {
+          this.tabButtons.forEach((tabButton) => {
+            tabButton.classList.remove(this.activeClass);
+            tabButton.setAttribute("aria-selected", "false");
+            tabButton.setAttribute("tabindex", "-1");
           });
 
-          el.classList.add(this.activeClass);
-          el.setAttribute("aria-selected", "true");
-          el.removeAttribute("tabindex");
+          selectTab.classList.add(this.activeClass);
+          selectTab.setAttribute("aria-selected", "true");
+          selectTab.removeAttribute("tabindex");
         },
-        setSelectContents: function (num) {
-          this.tabContents.forEach((content, index) => {
-            content.classList.remove(this.activeClass);
-            content.setAttribute("aria-hidden", "true");
-            if (index == num) {
-              content.classList.add(this.activeClass);
-              content.setAttribute("aria-hidden", "false");
+        setSelectContents: function (selectIndex) {
+          this.tabContents.forEach((tabContent, index) => {
+            tabContent.classList.remove(this.activeClass);
+            tabContent.setAttribute("aria-hidden", "true");
+            if (index == selectIndex) {
+              tabContent.classList.add(this.activeClass);
+              tabContent.setAttribute("aria-hidden", "false");
             }
           });
         },
-        setSelectItem: function (el, index) {
-          this.setSelectTab(el);
+        setSelectItem: function (tab, index) {
+          this.setSelectTab(tab);
           this.setSelectContents(index);
         },
       };

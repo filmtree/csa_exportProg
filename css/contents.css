@@ -3023,11 +3023,11 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .graph-box1.visible-graph {
-  display: none;
+  /* display: none; */
 }
 
 .graph-box1.visible-graph.active {
-  display: block;
+  /* display: block; */
 }
 
 .graph-box1.half {
