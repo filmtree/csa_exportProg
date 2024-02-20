@@ -3433,6 +3433,12 @@ input[type="number"]::-webkit-inner-spin-button {
   transform: rotate(180deg);
 }
 
+.button-primary.-sm.round > .ic-only.arr10_r_white.v1 {
+  margin-top: -1px;
+  margin-left: 4px;
+  margin-right: -4px;
+}
+
 /* 종합재무설계 table */
 .con-table.auto {
   overflow-x: visible;

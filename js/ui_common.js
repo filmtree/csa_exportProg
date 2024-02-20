@@ -584,7 +584,6 @@ const commonUI = {
   tabNav: function (target, viewNum) {
     const tab = document.querySelector(target);
     const optIndex = viewNum;
-
     const tabFun = {
       init: function () {
         this._initElements();
@@ -634,7 +633,94 @@ const commonUI = {
     };
     tabFun.init();
   },
-  /* Tab in Tab */
+  /* 기존 tabNav에 접근성 설정을 해야할 경우 아래 스크립트 사용. */
+  // tabNav: function (target, selectIndex) {
+  //   const tabs = document.querySelectorAll(target);
+  //   tabs.forEach((tab) => {
+  //     const tabFn = {
+  //       init: function () {
+  //         this.initElements();
+  //         this.initEvents();
+  //       },
+  //       initElements: function () {
+  //         this.tabButtons = tab.querySelectorAll(`.tabNav > li > a`)
+  //         this.tabContents = tab.querySelectorAll(`.tabContent`);
+  //         this.activeClass = "active";
+
+  //         if (selectIndex != undefined && selectIndex <= this.tabButtons.length && 0 < selectIndex) {
+  //             this.showIndex = selectIndex - 1;
+  //         } else {
+  //             this.showIndex = 0;
+  //         }
+  //         this.selectedTab = this.tabButtons[this.showIndex];
+  //         this.tabContents.forEach((panel) => panel.setAttribute("tabindex", "0"));
+
+  //         this.tabButtons.forEach((tabButton, index) => {
+  //             let id = tabButton.getAttribute('id');
+  //             if(!id) return;
+  //             this.tabContents[index].setAttribute('id', `${id}Panel`);
+  //             tabButton.setAttribute('aria-control', this.tabContents[index].getAttribute('id'))
+  //         });
+  //       },
+  //       initEvents: function () {
+  //         this.setSelectItem(this.selectedTab, this.showIndex);
+  //         this.tabButtons.forEach((tabButton, index) => {
+  //           tabButton.addEventListener("click", (e) => {
+  //             e.preventDefault();
+  //             this.setSelectItem(tabButton, index);
+  //           });
+
+  //           tabButton.addEventListener("keydown", (e) => {
+  //             this.setKeyboardEvent(index, e);
+  //           });
+  //         });
+  //       },
+  //       setKeyboardEvent: function(index, e) {
+  //         let prevIndex = (index - 1 + this.tabButtons.length) % this.tabButtons.length;
+  //         let nextIndex = (index + 1) % this.tabButtons.length;
+
+  //         switch (e.key) {
+  //           case "ArrowLeft":
+  //             e.preventDefault();
+  //             this.tabButtons[prevIndex].focus();
+  //             this.setSelectItem(this.tabButtons[prevIndex], prevIndex);
+  //             break;
+  //           case "ArrowRight":
+  //             e.preventDefault();
+  //             this.tabButtons[nextIndex].focus();
+  //             this.setSelectItem(this.tabButtons[nextIndex], nextIndex);
+  //             break;
+  //         }
+  //       },
+  //       setSelectTab: function (selectTab) {
+  //         this.tabButtons.forEach((tabButton) => {
+  //           tabButton.classList.remove(this.activeClass);
+  //           tabButton.setAttribute("aria-selected", "false");
+  //           tabButton.setAttribute("tabindex", "-1");
+  //         });
+
+  //         selectTab.classList.add(this.activeClass);
+  //         selectTab.setAttribute("aria-selected", "true");
+  //         selectTab.removeAttribute("tabindex");
+  //       },
+  //       setSelectContents: function (selectIndex) {
+  //         this.tabContents.forEach((tabContent, index) => {
+  //           tabContent.classList.remove(this.activeClass);
+  //           tabContent.setAttribute("aria-hidden", "true");
+  //           if (index == selectIndex) {
+  //             tabContent.classList.add(this.activeClass);
+  //             tabContent.setAttribute("aria-hidden", "false");
+  //           }
+  //         });
+  //       },
+  //       setSelectItem: function (tab, index) {
+  //         this.setSelectTab(tab);
+  //         this.setSelectContents(index);
+  //       },
+  //     };
+  //     tabFn.init();
+  //   });
+  // },
   tabInnerNav: function (target, selectIndex) {
     const tabs = document.querySelectorAll(target);
     tabs.forEach((tab) => {
@@ -672,23 +758,26 @@ const commonUI = {
             });
 
             tabButton.addEventListener("keydown", (e) => {
-              let prevIndex = (index - 1 + this.tabButtons.length) % this.tabButtons.length;
-              let nextIndex = (index + 1) % this.tabButtons.length;
-
-              switch (e.key) {
-                case "ArrowLeft":
-                  e.preventDefault();
-                  this.tabButtons[prevIndex].focus();
-                  this.setSelectItem(this.tabButtons[prevIndex], prevIndex);
-                  break;
-                case "ArrowRight":
-                  e.preventDefault();
-                  this.tabButtons[nextIndex].focus();
-                  this.setSelectItem(this.tabButtons[nextIndex], nextIndex);
-                  break;
-              }
+              this.setKeyboardEvent(index, e);
             });
           });
+        },
+        setKeyboardEvent: function(index, e) {
+          let prevIndex = (index - 1 + this.tabButtons.length) % this.tabButtons.length;
+          let nextIndex = (index + 1) % this.tabButtons.length;
+
+          switch (e.key) {
+            case "ArrowLeft":
+              e.preventDefault();
+              this.tabButtons[prevIndex].focus();
+              this.setSelectItem(this.tabButtons[prevIndex], prevIndex);
+              break;
+            case "ArrowRight":
+              e.preventDefault();
+              this.tabButtons[nextIndex].focus();
+              this.setSelectItem(this.tabButtons[nextIndex], nextIndex);
+              break;
+          }
         },
         setSelectTab: function (selectTab) {
           this.tabButtons.forEach((tabButton) => {
