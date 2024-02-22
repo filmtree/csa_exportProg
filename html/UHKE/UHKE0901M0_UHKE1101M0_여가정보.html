@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- s: header -->
+      <header id="header"></header>
+      <!-- e: header -->
+
+      <!-- s: Loaction Information Link -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-nav">
+          <ol class="breadcrumb-location">
+            <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+            <li class="breadcrumb-depth dep1">
+              <button type="button" class="breadcrumb-trigger">노후준비정보</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                <li><a href="#none" target="_self">재무진단</a></li>
+                <li class="current"><a href="#none" target="_self">노후준비정보</a></li>
+                <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                <li><a href="#none" target="_self">마이페이지</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger">노후준비소식</button>
+              <ul class="breadcrumb-depth-list">
+                <li class="current"><a href="#none" target="_self">노후준비소식</a></li>
+                <li><a href="#none" target="_self">노후준비정보</a></li>
+                <li><a href="#none" target="_self">노후준비동영상</a></li>
+                <li><a href="#none" target="_self">콘텐츠</a></li>
+                <li><a href="#none" target="_self">방문상담신청</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep3">
+              <button type="button" class="breadcrumb-trigger current">여가</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">노후준비소식</a></li>
+                <!-- 노후준비정보 -->
+                <li><a href="#none" target="_self">재무</a></li>
+                <li><a href="#none" target="_self">건 강</a></li>
+                <li class="current"><a href="#none" target="_self">여가</a></li>
+                <li><a href="#none" target="_self">대인관계</a></li>
+                <!-- 노후준비동영상 -->
+                <li><a href="#none" target="_self">노후준비강의</a></li>
+                <li><a href="#none" target="_self">홍보영상</a></li>
+                <!-- 콘텐츠 -->
+                <li><a href="#none" target="_self">카드뉴스</a></li>
+                <li><a href="#none" target="_self">간행물</a></li>
+                <!-- 방문상담신청 -->
+                <li><a href="#none" target="_self">방문상담예약 목록</a></li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <!-- e: Loaction Information Link -->
+
+      <!-- s: Main -->
+      <main id="conatiner" class="preparation">
+        <!--s: Page Title-->
+        <div class="page-header">
+          <div class="page-title">
+            <a href="#" class="ic-only back">뒤로가기</a>
+            <h2>여가</h2>
+          </div>
+          <div class="page-desc">
+            <button type="button" class="page-desc-btn _has-tooltip" title="Title 안내 보기">
+              <span>Title 안내</span>
+              <i class="ic-only f-pg-desc" aria-hidden="true"></i>
+            </button>
+            <div class="desc-box _tooltipbox" role="tooltip">
+              <div class="desc-box-inner">
+                <div class="desc-content">
+                  <h4 class="sr-only">Title 안내</h4>
+                  <p>안내 내용</p>
+                </div>
+                <button type="button" class="ic-only box-close">창닫기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--e: Page Title-->
+
+        <!--s: Contents -->
+        <div class="content-wrap preparation-health">
+          <!-- ========  s: Tab Contents ======== -->
+          <div class="tabWrap tab-base tab-total">
+            <!-- ========  s: Tab Buttons ======== -->
+            <ul class="tabNav">
+              <li><a href="#none" id="tabNav1" role="tab">여가정보</a></li>
+              <li><a href="#none" id="tabNav3" role="tab">외부사이트</a></li>
+            </ul>
+            <!-- ========  e: Tab Buttons ======== -->
+            <!-- ========  s: Tab Panel 1 ======== -->
+            <div class="tabContent" role="tabpanel" aria-labelledby="tabNav1">
+              <div class="cont-head">
+                <h3 class="cont-title dot big">일하고 남은시간 어떻게 보내시나요?</h3>
+              </div>
+              <div class="cont-desc big">
+                <p>여가란 직업상의 일, 필수적인 가사일, 수업 등과 같은 의무적인 활동 이외에 스포츠, 취미, 휴양 등을 개인의 뜻대로 자유롭게 이용할 수 있는 시간을 말합니다.</p>
+                <p>은퇴 후 80세까지 건강하게 살 경우 8만 시간의 여유시간이 생깁니다.</p>
+                <p>은퇴 후에 생기는 긴 시간을 허비하지 않고 보람차게 보내기 위해서는 계획적이고 규칙적인 여가활동이 반드시 필요합니다.</p>
+                <p>특히 노년기 여가활동은 건강증진, 사회참여, 일상생활의 만족감 증진, 자신감 향상 등 다양한 측면에서 긍정적인 영향을 미칩니다.</p>
+                <p>지금까지 열심히 일만 해왔다면 이제는 은퇴 후 삶을 준비해야 합니다.</p>
+                <p>은퇴 후 소소한 재미를 찾을 수 있도록 부담스럽지 않고 꾸준히 할 수 있는 활동을 지금부터 시작하는 것이 좋습니다.</p>
+              </div>
+            </div>
+            <!-- ========  e: Tab Panel 1 ======== -->
+            <!-- ========  s: Tab Panel 2 ======== -->
+            <div class="tabContent" role="tabpanel" aria-labelledby="tabNav2">
+              <div class="external-site">
+                <ul class="external-site-list">
+                  <li>
+                    <div class="external-site-box">
+                      <div class="external-site-head">
+                        <h2>
+                          <img src="../../images/contents/logo_culture.svg" alt="문화포털 로고" />
+                        </h2>
+                      </div>
+                      <div class="external-site-body">
+                        <h3 class="external-site-title">문화포털</h3>
+                        <p class="cont-desc">문화공연, 전시, 체험, 교육, 관광, 행사 등의 다양한 문화정보를 제공합니다.</p>
+                      </div>
+                      <div class="external-site-footer">
+                        <a href="http://www.culture.go.kr/index.do" class="button-fourth" target="_blank" title="새창">바로가기</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="external-site-box">
+                      <div class="external-site-head">
+                        <h2>
+                          <img src="../../images/contents/logo_visitkorea2.svg" alt="대한민국 구석구석 로고" />
+                        </h2>
+                      </div>
+                      <div class="external-site-body">
+                        <h3 class="external-site-title">대한민국 구석구석</h3>
+                        <p class="cont-desc">여행정보 사이트로 전국 여행지, 축제, 숙박, 먹을거리 등의 정보를 종합적으로 제공합니다.</p>
+                      </div>
+                      <div class="external-site-footer">
+                        <a href="http://korean.visitkorea.or.kr" class="button-fourth" target="_blank" title="새창">바로가기</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="external-site-box">
+                      <div class="external-site-head">
+                        <h2>
+                          <img src="../../images/contents/logo_walkload.svg" alt="걷기여행길 로고" />
+                        </h2>
+                      </div>
+                      <div class="external-site-body">
+                        <h3 class="external-site-title">걷기여행길</h3>
+                        <p class="cont-desc">걷기여행과 관련한 정보를 종합적으로 제공합니다.</p>
+                      </div>
+                      <div class="external-site-footer">
+                        <a href="http://www.koreatrails.or.kr" class="button-fourth" target="_blank" title="새창">바로가기</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="external-site-box">
+                      <div class="external-site-head">
+                        <h2>
+                          <img src="../../images/contents/logo_gocamping.svg" alt="고캠핑 로고" />
+                        </h2>
+                      </div>
+                      <div class="external-site-body">
+                        <h3 class="external-site-title">고캠핑</h3>
+                        <p class="cont-desc">전국 캠핑장 정보, 캠핑가이드 등 캠핑과 관련한 정보를 종합적으로 제공합니다.</p>
+                      </div>
+                      <div class="external-site-footer">
+                        <a href="http://www.gocamping.or.kr" class="button-fourth" target="_blank" title="새창">바로가기</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="external-site-box">
+                      <div class="external-site-head">
+                        <h2>
+                          <img src="../../images/contents/logo_sportal.svg" alt="생활체육정보포털 로고" />                          
+                        </h2>
+                      </div>
+                      <div class="external-site-body">
+                        <h3 class="external-site-title">생활체육정보포털</h3>
+                        <p class="cont-desc">체육시설 정보, 지역별 스포츠클럽 및 동호인클럽 조회, 강습회 정보를 제공합니다.</p>
+                      </div>
+                      <div class="external-site-footer">
+                        <a href="http://www.sportal.or.kr/main.do" class="button-fourth" target="_blank" title="새창">바로가기</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="external-site-box">
+                      <div class="external-site-head">
+                        <h2>
+                          <img src="../../images/contents/logo_forestorg.svg" alt="산림청 로고" />
+                        </h2>
+                      </div>
+                      <div class="external-site-body">
+                        <h3 class="external-site-title">산림청 - 휴양･문화･복지</h3>
+                        <p class="cont-desc">휴양림 정보･예약, 100대 명산, 수목원, 수련원 등의 정보를 제공합니다.</p>
+                      </div>
+                      <div class="external-site-footer">
+                        <a href="http://www.forest.go.kr/newkfsweb/kfs/idx/SubMain.do?mn=KFS_01" class="button-fourth" target="_blank" title="새창">바로가기</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="external-site-box">
+                      <div class="external-site-head">
+                        <h2>
+                          <img src="../../images/contents/logo_longedu.svg" alt="국가평생학습포털 로고" />
+                        </h2>
+                      </div>
+                      <div class="external-site-body">
+                        <h3 class="external-site-title">국가평생학습포털</h3>
+                        <p class="cont-desc">전국의 평생교육정보, 학습 콘텐츠 등의 정보를 모아서 제공합니다.</p>
+                      </div>
+                      <div class="external-site-footer">
+                        <a href="http://www.lifelongedu.go.kr" class="button-fourth" target="_blank" title="새창">바로가기</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="external-site-box">
+                      <div class="external-site-head">
+                        <h2>
+                          <img src="../../images/contents/logo_primeknou.svg" alt="한국방송통신대학교 프라임칼리지 로고" />
+                        </h2>
+                      </div>
+                      <div class="external-site-body">
+                        <h3 class="external-site-title">한국방송통신대학교 프라임칼리지</h3>
+                        <p class="cont-desc">제2인생 설계 및 준비를 위해 4050세대를 위한 맞춤형 교육 프로그램을 제공합니다.</p>
+                      </div>
+                      <div class="external-site-footer">
+                        <a href="http://prime.knou.ac.kr" class="button-fourth" target="_blank" title="새창">바로가기</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="external-site-box">
+                      <div class="external-site-head">
+                        <h2>
+                          <img src="../../images/contents/logo_hanc.svg" alt="한국문화센터 로고" />
+                        </h2>
+                      </div>
+                      <div class="external-site-body">
+                        <h3 class="external-site-title">한국문화센터</h3>
+                        <p class="cont-desc">섬유예술, 꽃예술, 종이공예 등 생활문화강좌 정보를 제공합니다.</p>
+                      </div>
+                      <div class="external-site-footer">
+                        <a href="http://www.hanc.co.kr" class="button-fourth" target="_blank" title="새창">바로가기</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="external-site-box">
+                      <div class="external-site-head">
+                        <h2>
+                          <img src="../../images/contents/logo_culture2.svg" alt="문화품앗e 로고" />
+                        </h2>
+                      </div>
+                      <div class="external-site-body">
+                        <h3 class="external-site-title">문화품앗e</h3>
+                        <p class="cont-desc">문화체육 자원봉사 정보를 알아보고 참여신청을 할 수 있습니다.</p>
+                      </div>
+                      <div class="external-site-footer">
+                        <a href="http://csv.culture.go.kr/frt/main.do" class="button-fourth" target="_blank" title="새창">바로가기</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="external-site-box">
+                      <div class="external-site-head">
+                        <h2>
+                          <img src="../../images/contents/logo_1365.svg" alt=" 로고" />
+                        </h2>
+                      </div>
+                      <div class="external-site-body">
+                        <h3 class="external-site-title">1365자원봉사포털</h3>
+                        <p class="cont-desc">전국의 자원봉사 정보를 한 눈에 확인할 수 있으며 검색은 물론 신청부터 실적까지 원스톱으로 확인 가능합니다.</p>
+                      </div>
+                      <div class="external-site-footer">
+                        <a href="https://www.1365.go.kr/vols/main.do" class="button-fourth" target="_blank" title="새창">바로가기</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="external-site-box">
+                      <div class="external-site-head">
+                        <h2>
+                          <img src="../../images/contents/logo_kaswcs.svg" alt="한국노인종합복지관협회 로고" />
+                        </h2>
+                      </div>
+                      <div class="external-site-body">
+                        <h3 class="external-site-title">한국노인종합복지관협회</h3>
+                        <p class="cont-desc">전국 노인복지관 정보와 노인자원봉사 정보를 제공합니다.</p>
+                      </div>
+                      <div class="external-site-footer">
+                        <a href="http://www.kaswcs.or.kr" class="button-fourth" target="_blank" title="새창">바로가기</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- ========  e: Tab Panel 3 ======== -->
+          </div>
+          <!-- ========  e: Tab Contents ======== -->
+
+          <!-- s: Common UI - HashTag Banner -->
+          <div class="hashtag-wrap"></div>
+          <!-- e: Common UI - HashTag Banner -->
+        </div>
+        <!--s: Contents -->
+
+        <!-- s: Common UI - Survey -->
+        <div class="page-satisfaction"></div>
+        <!-- e: Common UI - Survey -->
+      </main>
+      <!-- e: Main -->
+
+      <!-- s: footer -->
+      <footer id="footer"></footer>
+      <!-- e: footer -->
+    </div>
+    
+    <script>
+      commonUI.tabNav(".tabWrap", 1);
+      
+    </script>
+  </body>
+</html>

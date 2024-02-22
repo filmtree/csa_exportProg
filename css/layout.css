@@ -1251,7 +1251,7 @@
   font-weight: 700;
 }
 
-.modalWrap .modal-header .btn-close {
+.modalWrap .btn-close {
   position: absolute;
   top: 2.5rem;
   right: 2rem;
@@ -1458,7 +1458,7 @@
   display: none;
 }
 
-.tabWrap .tabNav a {
+.tabWrap .tabNav li a {
   display: block;
   padding-bottom: 1.1rem;
   font-size: 1.8rem;
@@ -1467,7 +1467,8 @@
   text-align: center;
 }
 
-.tabWrap .tabNav a.active {
+.tabWrap .tabNav li.active a,
+.tabWrap .tabNav li a.active {
   border-bottom: 3px solid var(--color-primary);
   background-color: #ffffff;
   color: var(--color-primary);
@@ -2031,7 +2032,7 @@ input.useDatepicker {
     padding: 1rem 1.6rem;
   }
 
-  .modal .modalWrap .modal-header .btn-close {
+  .modal .modalWrap .btn-close {
     top: 4px;
     right: 3px;
     background-image: url("../images/ico/ic_16_arr_close.svg");
@@ -2104,7 +2105,7 @@ input.useDatepicker {
     padding-top: 4rem;
   }
 
-  .modal.full .modalWrap .modal-header .btn-close {
+  .modal.full .modalWrap .btn-close {
     top: 3px;
     right: 3px;
     background: url("../images/ico/ic_modal_default_close.svg") center center no-repeat;

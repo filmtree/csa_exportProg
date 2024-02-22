@@ -377,107 +377,119 @@ const commonUI = {
       $(this).parent().closest("._tooltipbox").siblings("._has-tooltip").removeClass("active");
     });
   },
+  /* 기존 사용 모달 */
+  // modal: function (target, backObj) {
+  //   const modal = document.querySelector(target);
+  //   const modalWrap = modal.querySelector(".modalWrap");
+  //   const btns = modal.querySelectorAll(".btn-close");
+
+  //   function modalOpen() {
+  //     modal.classList.add("active");
+  //     modalWrap.setAttribute("tabindex", "0");
+  //     modalWrap.focus();
+  //     document.querySelector("body").style.overflow = "hidden";
+  //   }
+  //   function modalClose() {
+  //     modal.classList.remove("active");
+  //     modalWrap.removeAttribute("tabIndex");
+  //     document.querySelector("body").style.overflow = "auto";
+  //     if (backObj) document.querySelector(backObj).focus();
+  //   }
+
+  //   modalOpen();
+
+  //   btns.forEach((btn) => {
+  //     btn.addEventListener("click", () => {
+  //       modalClose();
+  //     });
+  //   });
+
+  //   const focusItems = modal.querySelectorAll("input, select, textarea, button, a");
+  //   focusItems[focusItems.length - 1].addEventListener("blur", function () {
+  //     modalWrap.focus();
+  //   });
+  // },
+
+  /* 모달 팝업 접근성 설정. 20240221 */
   modal: function (target, backObj) {
     const modal = document.querySelector(target);
     const modalWrap = modal.querySelector(".modalWrap");
+    const dimmed = document.querySelector(".dim");
     const btns = modal.querySelectorAll(".btn-close");
+    modalFn = {
+      init: function () {
+        this.initBuild();
+        this.modalOpen();
+        this.initEvent();
+      },
+      initBuild: function () {
+        // 닫기 버튼 위치 변경
+        btns.forEach((btn) => {
+          modalWrap.appendChild(btn);
+        });
+      },
+      initEvent: function () {
+        btns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            this.modalClose();
+          });
+        });
+        window.addEventListener("click", (e) => {
+          if (e.target === dimmed) {
+            this.modalClose();
+          }
+        });
+        document.addEventListener("keydown", (e) => {
+          switch (e.key) {
+            case "Escape":
+              this.modalClose();
+              break;
+            case "Tab":
+              this.trapFocus(modalWrap);
+              break;
+          }
+        });
+      },
+      modalOpen: function () {
+        modal.classList.add("active");
+        modalWrap.setAttribute("tabindex", "0");
+        modalWrap.focus();
+        document.querySelector("body").style.overflow = "hidden";
+        modal.setAttribute("aria-hidden", "false");
+        modal.setAttribute("role", "dialog");
+      },
+      modalClose: function () {
+        modal.classList.remove("active");
+        modalWrap.removeAttribute("tabIndex");
+        document.querySelector("body").style.overflow = "auto";
+        if (backObj) document.querySelector(backObj).focus();
+        modal.setAttribute("aria-hidden", "true");
+      },
+      trapFocus: function (el) {
+        const focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled])";
+        const focusableElements = el.querySelectorAll(focusableElementsString);
+        const firstFocusableElement = focusableElements[0];
+        const lastFocusableElement = focusableElements[focusableElements.length - 1];
 
-    function modalOpen() {
-      modal.classList.add("active");
-      modalWrap.setAttribute("tabindex", "0");
-      modalWrap.focus();
-      document.querySelector("body").style.overflow = "hidden";
-    }
-    function modalClose() {
-      modal.classList.remove("active");
-      modalWrap.removeAttribute("tabIndex");
-      document.querySelector("body").style.overflow = "auto";
-      if (backObj) document.querySelector(backObj).focus();
-    }
-
-    modalOpen();
-
-    btns.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        modalClose();
-      });
-    });
-
-    const focusItems = modal.querySelectorAll("input, select, textarea, button, a");
-    focusItems[focusItems.length - 1].addEventListener("blur", function () {
-      modalWrap.focus();
-    });
+        el.addEventListener("keydown", function (e) {
+          let isTabPressed = e.key === "Tab";
+          if (!isTabPressed) return;
+          if (e.shiftKey) {
+            if (document.activeElement === firstFocusableElement) {
+              lastFocusableElement.focus();
+              e.preventDefault();
+            }
+          } else {
+            if (document.activeElement === lastFocusableElement) {
+              firstFocusableElement.focus();
+              e.preventDefault();
+            }
+          }
+        });
+      },
+    };
+    modalFn.init();
   },
-
-  /* 모달 팝업 접근성 설정시 사용. 20240220 */
-  // modal: function (target, backObj) {
-  //   const modal = document.querySelector(target);
-  //   const dimmed = document.querySelector(".dim");
-  //   const modalWrap = modal.querySelector(".modalWrap");
-  //   const btns = modal.querySelectorAll(".btn-close");
-  //   modalFn = {
-  //     init: function () {
-  //       this.modalOpen();
-  //       this.initEvent();
-  //       this.trapFocus(modalWrap);            
-  //     },
-  //     initEvent: function () {
-  //       btns.forEach((btn) => {
-  //         btn.addEventListener("click", () => {
-  //           this.modalClose();
-  //         });
-  //       });
-  //       window.addEventListener("keydown", (e) => {
-  //         if (e.key === "Escape") {
-  //           this.modalClose();
-  //         }
-  //       });
-  //       window.addEventListener("click", (e) => {          
-  //         if(e.target === dimmed) {
-  //           this.modalClose();
-  //         }
-  //       })
-  //     },
-  //     modalOpen: function() {
-  //       modal.classList.add("active");
-  //       modalWrap.setAttribute("tabindex", "0");
-  //       modalWrap.focus();
-  //       document.querySelector("body").style.overflow = "hidden";
-  //       modal.setAttribute("aria-hidden", "false"); 
-  //       modal.setAttribute("role", "dialog"); 
-  //     },
-  //     modalClose: function() {
-  //       modal.classList.remove("active");
-  //       modalWrap.removeAttribute("tabIndex");
-  //       document.querySelector("body").style.overflow = "auto";
-  //       if (backObj) document.querySelector(backObj).focus();
-  //       modal.setAttribute("aria-hidden", "true"); 
-  //     },  
-  //     trapFocus: function(el) {
-  //       const focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
-  //       const focusableElements = el.querySelectorAll(focusableElementsString);
-  //       const firstFocusableElement = focusableElements[0];
-  //       const lastFocusableElement = focusableElements[focusableElements.length - 1];
-  
-  //       el.addEventListener('keydown', function(e) {
-  //         let isTabPressed = (e.key === 'Tab');
-  //         if (!isTabPressed) return;
-  //         if (e.shiftKey) { 
-  //           if (document.activeElement === firstFocusableElement) {
-  //             lastFocusableElement.focus(); 
-  //             e.preventDefault();
-  //           }
-  //         } else { 
-  //           if (document.activeElement === lastFocusableElement) {
-  //             firstFocusableElement.focus(); 
-  //             e.preventDefault();
-  //           }
-  //         }
-  //       });
-  //     }
-  //   }
-  //   modalFn.init();    
-  // },  
 
   accordion: function () {
     const target = document.querySelectorAll(".accWrap");
@@ -686,26 +698,27 @@ const commonUI = {
         this.selectedTab = el;
         this.selectedTab.classList.add(this.activeName);
       },
-			setSelectContents: function (num) {
-				this.tabContent.forEach((el, index) => {
-					if (index == num) {
-						el.classList.add(this.activeName);
-						el.setAttribute('title', '선택됨');
-					} else {
-						el.classList.remove(this.activeName);
-						el.removeAttribute('title');
-					}
-				});
-			},
-			setSelectItem: function (el, index){
-				this.setSelectTab(el);
-				this.setSelectContents(index);
-			}
+      setSelectContents: function (num) {
+        this.tabContent.forEach((el, index) => {
+          if (index == num) {
+            el.classList.add(this.activeName);
+            el.setAttribute("title", "선택됨");
+          } else {
+            el.classList.remove(this.activeName);
+            el.removeAttribute("title");
+          }
+        });
+      },
+      setSelectItem: function (el, index) {
+        this.setSelectTab(el);
+        this.setSelectContents(index);
+      },
     };
     tabFun.init();
   },
-  /* 기존 tabNav에 접근성 설정을 해야할 경우 아래 스크립트 사용. 20240220 */
-  // tabNav: function (target, selectIndex) {
+
+  /* 탭 인 탭용 (접근성 탭메뉴) 20240220 구조변경 안함 */
+  // tabInnerNav: function (target, selectIndex) {
   //   const tabs = document.querySelectorAll(target);
   //   tabs.forEach((tab) => {
   //     const tabFn = {
@@ -714,8 +727,8 @@ const commonUI = {
   //         this.initEvents();
   //       },
   //       initElements: function () {
-  //         this.tabButtons = tab.querySelectorAll(`.tabNav > li > a`)
-  //         this.tabContents = tab.querySelectorAll(`.tabContent`);
+  //         this.tabButtons = tab.querySelectorAll(`${target} > ul > li > [role="tab"]`);
+  //         this.tabContents = tab.querySelectorAll(`${target} > [role="tabpanel"]`);
   //         this.activeClass = "active";
 
   //         if (selectIndex != undefined && selectIndex <= this.tabButtons.length && 0 < selectIndex) {
@@ -792,8 +805,7 @@ const commonUI = {
   //     tabFn.init();
   //   });
   // },
-
-  /* 접근성 용으로 수정 20240220 */
+  /* 탭 인 탭용 (접근성 탭메뉴). 20240221 구조변경 포함 */
   tabInnerNav: function (target, selectIndex) {
     const tabs = document.querySelectorAll(target);
     tabs.forEach((tab) => {
@@ -803,23 +815,31 @@ const commonUI = {
           this.initEvents();
         },
         initElements: function () {
-          this.tabButtons = tab.querySelectorAll(`${target} > ul > li > [role="tab"]`);
+          this.tabLists = tab.querySelectorAll(`${target} > ul`);
+          this.tabListItems = tab.querySelectorAll(`${target} > ul > li`);
+          this.tabButtons = tab.querySelectorAll(`${target} > ul > li > a`);
           this.tabContents = tab.querySelectorAll(`${target} > [role="tabpanel"]`);
+          this.tabLists.forEach((list) => list.setAttribute("role", "tablist"));
+          this.tabListItems.forEach((item) => item.setAttribute("role", "tab"));
+          this.tabButtons.forEach((button) => button.removeAttribute("role"));
           this.activeClass = "active";
 
           if (selectIndex != undefined && selectIndex <= this.tabButtons.length && 0 < selectIndex) {
-              this.showIndex = selectIndex - 1;
+            this.showIndex = selectIndex - 1;
           } else {
-              this.showIndex = 0;
+            this.showIndex = 0;
           }
-          this.selectedTab = this.tabButtons[this.showIndex];
+          this.selectedTab = this.tabListItems[this.showIndex];
           this.tabContents.forEach((panel) => panel.setAttribute("tabindex", "0"));
 
           this.tabButtons.forEach((tabButton, index) => {
-              let id = tabButton.getAttribute('id');
-              if(!id) return;
-              this.tabContents[index].setAttribute('id', `${id}Panel`);
-              tabButton.setAttribute('aria-control', this.tabContents[index].getAttribute('id'))
+            tabButton.classList.remove(this.activeClass)
+            let id = tabButton.getAttribute("id");
+            if (!id) return;
+            this.tabContents[index].setAttribute("id", `${id}Panel`);
+          });
+          this.tabListItems.forEach((listItem, index) => {
+            listItem.setAttribute("aria-control", this.tabContents[index].getAttribute("id"));
           });
         },
         initEvents: function () {
@@ -827,7 +847,7 @@ const commonUI = {
           this.tabButtons.forEach((tabButton, index) => {
             tabButton.addEventListener("click", (e) => {
               e.preventDefault();
-              this.setSelectItem(tabButton, index);
+              this.setSelectItem(tabButton.parentElement, index);
             });
 
             tabButton.addEventListener("keydown", (e) => {
@@ -835,7 +855,7 @@ const commonUI = {
             });
           });
         },
-        setKeyboardEvent: function(index, e) {
+        setKeyboardEvent: function (index, e) {
           let prevIndex = (index - 1 + this.tabButtons.length) % this.tabButtons.length;
           let nextIndex = (index + 1) % this.tabButtons.length;
 
@@ -843,20 +863,20 @@ const commonUI = {
             case "ArrowLeft":
               e.preventDefault();
               this.tabButtons[prevIndex].focus();
-              this.setSelectItem(this.tabButtons[prevIndex], prevIndex);
+              this.setSelectItem(this.tabListItems[prevIndex], prevIndex);
               break;
             case "ArrowRight":
               e.preventDefault();
               this.tabButtons[nextIndex].focus();
-              this.setSelectItem(this.tabButtons[nextIndex], nextIndex);
+              this.setSelectItem(this.tabListItems[nextIndex], nextIndex);
               break;
           }
         },
         setSelectTab: function (selectTab) {
-          this.tabButtons.forEach((tabButton) => {
-            tabButton.classList.remove(this.activeClass);
-            tabButton.setAttribute("aria-selected", "false");
-            tabButton.setAttribute("tabindex", "-1");
+          this.tabListItems.forEach((listItem) => {
+            listItem.classList.remove(this.activeClass);
+            listItem.setAttribute("aria-selected", "false");
+            listItem.setAttribute("tabindex", "-1");
           });
 
           selectTab.classList.add(this.activeClass);
