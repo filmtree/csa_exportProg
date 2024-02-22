@@ -4999,6 +4999,60 @@ h5.cont-title + .txt-list {
   margin-top: 5.6rem;
 }
 
+.lecture-searchbox {
+  padding-bottom: 3.2rem;
+}
+
+.lecture-searchbox-list li {
+  display: flex;
+  gap: 4rem;
+}
+.lecture-searchbox-list li:nth-child(2) {
+  border: 1px solid #e5e5e5;
+  padding: 2.4rem 0;
+  margin: 2.4rem 0;
+  border-width: 1px 0;
+}
+
+.lecture-searchbox-list li .lecture-searchbox-label {
+  font-size: 1.6rem;
+  font-weight: var(--font-Noto-medium);
+  min-width: 12rem;
+  line-height: 3.8rem;
+}
+.lecture-searchbox-list li .form-group {
+  display: flex;
+  gap: 3.2rem;
+}
+.lecture-searchbox-list li .form-group > label[class*="inp-"] {
+  padding-right: 0;
+}
+.lecture-searchbox-list li .form-group > label[class*="inp-"] + span {
+  line-height: 22px;
+}
+
+.lecture-searchbox-list li .form-group > label[class*="inp-"] + label[class*="inp-"] {
+  margin-left: 0;
+}
+
+.lecture-searchbox-list li .mo-hide {
+  display: flex;
+  padding: 0 !important;
+}
+
+.lecture-searchbox-list li .pc-hide {
+  display: none;
+}
+
+.lecture-searchbox .btn-group {
+  gap: .8rem;
+  margin-top: 2.4rem;
+}
+.lecture-searchbox .btn-group button {
+  height: 48px;
+  width: 200px;
+}
+
 .lecture-thumbnail-list {
   border-top: 1px solid #222222;
 }
@@ -5042,6 +5096,30 @@ h5.cont-title + .txt-list {
 .lecture-subject .lecture-button button,
 .lecture-subject .lect-thumbnail-image img {
   width: 100%;
+}
+.lecture-subject .lect-thumbnail-image img {
+  object-fit: contain;
+}
+
+.lecture-subject .tag-txt {
+  display: flex;
+  gap: .8rem;
+  margin-top: 1rem;
+}
+.lecture-subject .tag-txt li {
+  font-size: 13px;
+  font-weight: var(--font-Noto-regular);
+  letter-spacing: -5%;
+}
+.lecture-subject .tag-txt li.age {
+  color: #0AB439; 
+}
+.lecture-subject .tag-txt li.custom { 
+  color: #FF8908;
+}
+.lecture-subject .tag-txt li.edu {
+  color: #1D8FFF;
+
 }
 
 promotion-video-container .promotion-video-notice {
@@ -5998,6 +6076,9 @@ promotion-video-container .promotion-video-notice {
   .pc-hide {
     display: block !important;
   }
+  .lecture-searchbox-list li .pc-hide {
+    display: none !important;
+  }
   .mc-hide {
     display: none !important;
   }
@@ -6247,7 +6328,7 @@ promotion-video-container .promotion-video-notice {
     width: calc(100% - 288px);  
   }
 
-.promotion-top {
+  .promotion-top {
     margin-top: 2.4rem;
   }
 
@@ -7968,8 +8049,24 @@ promotion-video-container .promotion-video-notice {
     gap: 2.4rem;
   }
 
+  .lecture-searchbox-list li {
+    gap: 0;
+  }
+  .lecture-searchbox-list li .mo-hide {
+    display: none !important;
+  }  
+
+  .lecture-searchbox-list li .pc-hide {
+    display: flex !important;
+  }
+
+  .lecture-searchbox-list li .form-group,
+  .lecture-searchbox-list li select {
+    width: 100%;
+  }
+
   .lecture-list {
-    margin-top: 4rem;
+    margin-top: 5.6rem;
     display: flex;
     flex-wrap: wrap;
     row-gap: .8rem;
@@ -8010,6 +8107,7 @@ promotion-video-container .promotion-video-notice {
   }
   .lecture-subject .lecture-button {
     width: 100%;
+    margin-top: 2.4rem;
   }
   .lecture-subject .lecture-button button,
   .lecture-subject .lect-thumbnail-image img {
