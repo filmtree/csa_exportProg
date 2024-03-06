@@ -107,7 +107,7 @@
               <!-- s: 강사 리스트 -->
               <li class="instructor-profile-item">
                 <!-- s: 강사 프로필 카드 -->
-                <div class="instructor-profile-card">
+                <div class="instructor-profile-card" aria-label="신정구 강사">
                   <div class="instructor-profile-photo">
                     <img src="../../images/temp/instructor_temp.jpg" alt="신정구 강사사진" />
                   </div>
@@ -131,7 +131,7 @@
               <!-- s: 강사 리스트 -->
               <li class="instructor-profile-item">
                 <!-- s: 강사 프로필 카드 -->
-                <div class="instructor-profile-card">
+                <div class="instructor-profile-card" aria-label="이애리 강사">
                   <div class="instructor-profile-photo">
                     <img src="../../images/temp/instructor_temp.jpg" alt="이애리 강사사진" />
                   </div>
@@ -155,7 +155,7 @@
               <!-- s: 강사 리스트 -->
               <li class="instructor-profile-item">
                 <!-- s: 강사 프로필 카드 -->
-                <div class="instructor-profile-card">
+                <div class="instructor-profile-card" aria-label="김지원 강사">
                   <div class="instructor-profile-photo">
                     <img src="../../images/temp/instructor_temp.jpg" alt="김지원 강사사진" />
                   </div>
@@ -178,7 +178,7 @@
               <!-- s: 강사 리스트 -->
               <li class="instructor-profile-item">
                 <!-- s: 강사 프로필 카드 -->
-                <div class="instructor-profile-card">
+                <div class="instructor-profile-card" aria-label="김수민 강사">
                   <div class="instructor-profile-photo">
                     <img src="../../images/temp/instructor_temp.jpg" alt="김수민 강사사진" />
                   </div>
@@ -199,39 +199,6 @@
               </li>
               <!-- e: 강사 리스트 -->
 
-            </ul>
-          </section>
-          <!-- e: 강사 프로필 리스트 -->
-          <div class="cont-head mg-h3-section">
-            <h3 class="cont-title big">구미지사 전문강사진</h3>
-          </div>
-
-          <!-- s: 강사 프로필 리스트 -->
-          <section class="instructor-profile-container">
-            <ul class="instructor-profile-list">
-              <!-- s: 강사 리스트 -->
-              <li class="instructor-profile-item">
-                <!-- s: 강사 프로필 카드 -->
-                <div class="instructor-profile-card">
-                  <div class="instructor-profile-photo">
-                    <img src="../../images/temp/instructor_temp.jpg" alt="사공빈 강사사진" />
-                  </div>
-                  <h1 class="instructor-profile-name">사공빈</h1>
-                  <div class="instructor-profile-description">
-                    <dl>
-                      <dt>대표강의</dt>
-                      <dd>100세시대 노후준비</dd>
-                      <dt>주요경력</dt>
-                      <dd class="row-2">고용센터지역자활센터, 교도소 등</dd>
-                    </dl>
-                    <div class="more-detail">
-                      <button type="button" class="button-link"><span>자세히보기</span><i class="ic-only arrow-right"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- e: 강사 프로필 카드 -->
-              </li>
-              <!-- e: 강사 리스트 -->
             </ul>
           </section>
           <!-- e: 강사 프로필 리스트 -->
@@ -470,60 +437,6 @@
       </div>
     </div>
 
-    <!-- 강사 소개 모달 - 사공빈 -->
-    <div class="modal full dim instructor-detail" id="modalTemplate4">
-      <div class="modalWrap">
-        <!-- s: Modal Header -->
-        <div class="modal-header">
-          <div class="modal-title">
-            <h3 class="cont-title">강사 상세 정보</h3>
-          </div>
-          <button class="btn-close">모달창닫기</button>
-        </div>
-        <!-- e: Modal Header -->
-
-        <!-- s: Modal Contents -->
-        <div class="modal-body">
-          <div class="detail-container">
-            <div class="detail-instructor-photo">
-              <!-- 강사 사진 -->
-              <img src="../../images/temp/instructor_temp.jpg" alt="사공빈 강사사진" />
-            </div>
-            <section class="detail-instructor-information">
-              <div class="detail-instructor-head">
-                <!-- 강사명 -->
-                <h1 class="detail-instructor-name">사공빈</h1>
-                <p class="detail-instructor-team">국민연금공단 구미지사 노후준비서비스팀 <span>T 054.450.8570</span></p>
-              </div>
-
-              <div class="detail-instructor-history">
-                <ul class="detail-instructor-inner">
-                  <li>
-                    <h2>강의경력</h2>
-                    <p>2023~현재까지</p>
-                  </li>
-                  <li>
-                    <h2>주요 강의</h2>
-                    <p>100세시대 노후준비</p>
-                  </li>
-                  <li>
-                    <h2>주요 강의처</h2>
-                    <p>고용센터, 복지관, 교도소, 자활센터등</p>
-                  </li>
-                  <li>
-                    <h2>수강 후기</h2>
-                    <!-- <p>""<span class="quotation">()</span></p> -->
-                  </li>
-                </ul>
-              </div>
-            </section>
-          </div>
-        </div>
-        <!-- e: Modal Contents -->
-      </div>
-    </div>
-
-
     <script>
       $(function () {
         $modalScrollBox2 = $(".detail-instructor-history");
@@ -542,6 +455,9 @@
         card.addEventListener("click", () => {
           commonUI.modal("#modalTemplate"+index, card);
         });
+        card.addEventListener("keydown", (e) => {
+          if(e.key === "Enter") commonUI.modal("#modalTemplate"+index, card);
+        })
       });
     </script>
   </body>

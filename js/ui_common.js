@@ -462,7 +462,13 @@ const commonUI = {
         modal.classList.remove("active");
         modalWrap.removeAttribute("tabIndex");
         document.querySelector("body").style.overflow = "auto";
-        if (backObj) document.querySelector(backObj).focus();
+        if (backObj) {
+          if (backObj instanceof HTMLDivElement) { // css 선택자가 아닌 경우 포커스 이동
+            backObj.focus();
+          } else {
+            document.querySelector(backObj).focus();
+          }
+        }
         modal.setAttribute("aria-hidden", "true");
       },
       trapFocus: function (el) {

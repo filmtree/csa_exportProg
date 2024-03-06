@@ -107,17 +107,17 @@
               <!-- s: 강사 리스트 -->
               <li class="instructor-profile-item">
                 <!-- s: 강사 프로필 카드 -->
-                <div class="instructor-profile-card">
+                <div class="instructor-profile-card" aria-label="이민철 강사">
                   <div class="instructor-profile-photo">
-                    <img src="../../images/temp/instructor_temp.jpg" alt="윤성혁 강사사진" />
+                    <img src="../../images/lec/leemc.jpg" alt="이민철 강사사진" />
                   </div>
-                  <h1 class="instructor-profile-name">윤성혁</h1>
+                  <h1 class="instructor-profile-name">이민철</h1>
                   <div class="instructor-profile-description">
                     <dl>
                       <dt>대표강의</dt>
-                      <dd>다층 연금제도의 행복한 노후</dd>
+                      <dd>노후생활설계 "국민연금과 함께"</dd>
                       <dt>주요경력</dt>
-                      <dd class="row-2">지역자활센터, 고용센터 중장년일자리센터 등</dd>
+                      <dd class="row-2">지역 고용센터 및 자활센터 등</dd>
                     </dl>
                     <div class="more-detail">
                       <button type="button" class="button-link"><span>자세히보기</span><i class="ic-only arrow-right"></i></button>
@@ -140,7 +140,7 @@
               <!-- s: 강사 리스트 -->
               <li class="instructor-profile-item">
                 <!-- s: 강사 프로필 카드 -->
-                <div class="instructor-profile-card">
+                <div class="instructor-profile-card" aria-label="박소희 강사">
                   <div class="instructor-profile-photo">
                     <img src="../../images/temp/instructor_temp.jpg" alt="박소희 강사사진" />
                   </div>
@@ -181,7 +181,7 @@
       <!-- e: Footer -->
     </div>
 
-    <!-- 강사 소개 모달 - 윤성혁 -->
+    <!-- 강사 소개 모달 - 이민철 -->
     <div class="modal full dim instructor-detail" id="modalTemplate0">
       <div class="modalWrap">
         <!-- s: Modal Header -->
@@ -198,12 +198,12 @@
           <div class="detail-container">
             <div class="detail-instructor-photo">
               <!-- 강사 사진 -->
-              <img src="../../images/temp/instructor_temp.jpg" alt="윤성혁 강사사진" />
+              <img src="../../images/lec/leemc.jpg" alt="이민철 강사사진" />
             </div>
             <section class="detail-instructor-information">
               <div class="detail-instructor-head">
                 <!-- 강사명 -->
-                <h1 class="detail-instructor-name">윤성혁</h1>
+                <h1 class="detail-instructor-name">이민철</h1>
                 <p class="detail-instructor-team">국민연금공단 대전 노후준비서비스팀 <span>T 042.485.4853</span></p>
               </div>
 
@@ -211,20 +211,19 @@
                 <ul class="detail-instructor-inner">
                   <li>
                     <h2>강의경력</h2>
-                    <p>2020년 부터</p>
+                    <p>2023 ~ 현재까지</p>
                   </li>
                   <li>
                     <h2>주요 강의</h2>
-                    <p>&lt;국민연금과 함께하는 노후설계&gt;, &lt;다층 연금 제도와 행복한 노후&gt;</p>
+                    <p>&lt;노후생활설계 &quot;국민연금과 함께&quot;&gt;, &lt;내돈 내가 살찌우기&gt;</p>
                   </li>
                   <li>
                     <h2>주요 강의처</h2>
-                    <p>대전서구지역자활센터, 공주고용센터, 옥천 고용센터 등</p>
+                    <p>노후준비 아카데미, 교정기관, 자활센터  등</p>
                   </li>
                   <li>
                     <h2>수강 후기</h2>
-                    <p>"노후 설계에 대해 다시 한번 생각할 수 있는 기회가 되었다."<span class="quotation">(대전서구지역자활센터 수강생)</span></p>
-                    <p>"다양한 연금제도의 활용에 대해 생각해 볼 수 있는 시간이었다."<span class="quotation">(대전서구지역자활센터 수강생)</span></p>
+                    <p>"노후준비자금의 필요성에 대해 인식하고 준비할 수 있는 기회가 되었다."<span class="quotation">(중장년 내일센터수강생)</span></p>
                   </li>
                 </ul>
               </div>
@@ -308,7 +307,10 @@
       document.querySelectorAll(".instructor-profile-card").forEach((card, index) => {
         card.addEventListener("click", () => {
           commonUI.modal("#modalTemplate"+index, card);
-        });
+        })
+        card.addEventListener("keydown", (e) => {
+          if(e.key === "Enter") commonUI.modal("#modalTemplate"+index, card);
+        })
       });
     </script>
   </body>
