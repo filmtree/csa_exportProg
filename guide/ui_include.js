@@ -21,20 +21,6 @@ function asidePrint() {
 					<li><a href="icon.html">아이콘</a></li>
 				</ul>
 			</li>
-			<li><a href="text.html">Template</a>
-				<ul class="nav-dep2">		
-					<li><a href="ui_page_template.html">Page Template</a></li>
-					<li><a href="ui_layout_pattern.html">Layout Pattern</a></li>
-					<li><a href="ui_tab_pattern.html">Tab Pattern</a></li>
-					<li><a href="ui_title_pattern.html">Title Pattern</a></li>
-					<li><a href="ui_list_pattern.html">List Pattern</a></li>
-					<li><a href="ui_form_pattern.html">Form Pattern</a></li>
-					<li><a href="ui_button_pattern.html">Button Pattern</a></li>
-					<li><a href="ui_grid_pattern.html">Grid Pattern</a></li>
-					<li><a href="ui_grid_responsive_pattern.html">Grid Responsive Pattern</a></li>
-					<li><a href="ui_component_pattern.html">Component Pattern</a></li>
-				</ul>
-			</li>
 			<li><a href="form_elements.html">Forms</a>
 				<ul class="nav-dep2">
 					<li><a href="form_elements.html">폼 요소</a></li>
@@ -52,6 +38,20 @@ function asidePrint() {
 					<li><a href="board_list.html">Board List</a></li>
 					<li><a href="board_view.html">Board view</a></li>
 					<li><a href="board_regist.html">Board regist</a></li>					
+				</ul>
+			</li>
+			<li><a href="text.html">Template</a>
+				<ul class="nav-dep2">		
+					<li><a href="ui_page_template.html">Page Template</a></li>
+					<li><a href="ui_layout_pattern.html">Layout Pattern</a></li>
+					<li><a href="ui_tab_pattern.html">Tab Pattern</a></li>
+					<li><a href="ui_title_pattern.html">Title Pattern</a></li>
+					<li><a href="ui_list_pattern.html">List Pattern</a></li>
+					<li><a href="ui_form_pattern.html">Form Pattern</a></li>
+					<li><a href="ui_button_pattern.html">Button Pattern</a></li>
+					<li><a href="ui_grid_pattern.html">Grid Pattern</a></li>
+					<li><a href="ui_grid_responsive_pattern.html">Grid Responsive Pattern</a></li>
+					<li><a href="ui_component_pattern.html">Component Pattern</a></li>
 				</ul>
 			</li>
 		</ul>

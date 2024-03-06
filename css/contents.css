@@ -2135,6 +2135,15 @@
 .equal-list.three-quarters {
   margin-left: -40px;
 }
+.equal-list.three-quarters.free-role {
+  margin:0;
+  gap: 40px;
+}
+.equal-list.three-quarters.free-role .items {
+  margin: 0;
+  max-width: none !important;
+  flex: 0;
+}
 .equal-list.half .items {
   margin-left: 40px;
   max-width: 580px;
@@ -2184,6 +2193,7 @@
 .equal-list.three-quarters > .items {
   margin-left: 40px;
 }
+
 .equal-list.three-quarters > .items:last-child {
   max-width: 320px;
 }
@@ -4168,21 +4178,21 @@ h5.cont-title + .txt-list {
   margin-top: 2.4rem;
 }
 
-.footer-user-guide .guide-section-numlist {
+.guide-section-numlist {
   counter-reset: section-numlist;
 }
 
-.footer-user-guide .guide-section-numlist li {
+.guide-section-numlist li {
   position: relative;
   padding-left: 3.4rem;
   font-size: 1.7rem;
   line-height: 1.6;
   letter-spacing: -.85px;
 }
-.footer-user-guide .guide-section-numlist li:not(:first-child) {
+.guide-section-numlist li:not(:first-child) {
   margin-top: 1.6rem;
 }
-.footer-user-guide .guide-section-numlist li::before {
+.guide-section-numlist li::before {
   counter-increment: section-numlist; 
   content: counter(section-numlist); 
   position: absolute;
@@ -4198,7 +4208,7 @@ h5.cont-title + .txt-list {
   text-align: center;
 }
 
-.footer-user-guide .guide-section-paragraph {
+.guide-section-paragraph {
 	margin-top: 1.6rem;
   font-size: 1.7rem;
   line-height: 1.5;
