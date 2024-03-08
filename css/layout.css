@@ -1390,7 +1390,7 @@
 
 .winPopup .modalWrap .modal-body {
   padding-bottom: 9rem;
-  overflow: visible;
+  overflow: auto;
   /* max-height: none; */
 }
 
@@ -2153,8 +2153,14 @@ input.useDatepicker {
   }
 
   .winPopup .modalWrap .modal-body {
-    padding-bottom: 8rem;
-    /* max-height: calc(100vh - 10.6rem); */
+    position: fixed;
+    top:100px;
+    left:0;
+    right:0;
+    bottom: 64px;
+    height: auto;
+    padding-bottom: 16px;
+    margin:0;    
   }
   .winPopup .modalWrap .cont-head:first-child {
     padding: 0;

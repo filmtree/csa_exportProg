@@ -2968,12 +2968,14 @@ button,
 
 .con-table tbody tr th.bg-no,
 .con-table tbody tr td.bg-no,
+.con-table tfoot tr th.bg-no,
 .con-table tfoot tr td.bg-no {
 	background: #ffffff;
 }
 
 .con-table tbody tr th.bg-sky,
 .con-table tbody tr td.bg-sky,
+.con-table tfoot tr th.bg-sky,
 .con-table tfoot tr td.bg-sky {
 	background: #f1f8ff;
 	color: var(--color-primary);

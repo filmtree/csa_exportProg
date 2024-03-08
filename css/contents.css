@@ -5310,6 +5310,15 @@ promotion-video-container .promotion-video-notice {
   width: 100%;
 }
 
+/* 보고서출력 */
+.report-cover-wrap {
+  width: 100%;
+  height: auto;
+}
+.report-cover-wrap img {
+  width: 100%;
+  height: auto;
+}
 
 /* ==================================================== Break Point ==================================================== */
 
