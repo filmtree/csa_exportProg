@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- s: header -->
+      <header id="header"></header>
+      <!-- e: header -->
+
+      <!-- s: Loaction Information Link -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-nav">
+          <ol class="breadcrumb-location">
+            <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+            <li class="breadcrumb-depth dep1">
+              <button type="button" class="breadcrumb-trigger">민간강사등록</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                <li><a href="#none" target="_self">재무진단</a></li>
+                <li><a href="#none" target="_self">노후준비정보</a></li>
+                <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                <li><a href="#none" target="_self">마이페이지</a></li>
+                <li class="current"><a href="#none" target="_self">민간강사등록</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger current">체크리스트</button>
+              <ul class="breadcrumb-depth-list">
+                <li class="current"><a href="#none" target="_self">체크리스트</a></li>
+                <li><a href="#none" target="_self">강의계획 등록</a></li>
+                <li><a href="#none" target="_self">강의조회 및 수정</a></li>
+                <li><a href="#none" target="_self">강의결과 등록</a></li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <!-- e: Loaction Information Link -->
+
+      <!-- s: Main -->
+      <main id="conatiner" class="privateinstructor">
+        <!--s: Page Title-->
+        <div class="page-header">
+          <div class="page-title">
+            <a href="#" class="ic-only back">뒤로가기</a>
+            <h2>체크리스트</h2>
+          </div>
+        </div>
+        <!--e: Page Title-->
+
+        <!--s: Contents -->
+        <div class="content-wrap" class="privateinstructor-self-checklist">
+          <div class="con-table all-center">
+            <table>
+              <caption>
+                기본요건, 강의내용으로 구분된 연번, 자가체크리스트 문항과 예, 아니오, 해당없음의 점검결과로 구성된 체크리스트 표
+              </caption>
+              <colgroup>
+                <col style="width: 10%" />
+                <col style="width: 10%" />
+                <col style="width: auto" />
+                <col style="width: 10%" />
+                <col style="width: 10%" />
+                <col style="width: 10%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" rowspan="2">구분</th>
+                  <th scope="col" rowspan="2">연번</th>
+                  <th scope="col" rowspan="2">자가체크리스트 문항</th>
+                  <th scope="col" colspan="3">점검결과</th>
+                </tr>
+                <tr>
+                  <th scope="col">예</th>
+                  <th scope="col">아니오</th>
+                  <th scope="col">해당없음</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row" rowspan="9">기본요건</td>
+                  <td>1</td>
+                  <td><p>강의일 7일 이전에 강의계획서 및 강의교안(동일, 중복교안제외)을 제출 한다.</p></td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup1" checked="checked" aria-label="예" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup1" aria-label="아니오" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup1" aria-label="해당없음" />
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><p>수강인원은 최소 10명 이상이다.</p></td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup2" checked="checked" aria-label="예" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup2" aria-label="아니오" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup2" aria-label="해당없음" />
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><p>강의시간은 60분 이상이다.</p></td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup3" checked="checked" aria-label="예" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup3" aria-label="아니오" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup3" aria-label="해당없음" />
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td><p>수강자의 연령 70%이상이 노후준비가 가능한 60대 이하이다.</p></td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup4" checked="checked" aria-label="예" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup4" aria-label="아니오" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup4" aria-label="해당없음" />
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td><p>강의가 본인, 배우자, 친인척 등의 영리활동과 연계되지 않았다.</p></td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup5" checked="checked" aria-label="예" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup5" aria-label="아니오" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup5" aria-label="해당없음" />
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td><p>강의가 사적인 모임(동호회, 계모임, 지역커뮤니티 등)의 성향을 가진 수요처가 아니다.</p></td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup6" checked="checked" aria-label="예" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup6" aria-label="아니오" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup6" aria-label="해당없음" />
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td><p>강의처는 법령 또는 사회통념에 위배되지 않은 기관이다.(사이비 종교단체 등)</p></td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup7" checked="checked" aria-label="예" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup7" aria-label="아니오" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup7" aria-label="해당없음" />
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td><p>강의종료 후 반드시 수요처 교육담당자의 강의확인 및 자필 서명을 받았다.</p></td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup8" checked="checked" aria-label="예" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup8" aria-label="아니오" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup8" aria-label="해당없음" />
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td><p>강의 대가로 수요처 또는 수강자 등으로부터 어떻나 금품이나 접대를 받지 않는다.</p></td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup9" checked="checked" aria-label="예" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup9" aria-label="아니오" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup9" aria-label="해당없음" />
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row" rowspan="8">강의내용</td>
+                  <td>10</td>
+                  <td><p>강의 내용은 노후준비지원법에서 정한 목적에 부합되게 구성되어 있다.</p></td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup10" checked="checked" aria-label="예" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup10" aria-label="아니오" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup10" aria-label="해당없음" />
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td><p>강의 시 국민연금공단 노후준비 민강강사임을 밝히고,<br>수강자에게 교육 목적과 취지 등을 설명한다.</p></td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup11" checked="checked" aria-label="예" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup11" aria-label="아니오" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup11" aria-label="해당없음" />
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td><p>강의에는 국민연금 제도, 공단 등에 대한 부정확한 내용을 전달하거나<br>부정적으로 표현하고 있지 않다.</p></td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup12" checked="checked" aria-label="예" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup12" aria-label="아니오" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup12" aria-label="해당없음" />
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td><p>강의교안에 국민연금 노후준비 필수 슬라이드<br>(노후준비서비스 개요, 서비스제공자 금지행위)를 포함하고 있다.</p></td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup13" checked="checked" aria-label="예" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup13" aria-label="아니오" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup13" aria-label="해당없음" />
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td><p>강의에는 정치, 특정 지역, 직군, 연령, 종교 등에 대한<br>편향적인 내용이 포함되어 있지 않다.</p></td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup14" checked="checked" aria-label="예" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup14" aria-label="아니오" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup14" aria-label="해당없음" />
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td><p>강의교안 등에는 특정 상품 홍보, 업체명 노출 등 상업적 내용이 포함되지 있지 않다.</p></td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup15" checked="checked" aria-label="예" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup15" aria-label="아니오" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup15" aria-label="해당없음" />
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td><p>강의에는 성희롱 또는 인종차별적인 내용이 포함되어 있지 않다.</p></td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup16" checked="checked" aria-label="예" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup16" aria-label="아니오" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup16" aria-label="해당없음" />
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td><p>강의 대가로 수요처 또는 수강자 등으로부터 어떻나 금품이나 접대를 받지 않는다.</p></td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup17" checked="checked" aria-label="예" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup17" aria-label="아니오" />
+                    </label>
+                  </td>
+                  <td>
+                    <label class="inp-radio">
+                      <input type="radio" name="radioGroup17" aria-label="해당없음" />
+                    </label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="cont-bottom mg-section-divide">
+            <div class="btn-group">
+              <button type="button" class="button-primary -lg">다음</button>
+            </div>
+          </div>
+
+          <!-- s: Common UI - HashTag Banner -->
+          <div class="hashtag-wrap"></div>
+          <!-- e: Common UI - HashTag Banner -->
+        </div>
+        <!--s: Contents -->
+
+        <!-- s: Common UI - Survey -->
+        <div class="page-satisfaction"></div>
+        <!-- e: Common UI - Survey -->
+      </main>
+      <!-- e: Main -->
+
+      <!-- s: footer -->
+      <footer id="footer"></footer>
+      <!-- e: footer -->
+    </div>
+  </body>
+</html>

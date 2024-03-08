@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- s: header -->
+      <header id="header"></header>
+      <!-- e: header -->
+
+      <!-- s: Loaction Information Link -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-nav">
+          <ol class="breadcrumb-location">
+            <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+            <li class="breadcrumb-depth dep1">
+              <button type="button" class="breadcrumb-trigger">민간강사등록</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                <li><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                <li><a href="#none" target="_self">재무진단</a></li>
+                <li><a href="#none" target="_self">노후준비정보</a></li>
+                <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+                <li><a href="#none" target="_self">마이페이지</a></li>
+                <li class="current"><a href="#none" target="_self">민간강사등록</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger current">체크리스트</button>
+              <ul class="breadcrumb-depth-list">
+                <li class="current"><a href="#none" target="_self">체크리스트</a></li>
+                <li><a href="#none" target="_self">강의계획 등록</a></li>
+                <li><a href="#none" target="_self">강의조회 및 수정</a></li>
+                <li><a href="#none" target="_self">강의결과 등록</a></li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <!-- e: Loaction Information Link -->
+
+      <!-- s: Main -->
+      <main id="conatiner" class="privateinstructor">
+        <!--s: Page Title-->
+        <div class="page-header">
+          <div class="page-title">
+            <a href="#" class="ic-only back">뒤로가기</a>
+            <h2>강의계획 등록</h2>
+          </div>
+          <div class="page-desc">
+            <button type="button" class="page-desc-btn _has-tooltip" title="민간강사강의등록 안내 보기">
+              <span>민간강사강의등록 안내</span>
+              <i class="ic-only f-pg-desc" aria-hidden="true"></i>
+            </button>
+            <div class="desc-box _tooltipbox" role="tooltip">
+              <div class="desc-box-inner">
+                <div class="desc-content">
+                  <h4 class="sr-only">민간강사강의등록 안내</h4>
+                  <p>
+                    강의계획 등록 및 수정은 강의일 7일전 까지만 가능합니다.<br />
+                    불가피하게 7일 이내 등록 및 수정이필요한 경우 담당자에게 연락 바랍니다.
+                  </p>
+                </div>
+                <button type="button" class="ic-only box-close">창닫기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--e: Page Title-->
+
+        <!--s: Contents -->
+        <div class="content-wrap" class="privateinstructor-planning-registration">
+          <div class="cont-head mg-h3-section">
+            <h3 class="cont-title big">홍길동 <span class="fw-regular">고객님의 민간(전문)강사의 강의 등록을 위한 코너입니다.</span></h3>
+          </div>
+
+          <!-- s: 교육계획 정보 등록 -->
+          <div class="cont-head mg-h4-section">
+            <h4 class="cont-title">교육계획 정보 등록</h4>
+          </div>
+          <div class="board-wrap double-col bd-write mg-contents">
+
+            <div class="field">
+              <label class="field-label" for="insName">강사명</label>
+              <input type="text" id="insName" placeholder="실명을 입력해주세요" class="charLength9" />
+              <label class="field-label" for="insNumber">사번(강사코드)</label>
+              <input type="text" id="insNumber" placeholder="사번(강사코드)을 입력해주세요" class="charLength9" />
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="insLocal">지역본부</label>
+              <input type="text" id="insLocal" placeholder="지역본부를 입력해주세요" class="charLength9" />
+              <label class="field-label inner-tooltip" for="insEduForm">교육형태
+                <div class="has-help">
+                  <button type="button" class="_has-tooltip" aria-label="교육형태 설명 보기">
+                    <!-- <span>A값</span> -->
+                    <i class="ic-only question" aria-hidden="true"></i>
+                  </button>
+                  <!--tooltip-->
+                  <div class="desc-box type1 _tooltipbox" role="tooltip">
+                    <div class="desc-box-inner">
+                      <div class="desc-content">
+                        <h4 class="sr-only">안내</h4>
+                        <p>교육형태 안내</p>
+                      </div>
+                      <button type="button" class="ic-only box-close">창닫기</button>
+                    </div>
+                  </div>
+                  <!--//tooltip-->
+                </div>
+              </label>
+              <select class="charLength9" id="insEduForm">
+                <option value="0">아카데미</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="insDate">교육실지일자</label>
+              <input type="text" id="insLocal" placeholder="지역본부를 입력해주세요" class="charLength9" />
+              <label class="field-label" for="insEduMethod">교육방법</label>
+              <select class="charLength9" id="insEduMethod">
+                <option value="0">대면</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="insEduStart">교육시작시각</label>
+              <div class="form-group d-flex charLength9">
+                <input type="text" id="insEduStart" class="charLength4" />
+                <p class="txt-helper">예)9시 (0900 4자리)</p>
+              </div>
+              <label class="field-label" for="insEduEnd">교육종료시각</label>
+              <div class="form-group d-flex charLength9">
+                <input type="text" id="insEduEnd" class="charLength4" />
+                <p class="txt-helper">예)9시 (0900 4자리)</p>
+              </div>              
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="insEduLength">교육예정인원(명)</label>
+              <input type="text" id="insEduLength" class="charLength9" />
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="insEduField">강의분야</label>
+              <select class="charLength9" id="insEduField">
+                <option value="0">건강</option>
+              </select>
+              <label class="field-label inner-tooltip" for="insEduCourse">과정명
+                <div class="has-help">
+                  <button type="button" class="_has-tooltip" aria-label="과정명 설명 보기"><i class="ic-only question" aria-hidden="true"></i></button>
+                  <!--tooltip-->
+                  <div class="desc-box type1 _tooltipbox" role="tooltip">
+                    <div class="desc-box-inner">
+                      <div class="desc-content">
+                        <h4 class="sr-only">안내</h4>
+                        <p>과정명 안내</p>
+                      </div>
+                      <button type="button" class="ic-only box-close">창닫기</button>
+                    </div>
+                  </div>
+                  <!--//tooltip-->
+                </div>
+              </label>
+              <input type="text" id="insEduCourse" class="charLength9" placeholder="과정명을 입력하세요" />
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="insEduCourseName">주제(강의명)</label>
+              <input type="text" id="insEduCourseName" class="charLength9" placeholder="주제(강의명)을 입력하세요" />
+              <label class="field-label" for="insEduinstitution">교육기관명</label>
+              <input type="text" id="insEduinstitution" class="charLength9" placeholder="교육기관명을 입력하세요" />
+            </div>
+
+            <div class="field">
+              <label class="field-label inner-tooltip" for="insEduCourse">교육기관 주소
+                <div class="has-help">
+                  <button type="button" class="_has-tooltip" aria-label="교육기관 주소 설명 보기"><i class="ic-only question" aria-hidden="true"></i></button>
+                  <!--tooltip-->
+                  <div class="desc-box type1 _tooltipbox" role="tooltip">
+                    <div class="desc-box-inner">
+                      <div class="desc-content">
+                        <h4 class="sr-only">안내</h4>
+                        <p>과정명 안내</p>
+                      </div>
+                      <button type="button" class="ic-only box-close">창닫기</button>
+                    </div>
+                  </div>
+                  <!--//tooltip-->
+                </div>
+              </label>
+              <div>
+                <div class="form-group">
+                  <input type="text" class="charLength5" aria-label="우편번호">
+                  <button type="button" class="button-fourth">우편번호찾기</button>
+                </div>
+                <div class="form-group mg-contents">
+                  <input type="text" class="charLength9" placeholder="" aria-label="주소" />
+                  <input type="text" class="charLength9" placeholder="" aria-label="상세주소" />
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="insEduInstName">기관담당자성명</label>
+              <input type="text" id="insEduInstName" class="charLength9" placeholder="기관담당자성명" />
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="insEduInstTel">기관담당자연락처</label>
+              <div class="form-group-tel">
+                <select class="tel-first" id="insEduInstTel">
+                  <option>선택</option>
+                  <option>02</option>
+                  <option>010</option>
+                  <option>011</option></select
+                ><span class="inp-split">-</span><input type="text" class="tel-second" title="휴대전화 중간 번호" /><span class="inp-split">-</span><input type="text" class="tel-third" title="휴대전화 뒷 번호" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="insEduSubject">교육대상</label>
+              <select class="charLength9" id="insEduSubject">
+                <option value="0">초등학생</option>
+              </select>
+              <label class="field-label" for="insEduInstType">교육기관유형</label>
+              <select class="charLength9" id="insEduInstType">
+                <option value="0">국민연금공단</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="insEduAge">교육대상연령</label>
+              <div class="form-group">
+                <label class="inp-radio free-size-equal">
+                  <input type="radio" name="radioGroup" checked="checked" />
+                  <span>10대</span>
+                </label>
+                <label class="inp-radio free-size-equal">
+                  <input type="radio" name="radioGroup" />
+                  <span>20대</span>
+                </label>
+                <label class="inp-radio free-size-equal">
+                  <input type="radio" name="radioGroup" />
+                  <span>30대</span>
+                </label>
+                <label class="inp-radio free-size-equal">
+                  <input type="radio" name="radioGroup" />
+                  <span>40대</span>
+                </label>
+                <label class="inp-radio free-size-equal">
+                  <input type="radio" name="radioGroup" />
+                  <span>50대</span>
+                </label>
+                <label class="inp-radio free-size-equal">
+                  <input type="radio" name="radioGroup" />
+                  <span>60대이상</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="insEduNote">비고</label>
+              <input type="text" id="insEduNote" class="charLength9" placeholder="비고" />
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="insEduNote">첨부파일등록</label>
+              <div class="d-flex-c">
+                <div class="form-group">
+                  <input type="text" id="insEduNote" class="charLength9" />
+                  <button type="button" class="button-fourth">찾아보기</button>
+                  <p class="txt-helper">첨부파일은 1개만 등록 가능합니다.</p>
+                </div>
+                <div>
+                  <ul class="txt-list dot">
+                    <li>첨부파일용량은 4M 이하로 제한되며 JPG, GIF, PNG 이미지 파일만 등록 가능합니다.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="txt-list dot blue">
+            <li class="fc-primary">강의계획, 결과 등록 및 수정은 인터넷 익스플로어, 구글 크롬 웹브라우저만 이용가능함을 양지하여 주시기 바랍니다.</li>
+          </ul>
+          <!-- e: 교육계획 정보 등록 -->
+
+          <!-- s: Common UI - HashTag Banner -->
+          <div class="hashtag-wrap"></div>
+          <!-- e: Common UI - HashTag Banner -->
+        </div>
+        <!--s: Contents -->
+
+        <!-- s: Common UI - Survey -->
+        <div class="page-satisfaction"></div>
+        <!-- e: Common UI - Survey -->
+      </main>
+      <!-- e: Main -->
+
+      <!-- s: footer -->
+      <footer id="footer"></footer>
+      <!-- e: footer -->
+    </div>
+  </body>
+</html>
