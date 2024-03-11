@@ -180,6 +180,33 @@
   width: calc(100% - 88px);
 }
 
+.opt-date-periods .searchbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.6rem;
+  row-gap: .8rem;
+
+}
+.opt-date-periods .searchbox .form-group {
+  display: flex;
+  gap: .8rem;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+}
+.opt-date-periods .searchbox .form-group.buttons-group {
+  display: flex;
+  column-gap: .8rem;
+}
+
+.opt-date-periods .searchbox .form-group.buttons-group button {
+  margin-left: 0;
+}
+
+.opt-date-periods .form-group .useDatepicker {
+  min-width: 200px;
+}
 .forms-set .form-group {
   margin-top: 1.6rem;
 }
@@ -5400,6 +5427,28 @@ promotion-video-container .promotion-video-notice {
     width: 100%;
   }
 
+  .opt-date-periods .searchbox {
+    flex-direction: column;
+  }
+
+  .opt-date-periods .form-group .useDatepicker {
+    min-width: none;
+  }
+  .opt-date-periods .searchbox .form-group-period {
+    margin: 0;
+  }
+
+  .opt-date-periods .searchbox .form-group.buttons-group {
+    width: 420px;
+    flex-wrap: nowrap;
+  }
+
+  .opt-date-periods .searchbox .form-group.buttons-group button {
+    width: 100%;
+  }
+  .opt-date-periods .searchbox .form-group.buttons-group button:last-child {
+    margin-left: 0;
+  }
   .online-counseling .mo-hide {
     display: none;
   }
@@ -6491,6 +6540,23 @@ promotion-video-container .promotion-video-notice {
   .searchbox-wrap.opt-name-registration .form-group.applied-curriculum .inp-content:nth-of-type(1) {
     width: calc(100% - 14.8rem) !important;
     margin-left: 0.8rem;
+  }
+  .opt-date-periods .searchbox .form-group.buttons-group,
+  .opt-date-periods .form-group {
+    width: 344px;
+  }
+  .opt-date-periods .form-group .useDatepicker {
+    min-width: 158px;
+}
+  .opt-date-periods .searchbox .form-group.buttons-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .opt-date-periods .searchbox .form-group.buttons-group:last-child {
+    grid-template-columns: 1fr;
+  }
+  .opt-date-periods .searchbox .form-group.buttons-group button {
+    margin-left: 0;    
   }
 
   /* 온라인 상담 */
