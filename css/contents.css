@@ -4310,9 +4310,13 @@ h5.cont-title + .txt-list {
 .guide-page-capture {
   min-height: 50rem;
   margin-top: 4.8rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
+
 .guide-page-capture > img {
-  width: 100%;
+  max-width: 100%;
   object-fit: contain;
 }
 

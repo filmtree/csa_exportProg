@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- s: header -->
+      <header id="header"></header>
+      <!-- e: header -->
+
+      <!-- s: Loaction Information Link -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-nav">
+          <ol class="breadcrumb-location">
+            <li class="breadcrumb-depth home"><a href="#none">메인화면으로 이동</a></li>
+            <li class="breadcrumb-depth dep1">
+              <button type="button" class="breadcrumb-trigger">진단ㆍ상담 서비스</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">노후준비서비스소개</a></li>
+                <li class="current"><a href="#none" target="_self">진단ㆍ상담 서비스</a></li>
+                <li><a href="#none" target="_self">재무진단</a></li>
+                <li><a href="#none" target="_self">노후준비정보</a></li>
+                <li><a href="#none" target="_self">CSA교육 및 시험</a></li>
+              </ul>
+            </li>
+            <li class="breadcrumb-depth dep2">
+              <button type="button" class="breadcrumb-trigger current">노후준비종합진단</button>
+              <ul class="breadcrumb-depth-list">
+                <li><a href="#none" target="_self">상담지사안내</a></li>
+                <li><a href="#none" target="_self">상담지자체안내</a></li>
+                <li class="current"><a href="#none" target="_self">노후준비종합진단</a></li>
+                <li><a href="#none" target="_self">온라인상담</a></li>
+                <li><a href="#none" target="_self">방문상담신청</a></li>
+                <li><a href="#none" target="_self">교육신청</a></li>
+                <li><a href="#none" target="_self">강사정보</a></li>
+                <li><a href="#none" target="_self">자가진단</a></li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <!-- e: Loaction Information Link -->
+
+      <!-- s: Main -->
+      <main id="conatiner" class="counsel">
+        <!--s: Page Title-->
+        <div class="page-header">
+          <div class="page-title">
+            <a href="#" class="ic-only back">뒤로가기</a>
+            <h2>Title</h2>
+          </div>
+          <div class="page-desc">
+            <button type="button" class="page-desc-btn _has-tooltip" title="Title 안내 보기">
+              <span>Title 안내</span>
+              <i class="ic-only f-pg-desc" aria-hidden="true"></i>
+            </button>
+            <div class="desc-box _tooltipbox" role="tooltip">
+              <div class="desc-box-inner">
+                <div class="desc-content">
+                  <h4 class="sr-only">Title</h4>
+                  <p>안내문구</p>
+                </div>
+                <button type="button" class="ic-only box-close">창닫기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--e: Page Title-->
+
+        <!--s: Contents -->
+        <div class="content-wrap counsel-leisure-plan">
+          <!-- s: Common UI - HashTag Banner -->
+          <div class="hashtag-wrap"></div>
+          <!-- e: Common UI - HashTag Banner -->
+        </div>
+        <!--e: Contents -->
+
+        <!-- s: Common UI - Survey -->
+        <div class="page-satisfaction"></div>
+        <!-- e: Common UI - Survey -->
+      </main>
+      <!-- e: Main -->
+
+      <!-- s: Footer -->
+      <footer id="footer"></footer>
+      <!-- e: Footer -->
+    </div>
+  </body>
+</html>
