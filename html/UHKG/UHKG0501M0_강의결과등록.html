@@ -403,7 +403,7 @@
                 <div class="search-form-group">
                   <div class="form-group">
                     <input type="text" id="insEduFile" aria-label="첨부파일 이름 읽기전용" readonly value="첨부파일.jpg" />
-                    <label class="file-upload-fake-label button-fourth" for="insUploadFile">찾아보기</label>
+                    <label class="file-upload-fake-label button-fourth" for="insUploadFile" role="button" tabindex="0">찾아보기</label>                    
                     <input type="file" class="file-upload-fake" id="insUploadFile" />
                   </div>
                   <p class="txt-helper">첨부파일은 1개만 등록 가능합니다.</p>
@@ -442,11 +442,16 @@
     </div>
 
     <script>
-      // 첨부파일 Custom
-      document.getElementById("insUploadFile").onchange = function () {
-        let fileName = this.value.split("\\").pop();
-        document.getElementById("insEduFile").value = fileName;
-      };
+      document.getElementById('insUploadFile').onchange = function () {
+          let fileName = this.value.split('\\').pop();
+          document.getElementById('insEduFile').value = fileName;
+      };      
+      document.querySelector('.file-upload-fake-label').addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault(); 
+              document.getElementById('insUploadFile').click();
+          }
+      });
     </script>
   </body>
 </html>
