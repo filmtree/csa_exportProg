@@ -1148,6 +1148,9 @@ legend,
 .mr8  {
 	margin-right: .8rem !important;
 }
+.mr14 {
+	margin-right: 1.4rem !important;
+}
 .mr16 {
 	margin-right: 1.6rem !important;
 }
@@ -1506,6 +1509,25 @@ legend,
 }
 .w100 {
 	width: 100% !important;
+}
+
+.w25px {
+	width: 25px !important;
+}
+.w26px {
+	width: 26px !important;
+}
+.w27px {
+	width: 27px !important;
+}
+.w28px {
+	width: 28px !important;
+}
+.w29px {
+	width: 29px !important;
+}
+.w30px {
+	width: 30px !important;
 }
 
 .w160px {

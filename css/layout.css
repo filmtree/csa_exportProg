@@ -1213,6 +1213,10 @@
   max-width: 120rem;
 }
 
+.modalWrap.w1000 {
+  max-width: 100rem;
+}
+
 .modalWrap.footer-user-guide {
   max-width: 100rem;
 }
@@ -1268,6 +1272,10 @@
   max-height: calc(716px - 10rem);
   min-height: 15rem;
   margin-bottom: 0;
+}
+
+.modalWrap.freepx .modal-body {
+  max-height: none !important;
 }
 
 .modalWrap .modal-body.mCustomScrollbar table.mb30 {

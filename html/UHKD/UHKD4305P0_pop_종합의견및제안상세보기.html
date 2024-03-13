@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>노후준비종합서비스</title>
+    <link rel="stylesheet" type="text/css" href="../../js/lib/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <script src="../../js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../../js/lib/jquery-ui.min.js"></script>
+    <script src="../../js/lib/jquery.easing.min.js"></script>
+    <script src="../../js/lib/swiper-bundle.min.js"></script>
+    <script src="../../js/lib/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="../../js/ui_temp.js"></script>
+    <script src="../../js/ui_common.js"></script>
+  </head>
+  <body>
+    <!-- 종합의견 및 제안 상세보기-->
+    <div class="modal full dim" role="dialog" aria-modal="true"  id="pop-cash" style="display: block">
+      <div class="modalWrap">
+        <div class="modal-header">
+          <div class="modal-title">
+            <h3 class="cont-title">종합의견 및 제안 상세보기</h3>
+          </div>
+          <button class="btn-close">모달창닫기</button>
+        </div>
+        <div class="modal-body">
+          <!-- 내용시작 -->
+          <div class="modal-body-inner h720px">
+            <!-- tab-innerdouble -->
+            <div class="tab-innerdouble">
+              <div class="tab-base">
+                <ul class="double-tab">
+                  <li><a href="#tabNav1" role="tab" title="선택됨">소비지출 조정안</a></li>
+                  <li><a href="#tabNav2" role="tab">포트폴리오 요약</a></li>
+                  <li><a href="#tabNav3" role="tab">포트폴리오 상세</a></li>
+                </ul>
+                <div class="double-contents" id="tabNav1" role="tabpanel" aria-labelledby="tabNav1">
+                  <!-- UHKD4303P0 -->
+                </div>
+                <div class="double-contents" id="tabNav2" role="tabpanel" aria-labelledby="tabNav2">
+                  <!-- UHKD4304P0 -->
+                </div>
+                <div class="double-contents" id="tabNav3" role="tabpanel" aria-labelledby="tabNav3">
+                  <h3 class="cont-title top">포트폴리오 상세</h3>
+                  <div class="con-table all-center">
+                    <table class="min-w600px" summary="소비지출별 현재 월평균과 설계안 월평균 정보와 차이에 대한 정보 제공">
+                      <caption>
+                        소비지출 조정안
+                      </caption>
+                      <colgroup>
+                        <col width="10%" />
+                        <col width="15%" />
+                        <col width="20%" />
+                        <col width="20%" />
+                        <col width="20%" />
+                        <col width="*" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col" colspan="2">우선순위</th>
+                          <th scope="col">자산명</th>
+                          <th scope="col">평가액</th>
+                          <th scope="col">월저축액</th>
+                          <th scope="col">비고</th>
+                        </tr>
+                      </thead>
+                      <tfoot>
+                        <tr>
+                          <th scope="row" class="bg" colspan="2">합계</th>
+                          <td class="align-right"></td>
+                          <td class="align-right">0</td>
+                          <td class="align-right">0</td>
+                          <td></td>
+                        </tr>
+                      </tfoot>
+                      <tbody>
+                        <tr>
+                          <th scope="col" class="bg-no" rowspan="3">1</th>
+                          <th scope="row" class="bg-no" rowspan="3">노후자금</th>
+                          <td class="align-left">예금</td>
+                          <td class="align-right">0</td>
+                          <td class="align-right">0</td>
+                          <td>현재</td>
+                        </tr>
+                        <tr>
+                          <td class="align-left">추가저축액</td>
+                          <td class="align-right">0</td>
+                          <td class="align-right">0</td>
+                          <td>설계안</td>
+                        </tr>
+                        <tr>
+                          <td class="align-left bold">소계</td>
+                          <td class="align-right bold">0</td>
+                          <td class="align-right bold">0</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <th scope="col" class="bg-no" rowspan="2">2</th>
+                          <th scope="row" class="bg-no" rowspan="2">교육자금</th>
+                          <td class="align-left">추가저축액</td>
+                          <td class="align-right">0</td>
+                          <td class="align-right">0</td>
+                          <td>설계안</td>
+                        </tr>
+                        <tr>
+                          <td class="align-left bold">소계</td>
+                          <td class="align-right bold">0</td>
+                          <td class="align-right bold">0</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <th scope="col" class="bg-no" rowspan="2">3</th>
+                          <th scope="row" class="bg-no" rowspan="2">결혼자금</th>
+                          <td class="align-left">추가저축액</td>
+                          <td class="align-right">0</td>
+                          <td class="align-right">0</td>
+                          <td>설계안</td>
+                        </tr>
+                        <tr>
+                          <td class="align-left bold">소계</td>
+                          <td class="align-right bold">0</td>
+                          <td class="align-right bold">0</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <th scope="col" class="bg-no" rowspan="2">4</th>
+                          <th scope="row" class="bg-no" rowspan="2">주택자금</th>
+                          <td class="align-left">추가저축액</td>
+                          <td class="align-right">0</td>
+                          <td class="align-right">0</td>
+                          <td>설계안</td>
+                        </tr>
+                        <tr>
+                          <td class="align-left bold">소계</td>
+                          <td class="align-right bold">0</td>
+                          <td class="align-right bold">0</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <th scope="col" class="bg-no" rowspan="2">5</th>
+                          <th scope="row" class="bg-no" rowspan="2">기타이벤트</th>
+                          <td class="align-left">추가저축액</td>
+                          <td class="align-right">0</td>
+                          <td class="align-right">0</td>
+                          <td>설계안</td>
+                        </tr>
+                        <tr>
+                          <td class="align-left bold">소계</td>
+                          <td class="align-right bold">0</td>
+                          <td class="align-right bold">0</td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--// tab-innerdouble -->
+          </div>
+          <!-- 내용끝 -->
+        </div>
+        <!-- 화면 우측 상단의 모달 닫기는 물리위치는 상단이지맘 논리 위치가 가장 뒷 순서이기 때문에 이곳으로 와야함. -->
+        <!-- <button class="btn-close">모달창닫기</button> -->
+      </div>
+    </div>
+
+    <script>
+      commonUI.tabInnerNav(".tab-base", 3);
+    </script>
+  </body>
+</html>

@@ -118,7 +118,7 @@
                           <th scope="row">계산할 금액 (1~1,000,000만원)</th>
                           <td>
                             <div class="form-group-txt">
-                              <input type="text" id="" class="w100 align-right" value="0" />
+                              <input type="text" id="" class="align-right" value="0" />
                               <span class="back-txt">만원</span>
                             </div>
                           </td>
@@ -127,7 +127,7 @@
                           <th scope="row">기준이 되는 시점 (1~100년)</th>
                           <td>
                             <div class="form-group-txt">
-                              <input type="text" id="" class="w100 align-right" value="000" />
+                              <input type="text" id="" class="align-right" value="000" />
                               <span class="back-txt">년후</span>
                             </div>
                           </td>
@@ -136,8 +136,10 @@
                           <th scope="row">연간 증가율 (0~20.0%)</th>
                           <td>
                             <div class="form-group-txt">
-                              <input type="text" id="" class="w100 align-right" value="0" />
-                              <span class="back-txt">%</span>
+                              <!-- 20240313 수정 : type을 number로 변경. show-pin 클래스 추가 -->
+                              <input type="number" id="" class="align-right show-pin" value="0" />
+                              <!-- 20240313 수정 : mr14 클래스 추가 -->
+                              <span class="back-txt mr14">%</span>
                             </div>
                           </td>
                         </tr>
@@ -238,8 +240,10 @@
                           <th scope="row">연간 증가율 (0~20.0%)</th>
                           <td>
                             <div class="form-group-txt">
-                              <input type="text" id="" class="w100 align-right" value="0" />
-                              <span class="back-txt">%</span>
+                              <!-- 20240313 수정 : type을 number로 변경. show-pin 클래스 추가 -->
+                              <input type="number" id="" class="align-right show-pin" value="0" />
+                              <!-- 20240313 수정 : mr14 클래스 추가 -->
+                              <span class="back-txt mr14">%</span>
                             </div>
                           </td>
                         </tr>

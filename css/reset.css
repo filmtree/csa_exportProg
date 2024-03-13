@@ -195,10 +195,34 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+input[type="number"].show-pin:hover::-webkit-inner-spin-button, 
+input[type="number"].show-pin:focus::-webkit-inner-spin-button, 
+input[type="number"].show-pin::-webkit-inner-spin-button:hover {
+  -webkit-appearance: auto;
+  appearance: auto;
+  margin: 0 -8px 0 8px;
+}
+
+input[type="number"].show-pin::-webkit-inner-spin-button {
+  -webkit-appearance: auto;
+  appearance: auto;
+  margin: 0 -12px 0 0;
+}
+
 /* Firefox 브라우저용 */
 input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
+}
+
+input[type="number"].show-pin {
+  -moz-appearance: textfield;
+  appearance: textfield;  
+}
+
+input[type="number"].show-pin:hover {
+  -moz-appearance: auto;
+  appearance: auto;
 }
 
 /* disabled 마우스 커서 */

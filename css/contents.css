@@ -2145,6 +2145,18 @@
   margin-right: 0;
 }
 
+.graph-box1 > div.txt-unit {
+  width: 100%;
+  height: auto;
+  color: var(--color-gray4);
+  font-size: 1.5rem;
+  line-height: 1.6;
+  vertical-align: middle;
+  text-align: right;
+  margin-top:-30px;
+}
+
+
 /* 프린트용 위치변경 231201*/
 .print .equal-list {
   flex-direction: column;
@@ -2903,12 +2915,6 @@ fieldset {
   background-image: none;
   height: auto;
   overflow-y: auto;
-}
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
 
 /* 모달 커스텀 */
