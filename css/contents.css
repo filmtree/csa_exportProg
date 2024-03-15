@@ -2145,7 +2145,7 @@
   margin-right: 0;
 }
 
-.graph-box1 > div.txt-unit {
+div.txt-unit {
   width: 100%;
   height: auto;
   color: var(--color-gray4);
@@ -2153,9 +2153,17 @@
   line-height: 1.6;
   vertical-align: middle;
   text-align: right;
-  margin-top:-30px;
+  margin-top:-24px;
 }
 
+.graph-box1:has(.txt-unit) {
+  border: 0;
+  background-color: transparent;
+}
+
+div.txt-unit + .graph-box1 {
+  margin-top: 0 !important;  
+} 
 
 /* 프린트용 위치변경 231201*/
 .print .equal-list {
