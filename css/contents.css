@@ -5365,6 +5365,62 @@ h5.cont-title + .txt-list {
   height: auto;
 }
 
+/* 상담안내 */
+
+.step-counsel-service {
+  overflow-x: auto;
+  padding-bottom: 1.6rem;
+}
+
+.financial-direction-image {
+  width: 100%;
+  min-width: 767px;
+}
+
+.financial-direction-diagram,
+.step-diagram {
+  width: 100%;
+  min-width: 767px;
+  padding: .8rem 8.95% 0;  
+}
+
+.step-diagram img {
+  width: 100%;
+}
+.step-counsel-desc {
+  display: grid;
+  min-width: 768px;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2.4rem;
+  margin-top: 4rem;
+  min-height: 24.4rem;
+}
+.step-counsel-desc.finance-steps {
+  min-height: 21rem;
+}
+.step-counsel-desc .step-counsel-descbox {
+  border: 1px solid #dddddd;
+  border-radius: 1.6rem;
+  padding: 3.2rem;  
+  height: 100%;
+}
+.financial-direction-diagram img,
+.financial-direction-image img {
+  width: 100%;
+}
+
+.step-counsel-desc.finance-steps .step-counsel-descbox {
+  padding: 1.6rem 3.2rem;
+}
+.step-counsel-desc.finance-steps .step-counsel-descbox > ol > li {
+  padding: 1.6rem 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.step-counsel-desc.finance-steps .step-counsel-descbox ol > li:first-child {
+  border-top: 0;
+}
+
 /* ==================================================== Break Point ==================================================== */
 
 @media screen and (max-width: 1079px) {
@@ -6427,7 +6483,10 @@ h5.cont-title + .txt-list {
   display: grid;
   grid-template-columns: 1fr;
 }
-
+  /* 상담안내 */
+  .counsel-information-tab {
+    margin-top: 5.6rem;
+  }
 } /* 1079 */
 
 /* ==================================================== Break Point ==================================================== */
@@ -8230,7 +8289,19 @@ h5.cont-title + .txt-list {
   .cardnews-subject .cardnews-label {
     font-size: 1.8rem;
   }
-  
+
+  /* 상담안내 */
+  .counsel-information-tab {
+    margin-top: 4rem;
+  }
+  .counsel-information-tab .tabNav {
+    margin-bottom: 4rem;
+  }
+  .financial-direction-diagram,
+  .step-diagram {
+    padding-left: 85px;
+    padding-right: 85px;
+}  
 } /* 767px */
 
 @media screen and (max-width: 768px) {

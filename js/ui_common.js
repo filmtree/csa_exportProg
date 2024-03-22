@@ -26,7 +26,7 @@ const commonUI = {
     this.gnav();
     this.topSearch.init();
     this.sideNav.init();
-    // this.accordion();
+    this.accordion();
 
     this.compJumpList.init();
     this.allMenuList();
@@ -497,39 +497,39 @@ const commonUI = {
     modalFn.init();
   },
 
-  // accordion: function () {
-  //   const target = document.querySelectorAll(".accWrap");
-  //   if (target.length < 1) return;
+  accordion: function () {
+    const target = document.querySelectorAll(".accWrap");
+    if (target.length < 1) return;
 
-  //   target.forEach((el, index) => {
-  //     const list = el.querySelectorAll(".accItem");
-  //     let selectedItem = el.querySelector(".accItem.active");
+    target.forEach((el, index) => {
+      const list = el.querySelectorAll(".accItem");
+      let selectedItem = el.querySelector(".accItem.active");
 
-  //     [...list].forEach((item) => {
-  //       const btn = item.querySelector(".accSummary");
+      [...list].forEach((item) => {
+        const btn = item.querySelector(".accSummary");
 
-  //       item.querySelector(".accSummary").addEventListener("click", (e) => {
-  //         e.preventDefault();
+        item.querySelector(".accSummary").addEventListener("click", (e) => {
+          e.preventDefault();
 
-  //         if (item.classList.contains("active")) {
-  //           close(item);
-  //           selectedItem = null;
-  //         } else {
-  //           if (selectedItem) {
-  //             close(selectedItem);
-  //           }
-  //           item.classList.add("active");
-  //           btn.setAttribute("title", "선택됨");
-  //           selectedItem = item;
-  //         }
-  //       });
-  //     });
-  //   });
-  //   function close(el) {
-  //     el.classList.remove("active");
-  //     el.querySelector(".accSummary").removeAttribute("title");
-  //   }
-  // },
+          if (item.classList.contains("active")) {
+            close(item);
+            selectedItem = null;
+          } else {
+            if (selectedItem) {
+              close(selectedItem);
+            }
+            item.classList.add("active");
+            btn.setAttribute("title", "선택됨");
+            selectedItem = item;
+          }
+        });
+      });
+    });
+    function close(el) {
+      el.classList.remove("active");
+      el.querySelector(".accSummary").removeAttribute("title");
+    }
+  },
   tableScrollMarking: function () {
     const table = document.querySelectorAll(".con-table");
     const handIcon = `<span class="ic-handle"></span>`;
