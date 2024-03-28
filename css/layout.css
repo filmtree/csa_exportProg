@@ -1391,15 +1391,17 @@
   max-width: initial;
   box-shadow: none;
 }
-
+.winPopup .modalWrap .modal-header {
+  padding: 1rem 1.6rem;
+}
 .winPopup .modalWrap .modal-footer {
   position: fixed;
 }
 
 .winPopup .modalWrap .modal-body {
-  padding-bottom: 9rem;
+  padding: 0 1.6rem 9rem;
   overflow: auto;
-  /* max-height: none; */
+  max-height: none;
 }
 
 /* ##tab - Tab_4depth */
@@ -2629,7 +2631,8 @@ input.useDatepicker {
   }
 
   .winPopup .modalWrap .modal-body {
-    padding-bottom: 7rem;
+    padding-bottom: 3.2rem;
+    bottom: 4rem;
   }
   .winPopup .modalWrap .modal-body .cont-title,
   .winPopup .modalWrap .modal-body .cont-title.small {
